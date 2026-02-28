@@ -1,7 +1,3 @@
----
-permalink: /about.html
----
-
 # About Me
 My career began at the intersection of technology and public service.
 After graduating from Penn State with a B.S. in Economics in 2021, I immediately impacted the national healthcare landscape during a critical period.
