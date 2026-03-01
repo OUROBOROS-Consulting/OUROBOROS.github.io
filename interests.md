@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Interests"
-permalink: /about
+permalink: /interests.md
 ---
 
 gku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyuk
