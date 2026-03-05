@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>{{ site.title }}</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d0d0d; --bg2: #141414; --bg3: #1a1a1a;
+    --gold: #c9a84c; --gold-dim: #a8863a;
+    --text: #e8e2d9; --muted: #7a7269; --border: #2a2520;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.7; }
+
+  nav {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    padding: 1.4rem 3rem; display: flex; justify-content: space-between; align-items: center;
+    background: rgba(13,13,13,0.85); backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--gold); text-decoration: none; }
+  .nav-links { display: flex; gap: 2.5rem; }
+  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
+  .nav-links a:hover { color: var(--gold); }
+
+  #hero {
+    min-height: 100vh; display: flex; flex-direction: column;
+    justify-content: center; align-items: flex-start; padding: 0 10vw;
+    position: relative; overflow: hidden;
+  }
+  #hero::before {
+    content: ''; position: absolute; top: -20%; right: -10%;
+    width: 60vw; height: 60vw; max-width: 700px; max-height: 700px;
+    background: radial-gradient(circle, rgba(201,168,76,0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow { font-size: 0.75rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; opacity: 0; animation: fadeUp 0.8s 0.2s forwards; }
+  .hero-name { font-family: 'Playfair Display', serif; font-size: clamp(3rem, 8vw, 6.5rem); font-weight: 600; line-height: 1.05; margin-bottom: 1.5rem; opacity: 0; animation: fadeUp 0.8s 0.4s forwards; }
+  .hero-tagline { font-size: clamp(1rem, 2vw, 1.2rem); color: var(--muted); max-width: 480px; line-height: 1.8; opacity: 0; animation: fadeUp 0.8s 0.6s forwards; }
+  .hero-cta { margin-top: 2.5rem; opacity: 0; animation: fadeUp 0.8s 0.8s forwards; }
+  .btn { display: inline-block; padding: 0.75rem 2rem; border: 1px solid var(--gold); color: var(--gold); text-decoration: none; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase; transition: background 0.3s, color 0.3s; cursor: pointer; background: transparent; font-family: 'Inter', sans-serif; }
+  .btn:hover { background: var(--gold); color: var(--bg); }
+  .scroll-hint { position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 0.4rem; opacity: 0; animation: fadeUp 1s 1.2s forwards; }
+  .scroll-hint span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  .scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollPulse 2s infinite; }
+
+  #about { padding: 8rem 10vw; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; border-top: 1px solid var(--border); }
+  .section-label { font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 1.5rem; }
+  .about-heading { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; line-height: 1.2; margin-bottom: 1.5rem; }
+  .about-body { color: var(--muted); font-size: 0.95rem; line-height: 1.9; }
+  .about-body p + p { margin-top: 1rem; }
+  .pull-quote { position: relative; padding: 2.5rem; border-left: 2px solid var(--gold); background: var(--bg2); }
+  .pull-quote blockquote { font-family: 'Playfair Display', serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-style: italic; line-height: 1.6; color: var(--text); }
+  .pull-quote cite { display: block; margin-top: 1.2rem; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+
+  #work { padding: 8rem 10vw; border-top: 1px solid var(--border); background: var(--bg2); }
+  .work-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
+  .work-heading { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; }
+  .work-count { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5px; }
+  .card { background: var(--bg3); padding: 2.5rem; border: 1px solid var(--border); transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
+  .card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
+  .card:hover { border-color: #3a3028; transform: translateY(-4px); }
+  .card:hover::after { transform: scaleX(1); }
+  .card-tag { font-size: 0.65rem; letter-spacing: 0.25em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .card-title { font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 400; margin-bottom: 0.8rem; line-height: 1.3; }
+  .card-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
+  .card-link { display: inline-block; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: letter-spacing 0.3s; }
+  .card-link:hover { letter-spacing: 0.28em; }
+
+  #tikz { padding: 8rem 10vw; border-top: 1px solid var(--border); }
+  .tikz-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; align-items: start; }
+  .tikz-editor-wrap { display: flex; flex-direction: column; gap: 0.8rem; }
+  .tikz-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
+  #tikz-input { width: 100%; min-height: 280px; resize: vertical; background: var(--bg2); border: 1px solid var(--border); color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; padding: 1.2rem; line-height: 1.7; outline: none; transition: border-color 0.3s; }
+  #tikz-input:focus { border-color: var(--gold-dim); }
+  .tikz-actions { display: flex; gap: 1rem; align-items: center; }
+  .tikz-status { font-size: 0.75rem; color: var(--muted); font-style: italic; }
+  .tikz-output-wrap { display: flex; flex-direction: column; gap: 0.8rem; }
+  #tikz-output { min-height: 280px; background: var(--bg2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: 1.5rem; overflow: auto; }
+  #tikz-output svg { max-width: 100%; height: auto; }
+  .output-placeholder { color: var(--muted); font-size: 0.85rem; text-align: center; line-height: 1.8; }
+  .output-placeholder span { display: block; font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.3; }
+  .copy-svg-btn { align-self: flex-end; background: transparent; border: 1px solid var(--border); color: var(--muted); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 1rem; cursor: pointer; transition: border-color 0.3s, color 0.3s; font-family: 'Inter', sans-serif; display: none; }
+  .copy-svg-btn:hover { border-color: var(--gold); color: var(--gold); }
+  .tikz-examples { margin-top: 1.5rem; }
+  .tikz-examples p { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
+  .example-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chip { background: var(--bg2); border: 1px solid var(--border); color: var(--muted); font-size: 0.75rem; padding: 0.3rem 0.8rem; cursor: pointer; transition: border-color 0.3s, color 0.3s; font-family: 'Inter', sans-serif; }
+  .chip:hover { border-color: var(--gold); color: var(--gold); }
+
+  footer { padding: 4rem 10vw; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-copy { font-size: 0.78rem; color: var(--muted); }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
+  .footer-links a:hover { color: var(--gold); }
+
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  .spinner { width: 20px; height: 20px; border: 2px solid var(--border); border-top-color: var(--gold); border-radius: 50%; animation: spin 0.7s linear infinite; display: inline-block; }
+
+  @media (max-width: 768px) {
+    nav { padding: 1.2rem 1.5rem; } .nav-links { gap: 1.5rem; }
+    #hero { padding: 0 6vw; }
+    #about, #tikz { padding: 5rem 6vw; }
+    #about { grid-template-columns: 1fr; gap: 3rem; }
+    #work { padding: 5rem 6vw; }
+    .work-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
+    .tikz-layout { grid-template-columns: 1fr; }
+    footer { padding: 3rem 6vw; flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="#">{{ page.name_line1 }} {{ page.name_line2 }}</a>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#tikz">Figures</a>
+    <a href="{{ page.contact }}">Contact</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+  <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
+  <p class="hero-tagline">{{ page.tagline }}</p>
+  <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<section id="about">
+  <div>
+    <p class="section-label">About Me</p>
+    <h2 class="about-heading">{{ page.about_heading }}</h2>
+    <div class="about-body">
+      <p>{{ page.about_body_1 }}</p>
+      <p>{{ page.about_body_2 }}</p>
+    </div>
+    <div style="margin-top:2.5rem"><a href="#work" class="btn">See Selected Work</a></div>
+  </div>
+  <div class="pull-quote">
+    <blockquote>{{ page.pull_quote }}</blockquote>
+    <cite>— {{ page.name_line1 }} {{ page.name_line2 }}</cite>
+  </div>
+</section>
+
+<section id="work">
+  <div class="work-header">
+    <div>
+      <p class="section-label">Selected Work</p>
+      <h2 class="work-heading">Projects &amp; Writing</h2>
+    </div>
+    <span class="work-count">{{ site.data.projects | size }} pieces</span>
+  </div>
+  <div class="cards">
+    {% for project in site.data.projects %}
+    <div class="card">
+      <p class="card-tag">{{ project.tag }}</p>
+      <h3 class="card-title">{{ project.title }}</h3>
+      <p class="card-desc">{{ project.description }}</p>
+      <a href="{{ project.link }}" class="card-link">Read More →</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="tikz">
+  <p class="section-label">Figures</p>
+  <h2 class="about-heading">TikZ Figure Renderer</h2>
+  <p style="color:var(--muted);font-size:0.9rem;max-width:560px;margin-top:0.5rem">Paste any TikZ code below. Claude will convert it to a clean SVG you can copy and embed anywhere.</p>
+  <div class="tikz-layout">
+    <div class="tikz-editor-wrap">
+      <span class="tikz-label">TikZ Source</span>
+      <textarea id="tikz-input" spellcheck="false" placeholder="\begin{tikzpicture}&#10;  \draw[thick] (0,0) circle (2cm);&#10;\end{tikzpicture}"></textarea>
+      <div class="tikz-actions">
+        <button class="btn" id="render-btn" onclick="renderTikz()">Render Figure</button>
+        <span class="tikz-status" id="status"></span>
+      </div>
+      <div class="tikz-examples">
+        <p>Quick examples</p>
+        <div class="example-chips">
+          <button class="chip" onclick="loadExample('circles')">Circles</button>
+          <button class="chip" onclick="loadExample('tree')">Tree</button>
+          <button class="chip" onclick="loadExample('graph')">Graph</button>
+          <button class="chip" onclick="loadExample('flowchart')">Flowchart</button>
+          <button class="chip" onclick="loadExample('vectors')">Vectors</button>
+        </div>
+      </div>
+    </div>
+    <div class="tikz-output-wrap">
+      <span class="tikz-label">Rendered Output</span>
+      <div id="tikz-output">
+        <div class="output-placeholder"><span>◇</span>Your figure will appear here</div>
+      </div>
+      <button class="copy-svg-btn" id="copy-btn" onclick="copySVG()">Copy SVG</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p class="footer-copy">© {{ 'now' | date: "%Y" }} {{ page.name_line1 }} {{ page.name_line2 }}. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="{{ page.twitter }}">Twitter</a>
+    <a href="{{ page.substack }}">Substack</a>
+    <a href="{{ page.linkedin }}">LinkedIn</a>
+    <a href="{{ page.contact }}">Contact</a>
+  </div>
+</footer>
+
+<script>
+const examples = {
+  circles: `\\begin{tikzpicture}\n  \\draw[thick] (0,0) circle (2cm);\n  \\draw[dashed] (0,0) circle (1.2cm);\n  \\fill[gray!40] (0,0) circle (0.5cm);\n  \\draw[->] (0,0) -- (1.414,1.414) node[right]{$r$};\n\\end{tikzpicture}`,
+  tree: `\\begin{tikzpicture}[level distance=1.5cm,level 1/.style={sibling distance=4cm},level 2/.style={sibling distance=2cm}]\n  \\node {Root}\n    child { node {A} child { node {A1} } child { node {A2} } }\n    child { node {B} child { node {B1} } child { node {B2} } };\n\\end{tikzpicture}`,
+  graph: `\\begin{tikzpicture}\n  \\foreach \\i in {0,1,2,3,4} {\n    \\node[circle,draw,fill=gray!20,minimum size=0.7cm] (n\\i) at ({\\i*72}:2cm) {\\i};\n  }\n  \\draw (n0)--(n1)--(n2)--(n3)--(n4)--(n0);\n  \\draw (n0)--(n2); \\draw (n1)--(n3); \\draw (n2)--(n4);\n\\end{tikzpicture}`,
+  flowchart: `\\begin{tikzpicture}[node distance=1.6cm,box/.style={rectangle,draw,rounded corners,minimum width=2.5cm,minimum height=0.8cm,align=center,fill=gray!15},decision/.style={diamond,draw,minimum width=2cm,align=center,fill=gray!10}]\n  \\node[box] (start) {Start};\n  \\node[box,below of=start] (read) {Read Input};\n  \\node[decision,below of=read,yshift=-0.4cm] (check) {Valid?};\n  \\node[box,below of=check,yshift=-0.4cm] (process) {Process};\n  \\node[box,below of=process] (end) {End};\n  \\draw[->] (start)--(read);\n  \\draw[->] (read)--(check);\n  \\draw[->] (check)--node[right]{yes}(process);\n  \\draw[->] (check.east)--++(1.2,0)--++(0,1.8)--node[above]{no}(read.east);\n  \\draw[->] (process)--(end);\n\\end{tikzpicture}`,
+  vectors: `\\begin{tikzpicture}[scale=1.2]\n  \\draw[->] (-0.3,0)--(3.5,0) node[right]{$x$};\n  \\draw[->] (0,-0.3)--(0,3.5) node[above]{$y$};\n  \\draw[->,thick] (0,0)--(2,1) node[right]{$\\vec{u}$};\n  \\draw[->,thick,dashed] (0,0)--(1,2.5) node[above]{$\\vec{v}$};\n  \\draw[->,thick,gray] (0,0)--(3,3.5) node[right]{$\\vec{u}+\\vec{v}$};\n  \\draw[dashed,gray!60] (2,1)--(3,3.5);\n  \\draw[dashed,gray!60] (1,2.5)--(3,3.5);\n\\end{tikzpicture}`
+};
+
+function loadExample(k) { document.getElementById('tikz-input').value = examples[k]; }
+let lastSVG = '';
+
+async function renderTikz() {
+  const code = document.getElementById('tikz-input').value.trim();
+  if (!code) return;
+  const btn = document.getElementById('render-btn');
+  const status = document.getElementById('status');
+  const output = document.getElementById('tikz-output');
+  const copyBtn = document.getElementById('copy-btn');
+  btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>';
+  status.textContent = 'Rendering…'; copyBtn.style.display = 'none';
+  output.innerHTML = '<div class="output-placeholder"><span class="spinner"></span></div>';
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        model: 'claude-sonnet-4-20250514', max_tokens: 1000,
+        messages: [{ role: 'user', content: `Convert this TikZ to a clean self-contained SVG. Return ONLY the raw SVG, no explanation, no markdown fences. Use a transparent background, sensible viewBox with padding, stroke="#333". Scale to fit ~400x400.\n\n${code}` }]
+      })
+    });
+    const data = await res.json();
+    const raw = data.content.map(b => b.text || '').join('').replace(/```[\w]*\n?/g, '').trim();
+    const m = raw.match(/<svg[\s\S]*<\/svg>/i);
+    if (m) { lastSVG = m[0]; output.innerHTML = lastSVG; copyBtn.style.display = 'block'; status.textContent = 'Rendered ✓'; }
+    else { output.innerHTML = '<div class="output-placeholder" style="color:#c0504d"><span>⚠</span>Could not extract SVG.</div>'; status.textContent = 'Parse error'; }
+  } catch(e) {
+    output.innerHTML = `<div class="output-placeholder" style="color:#c0504d"><span>⚠</span>${e.message}</div>`; status.textContent = 'Failed';
+  } finally {
+    btn.disabled = false; btn.textContent = 'Render Figure';
+    setTimeout(() => status.textContent = '', 3000);
+  }
+}
+
+function copySVG() {
+  if (!lastSVG) return;
+  navigator.clipboard.writeText(lastSVG).then(() => {
+    const b = document.getElementById('copy-btn'); b.textContent = 'Copied!';
+    setTimeout(() => b.textContent = 'Copy SVG', 2000);
+  });
+}
+
+document.getElementById('tikz-input').addEventListener('keydown', e => {
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    const s = e.target.selectionStart;
+    e.target.value = e.target.value.substring(0, s) + '  ' + e.target.value.substring(e.target.selectionEnd);
+    e.target.selectionStart = e.target.selectionEnd = s + 2;
+  }
+});
+</script>
+</body>
+</html>
