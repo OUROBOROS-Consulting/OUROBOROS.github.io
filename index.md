@@ -2,12 +2,11 @@
 layout: default
 
 # Hero
-name_line1: Eleanor
-name_line2: Marlowe
+name_line1: Apostolos
+name_line2: Stamenos
 eyebrow: Writer & Content Strategist
 tagline: >
-  I craft narratives that resonate — long-form essays, brand stories,
-  and cultural criticism that lingers long after the last word.
+  Not afraid to antagonize an antagonist. I've done it before, and I'll do it again.
 
 # About
 about_heading: Words as a way of seeing
