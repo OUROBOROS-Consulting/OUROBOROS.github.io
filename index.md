@@ -25,7 +25,11 @@ about_body_2: >
 pull_quote: >
   "The best writing doesn't just fill a page — it opens a window.
   I write to make the familiar strange and the strange luminous."
-
+TH_quote: >
+  "What truly set Apostolos apart was his ability to find creative, compliant solutions under pressure. Keeping machine learning and natural language processing tooling within FedRAMP boundaries is no small feat, and Apostolos consistently found ways to stay within compliance while still advancing the automation agenda. His finest moment may have been a last-minute solution he engineered during the Vaccines.gov service desk transition to CDC, designing a custom flow that bridged a critical gap in service continuity while CDC finalized its technical setup. It was exactly the kind of creative, calm-under-pressure problem solving that defines exceptional technical talent."
+CG_quote: >
+  "Due to his expertise and reliability, Apostolos was selected to lead the complex transition of HHS Protect and Vaccines.gov — another mission-critical Department system-from HHS to to CDC and ASPR. Over several months, he collaborated closely with departmental leadership and technical teams to ensure a seamless transfer of systems, data, and operational responsibilities. He developed automation scripts to maintain uninterrupted data flows and ensured help desk services remained fully functional, safeguarding continuity during a critical public health period."
+  
 # Footer links
 twitter: "#"
 substack: "#"
