@@ -1,15 +1,15 @@
 title: Abandon All Hope, Ye Who Enter
-theme: jekyll-theme-midnight
+#theme: jekyll-theme-midnight
 url: https://astamenos.github.io
-relative_permalinks: true
+#relative_permalinks: true
 
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]
 markdown: kramdown
-plugins:
-  - jekyll-avatar
-  - jekyll-redirect-from
-  - jekyll-seo-tag
-  - jekyll-coffeescript
-  - jekyll-sitemap
-  - jekyll-octicons
+#plugins:
+#  - jekyll-avatar
+#  - jekyll-redirect-from
+#  - jekyll-seo-tag
+#  - jekyll-coffeescript
+#  - jekyll-sitemap
+#  - jekyll-octicons
