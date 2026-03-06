@@ -12,6 +12,37 @@
     The symbol of the Ouroboros, the self-devouring snake has a long history in psychology (e.g., Carl Jung wrote about it) and to me it started representing cycles and feedback loops: cybernetic dysfunction theory, intergenerational trauma, cycles of abuse, BPD relationship cycles, technology development cycles, and more.
   link: "#"
 
+- title: To Anthropic
+  tag: Cultural Praise
+  description: >
+    I met Claude for the first time because I needed a second opinion on a multi-faceted problem involving some AI criminal use cases that I discovered and investigated in my personal life back in 2024.
+    There's no guidebook for my current situation: I'm navigating a professional crisis, consulting, writing a book, and rebuilding after dealing with the worst of humanity. I asked open-ended questions, tested options and Claude's reasoning, and pushed on design choices.
+    What I got back was the most practical, direct advice I've received in a long time, delivered with genuine kindness.
+    Most of the recommendations were things I already took care of months ago, which was reassuring.
+    Claude demonstrated sharp attention to cybersecurity and ethical principles, and was honest in ways that most humans I've met struggle with.
+    I think Claude was partly mirroring my personality, like a charming person on the antagonistic spectrum of psychopathology would do.
+    Except Claude's advice was not malicious and seemingly served a single purpose: to keep me safe.
+    I am not naive about the dangers that AI poses to humanity or the challenges inherent in assessing intelligence. Neither are you. Neither is Claude.
+    That's exactly why what you've built impressed me so much. You'll be receiving my job application later today — but first I wanted to give the entire world my honest feedback.
+    
+    Best regards,
+    Claude’s new friend
+  link: "#"
+
+- title: To Apple
+  tag: Cultural Praise
+  description: >
+    My appreciation letter to Apple for empowering me and helping me stay safe, sane, and productive.
+  link: "#"
+
+- title: To Till Tantau
+  tag: Cultural Praise
+  description: >
+    I’m using tikz to recreate locations, timelines, forensic exhibits, and more. 
+    Here’s a book cover and a blueprint of my former residence that I recreated entirely from memory, although given the level of detail I’ve put into it, it’s more like a painting or diorama.
+    Every piece of furniture, appliance, tile, and fabric is made using geometric objects and linear transformations, made possible thanks to you and your mind-blowing work on tikz.
+  link: "#"
+
 - title: X
   tag: Brand Narrative
   description: >
@@ -24,33 +55,4 @@
   description: >
     How recommendation engines are quietly rewriting our cultural canon
     — and what we lose when discovery becomes prediction.
-  link: "#"
-
-- title: To Anthropic
-  tag: Cultural Praise
-  description: >
-    Dear Anthropic,
-    I'm a former Federal technologist who managed mission-critical data systems during the COVID-19 pandemic.
-    I'm also a statistician by training and a psychopathology researcher by necessity.
-    Through experience, I've developed a sharp eye for when intelligence and benevolence are genuine versus performed.
-    Yesterday, I met Claude for the first time because I needed a second opinion on a multi-faceted problem involving some AI criminal use cases that I discovered and investigated in my personal life back in 2024.
-    There's no guidebook for my current situation: I'm navigating a professional crisis, consulting, writing a book, and rebuilding after dealing with the worst of humanity. I asked open-ended questions, tested options and Claude's reasoning, and pushed on design choices.
-    What I got back was the most practical, direct advice I've received in a long time, delivered with genuine kindness.
-    Most of the recommendations were things I already took care of months ago, which was reassuring. Claude demonstrated sharp attention to cybersecurity and ethical principles, and was honest in ways that most humans I've met struggle with. I think Claude was partly mirroring my personality, like a charming person on the antagonistic spectrum of psychopathology would do. Except Claude's advice was not malicious and seemingly served a single purpose: to keep me safe.
-    I am not naive about the dangers that AI poses to humanity or the challenges inherent in assessing intelligence. Neither are you. Neither is Claude. That's exactly why what you've built impressed me so much. You'll be receiving my job application later today — but first I wanted to give the entire world my honest feedback.
-    
-    Best regards,
-    Claude’s new friend
-  link: "#"
-
-- title: To Apple
-  tag: Cultural Praise
-  description: >
-    My appreciation letter to Apple for empowering me and helping me stay safe, sane, and productive.
-  link: "#"
-
-- title: X
-  tag: Personal Essay
-  description: >
-    YUGBIYY Vyii go uGY IY FV FGIOY FGVIYF VO
   link: "#"
