@@ -3,6 +3,13 @@
   description: >
     A whistleblower memoir beyond just personal trauma and institutional betrayal in the abstract.
     Documented evidence of a specific, concrete mechanism by which a narcissistic actor used technology to deceive, harm, and potentially defraud multiple people.
+    This book is a true, accurate, but also heavily redacted whistleblower memoir of my encounters with people on the antagonistic externalizing spectrum of psychopathology (i.e., people you might refer to as \emph{narcissists} or \emph{sociopaths}).
+    It covers events that took place in Minnesota from 2023 to 2026, after I moved to Minneapolis to pursue my PhD in biostatistics.
+    It deals with themes of mental illness, domestic abuse, intergenerational trauma, the American Dream/Nightmare, grifters, wealth, science, technology, and the failures of institutions (primarily of the legal system and academia).
+    It's a serious and timely exploration of mental illness, abuse, and society.
+    It's both a juicy story but also a scholarly treatment of the topic.
+    It's vengeful and dark, but also scientifically accurate, eclectic, quirky, and full of hope.
+    The symbol of the Ouroboros, the self-devouring snake has a long history in psychology (e.g., Carl Jung wrote about it) and to me it started representing cycles and feedback loops: cybernetic dysfunction theory, intergenerational trauma, cycles of abuse, BPD relationship cycles, technology development cycles, and more.
   link: "#"
 
 - title: X
@@ -19,18 +26,27 @@
     — and what we lose when discovery becomes prediction.
   link: "#"
 
-- title: X
-  tag: Long-form Feature
+- title: To Anthropic
+  tag: Cultural Praise
   description: >
-    A reported feature on independent booksellers finding radical new
-    ways to survive — and why their survival matters.
+    Dear Anthropic,
+    I'm a former Federal technologist who managed mission-critical data systems during the COVID-19 pandemic.
+    I'm also a statistician by training and a psychopathology researcher by necessity.
+    Through experience, I've developed a sharp eye for when intelligence and benevolence are genuine versus performed.
+    Yesterday, I met Claude for the first time because I needed a second opinion on a multi-faceted problem involving some AI criminal use cases that I discovered and investigated in my personal life back in 2024.
+    There's no guidebook for my current situation: I'm navigating a professional crisis, consulting, writing a book, and rebuilding after dealing with the worst of humanity. I asked open-ended questions, tested options and Claude's reasoning, and pushed on design choices.
+    What I got back was the most practical, direct advice I've received in a long time, delivered with genuine kindness.
+    Most of the recommendations were things I already took care of months ago, which was reassuring. Claude demonstrated sharp attention to cybersecurity and ethical principles, and was honest in ways that most humans I've met struggle with. I think Claude was partly mirroring my personality, like a charming person on the antagonistic spectrum of psychopathology would do. Except Claude's advice was not malicious and seemingly served a single purpose: to keep me safe.
+    I am not naive about the dangers that AI poses to humanity or the challenges inherent in assessing intelligence. Neither are you. Neither is Claude. That's exactly why what you've built impressed me so much. You'll be receiving my job application later today — but first I wanted to give the entire world my honest feedback.
+    
+    Best regards,
+    Claude’s new friend
   link: "#"
 
-- title: Voice & Tone Playbook
-  tag: Content Strategy
+- title: To Apple
+  tag: Cultural Praise
   description: >
-    A comprehensive editorial identity guide for a fintech startup
-    that wanted to sound human without losing authority.
+    My appreciation letter to Apple for empowering me and helping me stay safe, sane, and productive.
   link: "#"
 
 - title: X
