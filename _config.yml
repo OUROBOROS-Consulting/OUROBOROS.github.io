@@ -1,8 +1,21 @@
-title: Abandon All Hope, Ye Who Enter
-#theme: jekyll-theme-midnight
-url: https://astamenos.github.io
-#relative_permalinks: true
+title: Apostolos Stamenos
+author: Apostolos Stamenos
+email: REDACTED
+github_url: https://github.com/astamenos
+linkedin_url: https://www.linkedin.com/in/apostolos-stamenos
+url: "https://astamenos.github.io"
 
+collections:
+  essays:
+    output: true
+    permalink: /essays/:slug/
+  projects:
+    output: true
+    permalink: /projects/:slug/
+  notes:
+    output: true
+    permalink: /notes/:slug/
+    
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]
 markdown: kramdown
