@@ -6,10 +6,10 @@ name_line1: Apostolos
 name_line2: Stamenos
 eyebrow: Technologist, Researcher, Writer
 tagline: >
-  Not afraid to antagonize an antagonist. I've done it before, and I'll do it again.
+  I empower people so that technology works for them, not against them.
 
 # About
-about_heading: Words as a way of seeing
+about_heading: Technology as a source of empowerment
 about_body_1: >
   My career began at the intersection of technology and public service.
   After graduating from Penn State with a B.S. in Economics in 2021, I immediately impacted the national healthcare landscape during a critical period.
@@ -20,19 +20,15 @@ about_body_2: >
   My leadership abilities emerged early. I managed public-facing platforms like Healthdata.gov and led a technical team of 11 interns, among my many other responsibilities.
   I was the guy that my supervisors would turn to when they needed someone to figure out how to fix whatever issue our pipelines were having.
   My contributions were recognized with an Employee of the Quarter Award from the HHS OCIO. 
-  Driven to deepen my technical expertise, I pursued a Master of Statistics at North Carolina State University (2023), focusing on Big Data and Applied Bayesian Analysis.
+  Driven to deepen my technical expertise, I pursued a Master of Statistics at North Carolina State University (2023).
   This academic pivot marked a transition from operational data science to rigorous statistical research.
 pull_quote: >
-  "The best writing doesn't just fill a page — it opens a window.
-  I write to make the familiar strange and the strange luminous."
-TH_quote: >
-  "What truly set Apostolos apart was his ability to find creative, compliant solutions under pressure. Keeping machine learning and natural language processing tooling within FedRAMP boundaries is no small feat, and Apostolos consistently found ways to stay within compliance while still advancing the automation agenda. His finest moment may have been a last-minute solution he engineered during the Vaccines.gov service desk transition to CDC, designing a custom flow that bridged a critical gap in service continuity while CDC finalized its technical setup. It was exactly the kind of creative, calm-under-pressure problem solving that defines exceptional technical talent."
-CG_quote: >
-  "Due to his expertise and reliability, Apostolos was selected to lead the complex transition of HHS Protect and Vaccines.gov — another mission-critical Department system-from HHS to to CDC and ASPR. Over several months, he collaborated closely with departmental leadership and technical teams to ensure a seamless transfer of systems, data, and operational responsibilities. He developed automation scripts to maintain uninterrupted data flows and ensured help desk services remained fully functional, safeguarding continuity during a critical public health period."
+  "Your biggest asset but also your biggest liability is something you stare at on a daily basis: your devices. Technology has the potential to be a creative or destructive force in your life. Choose wisely."
+
   
 # Footer links
-twitter: "#"
+twitter: "https://github.com/astamenos/"
 substack: "#"
-linkedin: "#"
+linkedin: "https://www.linkedin.com/in/astamenos/"
 contact: "#"
 ---
