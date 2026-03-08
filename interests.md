@@ -1,7 +1,18 @@
 ---
 title: "Interests"
+layout: default
 ---
+# Technology
 
-gku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyuk
 
-gku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyukgku ygukyf lyf lyufuyfk fyuk
+# Statistics and Data Science
+
+
+# Psychology
+
+
+# Art
+## Literature
+
+## Music
+
