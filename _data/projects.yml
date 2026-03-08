@@ -15,19 +15,8 @@
 - title: To Anthropic
   tag: Cultural Praise
   description: >
-    I met Claude for the first time because I needed a second opinion on a multi-faceted problem involving some AI criminal use cases that I discovered and investigated in my personal life back in 2024.
-    There's no guidebook for my current situation: I'm navigating a professional crisis, consulting, writing a book, and rebuilding after dealing with the worst of humanity. I asked open-ended questions, tested options and Claude's reasoning, and pushed on design choices.
-    What I got back was the most practical, direct advice I've received in a long time, delivered with genuine kindness.
-    Most of the recommendations were things I already took care of months ago, which was reassuring.
-    Claude demonstrated sharp attention to cybersecurity and ethical principles, and was honest in ways that most humans I've met struggle with.
-    I think Claude was partly mirroring my personality, like a charming person on the antagonistic spectrum of psychopathology would do.
-    Except Claude's advice was not malicious and seemingly served a single purpose: to keep me safe.
-    I am not naive about the dangers that AI poses to humanity or the challenges inherent in assessing intelligence. Neither are you. Neither is Claude.
-    That's exactly why what you've built impressed me so much. You'll be receiving my job application later today — but first I wanted to give the entire world my honest feedback.
-    
-    Best regards,
-    Claude’s new friend
-  link: "#"
+    On an excellent attempt at building ethical AI.
+  link: "/interests"
 
 - title: To Apple
   tag: Cultural Praise
@@ -43,11 +32,10 @@
     Every piece of furniture, appliance, tile, and fabric is made using geometric objects and linear transformations, made possible thanks to you and your mind-blowing work on tikz.
   link: "#"
 
-- title: X
-  tag: Brand Narrative
+- title: It Never Ends
+  tag: Cultural Praise
   description: >
-    Yada yagk gsavo udbuv ouvbdso uvbsdv ousdzb
-    jgfdoi hg igfobh pigfbh sigpfsbh pibhnfg.
+    An analysis of concept albums by some brilliant musicians.
   link: "#"
 
 - title: After the Algorithm
