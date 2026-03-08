@@ -180,6 +180,17 @@
   </div>
 </section>
 
+ 
+<section id="testimonials">
+  <p class="section-label">Testimonials</p>
+  <h2 class="about-heading">What people say about me.</h2>
+  <p style="color:var(--muted);font-size:0.9rem;max-width:560px;margin-top:0.5rem">What people say about me.</p>
+  <div class="tikz-layout">
+    <div class="tikz-editor-wrap">
+    </div>
+  </div>
+</section>
+ 
 <section id="reading">
   <p class="section-label">Currently Reading</p>
   <h2 class="work-heading">On My Nightstand</h2>
@@ -193,26 +204,21 @@
     {% endfor %}
   </div>
 </section>
-
-<section id="testimonials">
-  <p class="section-label">Testimonials</p>
-  <h2 class="about-heading">TikZ Figure Renderer</h2>
-  <p style="color:var(--muted);font-size:0.9rem;max-width:560px;margin-top:0.5rem">What people say about me.</p>
-  <div class="tikz-layout">
-    <div class="tikz-editor-wrap">
-      <span class="tikz-label">TikZ Source</span>
-      <textarea id="tikz-input" spellcheck="false" placeholder="\begin{tikzpicture}&#10;  \draw[thick] (0,0) circle (2cm);&#10;\end{tikzpicture}"></textarea>
+ 
+<section id="listening">
+  <p class="section-label">Currently Listening To</p>
+  <h2 class="work-heading">On My Headphones</h2>
+  <div class="listening-grid">
+    {% for book in site.data.reading %}
+    <div class="listening-card">
+      <p class="listening-title">{{ book.title }}</p>
+      <p class="listening-author">{{ book.author }}</p>
+      <p class="listening-note">{{ book.note }}</p>
     </div>
-    <div class="tikz-output-wrap">
-      <span class="tikz-label">Rendered Output</span>
-      <div id="tikz-output">
-        <div class="output-placeholder"><span>◇</span>Your figure will appear here</div>
-      </div>
-      <button class="copy-svg-btn" id="copy-btn" onclick="copySVG()">Copy SVG</button>
-    </div>
+    {% endfor %}
   </div>
 </section>
-
+ 
 <footer>
   <p class="footer-copy">© {{ 'now' | date: "%Y" }} {{ page.name_line1 }} {{ page.name_line2 }}. All rights reserved.</p>
   <div class="footer-links">
@@ -223,66 +229,5 @@
   </div>
 </footer>
 
-<script>
-const examples = {
-  circles: `\\begin{tikzpicture}\n  \\draw[thick] (0,0) circle (2cm);\n  \\draw[dashed] (0,0) circle (1.2cm);\n  \\fill[gray!40] (0,0) circle (0.5cm);\n  \\draw[->] (0,0) -- (1.414,1.414) node[right]{$r$};\n\\end{tikzpicture}`,
-  tree: `\\begin{tikzpicture}[level distance=1.5cm,level 1/.style={sibling distance=4cm},level 2/.style={sibling distance=2cm}]\n  \\node {Root}\n    child { node {A} child { node {A1} } child { node {A2} } }\n    child { node {B} child { node {B1} } child { node {B2} } };\n\\end{tikzpicture}`,
-  graph: `\\begin{tikzpicture}\n  \\foreach \\i in {0,1,2,3,4} {\n    \\node[circle,draw,fill=gray!20,minimum size=0.7cm] (n\\i) at ({\\i*72}:2cm) {\\i};\n  }\n  \\draw (n0)--(n1)--(n2)--(n3)--(n4)--(n0);\n  \\draw (n0)--(n2); \\draw (n1)--(n3); \\draw (n2)--(n4);\n\\end{tikzpicture}`,
-  flowchart: `\\begin{tikzpicture}[node distance=1.6cm,box/.style={rectangle,draw,rounded corners,minimum width=2.5cm,minimum height=0.8cm,align=center,fill=gray!15},decision/.style={diamond,draw,minimum width=2cm,align=center,fill=gray!10}]\n  \\node[box] (start) {Start};\n  \\node[box,below of=start] (read) {Read Input};\n  \\node[decision,below of=read,yshift=-0.4cm] (check) {Valid?};\n  \\node[box,below of=check,yshift=-0.4cm] (process) {Process};\n  \\node[box,below of=process] (end) {End};\n  \\draw[->] (start)--(read);\n  \\draw[->] (read)--(check);\n  \\draw[->] (check)--node[right]{yes}(process);\n  \\draw[->] (check.east)--++(1.2,0)--++(0,1.8)--node[above]{no}(read.east);\n  \\draw[->] (process)--(end);\n\\end{tikzpicture}`,
-  vectors: `\\begin{tikzpicture}[scale=1.2]\n  \\draw[->] (-0.3,0)--(3.5,0) node[right]{$x$};\n  \\draw[->] (0,-0.3)--(0,3.5) node[above]{$y$};\n  \\draw[->,thick] (0,0)--(2,1) node[right]{$\\vec{u}$};\n  \\draw[->,thick,dashed] (0,0)--(1,2.5) node[above]{$\\vec{v}$};\n  \\draw[->,thick,gray] (0,0)--(3,3.5) node[right]{$\\vec{u}+\\vec{v}$};\n  \\draw[dashed,gray!60] (2,1)--(3,3.5);\n  \\draw[dashed,gray!60] (1,2.5)--(3,3.5);\n\\end{tikzpicture}`
-};
-
-function loadExample(k) { document.getElementById('tikz-input').value = examples[k]; }
-let lastSVG = '';
-
-async function renderTikz() {
-  const code = document.getElementById('tikz-input').value.trim();
-  if (!code) return;
-  const btn = document.getElementById('render-btn');
-  const status = document.getElementById('status');
-  const output = document.getElementById('tikz-output');
-  const copyBtn = document.getElementById('copy-btn');
-  btn.disabled = true; btn.innerHTML = '<span class="spinner"></span>';
-  status.textContent = 'Rendering…'; copyBtn.style.display = 'none';
-  output.innerHTML = '<div class="output-placeholder"><span class="spinner"></span></div>';
-  try {
-    const res = await fetch('https://api.anthropic.com/v1/messages', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        model: 'claude-sonnet-4-20250514', max_tokens: 1000,
-        messages: [{ role: 'user', content: `Convert this TikZ to a clean self-contained SVG. Return ONLY the raw SVG, no explanation, no markdown fences. Use a transparent background, sensible viewBox with padding, stroke="#333". Scale to fit ~400x400.\n\n${code}` }]
-      })
-    });
-    const data = await res.json();
-    const raw = data.content.map(b => b.text || '').join('').replace(/```[\w]*\n?/g, '').trim();
-    const m = raw.match(/<svg[\s\S]*<\/svg>/i);
-    if (m) { lastSVG = m[0]; output.innerHTML = lastSVG; copyBtn.style.display = 'block'; status.textContent = 'Rendered ✓'; }
-    else { output.innerHTML = '<div class="output-placeholder" style="color:#c0504d"><span>⚠</span>Could not extract SVG.</div>'; status.textContent = 'Parse error'; }
-  } catch(e) {
-    output.innerHTML = `<div class="output-placeholder" style="color:#c0504d"><span>⚠</span>${e.message}</div>`; status.textContent = 'Failed';
-  } finally {
-    btn.disabled = false; btn.textContent = 'Render Figure';
-    setTimeout(() => status.textContent = '', 3000);
-  }
-}
-
-function copySVG() {
-  if (!lastSVG) return;
-  navigator.clipboard.writeText(lastSVG).then(() => {
-    const b = document.getElementById('copy-btn'); b.textContent = 'Copied!';
-    setTimeout(() => b.textContent = 'Copy SVG', 2000);
-  });
-}
-
-document.getElementById('tikz-input').addEventListener('keydown', e => {
-  if (e.key === 'Tab') {
-    e.preventDefault();
-    const s = e.target.selectionStart;
-    e.target.value = e.target.value.substring(0, s) + '  ' + e.target.value.substring(e.target.selectionEnd);
-    e.target.selectionStart = e.target.selectionEnd = s + 2;
-  }
-});
-</script>
 </body>
 </html>
