@@ -98,6 +98,14 @@
   .footer-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
   .footer-links a:hover { color: var(--gold); }
 
+  #reading { padding: 8rem 10vw; border-top: 1px solid var(--border); background: var(--bg2); }
+  .reading-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2.5rem; }
+  .reading-card { background: var(--bg3); border: 1px solid var(--border); padding: 2rem; transition: border-color 0.3s; }
+  .reading-card:hover { border-color: #3a3028; }
+  .reading-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 400; margin-bottom: 0.3rem; }
+  .reading-author { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 1rem; }
+  .reading-note { color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
+
   @keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
   @keyframes scrollPulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }
   @keyframes spin { to { transform: rotate(360deg); } }
@@ -122,6 +130,7 @@
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#work">Work</a>
+    <a href="#reading">Reading</a>
     <a href="#tikz">Figures</a>
     <a href="{{ page.contact }}">Contact</a>
   </div>
@@ -166,6 +175,20 @@
       <h3 class="card-title">{{ project.title }}</h3>
       <p class="card-desc">{{ project.description }}</p>
       <a href="{{ project.link }}" class="card-link">Read More →</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="reading">
+  <p class="section-label">Currently Reading</p>
+  <h2 class="work-heading">On My Nightstand</h2>
+  <div class="reading-grid">
+    {% for book in site.data.reading %}
+    <div class="reading-card">
+      <p class="reading-title">{{ book.title }}</p>
+      <p class="reading-author">{{ book.author }}</p>
+      <p class="reading-note">{{ book.note }}</p>
     </div>
     {% endfor %}
   </div>
