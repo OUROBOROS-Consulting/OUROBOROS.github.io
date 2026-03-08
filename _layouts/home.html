@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<section id="hero">
+  <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+  <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
+  <p class="hero-tagline">{{ page.tagline }}</p>
+  <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+</section>
+
+<section id="about">
+  <!-- about content -->
+</section>
+
+<section id="work">
+  <div class="work-header">
+    <div>
+      <p class="section-label">Selected Work</p>
+      <h2 class="work-heading">Projects &amp; Writing</h2>
+    </div>
+    <span class="work-count">{{ site.projects.size }} pieces</span>
+  </div>
+  <div class="cards">
+    {% for project in site.projects %}
+    <div class="card">
+      <p class="card-tag">{{ project.tag }}</p>
+      <h3 class="card-title">{{ project.title }}</h3>
+      <p class="card-desc">{{ project.description }}</p>
+      <a href="{{ project.url }}" class="card-link">Read More →</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- shelf, tikz sections... -->
