@@ -60,7 +60,7 @@
   .work-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; }
   .work-heading { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 400; }
   .work-count { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.1em; }
-  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5px; }
+  .cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); gap: 1.5px; }
   .card { background: var(--bg3); padding: 2.5rem; border: 1px solid var(--border); transition: border-color 0.3s, transform 0.3s; position: relative; overflow: hidden; }
   .card::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.4s; }
   .card:hover { border-color: #3a3028; transform: translateY(-4px); }
@@ -70,27 +70,6 @@
   .card-desc { color: var(--muted); font-size: 0.88rem; line-height: 1.8; }
   .card-link { display: inline-block; margin-top: 1.5rem; font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: letter-spacing 0.3s; }
   .card-link:hover { letter-spacing: 0.28em; }
-
-  #tikz { padding: 8rem 10vw; border-top: 1px solid var(--border); }
-  .tikz-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; align-items: start; }
-  .tikz-editor-wrap { display: flex; flex-direction: column; gap: 0.8rem; }
-  .tikz-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); }
-  #tikz-input { width: 100%; min-height: 280px; resize: vertical; background: var(--bg2); border: 1px solid var(--border); color: var(--text); font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; padding: 1.2rem; line-height: 1.7; outline: none; transition: border-color 0.3s; }
-  #tikz-input:focus { border-color: var(--gold-dim); }
-  .tikz-actions { display: flex; gap: 1rem; align-items: center; }
-  .tikz-status { font-size: 0.75rem; color: var(--muted); font-style: italic; }
-  .tikz-output-wrap { display: flex; flex-direction: column; gap: 0.8rem; }
-  #tikz-output { min-height: 280px; background: var(--bg2); border: 1px solid var(--border); display: flex; align-items: center; justify-content: center; padding: 1.5rem; overflow: auto; }
-  #tikz-output svg { max-width: 100%; height: auto; }
-  .output-placeholder { color: var(--muted); font-size: 0.85rem; text-align: center; line-height: 1.8; }
-  .output-placeholder span { display: block; font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.3; }
-  .copy-svg-btn { align-self: flex-end; background: transparent; border: 1px solid var(--border); color: var(--muted); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; padding: 0.4rem 1rem; cursor: pointer; transition: border-color 0.3s, color 0.3s; font-family: 'Inter', sans-serif; display: none; }
-  .copy-svg-btn:hover { border-color: var(--gold); color: var(--gold); }
-  .tikz-examples { margin-top: 1.5rem; }
-  .tikz-examples p { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.6rem; }
-  .example-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-  .chip { background: var(--bg2); border: 1px solid var(--border); color: var(--muted); font-size: 0.75rem; padding: 0.3rem 0.8rem; cursor: pointer; transition: border-color 0.3s, color 0.3s; font-family: 'Inter', sans-serif; }
-  .chip:hover { border-color: var(--gold); color: var(--gold); }
 
   footer { padding: 4rem 10vw; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
   .footer-copy { font-size: 0.78rem; color: var(--muted); }
