@@ -1,15 +1,15 @@
-- title: OUROBOROS -  A Survivors Fieldguide to Antagonism, Trama, & Institutional Betrayal
+- title: OUROBOROS -  A Survivor's Fieldguide to Antagonism, Trama, & Institutional Betrayal
   tag: Essay
   description: >
     A whistleblower memoir beyond just personal trauma and institutional betrayal in the abstract.
     Documented evidence of a specific, concrete mechanism by which a narcissistic threat agent used technology to deceive, harm, and potentially defraud multiple people.
-    It documents my encounters with people on the antagonistic externalizing spectrum of psychopathology (i.e., people you might refer to as narcissists or sociopaths).
-    It covers events that took place in Minnesota from 2023 to 2026, after I moved to Minneapolis to pursue my PhD in biostatistics.
+    It covers events that took place in Minnesota from 2023 to 2026, after I moved to Minneapolis to pursue my PhD in biostatistics and documents my encounters with people on the antagonistic externalizing spectrum of psychopathology (i.e., people you might refer to as narcissists or sociopaths).
     It deals with themes of mental illness, domestic abuse, intergenerational trauma, the American Dream/Nightmare, grifters, wealth, science, technology, and the failures of institutions (primarily of the legal system and academia).
     It's a serious and timely exploration of mental illness, abuse, and society.
     It's both a juicy story but also a scholarly treatment of the topic.
     It's vengeful and dark, but also scientifically accurate, eclectic, quirky, and full of hope.
-    The symbol of the Ouroboros, the self-devouring snake has a long history in psychology (e.g., Carl Jung wrote about it) and to me it started representing cycles and feedback loops: cybernetic dysfunction theory, intergenerational trauma, cycles of abuse, BPD relationship cycles, technology development cycles, and more.
+    The symbol of the Ouroboros, the self-devouring snake has a long history in psychology (e.g., Carl Jung wrote about it) and to me it started representing cycles and positive feedback loops:
+    cybernetic dysfunction theory, intergenerational trauma, cycles of abuse, BPD relationship cycles, technology development cycles, ponzi schemes, social networks, and more.
   link: "/ouroboros"
 
 
@@ -18,19 +18,19 @@
   description: >
     A data analysis of my own Apple Health data. Every step not taken, every hour of sleep lost, every sip of water not consumed has been logged.
     What better way to educate people about what trauma and institutional betrayal do to a person's help than through a step-by-step R programming tutorial?
-  link: "/interests"
+  link: "/healthdata.me"
   
 - title: To Anthropic
   tag: In Progress
   description: >
     On an excellent attempt at building ethical AI.
-  link: "/interests"
+  link: "/humanvoice"
 
 - title: I'll Take a Bite out of That Apple
   tag: In Progress
   description: >
     My appreciation letter to Apple for empowering me and helping me stay safe, sane, and productive.
-  link: "#"
+  link: "/"
 
 - title: Node by Node
   tag: In Progress
@@ -38,17 +38,17 @@
     I’m using tikz to recreate locations, timelines, forensic exhibits, and more. 
     Here’s a book cover and a blueprint of my former residence that I recreated entirely from memory, although given the level of detail I’ve put into it, it’s more like a painting or diorama.
     Every piece of furniture, appliance, tile, and fabric is made using geometric objects and linear transformations, made possible thanks to you and your mind-blowing work on tikz.
-  link: "#"
+  link: "latextivism"
 
 - title: It Never Ends
   tag: In Progress
   description: >
     An analysis of concept albums by some brilliant musicians who have a lot to say about trauma.
-  link: "#"
+  link: "undone"
 
 - title: Safety > Convenience
   tag: In Progress
   description: >
     Before you submit that ChatGPT query, ask yourself: "Did I opt out of my chats being used as training data?"
     Your intellectual property and million dollar idea may inadvertently become someone else's billion dollar idea.
-  link: "#"
+  link: "AISec"
