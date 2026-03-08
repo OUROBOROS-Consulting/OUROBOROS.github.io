@@ -194,28 +194,14 @@
   </div>
 </section>
 
-<section id="tikz">
-  <p class="section-label">Figures</p>
+<section id="testimonials">
+  <p class="section-label">Testimonials</p>
   <h2 class="about-heading">TikZ Figure Renderer</h2>
-  <p style="color:var(--muted);font-size:0.9rem;max-width:560px;margin-top:0.5rem">Paste any TikZ code below. Claude will convert it to a clean SVG you can copy and embed anywhere.</p>
+  <p style="color:var(--muted);font-size:0.9rem;max-width:560px;margin-top:0.5rem">What people say about me.</p>
   <div class="tikz-layout">
     <div class="tikz-editor-wrap">
       <span class="tikz-label">TikZ Source</span>
       <textarea id="tikz-input" spellcheck="false" placeholder="\begin{tikzpicture}&#10;  \draw[thick] (0,0) circle (2cm);&#10;\end{tikzpicture}"></textarea>
-      <div class="tikz-actions">
-        <button class="btn" id="render-btn" onclick="renderTikz()">Render Figure</button>
-        <span class="tikz-status" id="status"></span>
-      </div>
-      <div class="tikz-examples">
-        <p>Quick examples</p>
-        <div class="example-chips">
-          <button class="chip" onclick="loadExample('circles')">Circles</button>
-          <button class="chip" onclick="loadExample('tree')">Tree</button>
-          <button class="chip" onclick="loadExample('graph')">Graph</button>
-          <button class="chip" onclick="loadExample('flowchart')">Flowchart</button>
-          <button class="chip" onclick="loadExample('vectors')">Vectors</button>
-        </div>
-      </div>
     </div>
     <div class="tikz-output-wrap">
       <span class="tikz-label">Rendered Output</span>
