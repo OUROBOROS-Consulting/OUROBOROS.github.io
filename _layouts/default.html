@@ -125,8 +125,7 @@
   <div class="nav-links">
     <a href="#about">About</a>
     <a href="#work">Work</a>
-    <a href="#reading">Reading</a>
-    <a href="#tikz">Figures</a>
+    <a href="#reading">Inspirations</a>
     <a href="{{ page.contact }}">Contact</a>
   </div>
 </nav>
@@ -179,7 +178,6 @@
 <section id="testimonials">
   <p class="section-label">Testimonials</p>
   <h2 class="about-heading">What people say about me.</h2>
-  <p style="color:var(--muted);font-size:0.9rem;max-width:560px;margin-top:0.5rem">What people say about me.</p>
   <div class="cards">
     {% for testimonial in site.data.testimonials %}
     <div class="card">
@@ -194,7 +192,7 @@
  
 <section id="reading">
   <p class="section-label">Currently Reading</p>
-  <h2 class="work-heading">On My Nightstand</h2>
+  <h2 class="work-heading">On My Bookshelf</h2>
   <div class="reading-grid">
     {% for book in site.data.reading %}
     <div class="reading-card">
@@ -210,11 +208,11 @@
   <p class="section-label">Currently Listening To</p>
   <h2 class="work-heading">On My Headphones</h2>
   <div class="listening-grid">
-    {% for book in site.data.reading %}
+    {% for album in site.data.listening %}
     <div class="listening-card">
-      <p class="listening-title">{{ book.title }}</p>
-      <p class="listening-author">{{ book.author }}</p>
-      <p class="listening-note">{{ book.note }}</p>
+      <p class="listening-title">{{ album.title }}</p>
+      <p class="listening-author">{{ album.author }}</p>
+      <p class="listening-note">{{ album.note }}</p>
     </div>
     {% endfor %}
   </div>
@@ -223,9 +221,9 @@
 <footer>
   <p class="footer-copy">© {{ 'now' | date: "%Y" }} {{ page.name_line1 }} {{ page.name_line2 }}. All rights reserved.</p>
   <div class="footer-links">
-    <a href="{{ page.twitter }}">Twitter</a>
-    <a href="{{ page.substack }}">Substack</a>
+    <a href="{{ page.twitter }}">GitHub</a>
     <a href="{{ page.linkedin }}">LinkedIn</a>
+    <a href="{{ page.substack }}">Wyzant</a>
     <a href="{{ page.contact }}">Contact</a>
   </div>
 </footer>
