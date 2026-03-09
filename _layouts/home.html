@@ -34,4 +34,28 @@ layout: default
   </div>
 </section>
 
+  <blockquote>
+    <p>All models are wrong, but some are useful. The question is: useful for what, and honest about what they're not.</p>
+    <cite>— </cite>
+  </blockquote>
+
+<section id="testimonials">
+  <div class="testimonials-header">
+    <div>
+      <p class="section-label">Selected Work</p>
+      <h2 class="work-heading">Testimonials</h2>
+    </div>
+    <span class="work-count">{{ site.testimonials.size }} reviews</span>
+  </div>
+  <div class="cards">
+    {% for ref in site.testimonials %}
+    <div class="card">
+      <p class="card-tag">{{ ref.tag }}</p>
+      <h3 class="card-title">{{ ref.title }}</h3>
+      <p class="card-desc">{{ ref.description }}</p>
+      <!-- <a href="{{ project.url }}" class="card-link">Read More →</a> -->
+    </div>
+    {% endfor %}
+  </div>
+</section>
 <!-- shelf, tikz sections... -->
