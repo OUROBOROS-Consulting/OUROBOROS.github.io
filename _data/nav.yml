@@ -4,15 +4,21 @@
       url: /essays/
     - title: Papers
       url: /papers/
-- title: Reading
+- title: Inspirations
   children:
-    - title: Books
+    - title: Literary
       url: /books/
-    - title: Notes
+    - title: Musical
       url: /notes/
+    - title: Academic
+      url: /academic/
 - title: Work
   children:
     - title: Consulting
       url: /consulting/
+    - title: Development
+      url: /dev/
+    - title: Tutoring
+      url: /tutoring/
     - title: CV
       url: /cv/
