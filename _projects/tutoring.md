@@ -1,6 +1,6 @@
 ---
 title: Tutoring Services
-layout: essay
+layout: essays
 ---
 
 As a dedicated educator with a Master’s degree in Statistics from North Carolina State University and as a current PhD student in Biostatistics, I bring both depth of expertise and years of teaching experience.
