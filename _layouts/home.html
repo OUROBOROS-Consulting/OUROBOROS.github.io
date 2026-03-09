@@ -45,16 +45,14 @@ layout: default
     </div>
     <span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>
   </div>
-  <div class="cards">
+  <div class="testimonials-grid">
     {% for ref in site.data.testimonials %}
     <div class="card">
       <blockquote>
-        <h3 class="card-tag">{{ ref.tag }}</h3>
-        <h3 class="card-title">{{ ref.description }}</h3>
+        <h3 class="card-desc">{{ ref.description }}</h3>
         <cite>—{{ ref.reference }}</cite>
       </blockquote>
     </div>
     {% endfor %}
   </div>
 </section>
-<!-- testimonials, tikz sections... -->
