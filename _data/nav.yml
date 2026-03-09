@@ -10,15 +10,15 @@
 - title: Services
   children:
     - title: Consulting
-      url: /consulting/
+      url: /services/consulting/
     - title: Development
-      url: /dev/
+      url: /services/dev/
     - title: Investigative
-      url: /investigative/
+      url: /services/investigative/
     - title: Tutoring
-      url: /tutoring
+      url: /services/tutoring
     - title: Advocacy
-      url: /advocacy/
+      url: /services/advocacy/
       
 - title: Writing
   children:
