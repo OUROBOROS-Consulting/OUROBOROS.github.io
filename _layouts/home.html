@@ -5,8 +5,14 @@ layout: default
 <section id="hero">
   <p class="hero-eyebrow">{{ page.eyebrow }}</p>
   <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
-  <p class="hero-tagline">{{ page.tagline }}</p>
+  <p class="hero-tagline">{{ page.tagline | markdownify}}</p>
   <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+  {% if page.headshot %}
+  <div class="hero-portrait">
+    <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}"/>
+  </div>
+  {% endif %}
   <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
