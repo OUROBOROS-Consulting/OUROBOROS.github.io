@@ -107,3 +107,15 @@
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap:                   1.5px;
 }
+
+.testimonials-grid {
+  display: grid;
+  // Exactly 2 columns on wider screens, each taking equal space
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+
+  // On mobile, collapse to a single column
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
