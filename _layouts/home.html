@@ -45,9 +45,9 @@ layout: default
     </div>
     <span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>
   </div>
-  <div class="testimonials-list">
+  <div class="cards">
     {% for ref in site.data.testimonials %}
-    <div class="cards">
+    <div class="card">
       <blockquote>
         <h3 class="card-tag">{{ ref.tag }}</h3>
         <h3 class="card-title">{{ ref.description }}</h3>
