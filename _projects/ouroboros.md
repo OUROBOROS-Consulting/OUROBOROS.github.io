@@ -1,7 +1,8 @@
 ---
 title: OUROBOROS
-layout: default
+layout: essays
 ---
+
 This book is a true, accurate, but also heavily redacted whistleblower memoir of my encounters with people on the antagonistic externalizing spectrum of psychopathology (i.e., people you might refer to as \emph{narcissists} or \emph{sociopaths}). It covers events that took place in Minnesota from 2023 to 2026, after I moved to Minneapolis to pursue my PhD in biostatistics. It deals with themes of mental illness, domestic abuse, intergenerational trauma, the American Dream/Nightmare, grifters, wealth, science, technology, and the failures of institutions (primarily of the legal system and academia). It's a serious and timely exploration of mental illness, abuse, and society. It's both a juicy story but also a scholarly treatment of the topic. It's vengeful and dark, but also scientifically accurate, eclectic, quirky, and full of hope. The symbol of the Ouroboros, the self-devouring snake has a long history in psychology (e.g., Carl Jung wrote about it) and to me it started representing cycles and feedback loops: cybernetic dysfunction theory, intergenerational trauma, cycles of abuse, BPD relationship cycles, technology development cycles, and more.
 
 \footnote{``Psychopathology requires failure to move toward important goals, those that have priority for the person in day-to-day life and over the long term. The more goals that are disrupted, and the more important those goals are, the more severe the psychopathology. Disruption or thwarting of goals, especially when those goals include basic needs, is the primary cause of human distress, and avoiding suffering is an important goal for most people.''\citep{deyoung_cybernetic_2023}}
