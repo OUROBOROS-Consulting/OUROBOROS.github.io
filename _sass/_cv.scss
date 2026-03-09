@@ -1,0 +1,293 @@
+// ── CV Header ────────────────────────────────────────────────────────────────
+.cv-header {
+  padding:         9rem 10vw 4rem;
+  border-bottom:   1px solid var(--border);
+  display:         flex;
+  justify-content: space-between;
+  align-items:     flex-end;
+  flex-wrap:       wrap;
+  gap:             2rem;
+}
+
+.cv-name {
+  font-family:   'Playfair Display', serif;
+  font-size:     clamp(2.4rem, 5vw, 4rem);
+  font-weight:   600;
+  line-height:   1.05;
+
+  span {
+    display:        block;
+    font-family:    'Inter', sans-serif;
+    font-size:      0.7rem;
+    font-weight:    300;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color:          var(--gold);
+    margin-bottom:  0.8rem;
+  }
+}
+
+.cv-contact {
+  text-align: right;
+
+  p {
+    font-size:   0.82rem;
+    color:       var(--muted);
+    line-height: 1.9;
+  }
+
+  a {
+    color:       var(--gold);
+    text-decoration: none;
+    transition:  opacity 0.2s;
+
+    &:hover { opacity: 0.75; }
+  }
+}
+
+.cv-download {
+  display:        inline-flex;
+  align-items:    center;
+  gap:            0.5rem;
+  margin-top:     1rem;
+  padding:        0.6rem 1.4rem;
+  border:         1px solid var(--gold);
+  color:          var(--gold);
+  font-size:      0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition:     background 0.3s, color 0.3s;
+
+  &:hover {
+    background: var(--gold);
+    color:      var(--bg);
+  }
+}
+
+// ── CV Body ──────────────────────────────────────────────────────────────────
+.cv-body {
+  display:               grid;
+  grid-template-columns: 200px 1fr;
+  gap:                   0;
+  max-width:             1100px;
+  margin:                0 auto;
+  padding:               0 10vw 8rem;
+}
+
+// ── Section labels (sticky left column) ──────────────────────────────────────
+.cv-section-label {
+  padding: 3rem 2rem 0 0;
+
+  p {
+    font-size:      0.65rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color:          var(--gold);
+    position:       sticky;
+    top:            6rem;
+  }
+}
+
+// ── Section content (right column) ───────────────────────────────────────────
+.cv-section-content {
+  border-left:   1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding:       3rem 0 3rem 2.5rem;
+
+  // Last section has no bottom border
+  .cv-row:last-child & { border-bottom: none; }
+}
+
+.cv-row { display: contents; }
+
+// ── Summary ──────────────────────────────────────────────────────────────────
+.cv-summary {
+  font-size:   0.93rem;
+  color:       var(--muted);
+  line-height: 1.9;
+  max-width:   620px;
+}
+
+// ── Expertise table ───────────────────────────────────────────────────────────
+.expertise-row {
+  display:               grid;
+  grid-template-columns: 140px 1fr;
+  gap:                   0.5rem 1.5rem;
+  margin-bottom:         0.6rem;
+  align-items:           baseline;
+}
+
+.expertise-key {
+  font-size:   0.78rem;
+  color:       var(--text);
+  font-weight: 500;
+}
+
+.expertise-val {
+  font-size:   0.83rem;
+  color:       var(--muted);
+  line-height: 1.6;
+}
+
+// ── Experience / Research entries ────────────────────────────────────────────
+.cv-entry {
+  margin-bottom: 2.5rem;
+}
+
+.cv-entry-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     baseline;
+  flex-wrap:       wrap;
+  gap:             0.5rem;
+  margin-bottom:   0.3rem;
+}
+
+.cv-entry-title {
+  font-family: 'Playfair Display', serif;
+  font-size:   1.05rem;
+  font-weight: 400;
+}
+
+.cv-entry-dates {
+  font-size:      0.75rem;
+  color:          var(--gold);
+  letter-spacing: 0.05em;
+  white-space:    nowrap;
+}
+
+.cv-entry-org {
+  font-size:     0.8rem;
+  color:         var(--muted);
+  margin-bottom: 0.8rem;
+
+  span { color: var(--text); }
+}
+
+.cv-bullets {
+  list-style: none;
+  padding:    0;
+
+  li {
+    font-size:     0.85rem;
+    color:         var(--muted);
+    line-height:   1.75;
+    padding-left:  1.1rem;
+    position:      relative;
+    margin-bottom: 0.3rem;
+
+    &::before {
+      content:  '–';
+      position: absolute;
+      left:     0;
+      color:    var(--gold);
+    }
+  }
+}
+
+// ── Education ────────────────────────────────────────────────────────────────
+.cv-edu {
+  margin-bottom: 1.5rem;
+}
+
+.cv-edu-deg {
+  font-family:   'Playfair Display', serif;
+  font-size:     1rem;
+  font-weight:   400;
+  margin-bottom: 0.15rem;
+}
+
+.cv-edu-inst {
+  font-size: 0.82rem;
+  color:     var(--muted);
+}
+
+.cv-edu-focus {
+  font-size:  0.8rem;
+  color:      var(--muted);
+  font-style: italic;
+  margin-top: 0.2rem;
+}
+
+// ── Publications ─────────────────────────────────────────────────────────────
+.cv-pub {
+  font-size:    0.83rem;
+  color:        var(--muted);
+  line-height:  1.75;
+  margin-bottom: 1rem;
+  padding-left: 1.4rem;
+  position:     relative;
+
+  .ref {
+    position:  absolute;
+    left:      0;
+    color:     var(--gold);
+    font-size: 0.75rem;
+  }
+
+  a {
+    color:           var(--gold);
+    text-decoration: none;
+    border-bottom:   1px solid var(--gold-dim);
+    transition:      border-color 0.2s;
+
+    &:hover { border-color: var(--gold); }
+  }
+}
+
+// ── Awards ───────────────────────────────────────────────────────────────────
+.cv-award {
+  display:               grid;
+  grid-template-columns: 130px 1fr;
+  gap:                   0.5rem 1.5rem;
+  margin-bottom:         0.8rem;
+  align-items:           baseline;
+}
+
+.cv-award-date {
+  font-size: 0.75rem;
+  color:     var(--gold);
+}
+
+.cv-award-body {
+  font-size:   0.85rem;
+  color:       var(--muted);
+  line-height: 1.6;
+
+  strong {
+    color:       var(--text);
+    font-weight: 400;
+  }
+}
+
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .cv-header {
+    padding:        8rem 6vw 3rem;
+    flex-direction: column;
+    align-items:    flex-start;
+  }
+
+  .cv-contact { text-align: left; }
+
+  .cv-body {
+    grid-template-columns: 1fr;
+    padding:               0 6vw 6rem;
+  }
+
+  .cv-section-label {
+    padding: 2.5rem 0 0.5rem;
+
+    p { position: static; }
+  }
+
+  .cv-section-content {
+    border-left: none;
+    border-top:  1px solid var(--border);
+    padding:     1.5rem 0 0;
+  }
+
+  .expertise-row { grid-template-columns: 1fr; gap: 0; }
+  .cv-award      { grid-template-columns: 1fr; gap: 0; }
+}
