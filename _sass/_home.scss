@@ -129,6 +129,25 @@
   background: var(--bg2);
 }
 
+.testimonials-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     flex-end;
+  margin-bottom:   4rem;
+}
+
+.testimonials-heading {
+  font-family: 'Playfair Display', serif;
+  font-size:   clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+}
+
+.testimonials-count {
+  font-size:      0.75rem;
+  color:          var(--muted);
+  letter-spacing: 0.1em;
+}
+  
 .testimonials-tabs {
   display:       flex;
   gap:           1rem;
@@ -181,6 +200,4 @@
   }
 
   #testimonials, #tikz { padding: 5rem 6vw; }
-
-  .tikz-layout { grid-template-columns: 1fr; }
 }
