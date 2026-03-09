@@ -1,12 +1,16 @@
 <nav>
-  <a class="nav-logo" href="{{ '/' | relative_url }}">
-    {{ site.author }}
-  </a>
+  <a class="nav-logo" href="{{ '/' | relative_url }}">{{ site.author }}</a>
   <div class="nav-links">
-    <a href="{{ '/#about' | relative_url }}">About</a>
-    <a href="{{ '/#work' | relative_url }}">Work</a>
-    <a href="{{ '/#tikz' | relative_url }}">Personality</a>
-    <a href="{{ '/#shelf' | relative_url }}">Shelf</a>
+    {% for item in site.data.nav %}
+    <div class="nav-dropdown">
+      <button class="nav-dropdown-toggle">{{ item.title }}</button>
+      <div class="nav-dropdown-menu">
+        {% for child in item.children %}
+        <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
     <a href="{{ site.email | prepend: 'mailto:' }}">Contact</a>
   </div>
 </nav>
