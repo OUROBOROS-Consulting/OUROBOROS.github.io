@@ -29,6 +29,25 @@ layout: default
   <div><h1>What?</h1></div>
 </section>
 
+<section id="services">
+  <div class="work-header">
+    <div>
+      <p class="section-label">Selected Work</p>
+      <h2 class="work-heading">Services</h2>
+    </div>
+  </div>
+  <div class="cards">
+    {% for service in site.services %}
+    <div class="card">
+      <p class="card-tag">{{ service.tag }}</p>
+      <h3 class="card-title">{{ service.title }}</h3>
+      <p class="card-desc">{{ service.description }}</p>
+      <a href="{{ service.url }}" class="card-link">Read More →</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
 <section id="work">
   <div class="work-header">
     <div>
