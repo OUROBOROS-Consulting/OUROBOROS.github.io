@@ -1,0 +1,44 @@
+// ── Nav ──────────────────────────────────────────────────────────────────────
+nav {
+  position:        fixed;
+  top:             0;
+  width:           100%;
+  z-index:         100;
+  padding:         1.4rem 3rem;
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  background:      rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom:   1px solid var(--border);
+}
+
+.nav-logo {
+  font-family:    'Playfair Display', serif;
+  font-size:      1.1rem;
+  letter-spacing: 0.05em;
+  color:          var(--gold);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap:     2.5rem;
+
+  a {
+    color:          var(--muted);
+    text-decoration: none;
+    font-size:      0.82rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition:     color 0.3s;
+
+    &:hover { color: var(--gold); }
+  }
+}
+
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .nav-links { gap: 1.5rem; }
+}
