@@ -1,0 +1,57 @@
+// ── Reset ────────────────────────────────────────────────────────────────────
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ── Design tokens ────────────────────────────────────────────────────────────
+:root {
+  --bg:        #0d0d0d;
+  --bg2:       #141414;
+  --bg3:       #1a1a1a;
+  --gold:      #c9a84c;
+  --gold-dim:  #a8863a;
+  --text:      #e8e2d9;
+  --muted:     #7a7269;
+  --border:    #2a2520;
+}
+
+// ── Base ─────────────────────────────────────────────────────────────────────
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:  var(--bg);
+  color:       var(--text);
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+// ── Keyframes ────────────────────────────────────────────────────────────────
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; }
+  50%       { opacity: 1; }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+// ── Spinner ──────────────────────────────────────────────────────────────────
+.spinner {
+  width:        20px;
+  height:       20px;
+  border:       2px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation:    spin 0.7s linear infinite;
+  display:      inline-block;
+}
