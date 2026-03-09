@@ -11,7 +11,10 @@ layout: default
 </section>
 
 <section id="about">
-  <!-- about content -->
+  <div>
+    <h1>Who?</h1>
+  </div>
+  <div><h1>What?</h1></div>
 </section>
 
 <section id="work">
@@ -37,10 +40,10 @@ layout: default
 <section id="testimonials">
   <div class="work-header">
     <div>
-      <p class="section-label">Selected Work</p>
+      <p class="section-label">What People Say About Me</p>
       <h2 class="work-heading">Testimonials</h2>
     </div>
-    <span class="work-count">{{ site.testimonials.size }} reviews</span>
+    <span class="work-count">{{ site.data.testimonials.size }} reviews</span>
   </div>
   <div class="cards">
     {% for ref in site.data.testimonials %}
