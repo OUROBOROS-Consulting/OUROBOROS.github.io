@@ -1,0 +1,316 @@
+// ── Hero ─────────────────────────────────────────────────────────────────────
+#hero {
+  min-height:     100vh;
+  display:        flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:    flex-start;
+  padding:        0 10vw;
+  position:       relative;
+  overflow:       hidden;
+
+  // Ambient gold glow
+  &::before {
+    content:    '';
+    position:   absolute;
+    top:        -20%;
+    right:      -10%;
+    width:      60vw;
+    height:     60vw;
+    max-width:  700px;
+    max-height: 700px;
+    background: radial-gradient(circle, rgba(201, 168, 76, 0.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+}
+
+.hero-eyebrow {
+  font-size:      0.75rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  1.2rem;
+  opacity:        0;
+  animation:      fadeUp 0.8s 0.2s forwards;
+}
+
+.hero-name {
+  font-family:   'Playfair Display', serif;
+  font-size:     clamp(3rem, 8vw, 6.5rem);
+  font-weight:   600;
+  line-height:   1.05;
+  margin-bottom: 1.5rem;
+  opacity:       0;
+  animation:     fadeUp 0.8s 0.4s forwards;
+}
+
+.hero-tagline {
+  font-size:   clamp(1rem, 2vw, 1.2rem);
+  color:       var(--muted);
+  max-width:   480px;
+  line-height: 1.8;
+  opacity:     0;
+  animation:   fadeUp 0.8s 0.6s forwards;
+}
+
+.hero-cta {
+  margin-top: 2.5rem;
+  opacity:    0;
+  animation:  fadeUp 0.8s 0.8s forwards;
+}
+
+.scroll-hint {
+  position:       absolute;
+  bottom:         2.5rem;
+  left:           50%;
+  transform:      translateX(-50%);
+  display:        flex;
+  flex-direction: column;
+  align-items:    center;
+  gap:            0.4rem;
+  opacity:        0;
+  animation:      fadeUp 1s 1.2s forwards;
+
+  span {
+    font-size:      0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color:          var(--muted);
+  }
+}
+
+.scroll-line {
+  width:      1px;
+  height:     40px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  animation:  scrollPulse 2s infinite;
+}
+
+// ── About ────────────────────────────────────────────────────────────────────
+#about {
+  padding:               8rem 10vw;
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   6rem;
+  align-items:           center;
+  border-top:            1px solid var(--border);
+}
+
+// ── Work ─────────────────────────────────────────────────────────────────────
+#work {
+  padding:    8rem 10vw;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.work-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     flex-end;
+  margin-bottom:   4rem;
+}
+
+.work-heading {
+  font-family: 'Playfair Display', serif;
+  font-size:   clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+}
+
+.work-count {
+  font-size:      0.75rem;
+  color:          var(--muted);
+  letter-spacing: 0.1em;
+}
+
+// ── Shelf ────────────────────────────────────────────────────────────────────
+#shelf {
+  padding:    8rem 10vw;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.shelf-tabs {
+  display:       flex;
+  gap:           1rem;
+  margin:        2.5rem 0 3rem;
+}
+
+.shelf-tab {
+  background:     transparent;
+  border:         1px solid var(--border);
+  color:          var(--muted);
+  font-family:    'Inter', sans-serif;
+  font-size:      0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding:        0.5rem 1.4rem;
+  cursor:         pointer;
+  transition:     border-color 0.3s, color 0.3s;
+
+  &.active,
+  &:hover {
+    border-color: var(--gold);
+    color:        var(--gold);
+  }
+}
+
+.shelf-list {
+  display:               none;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap:                   1.5px;
+
+  &.active { display: grid; }
+}
+
+// ── TikZ ─────────────────────────────────────────────────────────────────────
+#tikz {
+  padding:    8rem 10vw;
+  border-top: 1px solid var(--border);
+}
+
+.tikz-layout {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   2rem;
+  margin-top:            2.5rem;
+  align-items:           start;
+}
+
+.tikz-editor-wrap {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.8rem;
+}
+
+.tikz-label {
+  font-size:      0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color:          var(--muted);
+}
+
+#tikz-input {
+  width:       100%;
+  min-height:  280px;
+  resize:      vertical;
+  background:  var(--bg2);
+  border:      1px solid var(--border);
+  color:       var(--text);
+  font-family: 'JetBrains Mono', monospace;
+  font-size:   0.82rem;
+  padding:     1.2rem;
+  line-height: 1.7;
+  outline:     none;
+  transition:  border-color 0.3s;
+
+  &:focus { border-color: var(--gold-dim); }
+}
+
+.tikz-actions {
+  display:     flex;
+  gap:         1rem;
+  align-items: center;
+}
+
+.tikz-status {
+  font-size:  0.75rem;
+  color:      var(--muted);
+  font-style: italic;
+}
+
+.tikz-output-wrap {
+  display:        flex;
+  flex-direction: column;
+  gap:            0.8rem;
+}
+
+#tikz-output {
+  min-height:      280px;
+  background:      var(--bg2);
+  border:          1px solid var(--border);
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+  padding:         1.5rem;
+  overflow:        auto;
+
+  svg {
+    max-width: 100%;
+    height:    auto;
+  }
+}
+
+.output-placeholder {
+  color:       var(--muted);
+  font-size:   0.85rem;
+  text-align:  center;
+  line-height: 1.8;
+
+  span {
+    display:      block;
+    font-size:    2rem;
+    margin-bottom: 0.5rem;
+    opacity:      0.3;
+  }
+}
+
+.copy-svg-btn {
+  align-self:     flex-end;
+  background:     transparent;
+  border:         1px solid var(--border);
+  color:          var(--muted);
+  font-family:    'Inter', sans-serif;
+  font-size:      0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding:        0.4rem 1rem;
+  cursor:         pointer;
+  transition:     border-color 0.3s, color 0.3s;
+  display:        none;
+
+  &:hover {
+    border-color: var(--gold);
+    color:        var(--gold);
+  }
+}
+
+.tikz-examples {
+  margin-top: 1.5rem;
+
+  p {
+    font-size:      0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color:          var(--muted);
+    margin-bottom:  0.6rem;
+  }
+}
+
+.example-chips {
+  display:   flex;
+  flex-wrap: wrap;
+  gap:       0.5rem;
+}
+
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  #hero  { padding: 0 6vw; }
+
+  #about {
+    padding:               5rem 6vw;
+    grid-template-columns: 1fr;
+    gap:                   3rem;
+  }
+
+  #work  { padding: 5rem 6vw; }
+
+  .work-header {
+    flex-direction: column;
+    align-items:    flex-start;
+    gap:            0.5rem;
+  }
+
+  #shelf, #tikz { padding: 5rem 6vw; }
+
+  .tikz-layout { grid-template-columns: 1fr; }
+}
