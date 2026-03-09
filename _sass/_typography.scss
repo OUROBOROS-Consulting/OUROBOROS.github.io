@@ -1,0 +1,51 @@
+// ── Shared section labels & headings ─────────────────────────────────────────
+.section-label {
+  font-size:      0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color:          var(--gold);
+  margin-bottom:  1.5rem;
+}
+
+.about-heading {
+  font-family:   'Playfair Display', serif;
+  font-size:     clamp(2rem, 4vw, 3rem);
+  font-weight:   400;
+  line-height:   1.2;
+  margin-bottom: 1.5rem;
+}
+
+// ── Pull quote (used in #about and essay blockquotes) ────────────────────────
+.pull-quote {
+  position:    relative;
+  padding:     2.5rem;
+  border-left: 2px solid var(--gold);
+  background:  var(--bg2);
+
+  blockquote {
+    font-family: 'Playfair Display', serif;
+    font-size:   clamp(1.1rem, 2vw, 1.4rem);
+    font-style:  italic;
+    line-height: 1.6;
+    color:       var(--text);
+  }
+
+  cite {
+    display:        block;
+    margin-top:     1.2rem;
+    font-size:      0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color:          var(--gold);
+    font-style:     normal;
+  }
+}
+
+// ── About body copy ──────────────────────────────────────────────────────────
+.about-body {
+  color:     var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.9;
+
+  p + p { margin-top: 1rem; }
+}
