@@ -15,12 +15,6 @@
   html { scroll-behavior: smooth; }
   body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.7; }
 
-  nav { position: fixed; top: 0; width: 100%; z-index: 100; padding: 1.4rem 3rem; display: flex; justify-content: space-between; align-items: center; background: rgba(13,13,13,0.85); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
-  .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; letter-spacing: 0.05em; color: var(--gold); text-decoration: none; }
-  .nav-links { display: flex; gap: 2.5rem; }
-  .nav-links a { color: var(--muted); text-decoration: none; font-size: 0.82rem; letter-spacing: 0.12em; text-transform: uppercase; transition: color 0.3s; }
-  .nav-links a:hover { color: var(--gold); }
-
   /* ── CV Header ── */
   .cv-header { padding: 9rem 10vw 4rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
   .cv-name { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 600; line-height: 1.05; }
@@ -86,12 +80,6 @@
   /* Grid rows */
   .cv-row { display: contents; }
 
-  footer { padding: 4rem 10vw; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
-  .footer-copy { font-size: 0.78rem; color: var(--muted); }
-  .footer-links { display: flex; gap: 2rem; }
-  .footer-links a { font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: none; transition: color 0.3s; }
-  .footer-links a:hover { color: var(--gold); }
-
   @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; } .nav-links { gap: 1.5rem; }
     .cv-header { padding: 8rem 6vw 3rem; flex-direction: column; align-items: flex-start; }
@@ -107,17 +95,6 @@
 </style>
 </head>
 <body>
-
-<nav>
-  <a class="nav-logo" href="index.html">Apostolos Stamenos</a>
-  <div class="nav-links">
-    <a href="index.html#about">About</a>
-    <a href="index.html#work">Work</a>
-    <a href="index.html#tikz">Figures</a>
-    <a href="index.html#shelf">Shelf</a>
-    <a href="mailto:REDACTED">Contact</a>
-  </div>
-</nav>
 
 <header class="cv-header">
   <div>
