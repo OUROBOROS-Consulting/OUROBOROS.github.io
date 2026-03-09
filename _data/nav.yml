@@ -1,0 +1,18 @@
+- title: Writing
+  children:
+    - title: Essays
+      url: /essays/
+    - title: Papers
+      url: /papers/
+- title: Reading
+  children:
+    - title: Books
+      url: /books/
+    - title: Notes
+      url: /notes/
+- title: Work
+  children:
+    - title: Consulting
+      url: /consulting/
+    - title: CV
+      url: /cv/
