@@ -133,6 +133,65 @@
   letter-spacing: 0.1em;
 }
 
+// ── VALUES ────────────────────────────────────────────────────────────────────
+#values {
+  padding:    8rem 10vw;
+  border-top: 1px solid var(--border);
+  background: var(--bg2);
+}
+
+.values-header {
+  display:         flex;
+  justify-content: space-between;
+  align-items:     flex-end;
+  margin-bottom:   4rem;
+}
+
+.values-heading {
+  font-family: 'Playfair Display', serif;
+  font-size:   clamp(2rem, 4vw, 3rem);
+  font-weight: 400;
+}
+
+.values-count {
+  font-size:      0.75rem;
+  color:          var(--muted);
+  letter-spacing: 0.1em;
+}
+  
+.values-tabs {
+  display:       flex;
+  gap:           1rem;
+  margin:        2.5rem 0 3rem;
+}
+
+.testimonials-tab {
+  background:     transparent;
+  border:         1px solid var(--border);
+  color:          var(--muted);
+  font-family:    'Inter', sans-serif;
+  font-size:      0.75rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding:        0.5rem 1.4rem;
+  cursor:         pointer;
+  transition:     border-color 0.3s, color 0.3s;
+
+  &.active,
+  &:hover {
+    border-color: var(--gold);
+    color:        var(--gold);
+  }
+}
+
+.testimonials-list {
+  display:               none;
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+  gap:                   1.5px;
+
+  &.active { display: grid; }
+}
+
 // ── testimonials ────────────────────────────────────────────────────────────────────
 #testimonials {
   padding:    8rem 10vw;
@@ -140,26 +199,26 @@
   background: var(--bg2);
 }
 
-.testimonials-header {
+.values-header {
   display:         flex;
   justify-content: space-between;
   align-items:     flex-end;
   margin-bottom:   4rem;
 }
 
-.testimonials-heading {
+.values-heading {
   font-family: 'Playfair Display', serif;
   font-size:   clamp(2rem, 4vw, 3rem);
   font-weight: 400;
 }
 
-.testimonials-count {
+.values-count {
   font-size:      0.75rem;
   color:          var(--muted);
   letter-spacing: 0.1em;
 }
   
-.testimonials-tabs {
+.values-tabs {
   display:       flex;
   gap:           1rem;
   margin:        2.5rem 0 3rem;
