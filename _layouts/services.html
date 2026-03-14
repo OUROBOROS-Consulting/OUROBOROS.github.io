@@ -29,7 +29,7 @@ layout: default
   .nav-links a:hover { color: var(--gold); }
 
   /* ── Post header ── */
-  .post-header {
+  .service-header {
     max-width: 680px;
     margin: 0 auto;
     padding: 10rem 10vw 3.5rem;
@@ -50,15 +50,15 @@ layout: default
   #progress-bar { position: fixed; top: 0; left: 0; height: 2px; background: var(--gold); width: 0%; z-index: 200; transition: width 0.1s linear; }
 
   /* ── Prose ── */
-  .post-body {
+  .service-body {
     max-width: 680px;
     margin: 0 auto;
     padding: 3.5rem 10vw 7rem;
   }
 
-  .post-body p { font-size: 1rem; color: var(--muted); line-height: 2; margin-bottom: 1.6rem; }
-  .post-body > p:first-of-type { font-size: 1.08rem; color: var(--text); line-height: 1.95; }
-  .post-body > p:first-of-type::first-letter {
+  .service-body p { font-size: 1rem; color: var(--muted); line-height: 2; margin-bottom: 1.6rem; }
+  .service-body > p:first-of-type { font-size: 1.08rem; color: var(--text); line-height: 1.95; }
+  .service-body > p:first-of-type::first-letter {
     font-family: 'Playfair Display', serif;
     font-size: 3.8rem;
     font-weight: 600;
@@ -68,25 +68,25 @@ layout: default
     color: var(--gold);
   }
 
-  .post-body h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 400; color: var(--text); margin: 3.5rem 0 1rem; line-height: 1.3; }
-  .post-body h3 { font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 2.5rem 0 0.8rem; }
+  .service-body h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.3rem, 2.5vw, 1.7rem); font-weight: 400; color: var(--text); margin: 3.5rem 0 1rem; line-height: 1.3; }
+  .service-body h3 { font-size: 0.85rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin: 2.5rem 0 0.8rem; }
 
-  .post-body a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.2s; }
-  .post-body a:hover { border-color: var(--gold); }
-  .post-body strong { color: var(--text); font-weight: 500; }
-  .post-body em { font-style: italic; }
+  .service-body a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.2s; }
+  .service-body a:hover { border-color: var(--gold); }
+  .service-body strong { color: var(--text); font-weight: 500; }
+  .service-body em { font-style: italic; }
 
-  .post-body hr { border: none; display: flex; justify-content: center; margin: 3.5rem 0; }
-  .post-body hr::after { content: '◇  ◇  ◇'; color: var(--border); font-size: 0.8rem; letter-spacing: 0.5em; }
+  .service-body hr { border: none; display: flex; justify-content: center; margin: 3.5rem 0; }
+  .service-body hr::after { content: '◇  ◇  ◇'; color: var(--border); font-size: 0.8rem; letter-spacing: 0.5em; }
 
   /* Pull quote */
-  .post-body blockquote {
+  .service-body blockquote {
     margin: 2.5rem 0;
     padding: 2rem 2.5rem;
     border-left: 2px solid var(--gold);
     background: var(--bg2);
   }
-  .post-body blockquote p {
+  .service-body blockquote p {
     font-family: 'Playfair Display', serif;
     font-size: 1.15rem;
     font-style: italic;
@@ -94,16 +94,16 @@ layout: default
     line-height: 1.7;
     margin: 0;
   }
-  .post-body blockquote p:first-of-type::first-letter { all: unset; }
-  .post-body blockquote cite { display: block; margin-top: 0.8rem; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-style: normal; font-family: 'Inter', sans-serif; }
+  .service-body blockquote p:first-of-type::first-letter { all: unset; }
+  .service-body blockquote cite { display: block; margin-top: 0.8rem; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-style: normal; font-family: 'Inter', sans-serif; }
 
   /* Sidenote — inline aside */
   .sidenote { font-size: 0.78rem; color: var(--muted); border-left: 1px solid var(--border); padding-left: 1rem; margin: 2rem 0; line-height: 1.7; font-style: italic; }
 
   /* Inline code */
-  .post-body code { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; background: var(--bg3); border: 1px solid var(--border); padding: 0.15em 0.45em; color: var(--gold-dim); }
-  .post-body pre { background: var(--bg2); border: 1px solid var(--border); padding: 1.5rem; overflow-x: auto; margin: 2rem 0; }
-  .post-body pre code { background: none; border: none; padding: 0; color: var(--text); font-size: 0.82rem; line-height: 1.75; }
+  .service-body code { font-family: 'JetBrains Mono', monospace; font-size: 0.82rem; background: var(--bg3); border: 1px solid var(--border); padding: 0.15em 0.45em; color: var(--gold-dim); }
+  .service-body pre { background: var(--bg2); border: 1px solid var(--border); padding: 1.5rem; overflow-x: auto; margin: 2rem 0; }
+  .service-body pre code { background: none; border: none; padding: 0; color: var(--text); font-size: 0.82rem; line-height: 1.75; }
 
   /* Footnotes */
   .post-footnotes { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); counter-reset: fn; }
@@ -132,7 +132,7 @@ layout: default
 
   @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; } .nav-links { gap: 1.5rem; }
-    .post-header, .post-body { padding-left: 6vw; padding-right: 6vw; }
+    .service-header, .service-body { padding-left: 6vw; padding-right: 6vw; }
     .post-related { padding: 4rem 6vw; }
     footer { padding: 3rem 6vw; flex-direction: column; align-items: flex-start; }
   }
@@ -143,7 +143,7 @@ layout: default
 <div id="progress-bar"></div>
 
 <!-- ── Post header ── -->
-<!--<header class="post-header">
+<!--<header class="service-header">
   <a class="post-back" href="index.html#work">All Writing</a>
   <p class="post-category">Essay · Statistics</p>
   <h1 class="post-title">On the Difference Between a Model and a Story</h1>
@@ -158,7 +158,7 @@ layout: default
 -->
   
 <!-- ── Prose body ── -->
-<header class="post-header service-header">
+<header class="service-header service-header">
   <a class="post-back" href="{{ '/#services' | relative_url }}">All Services</a>
   <p class="post-category">{{ page.category }}</p>
   <h1 class="post-title">{{ page.title }}</h1>
@@ -170,7 +170,7 @@ layout: default
   </div>
 </header>
 
-<article class="post-body service-header">
+<article class="service-body service-header">
   {{ content }}
 </article>
 
