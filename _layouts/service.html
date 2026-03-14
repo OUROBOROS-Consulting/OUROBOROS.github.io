@@ -27,7 +27,26 @@ layout: default
       {% endif %}
     </div>
   </div>
+
+    <!-- Left column: all text elements grouped together -->
+  <!--<div class="hero-text">
+    <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+    <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
+    <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+    <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
+  </div>-->
+
+  <!-- Right column: portrait -->
+  {% if page.headshot %}
+  <div class="hero-portrait">
+    <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}"/>
+  </div>
+  {% endif %}
+
+  <!-- Outside the grid columns, centered at the bottom -->
+  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
 </header>
+
 
 <!-- ── Service Body ── -->
 <div class="svc-body">
