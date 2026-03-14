@@ -1,6 +1,6 @@
 ---
 title: "Interests"
-layout: default
+layout: foundation
 ---
 # Technology
 
