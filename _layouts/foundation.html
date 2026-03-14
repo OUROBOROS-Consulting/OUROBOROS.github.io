@@ -32,37 +32,9 @@ layout: default
 
 <!-- ── Prose body ── -->
 <article class="svc-body">
-
-  <p>There is a failure mode in applied statistics so common it barely registers as a mistake anymore. A researcher fits a model, finds a significant coefficient, and writes a sentence in the results section that the model never actually said. The model estimated a conditional association. The sentence claims a mechanism.</p>
-
-  <p>This isn't dishonesty. It's the natural consequence of a gap that nobody teaches you to manage: the gap between the mathematical object you've built and the narrative you need to communicate it.</p>
-
-  <h2>What a model actually says</h2>
-
-  <p>A regression model — even a sophisticated Bayesian one — is ultimately a description of a joint distribution over observed quantities, conditional on some set of assumptions. It says: <em>given these data, this likelihood, and these priors, here is the posterior over these parameters.</em></p>
-
-  <p>It does not say: <em>X causes Y.</em> It does not say: <em>this effect will replicate.</em> It does not say: <em>these results matter.</em> Those are all claims that require additional structure — a causal model, a theory of external validity, a scientific argument — that lives outside the likelihood function.</p>
-
-  <blockquote>
-    <p>All models are wrong, but some are useful. The question is: useful for what, and honest about what they're not.</p>
-    <cite>— Adapted from Box (1976)</cite>
-  </blockquote>
-
-  <p>The trouble is that science communication requires narrative. Journals want a story. Colleagues want a takeaway. Policy makers want a recommendation. And a joint distribution is, as a piece of rhetoric, almost completely inert.</p>
-
-  <h2>The translation problem</h2>
-
-  <p>So we translate. We summarize the posterior with a point estimate and interval. We describe the interval as if it were a probability statement about the true value.<sup>1</sup> We describe an association as if it implied a mechanism. We describe results from one population as if they applied to another.</p>
-
-  <p>Each of these translations loses something. The question is whether you're doing it intentionally — with a clear accounting of what's been lost — or whether you're doing it because it's the path of least resistance.</p>
-
-  <div class="sidenote">The distinction matters especially in health research, where overclaiming doesn't just mislead scientists — it shapes clinical guidelines, policy decisions, and what patients are told by their doctors.</div>
-
-  <h3>A more honest workflow</h3>
-
-  <p>What I've found useful is to treat model and narrative as separate artifacts that need to be reconciled, rather than as the same thing at different levels of abstraction. Write down what the model literally says — in mathematical terms, or as close to it as the audience allows. Then write down the claim you want to make. Then ask: what additional assumptions would have to hold for the model output to justify the claim?</p>
-
-  <p>Those additional assumptions are your real contribution. State them explicitly. Then readers can argue with the right thing.</p>
+    <div class="lp-content">
+      {{ content }}
+    </div>
 
   <hr/>
 
