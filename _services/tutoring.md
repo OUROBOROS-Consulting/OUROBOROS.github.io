@@ -1,6 +1,36 @@
 ---
+layout: service
 title: Tutoring Services
-layout: services
+category: Services
+lede: Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level.
+tags: [Statistics, R, Python, Mathematics]
+price: Starting at $75/hr
+cta_label: Book a Session
+cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 24 hours.
+who: >
+  Students from high school through PhD level working through statistics,
+  mathematics, probability, or programming. I work especially well with
+  students who feel lost in a course and need someone to rebuild their
+  intuition from the ground up.
+included:
+  - title: 1:1 Sessions
+    description: Live sessions over Zoom or in person in Minneapolis, tailored to your specific course material or project.
+  - title: Homework & Exam Prep
+    description: Targeted review of problem sets, past exams, and concept gaps ahead of deadlines.
+  - title: Code Review
+    description: Debugging and walkthrough of R or Python code for statistics coursework or research.
+  - title: Ongoing Support
+    description: Asynchronous follow-up via email between sessions for quick questions.
+pricing:
+  - name: Undergraduate
+    rate: $75 / hr
+    notes: Algebra through introductory statistics and probability.
+  - name: Graduate
+    rate: $100 / hr
+    notes: Advanced statistics, Bayesian methods, R/Python, research projects.
+  - name: Packages
+    rate: Contact me
+    notes: Discounted rates available for recurring weekly sessions.
 ---
 
 As a dedicated educator with a Master’s degree in Statistics from North Carolina State University and as a current PhD student in Biostatistics, I bring both depth of expertise and years of teaching experience.
