@@ -22,18 +22,40 @@ layout: default
   <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
 </section>
 
-<!--<section id="about">
+<section id="about">
   <div>
     <h1>Who?</h1>
   </div>
   <div><h1>What?</h1></div>
-</section>-->
+</section>
+
+
+<section id="values">
+<div class="testimonials-header">
+    <div>
+      <p class="section-label">What I Live By</p>
+      <h2 class="testimonials-heading">Values</h2>
+    </div>
+    <!--<span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>-->
+  </div>
+  <div class="testimonials-grid">
+    {% for val in site.data.values %}
+    <div class="card">
+      <p class="card-tag">{{ val.title  | markdownify }}</p>
+      <blockquote>
+        <p class="card-desc">{{ val.description | markdownify  }}</p>
+        <cite>—{{ val.reference }}</cite>
+      </blockquote>
+    </div>
+    {% endfor %}
+  </div>
+</section>
 
 <section id="services">
   <div class="work-header">
     <div>
       <p class="section-label">Selected Work</p>
-      <h2 class="work-heading">Services</h2>
+      <h2 class="work-heading">Specialties</h2>
     </div>
   </div>
   <div class="cards">
