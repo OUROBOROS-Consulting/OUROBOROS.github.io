@@ -1,40 +1,43 @@
 - title: About
   children:
-    - title: Credentials
-      url: /credentials
-    - title: Polymathy
-      url: /polymathy
+    - title: Survival
+      url: /survival
+#    - title: Polymathy
+#      url: /polymathy
     - title: CV
       url: /cv
 
 - title: Services
   children:
     - title: Consulting
-      url: /services/consulting
+      url: /services/consulting/
     - title: Development
-      url: /services/dev
+      url: /services/dev/
     - title: Investigative
       url: /services/investigative
     - title: Tutoring
-      url: /services/tutoring
+      url: /services/tutoring/
     - title: Advocacy
-      url: /services/advocacy
+      url: /services/advocacy/
       
 - title: Writing
   children:
-    - title: Books
-      url: /books
-    - title: Essays
-      url: /essays
     - title: Papers
-      url: /papers
+      url: /papers/
+    - title: Books
+      url: /books/
+    - title: Essays
+      url: /essays/
+    - title: Posts
+      url: /posts/
       
 - title: Influences
   children:
+    - title: Academic
+      url: /academic
     - title: Literary
       url: /literary/
     - title: Musical
       url: /musical
-    - title: Academic
-      url: /academic
+
       
