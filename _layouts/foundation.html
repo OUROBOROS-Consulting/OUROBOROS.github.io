@@ -15,6 +15,7 @@ layout: default
       <div class="svc-tags">
         {% for tag in page.tags %}
         <span class="lp-tag">{{ tag }}</span>
+        <div class="hero-cta"><a href="#{{ tag }}" class="btn">{{ tag }}</a></div>
         {% endfor %}
       </div>
     </div>
