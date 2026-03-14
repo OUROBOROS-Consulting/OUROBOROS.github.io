@@ -79,9 +79,9 @@ layout: default
   <div class="testimonials-grid">
     {% for ref in site.data.testimonials %}
     <div class="card">
-      <p class="card-tag">{{ ref.title }}</p>
+      <p class="card-tag">{{ ref.title  | markdownify }}</p>
       <blockquote>
-        <p class="card-desc">{{ ref.description }}</p>
+        <p class="card-desc">{{ ref.description | markdownify  }}</p>
         <cite>—{{ ref.reference }}</cite>
       </blockquote>
     </div>
