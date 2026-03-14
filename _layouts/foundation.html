@@ -1,0 +1,112 @@
+---
+layout: default
+---
+
+<div id="progress-bar"></div>
+
+<!-- ── Service Hero ── -->
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/services/' | relative_url }}">All Services</a>
+  <div class="svc-hero-inner">
+    <div class="svc-hero-text">
+      <p class="post-category">{{ page.category }}</p>
+      <h1 class="svc-title">{{ page.title }}</h1>
+      <p class="svc-lede">{{ page.lede }}</p>
+      <div class="svc-tags">
+        {% for tag in page.tags %}
+        <span class="lp-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="svc-hero-cta">
+      <a href="{{ page.cta_url | default: site.email | prepend: 'mailto:' }}" class="btn">
+        {{ page.cta_label | default: 'Get in Touch' }}
+      </a>
+      {% if page.price %}
+      <p class="svc-price">{{ page.price }}</p>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+
+<!-- ── Service Body ── -->
+<div class="svc-body">
+
+  <!-- Who it's for 
+  {% if page.who %}
+  <section class="svc-section">
+    <div class="svc-section-label">
+      <p>Who It's For</p>
+    </div>
+    <div class="svc-section-content">
+      {{ page.who | markdownify }}
+    </div>
+  </section>
+  {% endif %}-->
+
+  <!-- What's included 
+  {% if page.included %}
+  <section class="svc-section">
+    <div class="svc-section-label">
+      <p>What's Included</p>
+    </div>
+    <div class="svc-section-content svc-included">
+      {% for item in page.included %}
+      <div class="svc-item">
+        <span class="svc-item-marker">◇</span>
+        <div>
+          <p class="svc-item-title">{{ item.title }}</p>
+          <p class="svc-item-desc">{{ item.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}-->
+
+  <!-- Pricing 
+  {% if page.pricing %}
+  <section class="svc-section">
+    <div class="svc-section-label">
+      <p>Pricing</p>
+    </div>
+    <div class="svc-section-content">
+      {% for tier in page.pricing %}
+      <div class="svc-pricing-tier">
+        <div class="svc-pricing-header">
+          <span class="svc-pricing-name">{{ tier.name }}</span>
+          <span class="svc-pricing-rate">{{ tier.rate }}</span>
+        </div>
+        {% if tier.notes %}
+        <p class="svc-pricing-notes">{{ tier.notes }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+  {% endif %}-->
+  
+  <!-- How to get started -->
+  <section class="svc-section svc-section--cta">
+    <div class="svc-section-label">
+      <p>Get Started</p>
+    </div>
+    <div class="svc-section-content">
+      <p class="svc-cta-body">{{ page.cta_body | default: 'Reach out and we can find a time to talk through what you need.' }}</p>
+      <a href="{{ page.cta_url | default: site.email | prepend: 'mailto:' }}" class="btn">
+        {{ page.cta_label | default: 'Get in Touch' }}
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+</script>
