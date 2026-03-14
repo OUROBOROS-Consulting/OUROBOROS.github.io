@@ -3,15 +3,14 @@ layout: service
 title: Tutoring Services
 category: Services
 lede: Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level.
-tags: [Statistics, R, Python, Mathematics]
+tags: [Smart Homes, LaTeX, Statistics, Programming, Technology Skills]
 price: Starting at $75/hr
 cta_label: Book a Session
-cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 24 hours.
+cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within X hours.
 who: >
   Students from high school through PhD level working through statistics,
   mathematics, probability, or programming. I work especially well with
-  students who feel lost in a course and need someone to rebuild their
-  intuition from the ground up.
+  students who feel lost or vulnerable in the modern world.
 included:
   - title: 1:1 Sessions
     description: Live sessions over Zoom or in person in Minneapolis, tailored to your specific course material or project.
@@ -22,10 +21,10 @@ included:
   - title: Ongoing Support
     description: Asynchronous follow-up via email between sessions for quick questions.
 pricing:
-  - name: Undergraduate
+  - name: General Tech Skills
     rate: $75 / hr
     notes: Algebra through introductory statistics and probability.
-  - name: Graduate
+  - name: Cybersecuity Essentials
     rate: $100 / hr
     notes: Advanced statistics, Bayesian methods, R/Python, research projects.
   - name: Packages
@@ -34,7 +33,7 @@ pricing:
 ---
 
 As a dedicated educator with a Master’s degree in Statistics from North Carolina State University and as a current PhD student in Biostatistics, I bring both depth of expertise and years of teaching experience.
-I have over 8 years of combined experience tutoring mathematics and statistics, helping students from high school through graduate school succeed in subjects such as Algebra, Calculus, Probability, and advanced Statistics.
+I have over 8 years of combined experience tutoring mathematics and statistics, helping students from high school through graduate school succeed in subjects such as Algebra, Calculus, Probability, and advanced Statistics. I'm especially passionate about teaching less technically savvy folks (40+) who may be struggling with comfortably/safely navigating the modern world.
 
 My teaching philosophy emphasizes creating a supportive and engaging learning environment where students feel comfortable asking questions and can confidently tackle complex concepts at their own pace.
 I adapt my methods to each student’s learning style, aiming not only for immediate academic success but also for fostering a lasting appreciation for mathematics and statistics.
