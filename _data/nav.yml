@@ -1,5 +1,11 @@
 - title: About
   children:
+    - title: Feedback Loops
+      url: /cybernetics
+    - title: Mission
+      url: /mission
+    - title: Values
+      url: /values
     - title: Survival
       url: /survival
     - title: Interests
