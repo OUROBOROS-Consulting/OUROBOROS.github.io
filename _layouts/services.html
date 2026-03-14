@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div id="progress-bar"></div>
+
+<header class="post-header">
+  <a class="post-back" href="{{ '/#services' | relative_url }}">All Services</a>
+  <p class="post-category">{{ page.category }}</p>
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.lede %}
+  <p class="post-lede">{{ page.lede }}</p>
+  {% endif %}
+  <div class="post-meta">
+    <span class="post-meta-tag">{{ page.tags | join: ' · ' }}</span>
+  </div>
+</header>
+
+<article class="post-body">
+  {{ content }}
+</article>
+
+<script>
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+</script>
