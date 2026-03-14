@@ -3,7 +3,7 @@ title: "Interests"
 layout: foundation
 category: Services
 lede: Using data and technology to improve lives.
-tags: [Statistics, R, Python, Mathematics]
+tags: [Technology, Psychology, Python, Mathematics]
 cta_label: Book a Session
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours.
 who: >
