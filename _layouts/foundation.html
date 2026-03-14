@@ -6,7 +6,7 @@ layout: default
 
 <!-- ── Service Hero ── -->
 <header class="svc-hero">
-  <a class="post-back" href="{{ '/services/' | relative_url }}">All Services</a>
+  <a class="post-back" href="{{ '/services/' | relative_url }}">Back</a>
   <div class="svc-hero-inner">
     <div class="svc-hero-text">
       <p class="post-category">{{ page.category }}</p>
@@ -14,7 +14,6 @@ layout: default
       <p class="svc-lede">{{ page.lede }}</p>
       <div class="svc-tags">
         {% for tag in page.tags %}
-        <span class="lp-tag">{{ tag }}</span>
         <div class="hero-cta"><a href="#{{ tag }}" class="btn">{{ tag }}</a></div>
         {% endfor %}
       </div>
