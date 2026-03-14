@@ -1,6 +1,6 @@
 ---
 title: Consulting Services
-layout: default
+layout: services
 ---
 
 Technology is not a luxury, it is a bare necessity. Surviving in the modern world requires technological literacy. Thriving in the modern world demands technological fluency.
