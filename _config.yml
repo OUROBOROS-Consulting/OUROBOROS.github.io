@@ -19,7 +19,10 @@ collections:
   notes:
     output: true
     permalink: /notes/:slug/
-    
+  linkedin:
+  output: true
+  permalink: /posts/:year/:slug/
+  
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]
 markdown: kramdown
