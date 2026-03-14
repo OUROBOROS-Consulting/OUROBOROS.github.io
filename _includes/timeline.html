@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Timeline</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0d0d0d; --bg2: #141414; --bg3: #1a1a1a;
+    --gold: #c9a84c; --gold-dim: #a8863a;
+    --text: #e8e2d9; --muted: #7a7269; --border: #2a2520;
+    --red: #c0504d; --blue: #5b8db8; --teal: #4a9e8e;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    padding: 4rem 2rem;
+    min-height: 100vh;
+  }
+
+  /* ── Outer container ── */
+  .timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    column-gap: 0;
+    max-width: 860px;
+    margin: 0 auto;
+  }
+
+  /* ── Central axis ── */
+  .timeline-axis {
+    grid-column: 2;
+    grid-row: 1 / span 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .axis-line {
+    width: 2px;
+    flex: 1;
+    background: var(--border);
+    position: relative;
+  }
+
+  /* ── Year marker ── */
+  .year-marker {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    padding: 0.3rem 0;
+  }
+
+  .year-badge {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.7rem;
+    color: var(--gold);
+    background: var(--bg);
+    border: 1px solid var(--gold-dim);
+    padding: 0.2rem 0.6rem;
+    letter-spacing: 0.1em;
+    white-space: nowrap;
+    z-index: 3;
+  }
+
+  /* ── Interval bands (behind events) ── */
+  .interval-track {
+    grid-column: 2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+
+  .interval-band {
+    width: 10px;
+    border-radius: 0;
+    opacity: 0.5;
+    position: relative;
+  }
+
+  .interval-band .interval-label {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    font-weight: 500;
+  }
+
+  .interval-band.blue  { background: var(--blue);  }
+  .interval-band.teal  { background: var(--teal);  }
+  .interval-band.gold  { background: var(--gold);  }
+
+  /* ── Row: a single point in time ── */
+  .tl-row {
+    display: contents;
+  }
+
+  /* ── Event boxes ── */
+  .tl-left, .tl-right {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem 0;
+    min-height: 52px;
+  }
+
+  .tl-left  { justify-content: flex-end; padding-right: 1.2rem; }
+  .tl-right { justify-content: flex-start; padding-left: 1.2rem; }
+
+  /* Empty cells still hold vertical space */
+  .tl-left.empty, .tl-right.empty { min-height: 52px; }
+
+  .tl-connector {
+    grid-column: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 52px;
+  }
+
+  /* Axis segment through each row */
+  .tl-connector::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: var(--border);
+  }
+
+  /* Dot on the axis */
+  .tl-connector .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 2px solid var(--gold);
+    z-index: 2;
+    flex-shrink: 0;
+  }
+
+  /* Dotted connector lines */
+  .tl-left.has-event  { position: relative; }
+  .tl-right.has-event { position: relative; }
+
+  .tl-left.has-event::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 1.2rem;
+    border-top: 1px dotted var(--muted);
+  }
+
+  .tl-right.has-event::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 1.2rem;
+    border-top: 1px dotted var(--muted);
+  }
+
+  /* ── Event card ── */
+  .event {
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
+    max-width: 200px;
+    transition: border-color 0.2s;
+  }
+
+  .event:hover { border-color: var(--gold-dim); }
+
+  .event-title {
+    color: var(--text);
+    font-weight: 400;
+    margin-bottom: 0.15rem;
+  }
+
+  .event-date {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.65rem;
+    color: var(--gold);
+    letter-spacing: 0.05em;
+  }
+
+  /* Variants */
+  .event.red { border-color: var(--red); }
+  .event.red .event-title { color: var(--red); }
+
+  .event.gold { border-color: var(--gold); }
+
+  /* ── Month label rows ── */
+  .month-row {
+    display: contents;
+  }
+
+  .month-label {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .month-label::before {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: var(--border);
+  }
+
+  .month-pip {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.58rem;
+    color: var(--muted);
+    background: var(--bg);
+    padding: 0.1rem 0.3rem;
+    letter-spacing: 0.08em;
+    z-index: 2;
+  }
+
+  .month-spacer {
+    min-height: 14px;
+  }
+
+  /* Interval label positioned beside the axis */
+  .interval-label-left,
+  .interval-label-right {
+    font-size: 0.58rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--muted);
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    white-space: nowrap;
+  }
+</style>
+</head>
+<body>
+
+<div class="timeline">
+
+  <!-- ── 2024 ── -->
+  <div style="grid-column:1"></div>
+  <div class="year-marker"><span class="year-badge">2024</span></div>
+  <div style="grid-column:3"></div>
+
+  <!-- Month: Aug -->
+  <div style="grid-column:1" class="month-spacer"></div>
+  <div class="month-label"><span class="month-pip">Aug</span></div>
+  <div style="grid-column:3" class="month-spacer"></div>
+
+  <!-- Event: Moved to MN -->
+  <div class="tl-left has-event">
+    <div class="event">
+      <div class="event-title">Moved to Minneapolis</div>
+      <div class="event-date">8/1/2024</div>
+    </div>
+  </div>
+  <div class="tl-connector"><div class="dot"></div></div>
+  <div class="tl-right empty"></div>
+
+  <!-- Month: Nov -->
+  <div style="grid-column:1" class="month-spacer"></div>
+  <div class="month-label"><span class="month-pip">Nov</span></div>
+  <div style="grid-column:3" class="month-spacer"></div>
+
+  <!-- Event: Project started -->
+  <div class="tl-left empty"></div>
+  <div class="tl-connector"><div class="dot"></div></div>
+  <div class="tl-right has-event">
+    <div class="event gold">
+      <div class="event-title">T32 Fellowship Begins</div>
+      <div class="event-date">11/14/2024</div>
+    </div>
+  </div>
+
+  <!-- ── 2025 ── -->
+  <div style="grid-column:1" class="month-spacer"></div>
+  <div class="year-marker"><span class="year-badge">2025</span></div>
+  <div style="grid-column:3" class="month-spacer"></div>
+
+  <!-- Month: Jan -->
+  <div style="grid-column:1" class="month-spacer"></div>
+  <div class="month-label"><span class="month-pip">Jan</span></div>
+  <div style="grid-column:3" class="month-spacer"></div>
+
+  <!-- Event: left side, red -->
+  <div class="tl-left has-event">
+    <div class="event red">
+      <div class="event-title">Something Critical Happened</div>
+      <div class="event-date">1/31/2025</div>
+    </div>
+  </div>
+  <div class="tl-connector"><div class="dot"></div></div>
+  <div class="tl-right empty"></div>
+
+  <!-- Month: Apr -->
+  <div style="grid-column:1" class="month-spacer"></div>
+  <div class="month-label"><span class="month-pip">Apr</span></div>
+  <div style="grid-column:3" class="month-spacer"></div>
+
+  <!-- Event: right side -->
+  <div class="tl-left empty"></div>
+  <div class="tl-connector"><div class="dot"></div></div>
+  <div class="tl-right has-event">
+    <div class="event">
+      <div class="event-title">Meeting with Adviser</div>
+      <div class="event-date">4/10/2025</div>
+    </div>
+  </div>
+
+  <!-- Month: Aug -->
+  <div style="grid-column:1" class="month-spacer"></div>
+  <div class="month-label"><span class="month-pip">Aug</span></div>
+  <div style="grid-column:3" class="month-spacer"></div>
+
+  <!-- Event: both sides same row -->
+  <div class="tl-left has-event">
+    <div class="event">
+      <div class="event-title">Written Prelim</div>
+      <div class="event-date">8/15/2025</div>
+    </div>
+  </div>
+  <div class="tl-connector"><div class="dot"></div></div>
+  <div class="tl-right has-event">
+    <div class="event gold">
+      <div class="event-title">Prelim Debrief</div>
+      <div class="event-date">8/26/2025</div>
+    </div>
+  </div>
+
+  <!-- Axis tail -->
+  <div style="grid-column:1; min-height:2rem;"></div>
+  <div style="grid-column:2; min-height:2rem; border-left: 2px solid var(--border); margin-left: calc(50% - 1px);"></div>
+  <div style="grid-column:3; min-height:2rem;"></div>
+
+</div>
+
+</body>
+</html>
