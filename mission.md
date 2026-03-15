@@ -6,9 +6,9 @@ title: Mission
 hero:
   name_line1: Apostolos
   name_line2: Stamenos
-  eyebrow: "Technologist, Researcher, Writer"
+  eyebrow: "Technologist, Researcher, Writer, Survivor"
   tagline: >
-    I empower people so that technology works for them, not against them.
+    I empower people so that systems work for them, not against them.
 
 # ── About ──────────────────────────────────────────────────────────────────
 about:
@@ -22,9 +22,8 @@ about:
 
 # ── Pull quote ─────────────────────────────────────────────────────────────
 pull_quote: >
-  "For many people, technology is an obstacle, at best. For others, technology is a weapon of mass
-  destruction. For a lucky few, technology is a tool of empowerment.
-  You get to decide what role technology will play in your life."
+  "Institutions have failed miserably at protecting me,
+  and in many ways have only made things worse."
 
 # ── Page sections ──────────────────────────────────────────────────────────
 sections:
