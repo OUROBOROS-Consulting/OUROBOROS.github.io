@@ -1,23 +1,32 @@
-// ── Reset ────────────────────────────────────────────────────────────────────
+// ── SCSS font variables (single source of truth — used by every partial) ──────
+$font-serif: 'Playfair Display', serif;
+$font-sans:  'Inter', sans-serif;
+$font-mono:  'JetBrains Mono', monospace;
+
+// ── Reset ─────────────────────────────────────────────────────────────────────
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-// ── Design tokens ────────────────────────────────────────────────────────────
+// ── CSS custom properties ─────────────────────────────────────────────────────
 :root {
-  --bg:        #0d0d0d;
-  --bg2:       #141414;
-  --bg3:       #1a1a1a;
-  --gold:      #c9a84c;
-  --gold-dim:  #a8863a;
-  --text:      #e8e2d9;
-  --muted:     #7a7269;
-  --border:    #2a2520;
+  --bg:       #0d0d0d;
+  --bg2:      #141414;
+  --bg3:      #1a1a1a;
+  --gold:     #c9a84c;
+  --gold-dim: #a8863a;
+  --text:     #e8e2d9;
+  --muted:    #7a7269;
+  --border:   #2a2520;
+  --ruby:     #A00000;
+  --sapphire: #5A5AA0;
+  --emerald:  #095732;
+  --amethyst: #9680F7;
 }
 
-// ── Base ─────────────────────────────────────────────────────────────────────
+// ── Base ──────────────────────────────────────────────────────────────────────
 html {
   scroll-behavior: smooth;
 }
@@ -25,12 +34,43 @@ html {
 body {
   background:  var(--bg);
   color:       var(--text);
-  font-family: 'Inter', sans-serif;
+  font-family: $font-sans;
   font-weight: 300;
   line-height: 1.7;
 }
 
-// ── Keyframes ────────────────────────────────────────────────────────────────
+// ── Reading progress bar ──────────────────────────────────────────────────────
+// Global element — used on essay, service, and mission pages via foundation.html
+#progress-bar {
+  position:   fixed;
+  top:        0;
+  left:       0;
+  height:     2px;
+  background: var(--gold);
+  width:      0%;
+  z-index:    200;
+  transition: width 0.1s linear;
+}
+
+// ── Back link ─────────────────────────────────────────────────────────────────
+// Shared by essay and service pages — lives here, not in _essay.scss
+.post-back {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             0.4rem;
+  font-size:       0.72rem;
+  letter-spacing:  0.18em;
+  text-transform:  uppercase;
+  color:           var(--muted);
+  text-decoration: none;
+  transition:      color 0.3s;
+  margin-bottom:   2.5rem;
+
+  &::before { content: '←'; }
+  &:hover   { color: var(--gold); }
+}
+
+// ── Keyframes ─────────────────────────────────────────────────────────────────
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -45,13 +85,13 @@ body {
   to { transform: rotate(360deg); }
 }
 
-// ── Spinner ──────────────────────────────────────────────────────────────────
+// ── Spinner ───────────────────────────────────────────────────────────────────
 .spinner {
-  width:        20px;
-  height:       20px;
-  border:       2px solid var(--border);
+  width:            20px;
+  height:           20px;
+  border:           2px solid var(--border);
   border-top-color: var(--gold);
-  border-radius: 50%;
-  animation:    spin 0.7s linear infinite;
-  display:      inline-block;
+  border-radius:    50%;
+  animation:        spin 0.7s linear infinite;
+  display:          inline-block;
 }
