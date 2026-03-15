@@ -107,14 +107,17 @@ layout: default
       <h2 class="work-heading">What I Offer</h2>
     </div>
   </div>
-  <div class="cards">
-    {% for service in site.services %}
-    <div class="card--key">
-      <h3 class="card-title">{{ service.title }}</h3>
-      <a href="{{ service.url }}" class="card-link">Learn More →</a>
+  
+  <div class="card--formula">
+    <div class="card--formula__interior">
+      {% for service in site.services %}
+        <div class="card--key">
+          <h3 class="card-title">{{ service.title }}</h3>
+          <a href="{{ service.url }}" class="card-link">Learn More →</a>
+        </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-  </div>
+  </div}
 </section>
 
 <!-- ── Work ───────────────────────────────────────────────────────────────── -->
