@@ -1,4 +1,4 @@
-// ── CV Header ────────────────────────────────────────────────────────────────
+// ── CV Header ─────────────────────────────────────────────────────────────────
 .cv-header {
   padding:         9rem 10vw 4rem;
   border-bottom:   1px solid var(--border);
@@ -10,20 +10,17 @@
 }
 
 .cv-name {
-  font-family:   'Playfair Display', serif;
+  font-family:   $font-serif;
   font-size:     clamp(2.4rem, 5vw, 4rem);
   font-weight:   600;
   line-height:   1.05;
 
   span {
-    display:        block;
-    font-family:    'Inter', sans-serif;
-    font-size:      0.7rem;
-    font-weight:    300;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color:          var(--gold);
-    margin-bottom:  0.8rem;
+    @include label-caps;
+    display:       block;
+    font-family:   $font-sans;
+    font-weight:   300;
+    margin-bottom: 0.8rem;
   }
 }
 
@@ -37,27 +34,27 @@
   }
 
   a {
-    color:       var(--gold);
+    color:           var(--gold);
     text-decoration: none;
-    transition:  opacity 0.2s;
+    transition:      opacity 0.2s;
 
     &:hover { opacity: 0.75; }
   }
 }
 
 .cv-download {
-  display:        inline-flex;
-  align-items:    center;
-  gap:            0.5rem;
-  margin-top:     1rem;
-  padding:        0.6rem 1.4rem;
-  border:         1px solid var(--gold);
-  color:          var(--gold);
-  font-size:      0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  display:         inline-flex;
+  align-items:     center;
+  gap:             0.5rem;
+  margin-top:      1rem;
+  padding:         0.6rem 1.4rem;
+  border:          1px solid var(--gold);
+  color:           var(--gold);
+  font-size:       0.75rem;
+  letter-spacing:  0.15em;
+  text-transform:  uppercase;
   text-decoration: none;
-  transition:     background 0.3s, color 0.3s;
+  transition:      background 0.3s, color 0.3s;
 
   &:hover {
     background: var(--gold);
@@ -65,7 +62,7 @@
   }
 }
 
-// ── CV Body ──────────────────────────────────────────────────────────────────
+// ── CV Body ───────────────────────────────────────────────────────────────────
 .cv-body {
   display:               grid;
   grid-template-columns: 200px 1fr;
@@ -75,33 +72,29 @@
   padding:               0 10vw 8rem;
 }
 
-// ── Section labels (sticky left column) ──────────────────────────────────────
+// ── Section labels (sticky left column) ───────────────────────────────────────
 .cv-section-label {
   padding: 3rem 2rem 0 0;
 
   p {
-    font-size:      0.65rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color:          var(--gold);
-    position:       sticky;
-    top:            6rem;
+    @include label-caps(0.65rem, 0.28em);
+    position: sticky;
+    top:      6rem;
   }
 }
 
-// ── Section content (right column) ───────────────────────────────────────────
+// ── Section content (right column) ────────────────────────────────────────────
 .cv-section-content {
   border-left:   1px solid var(--border);
   border-bottom: 1px solid var(--border);
   padding:       3rem 0 3rem 2.5rem;
 
-  // Last section has no bottom border
   .cv-row:last-child & { border-bottom: none; }
 }
 
 .cv-row { display: contents; }
 
-// ── Summary ──────────────────────────────────────────────────────────────────
+// ── Summary ───────────────────────────────────────────────────────────────────
 .cv-summary {
   font-size:   0.93rem;
   color:       var(--muted);
@@ -130,7 +123,7 @@
   line-height: 1.6;
 }
 
-// ── Experience / Research entries ────────────────────────────────────────────
+// ── Experience / Research entries ─────────────────────────────────────────────
 .cv-entry {
   margin-bottom: 2.5rem;
 }
@@ -145,7 +138,7 @@
 }
 
 .cv-entry-title {
-  font-family: 'Playfair Display', serif;
+  font-family: $font-serif;
   font-size:   1.05rem;
   font-weight: 400;
 }
@@ -186,13 +179,13 @@
   }
 }
 
-// ── Education ────────────────────────────────────────────────────────────────
+// ── Education ─────────────────────────────────────────────────────────────────
 .cv-edu {
   margin-bottom: 1.5rem;
 }
 
 .cv-edu-deg {
-  font-family:   'Playfair Display', serif;
+  font-family:   $font-serif;
   font-size:     1rem;
   font-weight:   400;
   margin-bottom: 0.15rem;
@@ -210,14 +203,14 @@
   margin-top: 0.2rem;
 }
 
-// ── Publications ─────────────────────────────────────────────────────────────
+// ── Publications ──────────────────────────────────────────────────────────────
 .cv-pub {
-  font-size:    0.83rem;
-  color:        var(--muted);
-  line-height:  1.75;
+  font-size:     0.83rem;
+  color:         var(--muted);
+  line-height:   1.75;
   margin-bottom: 1rem;
-  padding-left: 1.4rem;
-  position:     relative;
+  padding-left:  1.4rem;
+  position:      relative;
 
   .ref {
     position:  absolute;
@@ -236,7 +229,7 @@
   }
 }
 
-// ── Awards ───────────────────────────────────────────────────────────────────
+// ── Awards ────────────────────────────────────────────────────────────────────
 .cv-award {
   display:               grid;
   grid-template-columns: 130px 1fr;
@@ -261,7 +254,7 @@
   }
 }
 
-// ── Responsive ───────────────────────────────────────────────────────────────
+// ── Responsive ────────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   .cv-header {
     padding:        8rem 6vw 3rem;
