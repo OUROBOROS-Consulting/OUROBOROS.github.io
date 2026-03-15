@@ -153,13 +153,9 @@ body {
   animation:     halo-orbit 4s linear infinite;
   filter:        blur(5px);
 }
-
-@keyframes halo-orbit {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
 }
 
-@keyframes halo-swirl {
+@keyframes halo-orbit {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
 }
