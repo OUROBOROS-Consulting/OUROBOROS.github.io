@@ -31,12 +31,24 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// ── HALO ─────────────────────────────
 const halo = document.createElement('div');
 halo.id = 'cursor-halo';
 document.body.appendChild(halo);
 
+let mouseX = 0, mouseY = 0;
+let haloX  = 0, haloY  = 0;
+
 window.addEventListener('mousemove', (e) => {
-  halo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+  mouseX = e.clientX;
+  mouseY = e.clientY;
 });
 
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+(function animate() {
+  haloX += (mouseX - haloX) * 0.08;
+  haloY += (mouseY - haloY) * 0.08;
+  halo.style.transform = `translate(${haloX}px, ${haloY}px)`;
+  requestAnimationFrame(animate);
+})();
