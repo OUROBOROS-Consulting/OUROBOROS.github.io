@@ -65,9 +65,9 @@
 // ── CV Body ───────────────────────────────────────────────────────────────────
 .cv-body {
   display:               grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 300px 1fr;
   gap:                   0;
-  max-width:             1400px;
+  max-width:             1600px;
   margin:                0 auto;
   padding:               0 6vw 8rem;
 }
