@@ -1,9 +1,25 @@
 ---
 layout: default
 ---
-
 <div id="progress-bar"></div>
 
+<!-- ════════════════════════════════════════════════════════════════════════
+     HERO
+     • Mission pages:  define `hero.name_line1` in front matter
+     • Service pages:  define `category` / `title` / `tagline` / `lede`
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.hero %}
+<!-- ── Mission / Bio Hero ── -->
+<header class="hero">
+  <p class="eyebrow">{{ page.hero.eyebrow }}</p>
+  <h1 class="hero-name">
+    {{ page.hero.name_line1 }}<br />
+    {{ page.hero.name_line2 }}
+  </h1>
+  <p class="tagline">{{ page.hero.tagline }}</p>
+</header>
+
+{% else %}
 <!-- ── Service Hero ── -->
 <header class="svc-hero">
   <a class="post-back" href="{{ '/services/' | relative_url }}">Back</a>
@@ -29,27 +45,72 @@ layout: default
     </div>-->
   </div>
 </header>
+{% endif %}
 
-<!-- ── Prose body ── -->
-<article class="svc-body">
-    <div class="lp-content">
-      {{ content }}
+<!-- ════════════════════════════════════════════════════════════════════════
+     ABOUT BLURB  (mission pages only)
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.about %}
+<section id="about">
+  <div class="section-inner">
+    <h2 class="section-label">{{ page.about.heading }}</h2>
+    <p>{{ page.about.body }}</p>
+  </div>
+</section>
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     PULL QUOTE  (mission pages only)
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.pull_quote %}
+<aside class="pull-quote">
+  <blockquote>{{ page.pull_quote }}</blockquote>
+</aside>
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     CONTENT SECTIONS LOOP  (mission pages only)
+     Add as many sections as you like in front matter; none needed here.
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.sections %}
+  {% for section in page.sections %}
+  <section id="{{ section.id }}">
+    <div class="section-inner">
+      <div class="testimonials-header">
+        <h1 class="section-label">{{ section.heading }}</h1>
+      </div>
+      {% if section.body_paragraphs %}
+        {% for paragraph in section.body_paragraphs %}
+          <p>{{ paragraph }}</p>
+        {% endfor %}
+      {% elsif section.body %}
+        <p>{{ section.body }}</p>
+      {% endif %}
     </div>
+  </section>
+  {% endfor %}
+{% endif %}
 
+<!-- ════════════════════════════════════════════════════════════════════════
+     PROSE BODY  (service pages only)
+     ════════════════════════════════════════════════════════════════════════ -->
+{% unless page.hero %}
+<article class="svc-body">
+  <div class="lp-content">
+    {{ content }}
+  </div>
   <hr/>
 
+  <!-- ⚠️  TODO: The paragraph and footnote below appear to be leftover content
+       accidentally committed into the layout file. Confirm and delete if so. -->
   <p>This isn't a counsel of paralysis. You can still make strong claims. You can still write clearly and with conviction. The constraint is just that the strength of the claim should be commensurate with what the model, plus explicitly stated auxiliary assumptions, actually supports. Which, in most applied work, is more than nothing and less than certainty — which is exactly where interesting science lives.</p>
-
   <div class="post-footnotes">
     <p><span class="fn-num">1</span> A 95% credible interval under a flat prior is technically a probability statement — but it's still conditioned on the model being well-specified, the data being representative, and a dozen other things that don't hold unconditionally.</p>
   </div>
-
 </article>
 
-<!-- ── Service Body ── -->
+<!-- ── Service Sections ── -->
 <div class="svc-body">
-
-  <!-- Who it's for -->
   {% if page.who %}
   <section class="svc-section">
     <div class="svc-section-label">
@@ -61,10 +122,6 @@ layout: default
   </section>
   {% endif %}
 
-
-
-  
-  <!-- How to get started -->
   <section class="svc-section svc-section--cta">
     <div class="svc-section-label">
       <p>Get Started</p>
@@ -76,8 +133,23 @@ layout: default
       </a>
     </div>
   </section>
-
 </div>
+{% endunless %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     FOOTER LINKS  (mission pages only)
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.links %}
+<footer class="site-footer">
+  <nav class="footer-links">
+    {% if page.links.github    != "" %}<a href="{{ page.links.github }}"   target="_blank" rel="noopener">GitHub</a>{% endif %}
+    {% if page.links.linkedin  != "" %}<a href="{{ page.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if page.links.orcid     != "" %}<a href="{{ page.links.orcid }}"    target="_blank" rel="noopener">ORCID</a>{% endif %}
+    {% if page.links.tutor     != "" %}<a href="{{ page.links.tutor }}"    target="_blank" rel="noopener">Tutoring</a>{% endif %}
+    {% if page.links.contact   != "" %}<a href="{{ page.links.contact }}">Contact</a>{% endif %}
+  </nav>
+</footer>
+{% endif %}
 
 <script>
   const bar = document.getElementById('progress-bar');
