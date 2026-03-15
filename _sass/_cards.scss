@@ -1,3 +1,7 @@
+$-arc:    11px;  // 3mm ≈ 11px at 96 dpi — chamfer depth
+$-border: 3px;   // effective border thickness
+$-inner:  calc(#{$-arc} - #{$-border});
+
 // ── Cards grid ───────────────────────────────────────────────────────────────
 .cards {
   display:               grid;
@@ -41,10 +45,6 @@
 // Two-layer technique: outer div = gold fill (the "border"), inner div = bg fill.
 // clip-path does not support stroke, so the border is painted as a background
 // layer and the interior sits on top with a matching but slightly smaller clip.
-
-$-arc:    11px;  // 3mm ≈ 11px at 96 dpi — chamfer depth
-$-border: 5px;   // effective border thickness
-$-inner:  calc(#{$-arc} - #{$-border});
 
 @mixin chamfer($a) {
   clip-path: polygon(
