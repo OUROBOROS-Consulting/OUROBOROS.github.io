@@ -12,7 +12,7 @@ headshot: /assets/images/AS.png
 headshot_alt: Apostolos Stamenos headshot
 
 # About
-about_heading: Technology as a source of empowerment
+about_heading: Technology as a Source of Empowerment
 about_body_1: >
   My career began at the intersection of technology and public service, I played a pivotal role in the Federal COVID-19 response.
   After graduating from Penn State with a B.S. in Economics in 2021, I immediately impacted the national healthcare landscape during a critical period.
@@ -26,6 +26,13 @@ about_body_2: >
 pull_quote: >
   "For many people, technology is an obstacle, at best. For others, technology is a weapon of mass destruction. For a lucky few, technology is a tool of empowerment. You get to decide what role technology will play in your life."
 
+stats:
+  years_experience: "6+"
+  publications: "3"
+  students_tutored: "50+"
+  clients_consulted: "12"
+  agencies: "5"
+  phd_program: "Biostatistics, UMN"
   
 # Footer links
 github: "https://github.com/astamenos/"
