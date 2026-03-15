@@ -94,12 +94,4 @@ sections:
         gaslighting, and otherwise toxic behavior. I am currently being evaluated for Complex-PTSD
         as a result of these events. I am left alone to figure out a solution while academia
         reenacts a double-abuse that is sadly too common for survivors.
-
-# ── Footer links ───────────────────────────────────────────────────────────
-links:
-  github:   "https://github.com/astamenos/"
-  tutor:    "https://www.wyzant.com/refer/tutor/86925781?utm_source=TREF&utm_campaign=GI&utm_content=TProfile&utm_medium=link"
-  linkedin: "https://www.linkedin.com/in/astamenos/"
-  orcid:    "https://orcid.org/0009-0008-4181-7080"
-  contact:  ""
 ---
