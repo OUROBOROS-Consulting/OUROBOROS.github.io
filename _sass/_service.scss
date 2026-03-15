@@ -1,6 +1,6 @@
 // ── Service Hero ──────────────────────────────────────────────────────────────
 .svc-hero {
-  padding:     8rem 10vw 5rem;
+  padding:       8rem 10vw 5rem;
   border-bottom: 1px solid var(--border);
 }
 
@@ -14,12 +14,12 @@
 }
 
 .svc-hero-text {
-  flex: 1;
+  flex:      1;
   min-width: 280px;
 }
 
 .svc-title {
-  font-family:   'Playfair Display', serif;
+  font-family:   $font-serif;
   font-size:     clamp(2.4rem, 5vw, 4rem);
   font-weight:   600;
   line-height:   1.05;
@@ -61,7 +61,7 @@
   padding:   0 10vw 8rem;
 }
 
-// ── Section rows (label + content, like the CV layout) ────────────────────────
+// ── Section rows (label + content) ────────────────────────────────────────────
 .svc-section {
   display:               grid;
   grid-template-columns: 180px 1fr;
@@ -74,17 +74,17 @@
 
 .svc-section-label {
   p {
-    font-size:      0.65rem;
-    letter-spacing: 0.28em;
-    text-transform: uppercase;
-    color:          var(--gold);
-    position:       sticky;
-    top:            6rem;
+    @include label-caps(0.65rem, 0.28em);
+    position: sticky;
+    top:      6rem;
   }
 }
 
 .svc-section-content {
-  p {
+  // Scoped to direct <p> children only — prevents bleeding onto named
+  // descendant classes (.svc-item-title, .svc-pricing-notes, etc.)
+  // which is what caused all the !important overrides in the old version.
+  > p {
     font-size:     0.93rem;
     color:         var(--muted);
     line-height:   1.9;
@@ -100,11 +100,11 @@
     padding:    0;
 
     li {
-      font-size:    0.9rem;
-      color:        var(--muted);
-      line-height:  1.8;
-      padding-left: 1.1rem;
-      position:     relative;
+      font-size:     0.9rem;
+      color:         var(--muted);
+      line-height:   1.8;
+      padding-left:  1.1rem;
+      position:      relative;
       margin-bottom: 0.4rem;
 
       &::before {
@@ -131,24 +131,25 @@
 }
 
 .svc-item-marker {
-  color:      var(--gold);
-  font-size:  0.8rem;
+  color:       var(--gold);
+  font-size:   0.8rem;
   flex-shrink: 0;
-  margin-top: 0.25rem;
+  margin-top:  0.25rem;
 }
 
+// No !important needed — .svc-section-content > p no longer bleeds here
 .svc-item-title {
   font-size:     0.9rem;
-  color:         var(--text) !important;
+  color:         var(--text);
   font-weight:   500;
-  margin-bottom: 0.2rem !important;
+  margin-bottom: 0.2rem;
 }
 
 .svc-item-desc {
   font-size:   0.85rem;
-  color:       var(--muted) !important;
-  line-height: 1.75 !important;
-  margin:      0 !important;
+  color:       var(--muted);
+  line-height: 1.75;
+  margin:      0;
 }
 
 // ── Pricing tiers ─────────────────────────────────────────────────────────────
@@ -176,16 +177,16 @@
 }
 
 .svc-pricing-rate {
-  font-family:    'Playfair Display', serif;
-  font-size:      1.2rem;
-  color:          var(--gold);
+  font-family: $font-serif;
+  font-size:   1.2rem;
+  color:       var(--gold);
 }
 
 .svc-pricing-notes {
   font-size:   0.8rem;
   color:       var(--muted);
   line-height: 1.7;
-  margin:      0 !important;
+  margin:      0;
 }
 
 // ── CTA section ───────────────────────────────────────────────────────────────
@@ -194,7 +195,7 @@
   color:         var(--muted);
   line-height:   1.9;
   max-width:     480px;
-  margin-bottom: 1.5rem !important;
+  margin-bottom: 1.5rem;
 }
 
 // ── Responsive ────────────────────────────────────────────────────────────────
