@@ -15,39 +15,7 @@ $rule: 7px;   // boxrule=5pt, converted
   position:    relative;
   overflow:    hidden;
   transition:  border-color 0.3s, transform 0.3s;
-
-  // Frame layer: sapphire → black → crimson (left→right)
-  background: linear-gradient(
-    to right,
-    #1b2a6b 0%,    // sapphire
-    #0a0a0a 50%,   // black mid
-    #6b1b1b 100%   // antagonist (crimson)
-  );
-
-  // Angular chamfer on all 4 corners
-  clip-path: polygon(
-    #{$arc} 0%,
-    calc(100% - #{$arc}) 0%,
-    100% #{$arc},
-    100% calc(100% - #{$arc}),
-    calc(100% - #{$arc}) 100%,
-    #{$arc} 100%,
-    0% calc(100% - #{$arc}),
-    0% #{$arc}
-  );
-  // Gold underline reveal on hover
-//  &::after {
-//    content:          '';
-//    position:         absolute;
-//    bottom:           0;
-//    left:             0;
-//    width:            100%;
-//    height:           2px;
-//    background:       var(--gold);
-//    transform:        scaleX(0);
-//    transform-origin: left;
-//    transition:       transform 0.4s;
-//  }
+  
   // Vignette overlay (finish vignette={size=7pt})
   &::after {
     content: '';
@@ -67,6 +35,27 @@ $rule: 7px;   // boxrule=5pt, converted
 
     &::after { transform: scaleX(1); }
   }
+
+  
+  // Frame layer: sapphire → black → crimson (left→right)
+  background: linear-gradient(
+    to right,
+    #1b2a6b 0%,    // sapphire
+    #0a0a0a 50%,   // black mid
+    #6b1b1b 100%   // antagonist (crimson)
+  );
+
+  // Angular chamfer on all 4 corners
+  clip-path: polygon(
+    #{$arc} 0%,
+    calc(100% - #{$arc}) 0%,
+    100% #{$arc},
+    100% calc(100% - #{$arc}),
+    calc(100% - #{$arc}) 100%,
+    #{$arc} 100%,
+    0% calc(100% - #{$arc}),
+    0% #{$arc}
+  );
 }
 
 
