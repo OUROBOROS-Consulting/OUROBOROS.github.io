@@ -5,7 +5,7 @@ title: null
 # Hero
 name_line1: Apostolos
 name_line2: Stamenos
-eyebrow: Technologist, Researcher, Writer, Survivor
+eyebrow: Technologist, Researcher, Writer, *Survivor*
 tagline: >
   I empower people so that technology works *for them*, not *against them*.
 headshot: /assets/images/AS.png
@@ -21,7 +21,7 @@ about_body_2: >
   I engineered high-throughput data pipelines and deployed machine learning models within Palantir Foundry to monitor national hospital data integrity.
   My leadership abilities emerged early. I managed public-facing platforms like Healthdata.gov and led a technical team of 11 interns, among my many other responsibilities.
   I was the guy that my supervisors would turn to when they needed someone to figure out how to fix whatever issue our pipelines were having.
-  My contributions were recognized with an Employee of the Quarter Award and Rookie of the Year Award from the HHS OCIO. 
+  My contributions were recognized with an *Employee of the Quarter Award* and *Rookie of the Year Award* from the HHS OCIO. 
   Driven to deepen my technical expertise, I pursued a Master of Statistics at North Carolina State University (2023) and I'm currently working towards my PhD in Biostatistics from the University of Minnesota School of Public Health. This academic pivot marked a transition from operational data science to rigorous statistical research.
 pull_quote: >
   "For many people, technology is an obstacle, at best. For others, technology is a weapon of mass destruction. For a lucky few, technology is a tool of empowerment. You get to decide what role technology will play in your life."
@@ -32,8 +32,11 @@ stats:
   students_tutored: "50+"
   clients_consulted: "12"
   agencies: "5"
-  phd_program: "Biostatistics, UMN"
-  
+ # phd_program: "Biostatistics, UMN"
+
+cta_label: Book a Session
+cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours.
+
 # Footer links
 github: "https://github.com/astamenos/"
 tutor: "https://www.wyzant.com/refer/tutor/86925781?utm_source=TREF&utm_campaign=GI&utm_content=TProfile&utm_medium=link"
