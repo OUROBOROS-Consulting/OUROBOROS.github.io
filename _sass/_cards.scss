@@ -1,11 +1,13 @@
 // ── Cards grid ───────────────────────────────────────────────────────────────
 .cards {
   display:               grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
   gap:                   1.5px;
 }
 
 // ── Card component ───────────────────────────────────────────────────────────
+$arc: 11px;   // 3mm in px — adjust to taste
+$rule: 7px;   // boxrule=5pt, converted
 .card {
   background:  var(--bg3);
   padding:     2.5rem;
@@ -13,40 +15,6 @@
   position:    relative;
   overflow:    hidden;
   transition:  border-color 0.3s, transform 0.3s;
-
-  // Gold underline reveal on hover
-  &::after {
-    content:          '';
-    position:         absolute;
-    bottom:           0;
-    left:             0;
-    width:            100%;
-    height:           2px;
-    background:       var(--gold);
-    transform:        scaleX(0);
-    transform-origin: left;
-    transition:       transform 0.4s;
-  }
-
-  &:hover {
-    border-color: #3a3028;
-    transform:    translateY(-4px);
-
-    &::after { transform: scaleX(1); }
-  }
-}
-
-// ── Formula / Key callout box ─────────────────────────────────────────────────
-// Replicates tcolorbox formulabox/.style
-// Angular chamfered corners via clip-path (arc is angular, arc=3mm ≈ 11px)
-
-$arc: 11px;   // 3mm in px — adjust to taste
-$rule: 7px;   // boxrule=5pt, converted
-
-.card--formula {
-  position: relative;
-  padding: $rule;   // the "frame" thickness
-  overflow: visible;
 
   // Frame layer: sapphire → black → crimson (left→right)
   background: linear-gradient(
@@ -67,7 +35,19 @@ $rule: 7px;   // boxrule=5pt, converted
     0% calc(100% - #{$arc}),
     0% #{$arc}
   );
-
+  // Gold underline reveal on hover
+//  &::after {
+//    content:          '';
+//    position:         absolute;
+//    bottom:           0;
+//    left:             0;
+//    width:            100%;
+//    height:           2px;
+//    background:       var(--gold);
+//    transform:        scaleX(0);
+//    transform-origin: left;
+//    transition:       transform 0.4s;
+//  }
   // Vignette overlay (finish vignette={size=7pt})
   &::after {
     content: '';
@@ -81,6 +61,20 @@ $rule: 7px;   // boxrule=5pt, converted
     pointer-events: none;
     clip-path: inherit;
   }
+  &:hover {
+    border-color: var(--gold)
+    transform:    translateY(-4px);
+
+    &::after { transform: scaleX(1); }
+  }
+}
+
+
+
+.card--formula {
+  position: relative;
+  padding: $rule;   // the "frame" thickness
+  overflow: visible;
 
   // Interior layer: sapphireLite → black!10 → antagonistLite
   &__interior {
