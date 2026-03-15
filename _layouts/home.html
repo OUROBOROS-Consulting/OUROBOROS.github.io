@@ -86,7 +86,7 @@ layout: default
   </div>
   <div class="testimonials-grid">
     {% for val in site.data.values %}
-    <div class="card">
+    <div class="card--key">
       <p class="card-tag">{{ val.title | markdownify }}</p>
       <blockquote>
         <p class="card-desc">{{ val.description | markdownify }}</p>
@@ -107,7 +107,7 @@ layout: default
   </div>
   <div class="cards">
     {% for service in site.services %}
-    <div class="card">
+    <div class="card--key">
       <h3 class="card-title">{{ service.title }}</h3>
       <a href="{{ service.url }}" class="card-link">Learn More →</a>
     </div>
@@ -126,7 +126,7 @@ layout: default
   </div>
   <div class="cards">
     {% for project in site.projects %}
-    <div class="card">
+    <div class="card--key">
       <p class="card-tag">{{ project.tag }}</p>
       <h3 class="card-title">{{ project.title }}</h3>
       <p class="card-desc">{{ project.description }}</p>
@@ -147,7 +147,7 @@ layout: default
   </div>
   <div class="testimonials-grid">
     {% for ref in site.data.testimonials %}
-    <div class="card">
+    <div class="card--key">
       <p class="card-tag">{{ ref.title | markdownify }}</p>
       <blockquote>
         <p class="card-desc">{{ ref.description | markdownify }}</p>
