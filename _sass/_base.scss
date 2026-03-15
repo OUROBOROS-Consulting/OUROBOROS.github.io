@@ -155,6 +155,16 @@ body {
 }
 }
 
+
+.ouroboros-svg {
+  position:         absolute;
+  inset:            0;
+  animation:        halo-orbit 10s linear infinite;
+  filter:           drop-shadow(0 0 3px rgba(201, 168, 76, 0.55));
+  transform-origin: center;   // ← add this
+  transform-box:    fill-box; // ← and this
+}
+
 @keyframes halo-orbit {
   from { transform: rotate(0deg); }
   to   { transform: rotate(360deg); }
