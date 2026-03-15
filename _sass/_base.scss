@@ -98,10 +98,10 @@ body {
 
 #cursor-halo {
   position:       fixed;
-  top:            -50px;
-  left:           -50px;
-  width:          100px;
-  height:         100px;
+  top:            -100px;
+  left:           -100px;
+  width:          200px;
+  height:         200px;
   border-radius:  50%;
   pointer-events: none;
   z-index:        9999;
