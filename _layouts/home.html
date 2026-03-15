@@ -103,8 +103,8 @@ layout: default
 <section id="services">
   <div class="work-header">
     <div>
-      <p class="section-label">Expertise</p>
-      <h2 class="work-heading">What I Offer</h2>
+      <p class="section-label">What I Offer</p>
+      <h2 class="work-heading">Expertise</h2>
     </div>
   </div>
   
@@ -130,13 +130,16 @@ layout: default
     </div>
     <span class="work-count">{{ site.projects.size }} pieces</span>
   </div>
-  <div class="cards">
+  
+  <div class="testimonials-grid">
     {% for project in site.projects %}
-    <div class="card--key">
-      <p class="card-tag">{{ project.tag }}</p>
-      <h3 class="card-title">{{ project.title }}</h3>
-      <p class="card-desc">{{ project.description }}</p>
-      <a href="{{ project.url }}" class="card-link">Read More →</a>
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <p class="card-tag">{{ project.tag }}</p>
+        <h3 class="card-title">{{ project.title }}</h3>
+        <p class="card-desc">{{ project.description }}</p>
+        <a href="{{ project.url }}" class="card-link">Read More →</a>
+      </div>
     </div>
     {% endfor %}
   </div>
@@ -145,10 +148,13 @@ layout: default
 <!-- ── Testimonials ───────────────────────────────────────────────────────── -->
 <section id="testimonials">
   <div class="testimonials-header">
-      <p class="section-label">What the Greats Say Me</p>
+    <div>
+      <p class="section-label">What the Greats Say About Me</p>
       <h2 class="testimonials-heading">Testimonials</h2>
-    <span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>
+      <span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>
+    </div>
   </div>
+  
   <div class="testimonials-grid">
     {% for ref in site.data.testimonials %}
     <div class="card--formula">
