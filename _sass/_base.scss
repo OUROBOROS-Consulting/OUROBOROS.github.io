@@ -102,12 +102,11 @@ body {
   left:           -300px;
   width:          600px;
   height:         600px;
-  border-radius:  50%;
-  background:     radial-gradient(
-                    circle,
-                    rgba(201, 168, 76, 0.06) 0%,
-                    transparent 70%
-                  );
+  background: radial-gradient(
+    circle,
+    rgba(201, 168, 76, 0.12) 0%,   // brighter center
+    transparent 70%
+  );
   pointer-events: none;        // never blocks clicks
   z-index:        9999;
   will-change:    transform;   // hints GPU acceleration
