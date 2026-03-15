@@ -57,6 +57,32 @@
   }
 }
 
+// ──|| STATS ||─────────────────────────────────────────────────────────────
+.stats-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap:                   1px;
+  background:            var(--border);
+  margin-top:            3rem;
+}
+.stat {
+  background:     var(--bg);
+  padding:        2.5rem 2rem;
+  display:        flex;
+  flex-direction: column;
+  gap:            0.5rem;
+}
+.stat-value {
+  font-family: $font-serif;
+  font-size:   clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 400;
+  color:       var(--gold);
+  line-height: 1;
+}
+.stat-label {
+  @include label-caps(0.62rem, 0.2em);
+}
+
 // ── Scroll hint ───────────────────────────────────────────────────────────────
 .scroll-hint {
   grid-column:    1 / -1;
