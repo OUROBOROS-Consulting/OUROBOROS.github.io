@@ -50,15 +50,15 @@ body::before {
     radial-gradient(
       ellipse 8px 6px at 8px 6px,
       transparent              60%,
-      rgba(201, 168, 76, 0.07) 60%,
-      rgba(201, 168, 76, 0.07) 75%,
+      rgba(201, 168, 76, 0.1) 60%,
+      rgba(201, 168, 76, 0.1) 75%,
       transparent              75%
     ),
     radial-gradient(
       ellipse 8px 6px at 0px 6px,
       transparent              60%,
-      rgba(201, 168, 76, 0.07) 60%,
-      rgba(201, 168, 76, 0.07) 75%,
+      rgba(201, 168, 76, 0.1) 60%,
+      rgba(201, 168, 76, 0.1) 75%,
       transparent              75%
     );
   background-size: 8px 6px;
@@ -66,8 +66,8 @@ body::before {
   mask-image: linear-gradient(
     to bottom,
     transparent 0vh,
-    transparent 90vh,
-    black       110vh
+    transparent 110vh,
+    black       120vh
   );
   -webkit-mask-image: linear-gradient(
     to bottom,
