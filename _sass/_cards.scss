@@ -36,6 +36,86 @@
   }
 }
 
+// ── Formula / Key callout box ─────────────────────────────────────────────────
+// Replicates tcolorbox formulabox/.style
+// Angular chamfered corners via clip-path (arc is angular, arc=3mm ≈ 11px)
+
+$arc: 11px;   // 3mm in px — adjust to taste
+$rule: 7px;   // boxrule=5pt, converted
+
+.card--formula {
+  position: relative;
+  padding: $rule;   // the "frame" thickness
+  overflow: visible;
+
+  // Frame layer: sapphire → black → crimson (left→right)
+  background: linear-gradient(
+    to right,
+    #1b2a6b 0%,    // sapphire
+    #0a0a0a 50%,   // black mid
+    #6b1b1b 100%   // antagonist (crimson)
+  );
+
+  // Angular chamfer on all 4 corners
+  clip-path: polygon(
+    #{$arc} 0%,
+    calc(100% - #{$arc}) 0%,
+    100% #{$arc},
+    100% calc(100% - #{$arc}),
+    calc(100% - #{$arc}) 100%,
+    #{$arc} 100%,
+    0% calc(100% - #{$arc}),
+    0% #{$arc}
+  );
+
+  // Vignette overlay (finish vignette={size=7pt})
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      ellipse at center,
+      transparent 60%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
+    pointer-events: none;
+    clip-path: inherit;
+  }
+
+  // Interior layer: sapphireLite → black!10 → antagonistLite
+  &__interior {
+    background: linear-gradient(
+      to right,
+      #d0d8f5 0%,    // sapphireLite
+      #e8e8e8 50%,   // black!10 (light gray)
+      #f5d0d0 100%   // antagonistLite
+    );
+    padding: 0.9rem 1.1rem 0.9rem 1.1rem;
+    position: relative;
+  }
+
+  // Title bar (boxed title style — sharp corners, sits on the top frame edge)
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 1.2rem;
+    transform: translateY(-100%);
+    background: linear-gradient(
+      to right,
+      #1b2a6b,   // sapphire
+      #0a0a0a,
+      #6b1b1b    // antagonist
+    );
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    font-family: sans-serif;
+    padding: 0.2rem 0.5rem;
+    border: 1.5px solid #000;
+    // sharp corners — no clip-path, no border-radius
+  }
+}
+
 .card-tag {
   font-size:      0.65rem;
   letter-spacing: 0.25em;
