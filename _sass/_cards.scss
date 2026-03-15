@@ -71,6 +71,31 @@
   &:hover { letter-spacing: 0.28em; }
 }
 
+// ── Key/callout card variant ──────────────────────────────────────────────────
+.card--key {
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(
+    to right,
+    #1a1a3a 0%,       // deep navy left edge
+    #2a2248 8%,       // navy body
+    #e8e4d8 38%,      // pale cream centre-left
+    #f0ece2 50%,      // lightest cream centre
+    #e8e4d8 62%,      // cream centre-right
+    #3a1018 92%,      // crimson body
+    #2a0a10 100%      // deep crimson right edge
+  );
+  box-shadow:
+    0 2px 6px  rgba(0, 0, 0, 0.45),   // main drop shadow
+    0 1px 2px  rgba(0, 0, 0, 0.30),   // tight contact shadow
+    inset 0 1px 0 rgba(255, 255, 255, 0.08); // top highlight
+
+  // Override default hover lift if this card is static
+  &:hover {
+    transform: none;
+  }
+}
+
 // ── Related cards (essay & project footers) ───────────────────────────────────
 // Slightly narrower minmax and anchor-based, otherwise inherits .card
 .related-card {
