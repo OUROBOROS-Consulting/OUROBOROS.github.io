@@ -98,10 +98,10 @@ body {
 
 #cursor-halo {
   position:       fixed;
-  top:            -300px;
-  left:           -300px;
-  width:          600px;
-  height:         600px;
+  top:            -150px;
+  left:           -150px;
+  width:          300px;
+  height:         300px;
   border-radius:  50%;
   pointer-events: none;
   z-index:        9999;
@@ -133,7 +133,7 @@ body {
                      rgba(201, 168, 76, 0.10) 270deg,
                      transparent 360deg
                    );
-    animation:     halo-swirl 6s linear infinite;
+    animation:     halo-swirl 8s linear infinite;
     filter:        blur(8px);
   }
 }
