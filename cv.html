@@ -132,16 +132,23 @@ layout: default
 
   <!-- Expertise -->
   <div class="cv-row">
-    <div class="cv-section-label"><p>Expertise</p></div>
-    <div class="cv-section-content" style="padding-bottom:3rem">
-      <div class="expertise-row"><span class="expertise-key">Platforms & Tools</span><span class="expertise-val">Palantir Foundry, Git/GitHub, SQL, PySpark, ArcGIS Pro, FedRAMP-compliant cloud environments</span></div>
-      <div class="expertise-row"><span class="expertise-key">ML & AI</span><span class="expertise-val">Anomaly Detection, NLP, Bayesian Modeling, Causal Inference, Classification, Spatiotemporal Modeling, Dimensionality Reduction</span></div>
-      <div class="expertise-row"><span class="expertise-key">Languages</span><span class="expertise-val">Python (NumPy, SciPy, pandas), R/RStudio (tidyverse), C++, LaTeX</span></div>
-      <div class="expertise-row"><span class="expertise-key">Business Intel</span><span class="expertise-val">Data Visualization, Dashboard Development, Reproducible Workflows, Stakeholder Communication</span></div>
-      <div class="expertise-row"><span class="expertise-key">Leadership</span><span class="expertise-val">Cross-functional Collaboration, Technical Mentorship, Translating Policy Requirements into Data Solutions</span></div>
+      <!--<div class="testimonials-grid">
+    {% for ref in site.data.testimonials %}-->
+    <div class="card--formula">
+      <!--<div><p class="card--formula__title">{{ ref.title | markdownify }}</p></div>-->
+      <div class="card--formula__interior">
+       <div class="cv-section-label"><p>Expertise</p></div>
+       <div class="cv-section-content" style="padding-bottom:3rem">
+        <div class="expertise-row"><span class="expertise-key">Platforms & Tools</span><span class="expertise-val">Palantir Foundry, Git/GitHub, SQL, PySpark, ArcGIS Pro, FedRAMP-compliant cloud environments</span></div>
+        <div class="expertise-row"><span class="expertise-key">ML & AI</span><span class="expertise-val">Anomaly Detection, NLP, Bayesian Modeling, Causal Inference, Classification, Spatiotemporal Modeling, Dimensionality Reduction</span></div>
+        <div class="expertise-row"><span class="expertise-key">Languages</span><span class="expertise-val">Python (NumPy, SciPy, pandas), R/RStudio (tidyverse), C++, LaTeX</span></div>
+        <div class="expertise-row"><span class="expertise-key">Business Intel</span><span class="expertise-val">Data Visualization, Dashboard Development, Reproducible Workflows, Stakeholder Communication</span></div>
+        <div class="expertise-row"><span class="expertise-key">Leadership</span><span class="expertise-val">Cross-functional Collaboration, Technical Mentorship, Translating Policy Requirements into Data Solutions</span></div>
+       </div>
+      </div>
     </div>
   </div>
-
+ 
   <!-- Experience -->
   <div class="cv-row">
     <div class="cv-section-label"><p>Experience</p></div>
