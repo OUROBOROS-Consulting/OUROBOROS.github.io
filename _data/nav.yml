@@ -1,5 +1,7 @@
 - title: About
   children:
+    - title: Perils
+      url: /perils
     - title: Feedback Loops
       url: /cybernetics
     - title: Mission
@@ -17,8 +19,8 @@
   children:
     - title: Consulting
       url: /services/consulting/
-    - title: Development
-      url: /services/dev/
+#    - title: Development
+#      url: /services/dev/
     - title: Investigative
       url: /services/investigative/
     - title: Tutoring
@@ -26,7 +28,7 @@
     - title: Advocacy
       url: /services/advocacy/
       
-- title: Writing
+- title: Projects
   children:
     - title: Papers
       url: /writing/papers/
