@@ -24,7 +24,7 @@ pull_quote: >
   "Institutions have failed miserably at protecting me,
   and in many ways have only made things worse."
 
-- sections:
+sections:
   - id: tech
     heading: Technology
     body_paragraphs:
