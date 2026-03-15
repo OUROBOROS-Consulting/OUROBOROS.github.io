@@ -128,13 +128,13 @@ body {
     border-radius: 50%;
     background:    conic-gradient(
                      transparent 0deg,
-                     rgba(201, 168, 76, 0.08) 90deg,
+                     rgba(201, 168, 76, 0.15) 90deg,
                      transparent 180deg,
-                     rgba(201, 168, 76, 0.05) 270deg,
+                     rgba(201, 168, 76, 0.10) 270deg,
                      transparent 360deg
                    );
-    animation:     halo-swirl 8s linear infinite;
-    filter:        blur(12px);
+    animation:     halo-swirl 6s linear infinite;
+    filter:        blur(8px);
   }
 }
 
