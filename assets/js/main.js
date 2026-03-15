@@ -31,4 +31,12 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
+const halo = document.createElement('div');
+halo.id = 'cursor-halo';
+document.body.appendChild(halo);
+
+window.addEventListener('mousemove', (e) => {
+  halo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
+
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
