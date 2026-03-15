@@ -86,12 +86,14 @@ layout: default
   </div>
   <div class="testimonials-grid">
     {% for val in site.data.values %}
-    <div class="card--key">
-      <p class="card-tag">{{ val.title | markdownify }}</p>
-      <blockquote>
-        <p class="card-desc">{{ val.description | markdownify }}</p>
-        <cite>— {{ val.reference }}</cite>
-      </blockquote>
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <p class="card-tag">{{ val.title | markdownify }}</p>
+        <blockquote>
+          <p class="card-desc">{{ val.description | markdownify }}</p>
+          <cite>— {{ val.reference }}</cite>
+        </blockquote>
+      </div>
     </div>
     {% endfor %}
   </div>
