@@ -108,16 +108,17 @@ layout: default
     </div>
   </div>
   
-  <div class="card--formula">
-    <div class="card--formula__interior">
-      {% for service in site.services %}
-        <div class="card--key">
+  <div class="testimonials-grid">
+    {% for service in site.services %}
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <!--<div class="card--key">-->
           <h3 class="card-title">{{ service.title }}</h3>
           <a href="{{ service.url }}" class="card-link">Learn More →</a>
-        </div>
+      </div>
     </div>
+    {% endfor %}
   </div>
-  {% endfor %}
 </section>
 
 <!-- ── Work ───────────────────────────────────────────────────────────────── -->
