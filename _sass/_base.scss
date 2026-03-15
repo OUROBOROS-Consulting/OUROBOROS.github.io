@@ -98,16 +98,47 @@ body {
 
 #cursor-halo {
   position:       fixed;
-  top:            -300px;      // offset by half the size so it's centered
+  top:            -300px;
   left:           -300px;
   width:          600px;
   height:         600px;
-  background: radial-gradient(
-    circle,
-    rgba(201, 168, 76, 0.12) 0%,   // brighter center
-    transparent 70%
-  );
-  pointer-events: none;        // never blocks clicks
+  border-radius:  50%;
+  pointer-events: none;
   z-index:        9999;
-  will-change:    transform;   // hints GPU acceleration
+  will-change:    transform;
+
+  // Soft glow — stays centered, doesn't rotate
+  &::before {
+    content:       '';
+    position:      absolute;
+    inset:         0;
+    border-radius: 50%;
+    background:    radial-gradient(
+                     circle,
+                     rgba(201, 168, 76, 0.13) 0%,
+                     transparent 70%
+                   );
+  }
+
+  // Swirl — rotates on top of the glow
+  &::after {
+    content:       '';
+    position:      absolute;
+    inset:         60px;         // smaller than the glow, sits inside it
+    border-radius: 50%;
+    background:    conic-gradient(
+                     transparent 0deg,
+                     rgba(201, 168, 76, 0.08) 90deg,
+                     transparent 180deg,
+                     rgba(201, 168, 76, 0.05) 270deg,
+                     transparent 360deg
+                   );
+    animation:     halo-swirl 8s linear infinite;
+    filter:        blur(12px);
+  }
+}
+
+@keyframes halo-swirl {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
