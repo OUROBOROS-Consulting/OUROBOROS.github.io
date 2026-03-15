@@ -6,8 +6,6 @@
 }
 
 // ── Card component ───────────────────────────────────────────────────────────
-$arc: 11px;   // 3mm in px — adjust to taste
-$rule: 7px;   // boxrule=5pt, converted
 .card {
   background:  var(--bg3);
   padding:     2.5rem;
@@ -15,87 +13,84 @@ $rule: 7px;   // boxrule=5pt, converted
   position:    relative;
   overflow:    hidden;
   transition:  border-color 0.3s, transform 0.3s;
-  
-  // Vignette overlay (finish vignette={size=7pt})
+
+  // Gold underline reveal on hover
   &::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(
-      ellipse at center,
-      transparent 60%,
-      rgba(0, 0, 0, 0.45) 100%
-    );
-    pointer-events: none;
-    clip-path: inherit;
+    content:          '';
+    position:         absolute;
+    bottom:           0;
+    left:             0;
+    width:            100%;
+    height:           2px;
+    background:       var(--gold);
+    transform:        scaleX(0);
+    transform-origin: left;
+    transition:       transform 0.4s;
   }
+
   &:hover {
-    border-color: var(--gold)
+    border-color: var(--gold);
     transform:    translateY(-4px);
 
     &::after { transform: scaleX(1); }
   }
+}
 
-  
-  // Frame layer: sapphire → black → crimson (left→right)
-  background: linear-gradient(
-    to right,
-    #1b2a6b 0%,    // sapphire
-    #0a0a0a 50%,   // black mid
-    #6b1b1b 100%   // antagonist (crimson)
-  );
+// ── Formula / Key callout box ─────────────────────────────────────────────────
+// Angular chamfered corners (replicates tcolorbox arc is angular, arc=3mm).
+// Two-layer technique: outer div = gold fill (the "border"), inner div = bg fill.
+// clip-path does not support stroke, so the border is painted as a background
+// layer and the interior sits on top with a matching but slightly smaller clip.
 
-  // Angular chamfer on all 4 corners
+$-arc:    11px;  // 3mm ≈ 11px at 96 dpi — chamfer depth
+$-border: 2px;   // effective border thickness
+$-inner:  calc(#{$-arc} - #{$-border});
+
+@mixin chamfer($a) {
   clip-path: polygon(
-    #{$arc} 0%,
-    calc(100% - #{$arc}) 0%,
-    100% #{$arc},
-    100% calc(100% - #{$arc}),
-    calc(100% - #{$arc}) 100%,
-    #{$arc} 100%,
-    0% calc(100% - #{$arc}),
-    0% #{$arc}
+    #{$a} 0%,
+    calc(100% - #{$a}) 0%,
+    100% #{$a},
+    100% calc(100% - #{$a}),
+    calc(100% - #{$a}) 100%,
+    #{$a} 100%,
+    0% calc(100% - #{$a}),
+    0% #{$a}
   );
 }
 
-
-
 .card--formula {
-  position: relative;
-  padding: $rule;   // the "frame" thickness
-  overflow: visible;
+  // Outer shell — gold fill acts as the visible border
+  background: var(--gold);
+  padding:    $-border;
+  position:   relative;
+  @include chamfer($-arc);
 
-  // Interior layer: sapphireLite → black!10 → antagonistLite
-  &__interior {
-    background: linear-gradient(
-      to right,
-      #d0d8f5 0%,    // sapphireLite
-      #e8e8e8 50%,   // black!10 (light gray)
-      #f5d0d0 100%   // antagonistLite
-    );
-    padding: 0.9rem 1.1rem 0.9rem 1.1rem;
-    position: relative;
+  // Title bar — sits flush on the top edge, sharp corners per boxed title style
+  &__title {
+    display:        inline-block;
+    position:       absolute;
+    top:            0;
+    left:           1.4rem;
+    transform:      translateY(-100%);
+    background:     var(--bg3);
+    border:         $-border solid var(--gold);
+    border-bottom:  none;
+    color:          var(--gold);
+    font-weight:    700;
+    font-size:      0.85rem;
+    font-family:    sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding:        0.15rem 0.5rem;
+    // sharp corners — intentionally no border-radius
   }
 
-  // Title bar (boxed title style — sharp corners, sits on the top frame edge)
-  &__title {
-    position: absolute;
-    top: 0;
-    left: 1.2rem;
-    transform: translateY(-100%);
-    background: linear-gradient(
-      to right,
-      #1b2a6b,   // sapphire
-      #0a0a0a,
-      #6b1b1b    // antagonist
-    );
-    color: white;
-    font-weight: 700;
-    font-size: 1rem;
-    font-family: sans-serif;
-    padding: 0.2rem 0.5rem;
-    border: 1.5px solid #000;
-    // sharp corners — no clip-path, no border-radius
+  // Interior — same chamfer minus the border width so the gold edge shows
+  &__interior {
+    background: var(--bg3);
+    padding:    1.2rem 1.4rem;
+    @include chamfer($-inner);
   }
 }
 
@@ -122,41 +117,16 @@ $rule: 7px;   // boxrule=5pt, converted
 }
 
 .card-link {
-  display:        inline-block;
-  margin-top:     1.5rem;
-  font-size:      0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color:          var(--gold);
+  display:         inline-block;
+  margin-top:      1.5rem;
+  font-size:       0.72rem;
+  letter-spacing:  0.18em;
+  text-transform:  uppercase;
+  color:           var(--gold);
   text-decoration: none;
-  transition:     letter-spacing 0.3s;
+  transition:      letter-spacing 0.3s;
 
   &:hover { letter-spacing: 0.28em; }
-}
-
-// ── Key/callout card variant ──────────────────────────────────────────────────
-.card--key {
-  border-radius: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  background: linear-gradient(
-    to right,
-    #1a1a3a 0%,       // deep navy left edge
-    #2a2248 8%,       // navy body
-    #e8e4d8 38%,      // pale cream centre-left
-    #f0ece2 50%,      // lightest cream centre
-    #e8e4d8 62%,      // cream centre-right
-    #3a1018 92%,      // crimson body
-    #2a0a10 100%      // deep crimson right edge
-  );
-  box-shadow:
-    0 2px 6px  rgba(0, 0, 0, 0.45),   // main drop shadow
-    0 1px 2px  rgba(0, 0, 0, 0.30),   // tight contact shadow
-    inset 0 1px 0 rgba(255, 255, 255, 0.08); // top highlight
-
-  // Override default hover lift if this card is static
-  &:hover {
-    transform: none;
-  }
 }
 
 // ── Related cards (essay & project footers) ───────────────────────────────────
@@ -197,36 +167,30 @@ $rule: 7px;   // boxrule=5pt, converted
 }
 
 .values-grid {
-  display: grid;
-  // Exactly 2 columns on wider screens, each taking equal space
+  display:               grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5px;
+  gap:                   1.5px;
 
-  // On mobile, collapse to a single column
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
 
 .specialties-grid {
-  display: grid;
-  // Exactly 2 columns on wider screens, each taking equal space
+  display:               grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5px;
+  gap:                   1.5px;
 
-  // On mobile, collapse to a single column
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
 }
 
 .testimonials-grid {
-  display: grid;
-  // Exactly 2 columns on wider screens, each taking equal space
+  display:               grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5px;
+  gap:                   1.5px;
 
-  // On mobile, collapse to a single column
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
