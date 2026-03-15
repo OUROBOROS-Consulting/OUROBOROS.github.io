@@ -9,26 +9,91 @@ title: Feedback Loops
 tagline: >
   Systems (Not) Designed for Us
 
-# About
-about_heading: Technology as a source of empowerment
-about_body_1: >
-  My career began at the intersection of technology and public service, I played a pivotal role in the Federal COVID-19 response.
-  After graduating from Penn State with a B.S. in Economics in 2021, I immediately impacted the national healthcare landscape during a critical period.
-  Joining the U.S. Department of Health \& Human Services (HHS) as a Data \& Analytics Intern, I quickly advanced to an IT Specialist Data Consultant.
-about_body_2: >
-  I engineered high-throughput data pipelines and deployed machine learning models within Palantir Foundry to monitor national hospital data integrity.
-  My leadership abilities emerged early. I managed public-facing platforms like Healthdata.gov and led a technical team of 11 interns, among my many other responsibilities.
-  I was the guy that my supervisors would turn to when they needed someone to figure out how to fix whatever issue our pipelines were having.
-  My contributions were recognized with an Employee of the Quarter Award and Rookie of the Year Award from the HHS OCIO. 
-  Driven to deepen my technical expertise, I pursued a Master of Statistics at North Carolina State University (2023) and I'm currently working towards my PhD in Biostatistics from the University of Minnesota School of Public Health. This academic pivot marked a transition from operational data science to rigorous statistical research.
-# pull_quote: >
-#   "For many people, technology is an obstacle, at best. For others, technology is a weapon of mass destruction. For a lucky few, technology is a tool of empowerment. You get to decide what role technology will play in your life."
+# ── About ──────────────────────────────────────────────────────────────────
+about:
+  heading: Technology as a source of empowerment
+  body: >
+    My career began at the intersection of technology and public service, where I played a pivotal
+    role in the Federal COVID-19 response. After graduating from Penn State with a B.S. in Economics
+    in 2021, I immediately impacted the national healthcare landscape during a critical period.
+    Joining the U.S. Department of Health &amp; Human Services (HHS) as a Data &amp; Analytics Intern,
+    I quickly advanced to an IT Specialist Data Consultant.
 
-  
-# Footer links
-github: "https://github.com/astamenos/"
-tutor: "https://www.wyzant.com/refer/tutor/86925781?utm_source=TREF&utm_campaign=GI&utm_content=TProfile&utm_medium=link"
-linkedin: "https://www.linkedin.com/in/astamenos/"
-orcid: "https://orcid.org/0009-0008-4181-7080"
-contact: ""
+# ── Pull quote ─────────────────────────────────────────────────────────────
+pull_quote: >
+  "Institutions have failed miserably at protecting me,
+  and in many ways have only made things worse."
+
+# ── Page sections ──────────────────────────────────────────────────────────
+sections:
+  - id: cybernetics
+    heading: Cybernetics
+    body_paragraphs:
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+
+  - id: feedback
+    heading: Feedback Loops
+    body_paragraphs:
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+
+
+  - id: examples
+    heading: Examples of Positive Feedback Loops
+    body_paragraphs:
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+      - >
+        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
+        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
+        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        
+# ── Footer links ───────────────────────────────────────────────────────────
+links:
+  github:   "https://github.com/astamenos/"
+  tutor:    "https://www.wyzant.com/refer/tutor/86925781?utm_source=TREF&utm_campaign=GI&utm_content=TProfile&utm_medium=link"
+  linkedin: "https://www.linkedin.com/in/astamenos/"
+  orcid:    "https://orcid.org/0009-0008-4181-7080"
+  contact:  ""
 ---
