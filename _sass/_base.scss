@@ -39,6 +39,44 @@ body {
   line-height: 1.7;
 }
 
+body::before {
+  content:        '';
+  position:       absolute;
+  inset:          0;
+  z-index:        0;
+  pointer-events: none;
+
+  background-image:
+    radial-gradient(
+      ellipse 8px 6px at 8px 6px,
+      transparent              60%,
+      rgba(201, 168, 76, 0.07) 60%,
+      rgba(201, 168, 76, 0.07) 75%,
+      transparent              75%
+    ),
+    radial-gradient(
+      ellipse 8px 6px at 0px 6px,
+      transparent              60%,
+      rgba(201, 168, 76, 0.07) 60%,
+      rgba(201, 168, 76, 0.07) 75%,
+      transparent              75%
+    );
+  background-size: 8px 6px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0vh,
+    transparent 90vh,
+    black       110vh
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0vh,
+    transparent 90vh,
+    black       110vh
+  );
+}
+
 // ── Reading progress bar ──────────────────────────────────────────────────────
 // Global element — used on essay, service, and mission pages via foundation.html
 #progress-bar {
