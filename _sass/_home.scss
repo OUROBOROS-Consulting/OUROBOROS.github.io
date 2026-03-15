@@ -1,284 +1,247 @@
-// ── Hero ─────────────────────────────────────────────────────────────────────
+// ── Hero ──────────────────────────────────────────────────────────────────────
 #hero {
-  min-height:            100vh;
-  display:               grid;
-  grid-template-columns: 1fr auto; // text takes remaining space, image takes what it needs
-  align-items:           center;
-  padding:               0 10vw;
-  position:              relative;
-  overflow:              hidden;
+  min-height:      100vh;
+  padding:         10rem 10vw 6rem;
+  display:         grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows:    1fr auto;
+  align-items:     center;
+  gap:             0 6rem;
+  border-bottom:   1px solid var(--border);
+  position:        relative;
+}
 
-  // Ambient gold glow
-  &::before {
-    content:    '';
-    position:   absolute;
-    top:        -20%;
-    right:      -10%;
-    width:      60vw;
-    height:     60vw;
-    max-width:  700px;
-    max-height: 700px;
-    background: radial-gradient(circle, rgba(201, 168, 76, 0.07) 0%, transparent 70%);
-    pointer-events: none;
-  }
+.hero-text {
+  display:        flex;
+  flex-direction: column;
+  gap:            1.5rem;
 }
 
 .hero-eyebrow {
-  font-size:      0.75rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color:          var(--gold);
-  margin-bottom:  1.2rem;
-  opacity:        0;
-  animation:      fadeUp 0.8s 0.2s forwards;
+  @include label-caps(0.68rem);
 }
 
 .hero-name {
-  font-family:   'Playfair Display', serif;
-  font-size:     clamp(3rem, 8vw, 6.5rem);
+  font-family:   $font-serif;
+  font-size:     clamp(3.5rem, 10vw, 8rem);
   font-weight:   600;
-  line-height:   1.05;
-  margin-bottom: 1.5rem;
-  opacity:       0;
-  animation:     fadeUp 0.8s 0.4s forwards;
+  line-height:   0.95;
+  letter-spacing: -0.01em;
+  color:         var(--text);
 }
 
 .hero-tagline {
-  font-size:   clamp(1rem, 2vw, 1.2rem);
+  font-size:   1.05rem;
   color:       var(--muted);
-  max-width:   480px;
-  line-height: 1.8;
-  opacity:     0;
-  animation:   fadeUp 0.8s 0.6s forwards;
-}
+  line-height: 1.85;
+  max-width:   520px;
 
-.hero-portrait {
-  img {
-    width:          220px;       // narrower than height to produce an oval
-    height:         280px;
-    object-fit:     cover;       // still crops cleanly to fill the oval
-    border-radius:  50%;         // 50% on a rectangle = oval, not circle
-    outline:        2px solid var(--gold);  // the golden frame line
-    outline-offset: 6px;         // the gap between image edge and frame
-    opacity:        0;
-    animation:      fadeUp 0.8s 0.6s forwards;
-  }
+  // Strip default margins from markdownify's <p> wrapper
+  p { margin: 0; }
 }
 
 .hero-cta {
-  margin-top: 2.5rem;
-  opacity:    0;
-  animation:  fadeUp 0.8s 0.8s forwards;
+  margin-top: 0.5rem;
 }
 
+// ── Hero portrait ─────────────────────────────────────────────────────────────
+.hero-portrait {
+  align-self: center;
+
+  img {
+    display:      block;
+    width:        clamp(220px, 22vw, 380px);
+    aspect-ratio: 3 / 4;
+    object-fit:   cover;
+    filter:       grayscale(20%);
+  }
+}
+
+// ── Scroll hint ───────────────────────────────────────────────────────────────
 .scroll-hint {
-  position:       absolute;
-  bottom:         2.5rem;
-  left:           50%;
-  transform:      translateX(-50%);
+  grid-column:    1 / -1;
   display:        flex;
   flex-direction: column;
   align-items:    center;
-  gap:            0.4rem;
-  opacity:        0;
-  animation:      fadeUp 1s 1.2s forwards;
+  gap:            0.5rem;
+  padding-top:    3rem;
+  align-self:     end;
 
   span {
-    font-size:      0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color:          var(--muted);
+    @include label-caps(0.6rem, 0.25em);
+    animation: scrollPulse 2s ease-in-out infinite;
   }
 }
+
 .scroll-line {
-  width:      1px;
-  height:     40px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-  animation:  scrollPulse 2s infinite;
+  width:            1px;
+  height:           48px;
+  background:       var(--gold);
+  opacity:          0.4;
+  animation:        scrollPulse 2s ease-in-out infinite;
 }
 
-// ── About ────────────────────────────────────────────────────────────────────
-#about {
-  padding:               8rem 10vw;
-  display:               grid;
-  grid-template-columns: 1fr 1fr;
-  gap:                   6rem;
-  align-items:           center;
-  border-top:            1px solid var(--border);
-}
-
-// ── Work ─────────────────────────────────────────────────────────────────────
-#work {
-  padding:    8rem 10vw;
-  border-top: 1px solid var(--border);
-  background: var(--bg2);
-}
-
-.work-header {
+// ── Shared section chrome ─────────────────────────────────────────────────────
+// Used by #values, #services, #work, #testimonials
+.work-header,
+.testimonials-header {
   display:         flex;
   justify-content: space-between;
   align-items:     flex-end;
-  margin-bottom:   4rem;
+  padding-bottom:  2.5rem;
+  border-bottom:   1px solid var(--border);
+  margin-bottom:   3rem;
 }
 
-.work-heading {
-  font-family: 'Playfair Display', serif;
-  font-size:   clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
+.work-heading,
+.testimonials-heading {
+  font-family:   $font-serif;
+  font-size:     clamp(2rem, 4vw, 3rem);
+  font-weight:   400;
+  line-height:   1.15;
+  margin-top:    0.6rem;
 }
 
-.work-count {
-  font-size:      0.75rem;
-  color:          var(--muted);
-  letter-spacing: 0.1em;
+.work-count,
+.testimonials-count {
+  @include label-caps(0.65rem, 0.2em);
+  padding-bottom: 0.4rem;
 }
 
-// ── VALUES ────────────────────────────────────────────────────────────────────
-#values {
-  padding:    8rem 10vw;
-  border-top: 1px solid var(--border);
-  background: var(--bg2);
-}
-
-.values-header {
-  display:         flex;
-  justify-content: space-between;
-  align-items:     flex-end;
-  margin-bottom:   4rem;
-}
-
-.values-heading {
-  font-family: 'Playfair Display', serif;
-  font-size:   clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
-}
-
-.values-count {
-  font-size:      0.75rem;
-  color:          var(--muted);
-  letter-spacing: 0.1em;
-}
-  
-.values-tabs {
-  display:       flex;
-  gap:           1rem;
-  margin:        2.5rem 0 3rem;
-}
-
-.testimonials-tab {
-  background:     transparent;
-  border:         1px solid var(--border);
-  color:          var(--muted);
-  font-family:    'Inter', sans-serif;
-  font-size:      0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding:        0.5rem 1.4rem;
-  cursor:         pointer;
-  transition:     border-color 0.3s, color 0.3s;
-
-  &.active,
-  &:hover {
-    border-color: var(--gold);
-    color:        var(--gold);
-  }
-}
-
-.testimonials-list {
-  display:               none;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap:                   1.5px;
-
-  &.active { display: grid; }
-}
-
-// ── testimonials ────────────────────────────────────────────────────────────────────
+// ── Section spacing ───────────────────────────────────────────────────────────
+#about,
+#values,
+#services,
+#work,
 #testimonials {
-  padding:    8rem 10vw;
-  border-top: 1px solid var(--border);
-  background: var(--bg2);
+  padding: 6rem 10vw;
 }
 
-.values-header {
-  display:         flex;
-  justify-content: space-between;
-  align-items:     flex-end;
-  margin-bottom:   4rem;
+// Alternate background for rhythm
+#values,
+#testimonials { background: var(--bg2); }
+
+// ── Card grid ─────────────────────────────────────────────────────────────────
+.cards,
+.testimonials-grid {
+  display:               grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap:                   1px; // border-collapse effect
+  background:            var(--border);
 }
 
-.values-heading {
-  font-family: 'Playfair Display', serif;
-  font-size:   clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
-}
+// ── Card ──────────────────────────────────────────────────────────────────────
+.card {
+  background: var(--bg);
+  padding:    2rem 2rem 2.5rem;
+  display:    flex;
+  flex-direction: column;
+  gap:        0.75rem;
+  transition: background 0.3s;
 
-.values-count {
-  font-size:      0.75rem;
-  color:          var(--muted);
-  letter-spacing: 0.1em;
-}
-  
-.values-tabs {
-  display:       flex;
-  gap:           1rem;
-  margin:        2.5rem 0 3rem;
-}
+  &:hover { background: var(--bg2); }
 
-.testimonials-tab {
-  background:     transparent;
-  border:         1px solid var(--border);
-  color:          var(--muted);
-  font-family:    'Inter', sans-serif;
-  font-size:      0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding:        0.5rem 1.4rem;
-  cursor:         pointer;
-  transition:     border-color 0.3s, color 0.3s;
-
-  &.active,
-  &:hover {
-    border-color: var(--gold);
-    color:        var(--gold);
+  // Values and testimonials cards use bg2 as base, so invert hover
+  #values &,
+  #testimonials & {
+    background: var(--bg2);
+    &:hover { background: var(--bg3); }
   }
 }
 
-.testimonials-list {
-  display:               none;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  gap:                   1.5px;
+.card-tag {
+  @include label-caps(0.65rem, 0.2em);
 
-  &.active { display: grid; }
+  // Strip margins from markdownify
+  p { margin: 0; }
 }
 
-// ── Responsive ───────────────────────────────────────────────────────────────
+.card-title {
+  font-family:   $font-serif;
+  font-size:     clamp(1.1rem, 2vw, 1.4rem);
+  font-weight:   400;
+  line-height:   1.3;
+  color:         var(--text);
+}
+
+.card-desc {
+  font-size:   0.88rem;
+  color:       var(--muted);
+  line-height: 1.85;
+  flex-grow:   1; // pushes card-link to bottom
+
+  // Strip margins from markdownify
+  p { margin: 0; }
+}
+
+.card-link {
+  display:         inline-block;
+  margin-top:      auto;
+  font-size:       0.75rem;
+  letter-spacing:  0.12em;
+  text-transform:  uppercase;
+  color:           var(--gold);
+  text-decoration: none;
+  transition:      opacity 0.2s;
+
+  &:hover { opacity: 0.7; }
+}
+
+// ── Blockquote inside testimonial / values cards ───────────────────────────────
+// Scoped to .card so it doesn't affect .post-body blockquote
+.card blockquote {
+  border:     none;
+  background: none;
+  padding:    0;
+  margin:     0;
+
+  p { margin: 0; }
+
+  cite {
+    display:        block;
+    margin-top:     1rem;
+    font-family:    $font-sans;
+    font-size:      0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color:          var(--gold);
+    font-style:     normal;
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   #hero {
     grid-template-columns: 1fr;
     padding:               8rem 6vw 4rem;
-    justify-items:         center;
-    text-align:            center;
+    gap:                   3rem 0;
   }
 
-  .hero-portrait img {
-    width:         200px;
-    height:        200px;
-    margin-bottom: 2rem;
+  .hero-portrait {
+    display: none; // hide portrait on mobile to avoid crowding
   }
 
-  #about {
-    padding:               5rem 6vw;
-    grid-template-columns: 1fr;
-    gap:                   3rem;
+  .hero-name {
+    font-size: clamp(3rem, 14vw, 5rem);
   }
 
-  #work  { padding: 5rem 6vw; }
+  #about,
+  #values,
+  #services,
+  #work,
+  #testimonials {
+    padding: 4rem 6vw;
+  }
 
-  .work-header {
+  .work-header,
+  .testimonials-header {
     flex-direction: column;
     align-items:    flex-start;
     gap:            0.5rem;
   }
 
-  #testimonials, #tikz { padding: 5rem 6vw; }
+  .cards,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
 }
