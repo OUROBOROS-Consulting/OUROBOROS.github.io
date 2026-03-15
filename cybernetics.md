@@ -88,12 +88,5 @@ sections:
         Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
         Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
         Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
-        
-# ── Footer links ───────────────────────────────────────────────────────────
-links:
-  github:   "https://github.com/astamenos/"
-  tutor:    "https://www.wyzant.com/refer/tutor/86925781?utm_source=TREF&utm_campaign=GI&utm_content=TProfile&utm_medium=link"
-  linkedin: "https://www.linkedin.com/in/astamenos/"
-  orcid:    "https://orcid.org/0009-0008-4181-7080"
-  contact:  ""
+
 ---
