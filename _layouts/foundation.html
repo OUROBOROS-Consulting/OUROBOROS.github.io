@@ -12,15 +12,27 @@ layout: default
 
 <!-- ── Mission Hero ── -->
 <header class="svc-hero">
-  <div class="svc-hero-inner svc-hero-inner--single">
+  <a class="post-back" href="{{ '/' | relative_url }}">Back</a>
+  <div class="svc-hero-inner">
     <div class="svc-hero-text">
-      <p class="post-category">{{ page.hero.eyebrow }}</p>
-      <h1 class="svc-title">
-        {{ page.hero.name_line1 }}<br />
-        {{ page.hero.name_line2 }}
-      </h1>
-      <p class="svc-lede">{{ page.hero.tagline }}</p>
+      <p class="post-category">{{ page.category }}</p>
+      <h1 class="svc-title">{{ page.title }}</h1>
+      <p class="svc-lede">{{ page.lede }}</p>
+      <div class="svc-tags">
+        {% for tag in page.tags %}
+        <span class="lp-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
     </div>
+    <div class="svc-hero-cta">
+      <a href="{{ page.cta_url | default: site.email | prepend: 'mailto:' }}" class="btn">
+        {{ page.cta_label | default: 'Get in Touch' }}
+      </a>
+      {% if page.price %}
+      <p class="svc-price">{{ page.price }}</p>
+      {% endif %}
+    </div>
+  </div>
   </div>
 </header>
 
