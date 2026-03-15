@@ -60,7 +60,7 @@
 // ──|| STATS ||─────────────────────────────────────────────────────────────
 .stats-grid {
   display:               grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap:                   1px;
   background:            var(--border);
   margin-top:            3rem;
@@ -151,7 +151,7 @@
 .cards,
 .testimonials-grid {
   display:               grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
   gap:                   1px; // border-collapse effect
   background:            var(--border);
 }
