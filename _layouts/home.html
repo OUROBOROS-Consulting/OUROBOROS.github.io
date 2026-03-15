@@ -141,16 +141,14 @@ layout: default
 <!-- ── Testimonials ───────────────────────────────────────────────────────── -->
 <section id="testimonials">
   <div class="testimonials-header">
-    <div>
       <p class="section-label">What the Greats Say Me</p>
       <h2 class="testimonials-heading">Testimonials</h2>
-    </div>
     <span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>
   </div>
   <div class="testimonials-grid">
     {% for ref in site.data.testimonials %}
     <div class="card--formula">
-      <div><p class="card--formula--title">{{ ref.title | markdownify }}</p></div>
+      <div><p class="card--formula__title">{{ ref.title | markdownify }}</p></div>
       <div class="card--formula__interior">
         <blockquote>
           <p class="card-desc">{{ ref.description | markdownify }}</p>
