@@ -1,20 +1,3 @@
-// ── Reading progress bar ─────────────────────────────────────────────────────
-#progress-bar {
-  position:   fixed;
-  top:        0;
-  left:       0;
-  height:     2px;
-  background: var(--gold);
-  width:      0%;
-  z-index:    200;
-  transition: width 0.1s linear;
-}
-
-.service-header,
-.service-body {
-  max-width: 1000px;
-}
-
 // ── Post header ───────────────────────────────────────────────────────────────
 .post-header {
   max-width: 680px;
@@ -22,32 +5,14 @@
   padding:   10rem 10vw 3.5rem;
 }
 
-.post-back {
-  display:        inline-flex;
-  align-items:    center;
-  gap:            0.4rem;
-  font-size:      0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color:          var(--muted);
-  text-decoration: none;
-  transition:     color 0.3s;
-  margin-bottom:  2.5rem;
-
-  &::before { content: '←'; }
-  &:hover   { color: var(--gold); }
-}
-
+// Uses mixin — was duplicating .section-label with a slightly smaller size
 .post-category {
-  font-size:      0.68rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color:          var(--gold);
-  margin-bottom:  1.1rem;
+  @include label-caps(0.68rem);
+  margin-bottom: 1.1rem;
 }
 
 .post-title {
-  font-family:   'Playfair Display', serif;
+  font-family:   $font-serif;
   font-size:     clamp(2rem, 5vw, 3.4rem);
   font-weight:   600;
   line-height:   1.1;
@@ -62,20 +27,20 @@
 }
 
 .post-meta {
-  display:      flex;
-  align-items:  center;
-  gap:          1.5rem;
-  flex-wrap:    wrap;
-  padding-top:  1.5rem;
-  border-top:   1px solid var(--border);
+  display:     flex;
+  align-items: center;
+  gap:         1.5rem;
+  flex-wrap:   wrap;
+  padding-top: 1.5rem;
+  border-top:  1px solid var(--border);
 }
 
 .post-meta-date    { font-size: 0.78rem; color: var(--text); }
 .post-meta-divider { width: 1px; height: 12px; background: var(--border); }
-.post-meta-tag     { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); }
+.post-meta-tag     { @include label-caps(0.68rem, 0.18em); }
 .post-meta-read    { font-size: 0.78rem; color: var(--muted); margin-left: auto; }
 
-// ── Prose body ───────────────────────────────────────────────────────────────
+// ── Prose body ────────────────────────────────────────────────────────────────
 .post-body {
   max-width: 680px;
   margin:    0 auto;
@@ -89,15 +54,14 @@
     margin-bottom: 1.6rem;
   }
 
-  // Opening paragraph — full text colour, slightly larger
+  // Opening paragraph — full text colour, slightly larger, with drop cap
   > p:first-of-type {
     font-size:   1.08rem;
     color:       var(--text);
     line-height: 1.95;
 
-    // Drop cap
     &::first-letter {
-      font-family: 'Playfair Display', serif;
+      font-family: $font-serif;
       font-size:   3.8rem;
       font-weight: 600;
       float:       left;
@@ -107,9 +71,8 @@
     }
   }
 
-  // Headings
   h2 {
-    font-family:   'Playfair Display', serif;
+    font-family:   $font-serif;
     font-size:     clamp(1.3rem, 2.5vw, 1.7rem);
     font-weight:   400;
     color:         var(--text);
@@ -117,16 +80,12 @@
     line-height:   1.3;
   }
 
-  // H3 as small-caps label rather than subheading
+  // H3 as small-caps label
   h3 {
-    font-size:      0.85rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color:          var(--gold);
-    margin:         2.5rem 0 0.8rem;
+    @include label-caps(0.85rem, 0.18em);
+    margin: 2.5rem 0 0.8rem;
   }
 
-  // Links
   a {
     color:           var(--gold);
     text-decoration: none;
@@ -139,7 +98,7 @@
   strong { color: var(--text); font-weight: 500; }
   em     { font-style: italic; }
 
-  // Section break — ornamental instead of a rule
+  // Ornamental section break
   hr {
     border:          none;
     display:         flex;
@@ -154,15 +113,15 @@
     }
   }
 
-  // Pull quote
+  // Blockquote inside prose — scoped here, distinct from standalone .pull-quote
   blockquote {
-    margin:     2.5rem 0;
-    padding:    2rem 2.5rem;
+    margin:      2.5rem 0;
+    padding:     2rem 2.5rem;
     border-left: 2px solid var(--gold);
-    background: var(--bg2);
+    background:  var(--bg2);
 
     p {
-      font-family: 'Playfair Display', serif;
+      font-family: $font-serif;
       font-size:   1.15rem;
       font-style:  italic;
       color:       var(--text);
@@ -176,7 +135,7 @@
     cite {
       display:        block;
       margin-top:     0.8rem;
-      font-family:    'Inter', sans-serif;
+      font-family:    $font-sans;
       font-size:      0.72rem;
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -185,9 +144,8 @@
     }
   }
 
-  // Inline code & code blocks
   code {
-    font-family: 'JetBrains Mono', monospace;
+    font-family: $font-mono;
     font-size:   0.82rem;
     background:  var(--bg3);
     border:      1px solid var(--border);
@@ -196,24 +154,24 @@
   }
 
   pre {
-    background:  var(--bg2);
-    border:      1px solid var(--border);
-    padding:     1.5rem;
-    overflow-x:  auto;
-    margin:      2rem 0;
+    background: var(--bg2);
+    border:     1px solid var(--border);
+    padding:    1.5rem;
+    overflow-x: auto;
+    margin:     2rem 0;
 
     code {
-      background: none;
-      border:     none;
-      padding:    0;
-      color:      var(--text);
-      font-size:  0.82rem;
+      background:  none;
+      border:      none;
+      padding:     0;
+      color:       var(--text);
+      font-size:   0.82rem;
       line-height: 1.75;
     }
   }
 }
 
-// ── Sidenote ─────────────────────────────────────────────────────────────────
+// ── Sidenote ──────────────────────────────────────────────────────────────────
 .sidenote {
   font-size:    0.78rem;
   color:        var(--muted);
@@ -224,7 +182,7 @@
   font-style:   italic;
 }
 
-// ── Superscript footnote markers ─────────────────────────────────────────────
+// ── Superscript footnote markers ──────────────────────────────────────────────
 sup {
   font-size:      0.65rem;
   color:          var(--gold);
@@ -233,19 +191,19 @@ sup {
   cursor:         default;
 }
 
-// ── Footnotes ────────────────────────────────────────────────────────────────
+// ── Footnotes ─────────────────────────────────────────────────────────────────
 .post-footnotes {
   margin-top:  4rem;
   padding-top: 2rem;
   border-top:  1px solid var(--border);
 
   p {
-    font-size:    0.8rem;
-    color:        var(--muted);
-    line-height:  1.75;
+    font-size:     0.8rem;
+    color:         var(--muted);
+    line-height:   1.75;
     margin-bottom: 0.5rem;
-    padding-left: 1.4rem;
-    position:     relative;
+    padding-left:  1.4rem;
+    position:      relative;
   }
 
   .fn-num {
@@ -265,14 +223,11 @@ sup {
 }
 
 .post-related-label {
-  font-size:      0.68rem;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color:          var(--gold);
-  margin-bottom:  2.5rem;
+  @include label-caps(0.68rem);
+  margin-bottom: 2.5rem;
 }
 
-// ── Responsive ───────────────────────────────────────────────────────────────
+// ── Responsive ────────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   .post-header,
   .post-body    { padding-left: 6vw; padding-right: 6vw; }
