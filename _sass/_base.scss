@@ -108,17 +108,19 @@ body {
   will-change:    transform;
 
   // Soft glow — stays centered, doesn't rotate
-  &::before {
-    content:       '';
-    position:      absolute;
-    inset:         0;
-    border-radius: 50%;
-    background:    radial-gradient(
-                     circle,
-                     rgba(201, 168, 76, 0.13) 0%,
-                     transparent 70%
-                   );
-  }
+&::before {
+  content:       '';
+  position:      absolute;
+  inset:         0;
+  border-radius: 50%;
+  background:    radial-gradient(
+                   circle,
+                   transparent 0%,
+                   transparent 15%,
+                   rgba(201, 168, 76, 0.14) 40%,
+                   transparent 70%
+                 );
+}
 
   // Swirl — rotates on top of the glow
   &::after {
