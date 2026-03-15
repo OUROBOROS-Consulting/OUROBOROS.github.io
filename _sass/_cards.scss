@@ -43,7 +43,7 @@
 // layer and the interior sits on top with a matching but slightly smaller clip.
 
 $-arc:    11px;  // 3mm ≈ 11px at 96 dpi — chamfer depth
-$-border: 2px;   // effective border thickness
+$-border: 5px;   // effective border thickness
 $-inner:  calc(#{$-arc} - #{$-border});
 
 @mixin chamfer($a) {
