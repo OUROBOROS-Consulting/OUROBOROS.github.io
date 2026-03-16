@@ -44,11 +44,11 @@ if (canvas) {
   const TAIL_DEG = 300;  // arc length in degrees
   const TIP_WIDTH = 6;   // max stroke width at tip
   const GLOW_BLUR = 8;   // shadowBlur at tip
-  const LERP     = 0.03; // 0 = never follows, 1 = instant
+  const LERP     = 0.04; // 0 = never follows, 1 = instant
 
   let velX = 0;
   let velY = 0;
-  const FRICTION = 0.82
+  const FRICTION = 0.3
   
   const tailRad = (TAIL_DEG / 180) * Math.PI;
 
