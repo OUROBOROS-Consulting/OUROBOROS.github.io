@@ -31,10 +31,8 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // ── Cursor halo ───────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-  const canvas = document.getElementById('halo-canvas');
-  if (!canvas) return;
-
+const canvas = document.getElementById('halo-canvas');
+if (canvas) {
   const ctx = canvas.getContext('2d');
   const haloEl = document.getElementById('cursor-halo');
 
@@ -98,4 +96,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   requestAnimationFrame(drawHalo);
-});
+}
