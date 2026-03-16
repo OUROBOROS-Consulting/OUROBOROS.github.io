@@ -5,13 +5,13 @@
     <div class="nav-dropdown">
       <button class="nav-dropdown-toggle">{{ item.title }}</button>
       <div class="nav-dropdown-menu">
+        {% for child in item.children %}
         <div class="card--formula">
           <div class="card--formula__interior">
-            {% for child in item.children %}
             <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-            {% endfor %}
           </div>
         </div>
+        {% endfor %}
       </div>
     </div>
     {% endfor %}
