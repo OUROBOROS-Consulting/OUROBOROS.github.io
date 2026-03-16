@@ -88,11 +88,8 @@ layout: default
     {% for val in site.data.values %}
     <div class="card--formula">
       <div class="card--formula__interior">
-        <p class="card-tag">{{ val.title | markdownify }}</p>
-        <blockquote>
-          <p class="card-desc">{{ val.description | markdownify }}</p>
-          <cite>— {{ val.reference }}</cite>
-        </blockquote>
+        <span class="stat-value">{{ val.title | markdownify }}</span>
+        <p class="card-desc">{{ val.description | markdownify }}</p>
       </div>
     </div>
     {% endfor %}
@@ -112,9 +109,9 @@ layout: default
     {% for service in site.services %}
     <div class="card--formula">
       <div class="card--formula__interior">
-        <!--<div class="card--key">-->
-          <h3 class="card-title">{{ service.title }}</h3>
-          <a href="{{ service.url }}" class="card-link">Learn More →</a>
+        <h3 class="card-title">{{ service.title }}</h3>
+        <p class="card-desc">{{ service.description }}</p>
+        <a href="{{ service.url }}" class="card-link">Learn More →</a>
       </div>
     </div>
     {% endfor %}
@@ -158,8 +155,9 @@ layout: default
   <div class="testimonials-grid">
     {% for ref in site.data.testimonials %}
     <div class="card--formula">
-      <div><p class="card--formula__title">{{ ref.title | markdownify }}</p></div>
       <div class="card--formula__interior">
+        <p class="card-tag">{{ ref.title | markdownify }}</p>
+        <h3 class="card-title">{{ project.title }}</h3>
         <blockquote>
           <p class="card-desc">{{ ref.description | markdownify }}</p>
           <cite>— {{ ref.reference }}</cite>
