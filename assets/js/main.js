@@ -44,8 +44,12 @@ if (canvas) {
   const TAIL_DEG = 300;  // arc length in degrees
   const TIP_WIDTH = 6;   // max stroke width at tip
   const GLOW_BLUR = 8;   // shadowBlur at tip
-  const LERP     = 0.06; // 0 = never follows, 1 = instant
+  const LERP     = 0.03; // 0 = never follows, 1 = instant
 
+  let velX = 0;
+  let velY = 0;
+  const FRICTION = 0.82
+  
   const tailRad = (TAIL_DEG / 180) * Math.PI;
 
   let last   = null;
@@ -88,9 +92,11 @@ if (canvas) {
       ctx.stroke();
     }
 
-    haloX += (mouseX - haloX) * LERP;
-    haloY += (mouseY - haloY) * LERP;
-    haloEl.style.transform = `translate(${haloX - 100}px, ${haloY - 100}px)`;
+  // Momentum-based lerp
+  velX = velX * FRICTION + (mouseX - haloX) * LERP;
+  velY = velY * FRICTION + (mouseY - haloY) * LERP;
+  haloX += velX;
+  haloY += velY;
 
     requestAnimationFrame(drawHalo);
   }
