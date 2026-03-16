@@ -200,7 +200,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 .cv-cards {
   display: flex;
   flex-direction: column;
-  gap: 3px;
-  padding: 3rem 0 3rem 2.5rem;  // mirrors the old cv-section-content padding
+  gap: 3px;          // keep this small so cards feel grouped
+  margin-bottom: 4rem; // ← space after each section's card stack
   border-left: 1px solid var(--border);
 }
