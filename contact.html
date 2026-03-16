@@ -1,0 +1,875 @@
+---
+title: Contact Us
+layout: default
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Client Intake Form — Technology Advisory Services</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f1923;
+    --ink-soft: #2d3f50;
+    --ink-muted: #5a6e82;
+    --ink-ghost: #8fa3b8;
+    --paper: #f8f6f1;
+    --paper-warm: #f0ece4;
+    --paper-cool: #edf2f7;
+    --accent: #1a3a5c;
+    --accent-mid: #2e6098;
+    --accent-light: #d4e4f5;
+    --gold: #c4973a;
+    --gold-light: #f5e8cc;
+    --danger: #8b2635;
+    --success: #2d5a3d;
+    --border: #d8d0c4;
+    --border-focus: #2e6098;
+    --shadow-sm: 0 1px 4px rgba(15,25,35,0.08);
+    --shadow-md: 0 4px 16px rgba(15,25,35,0.10);
+    --shadow-lg: 0 12px 40px rgba(15,25,35,0.14);
+    --r: 4px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { font-size: 16px; scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  /* Background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(ellipse at 20% 10%, rgba(46,96,152,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 90%, rgba(196,151,58,0.05) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .page-wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  /* ── MASTHEAD ── */
+  .masthead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 24px;
+    padding: 40px 48px 36px;
+    background: var(--accent);
+    border-radius: 2px 2px 0 0;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0;
+  }
+
+  .masthead::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 220px; height: 220px;
+    border-radius: 50%;
+    border: 40px solid rgba(255,255,255,0.04);
+  }
+
+  .masthead::after {
+    content: '';
+    position: absolute;
+    bottom: -30px; left: 180px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    background: rgba(196,151,58,0.08);
+  }
+
+  .masthead-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    position: relative;
+  }
+
+  .masthead-subtitle {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgba(255,255,255,0.55);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 8px;
+  }
+
+  .masthead-meta {
+    text-align: right;
+    position: relative;
+  }
+
+  .masthead-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .masthead-contact {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 6px;
+    line-height: 1.8;
+  }
+
+  /* Gold rule under masthead */
+  .masthead-rule {
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), rgba(196,151,58,0.2));
+    margin-bottom: 0;
+  }
+
+  /* ── CONFIDENTIALITY BANNER ── */
+  .confidential-banner {
+    background: var(--gold-light);
+    border-left: 3px solid var(--gold);
+    padding: 14px 24px;
+    font-size: 0.8rem;
+    color: #6b4f18;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+
+  .confidential-banner strong {
+    font-weight: 600;
+    color: #5a3e0e;
+  }
+
+  /* ── FORM BODY ── */
+  .form-body {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-top: none;
+    padding: 0 0 48px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding: 40px 48px 0;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .section + .section { padding-top: 36px; }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .section:nth-child(1) { animation-delay: 0.05s; }
+  .section:nth-child(2) { animation-delay: 0.10s; }
+  .section:nth-child(3) { animation-delay: 0.15s; }
+  .section:nth-child(4) { animation-delay: 0.20s; }
+  .section:nth-child(5) { animation-delay: 0.25s; }
+  .section:nth-child(6) { animation-delay: 0.30s; }
+  .section:nth-child(7) { animation-delay: 0.35s; }
+
+  .section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 28px;
+  }
+
+  .section-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 36px 48px 0;
+    opacity: 0.6;
+  }
+
+  /* ── FIELDS ── */
+  .field-row {
+    display: grid;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  .field-row.col-2 { grid-template-columns: 1fr 1fr; }
+  .field-row.col-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+  .field-group { display: flex; flex-direction: column; gap: 6px; }
+
+  label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--ink-muted);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--ink);
+    background: var(--paper-cool);
+    border: 1px solid var(--border);
+    border-radius: var(--r);
+    padding: 10px 14px;
+    transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+
+  input:focus, select:focus, textarea:focus {
+    border-color: var(--border-focus);
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(46,96,152,0.10);
+  }
+
+  textarea { resize: vertical; min-height: 90px; line-height: 1.6; }
+
+  select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235a6e82' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+
+  /* ── CHECKBOX GROUPS ── */
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .checkbox-group.stacked { flex-direction: column; gap: 8px; }
+
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 8px 14px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    background: var(--paper-cool);
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    font-weight: 400;
+    transition: all 0.15s;
+    user-select: none;
+  }
+
+  .check-item:hover {
+    border-color: var(--accent-mid);
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+
+  .check-item input[type="checkbox"],
+  .check-item input[type="radio"] {
+    width: 15px; height: 15px;
+    accent-color: var(--accent-mid);
+    cursor: pointer;
+    flex-shrink: 0;
+    border: none;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .check-item input:focus { box-shadow: none; }
+
+  /* checked state */
+  .check-item:has(input:checked) {
+    border-color: var(--accent-mid);
+    background: var(--accent-light);
+    color: var(--accent);
+    font-weight: 500;
+  }
+
+  /* ── NOTE BOX ── */
+  .note-box {
+    background: var(--paper-warm);
+    border-left: 3px solid var(--accent-mid);
+    padding: 14px 18px;
+    border-radius: 0 var(--r) var(--r) 0;
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .note-box.warning {
+    background: #fef9ee;
+    border-color: var(--gold);
+    color: #6b4f18;
+  }
+
+  /* ── SIGNATURE BLOCK ── */
+  .sig-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 4px;
+  }
+
+  .sig-field { display: flex; flex-direction: column; gap: 6px; }
+
+  .sig-line {
+    border: none;
+    border-bottom: 1.5px solid var(--ink-ghost);
+    height: 44px;
+    background: transparent;
+    padding: 0 4px;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--ink);
+    width: 100%;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .sig-line:focus { border-color: var(--accent-mid); }
+
+  /* ── SUBMIT ── */
+  .submit-area {
+    padding: 40px 48px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .submit-note {
+    font-size: 0.78rem;
+    color: var(--ink-ghost);
+    max-width: 400px;
+    line-height: 1.6;
+  }
+
+  .btn-submit {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #fff;
+    background: var(--accent);
+    border: none;
+    border-radius: var(--r);
+    padding: 14px 36px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    box-shadow: var(--shadow-sm);
+    flex-shrink: 0;
+  }
+
+  .btn-submit:hover {
+    background: var(--accent-mid);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .btn-submit:active { transform: translateY(0); }
+
+  /* ── FOOTER ── */
+  .doc-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+    background: #fff;
+  }
+
+  .doc-footer-left {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--ink-ghost);
+    letter-spacing: 0.05em;
+  }
+
+  .doc-footer-right {
+    font-size: 0.72rem;
+    color: var(--ink-ghost);
+    font-style: italic;
+  }
+
+  /* ── PRINT ── */
+  @media print {
+    body { background: white; }
+    body::before { display: none; }
+    .page-wrapper { padding: 0; max-width: 100%; }
+    .masthead { border-radius: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .btn-submit { display: none; }
+    .submit-note { display: none; }
+    .submit-area { display: none; }
+    input, textarea, select { border: 1px solid #ccc !important; background: white !important; }
+    .check-item { border: 1px solid #ccc !important; background: white !important; }
+  }
+
+  @media (max-width: 640px) {
+    .masthead { grid-template-columns: 1fr; padding: 28px 24px; }
+    .masthead-meta { text-align: left; }
+    .section { padding: 28px 24px 0; }
+    .field-row.col-2, .field-row.col-3 { grid-template-columns: 1fr; }
+    .sig-grid { grid-template-columns: 1fr; }
+    .doc-footer { padding: 14px 24px; flex-direction: column; gap: 8px; text-align: center; }
+    .submit-area { padding: 28px 24px 0; }
+  }
+</style>
+</head>
+<body>
+<div class="page-wrapper">
+
+  <!-- MASTHEAD -->
+  <div class="masthead">
+    <div>
+      <div class="masthead-title">Client Intake Form</div>
+      <div class="masthead-subtitle">Technology Advisory &amp; Consulting Services &nbsp;·&nbsp; Confidential</div>
+    </div>
+    <div class="masthead-meta">
+      <div class="masthead-name">Apostolos Stamenos, MS</div>
+      <div class="masthead-contact">
+        astamenos@gmail.com<br>
+        (917) 420-3695<br>
+        [Your Firm Name]
+      </div>
+    </div>
+  </div>
+  <div class="masthead-rule"></div>
+
+  <div class="form-body">
+
+    <!-- CONFIDENTIAL BANNER -->
+    <div class="confidential-banner">
+      <strong>Confidentiality Notice:</strong> This form is held in strict confidence. Information collected here is used solely to assess how we can help you and prepare for your consultation. It will never be shared without your explicit written consent.
+    </div>
+
+    <!-- SECTION 1: CONTACT INFO -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <span class="section-title">Contact Information</span>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" placeholder="Legal name">
+        </div>
+        <div class="field-group">
+          <label for="alias">Preferred Name / Alias (if applicable)</label>
+          <input type="text" id="alias" placeholder="Name you prefer to be called">
+        </div>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="(___) ___-____">
+        </div>
+        <div class="field-group">
+          <label for="contact-method">Preferred Contact Method</label>
+          <select id="contact-method">
+            <option value="">— Select —</option>
+            <option>Phone call</option>
+            <option>Text message</option>
+            <option>Email</option>
+            <option>Signal / encrypted messaging</option>
+            <option>Other — explain in safety section</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" placeholder="your@email.com">
+        </div>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label for="location">City / State</label>
+          <input type="text" id="location" placeholder="Minneapolis, MN">
+        </div>
+        <div class="field-group">
+          <label for="intake-date">Date</label>
+          <input type="date" id="intake-date">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>How did you find us?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="checkbox"> Attorney referral</label>
+            <label class="check-item"><input type="checkbox"> Therapist referral</label>
+            <label class="check-item"><input type="checkbox"> Web search</label>
+            <label class="check-item"><input type="checkbox"> Social media</label>
+            <label class="check-item"><input type="checkbox"> Word of mouth</label>
+            <label class="check-item"><input type="checkbox"> Other</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SECTION 2: YOUR SITUATION -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <span class="section-title">Your Situation</span>
+      </div>
+      <div class="note-box">
+        Please describe your situation in your own words. There are no wrong answers — the more context you provide, the better we can help.
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="core-problem">What is the core problem or situation you are dealing with?</label>
+          <textarea id="core-problem" rows="4" placeholder="Describe what's happening in your own words..."></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="duration">How long has this situation been ongoing?</label>
+          <input type="text" id="duration" placeholder="e.g., 6 months, 2 years">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="urgent-issue">What is the most urgent issue for you right now?</label>
+          <textarea id="urgent-issue" rows="3" placeholder="What needs to be addressed first?"></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="already-tried">What have you already tried? (technical steps, legal action, other assistance)</label>
+          <textarea id="already-tried" rows="3" placeholder="Anything you've already done to address the situation..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SECTION 3: PEOPLE INVOLVED -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <span class="section-title">People Involved</span>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="relationship">Relationship to the high-conflict individual</label>
+          <select id="relationship">
+            <option value="">— Select —</option>
+            <option>Ex-spouse</option>
+            <option>Co-parent</option>
+            <option>Current partner</option>
+            <option>Family member</option>
+            <option>Employer / coworker</option>
+            <option>Former employer</option>
+            <option>Other</option>
+          </select>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Do you have children in common with this person?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="children"> Yes</label>
+            <label class="check-item"><input type="radio" name="children"> No</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Are there active legal proceedings?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="legal"> Yes — ongoing</label>
+            <label class="check-item"><input type="radio" name="legal"> Yes — anticipated</label>
+            <label class="check-item"><input type="radio" name="legal"> No</label>
+            <label class="check-item"><input type="radio" name="legal"> Unsure</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="proceedings-detail">If yes, describe the nature and current status of proceedings</label>
+          <textarea id="proceedings-detail" rows="3" placeholder="Type of proceedings, current stage, upcoming dates..."></textarea>
+        </div>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label for="attorney-name">Attorney Name (if applicable)</label>
+          <input type="text" id="attorney-name" placeholder="Full name">
+        </div>
+        <div class="field-group">
+          <label for="attorney-contact">Attorney Contact</label>
+          <input type="text" id="attorney-contact" placeholder="Phone or email">
+        </div>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label for="therapist-name">Therapist / Advocate Name (if applicable)</label>
+          <input type="text" id="therapist-name" placeholder="Full name">
+        </div>
+        <div class="field-group">
+          <label for="therapist-contact">Therapist / Advocate Contact</label>
+          <input type="text" id="therapist-contact" placeholder="Phone or email">
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SECTION 4: DIGITAL PROFILE -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <span class="section-title">Digital &amp; Technical Profile</span>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Devices involved or potentially compromised (select all that apply)</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="checkbox"> iPhone / iPad</label>
+            <label class="check-item"><input type="checkbox"> Android phone / tablet</label>
+            <label class="check-item"><input type="checkbox"> Windows PC / laptop</label>
+            <label class="check-item"><input type="checkbox"> Mac</label>
+            <label class="check-item"><input type="checkbox"> Smart home devices</label>
+            <label class="check-item"><input type="checkbox"> Vehicle</label>
+            <label class="check-item"><input type="checkbox"> Other</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Accounts of concern (select all that apply)</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="checkbox"> Email</label>
+            <label class="check-item"><input type="checkbox"> Social media</label>
+            <label class="check-item"><input type="checkbox"> Cloud storage</label>
+            <label class="check-item"><input type="checkbox"> Banking / financial</label>
+            <label class="check-item"><input type="checkbox"> Children's accounts</label>
+            <label class="check-item"><input type="checkbox"> Shared family accounts</label>
+            <label class="check-item"><input type="checkbox"> Other</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Do you believe any devices, accounts, or communications may currently be monitored?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="monitoring"> Yes — confirmed</label>
+            <label class="check-item"><input type="radio" name="monitoring"> Yes — suspected</label>
+            <label class="check-item"><input type="radio" name="monitoring"> No</label>
+            <label class="check-item"><input type="radio" name="monitoring"> Unsure</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>How technically sophisticated is the other party?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="tech-sophistication"> Minimal — not tech-savvy</label>
+            <label class="check-item"><input type="radio" name="tech-sophistication"> Moderate</label>
+            <label class="check-item"><input type="radio" name="tech-sophistication"> High — tech professional</label>
+            <label class="check-item"><input type="radio" name="tech-sophistication"> Unknown</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Do you have digital records to preserve, organize, or present as evidence?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="records"> Yes</label>
+            <label class="check-item"><input type="radio" name="records"> No</label>
+            <label class="check-item"><input type="radio" name="records"> Unsure — need guidance</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="digital-concerns">Describe any specific digital concerns or incidents</label>
+          <textarea id="digital-concerns" rows="4" placeholder="Stalkerware suspicion, account takeover, document tampering, GPS tracking, unexpected account activity..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SECTION 5: SAFETY -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <span class="section-title">Safety Assessment</span>
+      </div>
+      <div class="note-box warning">
+        This section helps us understand the urgency of your situation and ensure we communicate with you safely. If you are in immediate danger, please contact emergency services first.
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Do you currently feel physically safe?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="safety"> Yes</label>
+            <label class="check-item"><input type="radio" name="safety"> No — I am in immediate danger</label>
+            <label class="check-item"><input type="radio" name="safety"> Situation is volatile but currently stable</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Are there any active protective or restraining orders?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="orders"> Yes — I have one against them</label>
+            <label class="check-item"><input type="radio" name="orders"> Yes — they have one against me</label>
+            <label class="check-item"><input type="radio" name="orders"> No</label>
+            <label class="check-item"><input type="radio" name="orders"> In process</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Is it safe to contact you at the information you provided above?</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="radio" name="safe-contact"> Yes</label>
+            <label class="check-item"><input type="radio" name="safe-contact"> Email only</label>
+            <label class="check-item"><input type="radio" name="safe-contact"> Phone only</label>
+            <label class="check-item"><input type="radio" name="safe-contact"> No — discuss safe contact in consultation</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="safe-comms">Anything we should know about how to communicate with you safely?</label>
+          <textarea id="safe-comms" rows="3" placeholder="Best times to call, whether to leave voicemails, whether messages should be generic, encrypted channels preferred, etc."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SECTION 6: GOALS -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <span class="section-title">Goals &amp; Desired Outcomes</span>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="success">What does a successful outcome look like for you?</label>
+          <textarea id="success" rows="3" placeholder="What would be different? What would you have that you don't have now?"></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="timeline">Timeline — is there a court date, deadline, or urgent event?</label>
+          <input type="text" id="timeline" placeholder="e.g., custody hearing on June 15, deposition in 3 weeks">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Services you're most interested in (select all that apply)</label>
+          <div class="checkbox-group">
+            <label class="check-item"><input type="checkbox"> Digital safety audit</label>
+            <label class="check-item"><input type="checkbox"> Evidence / records management</label>
+            <label class="check-item"><input type="checkbox"> Investigative research</label>
+            <label class="check-item"><input type="checkbox"> Tech development / tools</label>
+            <label class="check-item"><input type="checkbox"> Cybersecurity advisory</label>
+            <label class="check-item"><input type="checkbox"> Educational resources</label>
+            <label class="check-item"><input type="checkbox"> Ongoing advisory retainer</label>
+            <label class="check-item"><input type="checkbox"> One-time consultation</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="anything-else">Anything else we should know before your consultation?</label>
+          <textarea id="anything-else" rows="3" placeholder="Any context, concerns, or questions you'd like to raise upfront..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-divider"></div>
+
+    <!-- SECTION 7: ACKNOWLEDGMENT -->
+    <div class="section">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <span class="section-title">Acknowledgment &amp; Signature</span>
+      </div>
+      <div class="note-box">
+        By signing below, you acknowledge that this intake does not constitute legal advice, does not establish an attorney-client relationship, and does not guarantee services will be provided. All information is held in strict confidence.
+      </div>
+      <div class="sig-grid">
+        <div class="sig-field">
+          <label>Client Signature</label>
+          <input type="text" class="sig-line" placeholder="">
+        </div>
+        <div class="sig-field">
+          <label>Date</label>
+          <input type="date" class="sig-line" style="font-family:'DM Sans',sans-serif;font-size:0.9rem;">
+        </div>
+      </div>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submit-area">
+      <p class="submit-note">Questions before your consultation? Reach out at astamenos@gmail.com or (917) 420-3695. We look forward to speaking with you.</p>
+      <button class="btn-submit" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="doc-footer">
+      <span class="doc-footer-left">CONFIDENTIAL · CLIENT INTAKE · [YOUR FIRM NAME]</span>
+      <span class="doc-footer-right">Information held in strict confidence</span>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
