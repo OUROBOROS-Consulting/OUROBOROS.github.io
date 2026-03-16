@@ -40,98 +40,52 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 // The linearGradient fades from a bright head (top) to a dim tail (bottom),
 // which combines with the conic-gradient ::after for the travelling glow.
 
-(function () {
-  const halo = document.createElement('div');
-  halo.id = 'cursor-halo';
+const canvas  = document.getElementById('halo-canvas');
+const ctx     = canvas.getContext('2d');
+const cx = 100, cy = 100, r = 76;
+const STEPS   = 360;
+const DURATION = 3;     // seconds per revolution — adjust to taste
+const TAIL_DEG = 300;   // arc length in degrees
+const TIP_WIDTH = 6;    // max stroke width at the bright tip
+const GLOW_BLUR = 8;    // canvas shadowBlur at tip
 
-  halo.innerHTML = `
-    <svg class="ouroboros-svg"
-         viewBox="0 0 200 200"
-         xmlns="http://www.w3.org/2000/svg"
-         aria-hidden="true">
+const tailRad = (TAIL_DEG / 180) * Math.PI;
+let last = null;
+let offset = 0;
 
-      <defs>
-        <!-- Head-to-tail gradient: bright gold head fades to near-invisible tail -->
-        <linearGradient id="snakeGrad"
-                        gradientUnits="userSpaceOnUse"
-                        x1="100" y1="28"
-                        x2="100" y2="172">
-          <stop offset="0%"   stop-color="#c9a84c" stop-opacity="0.95"/>
-          <stop offset="35%"  stop-color="#c9a84c" stop-opacity="0.45"/>
-          <stop offset="75%"  stop-color="#c9a84c" stop-opacity="0.12"/>
-          <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.02"/>
-        </linearGradient>
+function drawHalo(ts) {
+  if (!last) last = ts;
+  const dt = (ts - last) / 1000;
+  last = ts;
+  offset = (offset + (360 / DURATION) * dt) % 360;
 
-        <!-- Scale pattern: subtle diamond hatching along the body -->
-        <pattern id="scalePattern"
-                 patternUnits="userSpaceOnUse"
-                 width="8" height="8"
-                 patternTransform="rotate(45)">
-          <rect width="4" height="4"
-                fill="rgba(201,168,76,0.08)"/>
-        </pattern>
+  ctx.clearRect(0, 0, 200, 200);
 
-        <!-- Mask so scales only appear on the snake stroke -->
-        <mask id="snakeMask">
-          <circle cx="100" cy="100" r="72"
-                  fill="none"
-                  stroke="white"
-                  stroke-width="7"
-                  stroke-dasharray="422 30"
-                  stroke-linecap="round"/>
-        </mask>
-      </defs>
+  for (let i = 0; i < STEPS; i++) {
+    const t          = i / STEPS;
+    const angleBase  = offset * (Math.PI / 180);
+    const startAngle = angleBase + (i / STEPS)       * tailRad;
+    const endAngle   = angleBase + ((i + 1) / STEPS) * tailRad;
 
-      <!-- Scale texture layer (masked to snake shape) -->
-      <rect width="200" height="200"
-            fill="url(#scalePattern)"
-            mask="url(#snakeMask)"
-            opacity="0.6"/>
+    const alpha     = Math.pow(t, 1.8);
+    const lineWidth = 0.4 + (TIP_WIDTH - 0.4) * Math.pow(t, 1.4);
 
-      <!-- Main snake body -->
-      <circle cx="100" cy="100" r="72"
-              fill="none"
-              stroke="url(#snakeGrad)"
-              stroke-width="5"
-              stroke-linecap="round"
-              stroke-dasharray="422 30"/>
+    ctx.beginPath();
+    ctx.arc(cx, cy, r, startAngle, endAngle);
+    ctx.strokeStyle = `rgba(201,168,76,${alpha.toFixed(3)})`;
+    ctx.lineWidth   = lineWidth;
+    ctx.shadowColor = `rgba(201,168,76,${(alpha * 0.8).toFixed(3)})`;
+    ctx.shadowBlur  = GLOW_BLUR * alpha;
+    ctx.stroke();
+  }
 
-      <!-- Head dot — sits at the top of the circle (12 o'clock) -->
-      <circle cx="100" cy="28"
-              r="4"
-              fill="#c9a84c"
-              opacity="0.9"/>
+  requestAnimationFrame(drawHalo);
+}
 
-      <!-- Eye — small dark dot on the head -->
-      <circle cx="100" cy="26"
-              r="1.2"
-              fill="#0d0d0d"/>
+// Cursor tracking (keep your existing logic)
+document.addEventListener('mousemove', (e) => {
+  const halo = document.getElementById('cursor-halo');
+  halo.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
+});
 
-    </svg>`;
-
-  document.body.appendChild(halo);
-
-  // ── Smooth lag follow ───────────────────────────────────────────────────────
-  let mouseX = 0, mouseY = 0;
-  let haloX  = 0, haloY  = 0;
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  // Hide until the mouse enters the page so it doesn't sit at 0,0 on load
-  halo.style.opacity = '0';
-  window.addEventListener('mousemove', function show() {
-    halo.style.opacity    = '1';
-    halo.style.transition = 'opacity 0.4s ease';
-    window.removeEventListener('mousemove', show);
-  }, { once: true });
-
-  (function animate() {
-    haloX += (mouseX - haloX) * 0.07;  // 0.07 = gentle lag
-    haloY += (mouseY - haloY) * 0.07;
-    halo.style.transform = `translate(${haloX}px, ${haloY}px)`;
-    requestAnimationFrame(animate);
-  })();
-})();
+requestAnimationFrame(drawHalo);
