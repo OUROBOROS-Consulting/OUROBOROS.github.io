@@ -1,0 +1,51 @@
+- year: 2024
+  months:
+    - month: Aug
+      events:
+        - title: Moved to Minneapolis
+          date: 8/1/2024
+          side: left
+          style: default
+    - month: Nov
+      events:
+        - title: T32 Fellowship Begins
+          date: 11/14/2024
+          side: right
+          style: gold
+
+- year: 2025
+  months:
+    - month: Jan
+      events:
+        - title: Bloomington Assault
+          date: 1/31/2025
+          side: left
+          style: ruby
+    - month: May
+      events:
+        - title: Meeting with Adviser
+          date: 5/12/2025
+          side: left
+          style: ruby
+    - month: Aug
+      events:
+        - title: Written Prelim
+          date: 8/15/2025
+          side: left
+          style: ruby
+        - title: Prelim Debrief
+          date: 8/26/2025
+          side: right
+          style: gold
+
+- year: 2026
+  months:
+    - month: Jan
+      events:
+      - title: Filed Grievance
+        date: 11/14/2023
+        side: left
+        style: gold
+        description: >
+          Submitted formal grievance via the
+          [union rep](https://example.com).
