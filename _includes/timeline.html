@@ -1,94 +1,50 @@
 <div class="timeline">
+  {% for year_block in site.data.timeline %}
 
-  <!-- ── 2024 ── -->
-  <div style="grid-column:1"></div>
-  <div class="year-marker"><span class="year-badge">2024</span></div>
-  <div style="grid-column:3"></div>
+    <!-- Year marker -->
+    <div style="grid-column:1"></div>
+    <div class="year-marker"><span class="year-badge">{{ year_block.year }}</span></div>
+    <div style="grid-column:3"></div>
 
-  <!-- Month: Aug -->
-  <div style="grid-column:1" class="month-spacer"></div>
-  <div class="month-label"><span class="month-pip">Aug</span></div>
-  <div style="grid-column:3" class="month-spacer"></div>
+    {% for month_block in year_block.months %}
 
-  <!-- Event: Moved to MN -->
-  <div class="tl-left has-event">
-    <div class="event">
-      <div class="event-title">Moved to Minneapolis</div>
-      <div class="event-date">8/1/2024</div>
-    </div>
-  </div>
-  <div class="tl-connector"><div class="dot"></div></div>
-  <div class="tl-right empty"></div>
+      <!-- Month marker -->
+      <div style="grid-column:1" class="month-spacer"></div>
+      <div class="month-label"><span class="month-pip">{{ month_block.month }}</span></div>
+      <div style="grid-column:3" class="month-spacer"></div>
 
-  <!-- Month: Nov -->
-  <div style="grid-column:1" class="month-spacer"></div>
-  <div class="month-label"><span class="month-pip">Nov</span></div>
-  <div style="grid-column:3" class="month-spacer"></div>
+      <!-- Events in this month -->
+      {% assign left_event  = month_block.events | where: "side", "left"  | first %}
+      {% assign right_event = month_block.events | where: "side", "right" | first %}
 
-  <!-- Event: Project started -->
-  <div class="tl-left empty"></div>
-  <div class="tl-connector"><div class="dot"></div></div>
-  <div class="tl-right has-event">
-    <div class="event gold">
-      <div class="event-title">T32 Fellowship Begins</div>
-      <div class="event-date">11/14/2024</div>
-    </div>
-  </div>
+      <div class="tl-left  {% if left_event  %}has-event{% else %}empty{% endif %}">
+        {% if left_event %}
+        <div class="event {{ left_event.style }}">
+          <div class="event-title">{{ left_event.title }}</div>
+          <div class="event-date">{{ left_event.date }}</div>
+          {% if left_event.description %}
+          <div class="event-desc">{{ left_event.description | markdownify }}</div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
 
-  <!-- ── 2025 ── -->
-  <div style="grid-column:1" class="month-spacer"></div>
-  <div class="year-marker"><span class="year-badge">2025</span></div>
-  <div style="grid-column:3" class="month-spacer"></div>
+      <div class="tl-connector"><div class="dot"></div></div>
 
-  <!-- Month: Jan -->
-  <div style="grid-column:1" class="month-spacer"></div>
-  <div class="month-label"><span class="month-pip">Jan</span></div>
-  <div style="grid-column:3" class="month-spacer"></div>
+      <div class="tl-right {% if right_event %}has-event{% else %}empty{% endif %}">
+        {% if right_event %}
+        <div class="event {{ right_event.style }}">
+          <div class="event-title">{{ right_event.title }}</div>
+          <div class="event-date">{{ right_event.date }}</div>
+          {% if right_event.description %}
+          <div class="event-desc">{{ right_event.description | markdownify }}</div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
 
-  <!-- Event: left side, red -->
-  <div class="tl-left has-event">
-    <div class="event red">
-      <div class="event-title">Something Critical Happened</div>
-      <div class="event-date">1/31/2025</div>
-    </div>
-  </div>
-  <div class="tl-connector"><div class="dot"></div></div>
-  <div class="tl-right empty"></div>
-
-  <!-- Month: Apr -->
-  <div style="grid-column:1" class="month-spacer"></div>
-  <div class="month-label"><span class="month-pip">Apr</span></div>
-  <div style="grid-column:3" class="month-spacer"></div>
-
-  <!-- Event: right side -->
-  <div class="tl-left empty"></div>
-  <div class="tl-connector"><div class="dot"></div></div>
-  <div class="tl-right has-event">
-    <div class="event">
-      <div class="event-title">Meeting with Adviser</div>
-      <div class="event-date">4/10/2025</div>
-    </div>
-  </div>
-
-  <!-- Month: Aug -->
-  <div style="grid-column:1" class="month-spacer"></div>
-  <div class="month-label"><span class="month-pip">Aug</span></div>
-  <div style="grid-column:3" class="month-spacer"></div>
-
-  <!-- Event: both sides same row -->
-  <div class="tl-left has-event">
-    <div class="event">
-      <div class="event-title">Written Prelim</div>
-      <div class="event-date">8/15/2025</div>
-    </div>
-  </div>
-  <div class="tl-connector"><div class="dot"></div></div>
-  <div class="tl-right has-event">
-    <div class="event gold">
-      <div class="event-title">Prelim Debrief</div>
-      <div class="event-date">8/26/2025</div>
-    </div>
-  </div>
+    {% endfor %}
+  {% endfor %}
 
   <!-- Axis tail -->
   <div style="grid-column:1; min-height:2rem;"></div>
