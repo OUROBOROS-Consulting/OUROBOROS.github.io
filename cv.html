@@ -8,94 +8,6 @@ layout: default
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>CV — Apostolos Stamenos, MS</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
-<!--<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  :root {
-    --bg: #0d0d0d; --bg2: #141414; --bg3: #1a1a1a;
-    --gold: #c9a84c; --gold-dim: #a8863a;
-    --text: #e8e2d9; --muted: #7a7269; --border: #2a2520;
-  }
-  html { scroll-behavior: smooth; }
-  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; font-weight: 300; line-height: 1.7; }
-
-  /* ── CV Header ── */
-  .cv-header { padding: 9rem 10vw 4rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 2rem; }
-  .cv-name { font-family: 'Playfair Display', serif; font-size: clamp(2.4rem, 5vw, 4rem); font-weight: 600; line-height: 1.05; }
-  .cv-name span { display: block; font-size: 0.7rem; font-family: 'Inter', sans-serif; letter-spacing: 0.3em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.8rem; font-weight: 300; }
-  .cv-contact { text-align: right; }
-  .cv-contact p { font-size: 0.82rem; color: var(--muted); line-height: 1.9; }
-  .cv-contact a { color: var(--gold); text-decoration: none; transition: opacity 0.2s; }
-  .cv-contact a:hover { opacity: 0.75; }
-  .cv-download { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1rem; padding: 0.6rem 1.4rem; border: 1px solid var(--gold); color: var(--gold); font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; text-decoration: none; transition: background 0.3s, color 0.3s; }
-  .cv-download:hover { background: var(--gold); color: var(--bg); }
-
-  /* ── CV Body layout ── */
-  .cv-body { display: grid; grid-template-columns: 200px 1fr; gap: 0; max-width: 1100px; margin: 0 auto; padding: 0 10vw 8rem; }
-
-  /* ── Section labels (left col) ── */
-  .cv-section-label { padding: 3rem 2rem 0 0; }
-  .cv-section-label p { font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); position: sticky; top: 6rem; }
-
-  /* ── Section content (right col) ── */
-  .cv-section-content { border-left: 1px solid var(--border); padding: 3rem 0 0 2.5rem; }
-
-  /* Summary */
-  .cv-summary { font-size: 0.93rem; color: var(--muted); line-height: 1.9; max-width: 620px; }
-
-  /* Expertise */
-  .expertise-row { display: grid; grid-template-columns: 140px 1fr; gap: 0.5rem 1.5rem; margin-bottom: 0.6rem; align-items: baseline; }
-  .expertise-key { font-size: 0.78rem; color: var(--text); font-weight: 500; }
-  .expertise-val { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
-
-  /* Experience entries */
-  .cv-entry { margin-bottom: 2.5rem; }
-  .cv-entry-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.3rem; }
-  .cv-entry-title { font-family: 'Playfair Display', serif; font-size: 1.05rem; font-weight: 400; }
-  .cv-entry-dates { font-size: 0.75rem; color: var(--gold); letter-spacing: 0.05em; white-space: nowrap; }
-  .cv-entry-org { font-size: 0.8rem; color: var(--muted); margin-bottom: 0.8rem; }
-  .cv-entry-org span { color: var(--text); }
-  .cv-bullets { list-style: none; padding: 0; }
-  .cv-bullets li { font-size: 0.85rem; color: var(--muted); line-height: 1.75; padding-left: 1.1rem; position: relative; margin-bottom: 0.3rem; }
-  .cv-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--gold); }
-
-  /* Education */
-  .cv-edu { margin-bottom: 1.5rem; }
-  .cv-edu-deg { font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 400; margin-bottom: 0.15rem; }
-  .cv-edu-inst { font-size: 0.82rem; color: var(--muted); }
-  .cv-edu-focus { font-size: 0.8rem; color: var(--muted); font-style: italic; margin-top: 0.2rem; }
-
-  /* Publications */
-  .cv-pub { font-size: 0.83rem; color: var(--muted); line-height: 1.75; margin-bottom: 1rem; padding-left: 1.4rem; position: relative; }
-  .cv-pub .ref { position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
-  .cv-pub a { color: var(--gold); text-decoration: none; border-bottom: 1px solid var(--gold-dim); transition: border-color 0.2s; }
-  .cv-pub a:hover { border-color: var(--gold); }
-
-  /* Awards */
-  .cv-award { display: grid; grid-template-columns: 130px 1fr; gap: 0.5rem 1.5rem; margin-bottom: 0.8rem; align-items: baseline; }
-  .cv-award-date { font-size: 0.75rem; color: var(--gold); }
-  .cv-award-body { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
-  .cv-award-body strong { color: var(--text); font-weight: 400; }
-
-  /* Dividers between sections */
-  .cv-section-content { border-bottom: 1px solid var(--border); padding-bottom: 0; }
-  .cv-row:last-child .cv-section-content { border-bottom: none; }
-
-  /* Grid rows */
-  .cv-row { display: contents; }
-
-  @media (max-width: 768px) {
-    nav { padding: 1.2rem 1.5rem; } .nav-links { gap: 1.5rem; }
-    .cv-header { padding: 8rem 6vw 3rem; flex-direction: column; align-items: flex-start; }
-    .cv-contact { text-align: left; }
-    .cv-body { grid-template-columns: 1fr; padding: 0 6vw 6rem; }
-    .cv-section-label { padding: 2.5rem 0 0.5rem; }
-    .cv-section-label p { position: static; }
-    .cv-section-content { border-left: none; border-top: 1px solid var(--border); padding: 1.5rem 0 0; }
-    .expertise-row { grid-template-columns: 1fr; gap: 0; }
-    .cv-award { grid-template-columns: 1fr; gap: 0; }
-    footer { padding: 3rem 6vw; flex-direction: column; align-items: flex-start; }
-  }
-</style>-->
 </head>
 <body>
 
@@ -116,91 +28,112 @@ layout: default
 </header>
 
 <div class="cv-body">
+
   <!-- Summary -->
   <div class="cv-row">
-   <div class="cv-section-label"><p>Summary</p></div>
-    <div class="card--formula">
-     <div class="card--formula__interior cv-section-content">
-      <p class="cv-summary">
-       Seasoned technology consultant with an MS in Statistics and 6+ years of using creative tech solutions to adress urgent, resource-constrained, but critical missions, including pandemic response and surviving antagonistic situations.
-       Led agency-wide system transitions for the national COVID response.
-       Track record of engineering FedRAMP-compliant ML and NLP solutions, translating vague policy requirements into production-grade data systems, and mentoring technical teams to deliver results at scale.
-       Passionate about assisting disadvantage people with their technology needs who are in challenging situations.
-      </p>
+    <div class="cv-section-label"><p>Summary</p></div>
+    <div class="cv-cards">
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <p class="cv-summary">
+            Seasoned technology consultant with an MS in Statistics and 6+ years of using creative tech solutions to address urgent, resource-constrained, but critical missions, including pandemic response and surviving antagonistic situations.
+            Led agency-wide system transitions for the national COVID response.
+            Track record of engineering FedRAMP-compliant ML and NLP solutions, translating vague policy requirements into production-grade data systems, and mentoring technical teams to deliver results at scale.
+            Passionate about assisting disadvantaged people with their technology needs who are in challenging situations.
+          </p>
+        </div>
+      </div>
     </div>
-   </div>
   </div>
 
-<!-- Expertise -->
-<div class="cv-row">
-  <div class="cv-section-label"><p>Expertise</p></div>
-  <div class="card--formula">
-    <div class="card--formula__interior cv-section-content">
-      <div class="expertise-row"><span class="expertise-key">Platforms & Tools</span><span class="expertise-val">Palantir Foundry, Git/GitHub, SQL, PySpark, ArcGIS Pro, FedRAMP-compliant cloud environments</span></div>
-      <div class="expertise-row"><span class="expertise-key">ML & AI</span><span class="expertise-val">Anomaly Detection, NLP, Bayesian Modeling, Causal Inference, Classification, Spatiotemporal Modeling, Dimensionality Reduction</span></div>
-      <div class="expertise-row"><span class="expertise-key">Languages</span><span class="expertise-val">Python (NumPy, SciPy, pandas), R/RStudio (tidyverse), C++, LaTeX</span></div>
-      <div class="expertise-row"><span class="expertise-key">Business Intel</span><span class="expertise-val">Data Visualization, Dashboard Development, Reproducible Workflows, Stakeholder Communication</span></div>
-      <div class="expertise-row"><span class="expertise-key">Leadership</span><span class="expertise-val">Cross-functional Collaboration, Technical Mentorship, Translating Policy Requirements into Data Solutions</span></div>
+  <!-- Expertise -->
+  <div class="cv-row">
+    <div class="cv-section-label"><p>Expertise</p></div>
+    <div class="cv-cards">
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="expertise-row"><span class="expertise-key">Platforms & Tools</span><span class="expertise-val">Palantir Foundry, Git/GitHub, SQL, PySpark, ArcGIS Pro, FedRAMP-compliant cloud environments</span></div>
+          <div class="expertise-row"><span class="expertise-key">ML & AI</span><span class="expertise-val">Anomaly Detection, NLP, Bayesian Modeling, Causal Inference, Classification, Spatiotemporal Modeling, Dimensionality Reduction</span></div>
+          <div class="expertise-row"><span class="expertise-key">Languages</span><span class="expertise-val">Python (NumPy, SciPy, pandas), R/RStudio (tidyverse), C++, LaTeX</span></div>
+          <div class="expertise-row"><span class="expertise-key">Business Intel</span><span class="expertise-val">Data Visualization, Dashboard Development, Reproducible Workflows, Stakeholder Communication</span></div>
+          <div class="expertise-row"><span class="expertise-key">Leadership</span><span class="expertise-val">Cross-functional Collaboration, Technical Mentorship, Translating Policy Requirements into Data Solutions</span></div>
+        </div>
+      </div>
     </div>
   </div>
-</div>
- 
+
   <!-- Experience -->
   <div class="cv-row">
     <div class="cv-section-label"><p>Experience</p></div>
-    <div class="cv-section-content" style="padding-bottom:1rem">
+    <div class="cv-cards">
 
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-title">Graduate Assistant</span>
-          <span class="cv-entry-dates">Aug 2025 – Present</span>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Graduate Assistant</span>
+              <span class="cv-entry-dates">Aug 2025 – Present</span>
+            </div>
+            <p class="cv-entry-org"><span>University of Minnesota School of Public Health</span> · Washington, D.C.</p>
+            <ul class="cv-bullets">
+              <li>Update online education material to ensure ADA-compliance.</li>
+              <li>Grade student assignments to assess biostatistical literacy.</li>
+              <li>Provide honest but kind feedback to students about where they went wrong.</li>
+            </ul>
+          </div>
         </div>
-        <p class="cv-entry-org"><span>University of Minnesota School of Public Health</span> · Washington, D.C.</p>
-        <ul class="cv-bullets">
-          <li>Update online education material to ensure ADA-compliance.</li>
-          <li>Grade student assignments to assess biostatistical literacy.</li>
-          <li>Provide honest but kind feedback to students about where they went wrong.</li>
-        </ul>
       </div>
 
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-title">Consultant & Instructor</span>
-          <span class="cv-entry-dates">Aug 2024 – Present</span>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Consultant & Instructor</span>
+              <span class="cv-entry-dates">Aug 2024 – Present</span>
+            </div>
+            <p class="cv-entry-org"><span>Self-Employed</span> · Minneapolis, MN</p>
+            <ul class="cv-bullets">
+              <li>Tech consulting (product ops, process design, tooling) for early-stage startups.</li>
+              <li>1:1 instruction in statistics, programming, and computer literacy for undergraduate, graduate, and adult learner students.</li>
+            </ul>
+          </div>
         </div>
-        <p class="cv-entry-org"><span>Self-Employed</span> · Minneapolis, MN</p>
-        <ul class="cv-bullets">
-          <li>Tech consulting (product ops, process design, tooling) for early-stage startups.</li>
-          <li>1:1 instruction in statistics, programming, and computer literacy for undergraduate, graduate, and adult learner students.</li>
-        </ul>
       </div>
 
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-title">IT Specialist / Data Consultant</span>
-          <span class="cv-entry-dates">Aug 2021 – Jul 2023</span>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">IT Specialist / Data Consultant</span>
+              <span class="cv-entry-dates">Aug 2021 – Jul 2023</span>
+            </div>
+            <p class="cv-entry-org"><span>U.S. Department of Health & Human Services</span> · Washington, D.C.</p>
+            <ul class="cv-bullets">
+              <li>Led agency-wide transition of mission-critical public health systems — HHS Protect and Vaccines.gov — from HHS to CDC and ASPR, ensuring zero-disruption data and operational handoff.</li>
+              <li>Designed and engineered a custom automation bridge for the Vaccines.gov service desk transition to CDC, resolving a critical gap in service continuity.</li>
+              <li>Built and deployed FedRAMP-compliant ML and NLP automation tooling within Palantir Foundry.</li>
+              <li>Engineered high-throughput data pipelines to ingest, harmonize, and standardize health data from disparate federal and state sources; deployed ML-driven anomaly detection on national hospital data.</li>
+              <li>Managed the full deployment lifecycle of Healthdata.gov and the HHS OCDO website.</li>
+              <li>Mentored and led a technical team of 11 interns in rigorous data practices, reporting dashboards, and professional development.</li>
+            </ul>
+          </div>
         </div>
-        <p class="cv-entry-org"><span>U.S. Department of Health & Human Services</span> · Washington, D.C.</p>
-        <ul class="cv-bullets">
-          <li>Led agency-wide transition of mission-critical public health systems — HHS Protect and Vaccines.gov — from HHS to CDC and ASPR, ensuring zero-disruption data and operational handoff.</li>
-          <li>Designed and engineered a custom automation bridge for the Vaccines.gov service desk transition to CDC, resolving a critical gap in service continuity.</li>
-          <li>Built and deployed FedRAMP-compliant ML and NLP automation tooling within Palantir Foundry.</li>
-          <li>Engineered high-throughput data pipelines to ingest, harmonize, and standardize health data from disparate federal and state sources; deployed ML-driven anomaly detection on national hospital data.</li>
-          <li>Managed the full deployment lifecycle of Healthdata.gov and the HHS OCDO website.</li>
-          <li>Mentored and led a technical team of 11 interns in rigorous data practices, reporting dashboards, and professional development.</li>
-        </ul>
       </div>
 
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-title">Data & Analytics Intern</span>
-          <span class="cv-entry-dates">Sep 2020 – Aug 2021</span>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Data & Analytics Intern</span>
+              <span class="cv-entry-dates">Sep 2020 – Aug 2021</span>
+            </div>
+            <p class="cv-entry-org"><span>U.S. Department of Health & Human Services</span> · Washington, D.C.</p>
+            <ul class="cv-bullets">
+              <li>Developed Python programs to integrate diverse health equity datasets with federal databases.</li>
+              <li>Generated data-driven recommendations that improved agency-wide data practices and communication of health results.</li>
+            </ul>
+          </div>
         </div>
-        <p class="cv-entry-org"><span>U.S. Department of Health & Human Services</span> · Washington, D.C.</p>
-        <ul class="cv-bullets">
-          <li>Developed Python programs to integrate diverse health equity datasets with federal databases.</li>
-          <li>Generated data-driven recommendations that improved agency-wide data practices and communication of health results.</li>
-        </ul>
       </div>
 
     </div>
@@ -209,50 +142,74 @@ layout: default
   <!-- Education -->
   <div class="cv-row">
     <div class="cv-section-label"><p>Education</p></div>
-    <div class="cv-section-content" style="padding-bottom:3rem">
-      <div class="cv-edu">
-        <p class="cv-edu-deg">Ph.D. in Biostatistics <span style="color:var(--muted);font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:300">— expected May 2028</span></p>
-        <p class="cv-edu-inst">University of Minnesota</p>
-        <p class="cv-edu-focus">Bayesian Models, Brain Imaging, Causal Inference, Psychopathology, Spatiotemporal Modeling</p>
+    <div class="cv-cards">
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-edu">
+            <p class="cv-edu-deg">Ph.D. in Biostatistics <span style="color:var(--muted);font-family:'Inter',sans-serif;font-size:0.82rem;font-weight:300">— expected May 2028</span></p>
+            <p class="cv-edu-inst">University of Minnesota</p>
+            <p class="cv-edu-focus">Bayesian Models, Brain Imaging, Causal Inference, Psychopathology, Spatiotemporal Modeling</p>
+          </div>
+        </div>
       </div>
-      <div class="cv-edu">
-        <p class="cv-edu-deg">Master of Statistics</p>
-        <p class="cv-edu-inst">North Carolina State University · August 2023</p>
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-edu">
+            <p class="cv-edu-deg">Master of Statistics</p>
+            <p class="cv-edu-inst">North Carolina State University · August 2023</p>
+          </div>
+        </div>
       </div>
-      <div class="cv-edu">
-        <p class="cv-edu-deg">Bachelor of Science, Economics</p>
-        <p class="cv-edu-inst">The Pennsylvania State University · May 2021</p>
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-edu">
+            <p class="cv-edu-deg">Bachelor of Science, Economics</p>
+            <p class="cv-edu-inst">The Pennsylvania State University · May 2021</p>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 
   <!-- Research -->
   <div class="cv-row">
     <div class="cv-section-label"><p>Research</p></div>
-    <div class="cv-section-content" style="padding-bottom:1rem">
+    <div class="cv-cards">
 
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-title">Bayesian Spatiotemporal Modeling of Neuroimaging Data</span>
-          <span class="cv-entry-dates">Jan 2025 – Dec 2025</span>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Bayesian Spatiotemporal Modeling of Neuroimaging Data</span>
+              <span class="cv-entry-dates">Jan 2025 – Dec 2025</span>
+            </div>
+            <p class="cv-entry-org"><span>Lead Researcher</span> · T32 Training Grant</p>
+            <ul class="cv-bullets">
+              <li>Developing a novel Bayesian ML method for modeling high-dimensional anatomical sensor data (MRI), accounting for complex spatiotemporal correlations.</li>
+              <li>Identifying outlier trajectories in pediatric brain development related to mental health conditions.</li>
+            </ul>
+          </div>
         </div>
-        <p class="cv-entry-org"><span>Lead Researcher</span> · T32 Training Grant</p>
-        <ul class="cv-bullets">
-          <li>Developing a novel Bayesian ML method for modeling high-dimensional anatomical sensor data (MRI), accounting for complex spatiotemporal correlations.</li>
-          <li>Identifying outlier trajectories in pediatric brain development related to mental health conditions.</li>
-        </ul>
       </div>
 
-      <div class="cv-entry">
-        <div class="cv-entry-header">
-          <span class="cv-entry-title">Bayesian Integrative Analysis of Multiomics Data</span>
-          <span class="cv-entry-dates">Sep 2023 – Dec 2024</span>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-entry">
+            <div class="cv-entry-header">
+              <span class="cv-entry-title">Bayesian Integrative Analysis of Multiomics Data</span>
+              <span class="cv-entry-dates">Sep 2023 – Dec 2024</span>
+            </div>
+            <p class="cv-entry-org"><span>Algorithm Lead</span> · T32 Training Grant</p>
+            <ul class="cv-bullets">
+              <li>Designed and optimized C++ code for a Metropolis-Hastings sampler for simultaneous inference on high-dimensional clinical and genomic datasets.</li>
+              <li>Built a multinomial ML classifier to diagnose pulmonary sarcoidosis using PCA-reduced patient protein data.</li>
+            </ul>
+          </div>
         </div>
-        <p class="cv-entry-org"><span>Algorithm Lead</span> · T32 Training Grant</p>
-        <ul class="cv-bullets">
-          <li>Designed and optimized C++ code for a Metropolis-Hastings sampler for simultaneous inference on high-dimensional clinical and genomic datasets.</li>
-          <li>Built a multinomial ML classifier to diagnose pulmonary sarcoidosis using PCA-reduced patient protein data.</li>
-        </ul>
       </div>
 
     </div>
@@ -261,33 +218,81 @@ layout: default
   <!-- Publications -->
   <div class="cv-row">
     <div class="cv-section-label"><p>Publications</p></div>
-    <div class="cv-section-content" style="padding-bottom:3rem">
-      <div class="cv-pub">
-        <span class="ref">[1]</span>
-        Stamenos, Apostolos. 2027. <em>OUROBOROS - A Survivor's Fieldguide to Antagonism, Trauma, and Institutional Betrayal.</em>
-        <a href="https://doi.org/10.1080/26941899.2025.2600125" target="_blank"></a>
+    <div class="cv-cards">
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-pub">
+            <span class="ref">[1]</span>
+            Stamenos, Apostolos. 2027. <em>OUROBOROS - A Survivor's Fieldguide to Antagonism, Trauma, and Institutional Betrayal.</em>
+          </div>
+        </div>
       </div>
-      <div class="cv-pub">
-        <span class="ref">[1]</span>
-        Neher, Aidan, Stamenos, Apostolos et al. Dec. 2026. "A Bayesian Integrative Mixed Modeling Framework for Analysis of the Multi-Site Adolescent Brain and Cognitive Development Study." <em>Data Science in Science</em> 5.1.
-        <a href="https://doi.org/10.1080/26941899.2025.2600125" target="_blank">DOI: 10.1080/26941899.2025.2600125</a>
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-pub">
+            <span class="ref">[2]</span>
+            Neher, Aidan, Stamenos, Apostolos et al. Dec. 2026. "A Bayesian Integrative Mixed Modeling Framework for Analysis of the Multi-Site Adolescent Brain and Cognitive Development Study." <em>Data Science in Science</em> 5.1.
+            <a href="https://doi.org/10.1080/26941899.2025.2600125" target="_blank">DOI: 10.1080/26941899.2025.2600125</a>
+          </div>
+        </div>
       </div>
-      <div class="cv-pub">
-        <span class="ref">[2]</span>
-        Kittle, Olivia J., […], Stamenos, Apostolos, et al. Sept. 2025. "Effects of Indoor Temperature, Relative Humidity, and Carbon Dioxide Conditions on Wean-to-Finish Swine Survivability." <em>Agriculture</em> 15.19.
-        <a href="https://doi.org/10.3390/agriculture15192050" target="_blank">DOI: 10.3390/agriculture15192050</a>
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-pub">
+            <span class="ref">[3]</span>
+            Kittle, Olivia J., […], Stamenos, Apostolos, et al. Sept. 2025. "Effects of Indoor Temperature, Relative Humidity, and Carbon Dioxide Conditions on Wean-to-Finish Swine Survivability." <em>Agriculture</em> 15.19.
+            <a href="https://doi.org/10.3390/agriculture15192050" target="_blank">DOI: 10.3390/agriculture15192050</a>
+          </div>
+        </div>
       </div>
+
     </div>
   </div>
 
   <!-- Awards -->
   <div class="cv-row">
     <div class="cv-section-label"><p>Awards</p></div>
-    <div class="cv-section-content" style="padding-bottom:3rem">
-      <div class="cv-award"><span class="cv-award-date">Sep 2023 – Aug 2025</span><span class="cv-award-body"><strong>National Research Service Award Fellow (NIH T32)</strong> — University of Minnesota, statistical genomics and biomedical research</span></div>
-      <div class="cv-award"><span class="cv-award-date">Aug 2023</span><span class="cv-award-body"><strong>Rookie of the Year Award</strong> — U.S. Department of Health & Human Services, OCIO</span></div>
-      <div class="cv-award"><span class="cv-award-date">Jul 2022</span><span class="cv-award-body"><strong>Employee of the Quarter Award</strong> — U.S. Department of Health & Human Services, OCIO</span></div>
-      <div class="cv-award"><span class="cv-award-date">May 2016</span><span class="cv-award-body"><strong>Exceptional Academic Assistance Award</strong> — Penn State Schuylkill Academic Resource Center</span></div>
+    <div class="cv-cards">
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-award">
+            <span class="cv-award-date">Sep 2023 – Aug 2025</span>
+            <span class="cv-award-body"><strong>National Research Service Award Fellow (NIH T32)</strong> — University of Minnesota, statistical genomics and biomedical research</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-award">
+            <span class="cv-award-date">Aug 2023</span>
+            <span class="cv-award-body"><strong>Rookie of the Year Award</strong> — U.S. Department of Health & Human Services, OCIO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-award">
+            <span class="cv-award-date">Jul 2022</span>
+            <span class="cv-award-body"><strong>Employee of the Quarter Award</strong> — U.S. Department of Health & Human Services, OCIO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="cv-award">
+            <span class="cv-award-date">May 2016</span>
+            <span class="cv-award-body"><strong>Exceptional Academic Assistance Award</strong> — Penn State Schuylkill Academic Resource Center</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 
