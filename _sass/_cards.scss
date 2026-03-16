@@ -195,3 +195,12 @@ $-inner:  calc(#{$-arc} - #{$-border});
     grid-template-columns: 1fr;
   }
 }
+
+// In _cards.scss or your CV stylesheet
+.cv-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 3rem 0 3rem 2.5rem;  // mirrors the old cv-section-content padding
+  border-left: 1px solid var(--border);
+}
