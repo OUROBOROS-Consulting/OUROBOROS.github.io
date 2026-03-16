@@ -73,13 +73,9 @@ nav {
   pointer-events: none;
   transform:      translateY(-6px);
   transition:     opacity 0.2s, transform 0.2s;
-
-  // Links inside the card interior
-  .card--formula__interior {
-    display:        flex;
-    flex-direction: column;
-    gap:            0;
-  }
+  display:        flex;
+  flex-direction: column;
+  gap:            3px;
 
   a {
     display:         block;
@@ -90,10 +86,8 @@ nav {
     color:           var(--muted);
     text-decoration: none;
     transition:      color 0.2s;
-    border-bottom:   1px solid var(--border);
 
-    &:last-child { border-bottom: none; }
-    &:hover      { color: var(--gold); }
+    &:hover { color: var(--gold); }
   }
 }
 
