@@ -97,6 +97,7 @@ if (canvas) {
   velY = velY * FRICTION + (mouseY - haloY) * LERP;
   haloX += velX;
   haloY += velY;
+  haloEl.style.transform = `translate(${haloX - 100}px, ${haloY - 100}px)`;  // ← missing
 
     requestAnimationFrame(drawHalo);
   }
