@@ -64,32 +64,47 @@ nav {
 }
 
 .nav-dropdown-menu {
-  position:   absolute;
-  top:        calc(100% + 1rem);
-  left:       50%;
-  transform:  translateX(-50%) translateY(-6px);
-  background: var(--bg2);
-  border:     1px solid var(--border);
-  min-width:  140px;
-  padding:    0.5rem 0;
-  opacity:    0;
-  visibility: hidden;
-  transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+  position:       absolute;
+  top:            calc(100% + 8px);
+  left:           0;
+  min-width:      180px;
+  z-index:        100;
+  opacity:        0;
+  pointer-events: none;
+  transform:      translateY(-6px);
+  transition:     opacity 0.2s, transform 0.2s;
+
+  // Links inside the card interior
+  .card--formula__interior {
+    display:        flex;
+    flex-direction: column;
+    gap:            0;
+  }
 
   a {
-    display:        block;
-    padding:        0.5rem 1.2rem;
-    font-size:      var(--label-size);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color:          var(--muted);
+    display:         block;
+    padding:         0.45rem 0;
+    font-size:       0.78rem;
+    letter-spacing:  0.12em;
+    text-transform:  uppercase;
+    color:           var(--muted);
     text-decoration: none;
-    transition:     color 0.3s, background 0.3s;
+    transition:      color 0.2s;
+    border-bottom:   1px solid var(--border);
 
-    &:hover {
-      color:      var(--gold);
-      background: var(--bg3);
-    }
+    &:last-child { border-bottom: none; }
+    &:hover      { color: var(--gold); }
+  }
+}
+
+.nav-dropdown {
+  position: relative;
+
+  &:hover .nav-dropdown-menu,
+  &:focus-within .nav-dropdown-menu {
+    opacity:        1;
+    pointer-events: auto;
+    transform:      translateY(0);
   }
 }
 
