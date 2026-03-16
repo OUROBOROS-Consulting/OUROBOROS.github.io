@@ -39,8 +39,11 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 // stroke-dasharray="422 30" draws 422px of snake with a 30px mouth gap.
 // The linearGradient fades from a bright head (top) to a dim tail (bottom),
 // which combines with the conic-gradient ::after for the travelling glow.
+document.addEventListener('DOMContentLoaded', () => {
+  const canvas = document.getElementById('halo-canvas');
+  if (!canvas) return;
 
-const canvas  = document.getElementById('halo-canvas');
+  const canvas  = document.getElementById('halo-canvas');
 const ctx     = canvas.getContext('2d');
 const cx = 100, cy = 100, r = 76;
 const STEPS   = 360;
@@ -89,3 +92,4 @@ document.addEventListener('mousemove', (e) => {
 });
 
 requestAnimationFrame(drawHalo);
+});
