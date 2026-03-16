@@ -1,9 +1,3 @@
-// ── Design tokens ─────────────────────────────────────────────────────────────
-// Add these to :root in _base.scss
-// --ruby: #c0504d;
-// --blue: #5b8db8;
-// --teal: #4a9e8e;
-
 // ── Outer container ───────────────────────────────────────────────────────────
 .timeline {
   position:              relative;
@@ -27,8 +21,8 @@
 .year-badge {
   font-family:    'JetBrains Mono', monospace;
   font-size:      1rem;
-  color:          var(--gold);
-  background:     var(--bg);
+  color:          var(--bg);
+  background:     var(--gold);
   border:         1px solid var(--gold-dim);
   padding:        0.2rem 0.6rem;
   letter-spacing: 0.1em;
@@ -139,7 +133,7 @@
   // Default marker: diamond
   &::before {
     content:   '◆';
-    font-size: 0.6rem;
+    font-size: 1rem;
     color:     var(--gold);
     line-height: 1;
   }
@@ -148,7 +142,7 @@
   // set data-marker in _includes/timeline.html based on YAML style field
   &[data-marker="check"]  { &::before { content: '✓'; color: var(--gold);  font-size: 0.75rem; } }
   &[data-marker="cross"]  { &::before { content: '✕'; color: var(--ruby);  font-size: 0.7rem;  } }
-  &[data-marker="arrow"]  { &::before { content: '➤'; color: var(--blue);  font-size: 0.6rem;  } }
+  &[data-marker="arrow"]  { &::before { content: '➤'; color: var(--emerald);  font-size: 0.6rem;  } }
   &[data-marker="circle"] { &::before { content: '●'; color: var(--muted); font-size: 0.55rem; } }
 }
 
@@ -158,12 +152,12 @@
   // Layout
   background:  var(--bg3);
   padding:     0.6rem 0.9rem;
-  max-width:   200px;
+  max-width:   500px;
   font-size:   0.75rem;
   line-height: 1.4;
 
   // Border & hover — base card behaviour
-  border:     1px solid var(--border);
+  border:     3px solid var(--border);
   position:   relative;
   overflow:   hidden;
   transition: border-color 0.3s, transform 0.3s;
@@ -231,14 +225,14 @@
   .event-title { color: var(--gold); }
 }
 
-.event.blue {
-  border-color: var(--blue);
-  .event-title { color: var(--blue); }
+.event.emerald {
+  border-color: var(--emerald);
+  .event-title { color: var(--emerald); }
 }
 
-.event.teal {
-  border-color: var(--teal);
-  .event-title { color: var(--teal); }
+.event.sapphire {
+  border-color: var(--sapphire);
+  .event-title { color: var(--sapphire); }
 }
 
 // ── Interval bands ────────────────────────────────────────────────────────────
