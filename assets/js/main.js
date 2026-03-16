@@ -44,7 +44,7 @@ if (canvas) {
   const TAIL_DEG  = 300;   // arc length in degrees
   const TIP_WIDTH = 6;     // max stroke width at tip
   const GLOW_BLUR = 8;     // shadowBlur at tip
-  const LERP      = 0.04;  // acceleration toward cursor
+  const LERP      = 0.01;  // acceleration toward cursor
   const FRICTION  = 0.85;  // momentum carry-over (0=instant stop, 1=never stops)
 
   const tailRad = (TAIL_DEG / 180) * Math.PI;
