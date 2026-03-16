@@ -69,6 +69,17 @@ if (canvas) {
     const dt = (ts - last) / 1000;
     last = ts;
 
+    // Distance between halo and cursor
+    const dist  = Math.sqrt((mouseX - haloX) ** 2 + (mouseY - haloY) ** 2);
+
+    // 0 when far away, 1 when settled — tune the divisor to taste
+    // 80 = starts spinning when within 80px of cursor
+    const settled = Math.max(0, 1 - dist / 80);
+
+    // Spin only when settled
+    offset = (offset + (360 / DURATION) * dt * settled) % 360;
+
+
     // Spin the arc
     offset = (offset + (360 / DURATION) * dt) % 360;
 
