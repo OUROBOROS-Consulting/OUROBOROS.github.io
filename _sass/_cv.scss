@@ -143,13 +143,6 @@
   font-weight: 400;
 }
 
-.cv-entry-dates {
-  font-size:      0.75rem;
-  color:          var(--gold);
-  letter-spacing: 0.05em;
-  white-space:    nowrap;
-}
-
 .cv-entry-org {
   font-size:     0.8rem;
   color:         var(--muted);
@@ -212,13 +205,6 @@
   padding-left:  1.4rem;
   position:      relative;
 
-  .ref {
-    position:  absolute;
-    left:      0;
-    color:     var(--gold);
-    font-size: 0.75rem;
-  }
-
   a {
     color:           var(--gold);
     text-decoration: none;
@@ -236,11 +222,6 @@
   gap:                   0.5rem 1.5rem;
   margin-bottom:         0.8rem;
   align-items:           baseline;
-}
-
-.cv-award-date {
-  font-size: 0.75rem;
-  color:     var(--gold);
 }
 
 .cv-award-body {
@@ -269,12 +250,6 @@
     padding:               0 6vw 6rem;
   }
 
-  .cv-section-label {
-    padding: 2.5rem 0 0.5rem;
-
-    p { position: static; }
-  }
-
   .cv-section-content {
     border-left: none;
     border-top:  1px solid var(--border);
@@ -283,4 +258,12 @@
 
   .expertise-row { grid-template-columns: 1fr; gap: 0; }
   .cv-award      { grid-template-columns: 1fr; gap: 0; }
+}
+
+.cv-section-label p,
+.cv-entry-dates,
+.cv-award-date,
+.cv-pub .ref,
+.card-tag {
+  font-size: var(--label-size);
 }
