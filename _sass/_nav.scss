@@ -15,7 +15,7 @@ nav {
 
 .nav-logo {
   font-family:    'Playfair Display', serif;
-  font-size:      1.1rem;
+  font-size:      1.5rem;
   letter-spacing: 0.05em;
   color:          var(--gold);
   text-decoration: none;
@@ -28,7 +28,7 @@ nav {
   a {
     color:          var(--muted);
     text-decoration: none;
-    font-size:      0.82rem;
+    font-size:      1.0rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     transition:     color 0.3s;
@@ -53,7 +53,7 @@ nav {
   border:         none;
   color:          var(--muted);
   font-family:    'Inter', sans-serif;
-  font-size:      0.82rem;
+  ze:      0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor:         pointer;
@@ -79,12 +79,12 @@ nav {
   a {
     display:        block;
     padding:        0.5rem 1.2rem;
-    font-size:      0.78rem;
+    ze:      0.78rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color:          var(--muted);
     text-decoration: none;
-    transition:     color 0.2s, background 0.2s;
+    transition:     color 0.3s, background 0.3s;
 
     &:hover {
       color:      var(--gold);
