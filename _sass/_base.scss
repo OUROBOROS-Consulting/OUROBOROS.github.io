@@ -141,70 +141,12 @@ body::before {
   left:           -100px;
   width:          200px;
   height:         200px;
-  border-radius:  50%;
   pointer-events: none;
   z-index:        9999;
   will-change:    transform;
 
-  // Soft glow — stays centered, doesn't rotate
-&::before {
-  content:       '';
-  position:      absolute;
-  inset:         0;
-  border-radius: 50%;
-  background:    radial-gradient(
-                   circle,
-                   transparent 0%,
-                   transparent 30%,
-                   rgba(201, 168, 76, 0.14) 40%,
-                   transparent 65%
-                 );
-}
-
-  // Swirl — rotates on top of the glow
-&::after {
-  content:       '';
-  position:      absolute;
-  inset:         0;
-  border-radius: 50%;
-  background:    conic-gradient(
-                   transparent 0deg,
-                   rgba(201, 168, 76, 0.6) 8deg,   // bright peak
-                   transparent 20deg,               // tail fade
-                   transparent 360deg
-                 );
-  // Mask punches out everything except the ring band,
-  // so the spot only appears at the circumference
-  mask:          radial-gradient(
-                   circle,
-                   transparent 0%,
-                   transparent 30%,
-                   black       40%,
-                   transparent 65%
-                 );
-  -webkit-mask:  radial-gradient(
-                   circle,
-                   transparent 0%,
-                   transparent 30%,
-                   black       40%,
-                   transparent 65%
-                 );
-  animation:     halo-orbit 4s linear infinite;
-  filter:        blur(5px);
-}
-}
-
-
-.ouroboros-svg {
-  position:         absolute;
-  inset:            0;
-  animation:        halo-orbit 10s linear infinite;
-  filter:           drop-shadow(0 0 3px rgba(201, 168, 76, 0.55));
-  transform-origin: center;   // ← add this
-  transform-box:    fill-box; // ← and this
-}
-
-@keyframes halo-orbit {
-  from { transform: rotate(0deg); }
-  to   { transform: rotate(360deg); }
+  canvas {
+    position: absolute;
+    inset:    0;
+  }
 }
