@@ -12,14 +12,11 @@
   
 <body>
   {% include nav.html %}
-
   {{ content }}
-
   {% include footer.html %}
-
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
   <div id="cursor-halo">
-  <canvas id="halo-canvas" width="200" height="200"></canvas>
-</div>
+    <canvas id="halo-canvas" width="200" height="200"></canvas>
+  </div>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
