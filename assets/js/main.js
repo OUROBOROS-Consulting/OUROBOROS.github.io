@@ -79,10 +79,6 @@ if (canvas) {
     // Spin only when settled
     offset = (offset + (360 / DURATION) * dt * settled) % 360;
 
-
-    // Spin the arc
-    offset = (offset + (360 / DURATION) * dt) % 360;
-
     ctx.clearRect(0, 0, 200, 200);
 
     for (let i = 0; i < STEPS; i++) {
