@@ -10,7 +10,7 @@
   display:               grid;
   grid-template-columns: 1fr 48px 1fr;
   column-gap:            0;
-  max-width:             860px;
+  max-width:             1600px;
   margin:                0 auto;
 }
 
@@ -26,7 +26,7 @@
 
 .year-badge {
   font-family:    'JetBrains Mono', monospace;
-  font-size:      0.7rem;
+  font-size:      1rem;
   color:          var(--gold);
   background:     var(--bg);
   border:         1px solid var(--gold-dim);
@@ -254,8 +254,8 @@
   opacity:      0.45;
   position:     relative;
 
-  &.blue { background: var(--blue); }
-  &.teal { background: var(--teal); }
+  &.sapphire { background: var(--sapphire); }
+  &.emerald { background: var(--emerald); }
   &.gold { background: var(--gold); }
   &.ruby { background: var(--ruby); }
 }
