@@ -33,23 +33,20 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 // ── Cursor halo ───────────────────────────────────────────────────────────────
 const canvas = document.getElementById('halo-canvas');
 if (canvas) {
-  const ctx = canvas.getContext('2d');
+  const ctx    = canvas.getContext('2d');
   const haloEl = document.getElementById('cursor-halo');
 
-  const cx       = 100;
-  const cy       = 100;
-  const r        = 76;
-  const STEPS    = 360;
-  const DURATION = 3;    // seconds per revolution
-  const TAIL_DEG = 300;  // arc length in degrees
-  const TIP_WIDTH = 6;   // max stroke width at tip
-  const GLOW_BLUR = 8;   // shadowBlur at tip
-  const LERP     = 0.08; // 0 = never follows, 1 = instant
+  const cx        = 100;
+  const cy        = 100;
+  const r         = 76;
+  const STEPS     = 360;
+  const DURATION  = 3;     // seconds per revolution
+  const TAIL_DEG  = 300;   // arc length in degrees
+  const TIP_WIDTH = 6;     // max stroke width at tip
+  const GLOW_BLUR = 8;     // shadowBlur at tip
+  const LERP      = 0.04;  // acceleration toward cursor
+  const FRICTION  = 0.85;  // momentum carry-over (0=instant stop, 1=never stops)
 
-  let velX = 0;
-  let velY = 0;
-  const FRICTION = 0.5
-  
   const tailRad = (TAIL_DEG / 180) * Math.PI;
 
   let last   = null;
@@ -59,6 +56,8 @@ if (canvas) {
   let mouseY = window.innerHeight / 2;
   let haloX  = mouseX;
   let haloY  = mouseY;
+  let velX   = 0;
+  let velY   = 0;
 
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
@@ -70,6 +69,7 @@ if (canvas) {
     const dt = (ts - last) / 1000;
     last = ts;
 
+    // Spin the arc
     offset = (offset + (360 / DURATION) * dt) % 360;
 
     ctx.clearRect(0, 0, 200, 200);
@@ -92,12 +92,12 @@ if (canvas) {
       ctx.stroke();
     }
 
-  // Momentum-based lerp
-  velX = velX * FRICTION + (mouseX - haloX) * LERP;
-  velY = velY * FRICTION + (mouseY - haloY) * LERP;
-  haloX += velX;
-  haloY += velY;
-  haloEl.style.transform = `translate(${haloX - 100}px, ${haloY - 100}px)`;  // ← missing
+    // Move halo toward cursor with momentum
+    velX   = velX * FRICTION + (mouseX - haloX) * LERP;
+    velY   = velY * FRICTION + (mouseY - haloY) * LERP;
+    haloX += velX;
+    haloY += velY;
+    haloEl.style.transform = `translate(${haloX - 100}px, ${haloY - 100}px)`;
 
     requestAnimationFrame(drawHalo);
   }
