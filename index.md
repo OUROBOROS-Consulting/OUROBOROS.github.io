@@ -42,5 +42,5 @@ github: "https://github.com/astamenos/"
 tutor: "https://www.wyzant.com/refer/tutor/86925781?utm_source=TREF&utm_campaign=GI&utm_content=TProfile&utm_medium=link"
 linkedin: "https://www.linkedin.com/in/astamenos/"
 orcid: "https://orcid.org/0009-0008-4181-7080"
-contact: ""
+contact: "/intake"
 ---
