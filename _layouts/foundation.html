@@ -97,13 +97,17 @@ layout: default
       <p>{{ section.heading }}</p>
     </div>
     <div class="svc-section-content">
-      {% if section.body_paragraphs %}
-        {% for paragraph in section.body_paragraphs %}
-          <p>{{ paragraph }}</p>
-        {% endfor %}
-      {% elsif section.body %}
-        <p>{{ section.body }}</p>
-      {% endif %}
+         <div class="card--formula">
+           <div class="card--formula__interior">
+               {% if section.body_paragraphs %}
+               {% for paragraph in section.body_paragraphs %}
+                    <p>{{ paragraph }}</p>
+               {% endfor %}
+               {% elsif section.body %}
+                    <p>{{ section.body }}</p>
+               {% endif %}
+          </div>
+      </div>
     </div>
   </section>
   {% endfor %}
