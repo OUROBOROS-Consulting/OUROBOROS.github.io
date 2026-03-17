@@ -1,6 +1,7 @@
 <nav>
   <a class="nav-logo" href="{{ '/' | relative_url }}">OUROBOROS Consulting</a>
   <div class="nav-links">
+
     {% for item in site.data.nav %}
     <div class="nav-dropdown">
       <div class="card--formula">
@@ -8,8 +9,6 @@
           <button class="nav-dropdown-toggle">{{ item.title }}</button>
         </div>
       </div>
-      
-      <!-- Dropdown -->
       <div class="nav-dropdown-menu">
         {% for child in item.children %}
         <div class="card--formula">
@@ -22,11 +21,14 @@
     </div>
     {% endfor %}
 
-    <!-- Contact -->
-    <div class="card--formula">
-      <div class="card--formula__interior">
-        <a href="{{ site.email | prepend: 'mailto:' }}">Contact</a>
+    <!-- Contact — same wrapper, no dropdown menu -->
+    <div class="nav-dropdown">
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <a href="{{ site.email | prepend: 'mailto:' }}">Contact</a>
+        </div>
       </div>
     </div>
+
   </div>
 </nav>
