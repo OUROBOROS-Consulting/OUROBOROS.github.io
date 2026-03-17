@@ -28,14 +28,6 @@ layout: default
     </div>
   </div>
 
-    <!-- Left column: all text elements grouped together -->
-  <!--<div class="hero-text">
-    <p class="hero-eyebrow">{{ page.eyebrow }}</p>
-    <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
-    <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
-    <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
-  </div>-->
-
   <!-- Right column: portrait -->
   {% if page.headshot %}
   <div class="hero-portrait">
@@ -69,16 +61,20 @@ layout: default
     <div class="svc-section-label">
       <p>What's Included</p>
     </div>
-    <div class="svc-section-content svc-included">
-      {% for item in page.included %}
-      <div class="svc-item">
-        <span class="svc-item-marker">◇</span>
-        <div>
-          <p class="svc-item-title">{{ item.title }}</p>
-          <p class="svc-item-desc">{{ item.description }}</p>
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <div class="svc-section-content svc-included">
+          {% for item in page.included %}
+          <div class="svc-item">
+            <span class="svc-item-marker">◇</span>
+            <div>
+              <p class="svc-item-title">{{ item.title }}</p>
+              <p class="svc-item-desc">{{ item.description }}</p>
+            </div>
+          </div>
+          {% endfor %}
         </div>
       </div>
-      {% endfor %}
     </div>
   </section>
   {% endif %}
@@ -91,14 +87,18 @@ layout: default
     </div>
     <div class="svc-section-content">
       {% for tier in page.pricing %}
-      <div class="svc-pricing-tier">
-        <div class="svc-pricing-header">
-          <span class="svc-pricing-name">{{ tier.name }}</span>
-          <span class="svc-pricing-rate">{{ tier.rate }}</span>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <div class="svc-pricing-tier">
+            <div class="svc-pricing-header">
+              <span class="svc-pricing-name">{{ tier.name }}</span>
+              <span class="svc-pricing-rate">{{ tier.rate }}</span>
+            </div>
+            {% if tier.notes %}
+            <p class="svc-pricing-notes">{{ tier.notes }}</p>
+            {% endif %}
+          </div>
         </div>
-        {% if tier.notes %}
-        <p class="svc-pricing-notes">{{ tier.notes }}</p>
-        {% endif %}
       </div>
       {% endfor %}
     </div>
