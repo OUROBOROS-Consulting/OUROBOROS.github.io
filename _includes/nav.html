@@ -3,7 +3,13 @@
   <div class="nav-links">
     {% for item in site.data.nav %}
     <div class="nav-dropdown">
-      <button class="nav-dropdown-toggle">{{ item.title }}</button>
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <button class="nav-dropdown-toggle">{{ item.title }}</button>
+        </div>
+      </div>
+      
+      <!-- Dropdown -->
       <div class="nav-dropdown-menu">
         {% for child in item.children %}
         <div class="card--formula">
@@ -16,6 +22,7 @@
     </div>
     {% endfor %}
 
+    <!-- Contact -->
     <div class="card--formula">
       <div class="card--formula__interior">
         <a href="{{ site.email | prepend: 'mailto:' }}">Contact</a>
