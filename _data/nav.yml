@@ -1,13 +1,13 @@
 - title: About
   children:
-    - title: Perils
-      url: /perils
-    - title: Feedback Loops
-      url: /cybernetics
+    # - title: Perils
+    #   url: /perils
     - title: Mission
-      url: /mission
-    - title: Values
-      url: /values
+      url: /cybernetics
+    # - title: Mission
+    #   url: /mission
+    # - title: Values
+    #   url: /values
     - title: Survival
       url: /survival
     - title: Interests
@@ -17,13 +17,13 @@
 
 - title: Services
   children:
-    - title: Consulting
+    - title: Bespoke Technology Solutions
       url: /services/consulting/
 #    - title: Development
 #      url: /services/dev/
-    - title: Investigative
+    - title: Investigative Services
       url: /services/investigative/
-    - title: Tutoring
+    - title: Education Services
       url: /services/tutoring/
     - title: Advocacy
       url: /services/advocacy/
@@ -45,7 +45,5 @@
       url: /resources/legal/
     - title: Scholarly
       url: /resources/scholarly/
-    - title: Musical
-      url: /resources/musical/
-
-      
+    # - title: Musical
+    #   url: /resources/musical/
