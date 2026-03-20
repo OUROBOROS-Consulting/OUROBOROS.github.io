@@ -1,0 +1,169 @@
+---
+layout: default
+---
+
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-text">
+    <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+    <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
+    <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+    <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
+  </div>
+
+  {% if page.headshot %}
+  <div class="hero-portrait">
+    <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}"/>
+  </div>
+  {% endif %}
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── About / Stats ──────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="about-header">
+    <p class="section-label">By the Numbers</p>
+    <h2 class="about-heading">{{ page.about_heading }}</h2>
+  </div>
+  <div class="stats-grid">
+
+    {% if page.stats.years_experience %}
+    <div class="stat">
+      <span class="stat-value">{{ page.stats.years_experience }}</span>
+      <span class="stat-label">Years of Experience</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.publications %}
+    <div class="stat">
+      <span class="stat-value">{{ page.stats.publications }}</span>
+      <span class="stat-label">Publications &amp; Papers</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.students_tutored %}
+    <div class="stat">
+      <span class="stat-value">{{ page.stats.students_tutored }}</span>
+      <span class="stat-label">Students Tutored</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.clients_consulted %}
+    <div class="stat">
+      <span class="stat-value">{{ page.stats.clients_consulted }}</span>
+      <span class="stat-label">Clients Consulted</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.agencies %}
+    <div class="stat">
+      <span class="stat-value">{{ page.stats.agencies }}</span>
+      <span class="stat-label">Agencies &amp; Orgs</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.phd_program %}
+    <div class="stat">
+      <span class="stat-value">{{ page.stats.phd_program }}</span>
+      <span class="stat-label">PhD Program</span>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- ── Values ─────────────────────────────────────────────────────────────── -->
+<section id="values">
+  <div class="testimonials-header">
+    <div>
+      <p class="section-label">What I Live By</p>
+      <h2 class="testimonials-heading">Values</h2>
+    </div>
+  </div>
+  <div class="testimonials-grid">
+    {% for val in site.data.values %}
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <span class="stat-value">{{ val.title | markdownify }}</span>
+        <p class="card-desc">{{ val.description | markdownify }}</p>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── Services / Expertise ───────────────────────────────────────────────── -->
+<section id="services">
+  <div class="work-header">
+    <div>
+      <p class="section-label">What I Offer</p>
+      <h2 class="work-heading">Expertise</h2>
+    </div>
+  </div>
+  
+  <div class="testimonials-grid">
+    {% for service in site.services %}
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <h3 class="card-title">{{ service.title }}</h3>
+        <p class="card-desc">{{ service.description }}</p>
+        <a href="{{ service.url }}" class="card-link">Learn More →</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── Work ───────────────────────────────────────────────────────────────── -->
+<section id="work">
+  <div class="work-header">
+    <div>
+      <p class="section-label">Selected Work</p>
+      <h2 class="work-heading">Projects &amp; Writing</h2>
+    </div>
+    <span class="work-count">{{ site.projects.size }} pieces</span>
+  </div>
+  
+  <div class="testimonials-grid">
+    {% for project in site.projects %}
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <p class="card-tag">{{ project.tag }}</p>
+        <h3 class="card-title">{{ project.title }}</h3>
+        <p class="card-desc">{{ project.description }}</p>
+        <a href="{{ project.url }}" class="card-link">Read More →</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── Testimonials ───────────────────────────────────────────────────────── -->
+<section id="testimonials">
+  <div class="testimonials-header">
+    <div>
+      <p class="section-label">What the Greats Say About Me</p>
+      <h2 class="testimonials-heading">Testimonials</h2>
+      <span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>
+    </div>
+  </div>
+  
+  <div class="testimonials-grid">
+    {% for ref in site.data.testimonials %}
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <p class="card-tag">{{ ref.title | markdownify }}</p>
+        <h3 class="card-title">{{ project.title }}</h3>
+        <blockquote>
+          <p class="card-desc">{{ ref.description | markdownify }}</p>
+          <cite>— {{ ref.reference }}</cite>
+        </blockquote>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

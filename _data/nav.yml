@@ -1,0 +1,51 @@
+- title: About
+  children:
+    - title: Perils
+      url: /perils
+    - title: Feedback Loops
+      url: /cybernetics
+    - title: Mission
+      url: /mission
+    - title: Values
+      url: /values
+    - title: Survival
+      url: /survival
+    - title: Interests
+      url: /interests
+    - title: CV
+      url: /cv
+
+- title: Services
+  children:
+    - title: Consulting
+      url: /services/consulting/
+#    - title: Development
+#      url: /services/dev/
+    - title: Investigative
+      url: /services/investigative/
+    - title: Tutoring
+      url: /services/tutoring/
+    - title: Advocacy
+      url: /services/advocacy/
+      
+- title: Projects
+  children:
+    - title: Papers
+      url: /writing/papers/
+    - title: Books
+      url: /writing/books/
+    - title: Essays
+      url: /writing/essays/
+    - title: Posts
+      url: /writing/posts/
+      
+- title: Resources
+  children:
+    - title: Legal
+      url: /resources/legal/
+    - title: Scholarly
+      url: /resources/scholarly/
+    - title: Musical
+      url: /resources/musical/
+
+      

@@ -1,8 +1,28 @@
-title: Abandon All Hope, Ye Who Enter
-#theme: jekyll-theme-midnight
-url: https://astamenos.github.io
-#relative_permalinks: true
+title: OUROBOROS
+author: Apostolos Stamenos
+email: astamenos@gmail.com
+tutoring_url: https://www.wyzant.com/refer/tutor/86925781/?utm_source=TREF&utm_campaign=iphone&utm_content=tutorapp&utm_medium=share
+github_url: https://github.com/astamenos
+linkedin_url: https://www.linkedin.com/in/apostolos-stamenos
+url: "https://astamenos.github.io"
 
+collections:
+  services:
+    output: true
+    permalink: /services/:slug/
+  essays:
+    output: true
+    permalink: /essays/:slug/
+  projects:
+    output: true
+    permalink: /projects/:slug/
+  notes:
+    output: true
+    permalink: /notes/:slug/
+  linkedin:
+  output: true
+  permalink: /posts/:year/:slug/
+  
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]
 markdown: kramdown
