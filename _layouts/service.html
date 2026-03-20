@@ -55,6 +55,53 @@ layout: default
   </section>
   {% endif %}
 
+  {% if page.specializations %}
+  <section class="svc-section">
+    <div class="svc-section-label">
+      <p>Specialties</p>
+    </div>
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <div class="svc-section-content svc-included">
+          {% for item in page.specializations %}
+          <div class="svc-item">
+            <span class="svc-item-marker">◇</span>
+            <div>
+              <p class="svc-item-title">{{ item.title }}</p>
+              <p class="svc-item-desc">{{ item.description }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+  
+  <!-- Policies -->
+  {% if page.policies %}
+  <section class="svc-section">
+    <div class="svc-section-label">
+      <p>Policies</p>
+    </div>
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <div class="svc-section-content svc-included">
+          {% for item in page.policies %}
+          <div class="svc-item">
+            <span class="svc-item-marker">◇</span>
+            <div>
+              <p class="svc-item-title">{{ item.title }}</p>
+              <p class="svc-item-desc">{{ item.description }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
   <!-- What's included -->
   {% if page.included %}
   <section class="svc-section">
