@@ -1,0 +1,54 @@
+<div class="timeline">
+  {% for year_block in site.data.timeline %}
+
+    <!-- Year marker -->
+    <div style="grid-column:1"></div>
+    <div class="year-marker"><span class="year-badge">{{ year_block.year }}</span></div>
+    <div style="grid-column:3"></div>
+
+    {% for month_block in year_block.months %}
+
+      <!-- Month marker -->
+      <div style="grid-column:1" class="month-spacer"></div>
+      <div class="month-label"><span class="month-pip">{{ month_block.month }}</span></div>
+      <div style="grid-column:3" class="month-spacer"></div>
+
+      <!-- Events in this month -->
+      {% assign left_event  = month_block.events | where: "side", "left"  | first %}
+      {% assign right_event = month_block.events | where: "side", "right" | first %}
+
+      <div class="tl-left  {% if left_event  %}has-event{% else %}empty{% endif %}">
+        {% if left_event %}
+        <div class="event {{ left_event.style }}">
+          <div class="event-title">{{ left_event.title }}</div>
+          <div class="event-date">{{ left_event.date }}</div>
+          {% if left_event.description %}
+          <div class="event-desc">{{ left_event.description | markdownify }}</div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+      <div class="tl-connector"><div class="dot"></div></div>
+
+      <div class="tl-right {% if right_event %}has-event{% else %}empty{% endif %}">
+        {% if right_event %}
+        <div class="event {{ right_event.style }}">
+          <div class="event-title">{{ right_event.title }}</div>
+          <div class="event-date">{{ right_event.date }}</div>
+          {% if right_event.description %}
+          <div class="event-desc">{{ right_event.description | markdownify }}</div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+
+    {% endfor %}
+  {% endfor %}
+
+  <!-- Axis tail -->
+  <div style="grid-column:1; min-height:2rem;"></div>
+  <div style="grid-column:2; min-height:2rem; border-left: 2px solid var(--border); margin-left: calc(50% - 1px);"></div>
+  <div style="grid-column:3; min-height:2rem;"></div>
+
+</div>

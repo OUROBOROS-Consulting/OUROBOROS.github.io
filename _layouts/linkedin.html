@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<article class="lp">
+
+  {% if page.image %}
+  <div class="lp-image">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.image_alt }}"/>
+  </div>
+  {% endif %}
+
+  <div class="lp-body">
+    <a class="post-back" href="/posts/">All Posts</a>
+
+    <div class="lp-meta">
+      <span class="lp-date">{{ page.date | date: "%B %-d, %Y" }}</span>
+      {% if page.tags %}
+      <div class="lp-tags">
+        {% for tag in page.tags %}
+        <span class="lp-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+
+    <div class="lp-content">
+      {{ content }}
+    </div>
+
+  </div>
+</article>

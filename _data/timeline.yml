@@ -1,0 +1,127 @@
+- year: 2023
+  months:
+    - month: Aug
+      events:
+        - title: AS Moves to MN
+          date: 8/1/2023
+          side: left
+          style: default
+    - month: Nov
+      events:
+        - title: AS Met CEO
+          date: 11/14/2023
+          side: left
+          style: default
+
+- year: 2024
+  months:
+    - month: Jul
+      events:
+        - title: Briefed PhD Program
+          date: 7/31/2024
+          side: right
+          style: default
+    - month: Aug
+      events:
+        - title: "Breakup (Attempted Assault) (Recorded, & Witnessed)"
+          date: 8/1/2024
+          side: left
+          style: ruby
+    - month: Sep
+      events:
+        - title: BHDS Decided to Delay my Written Prelim
+          date: 9/4/2024
+          side: right
+          style: blue
+    - month: Oct
+      events:
+        - title: CEO Trespassing (Attempted Assault) Recorded
+          date: 10/13/2024
+          side: left
+          style: ruby
+
+- year: 2025
+  months:
+    - month: Jan
+      events:
+        - title: CEO Assaults his Mother (27-CR-25-2xxx)
+          date: 1/31/2025
+          side: left
+          style: ruby
+    - month: Feb
+      events:
+        - title: OFP Granted
+          date: 2/11/2025
+          side: right
+          style: gold
+    - month: Apr
+      events:
+        - title: Advisor Dismissed Concerns RE Project Feasibility
+          date: 4/1/2025
+          side: right
+          style: ruby
+    - month: May
+      events:
+        - title: CEO Assaults his Mother (27-CR-25-119xx)
+          date: 5/12/2025
+          side: left
+          style: ruby
+    - month: Jul
+      events:
+        - title: LM Review (Not Invited)
+          date: 7/18/2025
+          side: right
+          style: ruby
+    - month: Aug
+      events:
+        - title: Written Prelim
+          date: 8/15/2025
+          side: left
+          style: default
+        - title: Written Prelim Debrief w/ Advisor
+          date: 8/26/2025
+          side: right
+          style: ruby
+    - month: Oct
+      events:
+        - title: Met w/ DGS
+          description: Dismissed cncerns about my labor conditions.
+          date: 10/1/2025
+          side: left
+          style: ruby
+    - month: Dec
+      events:
+        - title: Advisor Threatened my Funding
+          date: 12/4/2025
+          side: right
+          style: ruby
+        - title: Fired Dissertation/Academic Adviser
+          date: 12/10/2025
+          side: left
+          style: default
+
+- year: 2026
+  months:
+    - month: Jan
+      events:
+        - title: Filed Grievance
+          date: 1/2/2026
+          side: left
+          style: gold
+        - title: "Grievance Discussion w/ Division Chair (Steps 0+1)"
+          date: 1/15/2026
+          side: right
+          style: gold
+    - month: Feb
+      events:
+        - title: "Grievance Discussion w/ Dean of SPH (Step 2)"
+          date: 2/16/2026
+          side: right
+          style: gold
+    - month: Mar
+      events:
+        - title: Hand-Delivered Step 3 of Grievance
+          description: Union Organizing
+          date: 3/12/2026
+          side: left
+          style: gold

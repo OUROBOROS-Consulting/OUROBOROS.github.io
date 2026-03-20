@@ -1,0 +1,36 @@
+---
+layout: default
+title: Posts
+---
+
+<div class="feed-header">
+  <p class="section-label">Writing & Ideas</p>
+  <h1 class="about-heading">Posts</h1>
+</div>
+
+<div class="feed">
+  {% assign posts = site.linkedin | sort: 'date' | reverse %}
+  {% for post in posts %}
+  <a class="feed-item" href="{{ post.url | relative_url }}">
+
+    {% if post.image %}
+    <div class="feed-thumb">
+      <img src="{{ post.image | relative_url }}" alt="{{ post.image_alt }}"/>
+    </div>
+    {% endif %}
+
+    <div class="feed-item-body">
+      <div class="feed-item-meta">
+        <span class="feed-date">{{ post.date | date: "%B %-d, %Y" }}</span>
+        {% if post.tags %}
+        {% for tag in post.tags %}
+        <span class="lp-tag">{{ tag }}</span>
+        {% endfor %}
+        {% endif %}
+      </div>
+      <p class="feed-excerpt">{{ post.content | markdownify | strip_html | truncatewords: 30 }}</p>
+    </div>
+
+  </a>
+  {% endfor %}
+</div>

@@ -1,0 +1,129 @@
+// ── Nav ──────────────────────────────────────────────────────────────────────
+nav {
+  position:        fixed;
+  top:             0;
+  width:           100%;
+  z-index:         100;
+  padding:         1.4rem 3rem;
+  display:         flex;
+  justify-content: space-between;
+  align-items:     center;
+  background:      rgba(13, 13, 13, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom:   1px solid var(--border);
+}
+
+.nav-logo {
+  font-family:    'Playfair Display', serif;
+  font-size:      1.9rem;
+  letter-spacing: 0.05em;
+  color:          var(--gold);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap:     2.5rem;
+
+  a {
+    color:          var(--muted);
+    text-decoration: none;
+    font-size:      var(--label-size);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    transition:     color 0.3s;
+
+    &:hover { color: var(--gold); }
+  }
+}
+
+// ── Dropdowns ─────────────────────────────────────────────────────────────────
+.nav-dropdown-toggle {
+  background:     transparent;
+  border:         none;
+  color:          var(--muted);
+  font-family:    'Inter', sans-serif;
+  font-size:      var(--label-size);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor:         pointer;
+  transition:     color 0.3s;
+  padding:        0;
+
+  &:hover { color: var(--gold); }
+}
+
+.nav-dropdown {
+  position: relative;
+
+  &:hover .nav-dropdown-menu,
+  &:focus-within .nav-dropdown-menu {
+    opacity:        1;
+    pointer-events: auto;
+    transform:      translateY(0);
+  }
+}
+
+.nav-dropdown-menu {
+  position:       absolute;
+  top:            calc(100% + 6px);
+  left:           50%;                    // center anchor
+  transform:      translateX(-50%) translateY(-6px);  // shift left by half its own width
+  min-width:      160px;
+  z-index:        100;
+  opacity:        0;
+  pointer-events: none;
+  transition:     opacity 0.2s, transform 0.2s;
+  display:        flex;
+  flex-direction: column;
+  gap:            2px;
+
+  a {
+    display:         block;
+    padding:         0.2rem 0.4rem;       // tighter than before
+    font-size:       0.72rem;
+    letter-spacing:  0.1em;
+    text-transform:  uppercase;
+    color:           var(--muted);
+    text-decoration: none;
+    transition:      color 0.2s;
+
+    &:hover { color: var(--gold); }
+  }
+}
+
+@keyframes dropdown-card-in {
+  from {
+    opacity:   0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+.nav-dropdown-menu .card--formula {
+  opacity: 0;  // hidden by default
+}
+
+// When the menu is visible, trigger the stagger
+.nav-dropdown:hover .nav-dropdown-menu .card--formula,
+.nav-dropdown:focus-within .nav-dropdown-menu .card--formula {
+  animation: dropdown-card-in 0.15s ease forwards;
+
+  &:nth-child(1) { animation-delay: 0.00s; }
+  &:nth-child(2) { animation-delay: 0.1s; }
+  &:nth-child(3) { animation-delay: 0.2s; }
+  &:nth-child(4) { animation-delay: 0.3s; }
+  &:nth-child(5) { animation-delay: 0.4s; }
+  &:nth-child(6) { animation-delay: 0.5s; }
+  &:nth-child(7) { animation-delay: 0.6s; }
+  &:nth-child(8) { animation-delay: 0.7s; }
+}
+
+// ── Responsive ───────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  nav { padding: 1.2rem 1.5rem; }
+  .nav-links { gap: 1.5rem; }
+}

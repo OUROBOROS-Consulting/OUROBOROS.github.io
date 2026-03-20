@@ -1,0 +1,178 @@
+---
+layout: default
+---
+<div id="progress-bar"></div>
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     HERO
+     • Mission pages:  define `hero:` block in front matter
+     • Service pages:  define `category` / `title` / `tagline` / `lede`
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.hero %}
+
+<!-- ── Mission Hero ── -->
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/' | relative_url }}">Back</a>
+  <div class="svc-hero-inner">
+    <div class="svc-hero-text">
+      <p class="post-category">{{ page.category }}</p>
+      <h1 class="svc-title">{{ page.title }}</h1>
+      <p class="svc-lede">{{ page.lede }}</p>
+      <div class="svc-tags">
+        {% for tag in page.tags %}
+        <span class="lp-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="svc-hero-cta">
+      <a href="{{ page.cta_url | default: site.email | prepend: 'mailto:' }}" class="btn">
+        {{ page.cta_label | default: 'Get in Touch' }}
+      </a>
+      {% if page.price %}
+      <p class="svc-price">{{ page.price }}</p>
+      {% endif %}
+    </div>
+  </div>
+  </div>
+</header>
+
+{% else %}
+
+<!-- ── Service Hero ── -->
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/services/' | relative_url }}">Back</a>
+  <div class="svc-hero-inner svc-hero-inner--single">
+    <div class="svc-hero-text">
+      <p class="post-category">{{ page.category }}</p>
+      <h1 class="svc-title">{{ page.title }}</h1>
+      <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+      <p class="svc-lede">{{ page.lede }}</p>
+      <div class="svc-tags">
+        {% for tag in page.tags %}
+        <div class="hero-cta"><a href="#{{ tag }}" class="btn">{{ tag }}</a></div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</header>
+
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     ABOUT BLURB  (mission pages only)
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.about %}
+<div class="svc-body">
+  <section class="svc-section">
+    <div class="svc-section-label">
+      <p>{{ page.about.heading }}</p>
+    </div>
+    <div class="svc-section-content">
+      <p>{{ page.about.body }}</p>
+    </div>
+  </section>
+</div>
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     PULL QUOTE  (mission pages only)
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.pull_quote %}
+<div class="svc-body">
+  <aside class="pull-quote">
+    <blockquote>{{ page.pull_quote }}</blockquote>
+  </aside>
+</div>
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     CONTENT SECTIONS LOOP  (mission pages only)
+     Add as many sections as you like in front matter.
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.sections %}
+<div class="svc-body">
+  {% for section in page.sections %}
+  <section id="{{ section.id }}" class="svc-section">
+    <div class="svc-section-label">
+      <p>{{ section.heading }}</p>
+    </div>
+    <div class="svc-section-content">
+         <div class="card--formula">
+           <div class="card--formula__interior">
+               {% if section.body_paragraphs %}
+               {% for paragraph in section.body_paragraphs %}
+                    <p>{{ paragraph }}</p>
+               {% endfor %}
+               {% elsif section.body %}
+                    <p>{{ section.body }}</p>
+               {% endif %}
+          </div>
+      </div>
+    </div>
+  </section>
+  {% endfor %}
+</div>
+{% endif %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     PROSE BODY  (service pages only)
+     ════════════════════════════════════════════════════════════════════════ -->
+{% unless page.hero %}
+<article class="svc-body">
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>
+
+<!-- ── Service Sections ── -->
+<div class="svc-body">
+  {% if page.who %}
+  <section class="svc-section">
+    <div class="svc-section-label">
+      <p>Who It's For</p>
+    </div>
+    <div class="svc-section-content">
+      {{ page.who | markdownify }}
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="svc-section svc-section--cta">
+    <div class="svc-section-label">
+      <p>Get Started</p>
+    </div>
+    <div class="svc-section-content">
+      <p class="svc-cta-body">{{ page.cta_body | default: 'Reach out and we can find a time to talk through what you need.' }}</p>
+      <a href="{{ page.cta_url | default: site.email | prepend: 'mailto:' }}" class="btn">
+        {{ page.cta_label | default: 'Get in Touch' }}
+      </a>
+    </div>
+  </section>
+</div>
+{% endunless %}
+
+<!-- ════════════════════════════════════════════════════════════════════════
+     SOCIAL LINKS  (mission pages only)
+     Rendered as nav, not <footer>, to avoid conflicting with _footer.scss
+     which already styles the global footer via default.html.
+     ════════════════════════════════════════════════════════════════════════ -->
+{% if page.links %}
+<div class="svc-body">
+  <nav class="footer-links foundation-links">
+    {% if page.links.github   != "" %}<a href="{{ page.links.github }}"   target="_blank" rel="noopener">GitHub</a>{% endif %}
+    {% if page.links.linkedin != "" %}<a href="{{ page.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if page.links.orcid    != "" %}<a href="{{ page.links.orcid }}"    target="_blank" rel="noopener">ORCID</a>{% endif %}
+    {% if page.links.tutor    != "" %}<a href="{{ page.links.tutor }}"    target="_blank" rel="noopener">Tutoring</a>{% endif %}
+    {% if page.links.contact  != "" %}<a href="{{ page.links.contact }}">Contact</a>{% endif %}
+  </nav>
+</div>
+{% endif %}
+
+<script>
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total    = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+</script>

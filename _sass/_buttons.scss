@@ -1,0 +1,37 @@
+// ── Primary button ───────────────────────────────────────────────────────────
+.btn {
+  display:        inline-block;
+  padding:        0.75rem 2rem;
+  border:         1px solid var(--gold);
+  color:          var(--gold);
+  text-decoration: none;
+  font-family:    'Inter', sans-serif;
+  font-size:      0.8rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  cursor:         pointer;
+  background:     transparent;
+  transition:     background 0.3s, color 0.3s;
+
+  &:hover {
+    background: var(--gold);
+    color:      var(--bg);
+  }
+}
+
+// ── Chip (TikZ example selectors) ────────────────────────────────────────────
+.chip {
+  background:     var(--bg2);
+  border:         1px solid var(--border);
+  color:          var(--muted);
+  font-family:    'Inter', sans-serif;
+  font-size:      0.75rem;
+  padding:        0.3rem 0.8rem;
+  cursor:         pointer;
+  transition:     border-color 0.3s, color 0.3s;
+
+  &:hover {
+    border-color: var(--gold);
+    color:        var(--gold);
+  }
+}
