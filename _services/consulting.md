@@ -1,13 +1,15 @@
 ---
 layout: service
-title: Tech Consulting Services
+title: Bespoke Tech Solutions
 category: Services
-lede: Technology is not a luxury, it is a bare necessity. Surviving in the modern world requires technological literacy. Thriving in the modern world demands technological fluency.
-tags: [Apple Ecosystem, AI & Automation, Tech Literacy, Smart Home, Records Management, Data Science, Statistics, R, Python]
+lede: Surviving in the modern world requires technological literacy. Technology is not a luxury, but it can be. #, it is a bare necessity. #Thriving in the modern world demands technological fluency.
+tags: [Apple Ecosystem, AI & Automation, Tech Literacy, Smart Home, Records Management]
 cta_label: Book a Session
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours. Discovery calls are always free.
+
 who: >
   Non-technical people who need robust tech solutions so they can focus on what matters to them — and technical teams who need a senior partner who can translate between policy, data, and product.
+
 included:
   - title: Intake & Discovery
     description: Free 20-minute call to understand your situation and goals before recommending a path forward.
@@ -19,12 +21,14 @@ included:
     description: Email follow-up between sessions for quick questions, code review, or sanity checks.
   - title: Documentation
     description: Where applicable, written summaries, guides, or SOPs so you retain what we built together.
-policies:
-  discovery_call: Free (20 min)
-  travel_surcharge: +$25/hr for in-person outside Minneapolis metro
-  prepaid_discount: 10% off for 10+ hours booked upfront
-  nonprofit_student: Reduced rates available — ask
-  response_time: Within 48 hours
+
+# policies:
+#   discovery_call: Free (20 min)
+#   travel_surcharge: +$25/hr for in-person outside Minneapolis metro
+#   prepaid_discount: 10% off for 10+ hours booked upfront
+#   nonprofit_student: Reduced rates available — ask
+#   response_time: Within 48 hours
+
 pricing:
   - category: Apple & Tech Ecosystem
     description: Setup, migration, optimization, and support for Apple devices and services.
@@ -56,21 +60,23 @@ pricing:
       - name: Ethical AI Policy Consulting
         rate: $175/hr
         notes: For orgs navigating responsible AI adoption
-  - category: Tech Literacy & Instruction
-    description: 1-on-1 or small group instruction in tech, programming, and digital skills for all levels.
-    tiers:
-      - name: Digital Skills (Beginner)
-        rate: $65/hr
-        notes: Email, files, browsers, video calls, passwords
-      - name: Programming Tutoring
-        rate: $90/hr
-        notes: Python, R, SQL — undergrad to adult learners
-      - name: Statistics Tutoring
-        rate: $95/hr
-        notes: Intro stats through graduate-level methods
-      - name: Monthly Learner Retainer
-        rate: $350/mo
-        notes: 4 sessions/mo + async Q&A support
+
+  # - category: Tech Literacy & Instruction
+  #   description: 1-on-1 or small group instruction in tech, programming, and digital skills for all levels.
+  #   tiers:
+  #     - name: Digital Skills (Beginner)
+  #       rate: $65/hr
+  #       notes: Email, files, browsers, video calls, passwords
+  #     - name: Programming Tutoring
+  #       rate: $90/hr
+  #       notes: Python, R, SQL — undergrad to adult learners
+  #     - name: Statistics Tutoring
+  #       rate: $95/hr
+  #       notes: Intro stats through graduate-level methods
+  #     - name: Monthly Learner Retainer
+  #       rate: $350/mo
+  #       notes: 4 sessions/mo + async Q&A support
+
   - category: Smart Home
     description: HomeKit, Matter, and Apple-native smart home design, setup, and automation.
     tiers:
