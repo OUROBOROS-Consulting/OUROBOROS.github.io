@@ -8,11 +8,20 @@
   embed_url: https://embed.music.apple.com/us/playlist/ouroboros/pl.u-RRbV085tyxMND7
   height: 450
 
-# Add more playlists below. Get the embed URL from Apple Music:
-# Share (···) → Copy → Embed Song/Album/Playlist → copy the src="..." value.
+- title: Fire and Blood
+  description: >
+    Not the hot-headed kind — the kind that has been refined by years of being underestimated. These are songs for people who have learned that ambition is not a character flaw and that wanting things, loudly, is an act of defiance. Let it burn clean.
+  embed_url: https://embed.music.apple.com/us/playlist/everything-turns-blue/pl.u-RRbVvlJuyxMND7
+  height: 450
 
-# - title: Another Playlist
-#   description: >
-#     A short note about what this playlist contains or why it matters.
-#   embed_url: https://embed.music.apple.com/us/playlist/...
-#   height: 450
+- title: Everything Turns Blue
+  description: >
+    There is a particular quality to sadness that has been lived in long enough to become landscape — no longer an event, just the color of things. This playlist does not rush you toward the light. It sits beside you in the blue and lets it mean something.
+  embed_url: https://embed.music.apple.com/us/playlist/everything-turns-blue/pl.u-RRbVvlJuyxMND7
+  height: 450
+  
+- title: As Institutions Crumble and Libraries Burn
+  description: >
+    For when the systems that were supposed to protect you reveal, quietly or catastrophically, that they never intended to. This is music for holding the contradiction — grief and fury and the terrible clarity that comes after trust has been broken by design. You are not wrong for noticing.
+  embed_url: https://embed.music.apple.com/us/playlist/as-institutions-crumble-and-libraries-burn/pl.u-6mo4l23uWZLPR3
+  height: 450
