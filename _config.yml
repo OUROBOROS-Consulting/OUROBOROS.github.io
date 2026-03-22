@@ -20,8 +20,11 @@ collections:
     output: true
     permalink: /notes/:slug/
   linkedin:
-  output: true
-  permalink: /posts/:year/:slug/
+    output: true
+    permalink: /posts/:year/:slug/
+  resources:
+    output: true
+    permalink: /resources/:slug/
   
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]

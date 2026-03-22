@@ -1,26 +1,18 @@
 - title: About
   children:
-    # - title: Perils
-    #   url: /perils
     - title: Mission
-      url: /cybernetics
-    # - title: Mission
-    #   url: /mission
-    # - title: Values
-    #   url: /values
+      url: /mission/
     - title: Survival
-      url: /survival
+      url: /survival/
     - title: Interests
-      url: /interests
+      url: /interests/
     - title: CV
-      url: /cv
+      url: /cv/
 
 - title: Services
   children:
     - title: Bespoke Technology Solutions
       url: /services/consulting/
-#    - title: Development
-#      url: /services/dev/
     - title: Investigative Services
       url: /services/investigative/
     - title: Education Services
