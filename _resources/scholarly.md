@@ -24,21 +24,35 @@ pull_quote: >
 
 # ── Page sections ──────────────────────────────────────────────────────────
 sections:
-  - id: references
-    heading: References
-    bibtex_src: /assets/references.bib
+  - id: psychopathology
+    heading: Psychopathology
+    bibtex_src: /assets/bib/psychopathology.bib
+
+  - id: trauma
+    heading: Trauma & Recovery
+    bibtex_src: /assets/bib/trauma.bib
+
+  - id: coercive-control
+    heading: Coercive Control
+    bibtex_src: /assets/bib/coercive-control.bib
+
+  - id: narcissistic-abuse
+    heading: Narcissistic Abuse
+    bibtex_src: /assets/bib/narcissistic-abuse.bib
+
+  - id: institutional-betrayal
+    heading: Institutional Betrayal
+    bibtex_src: /assets/bib/institutional-betrayal.bib
 
   - id: context
     heading: How to Use These
     body_paragraphs:
       - >
-        The references above are drawn from peer-reviewed journals and established books
-        on coercive control, betrayal trauma, personality pathology, and institutional failure.
-        They represent the scientific consensus on topics that are frequently contested
-        in legal proceedings and dismissed in institutional settings.
-      - >
-        To add your own references, replace or update the BibTeX file at
-        <code>assets/references.bib</code>. Standard BibTeX format is supported:
-        @article, @book, @inproceedings, and @misc entries all render correctly.
+        Each section above draws from its own BibTeX file in <code>assets/bib/</code>.
+        To add references to a section, open the corresponding <code>.bib</code> file
+        and add entries in standard BibTeX format.
         Fields used: author, title, year, journal/booktitle/publisher, doi, url, note.
+      - >
+        Supported entry types: @article, @book, @inproceedings, @misc.
+        DOIs are automatically linked via doi.org. If no DOI is present, the url field is used instead.
 ---
