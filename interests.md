@@ -29,51 +29,49 @@ sections:
     heading: Technology
     body_paragraphs:
       - >
-        I'm a big believer in the transformative power and democratizing power of technology.
+        I'm a big believer in the transformative and democratizing power of technology.
       - >
-        Smart homes are awesome! I'm currently managing a massive IT project that involves >40 smart devices, including smart blinds, ligthbulbs, door and window sensors, cameras, speakers, etc.
+        Smart homes are awesome! I'm currently managing a massive IT project that involves over 40 smart devices,
+        including smart blinds, lightbulbs, door and window sensors, cameras, speakers, and more.
+        Beyond the obvious quality-of-life improvements, I've come to understand the security implications
+        of a densely networked home — both the protections it enables and the vulnerabilities it creates.
       - >
-        I'm also a big fan of wearable devices (e.g., Apple watch, Fitbit, etc).
-        >Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        I'm also a big fan of wearable devices like the Apple Watch. The ability to passively collect
+        longitudinal health data — heart rate, sleep, movement, even stress proxies — is genuinely remarkable.
+        Most people collect this data without ever analyzing it. I do.
 
   - id: data
     heading: Data Science
     body_paragraphs:
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        My formal training is in biostatistics, with a focus on developing novel statistical methods
+        for analyzing neuroimaging data. The methodological problems are hard: high-dimensional,
+        noisy, and full of nuisance variation. I find that genuinely interesting.
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        I work primarily in R, and I believe in literate programming — code that explains itself,
+        analysis that can be reproduced, and findings that don't disappear into a PDF.
+        The HealthData.me project is a direct expression of this: a step-by-step tutorial built
+        from my own Apple Health data, showing exactly what trauma does to a body over time.
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        More broadly, I'm interested in data as evidence — in the forensic sense. When institutions
+        fail to protect you, data can. The discipline required to collect, clean, and analyze it
+        carefully is the same discipline that makes a whistleblower's case airtight.
 
   - id: psych
     heading: Psychopathology
     body_paragraphs:
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        My interest in psychopathology began out of necessity. I needed to understand what was happening
+        to me before I could document it, and I needed to document it before I could escape.
+        I went through the DSM-V systematically — not as a clinician, but as a statistician who needed
+        a classification system that matched the evidence.
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        What I found is that personality disorders — particularly those on the antagonistic externalizing
+        spectrum — are simultaneously well-documented in the literature and almost entirely ignored by
+        the legal and institutional systems tasked with handling their consequences. The gap between
+        what psychology knows and what courts act on is staggering.
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        I'm particularly interested in the intersection of psychopathology and technology: how digital
+        platforms enable coercive control, how data can be weaponized against a partner, and how
+        the same tools that empower survivors can be turned against them. This is not theoretical for me.
 ---
