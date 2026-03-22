@@ -105,21 +105,25 @@ layout: default
             {% for pl in _playlists %}
             <div class="playlist-carousel-slide" role="group"
                  aria-label="Playlist {{ forloop.index }} of {{ _playlists.size }}">
-              <iframe
-                allow="autoplay *; encrypted-media *;"
-                frameborder="0"
-                height="{{ pl.height | default: 450 }}"
-                class="playlist-iframe"
-                data-src="{{ pl.embed_url }}"
-                title="{{ pl.title }}"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
-              </iframe>
-              {% if pl.title or pl.description %}
-              <div class="playlist-meta">
-                {% if pl.title %}<p class="playlist-title">{{ pl.title }}</p>{% endif %}
-                {% if pl.description %}<p class="card-desc">{{ pl.description }}</p>{% endif %}
+              <div class="card--formula">
+                <div class="card--formula__interior playlist-card">
+                  <iframe
+                    allow="autoplay *; encrypted-media *;"
+                    frameborder="0"
+                    height="{{ pl.height | default: 450 }}"
+                    class="playlist-iframe"
+                    data-src="{{ pl.embed_url }}"
+                    title="{{ pl.title }}"
+                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
+                  </iframe>
+                  {% if pl.title or pl.description %}
+                  <div class="playlist-meta">
+                    {% if pl.title %}<p class="playlist-title">{{ pl.title }}</p>{% endif %}
+                    {% if pl.description %}<p class="card-desc">{{ pl.description }}</p>{% endif %}
+                  </div>
+                  {% endif %}
+                </div>
               </div>
-              {% endif %}
             </div>
             {% endfor %}
           </div>
