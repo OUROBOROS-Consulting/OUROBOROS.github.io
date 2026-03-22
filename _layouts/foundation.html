@@ -138,7 +138,7 @@ layout: default
 <!-- ════════════════════════════════════════════════════════════════════════
      PROSE BODY  (service pages only)
      ════════════════════════════════════════════════════════════════════════ -->
-{% unless page.hero %}
+{% unless page.hero or page.sections %}
 <article class="svc-body">
   <div class="post-body">
     {{ content }}
