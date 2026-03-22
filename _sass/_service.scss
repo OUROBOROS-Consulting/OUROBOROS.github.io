@@ -216,3 +216,70 @@
     gap:            2rem;
   }
 }
+
+
+// ── Playlist Carousel ──────────────────────────────────────────────────────────
+.playlist-carousel {
+  width: 100%;
+}
+
+.playlist-carousel-track {
+  display:    flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow:   hidden; // clip slides outside the viewport
+}
+
+.playlist-carousel-slide {
+  min-width:      100%;
+  display:        flex;
+  flex-direction: column;
+  gap:            1.5rem;
+}
+
+.playlist-iframe {
+  width:      100%;
+  max-width:  660px;
+  display:    block;
+  background: transparent;
+  border:     none;
+  overflow:   hidden;
+}
+
+.playlist-meta {
+  max-width: 660px;
+}
+
+.playlist-title {
+  font-family:   'Playfair Display', serif;
+  font-size:     1.1rem;
+  font-weight:   400;
+  color:         var(--text);
+  margin-bottom: 0.4rem;
+}
+
+.playlist-carousel-controls {
+  display:     flex;
+  align-items: center;
+  gap:         1rem;
+  margin-top:  1.5rem;
+}
+
+.playlist-carousel-count {
+  font-size:      0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--muted);
+  min-width:      4ch;
+  text-align:     center;
+}
+
+.playlist-carousel-dots {
+  display:         flex;
+  justify-content: flex-start;
+  gap:             0.6rem;
+  margin-top:      1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playlist-carousel-track { transition: none; }
+}
