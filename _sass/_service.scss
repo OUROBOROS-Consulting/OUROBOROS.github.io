@@ -74,7 +74,7 @@
 
 .svc-section-label {
   p {
-    @include label-caps(0.72rem, 0.2em);
+    @include label-caps(0.95rem, 0.15em);
     position: sticky;
     top:      6rem;
   }

@@ -26,7 +26,11 @@ pull_quote: >
 sections:
   - id: psychopathology
     heading: Psychopathology
-    bibtex_src: /assets/bib/psychopathology.bib
+    bibtex_src: /assets/Psychopathology.bib
+
+  - id: public-health
+    heading: Public Health
+    bibtex_src: /assets/PublicHealth.bib
 
   - id: trauma
     heading: Trauma & Recovery
@@ -48,7 +52,7 @@ sections:
     heading: How to Use These
     body_paragraphs:
       - >
-        Each section above draws from its own BibTeX file in <code>assets/bib/</code>.
+        Each section above draws from its own BibTeX file in <code>assets/</code> or <code>assets/bib/</code>.
         To add references to a section, open the corresponding <code>.bib</code> file
         and add entries in standard BibTeX format.
         Fields used: author, title, year, journal/booktitle/publisher, doi, url, note.
