@@ -88,6 +88,7 @@ layout: default
     {% for val in site.data.values %}
     <div class="card--formula">
       <div class="card--formula__interior">
+        <i class="{{ val.icon }}"></i>
         <span class="stat-value">{{ val.title | markdownify }}</span>
         <p class="card-desc">{{ val.description | markdownify }}</p>
       </div>
