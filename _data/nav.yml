@@ -1,13 +1,13 @@
 - title: About
   children:
     - title: Mission
-      url: /mission/
+      url: /mission
     - title: Survival
-      url: /survival/
+      url: /survival
     - title: Interests
-      url: /interests/
+      url: /interests
     - title: CV
-      url: /cv/
+      url: /cv
 
 - title: Services
   children:

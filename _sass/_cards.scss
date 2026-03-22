@@ -95,8 +95,8 @@ $-inner:  calc(#{$-arc} - #{$-border});
 }
 
 .card-tag {
-  font-size:      0.65rem;
-  letter-spacing: 0.25em;
+  font-size:      0.72rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color:          var(--gold);
   margin-bottom:  1rem;
@@ -112,21 +112,21 @@ $-inner:  calc(#{$-arc} - #{$-border});
 
 .card-desc {
   color:       var(--muted);
-  font-size:   0.88rem;
-  line-height: 1.8;
+  font-size:   0.93rem;
+  line-height: 1.85;
 }
 
 .card-link {
   display:         inline-block;
   margin-top:      1.5rem;
-  font-size:       0.72rem;
-  letter-spacing:  0.18em;
+  font-size:       0.78rem;
+  letter-spacing:  0.15em;
   text-transform:  uppercase;
   color:           var(--gold);
   text-decoration: none;
   transition:      letter-spacing 0.3s;
 
-  &:hover { letter-spacing: 0.28em; }
+  &:hover { letter-spacing: 0.22em; }
 }
 
 // ── Related cards (essay & project footers) ───────────────────────────────────
@@ -138,8 +138,8 @@ $-inner:  calc(#{$-arc} - #{$-border});
   display:         block;
 
   .rc-tag {
-    font-size:      0.63rem;
-    letter-spacing: 0.22em;
+    font-size:      0.72rem;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     color:          var(--gold);
     margin-bottom:  0.7rem;

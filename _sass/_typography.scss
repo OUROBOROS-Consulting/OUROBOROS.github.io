@@ -2,7 +2,7 @@
 // Single definition of the gold small-caps label pattern used across the site.
 // Use: @include label-caps;                    → default 0.7rem / 0.3em
 // Use: @include label-caps(0.65rem, 0.28em);   → tighter variant (CV / service)
-@mixin label-caps($size: 0.7rem, $tracking: 0.3em) {
+@mixin label-caps($size: 0.75rem, $tracking: 0.22em) {
   font-size:      $size;
   letter-spacing: $tracking;
   text-transform: uppercase;
@@ -55,7 +55,7 @@
 // ── About body copy ───────────────────────────────────────────────────────────
 .about-body {
   color:       var(--muted);
-  font-size:   0.95rem;
+  font-size:   1rem;
   line-height: 1.9;
 
   p + p { margin-top: 1rem; }
