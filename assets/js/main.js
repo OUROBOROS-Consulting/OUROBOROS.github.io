@@ -110,3 +110,54 @@ if (canvas) {
 
   requestAnimationFrame(drawHalo);
 }
+
+// ── Testimonials Carousel ─────────────────────────────────────────────────────
+(function () {
+  const track   = document.querySelector('#testimonials .carousel-track');
+  if (!track) return;
+
+  const slides  = Array.from(track.children);
+  const dots    = Array.from(document.querySelectorAll('.carousel-dot'));
+  const countEl = document.querySelector('.carousel-count');
+  const total   = slides.length;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let current   = 0;
+  let timer     = null;
+
+  function go(n) {
+    current = ((n % total) + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    if (countEl) countEl.textContent = `${current + 1} / ${total}`;
+  }
+
+  function startTimer() {
+    if (reduced || total <= 1) return;
+    clearInterval(timer);
+    timer = setInterval(() => go(current + 1), 7000);
+  }
+
+  document.querySelector('.carousel-btn--prev')
+    ?.addEventListener('click', () => { go(current - 1); startTimer(); });
+  document.querySelector('.carousel-btn--next')
+    ?.addEventListener('click', () => { go(current + 1); startTimer(); });
+  dots.forEach((d, i) => d.addEventListener('click', () => { go(i); startTimer(); }));
+
+  // Pause auto-advance on hover
+  const section = document.getElementById('testimonials');
+  if (section) {
+    section.addEventListener('mouseenter', () => clearInterval(timer));
+    section.addEventListener('mouseleave', startTimer);
+  }
+
+  // Swipe support for touch devices
+  let touchStartX = 0;
+  track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    if (Math.abs(dx) > 40) { go(current + (dx < 0 ? 1 : -1)); startTimer(); }
+  });
+
+  go(0);
+  startTimer();
+}());

@@ -149,22 +149,37 @@ layout: default
     <div>
       <p class="section-label">What the Greats Say About Me</p>
       <h2 class="testimonials-heading">Testimonials</h2>
-      <span class="testimonials-count">{{ site.data.testimonials.size }} reviews</span>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial">&#8592;</button>
+      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial">&#8594;</button>
     </div>
   </div>
-  
-  <div class="testimonials-grid">
-    {% for ref in site.data.testimonials %}
-    <div class="card--formula">
-      <div class="card--formula__interior">
-        <p class="card-tag">{{ ref.title | markdownify }}</p>
-        <h3 class="card-title">{{ project.title }}</h3>
-        <blockquote>
-          <p class="card-desc">{{ ref.description | markdownify }}</p>
-          <cite>— {{ ref.reference }}</cite>
-        </blockquote>
+
+  <div class="carousel" aria-live="polite" aria-label="Testimonials">
+    <div class="carousel-track">
+      {% for ref in site.data.testimonials %}
+      <div class="carousel-slide" role="group" aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
+        <div class="card--formula">
+          <div class="card--formula__interior">
+            <p class="card-tag">{{ ref.title }}</p>
+            <blockquote>
+              <p class="card-desc">{{ ref.description }}</p>
+              <cite>— {{ ref.reference }}</cite>
+            </blockquote>
+          </div>
+        </div>
       </div>
+      {% endfor %}
     </div>
+  </div>
+
+  <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+    {% for ref in site.data.testimonials %}
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}"
+            role="tab"
+            aria-label="Testimonial {{ forloop.index }}"></button>
     {% endfor %}
   </div>
 </section>
