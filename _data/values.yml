@@ -1,5 +1,6 @@
 - title: Innovation
   tag: Technology
+  icon: fa-solid fa-flask
   description: >
     The best solutions aren't found in manuals — they're engineered in the gap between what exists and what's needed.
     Whether bridging service continuity during a federal system migration or prototyping a data platform under deadline,
@@ -10,6 +11,7 @@
 
 - title: Reason
   tag: Science
+  icon: fa-solid fa-scale-balanced
   description: >
     Emotions are data, but they aren't evidence. I trained in biostatistics because I believe rigorous thinking
     is one of the most compassionate things you can offer a problem — especially in public health,
@@ -20,6 +22,7 @@
 
 - title: Efficiency
   tag: Technology
+  icon: fa-solid fa-bolt
   description: >
     Wasted effort compounds. I automate what can be automated, document what needs to persist,
     and focus human attention where it actually matters.
@@ -30,6 +33,7 @@
 
 - title: Autonomy
   tag: Personal
+  icon: fa-solid fa-person-walking
   description: >
     I believe people have the right to make informed decisions about their own lives — including, and especially,
     when institutions make that difficult.
@@ -40,6 +44,7 @@
 
 - title: Authenticity
   tag: Personal
+  icon: fa-solid fa-fingerprint
   description: >
     I don't perform expertise I don't have, and I don't minimize experiences that are real.
     Being authentic isn't always comfortable — sometimes it means saying the thing that's true
@@ -50,6 +55,7 @@
 
 - title: Integrity
   tag: Ethics
+  icon: fa-solid fa-shield-halved
   description: >
     Integrity is what you do when no one is watching — and what you're willing to put on record when they are.
     I've worked in environments where accountability was optional and silence was rewarded.
@@ -59,6 +65,7 @@
 
 - title: Transparency
   tag: Ethics
+  icon: fa-solid fa-eye
   description: >
     Opacity protects bad systems. Transparency is how individuals protect themselves —
     and how communities hold institutions accountable.
@@ -69,6 +76,7 @@
 
 - title: Security
   tag: Technology
+  icon: fa-solid fa-lock
   description: >
     Security means different things in different contexts — FedRAMP compliance, data privacy, personal safety —
     but the underlying principle is the same: people deserve to be protected, not just from external threats,
@@ -79,6 +87,7 @@
 
 - title: Kindness
   tag: Personal
+  icon: fa-solid fa-hand-holding-heart
   description: >
     Kindness is not weakness. It's a deliberate choice — one that requires more discipline, not less,
     especially in adversarial conditions.
