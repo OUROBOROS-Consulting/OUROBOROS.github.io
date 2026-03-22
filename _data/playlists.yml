@@ -4,14 +4,14 @@
 
 - title: Ouroboros
   description: >
-    The full listening list — albums that circle back to the same wound from different angles.
+    Cycle through shadows and light — the dark elegance of a playlist curated for the most cunning and sophisticated minds. Every ending folds back into a beginning, and the listener who enters whole may exit transformed. This is music for those who recognize themselves in the serpent.
   embed_url: https://embed.music.apple.com/us/playlist/ouroboros/pl.u-RRbV085tyxMND7
   height: 450
 
 - title: Fire and Blood
   description: >
     Not the hot-headed kind — the kind that has been refined by years of being underestimated. These are songs for people who have learned that ambition is not a character flaw and that wanting things, loudly, is an act of defiance. Let it burn clean.
-  embed_url: https://embed.music.apple.com/us/playlist/everything-turns-blue/pl.u-RRbVvlJuyxMND7
+  embed_url: https://embed.music.apple.com/us/playlist/fire-blood/pl.u-AkAmPNeCE7epjB
   height: 450
 
 - title: Everything Turns Blue
@@ -21,6 +21,12 @@
   height: 450
   
 - title: As Institutions Crumble and Libraries Burn
+  description: >
+    For when the systems that were supposed to protect you reveal, quietly or catastrophically, that they never intended to. This is music for holding the contradiction — grief and fury and the terrible clarity that comes after trust has been broken by design. You are not wrong for noticing.
+  embed_url: https://embed.music.apple.com/us/playlist/as-institutions-crumble-and-libraries-burn/pl.u-6mo4l23uWZLPR3
+  height: 450
+
+- title: Psychopathology of Everyday Life
   description: >
     For when the systems that were supposed to protect you reveal, quietly or catastrophically, that they never intended to. This is music for holding the contradiction — grief and fury and the terrible clarity that comes after trust has been broken by design. You are not wrong for noticing.
   embed_url: https://embed.music.apple.com/us/playlist/as-institutions-crumble-and-libraries-burn/pl.u-6mo4l23uWZLPR3
