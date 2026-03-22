@@ -196,10 +196,13 @@ $-inner:  calc(#{$-arc} - #{$-border});
   }
 }
 
-// Bibtex card titles are prose — scale down from the hero stat-value size
+// Bibtex card titles — scaled down from hero stat-value, and in body color
+// so they read as titles rather than blending with the gold author byline
 .bib-title {
-  font-size:   clamp(1rem, 1.8vw, 1.3rem);
-  line-height: 1.35;
+  font-size:   1.05rem;
+  line-height: 1.4;
+  color:       var(--text);
+  font-weight: 400;
 }
 
 // In _cards.scss or your CV stylesheet
