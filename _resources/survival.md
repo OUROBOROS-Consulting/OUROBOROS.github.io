@@ -64,8 +64,7 @@ sections:
         Disruption or thwarting of goals, especially when those goals include basic needs, is the primary cause of human distress, and avoiding suffering is an important goal for most people.
       - >
         Jennifer Freyd's concept of institutional betrayal describes the specific harm that occurs when
-        an institution a person depends on — an employer, a university, a legal system — fails to protect
-        them or actively compounds their harm. It is a second injury, often more damaging than the first,
+        an institution a person depends on — the family, an employer, a university, a legal system — fails to protect them or actively compounds their harm. It is a second injury, often more damaging than the first,
         because it destroys the belief that help is available. Survivors of institutional betrayal
         frequently report that they were less harmed by the original abuser than by the people
         who were supposed to help them afterward.

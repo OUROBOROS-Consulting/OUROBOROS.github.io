@@ -196,6 +196,12 @@ $-inner:  calc(#{$-arc} - #{$-border});
   }
 }
 
+// Bibtex card titles are prose — scale down from the hero stat-value size
+.bib-title {
+  font-size:   clamp(1rem, 1.8vw, 1.3rem);
+  line-height: 1.35;
+}
+
 // In _cards.scss or your CV stylesheet
 .cv-cards {
   display: flex;

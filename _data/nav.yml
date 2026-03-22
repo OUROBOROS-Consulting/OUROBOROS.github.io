@@ -41,9 +41,9 @@
       
 - title: Resources
   children:
-    - title: Legal
-      url: /resources/legal/
+    - title: Survival
+      url: /resources/survival/
     - title: Scholarly
       url: /resources/scholarly/
-    # - title: Musical
-    #   url: /resources/musical/
+    - title: Artistic
+      url: /resources/artistic/

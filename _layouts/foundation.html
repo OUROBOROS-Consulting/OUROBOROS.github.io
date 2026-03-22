@@ -97,17 +97,38 @@ layout: default
       <p>{{ section.heading }}</p>
     </div>
     <div class="svc-section-content">
-         <div class="card--formula">
-           <div class="card--formula__interior">
-               {% if section.body_paragraphs %}
-               {% for paragraph in section.body_paragraphs %}
-                    <p>{{ paragraph }}</p>
-               {% endfor %}
-               {% elsif section.body %}
-                    <p>{{ section.body }}</p>
-               {% endif %}
+      {% if section.data_source %}
+        {% assign _items = site.data[section.data_source] %}
+        <div class="testimonials-grid">
+          {% for _item in _items %}
+          <div class="card--formula">
+            <div class="card--formula__interior">
+              <span class="stat-value">{{ _item.title }}</span>
+              {% if _item.author %}<p class="card-tag">{{ _item.author }}</p>{% endif %}
+              {% if _item.note %}<p class="card-desc">{{ _item.note | markdownify }}</p>{% endif %}
+              {% if _item.description %}<p class="card-desc">{{ _item.description | markdownify }}</p>{% endif %}
+              {% if _item.link and _item.link != "#" %}<a class="card-link" href="{{ _item.link }}" target="_blank" rel="noopener">View →</a>{% endif %}
+            </div>
           </div>
-      </div>
+          {% endfor %}
+        </div>
+      {% elsif section.bibtex_src %}
+        <div class="testimonials-grid" data-bibtex-src="{{ section.bibtex_src }}">
+          <p class="card-desc">Loading references…</p>
+        </div>
+      {% else %}
+        <div class="card--formula">
+          <div class="card--formula__interior">
+            {% if section.body_paragraphs %}
+            {% for paragraph in section.body_paragraphs %}
+              <p>{{ paragraph }}</p>
+            {% endfor %}
+            {% elsif section.body %}
+              <p>{{ section.body }}</p>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
     </div>
   </section>
   {% endfor %}
@@ -166,6 +187,14 @@ layout: default
     {% if page.links.contact  != "" %}<a href="{{ page.links.contact }}">Contact</a>{% endif %}
   </nav>
 </div>
+{% endif %}
+
+{% assign _has_bibtex = false %}
+{% for section in page.sections %}
+  {% if section.bibtex_src %}{% assign _has_bibtex = true %}{% endif %}
+{% endfor %}
+{% if _has_bibtex %}
+<script src="{{ '/assets/js/bibtex.js' | relative_url }}" defer></script>
 {% endif %}
 
 <script>
