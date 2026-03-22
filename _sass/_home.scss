@@ -79,6 +79,11 @@
   color:       var(--gold);
   line-height: 1;
 }
+#values .card--formula__interior i {
+  font-size:   clamp(2.2rem, 4vw, 3.2rem);
+  color:       var(--gold);
+  line-height: 1;
+}
 .stat-label {
   @include label-caps(0.62rem, 0.2em);
 }
