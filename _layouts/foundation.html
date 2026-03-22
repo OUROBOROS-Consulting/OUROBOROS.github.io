@@ -97,7 +97,49 @@ layout: default
       <p>{{ section.heading }}</p>
     </div>
     <div class="svc-section-content">
-      {% if section.data_source %}
+      {% if section.playlist_carousel %}
+        {% assign _playlists = site.data[section.data_source] %}
+        <div class="playlist-carousel" id="{{ section.id }}-carousel"
+             aria-label="{{ section.heading }} playlist carousel">
+          <div class="playlist-carousel-track" aria-live="polite">
+            {% for pl in _playlists %}
+            <div class="playlist-carousel-slide" role="group"
+                 aria-label="Playlist {{ forloop.index }} of {{ _playlists.size }}">
+              <iframe
+                allow="autoplay *; encrypted-media *;"
+                frameborder="0"
+                height="{{ pl.height | default: 450 }}"
+                class="playlist-iframe"
+                data-src="{{ pl.embed_url }}"
+                title="{{ pl.title }}"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
+              </iframe>
+              {% if pl.title or pl.description %}
+              <div class="playlist-meta">
+                {% if pl.title %}<p class="playlist-title">{{ pl.title }}</p>{% endif %}
+                {% if pl.description %}<p class="card-desc">{{ pl.description }}</p>{% endif %}
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+
+          {% if _playlists.size > 1 %}
+          <div class="playlist-carousel-controls">
+            <button class="carousel-btn playlist-btn--prev" aria-label="Previous playlist">&#8592;</button>
+            <span class="playlist-carousel-count">1 / {{ _playlists.size }}</span>
+            <button class="carousel-btn playlist-btn--next" aria-label="Next playlist">&#8594;</button>
+          </div>
+          <div class="carousel-dots playlist-carousel-dots" role="tablist" aria-label="Playlist navigation">
+            {% for pl in _playlists %}
+            <button class="carousel-dot{% if forloop.first %} active{% endif %}"
+                    role="tab"
+                    aria-label="Playlist {{ forloop.index }}"></button>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      {% elsif section.data_source %}
         {% assign _items = site.data[section.data_source] %}
         <div class="testimonials-grid">
           {% for _item in _items %}
@@ -190,11 +232,16 @@ layout: default
 {% endif %}
 
 {% assign _has_bibtex = false %}
+{% assign _has_playlist = false %}
 {% for section in page.sections %}
   {% if section.bibtex_src %}{% assign _has_bibtex = true %}{% endif %}
+  {% if section.playlist_carousel %}{% assign _has_playlist = true %}{% endif %}
 {% endfor %}
 {% if _has_bibtex %}
 <script src="{{ '/assets/js/bibtex.js' | relative_url }}" defer></script>
+{% endif %}
+{% if _has_playlist %}
+<script src="{{ '/assets/js/playlist-carousel.js' | relative_url }}" defer></script>
 {% endif %}
 
 <script>

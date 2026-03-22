@@ -1,0 +1,18 @@
+# Apple Music playlist embeds.
+# embed_url: the src= value from the Apple Music "Share → Embed" iframe snippet.
+# height: optional override (default 450). Use 175 for single-album embeds, 450 for playlists.
+
+- title: Ouroboros
+  description: >
+    The full listening list — albums that circle back to the same wound from different angles.
+  embed_url: https://embed.music.apple.com/us/playlist/ouroboros/pl.u-RRbV085tyxMND7
+  height: 450
+
+# Add more playlists below. Get the embed URL from Apple Music:
+# Share (···) → Copy → Embed Song/Album/Playlist → copy the src="..." value.
+
+# - title: Another Playlist
+#   description: >
+#     A short note about what this playlist contains or why it matters.
+#   embed_url: https://embed.music.apple.com/us/playlist/...
+#   height: 450
