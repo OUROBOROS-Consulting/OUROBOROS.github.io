@@ -276,3 +276,76 @@
     grid-template-columns: 1fr;
   }
 }
+
+// ── Testimonials Carousel ─────────────────────────────────────────────────────
+#testimonials .carousel {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display:    flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+  min-width: 100%;
+
+  // Give the chamfered card breathing room and constrain its width
+  .card--formula {
+    max-width: 860px;
+    margin:    0 auto;
+  }
+}
+
+.carousel-controls {
+  display:     flex;
+  align-items: center;
+  gap:         1rem;
+}
+
+.carousel-btn {
+  background:  transparent;
+  border:      1px solid var(--gold);
+  color:       var(--gold);
+  width:       2.4rem;
+  height:      2.4rem;
+  cursor:      pointer;
+  font-size:   1rem;
+  line-height: 1;
+  transition:  background 0.2s, color 0.2s;
+  flex-shrink: 0;
+
+  &:hover {
+    background: var(--gold);
+    color:      var(--bg);
+  }
+}
+
+.carousel-count {
+  @include label-caps(0.72rem, 0.12em);
+  min-width: 4ch;
+  text-align: center;
+}
+
+.carousel-dots {
+  display:         flex;
+  justify-content: center;
+  gap:             0.6rem;
+  margin-top:      2rem;
+}
+
+.carousel-dot {
+  width:        7px;
+  height:       7px;
+  border-radius: 50%;
+  background:   var(--border);
+  border:       1px solid var(--gold-dim);
+  cursor:       pointer;
+  padding:      0;
+  transition:   background 0.25s;
+
+  &.active {
+    background: var(--gold);
+    border-color: var(--gold);
+  }
+}
