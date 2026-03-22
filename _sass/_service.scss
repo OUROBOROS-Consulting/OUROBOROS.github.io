@@ -220,13 +220,13 @@
 
 // ── Playlist Carousel ──────────────────────────────────────────────────────────
 .playlist-carousel {
-  width: 100%;
+  width:    100%;
+  overflow: hidden; // clips off-screen slides
 }
 
 .playlist-carousel-track {
   display:    flex;
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  overflow:   hidden; // clip slides outside the viewport
 }
 
 .playlist-carousel-slide {
