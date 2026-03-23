@@ -1,8 +1,11 @@
 ---
 layout: service
-title: Tech Consulting Services
+title: Technology Consulting
 category: Services
-lede: Technology is not a luxury, it is a bare necessity. Surviving in the modern world requires technological literacy. Thriving in the modern world demands technological fluency.
+lede: >
+  The right technology, precisely applied, removes friction and returns control to you.
+  I build bespoke solutions — not off-the-shelf recommendations — for people and organizations
+  with real problems.
 tags: [Apple Ecosystem, AI, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python]
 cta_label: Book a Session
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours. Discovery calls are always free.
