@@ -285,11 +285,13 @@
 
 .carousel-track {
   display:    flex;
+  width:      100%; // explicit — prevents Safari shrink-wrap
   transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .carousel-slide {
-  min-width: 100%;
+  flex:      0 0 100%; // don't grow, don't shrink, always exactly 1 slide wide
+  min-width: 0;        // override browser default min-width: auto on flex items
 
   // Give the chamfered card breathing room and constrain its width
   .card--formula {
