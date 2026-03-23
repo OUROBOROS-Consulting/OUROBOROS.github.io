@@ -3,9 +3,9 @@ layout: home
 title: null
 
 # Hero
-name_line1: Apostolos
-name_line2: Stamenos
-eyebrow: Technologist · Researcher · Educator · Advocate
+name_line1: OUROBOROS
+name_line2: Consulting
+eyebrow: Technology ❖ Research ❖ Pedagogy ❖ Advocacy
 tagline: >
   Bespoke solutions where technology, rigorous research, and principled advocacy meet.
 headshot: /assets/images/AS.png
@@ -35,7 +35,7 @@ stats:
  # phd_program: "Biostatistics, UMN"
 
 cta_label: Book a Session
-cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours.
+cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 72 hours.
 
 # Footer links
 github: "https://github.com/astamenos/"
