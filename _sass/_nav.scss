@@ -122,8 +122,90 @@ nav {
   &:nth-child(8) { animation-delay: 0.7s; }
 }
 
+// ── Hamburger toggle (hidden on desktop) ──────────────────────────────────────
+.nav-toggle {
+  display:        none;
+  flex-direction: column;
+  gap:            5px;
+  background:     transparent;
+  border:         none;
+  cursor:         pointer;
+  padding:        4px;
+  flex-shrink:    0;
+
+  span {
+    display:    block;
+    width:      22px;
+    height:     2px;
+    background: var(--gold);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+
+  // Animate to × when open
+  &[aria-expanded="true"] {
+    span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    span:nth-child(2) { opacity: 0; }
+    span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  }
+}
+
 // ── Responsive ───────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
-  nav { padding: 1.2rem 1.5rem; }
-  .nav-links { gap: 1.5rem; }
+  nav {
+    padding:     1rem 1.25rem;
+    flex-wrap:   wrap;      // lets .nav-links drop to a second row
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: flex; // show hamburger
+  }
+
+  .nav-links {
+    display:        none;
+    width:          100%;
+    flex-direction: column;
+    gap:            0;
+    padding:        1rem 0 0.5rem;
+    border-top:     1px solid var(--border);
+    margin-top:     0.75rem;
+
+    &.open { display: flex; }
+
+    // Strip chamfer and gold border — flat list on mobile
+    .card--formula {
+      background: transparent;
+      padding:    0;
+      clip-path:  none;
+    }
+
+    .card--formula__interior {
+      background:    transparent;
+      padding:       0.6rem 0;
+      clip-path:     none;
+      border-bottom: 1px solid var(--border);
+    }
+
+    // Links and buttons full-width, larger tap target
+    a, .nav-dropdown-toggle {
+      font-size: 0.85rem;
+      width:     100%;
+      display:   block;
+    }
+  }
+
+  // Mobile dropdowns: always show children (no hover required)
+  .nav-dropdown-menu {
+    position:       static;
+    opacity:        1;
+    pointer-events: auto;
+    transform:      none;
+    padding-left:   1rem;
+  }
+
+  // Stagger animation not needed on mobile
+  .nav-dropdown-menu .card--formula {
+    opacity: 1;
+    animation: none !important;
+  }
 }
