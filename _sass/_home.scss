@@ -49,11 +49,10 @@
   align-self: center;
 
   img {
-    display:        block;
-    width:          clamp(260px, 28vw, 440px);
-    aspect-ratio:   1 / 1;   // square — suits logo; change to 3/4 for headshot
-    object-fit:     contain; // show the full logo, don't crop
-    mix-blend-mode: screen;  // dissolves the SVG's dark background into the page
+    display:      block;
+    width:        clamp(220px, 22vw, 380px);
+    aspect-ratio: 3 / 4;
+    object-fit:   cover;
   }
 }
 
