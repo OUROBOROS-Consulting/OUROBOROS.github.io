@@ -12,7 +12,7 @@ layout: default
 
 <!-- ── Mission Hero ── -->
 <header class="svc-hero">
-  <a class="post-back" href="{{ '/' | relative_url }}">Back</a>
+  <a class="post-back" href="{{ page.back_url | default: '/' | relative_url }}">Back</a>
   <div class="svc-hero-inner">
     <div class="svc-hero-text">
       <p class="post-category">{{ page.category }}</p>
@@ -40,7 +40,7 @@ layout: default
 
 <!-- ── Service Hero ── -->
 <header class="svc-hero">
-  <a class="post-back" href="{{ '/services/' | relative_url }}">Back</a>
+  <a class="post-back" href="{{ page.back_url | default: '/services/' | relative_url }}">Back</a>
   <div class="svc-hero-inner svc-hero-inner--single">
     <div class="svc-hero-text">
       <p class="post-category">{{ page.category }}</p>
