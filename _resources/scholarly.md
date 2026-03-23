@@ -26,11 +26,11 @@ pull_quote: >
 sections:
   - id: psychopathology
     heading: Psychopathology
-    bibtex_src: /assets/Psychopathology.bib
+    bibtex_src: /assets/bib/psychopathology.bib
 
   - id: public-health
     heading: Public Health
-    bibtex_src: /assets/PublicHealth.bib
+    bibtex_src: /assets/bib/public-health.bib
 
   - id: trauma
     heading: Trauma & Recovery
