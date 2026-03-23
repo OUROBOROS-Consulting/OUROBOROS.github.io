@@ -5,9 +5,9 @@ title: null
 # Hero
 name_line1: Apostolos
 name_line2: Stamenos
-eyebrow: Technologist, Researcher, Writer, *Survivor*
+eyebrow: Technologist · Researcher · Educator · Advocate
 tagline: >
-  I empower people so that technology works *for them*, not *against them*.
+  Bespoke solutions where technology, rigorous research, and principled advocacy meet.
 headshot: /assets/images/AS.png
 headshot_alt: Apostolos Stamenos headshot
 
@@ -24,7 +24,7 @@ about_body_2: >
   My contributions were recognized with an *Employee of the Quarter Award* and *Rookie of the Year Award* from the HHS OCIO. 
   Driven to deepen my technical expertise, I pursued a Master of Statistics at North Carolina State University (2023) and I'm currently working towards my PhD in Biostatistics from the University of Minnesota School of Public Health. This academic pivot marked a transition from operational data science to rigorous statistical research.
 pull_quote: >
-  "For many people, technology is an obstacle, at best. For others, technology is a weapon of mass destruction. For a lucky few, technology is a tool of empowerment. You get to decide what role technology will play in your life."
+  "Technology is most powerful in the hands of the people institutions overlook."
 
 stats:
   years_experience: "6+"
