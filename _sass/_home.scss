@@ -84,14 +84,14 @@
   background-color:  var(--bg);
   background-image:
     repeating-linear-gradient(
-      -55deg,
-      transparent 0, transparent 14px,
-      rgba(201, 168, 76, 0.04) 14px, rgba(201, 168, 76, 0.04) 15px
+      -45deg,
+      transparent 0, transparent 16px,
+      rgba(201, 168, 76, 0.05) 16px, rgba(201, 168, 76, 0.05) 17px
     ),
     repeating-linear-gradient(
-      55deg,
-      transparent 0, transparent 14px,
-      rgba(201, 168, 76, 0.04) 14px, rgba(201, 168, 76, 0.04) 15px
+      45deg,
+      transparent 0, transparent 16px,
+      rgba(201, 168, 76, 0.05) 16px, rgba(201, 168, 76, 0.05) 17px
     );
   padding:        2.5rem 2rem;
   display:        flex;
