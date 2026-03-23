@@ -1,5 +1,12 @@
 <nav>
   <a class="nav-logo" href="{{ '/' | relative_url }}">OUROBOROS Consulting</a>
+
+  <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
   <div class="nav-links">
 
     {% for item in site.data.nav %}
