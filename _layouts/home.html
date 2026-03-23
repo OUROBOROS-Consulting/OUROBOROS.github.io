@@ -83,16 +83,34 @@ layout: default
       <p class="section-label">What I Live By</p>
       <h2 class="testimonials-heading">Values</h2>
     </div>
-  </div>
-  <div class="testimonials-grid">
-    {% for val in site.data.values %}
-    <div class="card--formula">
-      <div class="card--formula__interior">
-        <i class="{{ val.icon }}"></i>
-        <span class="stat-value">{{ val.title | markdownify }}</span>
-        <p class="card-desc">{{ val.description | markdownify }}</p>
-      </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous value">&#8592;</button>
+      <span class="carousel-count">1 / {{ site.data.values.size }}</span>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next value">&#8594;</button>
     </div>
+  </div>
+
+  <div class="carousel" aria-live="polite" aria-label="Values">
+    <div class="carousel-track">
+      {% for val in site.data.values %}
+      <div class="carousel-slide" role="group" aria-label="Value {{ forloop.index }} of {{ site.data.values.size }}">
+        <div class="card--formula">
+          <div class="card--formula__interior">
+            <i class="{{ val.icon }}"></i>
+            <span class="stat-value">{{ val.title | markdownify }}</span>
+            <p class="card-desc">{{ val.description | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="carousel-dots" role="tablist" aria-label="Value navigation">
+    {% for val in site.data.values %}
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}"
+            role="tab"
+            aria-label="Value {{ forloop.index }}"></button>
     {% endfor %}
   </div>
 </section>

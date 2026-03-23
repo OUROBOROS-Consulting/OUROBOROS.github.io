@@ -111,14 +111,18 @@ if (canvas) {
   requestAnimationFrame(drawHalo);
 }
 
-// ── Testimonials Carousel ─────────────────────────────────────────────────────
-(function () {
-  const track   = document.querySelector('#testimonials .carousel-track');
+// ── Generic Carousel ──────────────────────────────────────────────────────────
+// autoAdvance: true = 7s auto-cycle with pause-on-hover (used for testimonials)
+function initCarousel(sectionId, autoAdvance) {
+  const section = document.getElementById(sectionId);
+  if (!section) return;
+
+  const track   = section.querySelector('.carousel-track');
   if (!track) return;
 
   const slides  = Array.from(track.children);
-  const dots    = Array.from(document.querySelectorAll('.carousel-dot'));
-  const countEl = document.querySelector('.carousel-count');
+  const dots    = Array.from(section.querySelectorAll('.carousel-dot'));
+  const countEl = section.querySelector('.carousel-count');
   const total   = slides.length;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let current   = 0;
@@ -132,25 +136,22 @@ if (canvas) {
   }
 
   function startTimer() {
-    if (reduced || total <= 1) return;
+    if (!autoAdvance || reduced || total <= 1) return;
     clearInterval(timer);
     timer = setInterval(() => go(current + 1), 7000);
   }
 
-  document.querySelector('.carousel-btn--prev')
+  section.querySelector('.carousel-btn--prev')
     ?.addEventListener('click', () => { go(current - 1); startTimer(); });
-  document.querySelector('.carousel-btn--next')
+  section.querySelector('.carousel-btn--next')
     ?.addEventListener('click', () => { go(current + 1); startTimer(); });
   dots.forEach((d, i) => d.addEventListener('click', () => { go(i); startTimer(); }));
 
-  // Pause auto-advance on hover
-  const section = document.getElementById('testimonials');
-  if (section) {
+  if (autoAdvance) {
     section.addEventListener('mouseenter', () => clearInterval(timer));
     section.addEventListener('mouseleave', startTimer);
   }
 
-  // Swipe support for touch devices
   let touchStartX = 0;
   track.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend',   e => {
@@ -160,4 +161,7 @@ if (canvas) {
 
   go(0);
   startTimer();
-}());
+}
+
+initCarousel('values',       false); // manual navigation, no auto-advance
+initCarousel('testimonials', true);  // auto-advances every 7s
