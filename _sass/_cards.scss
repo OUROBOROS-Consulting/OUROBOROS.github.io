@@ -91,14 +91,14 @@ $-inner:  calc(#{$-arc} - #{$-border});
     background-color:  var(--bg3);
     background-image:
       repeating-linear-gradient(
-        -50deg,
-        transparent 0, transparent 10px,
-        rgba(201, 168, 76, 0.03) 10px, rgba(201, 168, 76, 0.03) 11px
+        -45deg,
+        transparent 0, transparent 11px,
+        rgba(201, 168, 76, 0.035) 11px, rgba(201, 168, 76, 0.035) 12px
       ),
       repeating-linear-gradient(
-        50deg,
-        transparent 0, transparent 10px,
-        rgba(201, 168, 76, 0.03) 10px, rgba(201, 168, 76, 0.03) 11px
+        45deg,
+        transparent 0, transparent 11px,
+        rgba(201, 168, 76, 0.035) 11px, rgba(201, 168, 76, 0.035) 12px
       );
     padding:    1.2rem 1.4rem;
     @include chamfer($-inner);
