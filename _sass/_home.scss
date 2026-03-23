@@ -7,7 +7,6 @@
   grid-template-rows:    1fr auto;
   align-items:     center;
   gap:             0 6rem;
-  border-bottom:   1px solid var(--border);
   position:        relative;
 }
 
@@ -56,6 +55,23 @@
   }
 }
 
+// ── Echo-chamber section divider ─────────────────────────────────────────────
+.echo-divider {
+  position:       relative;
+  height:         96px;
+  overflow:       hidden;
+  pointer-events: none;
+  user-select:    none;
+}
+
+.echo-divider__fill {
+  position:         absolute;
+  inset:            -80px -5%;
+  display:          block;
+  transform:        skewY(-3deg);
+  transform-origin: 50% 50%;
+}
+
 // ──|| STATS ||─────────────────────────────────────────────────────────────
 .stats-grid {
   display:               grid;
@@ -65,7 +81,18 @@
   margin-top:            3rem;
 }
 .stat {
-  background:     var(--bg);
+  background-color:  var(--bg);
+  background-image:
+    repeating-linear-gradient(
+      -55deg,
+      transparent 0, transparent 14px,
+      rgba(201, 168, 76, 0.04) 14px, rgba(201, 168, 76, 0.04) 15px
+    ),
+    repeating-linear-gradient(
+      55deg,
+      transparent 0, transparent 14px,
+      rgba(201, 168, 76, 0.04) 14px, rgba(201, 168, 76, 0.04) 15px
+    );
   padding:        2.5rem 2rem;
   display:        flex;
   flex-direction: column;
