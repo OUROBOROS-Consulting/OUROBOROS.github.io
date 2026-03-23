@@ -1,0 +1,40 @@
+---
+layout: default
+title: Work
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/' | relative_url }}">Back</a>
+  <div class="svc-hero-inner svc-hero-inner--single">
+    <div class="svc-hero-text">
+      <p class="post-category">Client Work</p>
+      <h1 class="svc-title">Case Studies</h1>
+      <p class="svc-lede">Selected engagements across technology, research, and advocacy.</p>
+    </div>
+    <div class="svc-hero-cta">
+      <p class="work-count">{{ site.case_studies.size }} engagements</p>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  {% if site.case_studies.size > 0 %}
+  <div class="related-grid">
+    {% assign sorted_studies = site.case_studies | sort: "date" | reverse %}
+    {% for study in sorted_studies %}
+    <a href="{{ study.url | relative_url }}" class="related-card">
+      {% if study.category %}<p class="rc-tag">{{ study.category }}</p>{% endif %}
+      <h2 class="rc-title">{{ study.title }}</h2>
+      {% if study.description %}<p class="card-desc">{{ study.description }}</p>{% endif %}
+      <span class="card-link">Read more →</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card--formula">
+    <div class="card--formula__interior">
+      <p class="card-desc">Case studies coming soon.</p>
+    </div>
+  </div>
+  {% endif %}
+</div>
