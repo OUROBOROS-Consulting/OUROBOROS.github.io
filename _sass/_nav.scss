@@ -14,11 +14,32 @@ nav {
 }
 
 .nav-logo {
-  font-family:    'Playfair Display', serif;
-  font-size:      1.9rem;
-  letter-spacing: 0.05em;
-  color:          var(--gold);
+  display:         flex;
+  align-items:     center;
+  gap:             0.6rem;
   text-decoration: none;
+  flex-shrink:     0;
+}
+
+.nav-logo-mark {
+  height:      40px;
+  width:       40px;
+  flex-shrink: 0;
+  mix-blend-mode: screen; // blends the SVG's dark background into the nav
+}
+
+.nav-logo-text {
+  font-family:    'Playfair Display', serif;
+  font-size:      1.3rem;
+  letter-spacing: 0.08em;
+  color:          var(--gold);
+  line-height:    1;
+}
+
+.nav-logo-sub {
+  font-size:      0.85em;
+  letter-spacing: 0.1em;
+  opacity:        0.7;
 }
 
 .nav-links {
@@ -156,6 +177,10 @@ nav {
     flex-wrap:   wrap;      // lets .nav-links drop to a second row
     align-items: center;
   }
+
+  .nav-logo-mark { height: 32px; width: 32px; }
+  .nav-logo-text { font-size: 1.05rem; }
+  .nav-logo-sub  { display: none; } // hide "Consulting" on small screens
 
   .nav-toggle {
     display: flex; // show hamburger

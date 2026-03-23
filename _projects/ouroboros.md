@@ -12,7 +12,7 @@ about:
   heading: 3 Years of Tragedy Summarized in a Paragraph
   body: >
     This book is a true, accurate, but also heavily redacted whistleblower memoir of my encounters with people on the antagonistic externalizing spectrum of psychopathology
-    (i.e., people you might refer to as \emph{narcissists} or \emph{sociopaths}).
+    (i.e., people you might refer to as *narcissists* or *sociopaths*).
     It covers events that took place in Minnesota from 2023 to 2026, after I moved to Minneapolis to pursue my PhD in biostatistics.
     It deals with themes of mental illness, domestic abuse, intergenerational trauma, the American Dream/Nightmare, grifters,
     wealth, science, technology, and the failures of institutions (primarily of the legal system and academia). It's a serious and timely exploration of mental illness, abuse, and society.
@@ -23,8 +23,7 @@ about:
 
 # ── Pull quote ─────────────────────────────────────────────────────────────
 pull_quote: >
-  "Institutions have failed miserably at protecting me,
-  and in many ways have only made things worse."
+  "Institutions have failed miserably at protecting me, and in many ways have only made things worse."
 
 # ── Page sections ──────────────────────────────────────────────────────────
 sections:
