@@ -17,8 +17,7 @@ about:
 
 # ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >
-  "A memorable line from the engagement — a finding, a framing, or
-  something the client said that captures the essence of the work."
+  "I always leave our sessions feeling more capable and more confident, not more dependent. He takes the time to understand your work, your goals, and your level of comfort, and then builds solutions that actually fit your life."
 
 # ── Deep-dive sections ───────────────────────────────────────────────
 sections:

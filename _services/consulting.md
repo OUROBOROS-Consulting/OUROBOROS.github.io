@@ -23,11 +23,11 @@ included:
   - title: Documentation
     description: Written summaries, guides, or SOPs where applicable, so you retain what we built together.
 policies:
-  discovery_call: Free (20 min)
-  travel_surcharge: +$25/hr for in-person outside Minneapolis metro
-  prepaid_discount: 10% off for 10+ hours booked upfront
-  nonprofit_student: Reduced rates available — ask
-  response_time: Within 48 hours
+  - item: "Discovery call: Free (20 min)"
+  - item: "Travel surcharge: +$25/hr for in-person outside Minneapolis metro"
+  - item: "Prepaid discount: 10% off for 10+ hours booked upfront"
+  - item: "Nonprofits & students: Reduced rates available — ask"
+  - item: "Response time: Within 48 hours"
 specializations:
   - Apple ecosystem & devices
   - AI tools & ethical automation
