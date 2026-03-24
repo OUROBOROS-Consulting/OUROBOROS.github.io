@@ -6,17 +6,34 @@ layout: default
 <section id="hero">
   <svg class="hero-trellis" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true">
     <defs>
-      <pattern id="trellis-bg" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-        <line x1="0"  y1="0"  x2="24" y2="24" stroke="#c9a84c" stroke-width="1"   stroke-opacity="0.15"/>
-        <line x1="24" y1="0"  x2="0"  y2="24" stroke="#c9a84c" stroke-width="1"   stroke-opacity="0.15"/>
-        <circle cx="0"  cy="0"  r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
-        <circle cx="24" cy="0"  r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
-        <circle cx="0"  cy="24" r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
-        <circle cx="24" cy="24" r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
-        <circle cx="12" cy="12" r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
-      </pattern>
+      <filter id="marble" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse">
+        <feTurbulence type="turbulence"
+                      baseFrequency="0.012 0.004"
+                      numOctaves="8"
+                      seed="12"
+                      result="raw"/>
+        <feComponentTransfer in="raw" result="banded">
+          <feFuncR type="table" tableValues="0 1 0 1 0 1 0 1 0 1 0"/>
+          <feFuncG type="table" tableValues="0 1 0 1 0 1 0 1 0 1 0"/>
+          <feFuncB type="table" tableValues="0 1 0 1 0 1 0 1 0 1 0"/>
+        </feComponentTransfer>
+        <feColorMatrix type="matrix"
+          values="0 0 0 0 0.788
+                  0 0 0 0 0.659
+                  0 0 0 0 0.298
+                  0 0 40 0 -36"
+          in="banded" result="goldVeins"/>
+        <feColorMatrix type="matrix"
+          values="0 0 0 0 0.91
+                  0 0 0 0 0.89
+                  0 0 0 0 0.87
+                  40 0 0 0 -37"
+          in="banded" result="whiteVeins"/>
+        <feBlend in="goldVeins" in2="whiteVeins" mode="screen"/>
+      </filter>
     </defs>
-    <rect width="100%" height="100%" fill="url(#trellis-bg)"/>
+    <rect width="100%" height="100%" fill="#0d0d0d"/>
+    <rect width="100%" height="100%" filter="url(#marble)"/>
   </svg>
   <div class="hero-text">
     <p class="hero-eyebrow">{{ page.eyebrow }}</p>
