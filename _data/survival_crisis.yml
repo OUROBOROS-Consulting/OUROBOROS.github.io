@@ -1,0 +1,79 @@
+- title: National Domestic Violence Hotline
+  description: >
+    The primary 24/7 resource in the United States for survivors of domestic violence, available
+    by call, chat, and text. Trained advocates connect you to local services, safety planning,
+    and emergency shelter. Call 1-800-799-7233 (SAFE) or text START to 88788.
+    If you cannot speak safely, the chat option at thehotline.org is often the fastest route.
+  link: "https://www.thehotline.org"
+
+- title: loveisrespect
+  description: >
+    Focused specifically on teen and young adult dating abuse, with advocates available 24/7
+    by call, chat, and text. The age-specific framing matters — patterns of coercive control
+    look different at 17 than at 40, and the resources that reach younger survivors have to
+    meet them where they are. Call 1-866-331-9474 or text LOVEIS to 22522.
+  link: "https://www.loveisrespect.org"
+
+- title: RAINN
+  description: >
+    The Rape, Abuse & Incest National Network runs the National Sexual Assault Hotline and
+    connects survivors to local crisis centers. Also one of the best public-facing repositories
+    for understanding how sexual violence intersects with law, institutional response, and
+    long-term recovery. Call 1-800-656-HOPE (4673) or use the online chat tool.
+  link: "https://www.rainn.org"
+
+- title: 988 Suicide & Crisis Lifeline
+  description: >
+    The US national mental health crisis line, available 24/7 by call or text to 988.
+    Relevant here because coercive control frequently produces suicidal ideation —
+    not as a fixed state but as a response to entrapment. If you are in that place,
+    this line exists for exactly that.
+  link: "https://988lifeline.org"
+
+- title: Crisis Text Line
+  description: >
+    Text-based crisis support available 24/7 in the United States, Canada, Ireland, and the UK.
+    Text HOME to 741741 in the US. Useful when calling is not safe or not possible —
+    it is discreet, does not require your voice, and the transcript gives you something
+    to return to afterward.
+  link: "https://www.crisistextline.org"
+
+- title: Safe Horizon
+  description: >
+    One of the largest victim services organizations in the United States. Runs shelters,
+    counseling programs, and legal assistance for survivors of domestic violence, sexual assault,
+    human trafficking, and stalking. Hotline: 1-800-621-HOPE (4673). Primarily serves
+    New York but maintains national resources and referrals.
+  link: "https://www.safehorizon.org"
+
+- title: National Network to End Domestic Violence (NNEDV)
+  description: >
+    The policy and advocacy backbone of the US domestic violence infrastructure, representing
+    state coalitions and local programs nationwide. Their Safety Net project specifically
+    addresses technology-facilitated abuse — surveillance, GPS tracking, account takeover —
+    with practical guidance written for survivors and advocates alike.
+  link: "https://nnedv.org"
+
+- title: Futures Without Violence
+  description: >
+    Focused on the intersection of domestic violence with healthcare, public policy, and
+    children's wellbeing. Their resources for healthcare providers are among the best
+    available — useful if you are trying to understand why a doctor, nurse, or therapist
+    did or did not intervene when they should have.
+  link: "https://www.futureswithoutviolence.org"
+
+- title: Childhelp National Child Abuse Hotline
+  description: >
+    24/7 crisis intervention, information, and referral service for child abuse.
+    Staffed by professional crisis counselors who have access to a database of 55,000+
+    emergency, social service, and support resources. Call 1-800-4-A-CHILD (422-4453).
+    Relevant if children are involved in your situation, which they often are.
+  link: "https://www.childhelp.org/hotline"
+
+- title: Coalition Against Stalkerware
+  description: >
+    A working group of security researchers, DV advocates, and tech companies that provides
+    resources for detecting and removing stalkerware — software installed on your device
+    without your knowledge to monitor calls, messages, location, and activity.
+    If your abuser seems to know things they should not know, start here.
+  link: "https://stopstalkerware.org"
