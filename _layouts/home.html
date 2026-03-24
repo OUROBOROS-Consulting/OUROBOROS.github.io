@@ -4,6 +4,20 @@ layout: default
 
 <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
 <section id="hero">
+  <svg class="hero-trellis" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true">
+    <defs>
+      <pattern id="trellis-bg" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
+        <line x1="0"  y1="0"  x2="24" y2="24" stroke="#c9a84c" stroke-width="1"   stroke-opacity="0.15"/>
+        <line x1="24" y1="0"  x2="0"  y2="24" stroke="#c9a84c" stroke-width="1"   stroke-opacity="0.15"/>
+        <circle cx="0"  cy="0"  r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
+        <circle cx="24" cy="0"  r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
+        <circle cx="0"  cy="24" r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
+        <circle cx="24" cy="24" r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
+        <circle cx="12" cy="12" r="1.8" fill="#c9a84c" fill-opacity="0.2"/>
+      </pattern>
+    </defs>
+    <rect width="100%" height="100%" fill="url(#trellis-bg)"/>
+  </svg>
   <div class="hero-text">
     <p class="hero-eyebrow">{{ page.eyebrow }}</p>
     <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
