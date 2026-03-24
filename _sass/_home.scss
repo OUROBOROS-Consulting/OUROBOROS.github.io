@@ -1,13 +1,23 @@
 // ── Hero ──────────────────────────────────────────────────────────────────────
 #hero {
-  min-height:      100vh;
-  padding:         10rem 10vw 6rem;
-  display:         grid;
+  min-height:       100vh;
+  padding:          10rem 10vw 6rem;
+  display:          grid;
   grid-template-columns: 1fr auto;
   grid-template-rows:    1fr auto;
-  align-items:     center;
-  gap:             0 6rem;
-  position:        relative;
+  align-items:      center;
+  gap:              0 6rem;
+  position:         relative;
+  z-index:          0;          // creates stacking context so .hero-trellis z-index:-1 stays inside
+  background-color: var(--bg);  // covers the body dot pattern in the hero area
+}
+
+.hero-trellis {
+  position:       absolute;
+  inset:          0;
+  z-index:        -1;
+  pointer-events: none;
+  user-select:    none;
 }
 
 .hero-text {
