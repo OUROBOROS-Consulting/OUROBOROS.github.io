@@ -1,19 +1,68 @@
 - title: Dr Ramani
-  tag: Psychology
   description: >
     The foremost public educator on narcissistic abuse. Her extensive body of work — books, lectures,
     and an indispensable YouTube channel — has given millions a vocabulary for experiences they
     couldn't previously name. An essential starting point for anyone trying to understand
     what happened to them.
-  reference:
   link: "https://doctor-ramani.com"
 
 - title: One Mom's Battle
-  tag: Psychology
   description: >
     Founded by Tina Swithin, this community supports parents navigating high-conflict co-parenting
     with personality-disordered individuals. One of the few organizations that takes the intersection
     of family law and psychopathology seriously, with practical tools for navigating a system
     that was not designed with survivors in mind.
-  reference:
   link: "https://www.onemomsbattle.com"
+
+- title: Out of the Fog
+  description: >
+    A comprehensive resource for people who have or had a close relationship with someone
+    with a personality disorder. The site catalogs the behavioral patterns — DARVO, gaslighting,
+    JADE (Justify, Argue, Defend, Explain), projection — with the kind of clinical precision
+    that helps you recognize a pattern you are living inside of. Knowing the name is
+    not the same as knowing what to do, but it is where understanding begins.
+  link: "https://outofthefog.website"
+
+- title: Lundy Bancroft — Why Does He Do That?
+  description: >
+    Bancroft's book remains the most honest account of the internal logic of abusive men —
+    why they behave the way they do, what they are actually trying to achieve, and why
+    conventional interventions like couples therapy and anger management do not work.
+    Available in most libraries. The companion website provides articles and resources
+    for survivors and those who support them.
+  link: "https://lundybancroft.com"
+
+- title: NCADV — National Coalition Against Domestic Violence
+  description: >
+    A national voice for DV survivors and advocates, with a substantial library of
+    statistics, policy briefs, and educational resources. Their "Domestic Violence
+    National Statistics" page is frequently cited in legal proceedings and institutional
+    complaints — understanding the documented scale of the problem can be important
+    context when your account is being minimized or disputed.
+  link: "https://ncadv.org"
+
+- title: Coercive Control — Evan Stark
+  description: >
+    Sociologist and forensic social worker Evan Stark defined coercive control as a distinct
+    pattern of behavior separate from physical violence. His 2007 book of the same name
+    reframed how we understand domestic abuse and has influenced law in the UK, Ireland,
+    Scotland, and several US states. Understanding coercive control as a crime of liberty —
+    not just injury — changes how you interpret your own experience.
+  link: "https://everstark.com"
+
+- title: National Domestic Violence Hotline — Is This Abuse?
+  description: >
+    The Hotline's educational section on recognizing abuse — including emotional abuse,
+    financial abuse, digital abuse, and reproductive coercion. Useful not as a crisis
+    resource but as a reference for naming what happened. The explicit catalog of tactics
+    is useful when you are trying to articulate your experience to someone who has not
+    lived it — a lawyer, a therapist, a family member, or yourself.
+  link: "https://www.thehotline.org/is-this-abuse"
+
+- title: PAVE — Promoting Awareness | Victim Empowerment
+  description: >
+    A national nonprofit working to shatter the silence around sexual violence through
+    education and advocacy. Their resources address the psychological aftermath of assault —
+    self-blame, disclosure, institutional reporting — with particular attention to the gap
+    between what survivors experience and what institutions are prepared to respond to.
+  link: "https://www.shatteringthesilence.org"

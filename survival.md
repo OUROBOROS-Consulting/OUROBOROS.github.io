@@ -64,4 +64,24 @@ sections:
         Back up everything to a location your abuser cannot access — a cloud account on an
         email address they have never seen, or a physical drive stored outside your home.
         Redundancy is not paranoia. It is how you protect the evidence that protects you.
+
+  - id: crisis
+    heading: Crisis Lines & Domestic Violence Agencies
+    data_source: survival_crisis
+
+  - id: mental-health
+    heading: Mental Health Resources
+    data_source: survival_mental
+
+  - id: legal
+    heading: Legal Resources
+    data_source: survival_legal
+
+  - id: whistleblower
+    heading: Whistleblower Protections
+    data_source: survival_whistleblower
+
+  - id: resources
+    heading: Psychology & Education
+    data_source: survival
 ---

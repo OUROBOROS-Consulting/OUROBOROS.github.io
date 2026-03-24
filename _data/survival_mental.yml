@@ -1,0 +1,66 @@
+- title: NAMI
+  description: >
+    The National Alliance on Mental Illness is the largest grassroots mental health
+    organization in the United States. Their helpline (1-800-950-NAMI / 6264) connects you
+    to local support groups, peer recovery programs, and crisis referrals. Their online
+    resources on trauma, PTSD, and complex grief are written for people in crisis,
+    not clinicians — which makes them genuinely useful.
+  link: "https://www.nami.org"
+
+- title: SAMHSA National Helpline
+  description: >
+    The Substance Abuse and Mental Health Services Administration runs a free, confidential,
+    24/7 treatment referral and information service. Call 1-800-662-HELP (4357).
+    Relevant not just for substance use but because trauma and addiction co-occur
+    at high rates in survivors of long-term coercive control. Non-judgmental and
+    available in English and Spanish.
+  link: "https://www.samhsa.gov/find-help/national-helpline"
+
+- title: National Center on Domestic Violence, Trauma & Mental Health
+  description: >
+    One of the few organizations that explicitly addresses the intersection of trauma,
+    mental health diagnoses, and the domestic violence system. Particularly useful for
+    survivors who have been psychiatrically labeled by their abuser or by a system
+    that pathologized their response to abuse rather than the abuse itself.
+  link: "https://nationalcenterdvtraumamh.org"
+
+- title: Psychology Today Therapist Finder
+  description: >
+    The most widely used directory for finding a licensed therapist in the United States,
+    with filters for specialty, insurance, cost, and modality. Search specifically for
+    therapists with experience in trauma, PTSD, or domestic violence — a general
+    practitioner without this background can inadvertently cause harm by applying
+    couples-counseling frameworks to an abuse situation.
+  link: "https://www.psychologytoday.com/us/therapists"
+
+- title: Open Path Collective
+  description: >
+    A network of therapists who offer reduced-cost sessions ($30–$80) to individuals in
+    financial hardship. Financial abuse frequently leaves survivors without the resources
+    to access conventional therapy. This directory is one of the better bridges
+    between economic constraint and clinical care.
+  link: "https://openpathcollective.org"
+
+- title: EMDRIA — EMDR Therapist Directory
+  description: >
+    EMDR (Eye Movement Desensitization and Reprocessing) is one of the most evidence-supported
+    treatments for PTSD and complex trauma. The EMDR International Association maintains
+    a directory of certified practitioners. If talk therapy has felt insufficient or
+    re-traumatizing, EMDR is worth understanding as an alternative approach.
+  link: "https://www.emdria.org/find-an-emdr-therapist"
+
+- title: C-PTSD Foundation
+  description: >
+    Complex PTSD is the clinical framework most applicable to survivors of repeated,
+    prolonged trauma — which is what coercive control produces. This organization provides
+    educational resources, peer support groups, and a growing library of content
+    specifically written for people navigating C-PTSD rather than single-incident PTSD.
+  link: "https://cptsdfoundation.org"
+
+- title: National Center for PTSD
+  description: >
+    Run by the US Department of Veterans Affairs, this is the most rigorous publicly available
+    source of information on PTSD — its mechanisms, its presentations, and the treatments
+    that have and have not been shown to work. The PTSD Coach app, developed here,
+    is one of the most practical self-help tools available for managing acute symptoms.
+  link: "https://www.ptsd.va.gov"
