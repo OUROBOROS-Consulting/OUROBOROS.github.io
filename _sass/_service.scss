@@ -59,6 +59,13 @@
   max-width: 1600px;
   margin:    0 auto;
   padding:   0 10vw 8rem;
+
+  // When foundation layout renders prose body ({{ content }}) via .post-body,
+  // the essay's 680px cap is too narrow — override it here.
+  .post-body {
+    max-width: none;
+    padding:   3.5rem 0 7rem;
+  }
 }
 
 // ── Section rows (label + content) ────────────────────────────────────────────
