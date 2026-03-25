@@ -1,0 +1,42 @@
+---
+layout: default
+title: PSAs
+permalink: /work/psas/
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/work/' | relative_url }}">All Work</a>
+  <div class="svc-hero-inner svc-hero-inner--single">
+    <div class="svc-hero-text">
+      <p class="post-category">Public Interest</p>
+      <h1 class="svc-title">PSAs</h1>
+      <p class="svc-lede">Public service announcements on domestic violence, coercive control, institutional accountability, and related causes.</p>
+    </div>
+    <div class="svc-hero-cta">
+      <p class="work-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</p>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  {% if site.psas.size > 0 %}
+  {% assign sorted_psas = site.psas | sort: "date" | reverse %}
+  <div class="related-grid">
+    {% for psa in sorted_psas %}
+    <a href="{{ psa.url | relative_url }}" class="related-card">
+      {% if psa.category %}<p class="rc-tag">{{ psa.category }}</p>{% endif %}
+      <h2 class="rc-title">{{ psa.title }}</h2>
+      {% if psa.lede %}<p class="card-desc">{{ psa.lede }}</p>{% endif %}
+      {% if psa.date %}<p class="rc-date">{{ psa.date | date: "%B %Y" }}</p>{% endif %}
+      <span class="card-link">View →</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="card--formula">
+    <div class="card--formula__interior">
+      <p class="card-desc">PSAs coming soon.</p>
+    </div>
+  </div>
+  {% endif %}
+</div>

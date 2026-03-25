@@ -37,6 +37,8 @@
   children:
     - title: Case Studies
       url: /work/
+    - title: PSAs
+      url: /work/psas/
 
 - title: Resources
   children:
