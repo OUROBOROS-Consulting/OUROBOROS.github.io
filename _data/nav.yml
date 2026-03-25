@@ -24,21 +24,12 @@
       
 - title: Projects
   children:
-    - title: Papers
-      url: /writing/papers/
-    - title: Books
-      url: /writing/books/
-    - title: Essays
-      url: /writing/essays/
-    - title: Posts
-      url: /writing/posts/
-      
-- title: Work
-  children:
     - title: Case Studies
       url: /work/
     - title: PSAs
       url: /work/psas/
+    - title: Writing
+      url: /work/writing/
 
 - title: Resources
   children:
