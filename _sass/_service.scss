@@ -225,6 +225,39 @@
 }
 
 
+// ── PSA PDF embed ─────────────────────────────────────────────────────────────
+.psa-embed-wrap {
+  max-width: 1600px;
+  margin:    0 auto;
+  padding:   0 10vw 6rem;
+}
+
+.psa-embed {
+  display:    block;
+  width:      100%;
+  height:     82vh;
+  min-height: 560px;
+  border:     1px solid var(--border);
+  background: #fff;
+}
+
+.psa-embed-fallback {
+  margin-top: 0.75rem;
+  font-size:  0.8rem;
+  color:      var(--muted);
+
+  a {
+    color:           var(--gold);
+    text-decoration: none;
+    &:hover { opacity: 0.7; }
+  }
+}
+
+@media (max-width: 768px) {
+  .psa-embed-wrap { padding: 0 6vw 4rem; }
+  .psa-embed      { height: 65vh; min-height: 400px; }
+}
+
 // ── Playlist Carousel ──────────────────────────────────────────────────────────
 .playlist-carousel {
   width:    100%;

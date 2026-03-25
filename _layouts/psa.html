@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<div id="progress-bar"></div>
+
+<!-- ── PSA Hero ──────────────────────────────────────────────────────────── -->
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/work/psas/' | relative_url }}">All PSAs</a>
+  <div class="svc-hero-inner">
+    <div class="svc-hero-text">
+      <p class="post-category">{{ page.category | default: 'PSA' }}</p>
+      <h1 class="svc-title">{{ page.title }}</h1>
+      {% if page.lede %}<p class="svc-lede">{{ page.lede }}</p>{% endif %}
+      <div class="svc-tags">
+        {% for tag in page.tags %}
+        <span class="lp-tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="svc-hero-cta">
+      <a href="{{ page.pdf | relative_url }}" download class="btn">Download PDF</a>
+      {% if page.date %}
+      <p class="svc-price">{{ page.date | date: "%B %Y" }}</p>
+      {% endif %}
+    </div>
+  </div>
+</header>
+
+<!-- ── PDF Embed ─────────────────────────────────────────────────────────── -->
+<div class="psa-embed-wrap">
+  <iframe
+    src="{{ page.pdf | relative_url }}"
+    class="psa-embed"
+    title="{{ page.title }}"
+    aria-label="{{ page.title }} — PDF document">
+  </iframe>
+  <p class="psa-embed-fallback">
+    PDF preview not available in your browser —
+    <a href="{{ page.pdf | relative_url }}" download>download it here</a>.
+  </p>
+</div>
+
+<!-- ── Optional prose body ───────────────────────────────────────────────── -->
+{% if content != "" %}
+<div class="svc-body">
+  <div class="post-body">{{ content }}</div>
+</div>
+{% endif %}
+
+<script>
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total    = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+</script>
