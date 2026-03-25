@@ -95,6 +95,4 @@ I support organizations that defend academic freedom, document institutional mis
 and provide legal and advocacy resources to faculty, staff, and students navigating
 retaliation.
 
-<!-- ACTION NETWORK EMBED ─────────────────────────────────────────────────────
-     Replace this block with your embed code from actionnetwork.org/campaigns.
-─────────────────────────────────────────────────────────────────────────── -->
+<link href='https://actionnetwork.org/css/style-embed-v3.css' rel='stylesheet' type='text/css' /><script src='https://actionnetwork.org/widgets/v6/letter/urge-minnesota-state-legislators-to-introduce-the-workplace-psychological-safety-act?format=js&source=widget'></script><div id='can-letter-area-urge-minnesota-state-legislators-to-introduce-the-workplace-psychological-safety-act' style='width: 100%'><!-- this div is the target for our HTML insertion --></div>
