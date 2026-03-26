@@ -193,17 +193,17 @@ layout: default
       <p class="section-label">Selected Work</p>
       <h2 class="work-heading">Projects &amp; Writing</h2>
     </div>
-    <span class="work-count">{{ site.projects.size }} pieces</span>
+    <span class="work-count">{{ site.case_studies.size }} pieces</span>
   </div>
   
   <div class="testimonials-grid">
-    {% for project in site.projects %}
+    {% for case in site.case_studies %}
     <div class="card--formula">
       <div class="card--formula__interior">
-        <p class="card-tag">{{ project.tag }}</p>
-        <h3 class="card-title">{{ project.title }}</h3>
-        <p class="card-desc">{{ project.description }}</p>
-        <a href="{{ project.url }}" class="card-link">Read More →</a>
+        <p class="card-tag">{{ case.tag }}</p>
+        <h3 class="card-title">{{ case.title }}</h3>
+        <p class="card-desc">{{ case.description }}</p>
+        <a href="{{ case.url }}" class="card-link">Read More →</a>
       </div>
     </div>
     {% endfor %}
