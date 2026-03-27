@@ -26,23 +26,23 @@ pull_quote: >
 sections:
   - id: general
     heading: General
-    bibtex_src: /data/survival.yml
+    data_source: survival
 
   - id: crisis
     heading: Crisis
-    bibtex_src: /data/survival_crisis.yml
+    data_source: survival_crisis
 
   - id: mental
     heading: Mental Health
-    bibtex_src: /data/survival_mental.yml
+    data_source: survival_mental
 
   - id: legal
     heading: Legal
-    bibtex_src: /data/survival_legal.yml
+    data_source: survival_legal
 
   - id: whistle
     heading: Whistleblower
-    bibtex_src: /data/survival_whistleblower.yml
+    data_source: survival_whistleblower
 
   - id: context
     heading: How to Use These
