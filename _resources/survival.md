@@ -24,29 +24,25 @@ pull_quote: >
 
 # ── Page sections ──────────────────────────────────────────────────────────
 sections:
-  - id: psychopathology
-    heading: Psychopathology
-    bibtex_src: /assets/bib/psychopathology.bib
+  - id: general
+    heading: General
+    bibtex_src: /data/survival.yml
 
-  - id: public-health
-    heading: Public Health
-    bibtex_src: /assets/bib/public-health.bib
+  - id: crisis
+    heading: Crisis
+    bibtex_src: /data/survival_crisis.yml
 
-  - id: trauma
-    heading: Trauma & Recovery
-    bibtex_src: /assets/bib/trauma.bib
+  - id: mental
+    heading: Mental Health
+    bibtex_src: /data/survival_mental.yml
 
-  - id: coercive-control
-    heading: Coercive Control
-    bibtex_src: /assets/bib/coercive-control.bib
+  - id: legal
+    heading: Legal
+    bibtex_src: /data/survival_legal.yml
 
-  - id: narcissistic-abuse
-    heading: Narcissistic Abuse
-    bibtex_src: /assets/bib/narcissistic-abuse.bib
-
-  - id: institutional-betrayal
-    heading: Institutional Betrayal
-    bibtex_src: /assets/bib/institutional-betrayal.bib
+  - id: whistle
+    heading: Whistleblower
+    bibtex_src: /data/survival_whistleblower.yml
 
   - id: context
     heading: How to Use These
