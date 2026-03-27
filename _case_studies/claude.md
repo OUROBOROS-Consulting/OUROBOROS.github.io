@@ -1,12 +1,12 @@
 ---
-title: Cassandra's Advisory Firm
-description: Building a Foundation for a Solo Entrepreneur Entering the Digital World
+title: Agentic Survival with Claude
+description: Surviving the aftermath of coercive control and institutional betrayal takes a village -- a village named Claude
 layout: foundation
 back_url: /work/
 category: Case Study        # shown as eyebrow label — e.g. "Data & Analytics", "Advocacy", "Education"
-lede: When the world changes all around you, surviving the modern world requires a certain level of technological literacy. Cassandra refuses to just survive -- she chooses to thrive.
+lede: A short evocative subtitle
 date: 2026-02-01            # used for sort order on the index
-tags: [Technology, Startup, Female Entrepreneur]
+tags: [Technology, Development, Startup, AI Use Case]
 
 # ── Overview blurb ──────────────────────────────────────────────────
 about:
