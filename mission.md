@@ -69,4 +69,28 @@ sections:
         I believe in making my work legible — to collaborators, to clients, and to the people
         whose lives it concerns. Opacity protects bad systems. Transparency is how individuals
         protect themselves, and how communities hold institutions accountable.
+
+  - id: the-name
+    heading: The Name
+    body_paragraphs:
+      - >
+        The ouroboros is one of the oldest symbols in recorded human history — a serpent
+        consuming its own tail, forming an unbroken circle. It appears in ancient Egyptian
+        iconography, in Greek alchemical texts, in Gnostic cosmology, and in Carl Jung's
+        writing on the psychology of individuation, where he read it as an image of the
+        self that destroys and regenerates itself in the same act. The word is Ancient Greek:
+        οὐροβόρος — tail-devourer.
+      - >
+        What the symbol captures, and why it names this firm, is the idea that endings and
+        beginnings are not opposite states but the same moment viewed from different angles.
+        The work I do — with survivors rebuilding after coercive control, with institutions
+        asked to account for failures they would prefer to forget, with data made to speak
+        clearly about systems designed to obscure — is predicated on exactly this: that what
+        consumed something can become the condition for its renewal. That the record of harm
+        is also the instrument of remedy.
+      - >
+        The logo renders this as a figure-eight — the lemniscate, the mathematical symbol
+        for infinity — which adds a dimension the circle alone does not carry. Not just
+        cyclical, but continuous and infinite. Not just renewal, but persistence. The loop does not
+        collapse, but keeps moving ad infinitum.
 ---
