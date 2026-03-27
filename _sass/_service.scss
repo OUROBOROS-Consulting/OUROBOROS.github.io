@@ -54,6 +54,19 @@
   letter-spacing: 0.08em;
 }
 
+// ── Service Hero Portrait ─────────────────────────────────────────────────────
+.svc-hero-portrait {
+  align-self: center;
+  flex-shrink: 0;
+
+  img {
+    display:      block;
+    width:        clamp(200px, 18vw, 340px);
+    aspect-ratio: 3 / 4;
+    object-fit:   cover;
+  }
+}
+
 // ── Service Body ──────────────────────────────────────────────────────────────
 .svc-body {
   max-width: 1600px;
@@ -221,6 +234,10 @@
   .svc-hero-inner {
     flex-direction: column;
     gap:            2rem;
+  }
+
+  .svc-hero-portrait {
+    display: none;
   }
 }
 
