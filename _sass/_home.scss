@@ -10,6 +10,11 @@
   position:         relative;
   z-index:          0;          // creates stacking context so .hero-trellis z-index:-1 stays inside
   background-color: var(--bg);  // covers the body dot pattern in the hero area
+  border: 3px solid var(--emerald); /* swap for your accent */
+  border-radius: 3mm;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path fill='none' stroke='%23C9A84C30' stroke-width='0.6' stroke-linecap='round' d='M0 0 C1 3 3 4.5 4 5 M4 5 C5 4.5 7 3 8 0 M-4 4 C-3 7 -1 8.5 0 9 M0 9 C1 8.5 3 7 4 4 M4 4 C5 7 7 8.5 8 9 M8 9 C9 8.5 11 7 12 4'/></svg>");
+
+  background-size: 8px 8px;
 }
 
 .hero-trellis {
