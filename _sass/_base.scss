@@ -16,15 +16,15 @@ $font-mono:  'JetBrains Mono', monospace;
   --bg:       #0d0d0d;
   --bg2:      #333333;
   --bg3:      #1a1a1a;
-  --gold:     #c9a84c;
+  --gold:     #A58052;
   --gold-dim: #a8863a;
   --text:     #e8e2d9;
   --muted:    #aba297;
   --border:   #2a2520;
-  --ruby:     #bc0a0a;
-  --sapphire: #4545ff;
-  --emerald:  #095732;
-  --amethyst: #ae80f7;
+  --ruby:     #fa5757;
+  --sapphire: #72a1cc;
+  --emerald:  #6A8E7F;
+  --amethyst: #a57de4;
 }
 
 // ── Base ──────────────────────────────────────────────────────────────────────
@@ -229,7 +229,7 @@ body::before {
 .spinner {
   width:            20px;
   height:           20px;
-  border:           2px solid var(--border);
+  border:           5px solid var(--border);
   border-top-color: var(--gold);
   border-radius:    50%;
   animation:        spin 0.7s linear infinite;
