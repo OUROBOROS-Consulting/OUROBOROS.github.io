@@ -41,7 +41,7 @@ layout: default
 <!-- ── Service Hero ── -->
 <header class="svc-hero">
   <a class="post-back" href="{{ page.back_url | default: '/services/' | relative_url }}">Back</a>
-  <div class="svc-hero-inner svc-hero-inner--single">
+  <div class="svc-hero-inner{% unless page.headshot %} svc-hero-inner--single{% endunless %}">
     <div class="svc-hero-text">
       <p class="post-category">{{ page.category }}</p>
       <h1 class="svc-title">{{ page.title }}</h1>
@@ -53,6 +53,11 @@ layout: default
         {% endfor %}
       </div>
     </div>
+    {% if page.headshot %}
+    <div class="svc-hero-portrait">
+      <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}"/>
+    </div>
+    {% endif %}
   </div>
 </header>
 

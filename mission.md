@@ -2,6 +2,8 @@
 layout: foundation
 title: Mission
 category: Technologist · Researcher · Advocate
+headshot: /assets/images/AS.png
+headshot_alt: Apostolos Stamenos
 lede: >
   I build tools and arguments that make systems answerable
   to the people they claim to serve.

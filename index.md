@@ -8,8 +8,6 @@ name_line2: Consulting
 eyebrow: Technology ❖ Research ❖ Pedagogy ❖ Advocacy
 tagline: >
   Bespoke solutions where technology, rigorous research, and principled advocacy meet.
-headshot: /assets/images/AS.png
-headshot_alt: Apostolos Stamenos headshot
 
 # About
 about_heading: Technology as a Source of Empowerment
