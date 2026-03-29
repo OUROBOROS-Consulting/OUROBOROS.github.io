@@ -21,7 +21,7 @@ $font-mono:  'JetBrains Mono', monospace;
   --text:     #e8e2d9;
   --muted:    #6A8E7F;
   --border:   #2a2520;
-  --ruby:     #fa5757;
+  --ruby:     #ba6868;
   --sapphire: #72a1cc;
   --emerald:  #6A8E7F;
   --amethyst: #a57de4;
@@ -116,7 +116,7 @@ body::before {
   font-size:       0.8rem;
   letter-spacing:  0.12em;
   text-transform:  uppercase;
-  color:           var(--muted);
+  color:           var(--gold);
   text-decoration: none;
   transition:      color 0.3s;
   margin-bottom:   2.5rem;
