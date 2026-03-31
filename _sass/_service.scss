@@ -218,6 +218,14 @@
   margin-bottom: 1.5rem;
 }
 
+// ── Single-column hero (no headshot) ─────────────────────────────────────────
+// Applied when page.headshot is absent — removes space-between gap so the
+// text column and CTA column sit naturally without a large void between them.
+.svc-hero-inner--single {
+  justify-content: flex-start;
+  gap:             6rem;
+}
+
 // ── Responsive ────────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   .svc-hero  { padding: 7rem 6vw 3.5rem; }

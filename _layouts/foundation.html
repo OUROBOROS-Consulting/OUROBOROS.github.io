@@ -33,7 +33,6 @@ layout: default
       {% endif %}
     </div>
   </div>
-  </div>
 </header>
 
 {% else %}
@@ -172,7 +171,7 @@ layout: default
           <div class="card--formula__interior">
             {% if section.body_paragraphs %}
             {% for paragraph in section.body_paragraphs %}
-              <p>{{ paragraph }}</p>
+              {{ paragraph | markdownify }}
             {% endfor %}
             {% elsif section.body %}
               <p>{{ section.body }}</p>
