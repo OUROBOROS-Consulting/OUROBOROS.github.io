@@ -21,7 +21,9 @@ layout: default
   </div>
   <div class="intake-masthead-rule"></div>
 
-  <div class="intake-body">
+  <!-- Note: this form requires a backend or service (e.g. Formspree) to process submissions.
+       Set action="https://formspree.io/f/YOUR_ID" method="POST" when ready. -->
+  <form class="intake-body" method="POST" action="mailto:{{ site.email }}" enctype="text/plain">
 
     <!-- CONFIDENTIAL BANNER -->
     <div class="intake-banner">
@@ -81,12 +83,12 @@ layout: default
         <div class="field-group">
           <label>How did you find us?</label>
           <div class="check-group">
-            <label class="check-item"><input type="checkbox"> Attorney referral</label>
-            <label class="check-item"><input type="checkbox"> Therapist referral</label>
-            <label class="check-item"><input type="checkbox"> Web search</label>
-            <label class="check-item"><input type="checkbox"> Social media</label>
-            <label class="check-item"><input type="checkbox"> Word of mouth</label>
-            <label class="check-item"><input type="checkbox"> Other</label>
+            <label class="check-item"><input type="checkbox" name="referral_source" value="attorney"> Attorney referral</label>
+            <label class="check-item"><input type="checkbox" name="referral_source" value="therapist"> Therapist referral</label>
+            <label class="check-item"><input type="checkbox" name="referral_source" value="web_search"> Web search</label>
+            <label class="check-item"><input type="checkbox" name="referral_source" value="social_media"> Social media</label>
+            <label class="check-item"><input type="checkbox" name="referral_source" value="word_of_mouth"> Word of mouth</label>
+            <label class="check-item"><input type="checkbox" name="referral_source" value="other"> Other</label>
           </div>
         </div>
       </div>
@@ -396,7 +398,8 @@ layout: default
     <!-- SUBMIT -->
     <div class="intake-submit">
       <p class="intake-submit-note">Questions before your consultation? Reach out at <a href="mailto:astamenos@gmail.com">astamenos@gmail.com</a> or (917) 420-3695.</p>
-      <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+      <button type="submit" class="btn">Submit Intake</button>
+      <button type="button" class="btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
 
     <!-- DOC FOOTER -->
@@ -405,7 +408,7 @@ layout: default
       <span>Information held in strict confidence</span>
     </div>
 
-  </div>
+  </form>
 </div>
 
 <style>

@@ -11,18 +11,6 @@ tagline: >
 
 # About
 about_heading: Technology as a Source of Empowerment
-about_body_1: >
-  My career began at the intersection of technology and public service, I played a pivotal role in the Federal COVID-19 response.
-  After graduating from Penn State with a B.S. in Economics in 2021, I immediately impacted the national healthcare landscape during a critical period.
-  Joining the U.S. Department of Health \& Human Services (HHS) as a Data \& Analytics Intern, I quickly advanced to an IT Specialist Data Consultant.
-about_body_2: >
-  I engineered high-throughput data pipelines and deployed machine learning models within Palantir Foundry to monitor national hospital data integrity.
-  My leadership abilities emerged early. I managed public-facing platforms like Healthdata.gov and led a technical team of 11 interns, among my many other responsibilities.
-  I was the guy that my supervisors would turn to when they needed someone to figure out how to fix whatever issue our pipelines were having.
-  My contributions were recognized with an *Employee of the Quarter Award* and *Rookie of the Year Award* from the HHS OCIO. 
-  Driven to deepen my technical expertise, I pursued a Master of Statistics at North Carolina State University (2023) and I'm currently working towards my PhD in Biostatistics from the University of Minnesota School of Public Health. This academic pivot marked a transition from operational data science to rigorous statistical research.
-pull_quote: >
-  "Technology is most powerful in the hands of the people institutions overlook."
 
 stats:
   years_experience: "6+"
@@ -34,11 +22,4 @@ stats:
 
 cta_label: Book a Session
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 72 hours.
-
-# Footer links
-github: "https://github.com/astamenos/"
-tutor: "https://www.wyzant.com/refer/tutor/86925781?utm_source=TREF&utm_campaign=GI&utm_content=TProfile&utm_medium=link"
-linkedin: "https://www.linkedin.com/in/astamenos/"
-orcid: "https://orcid.org/0009-0008-4181-7080"
-contact: "/intake"
 ---
