@@ -15,8 +15,6 @@
   children:
     - title: Bespoke Technology Solutions
       url: /services/consulting/
-    - title: Investigative Services
-      url: /services/investigative/
     - title: Education Services
       url: /services/tutoring/
     - title: Advocacy
@@ -29,7 +27,7 @@
     - title: PSAs
       url: /work/psas/
     - title: Writing
-      url: /work/writing/
+      url: /essays/
 
 - title: Resources
   children:
@@ -37,5 +35,3 @@
       url: /resources/survival/
     - title: Scholarly
       url: /resources/scholarly/
-    - title: Artistic
-      url: /resources/artistic/

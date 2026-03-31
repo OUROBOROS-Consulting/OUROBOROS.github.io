@@ -6,6 +6,19 @@
   <title>
     {% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}
   </title>
+
+  {% assign _desc = page.lede | default: page.description | default: "Bespoke solutions where technology, rigorous research, and principled advocacy meet." %}
+  <meta name="description" content="{{ _desc | strip_html | truncate: 160 }}"/>
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type"        content="website"/>
+  <meta property="og:url"         content="{{ page.url | absolute_url }}"/>
+  <meta property="og:title"       content="{% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}"/>
+  <meta property="og:description" content="{{ _desc | strip_html | truncate: 160 }}"/>
+  <meta property="og:image"       content="{{ '/assets/images/AS.png' | absolute_url }}"/>
+  <meta name="twitter:card"       content="summary"/>
+
+  <link rel="icon" href="{{ '/assets/images/ouroboros_fig8_logo.svg' | relative_url }}" type="image/svg+xml"/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -15,7 +28,7 @@
   {% include nav.html %}
   {{ content }}
   {% include footer.html %}
-  <div id="cursor-halo">
+  <div id="cursor-halo" aria-hidden="true">
     <canvas id="halo-canvas" width="200" height="200"></canvas>
   </div>
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>

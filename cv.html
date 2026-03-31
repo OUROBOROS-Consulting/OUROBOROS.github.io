@@ -1,15 +1,6 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>CV — Apostolos Stamenos, MS</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
-</head>
-<body>
 
 <header class="cv-header">
   <div>
@@ -21,9 +12,9 @@ layout: default
   <div class="cv-contact">
     <p>Minneapolis, MN</p>
     <p><a href="mailto:astamenos@gmail.com">astamenos@gmail.com</a></p>
-    <p><a href="https://github.com/astamenos" target="_blank">github.com/astamenos</a></p>
-    <p><a href="https://github.com/astamenos" target="_blank">Wyzant</a></p>
-    <a href="stamenos_cv.pdf" class="cv-download" download>↓ Download PDF</a>
+    <p><a href="https://github.com/astamenos" target="_blank" rel="noopener noreferrer">github.com/astamenos</a></p>
+    <p><a href="{{ site.tutoring_url }}" target="_blank" rel="noopener noreferrer">Wyzant</a></p>
+    <a href="{{ '/assets/files/Stamenos_cv.pdf' | relative_url }}" class="cv-download" download>↓ Download PDF</a>
   </div>
 </header>
 
@@ -74,7 +65,7 @@ layout: default
               <span class="cv-entry-title">Graduate Assistant</span>
               <span class="cv-entry-dates">Aug 2025 – Present</span>
             </div>
-            <p class="cv-entry-org"><span>University of Minnesota School of Public Health</span> · Washington, D.C.</p>
+            <p class="cv-entry-org"><span>University of Minnesota School of Public Health</span> · Minneapolis, MN</p>
             <ul class="cv-bullets">
               <li>Update online education material to ensure ADA-compliance.</li>
               <li>Grade student assignments to assess biostatistical literacy.</li>
@@ -234,7 +225,7 @@ layout: default
           <div class="cv-pub">
             <span class="ref">[2]</span>
             Neher, Aidan, Stamenos, Apostolos et al. Dec. 2026. "A Bayesian Integrative Mixed Modeling Framework for Analysis of the Multi-Site Adolescent Brain and Cognitive Development Study." <em>Data Science in Science</em> 5.1.
-            <a href="https://doi.org/10.1080/26941899.2025.2600125" target="_blank">DOI: 10.1080/26941899.2025.2600125</a>
+            <a href="https://doi.org/10.1080/26941899.2025.2600125" target="_blank" rel="noopener noreferrer">DOI: 10.1080/26941899.2025.2600125</a>
           </div>
         </div>
       </div>
@@ -244,7 +235,7 @@ layout: default
           <div class="cv-pub">
             <span class="ref">[3]</span>
             Kittle, Olivia J., […], Stamenos, Apostolos, et al. Sept. 2025. "Effects of Indoor Temperature, Relative Humidity, and Carbon Dioxide Conditions on Wean-to-Finish Swine Survivability." <em>Agriculture</em> 15.19.
-            <a href="https://doi.org/10.3390/agriculture15192050" target="_blank">DOI: 10.3390/agriculture15192050</a>
+            <a href="https://doi.org/10.3390/agriculture15192050" target="_blank" rel="noopener noreferrer">DOI: 10.3390/agriculture15192050</a>
           </div>
         </div>
       </div>
@@ -297,6 +288,3 @@ layout: default
   </div>
 
 </div><!-- /cv-body -->
-
-</body>
-</html>
