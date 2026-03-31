@@ -193,8 +193,9 @@
 #testimonials { background: var(--bg2); }
 
 // ── Card grid ─────────────────────────────────────────────────────────────────
-.cards,
-.testimonials-grid {
+// .testimonials-grid is defined in _cards.scss as repeat(2, 1fr).
+// .cards is the home-specific variant with a border-collapse gap effect.
+.cards {
   display:               grid;
   grid-template-columns: repeat(auto-fill, minmax(500px, 2fr));
   gap:                   1px; // border-collapse effect
