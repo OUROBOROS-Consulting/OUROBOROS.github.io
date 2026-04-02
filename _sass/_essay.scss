@@ -21,7 +21,7 @@
 
 .post-lede {
   font-size:     1.05rem;
-  color:         var(--muted);
+  color:         var(--subdued);
   line-height:   1.85;
   margin-bottom: 2rem;
 }
@@ -49,7 +49,7 @@
   // Body copy
   p {
     font-size:     1rem;
-    color:         var(--muted);
+    color:         var(--subdued);
     line-height:   2;
     margin-bottom: 1.6rem;
   }
@@ -63,7 +63,7 @@
     &::first-letter {
       font-family: $font-serif;
       font-size:   3.8rem;
-      font-weight: 600;
+      font-weight: 700;
       float:       left;
       line-height: 0.8;
       margin:      0.1em 0.1em 0 0;
@@ -89,7 +89,7 @@
   a {
     color:           var(--gold);
     text-decoration: none;
-    border-bottom:   1px solid var(--gold-dim);
+    border-bottom:   1px solid var(--gold-border);
     transition:      border-color 0.2s;
 
     &:hover { border-color: var(--gold); }
@@ -118,7 +118,7 @@
     margin:      2.5rem 0;
     padding:     2rem 2.5rem;
     border-left: 2px solid var(--gold);
-    background:  var(--bg2);
+    background:  var(--calloutbg);
 
     p {
       font-family: $font-serif;
@@ -147,14 +147,14 @@
   code {
     font-family: $font-mono;
     font-size:   0.82rem;
-    background:  var(--bg3);
+    background:  var(--calloutbg);
     border:      1px solid var(--border);
     padding:     0.15em 0.45em;
-    color:       var(--gold-dim);
+    color:       var(--gold);
   }
 
   pre {
-    background: var(--bg2);
+    background: var(--calloutbg);
     border:     1px solid var(--border);
     padding:    1.5rem;
     overflow-x: auto;
@@ -174,7 +174,7 @@
 // ── Sidenote ──────────────────────────────────────────────────────────────────
 .sidenote {
   font-size:    0.78rem;
-  color:        var(--muted);
+  color:        var(--subdued);
   border-left:  1px solid var(--border);
   padding-left: 1rem;
   margin:       2rem 0;
@@ -199,7 +199,7 @@ sup {
 
   p {
     font-size:     0.8rem;
-    color:         var(--muted);
+    color:         var(--subdued);
     line-height:   1.75;
     margin-bottom: 0.5rem;
     padding-left:  1.4rem;

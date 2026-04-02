@@ -11,12 +11,12 @@ $-inner:  calc(#{$-arc} - #{$-border});
 
 // ── Card component ───────────────────────────────────────────────────────────
 .card {
-  background:  var(--bg3);
+  @include elevation-standard;
   padding:     2.5rem;
   border:      1px solid var(--border);
   position:    relative;
   overflow:    hidden;
-  transition:  border-color 0.3s, transform 0.3s;
+  transition:  border-color 0.3s, transform 0.3s, box-shadow 0.3s;
 
   // Gold underline reveal on hover
   &::after {
@@ -35,6 +35,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
   &:hover {
     border-color: var(--gold);
     transform:    translateY(-4px);
+    box-shadow:   0 8px 24px var(--shadow), 0 0 20px var(--gold-ghost);
 
     &::after { transform: scaleX(1); }
   }
@@ -79,7 +80,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
     color:          var(--gold);
     font-weight:    700;
     font-size:      0.85rem;
-    font-family:    sans-serif;
+    font-family:    $font-sans;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding:        0.15rem 0.5rem;
@@ -88,8 +89,11 @@ $-inner:  calc(#{$-arc} - #{$-border});
 
   // Interior — same chamfer minus the border width so the gold edge shows
   &__interior {
-    background-color:  var(--bg3);
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path fill='none' stroke='%23C9A84C30' stroke-width='0.6' stroke-linecap='round' d='M0 0 C1 3 3 4.5 4 5 M4 5 C5 4.5 7 3 8 0 M-4 4 C-3 7 -1 8.5 0 9 M0 9 C1 8.5 3 7 4 4 M4 4 C5 7 7 8.5 8 9 M8 9 C9 8.5 11 7 12 4'/></svg>");
+    background-color:  var(--bg2);
+    background-image:
+      linear-gradient(180deg, var(--bg3) 0%, transparent 40%),
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M0 16 Q4 10 8 6 Q12 10 16 16' fill='none' stroke='%23C9A84C' stroke-width='0.8' stroke-opacity='0.18'/%3E%3Cpath d='M-8 8 Q-4 2 0 -2 Q4 2 8 8' fill='none' stroke='%23C9A84C' stroke-width='0.8' stroke-opacity='0.18'/%3E%3Cpath d='M8 8 Q12 2 16 -2 Q20 2 24 8' fill='none' stroke='%23C9A84C' stroke-width='0.8' stroke-opacity='0.18'/%3E%3C/svg%3E");
+    background-size: 100% 100%, 16px 16px;
     padding:    1.2rem 1.4rem;
     @include chamfer($-inner);
   }
@@ -104,7 +108,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 }
 
 .card-title {
-  font-family:   'Playfair Display', serif;
+  font-family:   $font-serif;
   font-size:     1.3rem;
   font-weight:   400;
   margin-bottom: 0.8rem;
@@ -112,7 +116,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 }
 
 .card-desc {
-  color:       var(--muted);
+  color:       var(--subdued);
   font-size:   0.93rem;
   line-height: 1.85;
 }
@@ -147,7 +151,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
   }
 
   .rc-title {
-    font-family:   'Playfair Display', serif;
+    font-family:   $font-serif;
     font-size:     1.05rem;
     font-weight:   400;
     color:         var(--text);
