@@ -55,6 +55,82 @@
   margin-top: 0.5rem;
 }
 
+// ── Glowing Moon ─────────────────────────────────────────────────────────────
+.moon {
+  position:      relative;
+  align-self:    center;
+  width:         clamp(180px, 18vw, 300px);
+  aspect-ratio:  1;
+  border-radius: 50%;
+  flex-shrink:   0;
+
+  // Surface: dark sphere with a subtle off-center highlight
+  background: radial-gradient(
+    circle at 38% 32%,
+    #3d3d50 0%,
+    #25252e 38%,
+    #18181f 65%,
+    #0d0d12 100%
+  );
+
+  // Layered glow — cool silver-white halo that pulses
+  box-shadow:
+    0 0 18px   4px  rgba(210, 220, 255, 0.20),
+    0 0 55px  18px  rgba(190, 205, 255, 0.15),
+    0 0 110px 45px  rgba(170, 190, 255, 0.09),
+    0 0 200px 90px  rgba(150, 175, 255, 0.05),
+    inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+
+  animation: moonGlow 5s ease-in-out infinite;
+
+  // Crater: large
+  &::before {
+    content:       '';
+    position:      absolute;
+    border-radius: 50%;
+    width:  26%;
+    height: 26%;
+    top:    20%;
+    left:   54%;
+    background: radial-gradient(circle, rgba(0,0,0,0.45) 0%, transparent 72%);
+  }
+
+  // Crater: small
+  &::after {
+    content:       '';
+    position:      absolute;
+    border-radius: 50%;
+    width:  16%;
+    height: 16%;
+    top:    56%;
+    left:   26%;
+    background: radial-gradient(circle, rgba(0,0,0,0.35) 0%, transparent 70%);
+  }
+}
+
+@keyframes moonGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 18px   4px  rgba(210, 220, 255, 0.20),
+      0 0 55px  18px  rgba(190, 205, 255, 0.15),
+      0 0 110px 45px  rgba(170, 190, 255, 0.09),
+      0 0 200px 90px  rgba(150, 175, 255, 0.05),
+      inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+  }
+  50% {
+    box-shadow:
+      0 0 28px   8px  rgba(210, 220, 255, 0.30),
+      0 0 80px  30px  rgba(190, 205, 255, 0.22),
+      0 0 160px 70px  rgba(170, 190, 255, 0.14),
+      0 0 280px 130px rgba(150, 175, 255, 0.08),
+      inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moon { animation: none; }
+}
+
 // ── Hero portrait ─────────────────────────────────────────────────────────────
 .hero-portrait {
   align-self: center;
@@ -286,8 +362,9 @@
     gap:                   3rem 0;
   }
 
-  .hero-portrait {
-    display: none; // hide portrait on mobile to avoid crowding
+  .hero-portrait,
+  .moon {
+    display: none; // hide portrait/moon on mobile to avoid crowding
   }
 
   .hero-name {
