@@ -3,6 +3,7 @@
 // Use: @include label-caps;                    → default 0.7rem / 0.3em
 // Use: @include label-caps(0.65rem, 0.28em);   → tighter variant (CV / service)
 @mixin label-caps($size: 0.75rem, $tracking: 0.22em) {
+  font-family:    $font-sans;
   font-size:      $size;
   letter-spacing: $tracking;
   text-transform: uppercase;
@@ -31,7 +32,7 @@
   position:    relative;
   padding:     2.5rem;
   border-left: 2px solid var(--gold);
-  background:  var(--bg2);
+  background:  var(--calloutbg);
 
   blockquote {
     font-family: $font-serif;
@@ -54,7 +55,7 @@
 
 // ── About body copy ───────────────────────────────────────────────────────────
 .about-body {
-  color:       var(--muted);
+  color:       var(--subdued);
   font-size:   1rem;
   line-height: 1.9;
 

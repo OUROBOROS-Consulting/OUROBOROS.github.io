@@ -1,6 +1,6 @@
 // ── SCSS font variables (single source of truth — used by every partial) ──────
-$font-serif: 'Playfair Display', serif;
-$font-sans:  'Inter', sans-serif;
+$font-serif: 'Lora', Georgia, serif;
+$font-sans:  'Inter', 'DejaVu Sans', system-ui, sans-serif;
 $font-mono:  'JetBrains Mono', monospace;
 
 // ── Reset ─────────────────────────────────────────────────────────────────────
@@ -10,21 +10,53 @@ $font-mono:  'JetBrains Mono', monospace;
   padding: 0;
 }
 
-// ── CSS custom properties ─────────────────────────────────────────────────────
+// ── CSS custom properties — Ouroboros v5 ──────────────────────────────────────
 :root {
   --label-size: 1.3rem;
-  --bg:       #0d0d0d;
-  --bg2:      #333333;
-  --bg3:      #1a1a1a;
-  --gold:     #A58052;
-  --gold-dim: #a8863a;
-  --text:     #e8e2d9;
-  --muted:    #6A8E7F;
-  --border:   #2a2520;
-  --ruby:     #ba6868;
-  --sapphire: #72a1cc;
-  --emerald:  #6A8E7F;
-  --amethyst: #a57de4;
+
+  // Surfaces
+  --bg1:       #141414;
+  --bg:        #141414;          // alias — remove after full migration
+  --bg2:       #1E1E1E;
+  --bg3:       #252525;
+  --border:    #333333;
+  --calloutbg: #2A2A2A;
+  --shadow:    #080808;
+
+  // Luminance hierarchy (all pass WCAG AA on bg1)
+  --bright:    #FFFFFF;          // 18.4:1
+  --text:      #E8E4DC;          // 14.5:1
+  --subdued:   #B0AAA0;          // 8.0:1  — AAA for normal text
+  --muted:     #999999;          // 6.5:1  — AA for normal text
+
+  // Accent: Gold
+  --gold:        #C9A84C;
+  --gold-dim:    rgba(201,168,76,0.35);
+  --gold-ghost:  rgba(201,168,76,0.12);
+  --gold-border: #a8863a;        // opaque — for visible 1px borders
+
+  // Accent: Steel (replaces sapphire)
+  --steel:       #7B8FA1;
+  --steel-dim:   rgba(123,143,161,0.35);
+  --steel-ghost: rgba(123,143,161,0.12);
+
+  // Accent: Amethyst
+  --amethyst:       #967ABB;
+  --amethyst-dim:   rgba(150,122,187,0.35);
+  --amethyst-ghost: rgba(150,122,187,0.12);
+
+  // Accent: Sage
+  --sage:       #6A8E7F;
+  --sage-dim:   rgba(106,142,127,0.35);
+  --sage-ghost: rgba(106,142,127,0.12);
+
+  // Legacy aliases
+  --ruby:      #ba6868;
+  --sapphire:  var(--steel);
+  --emerald:   var(--sage);
+
+  // Claude orange
+  --claude: #E8640A;
 }
 
 // ── Base ──────────────────────────────────────────────────────────────────────
@@ -33,9 +65,9 @@ html {
 }
 
 body {
-  background:  var(--bg);
+  background:  var(--bg1);
   color:       var(--text);
-  font-family: $font-sans;
+  font-family: $font-serif;
   font-weight: 400;
   line-height: 1.75;
 }
@@ -56,41 +88,77 @@ body {
   html { scroll-behavior: auto; }
 }
 
+// ── Scallop pattern mixins — v5 depth hierarchy ──────────────────────────────
+// Coarser = closer to viewer (elevated), finer = recedes (recessed)
+@mixin scallop-recessed($accent: 'C9A84C') {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M0 12 Q3 7.5 6 4.5 Q9 7.5 12 12' fill='none' stroke='%23#{$accent}' stroke-width='0.5' stroke-opacity='0.08'/%3E%3Cpath d='M-6 6 Q-3 1.5 0 -1.5 Q3 1.5 6 6' fill='none' stroke='%23#{$accent}' stroke-width='0.5' stroke-opacity='0.08'/%3E%3Cpath d='M6 6 Q9 1.5 12 -1.5 Q15 1.5 18 6' fill='none' stroke='%23#{$accent}' stroke-width='0.5' stroke-opacity='0.08'/%3E%3C/svg%3E");
+  background-size: 12px 12px;
+}
+
+@mixin scallop-standard($accent: 'C9A84C') {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M0 16 Q4 10 8 6 Q12 10 16 16' fill='none' stroke='%23#{$accent}' stroke-width='0.8' stroke-opacity='0.18'/%3E%3Cpath d='M-8 8 Q-4 2 0 -2 Q4 2 8 8' fill='none' stroke='%23#{$accent}' stroke-width='0.8' stroke-opacity='0.18'/%3E%3Cpath d='M8 8 Q12 2 16 -2 Q20 2 24 8' fill='none' stroke='%23#{$accent}' stroke-width='0.8' stroke-opacity='0.18'/%3E%3C/svg%3E");
+  background-size: 16px 16px;
+}
+
+@mixin scallop-elevated($accent: 'C9A84C') {
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M0 24 Q6 15 12 9 Q18 15 24 24' fill='none' stroke='%23#{$accent}' stroke-width='1.3' stroke-opacity='0.28'/%3E%3Cpath d='M-12 12 Q-6 3 0 -3 Q6 3 12 12' fill='none' stroke='%23#{$accent}' stroke-width='1.3' stroke-opacity='0.28'/%3E%3Cpath d='M12 12 Q18 3 24 -3 Q30 3 36 12' fill='none' stroke='%23#{$accent}' stroke-width='1.3' stroke-opacity='0.28'/%3E%3C/svg%3E");
+  background-size: 24px 24px;
+}
+
+// ── Elevation mixins ─────────────────────────────────────────────────────────
+@mixin elevation-recessed {
+  background-color: var(--bg1);
+  color: var(--subdued);
+  @include scallop-recessed;
+}
+
+@mixin elevation-standard {
+  background-color: var(--bg2);
+  box-shadow: 0 2px 8px var(--shadow);
+  @include scallop-standard;
+}
+
+@mixin elevation-elevated {
+  background-color: var(--bg2);
+  background-image:
+    linear-gradient(180deg, var(--bg3) 0%, transparent 40%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M0 24 Q6 15 12 9 Q18 15 24 24' fill='none' stroke='%23C9A84C' stroke-width='1.3' stroke-opacity='0.28'/%3E%3Cpath d='M-12 12 Q-6 3 0 -3 Q6 3 12 12' fill='none' stroke='%23C9A84C' stroke-width='1.3' stroke-opacity='0.28'/%3E%3Cpath d='M12 12 Q18 3 24 -3 Q30 3 36 12' fill='none' stroke='%23C9A84C' stroke-width='1.3' stroke-opacity='0.28'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 24px 24px;
+  box-shadow:
+    0 4px 16px var(--shadow),
+    0 1px 0 rgba(255,255,255,0.04) inset;
+}
+
+// ── Accent rule — luminous divider ───────────────────────────────────────────
+@mixin accent-rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 30%, var(--gold) 70%, transparent 100%);
+}
+
+// ── Body background — recessed scallop ───────────────────────────────────────
 body::before {
   content:        '';
   position:       fixed;
   inset:          0;
   z-index:        0;
   pointer-events: none;
+  @include scallop-recessed;
+}
 
-  background-image:
-    radial-gradient(
-      ellipse 8px 6px at 8px 6px,
-      transparent              60%,
-      rgba(201, 168, 76, 0.1) 60%,
-      rgba(201, 168, 76, 0.1) 75%,
-      transparent              75%
-    ),
-    radial-gradient(
-      ellipse 8px 6px at 0px 6px,
-      transparent              60%,
-      rgba(201, 168, 76, 0.1) 60%,
-      rgba(201, 168, 76, 0.1) 75%,
-      transparent              75%
-    );
-  background-size: 8px 6px;
-
-  mask-image: linear-gradient(
-    to bottom,
-    transparent 0vh,
-    transparent 110vh,
-    black       120vh
-  );
-  -webkit-mask-image: linear-gradient(
-    to bottom,
-    transparent 0vh,
-    transparent 90vh,
-    black       110vh
+// ── Vignette — stage-light edge darkening ────────────────────────────────────
+body::after {
+  content:        '';
+  position:       fixed;
+  inset:          0;
+  z-index:        1;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 40%,
+    transparent 0%,
+    rgba(8,8,8,0.35) 100%
   );
 }
 
@@ -156,14 +224,14 @@ body::before {
 
 .error-lede {
   font-size:   1rem;
-  color:       var(--muted);
+  color:       var(--subdued);
   line-height: 1.85;
   max-width:   560px;
 }
 
 .error-body {
   font-size:   0.9rem;
-  color:       var(--muted);
+  color:       var(--subdued);
   margin-top:  0.5rem;
 }
 
@@ -176,7 +244,7 @@ body::before {
 
   li {
     font-size:    0.88rem;
-    color:        var(--muted);
+    color:        var(--subdued);
     padding-left: 1.2rem;
     position:     relative;
 

@@ -28,7 +28,7 @@
 
 .svc-lede {
   font-size:     1rem;
-  color:         var(--muted);
+  color:         var(--subdued);
   line-height:   1.85;
   max-width:     560px;
   margin-bottom: 1.5rem;
@@ -106,7 +106,7 @@
   // which is what caused all the !important overrides in the old version.
   > p {
     font-size:     0.93rem;
-    color:         var(--muted);
+    color:         var(--subdued);
     line-height:   1.9;
     margin-bottom: 1rem;
 
@@ -121,7 +121,7 @@
 
     li {
       font-size:     0.9rem;
-      color:         var(--muted);
+      color:         var(--subdued);
       line-height:   1.8;
       padding-left:  1.1rem;
       position:      relative;
@@ -167,7 +167,7 @@
 
 .svc-item-desc {
   font-size:   0.85rem;
-  color:       var(--muted);
+  color:       var(--subdued);
   line-height: 1.75;
   margin:      0;
 }
@@ -176,11 +176,11 @@
 .svc-pricing-tier {
   padding:       1.5rem;
   border:        1px solid var(--border);
-  background:    var(--bg2);
+  background:    var(--calloutbg);
   margin-bottom: 1px;
   transition:    border-color 0.3s;
 
-  &:hover { border-color: var(--gold-dim); }
+  &:hover { border-color: var(--gold-border); }
 }
 
 .svc-pricing-header {
@@ -204,7 +204,7 @@
 
 .svc-pricing-notes {
   font-size:   0.8rem;
-  color:       var(--muted);
+  color:       var(--subdued);
   line-height: 1.7;
   margin:      0;
 }
@@ -212,7 +212,7 @@
 // ── CTA section ───────────────────────────────────────────────────────────────
 .svc-cta-body {
   font-size:     0.93rem;
-  color:         var(--muted);
+  color:         var(--subdued);
   line-height:   1.9;
   max-width:     480px;
   margin-bottom: 1.5rem;
@@ -347,7 +347,7 @@
 }
 
 .playlist-title {
-  font-family:   'Playfair Display', serif;
+  font-family:   $font-serif;
   font-size:     1.1rem;
   font-weight:   400;
   color:         var(--text);
