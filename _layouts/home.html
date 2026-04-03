@@ -35,9 +35,6 @@ layout: default
     <rect width="100%" height="100%" fill="#0d0d0d"/>
     <rect width="100%" height="100%" filter="url(#marble)" opacity="0.18"/>
   </svg>-->
-  <svg xmlns='http://www.w3.org/2000/svg' width="100%" height="100%" aria-hidden="true">
-    <path fill='none' stroke='%23C9A84C30' stroke-width='0.6' stroke-linecap='round' d='M0 0 C1 3 3 4.5 4 5 M4 5 C5 4.5 7 3 8 0 M-4 4 C-3 7 -1 8.5 0 9 M0 9 C1 8.5 3 7 4 4 M4 4 C5 7 7 8.5 8 9 M8 9 C9 8.5 11 7 12 4'/>
-  </svg>
   <div class="hero-text">
     <p class="hero-eyebrow">{{ page.eyebrow }}</p>
     <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
@@ -45,31 +42,15 @@ layout: default
     <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
   </div>
 
-  <div class="moon" aria-hidden="true"></div>
+  <div class="hero-emblem" aria-hidden="true">
+    <img src="/assets/images/logo.svg" alt="">
+  </div>
 
   <div class="scroll-hint">
     <div class="scroll-line"></div>
     <span>Scroll</span>
   </div>
 </section>
-
-<div class="echo-divider" aria-hidden="true">
-  <svg class="echo-divider__fill" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" preserveAspectRatio="none">
-    <defs>
-      <pattern id="trellis-hero" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-        <line x1="0" y1="0" x2="24" y2="24" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.45"/>
-        <line x1="24" y1="0" x2="0" y2="24" stroke="#c9a84c" stroke-width="1.2" stroke-opacity="0.45"/>
-        <circle cx="0"  cy="0"  r="2" fill="#c9a84c" fill-opacity="0.55"/>
-        <circle cx="24" cy="0"  r="2" fill="#c9a84c" fill-opacity="0.55"/>
-        <circle cx="0"  cy="24" r="2" fill="#c9a84c" fill-opacity="0.55"/>
-        <circle cx="24" cy="24" r="2" fill="#c9a84c" fill-opacity="0.55"/>
-        <circle cx="12" cy="12" r="2" fill="#c9a84c" fill-opacity="0.55"/>
-      </pattern>
-    </defs>
-    <rect width="100%" height="100%" fill="#141410"/>
-    <rect width="100%" height="100%" fill="url(#trellis-hero)"/>
-  </svg>
-</div>
 
 <!-- ── About / Stats ──────────────────────────────────────────────────────── -->
 <section id="about">

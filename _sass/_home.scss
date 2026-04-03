@@ -10,7 +10,7 @@
   position:         relative;
   z-index:          0;          // creates stacking context so .hero-trellis z-index:-1 stays inside
   @include elevation-elevated;
-  border: 2px solid var(--gold);
+  border: 2px solid var(--teal);
   border-radius: 3mm;
 }
 
@@ -55,80 +55,41 @@
   margin-top: 0.5rem;
 }
 
-// ── Glowing Moon ─────────────────────────────────────────────────────────────
-.moon {
-  position:      relative;
-  align-self:    center;
-  width:         clamp(180px, 18vw, 300px);
-  aspect-ratio:  1;
-  border-radius: 50%;
-  flex-shrink:   0;
+// ── Hero Emblem (logo) ───────────────────────────────────────────────────────
+.hero-emblem {
+  align-self:  center;
+  width:       clamp(200px, 20vw, 340px);
+  flex-shrink: 0;
+  filter:
+    drop-shadow(0 0 12px rgba(74, 107, 95, 0.55))
+    drop-shadow(0 0 40px rgba(74, 107, 95, 0.28))
+    drop-shadow(0 0  6px rgba(201, 168, 76, 0.35));
+  animation: emblemGlow 6s ease-in-out infinite;
 
-  // Surface: dark sphere with a subtle off-center highlight
-  background: radial-gradient(
-    circle at 38% 32%,
-    #adadbb 0%,
-    #5e5e78 38%,
-    #6c6c93 65%,
-    #0d0d12 100%
-  );
-
-  // Layered glow — cool silver-white halo that pulses
-  box-shadow:
-    0 0 18px   4px  rgba(210, 220, 255, 0.20),
-    0 0 55px  18px  rgba(190, 205, 255, 0.15),
-    0 0 110px 45px  rgba(170, 190, 255, 0.09),
-    0 0 200px 90px  rgba(150, 175, 255, 0.05),
-    inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
-
-  animation: moonGlow 5s ease-in-out infinite;
-
-  // Crater: large
-  &::before {
-    content:       '';
-    position:      absolute;
-    border-radius: 50%;
-    width:  26%;
-    height: 26%;
-    top:    20%;
-    left:   54%;
-    background: radial-gradient(circle, rgba(0,0,0,0.45) 0%, transparent 72%);
-  }
-
-  // Crater: small
-  &::after {
-    content:       '';
-    position:      absolute;
-    border-radius: 50%;
-    width:  16%;
-    height: 16%;
-    top:    56%;
-    left:   26%;
-    background: radial-gradient(circle, rgba(0,0,0,0.35) 0%, transparent 70%);
+  img {
+    display: block;
+    width:   100%;
+    height:  auto;
   }
 }
 
-@keyframes moonGlow {
+@keyframes emblemGlow {
   0%, 100% {
-    box-shadow:
-      0 0 18px   4px  rgba(210, 220, 255, 0.20),
-      0 0 55px  18px  rgba(190, 205, 255, 0.15),
-      0 0 110px 45px  rgba(170, 190, 255, 0.09),
-      0 0 200px 90px  rgba(150, 175, 255, 0.05),
-      inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+    filter:
+      drop-shadow(0 0 12px rgba(74, 107, 95, 0.55))
+      drop-shadow(0 0 40px rgba(74, 107, 95, 0.28))
+      drop-shadow(0 0  6px rgba(201, 168, 76, 0.35));
   }
   50% {
-    box-shadow:
-      0 0 28px   8px  rgba(210, 220, 255, 0.30),
-      0 0 80px  30px  rgba(190, 205, 255, 0.22),
-      0 0 160px 70px  rgba(170, 190, 255, 0.14),
-      0 0 280px 130px rgba(150, 175, 255, 0.08),
-      inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+    filter:
+      drop-shadow(0 0 20px rgba(74, 107, 95, 0.75))
+      drop-shadow(0 0 65px rgba(74, 107, 95, 0.40))
+      drop-shadow(0 0 12px rgba(201, 168, 76, 0.55));
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .moon { animation: none; }
+  .hero-emblem { animation: none; }
 }
 
 // ── Hero portrait ─────────────────────────────────────────────────────────────
@@ -141,23 +102,6 @@
     aspect-ratio: 3 / 4;
     object-fit:   cover;
   }
-}
-
-// ── Echo-chamber section divider ─────────────────────────────────────────────
-.echo-divider {
-  position:       relative;
-  height:         96px;
-  overflow:       hidden;
-  pointer-events: none;
-  user-select:    none;
-}
-
-.echo-divider__fill {
-  position:         absolute;
-  inset:            -80px -5%;
-  display:          block;
-  transform:        skewY(-3deg);
-  transform-origin: 50% 50%;
 }
 
 // ──|| STATS ||─────────────────────────────────────────────────────────────
@@ -363,8 +307,8 @@
   }
 
   .hero-portrait,
-  .moon {
-    display: none; // hide portrait/moon on mobile to avoid crowding
+  .hero-emblem {
+    display: none; // hide portrait/emblem on mobile to avoid crowding
   }
 
   .hero-name {

@@ -50,6 +50,11 @@ $font-mono:  'JetBrains Mono', monospace;
   --sage-dim:   rgba(106,142,127,0.35);
   --sage-ghost: rgba(106,142,127,0.12);
 
+  // Accent: Teal (logo hex frame colour)
+  --teal:       #4a6b5f;
+  --teal-dim:   rgba(74,107,95,0.35);
+  --teal-ghost: rgba(74,107,95,0.12);
+
   // Legacy aliases
   --ruby:      #ba6868;
   --sapphire:  var(--steel);
