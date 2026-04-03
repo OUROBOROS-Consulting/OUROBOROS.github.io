@@ -5,6 +5,50 @@ layout: default
 <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
 <section id="hero">
 
+  <!-- ── Chain border ── -->
+  <svg class="hero-chain-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <!-- Horizontal tile: two parallelograms forming an S-curve chain link (18×9px) -->
+      <pattern id="hcb-h" patternUnits="userSpaceOnUse" width="18" height="9">
+        <polygon points="0,7 3,9 9,2 6,0"    fill="var(--gold)"/>
+        <polygon points="9,0 12,2 18,9 15,7" fill="var(--gold)"/>
+        <animateTransform attributeName="patternTransform" type="translate"
+                          from="0 0" to="18 0" dur="3s" repeatCount="indefinite"/>
+      </pattern>
+      <!-- Bottom strip flows left (counter direction) -->
+      <pattern id="hcb-hr" patternUnits="userSpaceOnUse" width="18" height="9">
+        <polygon points="0,7 3,9 9,2 6,0"    fill="var(--gold)"/>
+        <polygon points="9,0 12,2 18,9 15,7" fill="var(--gold)"/>
+        <animateTransform attributeName="patternTransform" type="translate"
+                          from="0 0" to="-18 0" dur="3s" repeatCount="indefinite"/>
+      </pattern>
+      <!-- Vertical tile: 90° CW rotation of horizontal tile (9×18px) -->
+      <pattern id="hcb-v" patternUnits="userSpaceOnUse" width="9" height="18">
+        <polygon points="2,0 0,3 7,9 9,6"    fill="var(--gold)"/>
+        <polygon points="9,9 7,12 0,18 2,15" fill="var(--gold)"/>
+        <animateTransform attributeName="patternTransform" type="translate"
+                          from="0 0" to="0 18" dur="3s" repeatCount="indefinite"/>
+      </pattern>
+      <!-- Left strip flows up (counter direction) -->
+      <pattern id="hcb-vr" patternUnits="userSpaceOnUse" width="9" height="18">
+        <polygon points="2,0 0,3 7,9 9,6"    fill="var(--gold)"/>
+        <polygon points="9,9 7,12 0,18 2,15" fill="var(--gold)"/>
+        <animateTransform attributeName="patternTransform" type="translate"
+                          from="0 0" to="0 -18" dur="3s" repeatCount="indefinite"/>
+      </pattern>
+    </defs>
+    <!-- Strips (positioned via CSS geometry properties) -->
+    <rect class="hcb-strip hcb-strip--top"    fill="url(#hcb-h)"/>
+    <rect class="hcb-strip hcb-strip--bottom" fill="url(#hcb-hr)"/>
+    <rect class="hcb-strip hcb-strip--right"  fill="url(#hcb-v)"/>
+    <rect class="hcb-strip hcb-strip--left"   fill="url(#hcb-vr)"/>
+    <!-- Corner fills to cover the strip intersections cleanly -->
+    <rect class="hcb-corner hcb-corner--tl"/>
+    <rect class="hcb-corner hcb-corner--tr"/>
+    <rect class="hcb-corner hcb-corner--bl"/>
+    <rect class="hcb-corner hcb-corner--br"/>
+  </svg>
+
   <!-- ── Column decorations ── -->
   <div class="hero-column hero-column--left" aria-hidden="true">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 900" preserveAspectRatio="none"

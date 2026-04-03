@@ -10,8 +10,6 @@
   position:         relative;
   z-index:          0;
   @include elevation-elevated;
-  border:     2px solid var(--teal);
-  border-radius: 3mm;
   box-shadow:
     0 0 60px  rgba(74, 107, 95, 0.13),
     0 0 120px rgba(74, 107, 95, 0.06),
@@ -153,6 +151,42 @@
     aspect-ratio: 3 / 4;
     object-fit:   cover;
   }
+}
+
+// ── Hero chain border ─────────────────────────────────────────────────────────
+// SVG absolutely fills the hero. Four chain-link pattern strips run clockwise:
+// top→right, right→down, bottom→left, left→up (S-curve parallelogram pairs).
+// CSS geometry properties (x/y/width/height with calc) require SVG 2 support —
+// supported in Chrome 88+, Firefox 72+, Safari 15.4+.
+.hero-chain-svg {
+  position:       absolute;
+  inset:          0;
+  width:          100%;
+  height:         100%;
+  pointer-events: none;
+  z-index:        1;
+  opacity:        0.6;
+}
+
+.hcb-strip {
+  &--top    { x: 0;                y: 0;                width: 100%; height: 9px;  }
+  &--bottom { x: 0;                y: calc(100% - 9px); width: 100%; height: 9px;  }
+  &--right  { x: calc(100% - 9px); y: 0;                width: 9px;  height: 100%; }
+  &--left   { x: 0;                y: 0;                width: 9px;  height: 100%; }
+}
+
+.hcb-corner {
+  fill:   var(--gold);
+  width:  9px;
+  height: 9px;
+  &--tl { x: 0;                y: 0;                }
+  &--tr { x: calc(100% - 9px); y: 0;                }
+  &--bl { x: 0;                y: calc(100% - 9px); }
+  &--br { x: calc(100% - 9px); y: calc(100% - 9px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-chain-svg { display: none; }
 }
 
 // ──|| STATS ||─────────────────────────────────────────────────────────────
