@@ -28,9 +28,13 @@
   width:          clamp(52px, 5.5vw, 84px);
   pointer-events: none;
   z-index:        0;
-  color:          var(--teal);
-  opacity:        0.18;
-  filter:         drop-shadow(0 0 4px rgba(74, 107, 95, 0.45));
+  // Cream stroke (matches pawn fill) with teal glow — light against dark,
+  // same logic as the pawn being visible on the dark background.
+  color:          var(--text);
+  opacity:        0.28;
+  filter:
+    drop-shadow(0 0 3px rgba(74, 107, 95, 0.6))
+    drop-shadow(0 0 8px rgba(74, 107, 95, 0.3));
   animation:      columnGlow 6s ease-in-out infinite;
 
   svg {
@@ -42,18 +46,22 @@
   &--left  { left:  1.25rem; }
   &--right {
     right:     1.25rem;
-    transform: scaleX(-1); // mirror — columns lean symmetrically outward
+    transform: scaleX(-1);
   }
 }
 
 @keyframes columnGlow {
   0%, 100% {
-    opacity: 0.18;
-    filter:  drop-shadow(0 0 4px rgba(74, 107, 95, 0.45));
+    opacity: 0.28;
+    filter:
+      drop-shadow(0 0 3px rgba(74, 107, 95, 0.6))
+      drop-shadow(0 0 8px rgba(74, 107, 95, 0.3));
   }
   50% {
-    opacity: 0.28;
-    filter:  drop-shadow(0 0 9px rgba(74, 107, 95, 0.65));
+    opacity: 0.42;
+    filter:
+      drop-shadow(0 0 5px rgba(74, 107, 95, 0.8))
+      drop-shadow(0 0 14px rgba(74, 107, 95, 0.45));
   }
 }
 
