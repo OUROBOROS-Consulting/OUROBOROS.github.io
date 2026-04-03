@@ -18,8 +18,8 @@
 <filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="73.5646" id="Filter_5" width="60.3649" x="225.821" y="92.7003">
 <feDropShadow dx="0.00771496" dy="4.51741" flood-color="#b1935d" flood-opacity="1" in="SourceGraphic" result="Shadow" stdDeviation="0"/>
 </filter>
-<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="138.621" id="Filter_6" width="139.449" x="186.212" y="251.701">
-<feGaussianBlur in="SourceGraphic" result="Blur" stdDeviation="1.5356"/>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="160" id="Filter_6" width="160" x="176" y="241">
+<feDropShadow dx="0" dy="0" flood-color="#000000" flood-opacity="0.45" in="SourceGraphic" result="Shadow" stdDeviation="2.5"/>
 </filter>
 <path d="M256.208 365.964C256.21 365.963 256.213 365.963 256.215 365.964L263.853 371.09C263.855 371.091 263.856 371.093 263.856 371.096L263.856 381.349C263.856 381.352 263.855 381.354 263.853 381.355L256.215 386.481C256.213 386.482 256.21 386.482 256.208 386.481L248.57 381.355C248.568 381.354 248.567 381.352 248.567 381.349L248.567 371.096C248.567 371.093 248.568 371.091 248.57 371.09L256.208 365.964Z" id="Fill"/>
 <path d="M56.5254 116.169L78.6956 128.969L78.6956 154.569L56.5254 167.369L34.3551 154.569L34.3551 128.969L56.5254 116.169Z" id="Fill_2"/>
@@ -52,8 +52,8 @@
 <path d="M285.057 362.513L290.205 357.728L288.818 351.021L282.283 349.098L277.135 353.883L278.522 360.59L285.057 362.513Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.00223" vectornator:layerName="Hex R 1"/>
 <path d="M307.284 331.299L316.02 329.928L321.176 337.338L317.596 346.119L308.86 347.49L303.704 340.08L307.284 331.299Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Hex R"/>
 <path d="M207.448 330.678L223.432 293.882L237.627 306.46L207.448 330.678Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Polygon 5"/>
-<path d="M228.035 347.178L245.582 310.952L232.387 303.868L228.035 347.178Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="0.849136" vectornator:layerName="Polygon 6"/>
-<path d="M282.816 347.758L281.077 304.127L267.511 310.112L282.816 347.758Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="0.849136" vectornator:layerName="Polygon 7"/>
+<path d="M228.035 347.178L245.582 310.952L232.387 303.868L228.035 347.178Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.4" vectornator:layerName="Polygon 6"/>
+<path d="M282.816 347.758L281.077 304.127L267.511 310.112L282.816 347.758Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.4" vectornator:layerName="Polygon 7"/>
 <path d="M304.614 330.603L274.407 306.611L288.57 293.914L304.614 330.603Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Polygon 3"/>
 <path d="M256.211 365.962L243.597 310.519L268.826 310.519L256.211 365.962Z" fill="#4a6b5f" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Polygon 1"/>
 </g>
