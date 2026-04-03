@@ -9,11 +9,9 @@
   gap:              0 6rem;
   position:         relative;
   z-index:          0;          // creates stacking context so .hero-trellis z-index:-1 stays inside
-  background-color: var(--bg);  // covers the body dot pattern in the hero area
-  border: 2px solid var(--gold); /* swap for your accent */
+  @include elevation-elevated;
+  border: 2px solid var(--gold);
   border-radius: 3mm;
-  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='8' height='8'><path fill='none' stroke='%23C9A84C30' stroke-width='0.6' stroke-linecap='round' d='M0 0 C1 3 3 4.5 4 5 M4 5 C5 4.5 7 3 8 0 M-4 4 C-3 7 -1 8.5 0 9 M0 9 C1 8.5 3 7 4 4 M4 4 C5 7 7 8.5 8 9 M8 9 C9 8.5 11 7 12 4'/></svg>");
-  background-size: 8px 8px;
 }
 
 .hero-trellis {
@@ -37,7 +35,7 @@
 .hero-name {
   font-family:   $font-serif;
   font-size:     clamp(3.5rem, 10vw, 8rem);
-  font-weight:   600;
+  font-weight:   500;
   line-height:   0.95;
   letter-spacing: -0.01em;
   color:         var(--text);
@@ -45,7 +43,7 @@
 
 .hero-tagline {
   font-size:   1.05rem;
-  color:       var(--muted);
+  color:       var(--subdued);
   line-height: 1.85;
   max-width:   520px;
 
@@ -55,6 +53,82 @@
 
 .hero-cta {
   margin-top: 0.5rem;
+}
+
+// ── Glowing Moon ─────────────────────────────────────────────────────────────
+.moon {
+  position:      relative;
+  align-self:    center;
+  width:         clamp(180px, 18vw, 300px);
+  aspect-ratio:  1;
+  border-radius: 50%;
+  flex-shrink:   0;
+
+  // Surface: dark sphere with a subtle off-center highlight
+  background: radial-gradient(
+    circle at 38% 32%,
+    #3d3d50 0%,
+    #25252e 38%,
+    #18181f 65%,
+    #0d0d12 100%
+  );
+
+  // Layered glow — cool silver-white halo that pulses
+  box-shadow:
+    0 0 18px   4px  rgba(210, 220, 255, 0.20),
+    0 0 55px  18px  rgba(190, 205, 255, 0.15),
+    0 0 110px 45px  rgba(170, 190, 255, 0.09),
+    0 0 200px 90px  rgba(150, 175, 255, 0.05),
+    inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+
+  animation: moonGlow 5s ease-in-out infinite;
+
+  // Crater: large
+  &::before {
+    content:       '';
+    position:      absolute;
+    border-radius: 50%;
+    width:  26%;
+    height: 26%;
+    top:    20%;
+    left:   54%;
+    background: radial-gradient(circle, rgba(0,0,0,0.45) 0%, transparent 72%);
+  }
+
+  // Crater: small
+  &::after {
+    content:       '';
+    position:      absolute;
+    border-radius: 50%;
+    width:  16%;
+    height: 16%;
+    top:    56%;
+    left:   26%;
+    background: radial-gradient(circle, rgba(0,0,0,0.35) 0%, transparent 70%);
+  }
+}
+
+@keyframes moonGlow {
+  0%, 100% {
+    box-shadow:
+      0 0 18px   4px  rgba(210, 220, 255, 0.20),
+      0 0 55px  18px  rgba(190, 205, 255, 0.15),
+      0 0 110px 45px  rgba(170, 190, 255, 0.09),
+      0 0 200px 90px  rgba(150, 175, 255, 0.05),
+      inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+  }
+  50% {
+    box-shadow:
+      0 0 28px   8px  rgba(210, 220, 255, 0.30),
+      0 0 80px  30px  rgba(190, 205, 255, 0.22),
+      0 0 160px 70px  rgba(170, 190, 255, 0.14),
+      0 0 280px 130px rgba(150, 175, 255, 0.08),
+      inset 0 0 45px  14px rgba(0, 0, 0, 0.60);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .moon { animation: none; }
 }
 
 // ── Hero portrait ─────────────────────────────────────────────────────────────
@@ -95,18 +169,8 @@
   margin-top:            3rem;
 }
 .stat {
-  background-color:  var(--bg);
-  background-image:
-    repeating-linear-gradient(
-      -45deg,
-      transparent 0, transparent 16px,
-      rgba(201, 168, 76, 0.05) 16px, rgba(201, 168, 76, 0.05) 17px
-    ),
-    repeating-linear-gradient(
-      45deg,
-      transparent 0, transparent 16px,
-      rgba(201, 168, 76, 0.05) 16px, rgba(201, 168, 76, 0.05) 17px
-    );
+  background-color: var(--bg1);
+  @include scallop-standard;
   padding:        2.5rem 2rem;
   display:        flex;
   flex-direction: column;
@@ -160,8 +224,14 @@
   justify-content: space-between;
   align-items:     flex-end;
   padding-bottom:  2.5rem;
-  border-bottom:   1px solid var(--border);
   margin-bottom:   3rem;
+
+  &::after {
+    content: '';
+    display: block;
+    margin-top: 2.5rem;
+    @include accent-rule;
+  }
 }
 
 .work-heading,
@@ -190,7 +260,10 @@
 
 // Alternate background for rhythm
 #values,
-#testimonials { background: var(--bg2); }
+#testimonials {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+}
 
 // ── Card grid ─────────────────────────────────────────────────────────────────
 // .testimonials-grid is defined in _cards.scss as repeat(2, 1fr).
@@ -204,7 +277,7 @@
 
 // ── Card ──────────────────────────────────────────────────────────────────────
 .card {
-  background: var(--bg);
+  background: var(--bg1);
   padding:    2rem 2rem 2.5rem;
   display:    flex;
   flex-direction: column;
@@ -238,7 +311,7 @@
 
 .card-desc {
   font-size:   0.88rem;
-  color:       var(--muted);
+  color:       var(--subdued);
   line-height: 1.85;
   flex-grow:   1; // pushes card-link to bottom
 
@@ -289,8 +362,9 @@
     gap:                   3rem 0;
   }
 
-  .hero-portrait {
-    display: none; // hide portrait on mobile to avoid crowding
+  .hero-portrait,
+  .moon {
+    display: none; // hide portrait/moon on mobile to avoid crowding
   }
 
   .hero-name {
@@ -361,7 +435,7 @@
 
   &:hover {
     background: var(--gold);
-    color:      var(--bg);
+    color:      var(--bg1);
   }
 }
 

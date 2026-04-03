@@ -8,7 +8,7 @@ nav {
   display:         flex;
   justify-content: space-between;
   align-items:     center;
-  background:      rgba(13, 13, 13, 0.85);
+  background:      rgba(20, 20, 20, 0.85);
   backdrop-filter: blur(12px);
   border-bottom:   1px solid var(--border);
 }
@@ -31,7 +31,7 @@ nav {
 }
 
 .nav-logo-text {
-  font-family:    'Playfair Display', serif;
+  font-family:    $font-serif;
   font-size:      1.6rem;
   letter-spacing: 0.06em;
   color:          var(--gold);
@@ -65,7 +65,7 @@ nav {
   background:     transparent;
   border:         none;
   color:          var(--muted);
-  font-family:    'Inter', sans-serif;
+  font-family:    $font-sans;
   font-size:      var(--label-size);
   letter-spacing: 0.12em;
   text-transform: uppercase;
