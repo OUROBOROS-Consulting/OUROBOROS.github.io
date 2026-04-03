@@ -110,9 +110,9 @@
   width:       clamp(200px, 20vw, 340px);
   flex-shrink: 0;
   filter:
-    drop-shadow(0 0 12px rgba(74, 107, 95, 0.55))
-    drop-shadow(0 0 40px rgba(74, 107, 95, 0.28))
-    drop-shadow(0 0  6px rgba(201, 168, 76, 0.35));
+    drop-shadow(0 0  6px rgba(74, 107, 95, 0.30))
+    drop-shadow(0 0 20px rgba(74, 107, 95, 0.12))
+    drop-shadow(0 0  4px rgba(201, 168, 76, 0.18));
   animation: emblemGlow 6s ease-in-out infinite;
 
   img {
@@ -125,15 +125,15 @@
 @keyframes emblemGlow {
   0%, 100% {
     filter:
-      drop-shadow(0 0 12px rgba(74, 107, 95, 0.55))
-      drop-shadow(0 0 40px rgba(74, 107, 95, 0.28))
-      drop-shadow(0 0  6px rgba(201, 168, 76, 0.35));
+      drop-shadow(0 0  6px rgba(74, 107, 95, 0.30))
+      drop-shadow(0 0 20px rgba(74, 107, 95, 0.12))
+      drop-shadow(0 0  4px rgba(201, 168, 76, 0.18));
   }
   50% {
     filter:
-      drop-shadow(0 0 20px rgba(74, 107, 95, 0.75))
-      drop-shadow(0 0 65px rgba(74, 107, 95, 0.40))
-      drop-shadow(0 0 12px rgba(201, 168, 76, 0.55));
+      drop-shadow(0 0 10px rgba(74, 107, 95, 0.45))
+      drop-shadow(0 0 32px rgba(74, 107, 95, 0.20))
+      drop-shadow(0 0  6px rgba(201, 168, 76, 0.28));
   }
 }
 
