@@ -14,14 +14,6 @@
   border-radius: 3mm;
 }
 
-.hero-trellis {
-  position:       absolute;
-  inset:          0;
-  z-index:        -1;
-  pointer-events: none;
-  user-select:    none;
-}
-
 .hero-text {
   display:        flex;
   flex-direction: column;
