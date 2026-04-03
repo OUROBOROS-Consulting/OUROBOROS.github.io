@@ -1,0 +1,36 @@
+---
+layout: default
+title: Services
+permalink: /services/
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
+  <div class="svc-hero-inner svc-hero-inner--single">
+    <div class="svc-hero-text">
+      <p class="post-category">Services</p>
+      <h1 class="svc-title">What I Offer</h1>
+      <p class="svc-lede">Bespoke technology solutions, rigorous instruction, and precise institutional navigation — for people and organizations with real problems.</p>
+    </div>
+    <div class="svc-hero-cta">
+      <a href="{{ '/intake' | relative_url }}" class="btn">Book a Consultation</a>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  <div class="related-grid">
+
+    {% assign sorted_services = site.services | sort: "title" %}
+    {% for service in sorted_services %}
+    <a href="{{ service.url | relative_url }}" class="related-card">
+      <p class="rc-tag">{{ service.category | default: 'Services' }}</p>
+      <h2 class="rc-title">{{ service.title }}</h2>
+      {% if service.lede %}<p class="card-desc">{{ service.lede }}</p>{% endif %}
+      {% if service.price %}<p class="svc-price">{{ service.price }}</p>{% endif %}
+      <span class="card-link">Learn more →</span>
+    </a>
+    {% endfor %}
+
+  </div>
+</div>

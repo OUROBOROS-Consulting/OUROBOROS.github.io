@@ -1,5 +1,8 @@
 - title: About
+  url: /about/
   children:
+    - title: Overview
+      url: /about/
     - title: Mission
       url: /mission
     - title: Survival
@@ -12,16 +15,22 @@
       url: /cv
 
 - title: Services
+  url: /services/
   children:
+    - title: Overview
+      url: /services/
     - title: Bespoke Technology Solutions
       url: /services/consulting/
     - title: Education Services
       url: /services/tutoring/
     - title: Advocacy
       url: /services/advocacy/
-      
+
 - title: Projects
+  url: /projects/
   children:
+    - title: Overview
+      url: /projects/
     - title: Case Studies
       url: /work/
     - title: PSAs
@@ -30,7 +39,10 @@
       url: /essays/
 
 - title: Resources
+  url: /resources/
   children:
+    - title: Overview
+      url: /resources/
     - title: Survival
       url: /resources/survival/
     - title: Scholarly

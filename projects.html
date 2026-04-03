@@ -1,0 +1,48 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
+  <div class="svc-hero-inner svc-hero-inner--single">
+    <div class="svc-hero-text">
+      <p class="post-category">Projects</p>
+      <h1 class="svc-title">Work &amp; Writing</h1>
+      <p class="svc-lede">Case studies, public service announcements, and essays — across technology, research, and advocacy.</p>
+    </div>
+    <div class="svc-hero-cta">
+      <p class="work-count">{{ site.case_studies.size | plus: site.psas.size }} pieces</p>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  <div class="related-grid">
+
+    <a href="{{ '/work/' | relative_url }}" class="related-card">
+      <p class="rc-tag">Client Work</p>
+      <h2 class="rc-title">Case Studies</h2>
+      <p class="card-desc">Selected engagements across technology consulting, research, and advocacy — from federal COVID response to elder abuse intervention.</p>
+      <span class="work-count">{{ site.case_studies.size }} engagements</span>
+      <span class="card-link">View all →</span>
+    </a>
+
+    <a href="{{ '/work/psas/' | relative_url }}" class="related-card">
+      <p class="rc-tag">Public Interest</p>
+      <h2 class="rc-title">PSAs</h2>
+      <p class="card-desc">Public service announcements on technology, psychopathology, coercive control, and related topics — written for general audiences.</p>
+      <span class="work-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</span>
+      <span class="card-link">View all →</span>
+    </a>
+
+    <a href="{{ '/essays/' | relative_url }}" class="related-card">
+      <p class="rc-tag">Writing</p>
+      <h2 class="rc-title">Essays</h2>
+      <p class="card-desc">Longer-form writing on systems, accountability, and the places where data meets human stakes.</p>
+      <span class="card-link">Read more →</span>
+    </a>
+
+  </div>
+</div>
