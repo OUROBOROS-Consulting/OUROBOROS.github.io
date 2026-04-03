@@ -31,24 +31,30 @@ sections:
     heading: Antagonism
     body_paragraphs:
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        The people at the center of this story share a recognizable pattern — not a diagnosis, but a profile.
+        They present as exceptionally charming, capable, and often accomplished. They construct relationships
+        through idealization and discard. They lie not occasionally but constitutively: the lie is the primary
+        medium through which they interact with the world.
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        Understanding antagonism as a psychological category — distinct from ordinary selfishness or
+        bad judgment — is foundational to understanding everything that follows. When you apply
+        normal-person logic to someone operating on antagonistic logic, you will consistently
+        mispredict their behavior. This book attempts to close that gap.
 
   - id: trauma
     heading: Trauma
     body_paragraphs:
       - >
-        Dolorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dignissim ultricies urna sit amet bibendum.
-        Donec cursus nisl vel turpis bibendum, ornare cursus tortor semper. Donec at dolor eros. Ut eget augue felis.
-        Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus fermentum metus eleifend tellus porttitor lacinia.
-        Nunc vestibulum, ligula a tincidunt porttitor, ligula sapien feugiat neque, non imperdiet nulla metus at eros.
+        Trauma produced by sustained antagonism is different in character from acute trauma.
+        It compounds slowly, invisibly, and in ways that institutions are poorly designed to detect.
+        The person being harmed often cannot name what is happening to them — because the harm is
+        designed to be unnameable, to feel like ordinary life, to locate the problem in the victim's
+        perception rather than the perpetrator's conduct.
+      - >
+        Complex trauma of this kind reshapes the nervous system, alters the capacity for trust,
+        and systematically dismantles the structures — relationships, career, finances, self-concept —
+        that might otherwise provide resilience. Recovery is not a matter of processing a single event.
+        It is the long work of rebuilding what was systematically taken apart.
         
   - id: betrayal
     heading: Institutional Betrayal

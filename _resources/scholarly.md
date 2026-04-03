@@ -49,14 +49,14 @@ sections:
     bibtex_src: /assets/bib/institutional-betrayal.bib
 
   - id: context
-    heading: How to Use These
+    heading: A Note on This List
     body_paragraphs:
       - >
-        Each section above draws from its own BibTeX file in <code>assets/</code> or <code>assets/bib/</code>.
-        To add references to a section, open the corresponding <code>.bib</code> file
-        and add entries in standard BibTeX format.
-        Fields used: author, title, year, journal/booktitle/publisher, doi, url, note.
+        This is a working bibliography — selective, not exhaustive. It reflects the literature
+        I return to most often in my research and advocacy work, and the sources I recommend
+        most frequently to clients, collaborators, and people trying to understand what happened to them.
       - >
-        Supported entry types: @article, @book, @inproceedings, @misc.
-        DOIs are automatically linked via doi.org. If no DOI is present, the url field is used instead.
+        Entries are linked to their DOI or original source where available. If you encounter
+        a reference that is paywalled and cannot access it, feel free to reach out — I can
+        often point you to an open-access version or author-posted preprint.
 ---

@@ -6,6 +6,7 @@ category: Project
 lede: Abandon Thy Health, Ye who Enter
 tags: [Antagonism, Trauma, Institutional Betrayal]
 who: null
+published: false
 
 # ── About ──────────────────────────────────────────────────────────────────
 about:

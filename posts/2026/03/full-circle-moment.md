@@ -9,10 +9,10 @@ tags: [activism, pubrec]
 
 Yesterday marked a significant full-circle moment as I marched alongside my fellow Graduate Labor Union workers to hand deliver step 3 of my grievance to the Dean.
 I wore my credentials on my shirt, but the Dean was held up in a meeting all day. Too bad.
-While it was disappointing not to connect directly, the hashtag#solidarity among my peers, those with me in MN and those on the East Coast, made the experience worthwhile.
+While it was disappointing not to connect directly, the #solidarity among my peers, those with me in MN and those on the East Coast, made the experience worthwhile.
 
-I spent the rest of the day catching up with amazing colleagues at hashtag#HHS, hashtag#CDC, and beyond. Interestingly, the qualities that won me Employee of the Quarter and Rookie of the Year awards at HHS OCIO got me punished in my PhD program. I thought carefully about possible reasons, but why spend my precious mental energy on that when I can get paid to have someone else think about it? A good leader knows how to hashtag#delegate.
+I spent the rest of the day catching up with amazing colleagues at #HHS, #CDC, and beyond. Interestingly, the qualities that won me Employee of the Quarter and Rookie of the Year awards at HHS OCIO got me punished in my PhD program. I thought carefully about possible reasons, but why spend my precious mental energy on that when I can get paid to have someone else think about it? A good leader knows how to #delegate.
 
-This shirt, my resume, and my values don’t seem to mean much to schools of public health, but they mean everything to me. There are hashtag#legal consequences to academic hashtag#abuse, hashtag#labor exploitation, and possibly even grant hashtag#fraud. I’m very proud to do my part to teach hashtag#academia how the real world actually works.
+This shirt, my resume, and my values don’t seem to mean much to schools of public health, but they mean everything to me. There are #legal consequences to academic #abuse, #labor exploitation, and possibly even grant #fraud. I’m very proud to do my part to teach #academia how the real world actually works.
 
 More on that very soon!

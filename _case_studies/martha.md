@@ -16,7 +16,7 @@ about:
     Martha is a widow in her seventies — intelligent, accomplished, and deeply loyal to
     the people she loves. Over a period of several years, her son-in-law systematically
     dismantled her finances, her relationships, her health, and her sense of reality.
-    By the time she came to us, she had lost approximately $4 million in assets, was
+    By the time she came to us, she had lost approximately $1.2 million in assets, was
     facing a civil judgment exceeding $3 million, had been physically assaulted multiple
     times, and had been isolated from nearly everyone in her life. She had also, without
     knowing it, potentially broken the law while trying to help him. This is her case.
