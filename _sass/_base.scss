@@ -309,19 +309,23 @@ body::after {
   display:          inline-block;
 }
 
-#cursor-halo {
-  position: fixed;
-  top:            0;
-  left:           0;
-  width:          200px;
-  height:         200px;
+// ── Cursor spotlight ──────────────────────────────────────────────────────────
+// Radial gradient anchored to --cx/--cy, set by main.js on mousemove.
+// GPU-composited — no canvas, no rAF loop, no moving DOM elements.
+body::after {
+  content:        '';
+  position:       fixed;
+  inset:          0;
   pointer-events: none;
-  z-index:        9999;
-  will-change:    transform;
+  z-index:        9998;
+  background:     radial-gradient(
+    600px circle at var(--cx, -9999px) var(--cy, -9999px),
+    rgba(74, 107, 95, 0.07)  0%,
+    rgba(74, 107, 95, 0.035) 35%,
+    transparent              100%
+  );
+}
 
-  canvas {
-    position: absolute;
-    inset:    0;
-    display:  block;
-  }
+@media (prefers-reduced-motion: reduce) {
+  body::after { display: none; }
 }

@@ -33,86 +33,13 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
-// ── Cursor halo ───────────────────────────────────────────────────────────────
-const canvas  = document.getElementById('halo-canvas');
-const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (canvas && !reduced) {
-  const ctx    = canvas.getContext('2d');
-  const haloEl = document.getElementById('cursor-halo');
-
-  const cx        = 100;
-  const cy        = 100;
-  const r         = 76;
-  const STEPS     = 360;
-  const DURATION  = 5;     // seconds per revolution
-  const TAIL_DEG  = 300;   // arc length in degrees
-  const TIP_WIDTH = 6;     // max stroke width at tip
-  const GLOW_BLUR = 8;     // shadowBlur at tip
-  const LERP      = 0.001;  // acceleration toward cursor
-  const FRICTION  = 0.99;  // momentum carry-over (0=instant stop, 1=never stops)
-
-  const tailRad = (TAIL_DEG / 180) * Math.PI;
-
-  let last   = null;
-  let offset = 0;
-
-  let mouseX = window.innerWidth  / 2;
-  let mouseY = window.innerHeight / 2;
-  let haloX  = mouseX;
-  let haloY  = mouseY;
-  let velX   = 0;
-  let velY   = 0;
-
+// ── Cursor spotlight ──────────────────────────────────────────────────────────
+// Sets --cx/--cy on :root; body::after in _base.scss renders the glow via CSS.
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function drawHalo(ts) {
-    if (!last) last = ts;
-    const dt = (ts - last) / 1000;
-    last = ts;
-    
-    const speed   = Math.sqrt(velX ** 2 + velY ** 2);
-    
-    // 0 when moving fast, 1 when still — tune the divisor
-    // 4 = starts spinning when velocity drops below 4px/frame
-    const settled = Math.max(0, 1 - speed / 4);
-
-    // Spin only when settled
-    offset = (offset + (360 / DURATION) * dt * settled) % 360;
-
-    ctx.clearRect(0, 0, 200, 200);
-
-    for (let i = 0; i < STEPS; i++) {
-      const t          = i / STEPS;
-      const angleBase  = offset * (Math.PI / 180);
-      const startAngle = angleBase + (i / STEPS)       * tailRad;
-      const endAngle   = angleBase + ((i + 1) / STEPS) * tailRad;
-
-      const alpha     = Math.pow(t, 1.8);
-      const lineWidth = 0.4 + (TIP_WIDTH - 0.4) * Math.pow(t, 1.4);
-
-      ctx.beginPath();
-      ctx.arc(cx, cy, r, startAngle, endAngle);
-      ctx.strokeStyle = `rgba(201,168,76,${alpha.toFixed(3)})`;
-      ctx.lineWidth   = lineWidth;
-      ctx.shadowColor = `rgba(201,168,76,${(alpha * 0.8).toFixed(3)})`;
-      ctx.shadowBlur  = GLOW_BLUR * alpha;
-      ctx.stroke();
-    }
-
-    // Move halo toward cursor with momentum
-    velX   = velX * FRICTION + (mouseX - haloX) * LERP;
-    velY   = velY * FRICTION + (mouseY - haloY) * LERP;
-    haloX += velX;
-    haloY += velY;
-    haloEl.style.transform = `translate(${haloX - 100}px, ${haloY - 100}px)`;
-
-    requestAnimationFrame(drawHalo);
-  }
-
-  requestAnimationFrame(drawHalo);
+    document.documentElement.style.setProperty('--cx', e.clientX + 'px');
+    document.documentElement.style.setProperty('--cy', e.clientY + 'px');
+  }, { passive: true });
 }
 
 // ── Generic Carousel ──────────────────────────────────────────────────────────
