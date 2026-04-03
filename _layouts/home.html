@@ -5,101 +5,48 @@ layout: default
 <!-- ── Hero ──────────────────────────────────────────────────────────────── -->
 <section id="hero">
 
-  <!-- ── Chain border ── -->
-  <svg class="hero-chain-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <!-- ── Ornate border: Greek key (meander) running clockwise ── -->
+  <svg class="hero-ornate-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <defs>
-      <!-- Horizontal tile: two parallelograms forming an S-curve chain link (18×9px) -->
-      <pattern id="hcb-h" patternUnits="userSpaceOnUse" width="18" height="9">
-        <polygon points="0,7 3,9 9,2 6,0"    fill="var(--gold)"/>
-        <polygon points="9,0 12,2 18,9 15,7" fill="var(--gold)"/>
+      <!-- Horizontal meander tile (24×14px): classic Greek key spiral running right -->
+      <pattern id="hob-h" patternUnits="userSpaceOnUse" width="24" height="14">
+        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24"
+              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
         <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="18 0" dur="3s" repeatCount="indefinite"/>
+                          from="0 0" to="24 0" dur="4s" repeatCount="indefinite"/>
       </pattern>
-      <!-- Bottom strip flows left (counter direction) -->
-      <pattern id="hcb-hr" patternUnits="userSpaceOnUse" width="18" height="9">
-        <polygon points="0,7 3,9 9,2 6,0"    fill="var(--gold)"/>
-        <polygon points="9,0 12,2 18,9 15,7" fill="var(--gold)"/>
+      <!-- Bottom strip flows left -->
+      <pattern id="hob-hr" patternUnits="userSpaceOnUse" width="24" height="14">
+        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24"
+              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
         <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="-18 0" dur="3s" repeatCount="indefinite"/>
+                          from="0 0" to="-24 0" dur="4s" repeatCount="indefinite"/>
       </pattern>
-      <!-- Vertical tile: 90° CW rotation of horizontal tile (9×18px) -->
-      <pattern id="hcb-v" patternUnits="userSpaceOnUse" width="9" height="18">
-        <polygon points="2,0 0,3 7,9 9,6"    fill="var(--gold)"/>
-        <polygon points="9,9 7,12 0,18 2,15" fill="var(--gold)"/>
+      <!-- Vertical meander tile (14×24px): 90° CW rotation via (x,y)→(y, 24−x) -->
+      <pattern id="hob-v" patternUnits="userSpaceOnUse" width="14" height="24">
+        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24"
+              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
         <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="0 18" dur="3s" repeatCount="indefinite"/>
+                          from="0 0" to="0 24" dur="4s" repeatCount="indefinite"/>
       </pattern>
-      <!-- Left strip flows up (counter direction) -->
-      <pattern id="hcb-vr" patternUnits="userSpaceOnUse" width="9" height="18">
-        <polygon points="2,0 0,3 7,9 9,6"    fill="var(--gold)"/>
-        <polygon points="9,9 7,12 0,18 2,15" fill="var(--gold)"/>
+      <!-- Left strip flows up -->
+      <pattern id="hob-vr" patternUnits="userSpaceOnUse" width="14" height="24">
+        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24"
+              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
         <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="0 -18" dur="3s" repeatCount="indefinite"/>
+                          from="0 0" to="0 -24" dur="4s" repeatCount="indefinite"/>
       </pattern>
     </defs>
-    <!-- Strips (positioned via CSS geometry properties) -->
-    <rect class="hcb-strip hcb-strip--top"    fill="url(#hcb-h)"/>
-    <rect class="hcb-strip hcb-strip--bottom" fill="url(#hcb-hr)"/>
-    <rect class="hcb-strip hcb-strip--right"  fill="url(#hcb-v)"/>
-    <rect class="hcb-strip hcb-strip--left"   fill="url(#hcb-vr)"/>
-    <!-- Corner fills to cover the strip intersections cleanly -->
-    <rect class="hcb-corner hcb-corner--tl"/>
-    <rect class="hcb-corner hcb-corner--tr"/>
-    <rect class="hcb-corner hcb-corner--bl"/>
-    <rect class="hcb-corner hcb-corner--br"/>
+    <rect class="hob-strip hob-strip--top"    fill="url(#hob-h)"/>
+    <rect class="hob-strip hob-strip--bottom" fill="url(#hob-hr)"/>
+    <rect class="hob-strip hob-strip--right"  fill="url(#hob-v)"/>
+    <rect class="hob-strip hob-strip--left"   fill="url(#hob-vr)"/>
+    <!-- Corner fills cap the intersections of the four strips -->
+    <rect class="hob-corner hob-corner--tl"/>
+    <rect class="hob-corner hob-corner--tr"/>
+    <rect class="hob-corner hob-corner--bl"/>
+    <rect class="hob-corner hob-corner--br"/>
   </svg>
-
-  <!-- ── Column decorations ── -->
-  <div class="hero-column hero-column--left" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 900" preserveAspectRatio="none"
-         fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-      <!-- Abacus (top square slab) -->
-      <rect x="1" y="6" width="88" height="20"/>
-      <!-- Echinus (curved capital, spreads from shaft top to abacus width) -->
-      <path d="M 21,74 C 17,54 6,32 1,26 L 89,26 C 84,32 73,54 69,74"/>
-      <!-- Annulets (3 fine horizontal rings at neck) -->
-      <line x1="21" y1="80" x2="69" y2="80"/>
-      <line x1="21" y1="86" x2="69" y2="86"/>
-      <line x1="20" y1="92" x2="70" y2="92"/>
-      <!-- Shaft outline with slight entasis:
-           top  x=20→70 (50px wide),  bottom x=16→74 (58px wide) -->
-      <path d="M 20,96 C 18,350 16,620 16,820 L 74,820 C 74,620 72,350 70,96 Z"/>
-      <!-- Fluting: 7 interior groove lines, evenly distributed across taper -->
-      <line x1="27" y1="96" x2="24" y2="820"/>
-      <line x1="33" y1="96" x2="31" y2="820"/>
-      <line x1="39" y1="96" x2="38" y2="820"/>
-      <line x1="45" y1="96" x2="45" y2="820"/>
-      <line x1="51" y1="96" x2="52" y2="820"/>
-      <line x1="57" y1="96" x2="59" y2="820"/>
-      <line x1="63" y1="96" x2="66" y2="820"/>
-      <!-- Stylobate: 3-step base platform -->
-      <rect x="11" y="820" width="68" height="22"/>
-      <rect x="5"  y="842" width="80" height="22"/>
-      <rect x="0"  y="864" width="90" height="26"/>
-    </svg>
-  </div>
-
-  <div class="hero-column hero-column--right" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 900" preserveAspectRatio="none"
-         fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="1" y="6" width="88" height="20"/>
-      <path d="M 21,74 C 17,54 6,32 1,26 L 89,26 C 84,32 73,54 69,74"/>
-      <line x1="21" y1="80" x2="69" y2="80"/>
-      <line x1="21" y1="86" x2="69" y2="86"/>
-      <line x1="20" y1="92" x2="70" y2="92"/>
-      <path d="M 20,96 C 18,350 16,620 16,820 L 74,820 C 74,620 72,350 70,96 Z"/>
-      <line x1="27" y1="96" x2="24" y2="820"/>
-      <line x1="33" y1="96" x2="31" y2="820"/>
-      <line x1="39" y1="96" x2="38" y2="820"/>
-      <line x1="45" y1="96" x2="45" y2="820"/>
-      <line x1="51" y1="96" x2="52" y2="820"/>
-      <line x1="57" y1="96" x2="59" y2="820"/>
-      <line x1="63" y1="96" x2="66" y2="820"/>
-      <rect x="11" y="820" width="68" height="22"/>
-      <rect x="5"  y="842" width="80" height="22"/>
-      <rect x="0"  y="864" width="90" height="26"/>
-    </svg>
-  </div>
 
   <!--<svg class="hero-trellis" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true">
     <defs>

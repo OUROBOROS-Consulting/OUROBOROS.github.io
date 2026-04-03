@@ -16,60 +16,6 @@
     inset 0 0 40px rgba(74, 107, 95, 0.04);
 }
 
-// ── Hero Columns ──────────────────────────────────────────────────────────────
-// Doric-style columns in teal line art, flanking the hero interior.
-// Positioned inside the 10vw horizontal padding so they never overlap content.
-.hero-column {
-  position:       absolute;
-  top:            0;
-  bottom:         0;
-  width:          clamp(52px, 5.5vw, 84px);
-  pointer-events: none;
-  z-index:        0;
-  // Cream stroke (matches pawn fill) with teal glow — light against dark,
-  // same logic as the pawn being visible on the dark background.
-  color:          var(--text);
-  opacity:        0.28;
-  filter:
-    drop-shadow(0 0 3px rgba(74, 107, 95, 0.6))
-    drop-shadow(0 0 8px rgba(74, 107, 95, 0.3));
-  animation:      columnGlow 6s ease-in-out infinite;
-
-  svg {
-    display: block;
-    width:   100%;
-    height:  100%;
-  }
-
-  &--left  { left:  1.25rem; }
-  &--right {
-    right:     1.25rem;
-    transform: scaleX(-1);
-  }
-}
-
-@keyframes columnGlow {
-  0%, 100% {
-    opacity: 0.28;
-    filter:
-      drop-shadow(0 0 3px rgba(74, 107, 95, 0.6))
-      drop-shadow(0 0 8px rgba(74, 107, 95, 0.3));
-  }
-  50% {
-    opacity: 0.42;
-    filter:
-      drop-shadow(0 0 5px rgba(74, 107, 95, 0.8))
-      drop-shadow(0 0 14px rgba(74, 107, 95, 0.45));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-column { animation: none; }
-}
-
-@media (max-width: 900px) {
-  .hero-column { display: none; }
-}
 
 .hero-text {
   display:        flex;
@@ -153,40 +99,59 @@
   }
 }
 
-// ── Hero chain border ─────────────────────────────────────────────────────────
-// SVG absolutely fills the hero. Four chain-link pattern strips run clockwise:
-// top→right, right→down, bottom→left, left→up (S-curve parallelogram pairs).
-// CSS geometry properties (x/y/width/height with calc) require SVG 2 support —
-// supported in Chrome 88+, Firefox 72+, Safari 15.4+.
-.hero-chain-svg {
+// ── Hero ornate border ────────────────────────────────────────────────────────
+// Greek key (meander) pattern tiling clockwise around the hero.
+// Horizontal tile (24×14px): M0,7 H6 V0 H18 V14 H6 V7 H24
+// Vertical tile (14×24px): 90° CW rotation via (x,y)→(y, 24−x)
+// CSS geometry properties require SVG 2 (Chrome 88+, Firefox 72+, Safari 15.4+).
+.hero-ornate-svg {
   position:       absolute;
   inset:          0;
   width:          100%;
   height:         100%;
   pointer-events: none;
   z-index:        1;
-  opacity:        0.6;
+  opacity:        0.7;
+  filter:
+    drop-shadow(0 0 4px rgba(255, 255, 255, 0.55))
+    drop-shadow(0 0 14px rgba(255, 255, 255, 0.20));
+  animation: ornateGlow 5s ease-in-out infinite;
 }
 
-.hcb-strip {
-  &--top    { x: 0;                y: 0;                width: 100%; height: 9px;  }
-  &--bottom { x: 0;                y: calc(100% - 9px); width: 100%; height: 9px;  }
-  &--right  { x: calc(100% - 9px); y: 0;                width: 9px;  height: 100%; }
-  &--left   { x: 0;                y: 0;                width: 9px;  height: 100%; }
+@keyframes ornateGlow {
+  0%, 100% {
+    opacity: 0.7;
+    filter:
+      drop-shadow(0 0 4px rgba(255, 255, 255, 0.55))
+      drop-shadow(0 0 14px rgba(255, 255, 255, 0.20));
+  }
+  50% {
+    opacity: 0.88;
+    filter:
+      drop-shadow(0 0 7px rgba(255, 255, 255, 0.75))
+      drop-shadow(0 0 22px rgba(255, 255, 255, 0.35));
+  }
 }
 
-.hcb-corner {
-  fill:   var(--gold);
-  width:  9px;
-  height: 9px;
-  &--tl { x: 0;                y: 0;                }
-  &--tr { x: calc(100% - 9px); y: 0;                }
-  &--bl { x: 0;                y: calc(100% - 9px); }
-  &--br { x: calc(100% - 9px); y: calc(100% - 9px); }
+.hob-strip {
+  &--top    { x: 0;                 y: 0;                 width: 100%; height: 14px; }
+  &--bottom { x: 0;                 y: calc(100% - 14px); width: 100%; height: 14px; }
+  &--right  { x: calc(100% - 14px); y: 0;                 width: 14px; height: 100%; }
+  &--left   { x: 0;                 y: 0;                 width: 14px; height: 100%; }
+}
+
+.hob-corner {
+  fill:   var(--text);
+  width:  14px;
+  height: 14px;
+  &--tl { x: 0;                 y: 0;                 }
+  &--tr { x: calc(100% - 14px); y: 0;                 }
+  &--bl { x: 0;                 y: calc(100% - 14px); }
+  &--br { x: calc(100% - 14px); y: calc(100% - 14px); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-chain-svg { display: none; }
+  .hero-ornate-svg { animation: none; }
 }
 
 // ──|| STATS ||─────────────────────────────────────────────────────────────
