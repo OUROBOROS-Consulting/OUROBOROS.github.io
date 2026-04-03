@@ -2,10 +2,10 @@
   tag: Technology
   icon: fa-solid fa-flask
   description: >
-    The best solutions aren't found in manuals — they're engineered in the gap between what exists and what's needed.
+    The best solutions aren't found in manuals //— they're engineered in the gap between what exists and what's needed.
     Whether bridging service continuity during a federal system migration or prototyping a data platform under deadline,
-    I've learned to treat constraints as creative prompts.
-    The question is never "can we?" but "how?"
+# I've learned to treat constraints as creative prompts.
+#    The question is never "can we?" but "how?"
   reference:
   link: "#"
 
@@ -42,16 +42,16 @@
   reference:
   link: "#"
 
-- title: Authenticity
-  tag: Personal
-  icon: fa-solid fa-fingerprint
-  description: >
-    I don't perform expertise I don't have, and I don't minimize experiences that are real.
-    Being authentic isn't always comfortable — sometimes it means saying the thing that's true
-    rather than the thing that's easy.
-    I've found it's the only way to build anything that lasts.
-  reference:
-  link: "#"
+# - title: Authenticity
+#   tag: Personal
+#   icon: fa-solid fa-fingerprint
+#   description: >
+#     I don't perform expertise I don't have, and I don't minimize experiences that are real.
+#     Being authentic isn't always comfortable — sometimes it means saying the thing that's true
+#     rather than the thing that's easy.
+#     I've found it's the only way to build anything that lasts.
+#   reference:
+#   link: "#"
 
 - title: Integrity
   tag: Ethics

@@ -1,658 +1,337 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   width="500"
-   height="620"
-   viewBox="0 0 500 620"
-   version="1.1"
-   id="svg109"
-   sodipodi:docname="logo.svg"
-   inkscape:version="1.4.3 (0d15f750, 2025-12-25)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview109"
-     pagecolor="#505050"
-     bordercolor="#eeeeee"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#505050"
-     inkscape:zoom="1.3665032"
-     inkscape:cx="275.15486"
-     inkscape:cy="311.7446"
-     inkscape:window-width="1686"
-     inkscape:window-height="993"
-     inkscape:window-x="1730"
-     inkscape:window-y="31"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg109" />
-  <defs
-     id="defs2">
-    <clipPath
-       id="tL"
-       clipPathUnits="userSpaceOnUse">
-      <path
-         transform="rotate(90,250,250)"
-         d="m 250,58 c -40,0 -92,32 -132,90 -48,70 -60,102 -60,102 0,0 12,32 60,102 40,58 92,90 132,90 -10,-42 -16,-112 -16,-192 0,-80 6,-150 16,-192 z"
-         id="path1" />
-    </clipPath>
-    <clipPath
-       id="bL"
-       clipPathUnits="userSpaceOnUse">
-      <path
-         transform="rotate(90,250,250)"
-         d="m 250,58 c 40,0 92,32 132,90 48,70 60,102 60,102 0,0 -12,32 -60,102 -40,58 -92,90 -132,90 10,-42 16,-112 16,-192 0,-80 -6,-150 -16,-192 z"
-         id="path2" />
-    </clipPath>
-  </defs>
-  <!-- Background lobes -->
-  <g
-     id="g1"
-     inkscape:label="background">
-    <ellipse
-       cx="250"
-       cy="145"
-       rx="168"
-       ry="122"
-       fill="#0e0e10"
-       id="ellipse2"
-       style="display:inline" />
-    <ellipse
-       cx="250"
-       cy="355"
-       rx="168"
-       ry="111.51052"
-       fill="#f0ead8"
-       id="ellipse3"
-       style="fill:#ffffff" />
-  </g>
-  <!-- Pawn: gold on dark -->
-  <path
-     d="m 309.42139,232.91187 -121.16211,0.0928 q 0,-12.52442 1.85547,-20.87403 1.94824,-8.34961 6.49414,-15.77148 5.75195,-9.37012 12.06054,-14.84375 6.40137,-5.56641 17.53418,-10.76172 -4.45312,-5.65918 -6.12304,-10.1123 -1.57715,-4.45313 -1.57715,-11.22559 0,-7.88574 4.45312,-14.56543 4.5459,-6.77246 12.89551,-11.41113 -5.10254,-7.3291 -5.10254,-11.59668 0,-7.51465 5.19531,-12.709964 5.19532,-5.288086 12.70997,-5.288086 7.05078,0 12.24609,5.288086 5.19531,5.195314 5.19531,12.338864 0,4.917 -5.19531,11.68946 10.01953,5.19531 13.63769,11.5039 4.5459,7.88574 4.5459,15.67871 0,10.20508 -7.60742,20.22461 11.875,5.9375 18.09082,11.31836 6.21582,5.28809 11.13281,13.82324 8.81348,15.12207 8.81348,32.28516 z"
-     id="text3"
-     clip-path="url(#tL)"
-     style="font-size:190px;font-family:'Apple Symbols', 'Noto Sans Symbols2', Symbola, serif;dominant-baseline:central;text-anchor:middle;display:inline;fill:#ffffff;fill-opacity:0.92"
-     transform="matrix(2.4209396,0,0,2.0514472,-353.31328,-120.02824)"
-     aria-label="♟" />
-  <!-- Queen: dark on ivory, inverted -->
-  <path
-     d="m 283.02734,394.1609 -0.55664,-6.95801 c -6.12305,-2.16471 -11.16374,-3.58724 -15.12207,-4.26758 -3.89648,-0.68034 -9.30826,-1.02051 -16.23535,-1.02051 -11.13281,0 -21.77083,1.66992 -31.91406,5.00977 l -0.3711,7.14355 c 10.14323,-3.21615 20.49254,6.84247 31.8109,6.84247 10.08138,0 21.13181,-10.02769 32.38832,-6.74969 z m -0.74218,-11.78223 -0.27832,-6.86523 c -11.07097,-3.33985 -21.0905,-5.00977 -30.0586,-5.00977 -9.95768,0 -20.75032,1.73177 -32.37793,5.19531 l -0.27832,6.58692 c 10.45247,-3.40169 21.02865,-5.10254 31.72852,-5.10254 9.77213,0 20.19368,1.73177 31.26465,5.19531 z m 0.0928,-10.66895 0.46387,-7.60742 c -10.57617,-3.46354 -21.43067,-10.63976 -32.56348,-10.63976 -10.20508,0 -20.65755,7.1453 -31.35742,10.54699 l 0.46387,7.42187 c 10.51432,-3.33984 19.88792,5.70447 31.33244,5.70447 10.45247,0 20.7753,-8.95154 31.66072,-5.42615 z m 8.7207,34.32618 c -12.49351,1.66992 -25.7593,9.57973 -40.6649,9.57973 -10.57617,0 -24.15284,-7.81704 -39.86247,-9.30141 2.04101,-12.43164 3.06152,-22.69857 3.06152,-30.80078 l -0.18554,-10.57618 -19.38965,-54.08691 c -1.05143,0.1237 -1.97917,0.18555 -2.78321,0.18555 -2.16471,0 -4.1748,-1.08236 -6.03027,-3.24707 -1.79362,-2.22657 -2.69043,-4.63868 -2.69043,-7.23633 0,-2.72135 1.05143,-5.07161 3.1543,-7.05078 2.10286,-2.04102 4.57682,-3.06153 7.42187,-3.06153 2.59766,0 4.97885,0.92774 7.14356,2.78321 2.22656,1.85547 3.33984,3.89648 3.33984,6.12304 0,2.47396 -1.45345,5.65918 -4.36035,9.55567 l 21.61621,32.84179 -1.3916,-44.62402 c -6.37045,-1.11328 -9.55567,-4.57682 -9.55567,-10.39062 0,-2.78321 0.98958,-5.19532 2.96875,-7.23633 2.04102,-2.04102 4.45313,-3.06153 7.23633,-3.06153 2.9069,0 5.38086,1.08236 7.42188,3.24707 2.10286,2.10287 3.15429,4.60775 3.15429,7.51465 0,2.53581 -1.85547,5.50456 -5.5664,8.90625 l 15.50356,27.20918 6.57652,-34.44551 c -4.63867,-2.28841 -6.95801,-5.41178 -6.95801,-9.37011 0,-3.09245 0.98958,-5.62825 2.96875,-7.60742 2.04101,-2.04102 4.60774,-3.06153 7.70019,-3.06153 2.84505,0 5.25716,0.98958 7.23633,2.96875 1.97917,1.91732 2.96875,4.26758 2.96875,7.05078 0,3.95833 -2.44303,7.3291 -7.3291,10.11231 l 7.3291,33.98163 14.93653,-27.1164 c -3.64909,-2.7832 -5.47364,-5.75195 -5.47364,-8.90625 0,-2.96875 1.02051,-5.47363 3.06153,-7.51465 2.10286,-2.04101 4.63867,-3.06152 7.60742,-3.06152 2.96875,0 5.4427,0.98958 7.42187,2.96875 2.04102,1.91732 3.06153,4.29851 3.06153,7.14356 0,5.44271 -3.40169,8.99902 -10.20508,10.66894 l -1.3916,44.53125 21.70898,-33.02734 c -2.84505,-3.46355 -4.32943,-6.33952 -4.45312,-8.62793 -0.1237,-2.28841 0.98958,-4.51498 3.33984,-6.67969 2.41211,-2.22656 4.91699,-3.33984 7.51465,-3.33984 2.84505,0 5.28809,1.05143 7.3291,3.15429 2.04101,2.04102 3.06152,4.51498 3.06152,7.42188 0,5.44271 -3.89648,8.78255 -11.68945,10.01953 l -18.83301,52.78809 c 0,16.57552 0.98958,30.80078 2.96875,42.67578 z"
-     id="text4"
-     clip-path="url(#bL)"
-     style="font-size:190px;font-family:'Apple Symbols', 'Noto Sans Symbols2', Symbola, serif;dominant-baseline:central;text-anchor:middle;fill:#1a1408;fill-opacity:0.88"
-     transform="matrix(1.9640092,0,0,-1.9266347,-242.67656,968.21558)"
-     aria-label="♛"
-     sodipodi:nodetypes="cccsccscccsccscccsccsccsccccscscscscccscscscccssscscccscscscccscscsccsc" />
-  <!-- Ouroboros ring -->
-  <g
-     transform="matrix(0,1,-0.91809217,0,475.9406,-1.3499298)"
-     id="g108"
-     style="display:inline"
-     inkscape:label="ouroboros">
-    <path
-       id="polygon4"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 94.3,255.6 -5.6,-9.5 -5.6,9.5 5.6,-3.9 z" />
-    <path
-       id="polygon5"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="M 94.3,246.3 89.9,236 83,244.8 89.2,241.6 Z" />
-    <path
-       id="polygon6"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 95.5,237 -3,-11 -8.2,8 6.7,-2.4 z" />
-    <path
-       id="polygon7"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 98,227.9 -1.7,-11.4 -9.2,6.9 7,-1.5 z" />
-    <path
-       id="polygon8"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 101.6,219.1 -0.4,-11.8 -10.1,5.9 7.3,-0.7 z" />
-    <path
-       id="polygon9"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 106.3,210.7 0.9,-11.9 -10.9,4.8 7.4,0.1 z" />
-    <path
-       id="polygon10"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 111.9,202.8 2,-11.9 -11.5,3.7 7.6,0.8 z" />
-    <path
-       id="polygon11"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 118.2,195.5 3.1,-11.8 -11.9,2.6 7.5,1.6 z" />
-    <path
-       id="polygon12"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 116.9,178.9 7.5,2.2 0.6,7.8 4.2,-11.7 z" />
-    <path
-       id="polygon13"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 124.8,172.2 7.4,2.9 v 7.9 l 5.2,-11.4 z" />
-    <path
-       id="polygon14"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 133,166.4 7.2,3.5 -0.6,8 6.1,-11.1 z" />
-    <path
-       id="polygon15"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 141.2,161.4 7,4.2 -1.2,8 7.1,-10.8 z" />
-    <path
-       id="polygon16"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 149.4,157.3 6.8,4.7 -1.9,8 8,-10.3 z" />
-    <path
-       id="polygon17"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 160.2,152.9 6.3,5.5 -2.7,7.9 9.1,-9.6 z" />
-    <path
-       id="polygon18"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 170.5,149.9 5.7,6.2 -3.6,7.7 10.2,-8.7 z" />
-    <path
-       id="polygon19"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 180.3,148 5,7.1 -4.6,7.3 11.4,-7.5 z" />
-    <path
-       id="polygon20"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 189.6,147.3 4.1,7.8 -5.5,6.8 12.3,-6.2 z" />
-    <path
-       id="polygon21"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 200.4,147.9 2.8,8.5 -6.8,5.9 13.5,-4 z" />
-    <path
-       id="polygon22"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 210.2,150.1 1.3,9 -7.8,4.7 14.1,-1.7 z" />
-    <path
-       id="polygon23"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 220.7,154.6 -0.7,9.2 -8.7,3 14.4,1.4 z" />
-    <path
-       id="polygon24"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 229.6,160.8 -2.4,9.1 -9.3,1.4 14.1,4 z" />
-    <path
-       id="polygon25"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 236.9,168.4 -3.9,8.7 -9.5,-0.1 13.5,6.3 z" />
-    <path
-       id="polygon26"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 242.8,177 -5.1,8.2 -9.5,-1.4 12.7,8.1 z" />
-    <path
-       id="polygon27"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 247.5,186.2 -6,7.7 -9.5,-2.4 11.9,9.5 z" />
-    <path
-       id="polygon28"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 261.4,286.7 -6.6,7.3 -9.3,-3.1 11.3,10.4 z" />
-    <path
-       id="polygon29"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 263.3,295.5 -5.8,7.8 -9.5,-2.3 12.1,9.3 z" />
-    <path
-       id="polygon30"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 265.9,303.9 -4.9,8.3 -9.6,-1.3 12.8,7.9 z" />
-    <path
-       id="polygon31"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 269.1,311.7 -3.7,8.7 -9.5,0.1 13.6,6 z" />
-    <path
-       id="polygon32"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 273,318.8 -2.1,9.2 -9.2,1.6 14.2,3.6 z" />
-    <path
-       id="polygon33"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 278.1,325.3 -0.3,9.2 -8.7,3.3 14.5,0.9 z" />
-    <path
-       id="polygon34"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 284.6,330.9 1.6,8.9 -7.6,4.9 14,-2.1 z" />
-    <path
-       id="polygon35"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 291.4,334.6 3.1,8.4 -6.5,6.1 13.3,-4.5 z" />
-    <path
-       id="polygon36"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 299.8,337.2 4.4,7.6 -5.4,6.9 12.2,-6.5 z" />
-    <path
-       id="polygon37"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 307.6,338.2 5.2,6.8 -4.4,7.5 11.1,-7.9 z" />
-    <path
-       id="polygon38"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 316.3,338 5.9,6.1 -3.4,7.8 9.9,-9 z" />
-    <path
-       id="polygon39"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 325.8,336.6 6.4,5.4 -2.5,7.9 8.8,-9.8 z" />
-    <path
-       id="polygon40"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 336,333.9 6.8,4.5 -1.6,8 7.6,-10.5 z" />
-    <path
-       id="polygon41"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 343.9,330.9 7.1,3.9 -1,8.1 6.7,-11 z" />
-    <path
-       id="polygon42"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 351.9,327.1 7.3,3.3 -0.4,8 5.8,-11.3 z" />
-    <path
-       id="polygon43"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 360,322.5 7.4,2.7 0.2,7.8 4.9,-11.5 z" />
-    <path
-       id="polygon44"
-       transform="matrix(1.4707098,0,0,2.0276344,-115.46701,-251.79613)"
-       style="fill:#c8a84e"
-       d="m 375.3,319.1 0.9,7.7 3.8,-11.7 -12.2,2 z" />
-    <path
-       id="polygon45"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 375.4,311 7.5,1.3 1.5,7.5 2.8,-11.9 z" />
-    <path
-       id="polygon46"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 382.4,304.1 7.5,0.6 2.1,7.2 1.7,-11.9 z" />
-    <path
-       id="polygon47"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 388.8,296.6 7.4,-0.2 2.8,6.9 0.5,-11.8 z" />
-    <path
-       id="polygon48"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 394.4,288.6 7.2,-1 3.4,6.4 -0.8,-11.7 z" />
-    <path
-       id="polygon49"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 399,280 6.9,-1.8 4.1,5.9 -2.1,-11.3 z" />
-    <path
-       id="polygon50"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 402.5,271.1 6.5,-2.6 4.7,5.2 -3.4,-10.8 z" />
-    <path
-       id="polygon51"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 404.8,261.9 6,-3.5 5.3,4.5 -4.8,-10.1 z" />
-    <path
-       id="polygon52"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 405.8,252.5 5.5,-4.2 5.8,3.7 -6.1,-9.3 z" />
-    <path
-       id="polygon53"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 405.4,243.2 5,-5 6.3,2.9 -7.3,-8.5 z" />
-    <path
-       id="polygon54"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 403.8,234 4.3,-5.7 6.8,2.1 -8.5,-7.6 z" />
-    <path
-       id="polygon55"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 400.9,224.9 3.7,-6.2 7.1,1.2 -9.5,-6.5 z" />
-    <path
-       id="polygon56"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 396.9,216.2 3.1,-6.7 7.3,0.4 -10.4,-5.5 z" />
-    <path
-       id="polygon57"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 391.9,208 2.4,-7.1 7.5,-0.4 -11.1,-4.4 z" />
-    <path
-       id="polygon58"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 386.1,200.3 1.7,-7.4 7.5,-1.1 -11.6,-3.4 z" />
-    <path
-       id="polygon59"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 379.6,193.2 1.1,-7.6 7.5,-1.8 -12.1,-2.4 z" />
-    <path
-       id="polygon60"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 372.6,186.8 0.5,-7.8 7.4,-2.4 -12.4,-1.4 z" />
-    <path
-       id="polygon61"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 365.4,181.2 -0.2,-7.9 7.3,-3.1 -12.7,-0.3 z" />
-    <path
-       id="polygon62"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 357.9,176.4 -0.8,-8 7.2,-3.7 -12.8,0.7 z" />
-    <path
-       id="polygon63"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 350.5,172.3 -1.4,-8 6.9,-4.3 -12.8,1.7 z" />
-    <path
-       id="polygon64"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 343.3,169 -2.1,-8 6.6,-5 -12.8,2.8 z" />
-    <path
-       id="polygon65"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 334,165.6 -3,-7.9 6.2,-5.7 -12.6,4.2 z" />
-    <path
-       id="polygon66"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 325.3,163.4 -3.9,-7.6 5.6,-6.5 -12.2,5.7 z" />
-    <path
-       id="polygon67"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 317.3,162.2 -4.8,-7.2 4.8,-7.3 -11.6,7.3 z" />
-    <path
-       id="polygon68"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 308.4,161.9 -6,-6.5 3.6,-8 -10.4,9.2 z" />
-    <path
-       id="polygon69"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 300.6,162.8 -7.2,-5.5 2.2,-8.7 -8.8,11.1 z" />
-    <path
-       id="polygon70"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 293.7,164.6 -8.2,-4.1 0.6,-9.1 -6.7,12.6 z" />
-    <path
-       id="polygon71"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 286.4,168.2 -8.9,-2.5 -1.3,-9.2 -4.2,14 z" />
-    <path
-       id="polygon72"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 267.8,163.2 -1.6,14.7 14,-4.9 -9.4,-0.8 z" />
-    <path
-       id="polygon73"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 261,171.2 0.6,14.9 13.3,-7 -9.6,0.6 z" />
-    <path
-       id="polygon74"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 255.5,180 2.5,14.9 12.4,-8.6 -9.5,1.7 z" />
-    <path
-       id="polygon75"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 251.2,189.4 4,14.7 11.7,-9.9 -9.5,2.7 z" />
-    <path
-       id="polygon76"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 247.9,199.2 5.2,14.4 10.9,-10.8 -9.2,3.5 z" />
-    <path
-       id="polygon77"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 245.4,209.2 6.2,14.2 10.2,-11.5 -9,4 z" />
-    <path
-       id="polygon78"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 243.6,219.5 7,13.9 9.6,-12.2 -8.9,4.6 z" />
-    <path
-       id="polygon79"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 242.4,229.9 7.6,13.6 9.1,-12.7 -8.7,5 z" />
-    <path
-       id="polygon80"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 241.7,238.7 8.2,13.2 8.6,-13 -8.4,5.4 z" />
-    <path
-       id="polygon81"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 241.7,247 8.1,13.4 8.7,-13 -8.5,5.3 z" />
-    <path
-       id="polygon82"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 241.7,255.2 7.6,13.6 9.1,-12.6 -8.7,4.9 z" />
-    <path
-       id="polygon83"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 241.3,264.8 6.8,14 9.8,-12.1 -8.9,4.5 z" />
-    <path
-       id="polygon84"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 240.4,274.4 6.1,14.2 10.3,-11.5 -9.1,4 z" />
-    <path
-       id="polygon85"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 239.2,283.6 5,14.6 11,-10.7 -9.3,3.3 z" />
-    <path
-       id="polygon86"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 243.5,300.2 -6.1,-7.6 3.7,14.8 11.8,-9.7 z" />
-    <path
-       id="polygon87"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 235,301.1 2.3,15 12.5,-8.4 -9.5,1.6 z" />
-    <path
-       id="polygon88"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 232.1,309.1 0.3,15 13.4,-6.7 -9.6,0.3 z" />
-    <path
-       id="polygon89"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 228.4,316.5 -2,14.6 14,-4.5 -9.3,-1 z" />
-    <path
-       id="polygon90"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 223.7,323.2 -4.6,13.8 14.5,-1.8 -8.9,-2.7 z" />
-    <path
-       id="polygon91"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 217.8,329.2 -7.3,12.3 14.3,1.1 -8,-4.4 z" />
-    <path
-       id="polygon92"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 211.5,333.3 -9.2,10.7 13.6,3.5 -6.9,-5.6 z" />
-    <path
-       id="polygon93"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 203.7,336.3 -10.7,8.8 12.7,5.8 -5.8,-6.7 z" />
-    <path
-       id="polygon94"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 194.5,338 -11.8,6.9 11.3,7.5 -4.5,-7.3 z" />
-    <path
-       id="polygon95"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 186,338.2 -12.4,5.3 10.3,8.7 -3.6,-7.7 z" />
-    <path
-       id="polygon96"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 176.7,337.1 -12.7,3.8 9.1,9.6 -2.7,-7.9 z" />
-    <path
-       id="polygon97"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 166.6,334.7 -12.8,2.4 7.9,10.4 -1.8,-8.1 z" />
-    <path
-       id="polygon98"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 158.8,332 -12.8,1.4 7,10.7 -1.2,-8 z" />
-    <path
-       id="polygon99"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 150.7,328.5 -12.7,0.3 6.1,11.2 -0.6,-8 z" />
-    <path
-       id="polygon100"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 142.7,324.1 -12.6,-0.6 5.2,11.4 V 327 Z" />
-    <path
-       id="polygon101"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 134.7,319 -12.2,-1.7 4.2,11.7 0.6,-7.8 z" />
-    <path
-       id="polygon102"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 127.1,313.1 -12,-2.7 3.2,11.8 1.3,-7.5 z" />
-    <path
-       id="polygon103"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 119.9,306.5 -11.5,-3.8 2,11.9 2,-7.3 z" />
-    <path
-       id="polygon104"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 113.2,299.2 -10.9,-4.8 0.9,11.8 2.6,-6.9 z" />
-    <path
-       id="polygon105"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 107.4,291.3 -10.2,-5.9 -0.3,11.8 3.2,-6.6 z" />
-    <path
-       id="polygon106"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 102.5,282.9 -9.3,-6.9 -1.7,11.4 3.9,-6 z" />
-    <path
-       id="polygon107"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 98.6,274.1 -8.2,-7.9 -3,11 4.5,-5.5 z" />
-    <path
-       id="polygon108"
-       transform="matrix(1.4707098,0,0,2.0276344,-116.44062,-257.16537)"
-       style="fill:#c8a84e"
-       d="m 95.8,265 -6.9,-8.8 -4.4,10.3 5.1,-4.7 z" />
-  </g>
-  <!-- Wordmark -->
-  <g
-     id="g109"
-     transform="translate(-2.3728581,11.86429)"
-     inkscape:label="text">
-    <text
-       x="250"
-       y="550"
-       text-anchor="middle"
-       font-family="Georgia, 'Times New Roman', serif"
-       font-size="12px"
-       font-weight="400"
-       letter-spacing="4"
-       fill="#c8a84e"
-       fill-opacity="0.6"
-       id="text109">CONSULTING</text>
-    <text
-       x="247.62714"
-       y="521.86432"
-       text-anchor="middle"
-       font-family="Georgia, 'Times New Roman', serif"
-       font-size="38px"
-       font-weight="400"
-       letter-spacing="14"
-       fill="#c8a84e"
-       id="text108"
-       style="display:inline">OUROBOROS</text>
-    <line
-       x1="92"
-       y1="528"
-       x2="408"
-       y2="528"
-       stroke="#c8a84e"
-       stroke-width="0.8"
-       stroke-opacity="0.5"
-       id="line108" />
-  </g>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with Vectornator (http://vectornator.io/) -->
+<svg height="100%" stroke-miterlimit="10" style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" version="1.1" viewBox="0 0 512 512" width="100%" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:vectornator="http://vectornator.io" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="162.579" id="Filter" width="264.179" x="123.911" y="284.116">
+<feDropShadow dx="7.44571e-16" dy="12.1598" flood-color="#b1935d" flood-opacity="1" in="SourceGraphic" result="Shadow" stdDeviation="6.07989"/>
+</filter>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="208.75" id="Filter_2" width="160.639" x="175.153" y="161.757">
+<feDropShadow dx="3.56629e-19" dy="0.00582419" flood-color="#b1935d" flood-opacity="1" in="SourceGraphic" result="Shadow" stdDeviation="4.52489"/>
+</filter>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="85.005" id="Filter_3" width="120.389" x="196.839" y="130.441">
+<feDropShadow dx="2.15331e-19" dy="0.00351662" flood-color="#000000" flood-opacity="0.333" in="SourceGraphic" result="Shadow" stdDeviation="5.77606"/>
+</filter>
+<filter color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse" height="99.0472" id="Filter_4" width="90.3572" x="210.829" y="82.2177">
+<feDropShadow dx="0.00771496" dy="4.51741" flood-color="#b1935d" flood-opacity="1" in="SourceGraphic" result="Shadow" stdDeviation="6"/>
+</filter>
+<path d="M256.208 365.964C256.21 365.963 256.213 365.963 256.215 365.964L263.853 371.09C263.855 371.091 263.856 371.093 263.856 371.096L263.856 381.349C263.856 381.352 263.855 381.354 263.853 381.355L256.215 386.481C256.213 386.482 256.21 386.482 256.208 386.481L248.57 381.355C248.568 381.354 248.567 381.352 248.567 381.349L248.567 371.096C248.567 371.093 248.568 371.091 248.57 371.09L256.208 365.964Z" id="Fill"/>
+<path d="M56.5254 116.169L78.6956 128.969L78.6956 154.569L56.5254 167.369L34.3551 154.569L34.3551 128.969L56.5254 116.169Z" id="Fill_2"/>
+<path d="M56.5254 343.832L78.6956 356.632L78.6956 382.232L56.5254 395.032L34.3551 382.232L34.3551 356.632L56.5254 343.832Z" id="Fill_3"/>
+<path d="M256 460.911L278.17 473.711L278.17 499.311L256 512.111L233.83 499.311L233.83 473.711L256 460.911Z" id="Fill_4"/>
+<path d="M256 0.569238L278.17 13.3692L278.17 38.9692L256 51.7692L233.83 38.9692L233.83 13.3692L256 0.569238Z" id="Fill_5"/>
+<path d="M455.475 116.169L477.645 128.969L477.645 154.569L455.475 167.369L433.304 154.569L433.304 128.969L455.475 116.169Z" id="Fill_6"/>
+<path d="M455.475 343.832L477.645 356.632L477.645 382.232L455.475 395.032L433.304 382.232L433.304 356.632L455.475 343.832Z" id="Fill_7"/>
+</defs>
+<g id="Layer-2" vectornator:layerName="Layer 2"/>
+<g id="Chess" vectornator:layerName="Chess">
+<g opacity="1" vectornator:layerName="Pawn">
+<path d="M241.335 291.437C253.277 289.481 265.463 289.54 277.385 291.609L326.925 300.208C352.433 304.635 370.662 327.351 369.46 353.212L369.46 353.212L256 418.009L142.54 353.212L142.54 353.212C141.341 327.413 159.66 304.808 185.148 300.636L241.335 291.437Z" fill="#fcf5f0" fill-rule="nonzero" filter="url(#Filter)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="2.65369" vectornator:layerName="Polygon 5" vectornator:shadowAngle="1.5708" vectornator:shadowColor="#b1935d" vectornator:shadowOffset="12.1598" vectornator:shadowOpacity="1" vectornator:shadowRadius="12.1598"/>
+<path d="M274.281 186.779C265.299 170.35 246.701 170.35 237.719 186.779L234.226 211.269L206.657 261.941C206.191 262.797 205.706 263.643 205.202 264.477L203.035 268.062C191.395 287.32 177.181 306.048 200.038 326.494L221.092 338.972C240.762 350.631 265.139 350.984 285.139 339.9L309.252 326.537C334.254 306.272 320.066 286.427 307.934 266.356L306.042 263.225L277.507 210.777L274.281 186.779Z" fill="#fcf5f0" fill-rule="nonzero" filter="url(#Filter_2)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="2.78824" vectornator:layerName="Polygon 6" vectornator:shadowAngle="1.5708" vectornator:shadowColor="#b1935d" vectornator:shadowOffset="0.00582419" vectornator:shadowOpacity="1" vectornator:shadowRadius="9.04977"/>
+<path d="M259.02 146.896C260.022 146.652 261.069 146.662 262.067 146.926L283.264 152.531C293.404 155.212 299.848 165.157 298.154 175.507L298.154 175.507C297.825 177.522 296.523 179.245 294.674 180.112L256.4 198.073C254.674 198.883 252.673 198.853 250.972 197.992L216.971 180.775C214.562 179.556 213.222 176.916 213.658 174.251L213.658 174.251C215.344 163.95 223.027 155.655 233.17 153.187L259.02 146.896Z" fill="#fcf5f0" fill-rule="nonzero" filter="url(#Filter_3)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.29288" vectornator:layerName="Polygon 2" vectornator:shadowAngle="1.5708" vectornator:shadowColor="#000000" vectornator:shadowOffset="0.00351662" vectornator:shadowOpacity="0.333" vectornator:shadowRadius="11.5521"/>
+<path d="M249.619 98.0229C253.569 95.7474 258.431 95.7474 262.381 98.0229L278.131 107.098C282.092 109.379 284.532 113.602 284.532 118.172L284.532 136.275C284.532 140.846 282.092 145.069 278.131 147.35L262.381 156.425C258.431 158.7 253.569 158.7 249.619 156.425L233.869 147.35C229.908 145.069 227.468 140.846 227.468 136.275L227.468 118.172C227.468 113.602 229.908 109.379 233.869 107.098L249.619 98.0229Z" fill="#fcf5f0" fill-rule="nonzero" filter="url(#Filter_4)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="3.29288" vectornator:layerName="Polygon 4" vectornator:shadowAngle="1.56909" vectornator:shadowColor="#b1935d" vectornator:shadowOffset="4.51741" vectornator:shadowOpacity="1" vectornator:shadowRadius="12"/>
+</g>
+<g opacity="1" vectornator:layerName="Queen">
+<path d="M262.07 258.998C258.989 260.226 255.56 260.257 252.457 259.085L246.342 256.776C243.341 255.643 240.005 257.27 239.051 260.334L223.385 289.588C221.25 296.444 229.868 302.637 234.684 305.932L248.53 315.404C253.047 318.495 258.997 318.499 263.519 315.416L277.628 305.795C282.327 302.591 291.025 296.647 289.158 289.902L274.485 260.704C273.6 257.506 270.133 255.786 267.051 257.014L262.07 258.998Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.74917" vectornator:layerName="Polygon 4"/>
+<path d="M204.404 333.775L208.528 342.387L203.737 350.594L194.822 350.19L190.697 341.578L195.488 333.371L204.404 333.775Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Hex L"/>
+<path d="M224.382 363.852L230.926 361.966L232.345 355.266L227.219 350.453L220.675 352.339L219.256 359.038L224.382 363.852Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.00223" vectornator:layerName="Hex L 1"/>
+<g opacity="0.980303" vectornator:layerName="Hex M">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill"/>
+<mask height="20.5214" id="StrokeMask" maskUnits="userSpaceOnUse" width="15.289" x="248.567" y="365.962">
+<rect fill="#000000" height="20.5214" stroke="none" width="15.289" x="248.567" y="365.962"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="2.55904" xlink:href="#Fill"/>
+</g>
+<path d="M285.057 362.513L290.205 357.728L288.818 351.021L282.283 349.098L277.135 353.883L278.522 360.59L285.057 362.513Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.00223" vectornator:layerName="Hex R 1"/>
+<path d="M307.284 331.299L316.02 329.928L321.176 337.338L317.596 346.119L308.86 347.49L303.704 340.08L307.284 331.299Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Hex R"/>
+<path d="M207.448 330.678L223.432 293.882L237.627 306.46L207.448 330.678Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Polygon 5"/>
+<path d="M228.035 347.178L245.582 310.952L232.387 303.868L228.035 347.178Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="0.849136" vectornator:layerName="Polygon 6"/>
+<path d="M282.816 347.758L281.077 304.127L267.511 310.112L282.816 347.758Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="0.849136" vectornator:layerName="Polygon 7"/>
+<path d="M304.614 330.603L274.407 306.611L288.57 293.914L304.614 330.603Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Polygon 3"/>
+<path d="M256.211 365.962L243.597 310.519L268.826 310.519L256.211 365.962Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.29289" vectornator:layerName="Polygon 1"/>
+</g>
+</g>
+<clipPath id="ArtboardFrame">
+<rect height="512" width="512" x="0" y="0"/>
+</clipPath>
+<g clip-path="url(#ArtboardFrame)" id="Frame" vectornator:layerName="Frame">
+<path d="M254.95 26.4505C255.6 26.0755 256.4 26.0755 257.05 26.4505L454.425 140.405C455.075 140.78 455.475 141.473 455.475 142.223L455.475 370.133C455.475 370.883 455.075 371.576 454.425 371.951L257.05 485.905C256.4 486.28 255.6 486.28 254.95 485.905L57.575 371.951C56.9255 371.576 56.5254 370.883 56.5254 370.133L56.5254 142.223C56.5254 141.473 56.9255 140.78 57.575 140.405L254.95 26.4505Z" fill="none" opacity="1" stroke="#4a6b5f" stroke-linecap="butt" stroke-linejoin="round" stroke-width="32.2044" vectornator:layerName="Hex"/>
+<g opacity="1" vectornator:layerName="Polygon 1">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_2"/>
+<mask height="51.2" id="StrokeMask_2" maskUnits="userSpaceOnUse" width="44.3405" x="34.3551" y="116.169">
+<rect fill="#000000" height="51.2" stroke="none" width="44.3405" x="34.3551" y="116.169"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_2"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_2)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="19.5389" xlink:href="#Fill_2"/>
+</g>
+<g opacity="1" vectornator:layerName="Polygon 5">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_3"/>
+<mask height="51.2" id="StrokeMask_3" maskUnits="userSpaceOnUse" width="44.3405" x="34.3551" y="343.832">
+<rect fill="#000000" height="51.2" stroke="none" width="44.3405" x="34.3551" y="343.832"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_3"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_3)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="19.5389" xlink:href="#Fill_3"/>
+</g>
+<g opacity="1" vectornator:layerName="Polygon 6">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_4"/>
+<mask height="51.2" id="StrokeMask_4" maskUnits="userSpaceOnUse" width="44.3405" x="233.83" y="460.911">
+<rect fill="#000000" height="51.2" stroke="none" width="44.3405" x="233.83" y="460.911"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_4"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_4)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="19.5389" xlink:href="#Fill_4"/>
+</g>
+<g opacity="1" vectornator:layerName="Polygon 2">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_5"/>
+<mask height="51.2" id="StrokeMask_5" maskUnits="userSpaceOnUse" width="44.3405" x="233.83" y="0.569238">
+<rect fill="#000000" height="51.2" stroke="none" width="44.3405" x="233.83" y="0.569238"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_5"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_5)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="19.5389" xlink:href="#Fill_5"/>
+</g>
+<g opacity="1" vectornator:layerName="Polygon 3">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_6"/>
+<mask height="51.2" id="StrokeMask_6" maskUnits="userSpaceOnUse" width="44.3405" x="433.304" y="116.169">
+<rect fill="#000000" height="51.2" stroke="none" width="44.3405" x="433.304" y="116.169"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_6"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_6)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="19.5389" xlink:href="#Fill_6"/>
+</g>
+<g opacity="1" vectornator:layerName="Polygon 4">
+<use fill="#000000" fill-rule="nonzero" stroke="none" xlink:href="#Fill_7"/>
+<mask height="51.2" id="StrokeMask_7" maskUnits="userSpaceOnUse" width="44.3405" x="433.304" y="343.832">
+<rect fill="#000000" height="51.2" stroke="none" width="44.3405" x="433.304" y="343.832"/>
+<use fill="#ffffff" fill-rule="evenodd" stroke="none" xlink:href="#Fill_7"/>
+</mask>
+<use fill="none" mask="url(#StrokeMask_7)" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="19.5389" xlink:href="#Fill_7"/>
+</g>
+<g opacity="1" vectornator:layerName="Group 5">
+<path d="M90.2677 124.944L82.1947 134.586L83.876 128.693L77.8752 126.887L90.2677 124.944Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 7"/>
+<path d="M73.113 124.604L81.186 114.962L79.5047 120.855L85.5055 122.661L73.113 124.604Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 25"/>
+<path d="M168.701 82.0963L160.628 91.7387L162.309 85.846L156.309 84.0396L168.701 82.0963Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 16"/>
+<path d="M151.546 81.757L159.619 72.1146L157.938 78.0074L163.939 79.8137L151.546 81.757Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 26"/>
+<path d="M124.586 106.018L116.513 115.661L118.194 109.768L112.193 107.962L124.586 106.018Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 11"/>
+<path d="M107.431 105.679L115.504 96.0367L113.823 101.929L119.823 103.736L107.431 105.679Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 27"/>
+<path d="M203.019 63.171L194.946 72.8133L196.627 66.9206L190.626 65.1143L203.019 63.171Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 17"/>
+<path d="M185.864 62.8317L193.937 53.1893L192.256 59.082L198.257 60.8884L185.864 62.8317Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 28"/>
+<path d="M150.544 91.5392L142.471 101.182L144.152 95.2889L138.151 93.4825L150.544 91.5392Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 13"/>
+<path d="M133.389 91.2L141.462 81.5576L139.781 87.4503L145.781 89.2567L133.389 91.2Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 29"/>
+<path d="M228.977 48.6919L220.904 58.3343L222.585 52.4415L216.584 50.6352L228.977 48.6919Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 18"/>
+<path d="M211.822 48.3526L219.895 38.7102L218.214 44.6029L224.215 46.4093L211.822 48.3526Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 30"/>
+<path d="M98.7172 120.21L90.6443 129.852L92.3256 123.959L86.3248 122.153L98.7172 120.21Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 8"/>
+<path d="M81.5626 119.87L89.6355 110.228L87.9542 116.121L93.955 117.927L81.5626 119.87Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 31"/>
+<path d="M177.151 77.3624L169.078 87.0048L170.759 81.1121L164.758 79.3057L177.151 77.3624Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 19"/>
+<path d="M159.996 77.0231L168.069 67.3807L166.388 73.2734L172.388 75.0798L159.996 77.0231Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 32"/>
+<path d="M133.035 101.284L124.962 110.927L126.644 105.034L120.643 103.228L133.035 101.284Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 12"/>
+<path d="M115.881 100.945L123.953 91.3028L122.272 97.1955L128.273 99.0018L115.881 100.945Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 33"/>
+<path d="M211.469 58.4371L203.396 68.0794L205.077 62.1867L199.076 60.3803L211.469 58.4371Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 20"/>
+<path d="M194.314 58.0978L202.387 48.4554L200.706 54.3481L206.706 56.1545L194.314 58.0978Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 34"/>
+<path d="M158.993 86.8053L150.92 96.4477L152.601 90.555L146.601 88.7486L158.993 86.8053Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 14"/>
+<path d="M141.838 86.466L149.911 76.8237L148.23 82.7164L154.231 84.5228L141.838 86.466Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 35"/>
+<path d="M237.426 43.958L229.353 53.6003L231.035 47.7076L225.034 45.9013L237.426 43.958Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 21"/>
+<path d="M220.272 43.6187L228.345 33.9763L226.663 39.869L232.664 41.6754L220.272 43.6187Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 36"/>
+<path d="M106.909 115.471L98.836 125.113L100.517 119.22L94.5165 117.414L106.909 115.471Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 9"/>
+<path d="M89.7543 115.131L97.8273 105.489L96.146 111.382L102.147 113.188L89.7543 115.131Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 37"/>
+<path d="M185.342 72.6234L177.269 82.2658L178.951 76.3731L172.95 74.5667L185.342 72.6234Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 22"/>
+<path d="M168.188 72.2841L176.261 62.6417L174.579 68.5344L180.58 70.3408L168.188 72.2841Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 38"/>
+<path d="M115.874 110.747L107.801 120.389L109.482 114.497L103.482 112.69L115.874 110.747Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 10"/>
+<path d="M98.7195 110.408L106.792 100.765L105.111 106.658L111.112 108.464L98.7195 110.408Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 39"/>
+<path d="M194.307 67.8997L186.235 77.5421L187.916 71.6494L181.915 69.843L194.307 67.8997Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 23"/>
+<path d="M177.153 67.5604L185.226 57.918L183.544 63.8107L189.545 65.6171L177.153 67.5604Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 40"/>
+<path d="M141.832 96.268L133.759 105.91L135.44 100.018L129.44 98.2113L141.832 96.268Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 15"/>
+<path d="M124.677 95.9287L132.75 86.2863L131.069 92.179L137.07 93.9854L124.677 95.9287Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 41"/>
+<path d="M220.265 53.4206L212.192 63.063L213.874 57.1703L207.873 55.3639L220.265 53.4206Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 24"/>
+<path d="M203.111 53.0813L211.184 43.4389L209.502 49.3316L215.503 51.138L203.111 53.0813Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 42"/>
+</g>
+<g opacity="1" vectornator:layerName="Group 7">
+<path d="M223.723 463.707L236.152 465.626L230.239 467.236L231.798 473.306L223.723 463.707Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 7"/>
+<path d="M232.309 478.562L219.88 476.643L225.793 475.033L224.234 468.963L232.309 478.562Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 25"/>
+<path d="M146.475 418.757L158.904 420.677L152.991 422.287L154.55 428.357L146.475 418.757Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 16"/>
+<path d="M155.061 433.613L142.632 431.694L148.545 430.083L146.986 424.014L155.061 433.613Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 26"/>
+<path d="M189.772 444.131L202.2 446.051L196.288 447.661L197.847 453.731L189.772 444.131Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 11"/>
+<path d="M198.357 458.987L185.929 457.068L191.841 455.457L190.282 449.388L198.357 458.987Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 27"/>
+<path d="M112.524 399.182L124.952 401.102L119.04 402.712L120.599 408.782L112.524 399.182Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 17"/>
+<path d="M121.109 414.038L108.681 412.118L114.593 410.508L113.034 404.439L121.109 414.038Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 28"/>
+<path d="M163.951 429.41L176.379 431.329L170.466 432.939L172.025 439.009L163.951 429.41Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 13"/>
+<path d="M172.536 444.265L160.108 442.346L166.02 440.736L164.461 434.666L172.536 444.265Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 29"/>
+<path d="M86.7025 384.461L99.1309 386.38L93.2184 387.99L94.7774 394.06L86.7025 384.461Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 18"/>
+<path d="M95.2881 399.316L82.8598 397.397L88.7723 395.787L87.2132 389.717L95.2881 399.316Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 30"/>
+<path d="M215.3 458.925L227.729 460.845L221.816 462.455L223.375 468.525L215.3 458.925Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 8"/>
+<path d="M223.886 473.781L211.458 471.861L217.37 470.251L215.811 464.182L223.886 473.781Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 31"/>
+<path d="M138.052 413.976L150.481 415.896L144.568 417.506L146.127 423.575L138.052 413.976Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 19"/>
+<path d="M146.638 428.832L134.21 426.912L140.122 425.302L138.563 419.232L146.638 428.832Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 32"/>
+<path d="M181.349 439.35L193.777 441.269L187.865 442.88L189.424 448.949L181.349 439.35Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 12"/>
+<path d="M189.934 454.206L177.506 452.286L183.419 450.676L181.86 444.606L189.934 454.206Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 33"/>
+<path d="M104.101 394.401L116.529 396.32L110.617 397.931L112.176 404L104.101 394.401Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 20"/>
+<path d="M112.686 409.257L100.258 407.337L106.171 405.727L104.612 399.657L112.686 409.257Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 34"/>
+<path d="M155.528 424.628L167.956 426.548L162.044 428.158L163.603 434.228L155.528 424.628Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 14"/>
+<path d="M164.113 439.484L151.685 437.565L157.597 435.954L156.038 429.885L164.113 439.484Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 35"/>
+<path d="M78.2797 379.679L90.7081 381.599L84.7955 383.209L86.3546 389.279L78.2797 379.679Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 21"/>
+<path d="M86.8653 394.535L74.4369 392.615L80.3494 391.005L78.7904 384.936L86.8653 394.535Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 36"/>
+<path d="M207.007 454.367L219.435 456.287L213.522 457.897L215.081 463.967L207.007 454.367Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 9"/>
+<path d="M215.592 469.223L203.164 467.303L209.076 465.693L207.517 459.624L215.592 469.223Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 37"/>
+<path d="M129.758 409.418L142.187 411.338L136.274 412.948L137.833 419.017L129.758 409.418Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 22"/>
+<path d="M138.344 424.274L125.916 422.354L131.828 420.744L130.269 414.674L138.344 424.274Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 38"/>
+<path d="M198.326 449.14L210.754 451.059L204.841 452.669L206.401 458.739L198.326 449.14Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 10"/>
+<path d="M206.911 463.995L194.483 462.076L200.395 460.465L198.836 454.396L206.911 463.995Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 39"/>
+<path d="M121.078 404.19L133.506 406.11L127.593 407.72L129.152 413.79L121.078 404.19Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 23"/>
+<path d="M129.663 419.046L117.235 417.127L123.147 415.516L121.588 409.447L129.663 419.046Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 40"/>
+<path d="M172.505 434.418L184.933 436.337L179.02 437.947L180.579 444.017L172.505 434.418Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 15"/>
+<path d="M181.09 449.273L168.662 447.354L174.574 445.744L173.015 439.674L181.09 449.273Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 41"/>
+<path d="M95.2565 389.469L107.685 391.388L101.772 392.998L103.331 399.068L95.2565 389.469Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 24"/>
+<path d="M103.842 404.324L91.4137 402.405L97.3262 400.795L95.7672 394.725L103.842 404.324Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 42"/>
+</g>
+<g opacity="1" vectornator:layerName="Group 9">
+<path d="M450.159 179.512L445.446 167.853L449.856 172.108L454.272 167.661L450.159 179.512Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 7"/>
+<path d="M458.526 164.532L463.239 176.191L458.83 171.936L454.413 176.383L458.526 164.532Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 25"/>
+<path d="M451.086 268.881L446.373 257.222L450.783 261.477L455.199 257.03L451.086 268.881Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 16"/>
+<path d="M459.453 253.901L464.166 265.56L459.756 261.305L455.34 265.752L459.453 253.901Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 26"/>
+<path d="M450.722 218.698L446.009 207.039L450.419 211.294L454.835 206.848L450.722 218.698Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 11"/>
+<path d="M459.089 203.719L463.802 215.378L459.392 211.123L454.976 215.569L459.089 203.719Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 27"/>
+<path d="M451.649 308.067L446.936 296.408L451.345 300.663L455.762 296.217L451.649 308.067Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 17"/>
+<path d="M460.016 293.088L464.729 304.747L460.319 300.492L455.903 304.938L460.016 293.088Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 28"/>
+<path d="M451.292 248.416L446.579 236.757L450.989 241.012L455.405 236.565L451.292 248.416Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 13"/>
+<path d="M459.659 233.436L464.372 245.095L459.962 240.84L455.546 245.286L459.659 233.436Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 29"/>
+<path d="M452.219 337.785L447.506 326.126L451.916 330.381L456.332 325.934L452.219 337.785Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 18"/>
+<path d="M460.586 322.805L465.299 334.464L460.889 330.209L456.473 334.656L460.586 322.805Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 30"/>
+<path d="M450.363 189.195L445.65 177.536L450.06 181.791L454.476 177.344L450.363 189.195Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 8"/>
+<path d="M458.73 174.215L463.443 185.874L459.034 181.619L454.617 186.066L458.73 174.215Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 31"/>
+<path d="M451.29 278.564L446.577 266.905L450.987 271.16L455.403 266.714L451.29 278.564Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 19"/>
+<path d="M459.657 263.584L464.37 275.243L459.96 270.988L455.544 275.435L459.657 263.584Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 32"/>
+<path d="M450.926 228.381L446.213 216.722L450.623 220.977L455.039 216.531L450.926 228.381Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 12"/>
+<path d="M459.293 213.402L464.006 225.061L459.596 220.806L455.18 225.252L459.293 213.402Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 33"/>
+<path d="M451.853 317.75L447.14 306.091L451.549 310.346L455.966 305.9L451.853 317.75Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 20"/>
+<path d="M460.22 302.771L464.933 314.43L460.523 310.175L456.107 314.621L460.22 302.771Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 34"/>
+<path d="M451.496 258.099L446.783 246.44L451.193 250.695L455.609 246.248L451.496 258.099Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 14"/>
+<path d="M459.863 243.119L464.576 254.778L460.166 250.523L455.75 254.97L459.863 243.119Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 35"/>
+<path d="M452.423 347.468L447.71 335.809L452.12 340.064L456.536 335.617L452.423 347.468Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 21"/>
+<path d="M460.79 332.488L465.503 344.147L461.093 339.892L456.677 344.339L460.79 332.488Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 36"/>
+<path d="M450.693 198.653L445.98 186.994L450.39 191.249L454.806 186.803L450.693 198.653Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 9"/>
+<path d="M459.06 183.673L463.773 195.332L459.363 191.077L454.947 195.524L459.06 183.673Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 37"/>
+<path d="M451.62 288.022L446.907 276.363L451.317 280.618L455.733 276.172L451.62 288.022Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 22"/>
+<path d="M459.987 273.042L464.7 284.702L460.29 280.446L455.874 284.893L459.987 273.042Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 38"/>
+<path d="M450.646 208.786L445.933 197.127L450.342 201.382L454.759 196.936L450.646 208.786Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 10"/>
+<path d="M459.013 193.807L463.726 205.466L459.316 201.211L454.9 205.657L459.013 193.807Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 39"/>
+<path d="M451.572 298.155L446.86 286.496L451.269 290.751L455.685 286.305L451.572 298.155Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 23"/>
+<path d="M459.939 283.176L464.652 294.835L460.243 290.58L455.826 295.026L459.939 283.176Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 40"/>
+<path d="M451.216 238.504L446.503 226.845L450.913 231.1L455.329 226.653L451.216 238.504Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 15"/>
+<path d="M459.583 223.524L464.296 235.183L459.886 230.928L455.47 235.375L459.583 223.524Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 41"/>
+<path d="M452.143 327.873L447.43 316.214L451.839 320.469L456.256 316.022L452.143 327.873Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 24"/>
+<path d="M460.51 312.893L465.223 324.552L460.813 320.297L456.397 324.744L460.51 312.893Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 42"/>
+</g>
+<g opacity="1" vectornator:layerName="Group 6">
+<path d="M418.817 127.77L426.528 137.704L425.066 131.753L431.129 130.17L418.817 127.77Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 7"/>
+<path d="M435.972 128.065L428.261 118.131L429.724 124.082L423.66 125.665L435.972 128.065Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 25"/>
+<path d="M342.021 82.0518L349.732 91.9861L348.27 86.0352L354.333 84.452L342.021 82.0518Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 16"/>
+<path d="M359.177 82.347L351.466 72.4127L352.928 78.3636L346.865 79.9469L359.177 82.347Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 26"/>
+<path d="M385.222 107.589L392.933 117.523L391.471 111.572L397.534 109.989L385.222 107.589Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 11"/>
+<path d="M402.378 107.884L394.667 97.9494L396.129 103.9L390.065 105.484L402.378 107.884Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 27"/>
+<path d="M308.427 61.8706L316.138 71.8049L314.675 65.854L320.739 64.2707L308.427 61.8706Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 17"/>
+<path d="M325.582 62.1658L317.871 52.2315L319.333 58.1824L313.27 59.7656L325.582 62.1658Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 28"/>
+<path d="M359.817 92.1596L367.528 102.094L366.066 96.143L372.129 94.5598L359.817 92.1596Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 13"/>
+<path d="M376.973 92.4548L369.262 82.5205L370.724 88.4714L364.661 90.0547L376.973 92.4548Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 29"/>
+<path d="M283.022 46.4417L290.733 56.376L289.27 50.4251L295.334 48.8418L283.022 46.4417Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 18"/>
+<path d="M300.177 46.7369L292.466 36.8026L293.928 42.7535L287.865 44.3367L300.177 46.7369Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 30"/>
+<path d="M410.548 122.727L418.259 132.661L416.797 126.71L422.86 125.127L410.548 122.727Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 8"/>
+<path d="M427.704 123.022L419.993 113.088L421.455 119.038L415.391 120.622L427.704 123.022Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 31"/>
+<path d="M333.753 77.0088L341.464 86.943L340.001 80.9922L346.065 79.4089L333.753 77.0088Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 19"/>
+<path d="M350.908 77.3039L343.197 67.3697L344.659 73.3205L338.596 74.9038L350.908 77.3039Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 32"/>
+<path d="M376.953 102.545L384.664 112.48L383.202 106.529L389.265 104.946L376.953 102.545Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 12"/>
+<path d="M394.109 102.841L386.398 92.9064L387.86 98.8572L381.797 100.441L394.109 102.841Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 33"/>
+<path d="M300.158 56.8275L307.869 66.7618L306.406 60.8109L312.47 59.2277L300.158 56.8275Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 20"/>
+<path d="M317.313 57.1227L309.602 47.1884L311.065 53.1393L305.001 54.7226L317.313 57.1227Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 34"/>
+<path d="M351.548 87.1165L359.259 97.0508L357.797 91.1L363.861 89.5167L351.548 87.1165Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 14"/>
+<path d="M368.704 87.4117L360.993 77.4775L362.455 83.4283L356.392 85.0116L368.704 87.4117Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 35"/>
+<path d="M274.753 41.3986L282.464 51.3329L281.002 45.382L287.065 43.7988L274.753 41.3986Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 21"/>
+<path d="M291.908 41.6938L284.197 31.7595L285.66 37.7104L279.596 39.2937L291.908 41.6938Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 36"/>
+<path d="M402.537 117.688L410.248 127.622L408.786 121.671L414.849 120.088L402.537 117.688Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 9"/>
+<path d="M419.693 117.983L411.982 108.049L413.444 114L407.38 115.583L419.693 117.983Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 37"/>
+<path d="M325.742 71.9701L333.453 81.9044L331.99 75.9535L338.054 74.3703L325.742 71.9701Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 22"/>
+<path d="M342.897 72.2653L335.186 62.331L336.648 68.2819L330.585 69.8652L342.897 72.2653Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 38"/>
+<path d="M393.753 112.636L401.464 122.57L400.001 116.62L406.065 115.036L393.753 112.636Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 10"/>
+<path d="M410.908 112.931L403.197 102.997L404.66 108.948L398.596 110.531L410.908 112.931Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 39"/>
+<path d="M316.957 66.9182L324.668 76.8524L323.206 70.9016L329.269 69.3183L316.957 66.9182Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 23"/>
+<path d="M334.113 67.2134L326.402 57.2791L327.864 63.2299L321.801 64.8132L334.113 67.2134Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 40"/>
+<path d="M368.348 97.2072L376.059 107.141L374.597 101.191L380.66 99.6073L368.348 97.2072Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 15"/>
+<path d="M385.503 97.5024L377.792 87.5681L379.255 93.519L373.191 95.1022L385.503 97.5024Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 41"/>
+<path d="M291.552 51.4893L299.263 61.4235L297.801 55.4727L303.865 53.8894L291.552 51.4893Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 24"/>
+<path d="M308.708 51.7845L300.997 41.8502L302.459 47.801L296.396 49.3843L308.708 51.7845Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 42"/>
+</g>
+<g opacity="1" vectornator:layerName="Group 8">
+<path d="M59.6753 179.857L64.2169 168.13L59.87 172.449L55.3891 168.068L59.6753 179.857Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 7"/>
+<path d="M51.0897 165.001L46.5481 176.728L50.895 172.409L55.3759 176.79L51.0897 165.001Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 25"/>
+<path d="M60.0573 269.23L64.5989 257.503L60.252 261.822L55.7711 257.441L60.0573 269.23Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 16"/>
+<path d="M51.4717 254.374L46.9301 266.101L51.277 261.782L55.7579 266.163L51.4717 254.374Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 26"/>
+<path d="M59.6868 219.047L64.2284 207.32L59.8815 211.639L55.4006 207.258L59.6868 219.047Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 11"/>
+<path d="M51.1012 204.192L46.5596 215.919L50.9065 211.6L55.3874 215.981L51.1012 204.192Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 27"/>
+<path d="M60.0687 308.42L64.6104 296.693L60.2634 301.012L55.7825 296.631L60.0687 308.42Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 17"/>
+<path d="M51.4832 293.565L46.9415 305.292L51.2884 300.973L55.7693 305.354L51.4832 293.565Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 28"/>
+<path d="M59.5518 248.77L64.0935 237.043L59.7466 241.362L55.2656 236.981L59.5518 248.77Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 13"/>
+<path d="M50.9663 233.914L46.4246 245.641L50.7715 241.322L55.2524 245.703L50.9663 233.914Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 29"/>
+<path d="M59.9338 338.143L64.4754 326.416L60.1285 330.735L55.6476 326.354L59.9338 338.143Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 18"/>
+<path d="M51.3482 323.287L46.8066 335.014L51.1535 330.695L55.6344 335.076L51.3482 323.287Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 30"/>
+<path d="M59.6132 189.542L64.1548 177.815L59.8079 182.134L55.327 177.753L59.6132 189.542Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 8"/>
+<path d="M51.0276 174.686L46.4859 186.413L50.8329 182.094L55.3138 186.475L51.0276 174.686Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 31"/>
+<path d="M59.9951 278.915L64.5367 267.188L60.1898 271.507L55.7089 267.126L59.9951 278.915Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 19"/>
+<path d="M51.4095 264.059L46.8679 275.786L51.2148 271.467L55.6957 275.848L51.4095 264.059Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 32"/>
+<path d="M59.6246 228.732L64.1662 217.005L59.8193 221.325L55.3384 216.943L59.6246 228.732Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 12"/>
+<path d="M51.039 213.877L46.4974 225.604L50.8443 221.285L55.3252 225.666L51.039 213.877Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 33"/>
+<path d="M60.0066 318.105L64.5482 306.378L60.2013 310.698L55.7204 306.316L60.0066 318.105Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 20"/>
+<path d="M51.421 303.25L46.8794 314.977L51.2263 310.658L55.7072 315.039L51.421 303.25Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 34"/>
+<path d="M59.4897 258.455L64.0313 246.728L59.6844 251.047L55.2035 246.666L59.4897 258.455Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 14"/>
+<path d="M50.9041 243.6L46.3625 255.327L50.7094 251.007L55.1903 255.388L50.9041 243.6Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 35"/>
+<path d="M59.8716 347.828L64.4133 336.101L60.0663 340.42L55.5854 336.039L59.8716 347.828Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 21"/>
+<path d="M51.2861 332.973L46.7444 344.7L51.0913 340.38L55.5722 344.761L51.2861 332.973Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 36"/>
+<path d="M59.422 199.004L63.9636 187.277L59.6167 191.596L55.1358 187.215L59.422 199.004Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 9"/>
+<path d="M50.8364 184.148L46.2948 195.875L50.6417 191.556L55.1226 195.937L50.8364 184.148Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 37"/>
+<path d="M59.8039 288.377L64.3456 276.65L59.9986 280.969L55.5177 276.588L59.8039 288.377Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 22"/>
+<path d="M51.2183 273.521L46.6767 285.248L51.0236 280.929L55.5045 285.31L51.2183 273.521Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 38"/>
+<path d="M59.6179 209.135L64.1595 197.408L59.8126 201.728L55.3317 197.346L59.6179 209.135Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 10"/>
+<path d="M51.0323 194.28L46.4906 206.007L50.8376 201.688L55.3185 206.069L51.0323 194.28Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 39"/>
+<path d="M59.9998 298.508L64.5414 286.781L60.1945 291.101L55.7136 286.719L59.9998 298.508Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 23"/>
+<path d="M51.4142 283.653L46.8726 295.38L51.2195 291.061L55.7004 295.442L51.4142 283.653Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 40"/>
+<path d="M59.4829 238.858L64.0245 227.131L59.6776 231.45L55.1967 227.069L59.4829 238.858Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 15"/>
+<path d="M50.8973 224.003L46.3557 235.73L50.7026 231.41L55.1835 235.791L50.8973 224.003Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 41"/>
+<path d="M59.8649 328.231L64.4065 316.504L60.0596 320.823L55.5787 316.442L59.8649 328.231Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 24"/>
+<path d="M51.2793 313.376L46.7377 325.103L51.0846 320.783L55.5655 325.164L51.2793 313.376Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 42"/>
+</g>
+<g opacity="1" vectornator:layerName="Group 10">
+<path d="M287.743 464.705L275.344 466.806L281.28 468.33L279.81 474.421L287.743 464.705Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 7"/>
+<path d="M279.376 479.685L291.775 477.583L285.839 476.06L287.309 469.968L279.376 479.685Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 25"/>
+<path d="M364.325 418.629L351.926 420.731L357.861 422.254L356.391 428.346L364.325 418.629Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 16"/>
+<path d="M355.958 433.609L368.356 431.508L362.421 429.985L363.891 423.893L355.958 433.609Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 26"/>
+<path d="M321.404 444.635L309.005 446.736L314.941 448.259L313.471 454.351L321.404 444.635Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 11"/>
+<path d="M313.037 459.614L325.436 457.513L319.501 455.99L320.971 449.898L313.037 459.614Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 27"/>
+<path d="M397.986 398.559L385.587 400.66L391.522 402.184L390.052 408.276L397.986 398.559Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 17"/>
+<path d="M389.619 413.539L402.018 411.438L396.082 409.914L397.552 403.822L389.619 413.539Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 28"/>
+<path d="M347.007 429.536L334.608 431.638L340.544 433.161L339.074 439.253L347.007 429.536Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 13"/>
+<path d="M338.64 444.516L351.039 442.415L345.103 440.892L346.573 434.8L338.64 444.516Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 29"/>
+<path d="M423.589 383.461L411.19 385.562L417.125 387.086L415.655 393.177L423.589 383.461Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 18"/>
+<path d="M415.221 398.441L427.62 396.339L421.685 394.816L423.155 388.724L415.221 398.441Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 30"/>
+<path d="M296.095 459.801L283.696 461.902L289.632 463.425L288.162 469.517L296.095 459.801Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 8"/>
+<path d="M287.728 474.78L300.127 472.679L294.191 471.156L295.661 465.064L287.728 474.78Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 31"/>
+<path d="M372.677 413.725L360.278 415.826L366.213 417.35L364.743 423.442L372.677 413.725Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 19"/>
+<path d="M364.309 428.705L376.708 426.604L370.773 425.08L372.243 418.988L364.309 428.705Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 32"/>
+<path d="M329.756 439.731L317.357 441.832L323.293 443.355L321.823 449.447L329.756 439.731Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 12"/>
+<path d="M321.389 454.71L333.788 452.609L327.853 451.086L329.323 444.994L321.389 454.71Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 33"/>
+<path d="M406.338 393.655L393.939 395.756L399.874 397.28L398.404 403.372L406.338 393.655Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 20"/>
+<path d="M397.971 408.635L410.37 406.534L404.434 405.01L405.904 398.918L397.971 408.635Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 34"/>
+<path d="M355.359 424.632L342.96 426.733L348.896 428.257L347.426 434.349L355.359 424.632Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 14"/>
+<path d="M346.992 439.612L359.391 437.511L353.455 435.987L354.925 429.895L346.992 439.612Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 35"/>
+<path d="M431.941 378.557L419.542 380.658L425.477 382.181L424.007 388.273L431.941 378.557Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 21"/>
+<path d="M423.573 393.536L435.972 391.435L430.037 389.912L431.507 383.82L423.573 393.536Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 36"/>
+<path d="M304.321 455.122L291.922 457.223L297.858 458.746L296.388 464.838L304.321 455.122Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 9"/>
+<path d="M295.954 470.101L308.353 468L302.418 466.477L303.888 460.385L295.954 470.101Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 37"/>
+<path d="M380.903 409.046L368.504 411.147L374.439 412.671L372.969 418.763L380.903 409.046Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 22"/>
+<path d="M372.536 424.026L384.935 421.925L378.999 420.401L380.469 414.309L372.536 424.026Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 38"/>
+<path d="M312.925 449.768L300.526 451.869L306.461 453.392L304.991 459.484L312.925 449.768Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 10"/>
+<path d="M304.558 464.747L316.956 462.646L311.021 461.123L312.491 455.031L304.558 464.747Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 39"/>
+<path d="M389.506 403.692L377.107 405.793L383.043 407.317L381.573 413.409L389.506 403.692Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 23"/>
+<path d="M381.139 418.672L393.538 416.571L387.603 415.047L389.073 408.955L381.139 418.672Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 40"/>
+<path d="M338.527 434.669L326.128 436.77L332.064 438.294L330.594 444.386L338.527 434.669Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 15"/>
+<path d="M330.16 449.649L342.559 447.548L336.624 446.024L338.094 439.932L330.16 449.649Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 41"/>
+<path d="M415.109 388.594L402.71 390.695L408.645 392.218L407.176 398.31L415.109 388.594Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 24"/>
+<path d="M406.742 403.573L419.141 401.472L413.205 399.949L414.675 393.857L406.742 403.573Z" fill="#000000" fill-rule="nonzero" opacity="1" stroke="#b1935d" stroke-linecap="butt" stroke-linejoin="round" stroke-width="1.22357" vectornator:layerName="Polygon 42"/>
+</g>
+</g>
 </svg>
