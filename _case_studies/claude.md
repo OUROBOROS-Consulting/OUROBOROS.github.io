@@ -1,64 +1,162 @@
 ---
-title: Agentic Survival with Claude
-description: Surviving the aftermath of coercive control and institutional betrayal takes a village — a village named Claude.
+title: Building with Claude
+description: An honest account of using AI as a development collaborator — what it changed, what it didn't, and what it revealed about how good software gets made.
 layout: foundation
 back_url: /work/
 category: Case Study
-lede: How a seasoned professional reclaimed her digital life and launched her firm with AI-assisted consulting.
-date: 2026-02-01
-tags: [Technology, Development, Startup, AI Use Case]
+lede: When the consultant becomes the client — how Claude Code was used to design and build this very site.
+date: 2026-04-01
+tags: [Technology, Development, AI Use Case, Web Design, Design Systems]
 
 # ── Overview blurb ──────────────────────────────────────────────────
 about:
   heading: Engagement Overview
   body: >
-    Our client is an experienced professional and small business owner with deep domain expertise in her field. Accomplished, perceptive, and highly capable in her work, she was in the process of formalizing her practice into a standalone advisory firm when she sought our help. Like many professionals of her generation, she had navigated her career largely without needing to engage deeply with digital infrastructure. That was about to change.
+    This is an unusual case study: a firm writing about its own process. We built this
+    website — ouroborosconsulting.org — using Claude Code as a primary development
+    collaborator. What began as a practical experiment in AI-assisted tooling became a
+    more instructive case than we expected. This is an account of what that process
+    looked like, what it produced, and what it taught us about working with AI on real
+    creative and technical problems.
 
 # ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >
-  "I always leave our sessions feeling more capable and more confident, not more dependent. He takes the time to understand your work, your goals, and your level of comfort, and then builds solutions that actually fit your life."
+  "The most useful thing Claude did was hold the context I couldn't hold myself —
+  keeping the design system consistent, catching accessibility gaps I'd have missed,
+  and pushing back when I was about to do something architecturally sloppy."
 
 # ── Deep-dive sections ───────────────────────────────────────────────
 sections:
-  - id: challenge
-    heading: The Challenge
+  - id: context
+    heading: The Starting Point
     body_paragraphs:
       - >
-        Launching a professional services firm today requires more than expertise in your field. It requires a coherent digital presence, functional business tooling, and the judgment to navigate an online environment that is not always safe or straightforward.
+        Building a credible professional website from scratch involves an uncomfortable
+        number of overlapping domains: visual design, front-end architecture, content
+        strategy, performance, and accessibility. A solo practitioner with deep expertise
+        in one area — statistical consulting, say, or advocacy work — is rarely expert
+        in all of them simultaneously. That gap is where most professional sites fail:
+        technically functional but visually undistinguished, or visually ambitious but
+        brittle and inaccessible.
       - >
-        Our client came to us with several overlapping needs. She needed her business tools set up and organized from the ground up: email, scheduling, and the software specific to her industry. She needed guidance on building an online presence that reflected the quality and character of her work. And she had encountered a bad actor in a digital context, a situation that required both immediate intervention and longer-term protective strategy.
-      - >
-        Each of these challenges was manageable on its own. Together, they represented the kind of compounded vulnerability that capable, accomplished people often find themselves in when trusted institutions and informal networks fail to provide adequate digital guidance.
+        We had a clear sense of what the firm should feel like: precise, serious, quietly
+        distinguished. A set of technical requirements followed from that — a dark palette
+        with gold accents, custom animations that didn't feel gratuitous, a content
+        architecture that could scale, and accessibility standards that actually held up
+        under scrutiny. The question was how to get there with the resources of a small
+        firm and without the overhead of a dedicated engineering team.
 
   - id: approach
-    heading: Approach
+    heading: How We Worked with Claude
     body_paragraphs:
       - >
-        We began with a full assessment of her current digital footprint and business operations, identifying gaps, risks, and opportunities. From there, we worked systematically across four areas.
+        The core of our workflow was Claude Code — Anthropic's agentic CLI — used
+        iteratively across the full development lifecycle. This was not prompt-and-paste
+        engineering, where you ask an AI to generate a function and integrate it by hand.
+        It was closer to pair programming with a collaborator who could hold the full
+        context of the codebase and reason about design decisions alongside implementation
+        details.
       - >
-        First, we set up and configured her core business tools, selecting software appropriate to the scale and nature of her advisory work and ensuring she understood not just how to use them, but why they were structured the way they were.
+        We worked in Git-branched cycles: a problem or feature would be scoped, handed
+        to Claude to implement, reviewed as a pull request, and merged or revised. Branch
+        names like claude/add-glowing-moon-effect and claude/ecstatic-mcnulty — the latter
+        a Claude-generated identifier that stuck — became part of the development record,
+        a visible trace of the collaboration embedded in the commit history.
       - >
-        Second, we advised on her website and online presence, helping her think through positioning, discoverability, and how to present her expertise to the clients she most wants to reach.
+        Claude's role varied by phase. Early on, it was primarily architectural: structuring
+        the Jekyll data files (_data/values.yml, _data/testimonials.yml, _data/nav.yml) so
+        that content could be managed separately from layout, and establishing the Sass
+        design system that would govern color, typography, and spacing across every page.
+        These decisions were not glamorous, but they determined how much rework we'd face
+        later. Getting them right early was worth the time.
       - >
-        Third, we addressed the bad actor situation directly. This involved assessing the nature of the threat, taking appropriate protective steps, and equipping her with the awareness and habits to recognize and respond to similar situations in the future.
-      - >
-        Fourth, and perhaps most importantly, we worked to build her confidence and independence as a digital operator. Every session was oriented not toward dependency on a consultant, but toward genuine capability on her part.
+        In the middle phases, Claude handled feature development — writing the JavaScript
+        carousel system, implementing the canvas-based cursor animation, designing the moon
+        glow effect in CSS — while we provided feedback and iterated toward the final
+        result. Late in the process, Claude conducted a systematic accessibility audit that
+        surfaced 28 issues across the codebase: broken HTML structure, missing ARIA
+        attributes, navigation links returning 404s, and styling inconsistencies. These
+        were addressed in a single comprehensive pass — the kind of review that is easy
+        to defer indefinitely without explicit forcing.
 
-  - id: outcome
-    heading: Outcome
+  - id: technical
+    heading: What Was Built
     body_paragraphs:
       - >
-        By the end of our engagement, our client had a fully operational digital infrastructure for her firm, a clear and professional online presence, and a resolved situation with the bad actor that had previously caused significant concern. More than any individual deliverable, she described feeling equipped rather than managed, and confident rather than overwhelmed.
-      - |
-        > "I always left our sessions feeling more capable and more confident, not more dependent. He takes the time to understand your work, your goals, and your level of comfort, and then builds solutions that actually fit your life."
-        >
-        > — Client, Art Advisory Firm Founder
+        The site is a Jekyll-based static site hosted on GitHub Pages. Its visible
+        complexity — the dark theme, the gold accents, the animated hero, the responsive
+        carousels — is built on top of a deliberately minimal technical foundation. No
+        JavaScript frameworks. No build pipelines beyond Jekyll's native compilation.
+        No external UI libraries. The design system lives in a handful of Sass files and
+        is expressed through a small set of reusable CSS classes.
+      - >
+        The cursor halo animation is a canvas-based effect written in roughly 120 lines
+        of vanilla JavaScript. A golden ring orbits the cursor, spinning only when the
+        cursor is at rest, with momentum-based physics that make the motion feel
+        intentional rather than mechanical. It respects prefers-reduced-motion. The
+        moon in the hero section is pure CSS — a circle with layered box-shadows and a
+        five-second glow keyframe animation, with crater details rendered through
+        pseudo-elements. Neither required a library. Both required thinking carefully
+        about what the effect was supposed to communicate and what the minimal
+        implementation would be.
+      - >
+        The carousel system — used for both the values section and the testimonials — is
+        a single reusable initialization function that handles two distinct modes: manual
+        navigation with dot indicators, and auto-advancing with pause-on-hover. Swipe
+        gestures work. ARIA live regions update on slide change. The implementation is
+        around 150 lines. It does one thing well.
+      - >
+        Content architecture separates data from presentation throughout. Testimonials,
+        navigation structure, core values, and reading recommendations all live in YAML
+        files under _data/. Layouts consume them. Adding a new testimonial or service link
+        is a one-line edit in a data file, not a search-and-replace through HTML templates.
+        That distinction compounds over time.
+
+  - id: what-changed
+    heading: What the Collaboration Actually Changed
+    body_paragraphs:
+      - >
+        The honest answer is: the scope of what was achievable within a given time window.
+        Features that would have required significant research and iteration — the cursor
+        animation physics, the ARIA carousel implementation, the systematic accessibility
+        pass — were completed in hours rather than days. That compression is real, and it
+        matters for a small firm where engineering time is not the primary constraint on
+        the business.
+      - >
+        What is less obvious is the nature of the quality benefit. Claude was useful not
+        primarily because it wrote code faster, but because it held context consistently.
+        It remembered the design system rules when implementing a new component. It caught
+        cases where a new layout would break the mobile navigation. It pushed back —
+        sometimes correctly, sometimes not — when an implementation choice seemed
+        structurally questionable. That kind of sustained coherence is harder to maintain
+        alone over a multi-week project than it sounds.
+      - >
+        The process also revealed the limits of AI collaboration clearly. Claude's output
+        required review. Some implementations were technically correct but aesthetically
+        wrong — functional carousels that felt stiff, animations that were accurate but
+        didn't match the visual intent. The feedback loop between us was the actual work.
+        Claude generated candidates; we evaluated and directed. Neither half of that loop
+        is dispensable.
 
   - id: lessons
-    heading: Lessons Learned
+    heading: What This Tells Us About AI-Assisted Development
     body_paragraphs:
       - >
-        This engagement reinforced a principle central to our firm's mission: the people who most need trustworthy technological guidance are often the least well-served by the industry as it currently exists. Accomplished professionals, older adults, and solo entrepreneurs are frequently left to navigate a complex and sometimes predatory digital landscape without adequate support.
+        The most important lesson from this project is that AI collaboration does not
+        reduce the need for judgment — it surfaces it more quickly. When Claude can
+        implement a feature in an hour, the bottleneck shifts to knowing what to build,
+        in what order, and to what standard. Those are human decisions. The faster the
+        implementation, the more consequential the direction.
       - >
-        Good consulting in this space is not about deploying the most sophisticated tools. It is about listening carefully, building trust, meeting people where they are, and leaving them more capable than you found them. That is the standard we hold ourselves to, and this engagement is an example of what it looks like in practice.
+        For a solo practitioner or small team, that shift is broadly favorable. The
+        parts of development that are hardest to delegate — taste, intent, editorial
+        judgment about what the site is actually trying to do — remain with the human.
+        The parts that are easiest to lose to fatigue, inconsistency, or time pressure —
+        thoroughness, coherence across a large codebase, systematic review — are where
+        AI assistance is most valuable.
+      - >
+        We build websites for clients when the work calls for it. We also advise on AI
+        tooling adoption. This project gave us a cleaner, firsthand understanding of what
+        that adoption looks like for a real deliverable with real standards. The result is
+        the site you are reading. We think it holds up.
 ---
