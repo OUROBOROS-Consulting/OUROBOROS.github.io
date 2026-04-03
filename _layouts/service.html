@@ -19,7 +19,7 @@ layout: default
       </div>
     </div>
     <div class="svc-hero-cta">
-      <a href="{{ page.cta_url | default: site.email | prepend: 'mailto:' }}" class="btn">
+      <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
         {{ page.cta_label | default: 'Get in Touch' }}
       </a>
       {% if page.price %}
@@ -157,7 +157,7 @@ layout: default
     </div>
     <div class="svc-section-content">
       <p class="svc-cta-body">{{ page.cta_body | default: 'Reach out and we can find a time to talk through what you need.' }}</p>
-      <a href="{{ page.cta_url | default: site.email | prepend: 'mailto:' }}" class="btn">
+      <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
         {{ page.cta_label | default: 'Get in Touch' }}
       </a>
     </div>

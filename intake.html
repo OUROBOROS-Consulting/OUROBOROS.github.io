@@ -14,8 +14,7 @@ layout: default
     <div class="intake-masthead-meta">
       <div class="intake-masthead-name">Apostolos Stamenos, MS</div>
       <div class="intake-masthead-contact">
-        REDACTED<br>
-        REDACTED
+        ouroborosconsulting.org
       </div>
     </div>
   </div>
@@ -23,7 +22,7 @@ layout: default
 
   <!-- Note: this form requires a backend or service (e.g. Formspree) to process submissions.
        Set action="https://formspree.io/f/YOUR_ID" method="POST" when ready. -->
-  <form class="intake-body" method="POST" action="mailto:{{ site.email }}" enctype="text/plain">
+  <form class="intake-body" method="POST" action="{{ '/intake' | relative_url }}" enctype="text/plain">
 
     <!-- CONFIDENTIAL BANNER -->
     <div class="intake-banner">
@@ -397,7 +396,7 @@ layout: default
 
     <!-- SUBMIT -->
     <div class="intake-submit">
-      <p class="intake-submit-note">Questions before your consultation? Reach out at <a href="mailto:REDACTED">REDACTED</a> or REDACTED.</p>
+      <p class="intake-submit-note">Submit this form and I'll follow up within 48 hours.</p>
       <button type="submit" class="btn">Submit Intake</button>
       <button type="button" class="btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
