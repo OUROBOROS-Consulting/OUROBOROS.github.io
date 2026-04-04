@@ -21,7 +21,7 @@ pull_quote: >
 # ── Deep-dive sections ───────────────────────────────────────────────
 sections:
   - id: challenge
-    heading: The Challenge
+    heading: A Practice Without Infrastructure
     body_paragraphs:
       - >
         Launching a professional services firm today requires more than expertise in your field. It requires a coherent digital presence, functional business tooling, and the judgment to navigate an online environment that is not always safe or straightforward.
@@ -31,7 +31,7 @@ sections:
         Each of these challenges was manageable on its own. Together, they represented the kind of compounded vulnerability that capable, accomplished people often find themselves in when trusted institutions and informal networks fail to provide adequate digital guidance.
 
   - id: approach
-    heading: Approach
+    heading: Four Areas, Worked in Parallel
     body_paragraphs:
       - >
         We began with a full assessment of her current digital footprint and business operations, identifying gaps, risks, and opportunities. From there, we worked systematically across four areas.
@@ -45,7 +45,7 @@ sections:
         Fourth, and perhaps most importantly, we worked to build her confidence and independence as a digital operator. Every session was oriented not toward dependency on a consultant, but toward genuine capability on her part.
 
   - id: outcome
-    heading: Outcome
+    heading: Equipped, Not Managed
     body_paragraphs:
       - >
         By the end of our engagement, our client had a fully operational digital infrastructure for her firm, a clear and professional online presence, and a resolved situation with the bad actor that had previously caused significant concern. More than any individual deliverable, she described feeling equipped rather than managed, and confident rather than overwhelmed.
@@ -55,10 +55,17 @@ sections:
         > — Client, Art Advisory Firm Founder
 
   - id: lessons
-    heading: Lessons Learned
+    heading: Who the Industry Leaves Behind
     body_paragraphs:
       - >
         This engagement reinforced a principle central to our firm's mission: the people who most need trustworthy technological guidance are often the least well-served by the industry as it currently exists. Accomplished professionals, older adults, and solo entrepreneurs are frequently left to navigate a complex and sometimes predatory digital landscape without adequate support.
       - >
-        Good consulting in this space is not about deploying the most sophisticated tools. It is about listening carefully, building trust, meeting people where they are, and leaving them more capable than you found them. That is the standard we hold ourselves to, and this engagement is an example of what it looks like in practice.
+        What distinguishes good consulting in this space from bad consulting is not technical sophistication. It is knowing that your job is to become unnecessary. Every session was oriented toward that end — not toward her depending on a consultant, but toward her not needing one.
+      - >
+        Part of that independence is knowing which tools to trust and how to use them
+        responsibly. We advised Cassandra to switch to Claude for her AI interactions —
+        not because it is perfect, but because it is the most ethically grounded option
+        currently available, and because AI literacy means choosing tools with intention,
+        not convenience. She now uses it. She now understands why. That is the standard.
+        This is what it looks like.
 ---

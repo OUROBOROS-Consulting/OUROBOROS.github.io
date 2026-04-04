@@ -183,9 +183,9 @@ sections:
         particular form of paranoia that targeted abuse produces.
       - >
         The limits of this system are worth naming. It provides awareness, not control. It
-        documents, but does not guarantee that documentation will be acted upon by institutions
-        that receive it. It is one component of a security posture that includes legal records,
-        trusted contacts, and physical measures — not a substitute for any of them. It is the
-        layer that did not exist before, and that, under the circumstances, had to be built
-        from scratch.
+        documents, but it does not guarantee that documentation will be acted upon by
+        institutions that have already failed you once. It is one component of a security
+        posture that includes legal records, trusted contacts, and physical measures — not
+        a substitute for any of them. It is the layer that did not exist before, and had
+        to be built from scratch.
 ---

@@ -12,12 +12,11 @@ tags: [Technology, Development, AI Use Case, Web Design, Design Systems]
 about:
   heading: Engagement Overview
   body: >
-    This is an unusual case study: a firm writing about its own process. We built this
-    website — ouroborosconsulting.org — using Claude Code as a primary development
-    collaborator. What began as a practical experiment in AI-assisted tooling became a
-    more instructive case than we expected. This is an account of what that process
-    looked like, what it produced, and what it taught us about working with AI on real
-    creative and technical problems.
+    This is an unusual case study: I'm both the practitioner and the client. I built this
+    website using Claude Code as a primary development collaborator — and I was watching
+    the whole time. Not just using it, but observing how it reasoned, where it was useful,
+    and where it needed correction. What began as a practical experiment in AI-assisted
+    development became more instructive than I expected. This is what I actually saw.
 
 # ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >
@@ -34,45 +33,45 @@ sections:
         Building a credible professional website from scratch involves an uncomfortable
         number of overlapping domains: visual design, front-end architecture, content
         strategy, performance, and accessibility. A solo practitioner with deep expertise
-        in one area — statistical consulting, say, or advocacy work — is rarely expert
-        in all of them simultaneously. That gap is where most professional sites fail:
-        technically functional but visually undistinguished, or visually ambitious but
-        brittle and inaccessible.
+        in one area is rarely expert in all of them simultaneously. That gap is where
+        most professional sites fail: technically functional but visually undistinguished,
+        or visually ambitious but brittle and inaccessible.
       - >
-        We had a clear sense of what the firm should feel like: precise, serious, quietly
+        I had a clear sense of what this firm should feel like: precise, serious, quietly
         distinguished. A set of technical requirements followed from that — a dark palette
         with gold accents, custom animations that didn't feel gratuitous, a content
         architecture that could scale, and accessibility standards that actually held up
-        under scrutiny. The question was how to get there with the resources of a small
-        firm and without the overhead of a dedicated engineering team.
+        under scrutiny. The question was how to get there without the overhead of a
+        dedicated engineering team.
 
   - id: approach
     heading: How We Worked with Claude
     body_paragraphs:
       - >
-        The core of our workflow was Claude Code — Anthropic's agentic CLI — used
+        The core of my workflow was Claude Code — Anthropic's agentic CLI — used
         iteratively across the full development lifecycle. This was not prompt-and-paste
         engineering, where you ask an AI to generate a function and integrate it by hand.
         It was closer to pair programming with a collaborator who could hold the full
         context of the codebase and reason about design decisions alongside implementation
-        details.
+        details. I asked open-ended questions. I pushed back. I paid attention to how it
+        reasoned, not just what it produced.
       - >
-        We worked in Git-branched cycles: a problem or feature would be scoped, handed
-        to Claude to implement, reviewed as a pull request, and merged or revised. Branch
-        names like claude/add-glowing-moon-effect and claude/ecstatic-mcnulty — the latter
-        a Claude-generated identifier that stuck — became part of the development record,
+        I worked in Git-branched cycles: a problem or feature would be scoped, handed
+        to Claude to implement, reviewed, and merged or revised. Branch names like
+        claude/add-glowing-moon-effect and claude/ecstatic-mcnulty — the latter a
+        Claude-generated identifier that stuck — became part of the development record,
         a visible trace of the collaboration embedded in the commit history.
       - >
         Claude's role varied by phase. Early on, it was primarily architectural: structuring
         the Jekyll data files (_data/values.yml, _data/testimonials.yml, _data/nav.yml) so
         that content could be managed separately from layout, and establishing the Sass
         design system that would govern color, typography, and spacing across every page.
-        These decisions were not glamorous, but they determined how much rework we'd face
+        These decisions were not glamorous, but they determined how much rework I'd face
         later. Getting them right early was worth the time.
       - >
         In the middle phases, Claude handled feature development — writing the JavaScript
         carousel system, implementing the canvas-based cursor animation, designing the moon
-        glow effect in CSS — while we provided feedback and iterated toward the final
+        glow effect in CSS — while I provided feedback and iterated toward the final
         result. Late in the process, Claude conducted a systematic accessibility audit that
         surfaced 28 issues across the codebase: broken HTML structure, missing ARIA
         attributes, navigation links returning 404s, and styling inconsistencies. These
@@ -134,9 +133,11 @@ sections:
         The process also revealed the limits of AI collaboration clearly. Claude's output
         required review. Some implementations were technically correct but aesthetically
         wrong — functional carousels that felt stiff, animations that were accurate but
-        didn't match the visual intent. The feedback loop between us was the actual work.
-        Claude generated candidates; we evaluated and directed. Neither half of that loop
-        is dispensable.
+        didn't match the visual intent. Occasionally the reasoning itself was off: a
+        suggestion that looked plausible on the surface but didn't hold up when I
+        questioned the logic. The feedback loop was the actual work. Claude generated
+        candidates; I evaluated and directed. Neither half of that loop is optional, and
+        anyone who treats it as optional will eventually pay for that assumption.
 
   - id: lessons
     heading: What This Tells Us About AI-Assisted Development
@@ -155,8 +156,10 @@ sections:
         thoroughness, coherence across a large codebase, systematic review — are where
         AI assistance is most valuable.
       - >
-        We build websites for clients when the work calls for it. We also advise on AI
-        tooling adoption. This project gave us a cleaner, firsthand understanding of what
-        that adoption looks like for a real deliverable with real standards. The result is
-        the site you are reading. We think it holds up.
+        I build websites for clients when the work calls for it, and I advise on AI
+        tooling adoption. This project gave me a cleaner, firsthand understanding of what
+        that collaboration looks like in practice — what to trust, what to verify, and
+        where to push back. The result is the site you are reading. I think it's good
+        work. I also think AI collaboration requires the same thing all high-stakes work
+        requires: someone who is actually paying attention.
 ---

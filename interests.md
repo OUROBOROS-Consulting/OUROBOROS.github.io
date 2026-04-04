@@ -2,22 +2,21 @@
 title: Interests
 layout: foundation
 category: About
-lede: Using data and technology to improve lives.
+lede: Three fields that look separate until you've needed all three at once.
 tags: [Technology, Data Science, Psychopathology]
 cta_label: Book a Session
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours.
 tagline: >
-    I empower people so that systems work for them, not against them.
+    A statistician who builds smart homes and reads the DSM. The overlap is not accidental.
 
 # ── About ──────────────────────────────────────────────────────────────────
 about:
-  heading: Technology as a source of empowerment
+  heading: Three Fields, One Project
   body: >
-    My career began at the intersection of technology and public service, where I played a pivotal
-    role in the Federal COVID-19 response. After graduating from Penn State with a B.S. in Economics
-    in 2021, I immediately impacted the national healthcare landscape during a critical period.
-    Joining the U.S. Department of Health &amp; Human Services (HHS) as a Data &amp; Analytics Intern,
-    I quickly advanced to an IT Specialist Data Consultant.
+    Technology, data science, and psychopathology aren't separate interests — they're the same
+    inquiry from different angles. Understanding how data works, how minds break under sustained
+    abuse, and how technology can be turned against you or for you: each domain informs the others.
+    What looks like range is actually coherence.
 
 # ── Pull quote ─────────────────────────────────────────────────────────────
 pull_quote: >
