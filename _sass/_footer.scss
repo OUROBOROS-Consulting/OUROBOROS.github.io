@@ -6,8 +6,10 @@ footer {
   align-items:     center;
   flex-wrap:       wrap;
   gap:             1rem;
-  @include elevation-elevated;
-  background-color: var(--bg2);
+  @include scallop-elevated;
+  background-color: rgba(20, 20, 20, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom:   1px solid var(--border);
 }
 
 .footer-copy {
