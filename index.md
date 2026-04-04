@@ -7,7 +7,10 @@ name_line1: OUROBOROS
 name_line2: Consulting
 eyebrow: Technology ❖ Research ❖ Pedagogy ❖ Advocacy
 tagline: >
-  Bespoke solutions where technology, rigorous research, and principled advocacy meet.
+  Strategic guidance for justice-oriented technology, research, and advocacy.
+
+cta_label: Book a strategy session
+cta_url: /intake
 
 # About
 about_heading: Technology as a Source of Empowerment

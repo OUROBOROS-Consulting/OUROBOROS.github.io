@@ -58,6 +58,18 @@ nav {
 
     &:hover { color: var(--gold-border); }
   }
+
+  .nav-contact {
+    .card--formula__interior {
+      background: rgba(201, 168, 76, 0.12);
+      border-color: rgba(201, 168, 76, 0.25);
+    }
+
+    a {
+      color: var(--gold);
+      font-weight: 600;
+    }
+  }
 }
 
 // ── Dropdowns ─────────────────────────────────────────────────────────────────
