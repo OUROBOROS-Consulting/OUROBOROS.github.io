@@ -26,7 +26,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
     left:             0;
     width:            100%;
     height:           2px;
-    background:       var(--gold);
+    background:       var(--gold-border);
     transform:        scaleX(0);
     transform-origin: left;
     transition:       transform 0.4s;
@@ -62,7 +62,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 
 .card--formula {
   // Outer shell — gold fill acts as the visible border
-  background: var(--gold);
+  background: var(--gold-border);
   padding:    $-border;
   position:   relative;
   @include chamfer($-arc);
@@ -205,7 +205,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 .bib-card {
   position:   relative;
   padding:    1.75rem 1.8rem;
-  background: var(--bg2);
+  background: var(--b);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.25s, transform 0.25s;
   @include chamfer($-arc);
