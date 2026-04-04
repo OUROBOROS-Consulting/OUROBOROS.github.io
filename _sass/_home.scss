@@ -9,7 +9,8 @@
   gap:              0 6rem;
   position:         relative;
   z-index:          0;
-  @include elevation-standard;
+  background: var(--bg2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 
@@ -240,7 +241,7 @@
 #work,
 #testimonials {
   padding: 6rem 10vw;
-  background: var(--bg1);
+  background: var(--bg2);
   border-top: 1px solid var(--border);
 }
 
