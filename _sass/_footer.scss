@@ -6,6 +6,8 @@ footer {
   align-items:     center;
   flex-wrap:       wrap;
   gap:             1rem;
+  @include elevation-elevated;
+  background-color: var(--bg2);
 }
 
 .footer-copy {

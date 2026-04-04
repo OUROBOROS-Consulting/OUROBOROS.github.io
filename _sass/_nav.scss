@@ -8,7 +8,8 @@ nav {
   display:         flex;
   justify-content: space-between;
   align-items:     center;
-  background:      rgba(20, 20, 20, 0.85);
+  @include scallop-elevated;
+  background-color: rgba(20, 20, 20, 0.92);
   backdrop-filter: blur(12px);
   border-bottom:   1px solid var(--border);
 }
