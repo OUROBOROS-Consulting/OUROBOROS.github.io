@@ -19,7 +19,16 @@ footer {
 
 .footer-links {
   display: flex;
-  gap:     2rem;
+  gap:     1.5px;
+  flex-wrap: wrap;
+
+  .card--formula {
+    flex: 0 1 auto;
+  }
+
+  .card--formula__interior {
+    padding: 0.8rem 1rem;
+  }
 
   a {
     color:          var(--muted);
@@ -28,32 +37,33 @@ footer {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    font-size: 0.85rem;
 
     .footer-label {
-      font-size:      0.9rem;
       letter-spacing: 0.12em;
       text-transform: uppercase;
     }
 
     i {
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     &:hover { color: var(--gold); }
   }
 }
 
-/* Mobile: show icons only */
+/* Mobile: show icons only, responsive cards */
 @media (max-width: 768px) {
   .footer-links {
-    gap: 1.5rem;
+    gap: 3px;
+  }
+
+  .card--formula__interior {
+    padding: 0.6rem 0.7rem !important;
   }
 
   .footer-social {
-    font-size: 0;
     justify-content: center;
-    width: 32px;
-    height: 32px;
   }
 
   .footer-label {
@@ -61,7 +71,7 @@ footer {
   }
 
   .footer-social i {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 }
 
