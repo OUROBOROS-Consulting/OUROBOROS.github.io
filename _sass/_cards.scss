@@ -66,6 +66,9 @@ $-inner:  calc(#{$-arc} - #{$-border});
   padding:    $-border;
   position:   relative;
   @include chamfer($-arc);
+  display:    flex;
+  flex-direction: column;
+  height:     100%;
 
   // Title bar — sits flush on the top edge, sharp corners per boxed title style
   &__title {
@@ -96,6 +99,9 @@ $-inner:  calc(#{$-arc} - #{$-border});
     background-size: 100% 100%, 16px 16px;
     padding:    1.2rem 1.4rem;
     @include chamfer($-inner);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 }
 
@@ -169,6 +175,24 @@ $-inner:  calc(#{$-arc} - #{$-border});
   display:               grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap:                   1.5px;
+  align-items:           stretch;
+}
+
+.related-grid > .related-card,
+.cards > .card,
+.cards > .card--formula,
+.testimonials-grid > .bib-card {
+  display:        flex;
+  flex-direction: column;
+  min-height:     0;
+  height:         100%;
+}
+
+.card--formula__interior {
+  display:        flex;
+  flex-direction: column;
+  flex:           1;
+  min-height:     0;
 }
 
 .values-grid {
