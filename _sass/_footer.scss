@@ -22,14 +22,46 @@ footer {
   gap:     2rem;
 
   a {
-    font-size:      0.9rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
     color:          var(--muted);
     text-decoration: none;
     transition:     color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    .footer-label {
+      font-size:      0.9rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    i {
+      font-size: 1.1rem;
+    }
 
     &:hover { color: var(--gold); }
+  }
+}
+
+/* Mobile: show icons only */
+@media (max-width: 768px) {
+  .footer-links {
+    gap: 1.5rem;
+  }
+
+  .footer-social {
+    font-size: 0;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  .footer-label {
+    display: none;
+  }
+
+  .footer-social i {
+    font-size: 1.3rem;
   }
 }
 
