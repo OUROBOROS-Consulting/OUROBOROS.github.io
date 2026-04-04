@@ -344,7 +344,7 @@
 .svc-emblem {
   flex-shrink: 0;
   align-self:  center;
-  width:       clamp(140px, 13vw, 210px);
+  width:       clamp(180px, 18vw, 270px);
   opacity:     0.55;
   filter:      drop-shadow(0 0 18px rgba(165, 128, 82, 0.2));
   transition:  opacity 0.3s ease, filter 0.3s ease;
