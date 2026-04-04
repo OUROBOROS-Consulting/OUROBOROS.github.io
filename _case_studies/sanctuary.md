@@ -1,162 +1,187 @@
 ---
 title: Building a Smart Fortress
-description: An honest account of building a smart home for protecting a survivor who was betrayed by law enforcement -- myself.
+description: An honest account of building a smart home for protecting a survivor who was betrayed by law enforcement — myself.
 layout: foundation
 back_url: /work/
 category: Case Study
-lede: When instituttions betrayed me and failed to keep me safe, I built my own institution and my own sanctuary that addresses my privacy and security needs.
+lede: When institutions betrayed me and failed to keep me safe, I built my own.
 date: 2026-04-01
-tags: [Technology, Development, AI Use Case, Web Design, Design Systems]
+tags: [Smart Home, Security, Privacy, Apple HomeKit]
 
-# ── Overview blurb ──────────────────────────────────────────────────
 about:
-  heading: Engagement Overview
+  heading: Case Overview
   body: >
-    This is an unusual case study: a firm writing about its own conception. We built this
-    website — ouroborosconsulting.org — using Claude Code as a primary development
-    collaborator. What began as a practical experiment in AI-assisted tooling became a
-    more instructive case than we expected. This is an account of what that process
-    looked like, what it produced, and what it taught us about working with AI on real
-    creative and technical problems.
+    This case study is unusual: a practitioner writing about her own home. After law
+    enforcement failed to protect me from a documented abuser — and in several instances
+    compounded the harm — I did what I advise clients to do: I audited my threat model
+    and built infrastructure appropriate to it. This is an account of that build: what
+    was installed, how it was configured, and what it has and has not changed.
 
-# ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >
-  "The most useful thing Claude did was hold the context I couldn't hold myself —
-  keeping the design system consistent, catching accessibility gaps I'd have missed,
-  and pushing back when I was about to do something architecturally sloppy."
+  "When institutions refuse to protect you, you build your own. The math is
+  uncomfortable, but the conclusion is not optional."
 
-# ── Deep-dive sections ───────────────────────────────────────────────
 sections:
   - id: context
     heading: The Starting Point
     body_paragraphs:
       - >
-        Building a credible professional website from scratch involves an uncomfortable
-        number of overlapping domains: visual design, front-end architecture, content
-        strategy, performance, and accessibility. A solo practitioner with deep expertise
-        in one area — statistical consulting, say, or advocacy work — is rarely expert
-        in all of them simultaneously. That gap is where most professional sites fail:
-        technically functional but visually undistinguished, or visually ambitious but
-        brittle and inaccessible.
+        The threat model here was specific and documented: an abusive ex-partner with
+        a history of stalking, physical violence, and demonstrated willingness to exploit
+        institutional access. Standard advice — call the police, file reports — was not
+        only insufficient in this context but occasionally actively counterproductive.
+        The home needed to function as its own security infrastructure.
       - >
-        We had a clear sense of what the firm should feel like: precise, serious, quietly
-        distinguished. A set of technical requirements followed from that — a dark palette
-        with gold accents, custom animations that didn't feel gratuitous, a content
-        architecture that could scale, and accessibility standards that actually held up
-        under scrutiny. The question was how to get there with the resources of a small
-        firm and without the overhead of a dedicated engineering team.
+        The design requirements followed directly from the threat: perimeter awareness
+        without relying on a third party to relay it; logging that could not be tampered
+        with; remote visibility into home status from anywhere; and reliable operation
+        without vendor subscriptions that could lapse or services that could be subpoenaed
+        for data that should remain private.
 
-  - id: approach
-    heading: How We Worked with Claude
+  - id: platform
+    heading: Why Apple HomeKit
     body_paragraphs:
       - >
-        The core of our workflow was Claude Code — Anthropic's agentic CLI — used
-        iteratively across the full development lifecycle. This was not prompt-and-paste
-        engineering, where you ask an AI to generate a function and integrate it by hand.
-        It was closer to pair programming with a collaborator who could hold the full
-        context of the codebase and reason about design decisions alongside implementation
-        details.
+        Apple HomeKit was the platform choice for one primary reason: privacy architecture.
+        HomeKit processes data locally on Apple devices and syncs through end-to-end
+        encrypted iCloud channels. Unlike most consumer smart home platforms — which route
+        every sensor activation through vendor cloud servers — HomeKit data does not leave
+        the device ecosystem in a readable form. For a threat model that included concern
+        about sophisticated information access, this distinction was not academic.
       - >
-        We worked in Git-branched cycles: a problem or feature would be scoped, handed
-        to Claude to implement, reviewed as a pull request, and merged or revised. Branch
-        names like claude/add-glowing-moon-effect and claude/ecstatic-mcnulty — the latter
-        a Claude-generated identifier that stuck — became part of the development record,
-        a visible trace of the collaboration embedded in the commit history.
-      - >
-        Claude's role varied by phase. Early on, it was primarily architectural: structuring
-        the Jekyll data files (_data/values.yml, _data/testimonials.yml, _data/nav.yml) so
-        that content could be managed separately from layout, and establishing the Sass
-        design system that would govern color, typography, and spacing across every page.
-        These decisions were not glamorous, but they determined how much rework we'd face
-        later. Getting them right early was worth the time.
-      - >
-        In the middle phases, Claude handled feature development — writing the JavaScript
-        carousel system, implementing the canvas-based cursor animation, designing the moon
-        glow effect in CSS — while we provided feedback and iterated toward the final
-        result. Late in the process, Claude conducted a systematic accessibility audit that
-        surfaced 28 issues across the codebase: broken HTML structure, missing ARIA
-        attributes, navigation links returning 404s, and styling inconsistencies. These
-        were addressed in a single comprehensive pass — the kind of review that is easy
-        to defer indefinitely without explicit forcing.
+        HomeKit Secure Video stores motion-triggered camera footage in iCloud with
+        end-to-end encryption, accessible only through authenticated Apple devices. No
+        Apple employee can view it. A subpoena to the camera manufacturer would yield
+        nothing — the footage exists in a form accessible only to the account holder.
+        That design constraint was a deliberate selection criterion, not an afterthought.
 
-  - id: technical
-    heading: What Was Built
+  - id: controller
+    heading: Controller for HomeKit
     body_paragraphs:
       - >
-        The site is a Jekyll-based static site hosted on GitHub Pages. Its visible
-        complexity — the dark theme, the gold accents, the animated hero, the responsive
-        carousels — is built on top of a deliberately minimal technical foundation. No
-        JavaScript frameworks. No build pipelines beyond Jekyll's native compilation.
-        No external UI libraries. The design system lives in a handful of Sass files and
-        is expressed through a small set of reusable CSS classes.
-      - >
-        The cursor halo animation is a canvas-based effect written in roughly 120 lines
-        of vanilla JavaScript. A golden ring orbits the cursor, spinning only when the
-        cursor is at rest, with momentum-based physics that make the motion feel
-        intentional rather than mechanical. It respects prefers-reduced-motion. The
-        moon in the hero section is pure CSS — a circle with layered box-shadows and a
-        five-second glow keyframe animation, with crater details rendered through
-        pseudo-elements. Neither required a library. Both required thinking carefully
-        about what the effect was supposed to communicate and what the minimal
-        implementation would be.
-      - >
-        The carousel system — used for both the values section and the testimonials — is
-        a single reusable initialization function that handles two distinct modes: manual
-        navigation with dot indicators, and auto-advancing with pause-on-hover. Swipe
-        gestures work. ARIA live regions update on slide change. The implementation is
-        around 150 lines. It does one thing well.
-      - >
-        Content architecture separates data from presentation throughout. Testimonials,
-        navigation structure, core values, and reading recommendations all live in YAML
-        files under _data/. Layouts consume them. Adding a new testimonial or service link
-        is a one-line edit in a data file, not a search-and-replace through HTML templates.
-        That distinction compounds over time.
+        Native HomeKit's interface handles individual device control well but is limited
+        for continuous situational awareness. Controller for HomeKit — a third-party iOS
+        and macOS application that interfaces directly with the HomeKit API — extends this
+        substantially. Its floor plan view (shown below) is a live monitoring interface:
+        each icon reflects the current state of the device at that position in real time.
+        Active lights appear in gold; door and window sensors show open/closed state; the
+        climate sensor displays a live temperature and humidity reading. It provides
+        spatial, at-a-glance awareness without navigating through multiple app screens.
 
-  - id: what-changed
-    heading: What the Collaboration Actually Changed
+  - id: security
+    heading: The Security Layer
     body_paragraphs:
       - >
-        The honest answer is: the scope of what was achievable within a given time window.
-        Features that would have required significant research and iteration — the cursor
-        animation physics, the ARIA carousel implementation, the systematic accessibility
-        pass — were completed in hours rather than days. That compression is real, and it
-        matters for a small firm where engineering time is not the primary constraint on
-        the business.
+        The perimeter layer consists of door and window contact sensors on every ingress
+        point. Each sensor sends an immediate notification when triggered and logs the
+        event with a timestamp. This does not prevent entry — nothing in this stack does —
+        but it eliminates the ambiguity that stalking situations routinely exploit: the
+        question of whether something happened or whether you are overreacting. When a
+        sensor fires at 2:00 a.m., the log is dated and precise.
       - >
-        What is less obvious is the nature of the quality benefit. Claude was useful not
-        primarily because it wrote code faster, but because it held context consistently.
-        It remembered the design system rules when implementing a new component. It caught
-        cases where a new layout would break the mobile navigation. It pushed back —
-        sometimes correctly, sometimes not — when an implementation choice seemed
-        structurally questionable. That kind of sustained coherence is harder to maintain
-        alone over a multi-week project than it sounds.
+        Three motion sensors cover the interior across two rooms, providing zone-based
+        presence detection. Three interior cameras running HomeKit Secure Video capture
+        motion-triggered recordings continuously. The footage is not intended for
+        real-time intervention — response time assumptions would be wrong in this context —
+        but for documentation: timestamped, encrypted evidence of presence and activity
+        patterns that is useful in legal proceedings and that does not depend on law
+        enforcement to initiate, preserve, or provide access to.
+
+  - id: floorplan
+    heading: The Layout
+    html: |
+      <figure class="fp-wrap" aria-label="Smart home floor plan — Apple HomeKit">
+        <p class="fp-caption">Floor plan · Apple HomeKit via Controller</p>
+        <div class="fp-layout">
+          <div class="fp-annex">
+            <span class="fp-room-name">Utility</span>
+            <span class="fp-dev fp-l" style="left:50%;top:50%" title="Ceiling light" aria-label="Ceiling light">L</span>
+          </div>
+          <div class="fp-body">
+            <div class="fp-bedroom">
+              <span class="fp-room-name">Bedroom</span>
+              <span class="fp-dev fp-d"  style="left:5%;top:42%"   title="Door contact sensor"                     aria-label="Door contact sensor">D</span>
+              <span class="fp-dev fp-m"  style="left:33%;top:28%"  title="Motion sensor"                           aria-label="Motion sensor">M</span>
+              <span class="fp-dev fp-l"  style="left:18%;top:65%"  title="Table lamp"                              aria-label="Table lamp">L</span>
+              <span class="fp-dev fp-la" style="left:56%;top:48%"  title="Ceiling light (active)"                  aria-label="Ceiling light, active">L</span>
+              <span class="fp-dev fp-sv" style="left:52%;top:16%"  title="Apple TV"                                aria-label="Apple TV">V</span>
+              <span class="fp-dev fp-l"  style="left:80%;top:52%"  title="Table lamp"                              aria-label="Table lamp">L</span>
+              <span class="fp-dev fp-w"  style="left:27%;top:90%"  title="Window contact sensor"                   aria-label="Window contact sensor">W</span>
+              <span class="fp-dev fp-c"  style="left:68%;top:72%"  title="Security camera (HomeKit Secure Video)"  aria-label="Security camera">C</span>
+            </div>
+            <div class="fp-living">
+              <span class="fp-room-name">Living Room</span>
+              <span class="fp-dev fp-m"  style="left:16%;top:24%"  title="Motion sensor"                           aria-label="Motion sensor">M</span>
+              <span class="fp-dev fp-sv" style="left:8%;top:52%"   title="HomePod"                                 aria-label="HomePod">S</span>
+              <span class="fp-dev fp-sv" style="left:22%;top:40%"  title="Apple TV / media center"                 aria-label="Apple TV">V</span>
+              <span class="fp-dev fp-la" style="left:32%;top:76%"  title="Ceiling fan + light (active)"            aria-label="Ceiling fan light, active">L</span>
+              <span class="fp-dev fp-la" style="left:47%;top:76%"  title="Ceiling fan + light (active)"            aria-label="Ceiling fan light, active">L</span>
+              <span class="fp-dev fp-h"  style="left:38%;top:88%"  title="HVAC / heating"                          aria-label="HVAC">H</span>
+              <span class="fp-dev fp-c"  style="left:52%;top:88%"  title="Security camera (HomeKit Secure Video)"  aria-label="Security camera">C</span>
+              <span class="fp-dev fp-d"  style="left:95%;top:42%"  title="Door contact sensor"                     aria-label="Door contact sensor">D</span>
+              <span class="fp-dev fp-l"  style="left:88%;top:18%"  title="Table lamp"                              aria-label="Table lamp">L</span>
+              <span class="fp-dev fp-t"  style="left:68%;top:38%"  title="Climate sensor — 71.24 °F · 35% RH"      aria-label="Climate sensor">T</span>
+              <span class="fp-dev fp-c"  style="left:74%;top:58%"  title="Security camera (HomeKit Secure Video)"  aria-label="Security camera">C</span>
+              <span class="fp-dev fp-m"  style="left:52%;top:52%"  title="Motion sensor"                           aria-label="Motion sensor">M</span>
+              <span class="fp-dev fp-w"  style="left:58%;top:90%"  title="Window contact sensor"                   aria-label="Window contact sensor">W</span>
+              <span class="fp-dev fp-w"  style="left:82%;top:90%"  title="Window contact sensor"                   aria-label="Window contact sensor">W</span>
+            </div>
+          </div>
+        </div>
+        <div class="fp-footer">
+          <div class="fp-legend">
+            <div class="fp-li"><div class="fp-ld fp-ld--d"></div>Door sensor</div>
+            <div class="fp-li"><div class="fp-ld fp-ld--w"></div>Window sensor</div>
+            <div class="fp-li"><div class="fp-ld fp-ld--m"></div>Motion sensor</div>
+            <div class="fp-li"><div class="fp-ld fp-ld--c"></div>Camera</div>
+            <div class="fp-li"><div class="fp-ld fp-ld--la"></div>Active light</div>
+            <div class="fp-li"><div class="fp-ld fp-ld--t"></div>Climate sensor</div>
+            <div class="fp-li"><div class="fp-ld fp-ld--h"></div>HVAC</div>
+          </div>
+          <div class="fp-badge">71.24 °F · 35% RH</div>
+        </div>
+      </figure>
+
+  - id: environment
+    heading: Environmental Intelligence
+    body_paragraphs:
       - >
-        The process also revealed the limits of AI collaboration clearly. Claude's output
-        required review. Some implementations were technically correct but aesthetically
-        wrong — functional carousels that felt stiff, animations that were accurate but
-        didn't match the visual intent. The feedback loop between us was the actual work.
-        Claude generated candidates; we evaluated and directed. Neither half of that loop
-        is dispensable.
+        Two ceiling fan and light fixtures in the living room run on scheduled automations —
+        evening-on, late-night-off — that simulate occupancy patterns regardless of physical
+        location. This is standard deterrence practice. The climate sensor (currently reading
+        71.24 °F and 35% relative humidity) provides environmental monitoring beyond comfort:
+        humidity spikes can indicate water intrusion; anomalous thermal readings can flag open
+        windows or HVAC failure that might otherwise go unnoticed.
+      - >
+        A HomePod in the living room provides local voice control for HomeKit without requiring
+        cloud connectivity for commands. It also functions as a room-level audio sensor for
+        presence-based automations: the system can distinguish occupied from unoccupied states
+        and adjust lighting and alert thresholds accordingly. The combination of motion, climate,
+        and audio presence creates a richer environmental picture than any single sensor type
+        would provide alone.
 
   - id: lessons
-    heading: What This Tells Us About AI-Assisted Development
+    heading: What It Achieves
     body_paragraphs:
       - >
-        The most important lesson from this project is that AI collaboration does not
-        reduce the need for judgment — it surfaces it more quickly. When Claude can
-        implement a feature in an hour, the bottleneck shifts to knowing what to build,
-        in what order, and to what standard. Those are human decisions. The faster the
-        implementation, the more consequential the direction.
+        The primary value this system provides is not prevention but information: immediate
+        notification, precise logging, and encrypted documentation. Every sensor event is
+        timestamped and stored in a form that is tamper-resistant by design. These are the
+        three things that have historically been hardest for survivors to establish
+        credibly — and they are now available without depending on law enforcement to
+        initiate or maintain them.
       - >
-        For a solo practitioner or small team, that shift is broadly favorable. The
-        parts of development that are hardest to delegate — taste, intent, editorial
-        judgment about what the site is actually trying to do — remain with the human.
-        The parts that are easiest to lose to fatigue, inconsistency, or time pressure —
-        thoroughness, coherence across a large codebase, systematic review — are where
-        AI assistance is most valuable.
+        There is also a psychological dimension that is difficult to quantify but real. The
+        ability to verify, at any moment, whether doors are locked and the perimeter is intact
+        changes the quality of presence in the space. Anxiety that previously had no
+        addressable object — the feeling that something might have happened — now has, in most
+        cases, a data answer. That shift is not trivial for someone who has experienced the
+        particular form of paranoia that targeted abuse produces.
       - >
-        We build websites for clients when the work calls for it. We also advise on AI
-        tooling adoption. This project gave us a cleaner, firsthand understanding of what
-        that adoption looks like for a real deliverable with real standards. The result is
-        the site you are reading. We think it holds up.
+        The limits of this system are worth naming. It provides awareness, not control. It
+        documents, but does not guarantee that documentation will be acted upon by institutions
+        that receive it. It is one component of a security posture that includes legal records,
+        trusted contacts, and physical measures — not a substitute for any of them. It is the
+        layer that did not exist before, and that, under the circumstances, had to be built
+        from scratch.
 ---

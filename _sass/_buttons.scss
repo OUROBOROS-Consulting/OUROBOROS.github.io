@@ -32,7 +32,7 @@
   transition:     border-color 0.3s, color 0.3s;
 
   &:hover {
-    border-color: var(--gold);
+    border-color: var(--gold-border);
     color:        var(--gold);
   }
 }

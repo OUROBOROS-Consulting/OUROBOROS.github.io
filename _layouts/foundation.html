@@ -166,6 +166,8 @@ layout: default
         <div class="testimonials-grid" data-bibtex-src="{{ section.bibtex_src }}">
           <p class="card-desc">Loading references…</p>
         </div>
+      {% elsif section.html %}
+        {{ section.html }}
       {% else %}
         <div class="card--formula">
           <div class="card--formula__interior">

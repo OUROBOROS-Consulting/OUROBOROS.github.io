@@ -1,0 +1,157 @@
+// ─── Floor plan (Sanctuary case study) ────────────────────────────────────────
+
+.fp-wrap {
+  margin: .5rem 0;
+}
+
+.fp-caption {
+  font-size: .72rem;
+  color: rgba(255,255,255,.25);
+  margin: 0 0 .5rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.fp-layout {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.fp-annex {
+  width: 27%;
+  height: 68px;
+  border: 1.5px solid #3a3530;
+  border-bottom: none;
+  position: relative;
+  background: rgba(255,255,255,.025);
+}
+
+.fp-body {
+  width: 100%;
+  min-height: 185px;
+  display: flex;
+  border: 1.5px solid #3a3530;
+}
+
+.fp-bedroom {
+  width: 37%;
+  height: 100%;
+  border-right: 1.5px solid #3a3530;
+  position: relative;
+  background: rgba(255,255,255,.02);
+}
+
+.fp-living {
+  flex: 1;
+  height: 100%;
+  position: relative;
+  background: rgba(255,255,255,.015);
+}
+
+.fp-room-name {
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  font-size: 8px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.2);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.fp-dev {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8px;
+  font-weight: 700;
+  transform: translate(-50%, -50%);
+  cursor: default;
+  border: 1.5px solid;
+  transition: box-shadow .15s, opacity .15s;
+
+  &:hover {
+    z-index: 10;
+    opacity: 1 !important;
+  }
+}
+
+.fp-d  { background: #1e1e1e; border-color: #c0c0c0; color: #c0c0c0; opacity: .85; }
+.fp-w  { background: #141e28; border-color: #4d7aa0; color: #4d7aa0; opacity: .85; }
+.fp-m  { background: #1e1e1e; border-color: #909090; color: #909090; opacity: .8;  }
+.fp-c  { background: #201515; border-color: #aa5544; color: #aa5544; opacity: .9;  }
+.fp-l  { background: #1e1a10; border-color: #4a3e18; color: #7a6828; opacity: .75; }
+.fp-la {
+  background: #221a08;
+  border-color: #c9a84c;
+  color: #c9a84c;
+  opacity: .95;
+  box-shadow: 0 0 10px rgba(201,168,76,.3);
+}
+.fp-t  { background: #101820; border-color: #3d6b8a; color: #3d6b8a; opacity: .9;  }
+.fp-h  { background: #181818; border-color: #5c6e7a; color: #5c6e7a; opacity: .8;  }
+.fp-sv { background: #181818; border-color: #666;    color: #666;    opacity: .75; }
+
+.fp-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: .4rem;
+  flex-wrap: wrap;
+  gap: .4rem;
+}
+
+.fp-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .35rem .65rem;
+  padding-top: .5rem;
+}
+
+.fp-li {
+  display: flex;
+  align-items: center;
+  gap: .3rem;
+  font-size: .68rem;
+  color: rgba(255,255,255,.35);
+}
+
+.fp-ld {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1.5px solid;
+}
+
+.fp-ld--d  { background: #1e1e1e; border-color: #c0c0c0; }
+.fp-ld--w  { background: #141e28; border-color: #4d7aa0; }
+.fp-ld--m  { background: #1e1e1e; border-color: #909090; }
+.fp-ld--c  { background: #201515; border-color: #aa5544; }
+.fp-ld--la { background: #221a08; border-color: #c9a84c; box-shadow: 0 0 4px rgba(201,168,76,.3); }
+.fp-ld--t  { background: #101820; border-color: #3d6b8a; }
+.fp-ld--h  { background: #181818; border-color: #5c6e7a; }
+
+.fp-badge {
+  font-size: .7rem;
+  color: #3d6b8a;
+  background: #0a1218;
+  border: 1px solid #2a4455;
+  border-radius: 3px;
+  padding: 2px 8px;
+  letter-spacing: .04em;
+  white-space: nowrap;
+}
+
+@media (max-width: 580px) {
+  .fp-annex { height: 50px; }
+  .fp-body  { min-height: 140px; }
+  .fp-dev   { width: 14px; height: 14px; font-size: 7px; }
+}
