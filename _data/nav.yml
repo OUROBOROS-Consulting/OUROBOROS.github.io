@@ -19,11 +19,11 @@
   children:
     - title: Overview
       url: /services/
-    - title: Bespoke Technology Solutions
+    - title: Technology Solutions
       url: /services/consulting/
-    - title: Education Services
+    - title: Pedagogy Services
       url: /services/tutoring/
-    - title: Advocacy
+    - title: Advocacy Services
       url: /services/advocacy/
 
 - title: Projects
@@ -45,3 +45,5 @@
       url: /resources/survival/
     - title: Scholarly
       url: /resources/scholarly/
+    - title: Cultural
+      url: /resources/artistic/
