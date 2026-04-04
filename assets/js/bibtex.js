@@ -98,8 +98,11 @@
       .replace(/\\[`'^"~=.u]\{?(\w)\}?/g, '$1')       // accented chars
       .replace(/\{\\(emph|textit|textbf)\{([^}]+)\}\}/g, '$2')
       .replace(/\\(emph|textit|textbf)\{([^}]+)\}/g, '$2')
+      .replace(/\\textsc\{([^}]+)\}/g, '$1')            // small-caps
       .replace(/---/g, '\u2014')
       .replace(/--/g, '\u2013')
+      .replace(/\\textless/g, '<').replace(/\\textgreater/g, '>')  // HTML escapes
+      .replace(/<[^>]+>/g, '')                          // strip any resulting HTML tags
       .replace(/[{}]/g, '')
       .replace(/\s+/g, ' ')
       .trim();
@@ -135,7 +138,7 @@
     return [
       '<div class="card--formula">',
       '  <div class="card--formula__interior">',
-      '    <span class="stat-value bib-title">' + title + '</span>',
+      '    <span class="bib-title">' + title + '</span>',
       byline ? '    <p class="card-tag">'  + byline + '</p>'  : '',
       venue  ? '    <p class="card-desc">' + venue  + '</p>'  : '',
       note   ? '    <p class="card-desc">' + note   + '</p>'  : '',
