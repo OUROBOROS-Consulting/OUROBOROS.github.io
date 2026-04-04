@@ -63,6 +63,12 @@ nav {
 .nav-links {
   display: flex;
   gap:     2.0rem;
+  font-family: $font-sans;
+
+  a,
+  .nav-dropdown-toggle {
+    font-family: $font-sans;
+  }
 
   a {
     color:          var(--muted);
@@ -71,6 +77,15 @@ nav {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     transition:     color 0.3s;
+    display:        inline-flex;
+    align-items:    center;
+    gap:            0.4rem;
+
+    i {
+      font-size: 0.9rem;
+      width:     1.1rem;
+      text-align: center;
+    }
 
     &:hover { color: var(--gold-border); }
   }
@@ -100,6 +115,15 @@ nav {
   cursor:         pointer;
   transition:     color 0.3s;
   padding:        0;
+  display:        inline-flex;
+  align-items:    center;
+  gap:            0.4rem;
+
+  i {
+    font-size: 0.95rem;
+    width:     1.2rem;
+    text-align: center;
+  }
 
   &:hover { color: var(--gold); }
 }

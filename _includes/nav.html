@@ -17,10 +17,20 @@
   <div class="nav-links">
 
     {% for item in site.data.nav %}
+    {% assign nav_icon = 'fas fa-circle' %}
+    {% case item.title %}
+      {% when 'About' %}{% assign nav_icon = 'fas fa-user' %}
+      {% when 'Services' %}{% assign nav_icon = 'fas fa-cogs' %}
+      {% when 'Projects' %}{% assign nav_icon = 'fas fa-briefcase' %}
+      {% when 'Resources' %}{% assign nav_icon = 'fas fa-book' %}
+    {% endcase %}
     <div class="nav-dropdown">
       <div class="card--formula">
         <div class="card--formula__interior">
-          <button class="nav-dropdown-toggle">{{ item.title }}</button>
+          <button class="nav-dropdown-toggle">
+            <i class="{{ nav_icon }}" aria-hidden="true"></i>
+            <span>{{ item.title }}</span>
+          </button>
         </div>
       </div>
       <div class="nav-dropdown-menu">
@@ -39,7 +49,10 @@
     <div class="nav-dropdown nav-contact">
       <div class="card--formula">
         <div class="card--formula__interior">
-          <a href="{{ '/intake' | relative_url }}">Contact</a>
+          <a href="{{ '/intake' | relative_url }}">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <span>Contact</span>
+          </a>
         </div>
       </div>
     </div>
