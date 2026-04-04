@@ -348,11 +348,25 @@
   opacity:     0.55;
   filter:      drop-shadow(0 0 18px rgba(165, 128, 82, 0.2));
   transition:  opacity 0.3s ease, filter 0.3s ease;
+  display:     flex;
+  justify-content: center;
+  align-items: center;
 
-  img {
+  img,
+  svg,
+  i {
     display: block;
     width:   100%;
     height:  auto;
+  }
+
+  svg {
+    fill: currentColor;
+  }
+
+  i {
+    font-size: clamp(120px, 13vw, 210px);
+    line-height: 1;
   }
 
   &:hover {
