@@ -92,6 +92,8 @@ sections:
     html: |
       <figure class="fp-wrap" aria-label="Smart home floor plan — Apple HomeKit">
         <p class="fp-caption">Floor plan · Apple HomeKit via Controller</p>
+        <div class="card--formula">
+        <div class="card--formula__interior">
         <div class="fp-layout">
           <div class="fp-annex">
             <span class="fp-room-name">Utility</span>
@@ -139,6 +141,8 @@ sections:
             <div class="fp-li"><div class="fp-ld fp-ld--h"></div>HVAC</div>
           </div>
           <div class="fp-badge">71.24 °F · 35% RH</div>
+        </div>
+        </div>
         </div>
       </figure>
 
