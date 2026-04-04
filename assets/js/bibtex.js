@@ -136,14 +136,12 @@
     const byline  = [authors, year].filter(Boolean).join(' \u00b7 ');
 
     return [
-      '<div class="card--formula">',
-      '  <div class="card--formula__interior">',
-      '    <span class="bib-title">' + title + '</span>',
-      byline ? '    <p class="card-tag">'  + byline + '</p>'  : '',
-      venue  ? '    <p class="card-desc">' + venue  + '</p>'  : '',
-      note   ? '    <p class="card-desc">' + note   + '</p>'  : '',
-      href   ? '    <a class="card-link" href="' + href + '" target="_blank" rel="noopener">View \u2192</a>' : '',
-      '  </div>',
+      '<div class="bib-card">',
+      '  <span class="bib-title">' + title + '</span>',
+      byline ? '  <p class="bib-byline">' + byline + '</p>' : '',
+      venue  ? '  <p class="bib-venue">'  + venue  + '</p>' : '',
+      note   ? '  <p class="bib-venue">'  + note   + '</p>' : '',
+      href   ? '  <a class="bib-link" href="' + href + '" target="_blank" rel="noopener">View \u2192</a>' : '',
       '</div>'
     ].filter(Boolean).join('\n');
   }

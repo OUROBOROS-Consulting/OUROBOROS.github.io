@@ -151,14 +151,12 @@ layout: default
         {% assign _items = site.data[section.data_source] %}
         <div class="testimonials-grid">
           {% for _item in _items %}
-          <div class="card--formula">
-            <div class="card--formula__interior">
-              <span class="stat-value">{{ _item.title }}</span>
-              {% if _item.author %}<p class="card-tag">{{ _item.author }}</p>{% endif %}
-              {% if _item.note %}<p class="card-desc">{{ _item.note | markdownify }}</p>{% endif %}
-              {% if _item.description %}<p class="card-desc">{{ _item.description | markdownify }}</p>{% endif %}
-              {% if _item.link and _item.link != "#" %}<a class="card-link" href="{{ _item.link }}" target="_blank" rel="noopener">View →</a>{% endif %}
-            </div>
+          <div class="bib-card">
+            <span class="bib-title">{{ _item.title }}</span>
+            {% if _item.author %}<p class="bib-byline">{{ _item.author }}</p>{% endif %}
+            {% if _item.note %}<p class="bib-venue">{{ _item.note | markdownify }}</p>{% endif %}
+            {% if _item.description %}<p class="bib-venue">{{ _item.description | markdownify }}</p>{% endif %}
+            {% if _item.link and _item.link != "#" %}<a class="bib-link" href="{{ _item.link }}" target="_blank" rel="noopener">View →</a>{% endif %}
           </div>
           {% endfor %}
         </div>
