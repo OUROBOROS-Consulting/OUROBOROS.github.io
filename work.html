@@ -5,7 +5,7 @@ title: Work
 
 <header class="svc-hero">
   <a class="post-back" href="{{ '/' | relative_url }}">Back</a>
-  <div class="svc-hero-inner svc-hero-inner--single">
+  <div class="svc-hero-inner">
     <div class="svc-hero-text">
       <p class="post-category">Client Work</p>
       <h1 class="svc-title">Case Studies</h1>
@@ -13,6 +13,9 @@ title: Work
     </div>
     <div class="svc-hero-cta">
       <p class="work-count">{{ site.case_studies.size }} engagements</p>
+    </div>
+    <div class="svc-emblem">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Ouroboros mark">
     </div>
   </div>
 </header>

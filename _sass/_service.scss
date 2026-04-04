@@ -323,6 +323,29 @@
   gap:             6rem;
 }
 
+// ── Landing page emblem ───────────────────────────────────────────────────────
+// The logo SVG placed on the right side of collection landing pages.
+// Opacity and drop-shadow keep it ambient rather than dominant.
+.svc-emblem {
+  flex-shrink: 0;
+  align-self:  center;
+  width:       clamp(140px, 13vw, 210px);
+  opacity:     0.55;
+  filter:      drop-shadow(0 0 18px rgba(165, 128, 82, 0.2));
+  transition:  opacity 0.3s ease, filter 0.3s ease;
+
+  img {
+    display: block;
+    width:   100%;
+    height:  auto;
+  }
+
+  &:hover {
+    opacity: 0.75;
+    filter:  drop-shadow(0 0 22px rgba(165, 128, 82, 0.35));
+  }
+}
+
 // ── Responsive ────────────────────────────────────────────────────────────────
 @media (max-width: 768px) {
   .svc-hero  { padding: 7rem 6vw 3.5rem; }
@@ -341,7 +364,8 @@
     gap:            2rem;
   }
 
-  .hex-portrait {
+  .hex-portrait,
+  .svc-emblem {
     display: none;
   }
 }

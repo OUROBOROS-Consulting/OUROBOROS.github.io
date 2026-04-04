@@ -6,7 +6,7 @@ permalink: /work/psas/
 
 <header class="svc-hero">
   <a class="post-back" href="{{ '/work/' | relative_url }}">All Work</a>
-  <div class="svc-hero-inner svc-hero-inner--single">
+  <div class="svc-hero-inner">
     <div class="svc-hero-text">
       <p class="post-category">Public Interest</p>
       <h1 class="svc-title">PSAs</h1>
@@ -14,6 +14,9 @@ permalink: /work/psas/
     </div>
     <div class="svc-hero-cta">
       <p class="work-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</p>
+    </div>
+    <div class="svc-emblem">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Ouroboros mark">
     </div>
   </div>
 </header>

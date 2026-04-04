@@ -6,7 +6,7 @@ permalink: /projects/
 
 <header class="svc-hero">
   <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
-  <div class="svc-hero-inner svc-hero-inner--single">
+  <div class="svc-hero-inner">
     <div class="svc-hero-text">
       <p class="post-category">Projects</p>
       <h1 class="svc-title">Work &amp; Writing</h1>
@@ -14,6 +14,9 @@ permalink: /projects/
     </div>
     <div class="svc-hero-cta">
       <p class="work-count">{{ site.case_studies.size | plus: site.psas.size }} pieces</p>
+    </div>
+    <div class="svc-emblem">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Ouroboros mark">
     </div>
   </div>
 </header>
