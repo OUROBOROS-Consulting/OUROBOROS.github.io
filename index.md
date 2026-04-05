@@ -7,7 +7,7 @@ name_line1: OUROBOROS
 name_line2: Consulting
 eyebrow: Technology ❖ Research ❖ Pedagogy ❖ Advocacy
 tagline: >
-  Strategic guidance for justice-oriented technology, research, and advocacy.
+  Bespoke solutions & strategic guidance for justice-oriented technology, research, education, and advocacy.
 
 cta_label: Book a strategy session
 cta_url: /intake
@@ -19,7 +19,7 @@ stats:
   years_experience: "6+"
   publications: "3"
   students_tutored: "50+"
-  clients_consulted: "12"
+  clients_consulted: "6"
   agencies: "5"
  # phd_program: "Biostatistics, UMN"
 
