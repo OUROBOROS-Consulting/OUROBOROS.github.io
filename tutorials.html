@@ -1,0 +1,32 @@
+---
+layout: default
+title: Tutorials
+permalink: /resources/tutorials/
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/resources/' | relative_url }}">Resources</a>
+  <div class="svc-hero-inner">
+    <div class="svc-hero-text">
+      <p class="post-category">Resources</p>
+      <h1 class="svc-title">Mini-Tutorials</h1>
+      <p class="svc-lede">Practical guides on cybersecurity, data privacy, institutional navigation, and survival strategies — designed for real-world application.</p>
+    </div>
+    <div class="svc-emblem svc-emblem--graduation-cap" aria-hidden="true">
+      <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  <div class="related-grid">
+    {% for tutorial in site.data.tutorials %}
+    <a href="{{ tutorial.link }}" class="related-card">
+      <p class="rc-tag">{{ tutorial.tag }}</p>
+      <h2 class="rc-title">{{ tutorial.title }}</h2>
+      <p class="card-desc">{{ tutorial.description }}</p>
+      <span class="card-link">Read Tutorial →</span>
+    </a>
+    {% endfor %}
+  </div>
+</div>
