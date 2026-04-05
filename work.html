@@ -1,18 +1,19 @@
 ---
 layout: default
-title: Work
+title: Case Studies
+permalink: /work/
 ---
 
 <header class="svc-hero">
-  <a class="post-back" href="{{ '/' | relative_url }}">Back</a>
+  <a class="post-back" href="{{ '/projects/' | relative_url }}">All Projects</a>
   <div class="svc-hero-inner">
     <div class="svc-hero-text">
-      <p class="post-category">Case Studies</p>
+      <p class="post-category">Work</p>
       <h1 class="svc-title">Case Studies</h1>
       <p class="svc-lede">Technology consulting, advocacy, and research — documented honestly, including what was hard.</p>
     </div>
     <div class="svc-hero-cta">
-      <p class="work-count">{{ site.case_studies.size }} engagements</p>
+      <p class="work-count">{{ site.case_studies.size }} {% if site.case_studies.size == 1 %}engagement{% else %}engagements{% endif %}</p>
     </div>
     <div class="svc-emblem svc-emblem--file" aria-hidden="true">
       <i class="fas fa-file-lines" aria-hidden="true"></i>
@@ -22,17 +23,38 @@ title: Work
 
 <div class="svc-body">
   {% if site.case_studies.size > 0 %}
-  <div class="related-grid">
-    {% assign sorted_studies = site.case_studies | sort: "date" | reverse %}
-    {% for study in sorted_studies %}
-    <a href="{{ study.url | relative_url }}" class="related-card">
-      {% if study.category %}<p class="rc-tag">{{ study.category }}</p>{% endif %}
-      <h2 class="rc-title">{{ study.title }}</h2>
-      {% if study.description %}<p class="card-desc">{{ study.description }}</p>{% endif %}
-      <span class="card-link">Read more →</span>
-    </a>
-    {% endfor %}
-  </div>
+
+  {% assign sorted_studies = site.case_studies | sort: "date" | reverse %}
+  {% assign categories     = sorted_studies | map: "category" | uniq | sort %}
+
+  {% for cat_name in categories %}
+  {% assign cat_studies = sorted_studies | where: "category", cat_name %}
+
+  <section class="psa-section">
+    <div class="psa-section-header">
+      <h2 class="psa-section-heading">{{ cat_name }}</h2>
+      <span class="work-count">{{ cat_studies.size }} {% if cat_studies.size == 1 %}engagement{% else %}engagements{% endif %}</span>
+    </div>
+    <div class="related-grid">
+      {% for study in cat_studies %}
+      <a href="{{ study.url | relative_url }}" class="related-card">
+        <p class="rc-tag">{{ study.category }}</p>
+        <h3 class="rc-title">{{ study.title }}</h3>
+        {% if study.lede %}<p class="card-desc">{{ study.lede }}</p>{% endif %}
+        {% if study.date %}<p class="rc-date">{{ study.date | date: "%B %Y" }}</p>{% endif %}
+        {% if study.tags.size > 0 %}
+        <p class="rc-tags">
+          {% for tag in study.tags %}<span class="rc-tag-chip">{{ tag }}</span>{% endfor %}
+        </p>
+        {% endif %}
+        <span class="card-link">Read more →</span>
+      </a>
+      {% endfor %}
+    </div>
+  </section>
+
+  {% endfor %}
+
   {% else %}
   <div class="card--formula">
     <div class="card--formula__interior">

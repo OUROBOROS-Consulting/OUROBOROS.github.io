@@ -169,6 +169,23 @@ $-inner:  calc(#{$-arc} - #{$-border});
     font-size: 0.75rem;
     color:     var(--muted);
   }
+
+  .rc-tags {
+    margin-top: 0.75rem;
+    display:    flex;
+    flex-wrap:  wrap;
+    gap:        0.35rem;
+  }
+
+  .rc-tag-chip {
+    font-size:      0.65rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color:          var(--muted);
+    border:         1px solid var(--border);
+    border-radius:  2px;
+    padding:        0.15em 0.5em;
+  }
 }
 
 .related-grid {
