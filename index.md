@@ -23,6 +23,5 @@ stats:
   agencies: "5"
  # phd_program: "Biostatistics, UMN"
 
-cta_label: Book a Session
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 72 hours.
 ---

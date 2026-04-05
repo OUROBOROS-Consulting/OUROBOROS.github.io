@@ -62,7 +62,11 @@ function initCarousel(sectionId, autoAdvance) {
   function go(n) {
     current = ((n % total) + total) % total;
     track.style.transform = `translateX(-${current * 100}%)`;
-    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    dots.forEach((d, i) => {
+      const isActive = i === current;
+      d.classList.toggle('active', isActive);
+      d.setAttribute('aria-selected', isActive ? 'true' : 'false');
+    });
     if (countEl) countEl.textContent = `${current + 1} / ${total}`;
   }
 

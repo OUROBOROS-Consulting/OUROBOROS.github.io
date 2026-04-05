@@ -106,7 +106,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 }
 
 .card-tag {
-  font-size:      0.72rem;
+  font-size:      0.78rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color:          var(--gold);
@@ -246,7 +246,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 .bib-card {
   position:   relative;
   padding:    1.75rem 1.8rem;
-  background: var(--b);
+  background: var(--bg2);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.25s, transform 0.25s;
   @include chamfer($-arc);
@@ -268,7 +268,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 }
 
 .bib-byline {
-  font-size:      0.72rem;
+  font-size:      0.78rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color:          var(--gold-dim);
@@ -283,7 +283,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 }
 
 .bib-link {
-  font-size:       0.72rem;
+  font-size:       0.78rem;
   letter-spacing:  0.12em;
   text-transform:  uppercase;
   color:           var(--gold);

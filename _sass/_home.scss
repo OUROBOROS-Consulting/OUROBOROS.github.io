@@ -178,7 +178,7 @@
   line-height: 1;
 }
 .stat-label {
-  @include label-caps(0.62rem, 0.2em);
+  @include label-caps(0.72rem, 0.18em);
 }
 
 // ── Scroll hint ───────────────────────────────────────────────────────────────
@@ -437,8 +437,8 @@
 }
 
 .carousel-dot {
-  width:        7px;
-  height:       7px;
+  width:        24px;
+  height:       24px;
   border-radius: 50%;
   background:   var(--border);
   border:       1px solid var(--gold-dim);

@@ -183,6 +183,7 @@ layout: default
     {% for val in site.data.values %}
     <button class="carousel-dot{% if forloop.first %} active{% endif %}"
             role="tab"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
             aria-label="Value {{ forloop.index }}"></button>
     {% endfor %}
   </div>
@@ -270,6 +271,7 @@ layout: default
     {% for ref in site.data.testimonials %}
     <button class="carousel-dot{% if forloop.first %} active{% endif %}"
             role="tab"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
             aria-label="Testimonial {{ forloop.index }}"></button>
     {% endfor %}
   </div>

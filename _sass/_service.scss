@@ -77,12 +77,23 @@
   gap:       0.5rem;
 }
 
+.lp-tag {
+  display:        inline-block;
+  font-family:    $font-sans;
+  font-size:      0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color:          var(--muted);
+  border:         1px solid var(--border);
+  padding:        0.2em 0.6em;
+  line-height:    1.5;
+}
+
 .svc-hero-cta {
   display:        flex;
   flex-direction: column;
   align-items:    flex-start;
   gap:            1rem;
-  padding-top:    0.5rem;
   background:     rgba(255, 255, 255, 0.04);
   border:         1px solid rgba(255, 255, 255, 0.08);
   border-radius:  26px;
@@ -139,7 +150,7 @@
   // the essay's 680px cap is too narrow — override it here.
   .post-body {
     max-width: none;
-    padding:   3.5rem 0 7rem;
+    padding:   3.5rem 0 4rem;
   }
 }
 

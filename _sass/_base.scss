@@ -153,18 +153,27 @@ body::before {
   @include scallop-recessed;
 }
 
-// ── Vignette — stage-light edge darkening ────────────────────────────────────
+// ── Vignette + cursor spotlight — merged into single body::after ─────────────
+// Two background layers: vignette (edge darkening) + spotlight (cursor glow).
+// Spotlight gradient is anchored to --cx/--cy set by main.js on mousemove.
 body::after {
   content:        '';
   position:       fixed;
   inset:          0;
-  z-index:        1;
+  z-index:        9998;
   pointer-events: none;
-  background: radial-gradient(
-    ellipse 70% 60% at 50% 40%,
-    transparent 0%,
-    rgba(8,8,8,0.35) 100%
-  );
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 50% 40%,
+      transparent 0%,
+      rgba(8,8,8,0.35) 100%
+    ),
+    radial-gradient(
+      600px circle at var(--cx, -9999px) var(--cy, -9999px),
+      rgba(74, 107, 95, 0.07)  0%,
+      rgba(74, 107, 95, 0.035) 35%,
+      transparent              100%
+    );
 }
 
 // ── Reading progress bar ──────────────────────────────────────────────────────
@@ -307,23 +316,6 @@ body::after {
   border-radius:    50%;
   animation:        spin 0.7s linear infinite;
   display:          inline-block;
-}
-
-// ── Cursor spotlight ──────────────────────────────────────────────────────────
-// Radial gradient anchored to --cx/--cy, set by main.js on mousemove.
-// GPU-composited — no canvas, no rAF loop, no moving DOM elements.
-body::after {
-  content:        '';
-  position:       fixed;
-  inset:          0;
-  pointer-events: none;
-  z-index:        9998;
-  background:     radial-gradient(
-    600px circle at var(--cx, -9999px) var(--cy, -9999px),
-    rgba(74, 107, 95, 0.07)  0%,
-    rgba(74, 107, 95, 0.035) 35%,
-    transparent              100%
-  );
 }
 
 @media (prefers-reduced-motion: reduce) {
