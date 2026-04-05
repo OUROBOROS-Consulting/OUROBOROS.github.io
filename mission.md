@@ -42,6 +42,12 @@ sections:
         complex institutions; consulting that helps organizations understand what their data
         actually says rather than what they hoped it would. The thread running through all of it
         is that information asymmetry is a form of power — and closing that gap matters.
+      - >
+        One of my interrelated missions is to make survival operational. My version of that
+        mission was shaped by data engineering work on the federal COVID-19 response, and it
+        now shows up in a personal context: smart-home automation for safety and privacy,
+        workflows that preserve records, and AI-assisted thinking for situations no human
+        should have to navigate alone.
 
   - id: commitment
     heading: Accountability Over Comfort
@@ -53,6 +59,14 @@ sections:
         as an ethical commitment, not merely a technical one. In my research on coercive control,
         institutional betrayal, and psychological harm, it means taking the evidence seriously —
         wherever it leads.
+      - >
+        The intersection between social engineering and personality disorders — narcissistic PD,
+        borderline PD, antisocial PD — is particularly challenging outside workplace settings
+        where cybersecurity awareness is standard. I've experienced DARVO firsthand in my personal
+        life for being cybersecurity-minded: being called "paranoid" destabilizes and disorients,
+        combining denial and attack in a single label. That discomfort is what makes people
+        vulnerable to social engineering, and it's why this work matters — not everyone has
+        the character armor to withstand such tactics.
       - >
         I am not interested in comfortable conclusions. I am interested in accurate ones —
         and in ensuring that accuracy reaches the people who need it most, not only those who

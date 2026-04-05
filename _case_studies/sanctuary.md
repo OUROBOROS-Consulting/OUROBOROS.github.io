@@ -17,6 +17,10 @@ about:
     and built infrastructure appropriate to it. This is an account of that build: what
     was installed, how it was configured, and what it has and has not changed.
 
+    That’s one of my various interrelated missions: to make survival operational by
+    applying the same systems thinking and technology rigor I used on the Federal
+    COVID-19 response.
+
 pull_quote: >
   "When institutions refuse to protect you, you build your own. The math is
   uncomfortable, but the conclusion is not optional."
@@ -31,6 +35,10 @@ sections:
         institutional access. Standard advice — call the police, file reports — was not
         only insufficient in this context but occasionally actively counterproductive.
         The home needed to function as its own security infrastructure.
+      - >
+        I’ve converted my apartment to a smart home, so I don’t have to worry about my
+        physical safety or privacy. My blinds literally close after the sun sets — good
+        luck to any PI my adversaries may hire.
       - >
         The design requirements followed directly from the threat: perimeter awareness
         without relying on a third party to relay it; logging that could not be tampered
@@ -157,6 +165,10 @@ sections:
         humidity spikes can indicate water intrusion; anomalous thermal readings can flag open
         windows or HVAC failure that might otherwise go unnoticed.
       - >
+        I’ve set up Apple workflows to automate records management and document interactions
+        with antagonistic individuals and institutions. I’ve used AI to strategically think
+        through situations that no human should ever be in.
+      - >
         A HomePod in the living room provides local voice control for HomeKit without requiring
         cloud connectivity for commands. It also functions as a room-level audio sensor for
         presence-based automations: the system can distinguish occupied from unoccupied states
@@ -181,6 +193,10 @@ sections:
         addressable object — the feeling that something might have happened — now has, in most
         cases, a data answer. That shift is not trivial for someone who has experienced the
         particular form of paranoia that targeted abuse produces.
+      - >
+        Not everyone needs such a high-tech setup, and if they do, it must be handled
+        responsibly. Those same tools, in the hands of a malicious agent, can be used for
+        surveillance, harassment, and worse.
       - >
         The limits of this system are worth naming. It provides awareness, not control. It
         documents, but it does not guarantee that documentation will be acted upon by
