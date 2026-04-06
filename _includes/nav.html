@@ -27,10 +27,10 @@
     <div class="nav-dropdown">
       <div class="card--formula">
         <div class="card--formula__interior">
-          <button class="nav-dropdown-toggle">
+          <a href="{{ item.url | relative_url }}" class="nav-dropdown-toggle">
             <i class="{{ nav_icon }}" aria-hidden="true"></i>
             <span>{{ item.title }}</span>
-          </button>
+          </a>
         </div>
       </div>
       <div class="nav-dropdown-menu">
