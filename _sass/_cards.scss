@@ -138,6 +138,12 @@ $-inner:  calc(#{$-arc} - #{$-border});
   transition:      letter-spacing 0.3s;
 
   &:hover { letter-spacing: 0.22em; }
+
+  &--soon {
+    color: var(--muted);
+    font-style: italic;
+    letter-spacing: 0.1em;
+  }
 }
 
 // ── Related cards (essay & project footers) ───────────────────────────────────
@@ -147,6 +153,17 @@ $-inner:  calc(#{$-arc} - #{$-border});
   padding:         2rem;
   text-decoration: none;
   display:         block;
+
+  &--soon {
+    cursor: default;
+    opacity: 0.6;
+    &:hover {
+      border-color: var(--border);
+      transform:    none;
+      box-shadow:   none;
+      &::after { transform: scaleX(0); }
+    }
+  }
 
   .rc-tag {
     font-size:      0.72rem;

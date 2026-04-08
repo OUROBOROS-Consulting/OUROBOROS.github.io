@@ -77,6 +77,9 @@ Entry point: `assets/css/main.scss` — imports all partials in order.
 | `_service.scss` | `.svc-hero`, `.svc-body`, `.svc-section`, `.psa-*` styles |
 | `_essay.scss` | Essay reading layout (note: sets `.post-body { max-width: 680px }`) |
 | `_cv.scss` | CV/resume layout |
+| `_linkedin.scss` | LinkedIn post layout styles |
+| `_timeline.scss` | Timeline component styles |
+| `_floorplan.scss` | Floorplan/grid layout styles |
 
 ### Design Token System (`_base.scss`)
 
@@ -115,8 +118,34 @@ Site-wide data driving dynamic sections:
 - `nav.yml` — navigation structure
 - `values.yml`, `testimonials.yml` — home page carousels
 - `timeline.yml`, `projects.yml` — structured project data
+- `tutorials.yml` — tutorials page content
 - `reading.yml`, `listening.yml`, `playlists.yml` — personal pages
 - `survival.yml`, `survival_crisis.yml`, `survival_legal.yml`, `survival_mental.yml`, `survival_whistleblower.yml` — survival guide resources
+
+### Includes (`_includes/`)
+
+| Include | Purpose |
+|---------|---------|
+| `nav.html` | Top navigation (hamburger + active link logic) |
+| `footer.html` | Site footer |
+| `timeline.html` | Timeline component (used in projects/case studies) |
+| `framed.html` | Generic framed/bordered content block |
+| `campaign.html` | Campaign/CTA section include |
+| `linkedinbadge.html` | LinkedIn badge embed |
+
+### foundation.html Additional Patterns
+
+- **Scroll progress bar**: `#progress-bar` renders on every `foundation.html` page — a gold line at top tracking scroll depth.
+- **Social links block**: `page.links:` front matter (keys: `github`, `linkedin`, `orcid`, `tutor`, `contact`) renders a `.foundation-links` nav at the bottom of mission-mode pages.
+- **Lazy script loading**: `bibtex.js` and `playlist-carousel.js` are injected conditionally — only when a section uses `bibtex_src:` or `playlist_carousel: true` respectively. Playlist iframes use `data-src` instead of `src` for lazy loading; `playlist-carousel.js` swaps `data-src → src` on slide activation.
+
+### Typography
+
+Loaded via Google Fonts in `default.html`: **Lora** (serif, body/headings), **Inter** (sans, UI/labels), **JetBrains Mono** (monospace, code). Font Awesome 6.5 CDN for icons.
+
+### Custom Agent
+
+`.github/agents/gothic-designer.agent.md` defines the **gothic-designer** Claude agent — a design persona embodying the site's modern-Gothic aesthetic. Invoke it for visual/design tasks to get on-brand suggestions using the exact token values and geometry principles of the design system.
 
 ### Narrow Text Gotcha
 

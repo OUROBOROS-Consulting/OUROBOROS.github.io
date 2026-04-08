@@ -21,12 +21,21 @@ permalink: /resources/tutorials/
 <div class="svc-body">
   <div class="related-grid">
     {% for tutorial in site.data.tutorials %}
+    {% if tutorial.link and tutorial.link != "#" %}
     <a href="{{ tutorial.link }}" class="related-card">
       <p class="rc-tag">{{ tutorial.tag }}</p>
       <h2 class="rc-title">{{ tutorial.title }}</h2>
       <p class="card-desc">{{ tutorial.description }}</p>
       <span class="card-link">Read Tutorial →</span>
     </a>
+    {% else %}
+    <div class="related-card related-card--soon">
+      <p class="rc-tag">{{ tutorial.tag }}</p>
+      <h2 class="rc-title">{{ tutorial.title }}</h2>
+      <p class="card-desc">{{ tutorial.description }}</p>
+      <span class="card-link card-link--soon">Coming Soon</span>
+    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Privacy PSA — Instagram Carousel</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;600;700&display=swap');
+
+        :root {
+            --bg1: #141414;
+            --bg2: #1E1E1E;
+            --bg3: #252525;
+            --text: #E8E4DC;
+            --bright: #FFFFFF;
+            --muted: #999999;
+            --subdued: #B0AAA0;
+            --gold: #C9A84C;
+            --steel: #7B8FA1;
+            --sage: #6A8E7F;
+            --serif: 'EB Garamond', Georgia, serif;
+            --sans: 'Inter', system-ui, sans-serif;
+            --chamfer: polygon(8px 0%, calc(100% - 8px) 0%, 100% 8px, 100% calc(100% - 8px), calc(100% - 8px) 100%, 8px 100%, 0% calc(100% - 8px), 0% 8px);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: var(--bg1);
+            color: var(--text);
+            font-family: var(--serif);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            gap: 20px;
+        }
+
+        .carousel-container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1400px;
+        }
+
+        /* Slide base */
+        .slide {
+            position: relative;
+            width: 360px;
+            aspect-ratio: 1080/1350;
+            background: linear-gradient(180deg, var(--bg2) 0%, var(--bg1) 100%);
+            clip-path: var(--chamfer);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8), inset 0 0 40px rgba(8, 8, 8, 0.3);
+        }
+
+        /* Scallop texture overlay */
+        .slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16 Q4 10 8 6 Q12 10 16 16' fill='none' stroke='rgba(106,142,127,0.08)' stroke-width='0.8'/%3E%3Cpath d='M-8 8 Q-4 2 0 -2 Q4 2 8 8' fill='none' stroke='rgba(106,142,127,0.08)' stroke-width='0.8'/%3E%3Cpath d='M8 8 Q12 2 16 -2 Q20 2 24 8' fill='none' stroke='rgba(106,142,127,0.08)' stroke-width='0.8'/%3E%3C/svg%3E");
+            background-size: 16px 16px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        /* Slide header with number */
+        .slide-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .slide-number {
+            flex: 0 0 50px;
+            width: 50px;
+            height: 50px;
+            background: var(--sage);
+            clip-path: var(--chamfer);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--sans);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--bg1);
+        }
+
+        .slide-title {
+            font-family: var(--sans);
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sage);
+            font-weight: 600;
+            line-height: 1.3;
+            flex: 1;
+        }
+
+        /* Slide body */
+        .slide-body {
+            font-family: var(--serif);
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .slide-body p {
+            margin: 0;
+        }
+
+        .slide-body strong {
+            color: var(--bright);
+            font-weight: 600;
+        }
+
+        .slide-body em {
+            color: var(--sage);
+            font-style: italic;
+        }
+
+        /* Callout box */
+        .callout {
+            background: rgba(26, 26, 26, 0.8);
+            border-left: 2px solid var(--sage);
+            padding: 14px 16px;
+            font-family: var(--serif);
+            font-size: 12px;
+            line-height: 1.6;
+            color: var(--sage);
+            margin-top: auto;
+            border-radius: 2px;
+        }
+
+        .callout strong {
+            color: var(--bright);
+        }
+
+        /* Cover slide special styling */
+        .slide-cover {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 30px;
+        }
+
+        .cover-title {
+            font-family: var(--sans);
+            font-size: 18px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .cover-subtitle {
+            font-family: var(--serif);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--text);
+            margin-bottom: 20px;
+        }
+
+        .cover-icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            filter: drop-shadow(0 0 15px rgba(106, 142, 127, 0.2));
+        }
+
+        .swipe-hint {
+            font-family: var(--sans);
+            font-size: 11px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-top: 30px;
+        }
+
+        /* Closing slide */
+        .slide-closing {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 30px;
+        }
+
+        .closing-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        .closing-name {
+            font-family: var(--serif);
+            font-size: 16px;
+            color: var(--bright);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+
+        .closing-title {
+            font-family: var(--sans);
+            font-size: 10px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--sage);
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .closing-tagline {
+            font-family: var(--serif);
+            font-size: 12px;
+            font-style: italic;
+            color: var(--subdued);
+            margin-top: 20px;
+        }
+
+        /* Info panel */
+        .info-panel {
+            max-width: 700px;
+            background: var(--bg2);
+            border: 1px solid rgba(106, 142, 127, 0.2);
+            clip-path: var(--chamfer);
+            padding: 24px;
+            margin-top: 20px;
+        }
+
+        .info-title {
+            font-family: var(--sans);
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 12px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(106, 142, 127, 0.15);
+        }
+
+        .info-content {
+            font-family: var(--serif);
+            font-size: 12px;
+            line-height: 1.7;
+            color: var(--text);
+        }
+
+        .info-content strong {
+            color: var(--sage);
+        }
+
+        /* SVG icon styles */
+        svg.icon {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide-accent-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--sage), transparent);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container {
+                gap: 0;
+            }
+
+            .slide {
+                width: 100%;
+                max-width: 360px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="font-family: var(--sans); font-size: 12px; letter-spacing: 3px; text-transform: uppercase; color: var(--muted); margin-bottom: 20px;">Instagram Carousel Preview</h1>
+
+<div class="carousel-container">
+    <!-- Cover Slide (Hook) -->
+    <div class="slide slide-cover">
+        <div class="slide-content" style="justify-content: space-between;">
+            <div>
+                <h2 style="font-family: var(--sans); font-size: 20px; letter-spacing: 2px; text-transform: uppercase; color: var(--sage); margin-bottom: 24px; font-weight: 700; line-height: 1.3;">What you may not know about talking to AI</h2>
+                
+                <div style="font-family: var(--serif); font-size: 14px; line-height: 1.8; color: var(--text); margin-bottom: 24px;">
+                    <p style="margin-bottom: 12px;">AI tools are useful. I use them on a regular basis.</p>
+                    <p style="margin-bottom: 12px;">But if you're asking an AI about your <em style="color: var(--sage);">health, your finances, your legal situation, your relationships</em> — you need to understand the <strong>data privacy considerations</strong> of those conversations.</p>
+                    <p style="margin-bottom: 12px;"><strong>Most people don't fully understand yet.</strong></p>
+                    <p><em style="color: var(--sage); font-size: 16px;">That is not an accident, but it sure is a tragedy.</em></p>
+                </div>
+            </div>
+
+            <div class="swipe-hint">⟶ Swipe to learn 5 things you need to know</div>
+        </div>
+        <div class="slide-accent-bar"></div>
+    </div>
+
+    <!-- Slide 1 -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-header">
+                <div class="slide-number">1</div>
+                <div class="slide-title">Your conversations are not private by default</div>
+            </div>
+
+            <div class="slide-body">
+                <p>When you type something into an AI chatbot, most providers can use that conversation to train their next model.</p>
+                <p>That means your words — your <em>medical fears, your financial questions, your family conflicts</em> — can become part of a system that millions of other people interact with.</p>
+                <p><strong>Every major AI provider operates on an opt-out model.</strong> If you didn't go looking for a privacy toggle, you're opted in.</p>
+            </div>
+
+            <div class="callout">
+                <strong>The setting exists.</strong> But do you know where to find it?
+            </div>
+        </div>
+        <div class="slide-accent-bar"></div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-header">
+                <div class="slide-number">2</div>
+                <div class="slide-title">Paying doesn't protect you</div>
+            </div>
+
+            <div class="slide-body">
+                <p><strong>This is the most common misconception.</strong></p>
+                <p>People assume that if they're paying $20/month for a premium AI subscription, their data is private.</p>
+                <p><strong>It's not.</strong></p>
+                <p>Paid consumer plans — across the industry — generally train on your data by default, just like free plans. The only tiers automatically excluded are enterprise and business accounts.</p>
+            </div>
+
+            <div class="callout">
+                <strong>Your subscription buys you faster responses and better models.</strong> It does not buy you privacy.
+            </div>
+        </div>
+        <div class="slide-accent-bar"></div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-header">
+                <div class="slide-number">3</div>
+                <div class="slide-title">Opting out doesn't undo what's already done</div>
+            </div>
+
+            <div class="slide-body">
+                <p>Even if you find the privacy toggle and turn it off today, anything you've already shared may have been used.</p>
+                <p><strong>You can't un-train a model.</strong> The data is baked in.</p>
+                <p>What you <em>can</em> do is stop future conversations from being included. That's worth doing, but every day you wait is another day of exposure.</p>
+            </div>
+
+            <div class="callout">
+                Even after you opt out, <strong>most providers retain your data for 30 days to 5 years</strong> for safety, legal, or abuse-monitoring purposes.
+            </div>
+        </div>
+        <div class="slide-accent-bar"></div>
+    </div>
+
+    <!-- Slide 4 -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-header">
+                <div class="slide-number">4</div>
+                <div class="slide-title">AI is now embedded in tools you already use</div>
+            </div>
+
+            <div class="slide-body">
+                <p><strong>This isn't just about chatbots anymore.</strong></p>
+                <p>AI is being integrated into your email client, messaging apps, phone OS, photo library, search engine, and social media feeds.</p>
+                <p>Many of these features scan your private content to generate suggestions. The line between on-device and cloud processing is often unclear — and rarely explained.</p>
+            </div>
+
+            <div class="callout">
+                <strong>Transparency is the exception.</strong> Assume your data moves between systems unless told otherwise.
+            </div>
+        </div>
+        <div class="slide-accent-bar"></div>
+    </div>
+
+    <!-- Slide 5 -->
+    <div class="slide">
+        <div class="slide-content">
+            <div class="slide-header">
+                <div class="slide-number">5</div>
+                <div class="slide-title">The people most at risk are the least protected</div>
+            </div>
+
+            <div class="slide-body">
+                <p>An elderly person asking AI for help understanding a medical bill. A domestic violence survivor drafting a protective order. A veteran navigating a benefits claim. A first-generation student applying for financial aid.</p>
+                <p><strong>These people are sharing the most sensitive information imaginable</strong> — and they are the least likely to know a privacy setting exists.</p>
+            </div>
+
+            <div class="callout">
+                <strong>That's a design failure,</strong> which makes it a user problem.
+            </div>
+        </div>
+        <div class="slide-accent-bar"></div>
+    </div>
+
+    <!-- Closing Slide -->
+    <div class="slide slide-closing">
+        <div class="slide-content" style="justify-content: center;">
+            <svg class="closing-icon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                <!-- OUROBOROS pawn and hexagon mark simplified -->
+                <defs>
+                    <filter id="logo-glow">
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                </defs>
+                <!-- Hexagon frame -->
+                <path d="M 12 8 L 48 8 L 55 30 L 48 52 L 12 52 L 5 30 Z" fill="none" stroke="#6A8E7F" stroke-width="2"/>
+                <!-- Pawn icon -->
+                <circle cx="30" cy="22" r="5" fill="#6A8E7F"/>
+                <path d="M 26 27 L 26 38 Q 26 42 30 42 Q 34 42 34 38 L 34 27" fill="none" stroke="#6A8E7F" stroke-width="2"/>
+                <path d="M 24 27 L 36 27" stroke="#6A8E7F" stroke-width="2"/>
+                <!-- Accent dots -->
+                <circle cx="15" cy="15" r="2" fill="#C9A84C"/>
+                <circle cx="45" cy="15" r="2" fill="#C9A84C"/>
+                <circle cx="15" cy="45" r="2" fill="#C9A84C"/>
+                <circle cx="45" cy="45" r="2" fill="#C9A84C"/>
+            </svg>
+
+            <div class="closing-name">Apostolos Stamenos, MS</div>
+            <div class="closing-title">
+                Founder & Data Consultant<br>Survivor Advocate<br>OUROBOROS Consulting
+            </div>
+            <div class="closing-tagline">Data Solutions for Survivors, by Survivors</div>
+        </div>
+        <div class="slide-accent-bar"></div>
+    </div>
+</div>
+
+<!-- Info Panel -->
+<div class="info-panel">
+    <div class="info-title">Design Notes</div>
+    <div class="info-content">
+        <p><strong>Style inspired by:</strong> Modern Gothic PSA design with sophisticated data privacy messaging. Each slide uses a chamfered border (8px), scallop texture underlay (sage at 8% opacity), numbered cards (sage accent), and callout boxes for key takeaways.</p>
+        <p style="margin-top: 12px;"><strong>Color system:</strong> Dark backgrounds (bg1/bg2) with sage accents (#6A8E7F) for primary information, gold (#C9A84C) for symbolic emphasis. Typography uses EB Garamond serif for body and Inter sans for labels.</p>
+        <p style="margin-top: 12px;"><strong>Carousel format:</strong> 5 content slides + 1 closing slide. Each slide ~1080×1350px (Instagram story ratio). Numbers and titles on left create visual rhythm and scanability.</p>
+    </div>
+</div>
+
+</body>
+</html>
