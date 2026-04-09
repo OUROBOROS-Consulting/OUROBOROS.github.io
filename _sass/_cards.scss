@@ -212,6 +212,10 @@ $-inner:  calc(#{$-arc} - #{$-border});
   align-items:           stretch;
 }
 
+.resources-grid .related-card {
+  border-color: var(--gold-border);
+}
+
 .related-grid > .related-card,
 .cards > .card,
 .cards > .card--formula,
