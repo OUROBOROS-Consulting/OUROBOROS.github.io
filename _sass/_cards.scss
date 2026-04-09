@@ -268,7 +268,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
   position:   relative;
   padding:    1.75rem 1.8rem;
   background: var(--bg2);
-  border-color: var(--gold-border)
+  border-color: var(--gold-border);
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.08);
   transition: box-shadow 0.25s, transform 0.25s;
   @include chamfer($-arc);
