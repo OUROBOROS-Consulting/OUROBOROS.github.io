@@ -55,9 +55,11 @@
 
 // ── About body copy ───────────────────────────────────────────────────────────
 .about-body {
+  font-family: $font-serif;
   color:       var(--subdued);
   font-size:   1rem;
-  line-height: 1.9;
+  line-height: 2;
+  letter-spacing: 0.3px;
 
-  p + p { margin-top: 1rem; }
+  p + p { margin-top: 1.75rem; }
 }
