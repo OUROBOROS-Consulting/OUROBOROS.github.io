@@ -3,6 +3,10 @@
   children:
     - title: Technology Solutions
       url: /services/consulting/
+    - title: Design Services
+      url: /services/design/
+    - title: Research & Investigation
+      url: /services/investigation/
     - title: Pedagogy Services
       url: /services/tutoring/
     - title: Advocacy Services
