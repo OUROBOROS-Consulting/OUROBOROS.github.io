@@ -33,9 +33,7 @@ sections:
         Building a credible professional website from scratch involves an uncomfortable
         number of overlapping domains: visual design, front-end architecture, content
         strategy, performance, and accessibility. A solo practitioner with deep expertise
-        in one area is rarely expert in all of them simultaneously. That gap is where
-        most professional sites fail: technically functional but visually undistinguished,
-        or visually ambitious but brittle and inaccessible.
+        in one area is rarely expert in all of them simultaneously. Most professional sites fail because of this: technically functional but visually undistinguished, or visually ambitious but brittle and inaccessible.
       - >
         I had a clear sense of what this firm should feel like: precise, serious, quietly
         distinguished. A set of technical requirements followed from that — a dark palette
@@ -118,9 +116,7 @@ sections:
         The honest answer is: the scope of what was achievable within a given time window.
         Features that would have required significant research and iteration — the cursor
         animation physics, the ARIA carousel implementation, the systematic accessibility
-        pass — were completed in hours rather than days. That compression is real, and it
-        matters for a small firm where engineering time is not the primary constraint on
-        the business.
+        pass — were completed in hours rather than days. That compression is real. For a small firm where engineering time is not the primary constraint, the time savings shift what becomes possible.
       - >
         What is less obvious is the nature of the quality benefit. Claude was useful not
         primarily because it wrote code faster, but because it held context consistently.
@@ -152,9 +148,7 @@ sections:
         For a solo practitioner or small team, that shift is broadly favorable. The
         parts of development that are hardest to delegate — taste, intent, editorial
         judgment about what the site is actually trying to do — remain with the human.
-        The parts that are easiest to lose to fatigue, inconsistency, or time pressure —
-        thoroughness, coherence across a large codebase, systematic review — are where
-        AI assistance is most valuable.
+        The parts that slip under fatigue, inconsistency, or time pressure — thoroughness, coherence across a large codebase, systematic review — are where AI assistance is most valuable.
       - >
         I build websites for clients when the work calls for it, and I advise on AI
         tooling adoption. This project gave me a cleaner, firsthand understanding of what

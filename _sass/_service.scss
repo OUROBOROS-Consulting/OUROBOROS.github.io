@@ -199,6 +199,16 @@
     &:last-child { margin-bottom: 0; }
   }
 
+  // Paragraphs within card interiors (body_paragraphs in sections)
+  .card--formula__interior p {
+    font-size:     0.93rem;
+    color:         var(--subdued);
+    line-height:   1.9;
+    margin-bottom: 1.5rem;
+
+    &:last-child { margin-bottom: 0; }
+  }
+
   strong { color: var(--text); font-weight: 500; }
 
   ul {
