@@ -66,30 +66,37 @@ sections:
         This was closer to pair programming than delegation — I asked open-ended questions, pushed
         back when reasoning didn't hold up, and paid attention to how it reasoned, not just what it produced.
       - >
-        The workflow was deliberate: Git-branched cycles where I identified a problem or feature,
-        handed off the implementation with clear constraints, reviewed the output, and either merged
-        or sent it back for revision. This created a visible record — branch names like
-        claude/add-glowing-moon-effect and claude/ecstatic-mcnulty embedded the collaboration
-        in commit history. Each cycle compressed what would normally take me days into hours while
-        keeping me in control of the outcome.
+        I came to this with prior Jekyll experience — at HHS I managed the full deployment lifecycle
+        of Healthdata.gov and other public systems using Federalist. I knew the constraints and
+        possibilities. I coded most of this site myself: wrote the templates, built the Sass architecture,
+        implemented the JavaScript. I also hit blockers — design patterns I wanted to scale properly,
+        animation mechanics that weren't behaving as intended, architectural questions that needed
+        pressure-testing. That's when Claude became essential. I'd identify the specific problem,
+        ask a focused question, get the response, and keep building. It was genuine collaboration,
+        not delegation.
       - >
-        Early phases required architectural judgment. I directed Claude to structure Jekyll data files
-        (_data/values.yml, _data/testimonials.yml, _data/nav.yml) so content could scale independently
-        from layout, and to establish a Sass design system that would govern color, typography, and
-        spacing globally. These decisions were foundational—they determined rework burden later on.
-        I chose the approach; Claude built it.
+        Early phases were architectural. I needed to decide how to structure content so it could scale
+        without database overhead. I worked with Claude on data file organization and the Sass design
+        system — not as a reviewer of Claude's work, but as someone building the actual implementation
+        and wanting feedback on the approach. I chose the strategy; Claude helped me think through
+        edge cases and scaling concerns. I then built it.
       - >
-        Middle phases were iterative refinement. I asked Claude to build features—the JavaScript carousel,
-        the canvas cursor animation, the moon glow effect—reviewed the output, and gave specific feedback
-        on what felt wrong: the carousel felt stiff, the animations were accurate but didn't match the
-        visual intent. Claude revised. I pushed back again if needed. That feedback loop was the actual work.
+        Middle phases were implementation. Most of the code is mine. But when I got stuck on the carousel
+        animation mechanics — I knew what I wanted (swipe support, ARIA live regions, pause-on-hover),
+        but the implementation was tricky — Claude became the sounding board. When I needed to understand
+        how to implement momentum physics on the cursor animation while respecting prefers-reduced-motion,
+        Claude provided the technical depth. I took that knowledge and built it. Some features I built
+        entirely alone; others were collaborative problem-solving that happened over multiple turns.
       - >
-        Late in the project, I asked Claude to conduct a systematic accessibility audit. It surfaced
-        28 issues: broken HTML structure, missing ARIA attributes, navigation links returning 404s,
-        styling inconsistencies. I reviewed each one for scope and priority, then had Claude address
-        them in a single comprehensive pass. The audit was thorough because I knew exactly what to look
-        for—it's not a task I would have found time to do on my own, but it was non-negotiable for
-        the final product. That's where the time compression mattered most.
+        Late in the project, I brought Claude in specifically for a systematic accessibility audit.
+        I know accessibility patterns — I've implemented ARIA regions, semantic HTML, keyboard
+        navigation — but a fresh, rigorous pass catches what fades into your own blind spots. Claude
+        surfaced 28 issues: broken HTML structure, missing ARIA attributes, navigation links returning
+        404s, styling inconsistencies. I reviewed each one, prioritized what was critical, and
+        implemented the fixes myself. That's where Claude became irreplaceable — not as the person
+        doing the work, but as the mechanism for forcing a comprehensive review that I would have
+        deferred indefinitely without explicit pressure. The audit was the collaboration; the remediation
+        was mine.
 
   - id: technical
     heading: What Was Built
@@ -102,15 +109,10 @@ sections:
         No external UI libraries. The design system lives in a handful of Sass files and
         is expressed through a small set of reusable CSS classes.
       - >
-        The cursor halo animation is a canvas-based effect written in roughly 120 lines
-        of vanilla JavaScript. A golden ring orbits the cursor, spinning only when the
-        cursor is at rest, with momentum-based physics that make the motion feel
-        intentional rather than mechanical. It respects prefers-reduced-motion. The
-        moon in the hero section is pure CSS — a circle with layered box-shadows and a
-        five-second glow keyframe animation, with crater details rendered through
-        pseudo-elements. Neither required a library. Both required thinking carefully
-        about what the effect was supposed to communicate and what the minimal
-        implementation would be.
+        The moon in the hero section is pure CSS — a circle with layered box-shadows and a
+        five-second glow keyframe animation, with crater details rendered through pseudo-elements.
+        It required thinking carefully about what the effect was supposed to communicate and
+        what the minimal implementation would be.
       - >
         The carousel system — used for both the values section and the testimonials — is
         a single reusable initialization function that handles two distinct modes: manual
@@ -128,10 +130,12 @@ sections:
     heading: What the Collaboration Actually Changed
     body_paragraphs:
       - >
-        Measurably: the scope of what was achievable within a given time window. The cursor animation
-        physics, the ARIA carousel implementation, the systematic accessibility pass—features that
-        would have required days of research and iteration—were completed in hours. That compression
-        is real. It shifted what became possible for a solo consultant with limited calendar bandwidth.
+        Measurably: the time I spent on specific problems. When I needed to design the ARIA carousel
+        system (swipe support, live regions, pause-on-hover) or think through the data architecture
+        for scaling testimonials and navigation without duplication, or needed a comprehensive
+        accessibility audit—those moments that would normally mean days of research and iteration were
+        compressed into focused conversations. That compression is real. It shifted what became possible
+        in the available calendar time.
       - >
         What's less obvious is the quality benefit. Claude was useful not because it wrote code faster,
         but because it held context consistently. It remembered the design system rules when implementing
