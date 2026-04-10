@@ -31,7 +31,7 @@ sections:
     heading: What This Work Is For
     body_paragraphs:
       - >
-        Systems — healthcare, academic, legal, digital — carry enormous power over individual lives.
+        Healthcare, academic, legal, and digital systems carry enormous power over individual lives.
         Most were not designed with the most vulnerable people in mind, and few have meaningful
         accountability mechanisms when they fail. I work at the intersection of data science and
         public health because I believe that rigorous, transparent research is one of the most
@@ -41,9 +41,9 @@ sections:
         research more reproducible; educational resources that demystify data for people navigating
         complex institutions; consulting that helps organizations understand what their data
         actually says rather than what they hoped it would. The thread running through all of it
-        is that information asymmetry is a form of power — and closing that gap matters.
+        is that information asymmetry is a form of power. Restoring information symmetry is one of my greatest assets, and it's at your disposal.
       - >
-        One of my interrelated missions is to make survival operational. My version of that
+        A parallel mission is to make survival operational. My version of that
         mission was shaped by data engineering work on the federal COVID-19 response, and it
         now shows up in a personal context: smart-home automation for safety and privacy,
         workflows that preserve records, and AI-assisted thinking for situations no human
@@ -53,9 +53,7 @@ sections:
     heading: Accountability Over Comfort
     body_paragraphs:
       - >
-        One consistent feature of my career has been a willingness to name what others prefer to
-        leave unnamed. In government, that meant pushing for transparency in systems that had
-        developed a preference for opacity. In academia, it means treating methodological rigor
+        I name what others prefer to leave unnamed. In government, that meant pushing for transparency in systems that defaulted to opacity. In academia, it means treating methodological rigor
         as an ethical commitment, not merely a technical one. In my research on coercive control,
         institutional betrayal, and psychological harm, it means taking the evidence seriously —
         wherever it leads.
@@ -65,7 +63,7 @@ sections:
         where cybersecurity awareness is standard. I've experienced DARVO firsthand in my personal
         life for being cybersecurity-minded: being called "paranoid" destabilizes and disorients,
         combining denial and attack in a single label. That discomfort is what makes people
-        vulnerable to social engineering, and it's why this work matters — not everyone has
+        vulnerable to social engineering, and it's why this work exists — not everyone has
         the character armor to withstand such tactics.
       - >
         I am not interested in comfortable conclusions. I am interested in accurate ones —
@@ -76,8 +74,7 @@ sections:
     heading: How I Work
     body_paragraphs:
       - >
-        I move between roles — researcher, analyst, educator, writer — depending on what a
-        problem requires. My technical training is in biostatistics and data engineering;
+        I move between roles — researcher, analyst, educator, writer — as a problem requires. My technical training is in biostatistics and data engineering;
         my research interests span psychopathology, public health, and the structural conditions
         that produce harm. I try to bring the same standards to both: define the question clearly,
         gather the best available evidence, and be honest about the limits of what the data can tell you.
@@ -107,6 +104,16 @@ sections:
       - >
         The logo renders this as a figure-eight — the lemniscate, the mathematical symbol
         for infinity — which adds a dimension the circle alone does not carry. Not just
-        cyclical, but continuous and infinite. Not just renewal, but persistence. The loop does not
-        collapse, but keeps moving ad infinitum.
+        cyclical, but continuous and infinite. Not just renewal, but persistence. The loop does not collapse. It keeps moving.
+      - >
+        The logo carries a second mark: ♟→♛. In chess, a pawn reaching the far rank transforms —
+        not by returning to where it started, but by completing a trajectory that was always about
+        forward motion. There is no retreat built into the rule. Transformation is the destination.
+      - >
+        That arc reads differently depending on who is looking at it. For clients, it is literal:
+        forward from harm, through process, into a different kind of standing. For me, it is
+        autobiography — someone who began in one place and built range through the work itself,
+        one domain at a time. The symbol points in both directions at once, at the person across
+        the table and the person behind it, and the meaning shifts depending on who is reading.
+        Most symbols only point one way. This one does not.
 ---
