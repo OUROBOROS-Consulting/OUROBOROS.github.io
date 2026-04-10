@@ -3,7 +3,7 @@ title: Building a Smart Fortress
 description: An honest account of building a smart home for protecting a survivor who was betrayed by law enforcement — myself.
 layout: foundation
 back_url: /work/
-category: Case Study
+category: Survivor Security
 lede: When institutions betrayed me and failed to keep me safe, I built my own.
 date: 2026-04-01
 tags: [Smart Home, Security, Privacy, Apple HomeKit]
@@ -11,7 +11,7 @@ tags: [Smart Home, Security, Privacy, Apple HomeKit]
 about:
   heading: Case Overview
   body: >
-    This case study is unusual: a practitioner writing about her own home. After law
+    This case study is unusual: a practitioner writing about his own home. After law
     enforcement failed to protect me from a documented abuser — and in several instances
     compounded the harm — I did what I advise clients to do: I audited my threat model
     and built infrastructure appropriate to it. This is an account of that build: what
