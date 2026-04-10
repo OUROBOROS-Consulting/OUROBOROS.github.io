@@ -67,7 +67,7 @@ nav {
 
 .nav-links {
   display: flex;
-  gap:     2.0rem;
+  gap:     1.2rem;
   font-family: $font-sans;
 
   a,
@@ -95,16 +95,11 @@ nav {
     &:hover { color: var(--gold-border); }
   }
 
-  .nav-contact {
-    .card--formula__interior {
-      background: rgba(201, 168, 76, 0.12);
-      border-color: rgba(201, 168, 76, 0.25);
-    }
+  .nav-contact a {
+    color: var(--gold);
+    font-weight: 600;
 
-    a {
-      color: var(--gold);
-      font-weight: 600;
-    }
+    &:hover { color: var(--gold); }
   }
 }
 

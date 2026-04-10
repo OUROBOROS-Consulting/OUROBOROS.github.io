@@ -150,6 +150,7 @@ $-inner:  calc(#{$-arc} - #{$-border});
 // Slightly narrower minmax and anchor-based, otherwise inherits .card
 .related-card {
   @extend .card;
+  @include chamfer($-arc);
   padding:         2rem;
   text-decoration: none;
   display:         block;
