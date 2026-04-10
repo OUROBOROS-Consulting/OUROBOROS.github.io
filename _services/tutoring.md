@@ -53,5 +53,4 @@ because that is what actually transfers to the next problem.
 
 I work especially well with students who feel behind, students whose learning style does not
 match standard instruction, and adult learners navigating technology and the digital world
-for the first time. If you have been told you are not a math person, I would like to
-respectfully disagree.
+for the first time. If you have been told you are not a math person, I disagree.

@@ -4,7 +4,7 @@ title: Advocacy & Navigation
 category: Services
 lede: >
   Institutions are not designed to make your path clear.
-  I help you find it — with precision, discretion, and someone firmly in your corner.
+  I help you find it — with precision, discretion, and a knowledgeable advocate in your corner.
 tags: [Institutional Navigation, Documentation Strategy, Coercive Control, Workplace Rights, Survivor Support]
 price: Sliding scale · Free consultations
 cta_label: Request a Consultation
@@ -38,7 +38,7 @@ included:
   - title: Accompanied Sessions
     description: >
       Available to accompany you virtually to meetings, hearings, or conversations
-      where having a witness and advisor present changes the dynamic.
+      where having a witness and advisor present shifts what the other party is willing to do.
 pricing:
   - name: Initial Consultation
     rate: Free (45 min)
@@ -57,8 +57,8 @@ pricing:
       or chronologies, with written notes returned to you.
 ---
 
-I am not a lawyer, and I will tell you clearly when you need one. What I offer is
-something different: the knowledge of someone who has studied coercive control,
+I am not a lawyer, and I will tell you clearly when you need one. What I bring is
+the knowledge of someone who has studied coercive control,
 institutional betrayal, and the ways systems fail survivors — and who has navigated
 those systems personally and professionally.
 
