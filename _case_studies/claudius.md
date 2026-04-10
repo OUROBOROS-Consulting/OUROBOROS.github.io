@@ -13,22 +13,35 @@ about:
   heading: Engagement Overview
   body: >
     This is an unusual case study: I'm both the practitioner and the client. I built this
-    website using Claude Code as a primary development collaborator — and I was watching
-    the whole time. Not just using it, but observing how it reasoned, where it was useful,
-    and where it needed correction. What began as a practical experiment in AI-assisted
-    development became more instructive than I expected. This is what I actually saw.
+    website using Claude Code as a primary development collaborator—and I was watching
+    the whole time. I set the direction, made the judgment calls, and held the standards.
+    Claude executed with tireless context-holding and coherence. What began as a practical
+    experiment in AI-assisted development became a proof of concept for a new consulting
+    model: how to use agentic AI as a force multiplier for startups and small firms who
+    need high-quality technical work but can't sustain a full engineering team. This is
+    what I actually saw, and what I'm now offering to clients.
 
 # ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >
-  "The most useful thing Claude did was hold the context I couldn't hold myself —
-  keeping the design system consistent, catching accessibility gaps I'd have missed,
-  and pushing back when I was about to do something architecturally sloppy."
+  "I set the direction. I decided what to build, in what order, and to what standard.
+  Claude executed with tireless coherence, holding context across the codebase while
+  I focused on taste and judgment. That's the model I'm scaling for clients."
 
 # ── Deep-dive sections ───────────────────────────────────────────────
 sections:
   - id: context
     heading: The Starting Point
     body_paragraphs:
+      - >
+        I spent two years at HHS (2021–2023) building and deploying FedRAMP-compliant ML systems,
+        leading agency-wide transitions of mission-critical public health infrastructure, and designing
+        custom automation tooling. I led a technical team, published peer-reviewed work in biostatistics,
+        and learned to translate vague policy requirements into production systems that actually work.
+        I'm now building a consulting practice: helping early-stage startups think clearly about product
+        operations, infrastructure, and tooling without needing a full engineering team on staff.
+        This case study documents what happened when I used Claude Code as a collaborator—not to replace
+        judgment, but to compress delivery timelines while maintaining the coherence and polish that
+        clients expect. It's a proof of concept for a new kind of technical consulting.
       - >
         Building a credible professional website from scratch involves an uncomfortable
         number of overlapping domains: visual design, front-end architecture, content
@@ -46,35 +59,37 @@ sections:
     heading: How We Worked with Claude
     body_paragraphs:
       - >
-        The core of my workflow was Claude Code — Anthropic's agentic CLI — used
-        iteratively across the full development lifecycle. This was not prompt-and-paste
-        engineering, where you ask an AI to generate a function and integrate it by hand.
-        It was closer to pair programming with a collaborator who could hold the full
-        context of the codebase and reason about design decisions alongside implementation
-        details. I asked open-ended questions. I pushed back. I paid attention to how it
-        reasoned, not just what it produced.
+        The core of my workflow was Claude Code — Anthropic's agentic CLI — used iteratively
+        across the full development lifecycle. I was explicit about my role: I set the architectural
+        direction, made the judgment calls, and held the standards. I scoped the work. I decided
+        what was worth building, in what order, and to what standard. Claude executed the decisions.
+        This was closer to pair programming than delegation — I asked open-ended questions, pushed
+        back when reasoning didn't hold up, and paid attention to how it reasoned, not just what it produced.
       - >
-        I worked in Git-branched cycles: a problem or feature would be scoped, handed
-        to Claude to implement, reviewed, and merged or revised. Branch names like
-        claude/add-glowing-moon-effect and claude/ecstatic-mcnulty — the latter a
-        Claude-generated identifier that stuck — became part of the development record,
-        a visible trace of the collaboration embedded in the commit history.
+        The workflow was deliberate: Git-branched cycles where I identified a problem or feature,
+        handed off the implementation with clear constraints, reviewed the output, and either merged
+        or sent it back for revision. This created a visible record — branch names like
+        claude/add-glowing-moon-effect and claude/ecstatic-mcnulty embedded the collaboration
+        in commit history. Each cycle compressed what would normally take me days into hours while
+        keeping me in control of the outcome.
       - >
-        Claude's role varied by phase. Early on, it was primarily architectural: structuring
-        the Jekyll data files (_data/values.yml, _data/testimonials.yml, _data/nav.yml) so
-        that content could be managed separately from layout, and establishing the Sass
-        design system that would govern color, typography, and spacing across every page.
-        These decisions were not glamorous, but they determined how much rework I'd face
-        later. Getting them right early was worth the time.
+        Early phases required architectural judgment. I directed Claude to structure Jekyll data files
+        (_data/values.yml, _data/testimonials.yml, _data/nav.yml) so content could scale independently
+        from layout, and to establish a Sass design system that would govern color, typography, and
+        spacing globally. These decisions were foundational—they determined rework burden later on.
+        I chose the approach; Claude built it.
       - >
-        In the middle phases, Claude handled feature development — writing the JavaScript
-        carousel system, implementing the canvas-based cursor animation, designing the moon
-        glow effect in CSS — while I provided feedback and iterated toward the final
-        result. Late in the process, Claude conducted a systematic accessibility audit that
-        surfaced 28 issues across the codebase: broken HTML structure, missing ARIA
-        attributes, navigation links returning 404s, and styling inconsistencies. These
-        were addressed in a single comprehensive pass — the kind of review that is easy
-        to defer indefinitely without explicit forcing.
+        Middle phases were iterative refinement. I asked Claude to build features—the JavaScript carousel,
+        the canvas cursor animation, the moon glow effect—reviewed the output, and gave specific feedback
+        on what felt wrong: the carousel felt stiff, the animations were accurate but didn't match the
+        visual intent. Claude revised. I pushed back again if needed. That feedback loop was the actual work.
+      - >
+        Late in the project, I asked Claude to conduct a systematic accessibility audit. It surfaced
+        28 issues: broken HTML structure, missing ARIA attributes, navigation links returning 404s,
+        styling inconsistencies. I reviewed each one for scope and priority, then had Claude address
+        them in a single comprehensive pass. The audit was thorough because I knew exactly what to look
+        for—it's not a task I would have found time to do on my own, but it was non-negotiable for
+        the final product. That's where the time compression mattered most.
 
   - id: technical
     heading: What Was Built
@@ -113,47 +128,59 @@ sections:
     heading: What the Collaboration Actually Changed
     body_paragraphs:
       - >
-        The honest answer is: the scope of what was achievable within a given time window.
-        Features that would have required significant research and iteration — the cursor
-        animation physics, the ARIA carousel implementation, the systematic accessibility
-        pass — were completed in hours rather than days. That compression is real. For a small firm where engineering time is not the primary constraint, the time savings shift what becomes possible.
+        Measurably: the scope of what was achievable within a given time window. The cursor animation
+        physics, the ARIA carousel implementation, the systematic accessibility pass—features that
+        would have required days of research and iteration—were completed in hours. That compression
+        is real. It shifted what became possible for a solo consultant with limited calendar bandwidth.
       - >
-        What is less obvious is the nature of the quality benefit. Claude was useful not
-        primarily because it wrote code faster, but because it held context consistently.
-        It remembered the design system rules when implementing a new component. It caught
-        cases where a new layout would break the mobile navigation. It pushed back —
-        sometimes correctly, sometimes not — when an implementation choice seemed
-        structurally questionable. That kind of sustained coherence is harder to maintain
-        alone over a multi-week project than it sounds.
+        What's less obvious is the quality benefit. Claude was useful not because it wrote code faster,
+        but because it held context consistently. It remembered the design system rules when implementing
+        new components. It caught cases where a layout change would break mobile navigation. It questioned
+        architectural choices—sometimes correctly, sometimes requiring me to push back. That kind of
+        sustained coherence across a multi-week project is genuinely hard to maintain alone. Most solo
+        practitioners slip on this; I didn't have to, because the system was holding the pattern.
       - >
-        The process also revealed the limits of AI collaboration clearly. Claude's output
-        required review. Some implementations were technically correct but aesthetically
-        wrong — functional carousels that felt stiff, animations that were accurate but
-        didn't match the visual intent. Occasionally the reasoning itself was off: a
-        suggestion that looked plausible on the surface but didn't hold up when I
-        questioned the logic. The feedback loop was the actual work. Claude generated
-        candidates; I evaluated and directed. Neither half of that loop is optional, and
-        anyone who treats it as optional will eventually pay for that assumption.
+        The tradeoff is clear: Claude's output required review. Some implementations were technically
+        correct but aesthetically wrong—carousels that functioned perfectly but felt stiff, animations
+        that were mathematically accurate but didn't match the visual intent. The reasoning itself was
+        occasionally off—plausible-sounding suggestions that didn't hold up under scrutiny. The feedback
+        loop was where the actual work happened. Claude generated candidates; I evaluated, directed,
+        and sometimes rejected. Neither half is optional. Anyone treating AI output as ready-to-ship
+        without judgment will pay for that assumption.
+      - >
+        This is the model I'm demonstrating to clients. You get a consultant who knows how to set
+        direction, hold standards, and use AI as a force multiplier rather than a replacement for
+        judgment. The result is a site that took weeks, not months, to deliver to a professional standard.
+        That economics shift what small firms and solo practitioners can do.
 
   - id: lessons
-    heading: What This Tells Us About AI-Assisted Development
+    heading: What This Reveals About Technical Consulting in the Age of Agentic AI
     body_paragraphs:
       - >
-        The most important lesson from this project is that AI collaboration does not
-        reduce the need for judgment — it surfaces it more quickly. When Claude can
-        implement a feature in an hour, the bottleneck shifts to knowing what to build,
-        in what order, and to what standard. Those are human decisions. The faster the
-        implementation, the more consequential the direction.
+        The central lesson is not about AI—it's about judgment. AI collaboration doesn't reduce the need
+        for judgment; it surfaces it more quickly. When Claude can implement a feature in an hour, the
+        bottleneck shifts to knowing what to build, in what order, and to what standard. Those are human
+        decisions. The faster the implementation, the more consequential the direction. This is the
+        consulting work I do for clients: helping them think clearly about what they actually need,
+        why they need it, and to what standard.
       - >
-        For a solo practitioner or small team, that shift is broadly favorable. The
-        parts of development that are hardest to delegate — taste, intent, editorial
-        judgment about what the site is actually trying to do — remain with the human.
-        The parts that slip under fatigue, inconsistency, or time pressure — thoroughness, coherence across a large codebase, systematic review — are where AI assistance is most valuable.
+        For early-stage startups and solo practitioners, this shift is favorable. The parts that are
+        hardest to delegate—taste, intent, understanding what the product is actually trying to do—stay
+        with the human. The parts that slip under fatigue, inconsistency, and time pressure—thoroughness,
+        coherence across a large codebase, systematic review—are where AI assistance multiplies value most.
+        I provide the direction and judgment; Claude provides the tireless execution and context-holding.
+        The result is work that would normally require a team, delivered faster and more coherently.
       - >
-        I build websites for clients when the work calls for it, and I advise on AI
-        tooling adoption. This project gave me a cleaner, firsthand understanding of what
-        that collaboration looks like in practice — what to trust, what to verify, and
-        where to push back. The result is the site you are reading. I think it's good
-        work. I also think AI collaboration requires the same thing all high-stakes work
-        requires: someone who is actually paying attention.
+        This project gave me a clean, firsthand understanding of what that collaboration looks like in
+        practice for clients: what to trust, what to verify, where to push back. I've taken it from theory
+        to lived experience, running the full cycle myself. The result is the site you're reading now. I
+        think it's good work—not despite the AI collaboration, but because I was clear about what I brought
+        to it: judgment, taste, accessibility expertise, the ability to catch architectural slop before it
+        compounds. Claude brought tireless execution and coherence across thousands of lines.
+      - >
+        If you're a startup that needs solid technical infrastructure, a clear design system, and a coherent
+        product but can't afford a three-person engineering team, that's a conversation I'm having. You get
+        someone who knows how to set direction, hold standards, and leverage agentic AI as a multiplier. No
+        prompt-and-paste. No treating AI output as ready-to-ship. Just clear thinking, high standards, and
+        delivery that reflects them.
 ---
