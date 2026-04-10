@@ -551,3 +551,24 @@
 @media (prefers-reduced-motion: reduce) {
   .playlist-carousel-track { transition: none; }
 }
+
+// ── Arch Divider (SVG section separator) ──────────────────────────────────────
+.arch-divider {
+  --arch-color: var(--gold);
+  width: 100%;
+  margin: 5rem 0;
+  padding: 0 10vw;
+  color: var(--arch-color);
+
+  svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  // Responsive reduce margins on smaller screens
+  @media (max-width: 768px) {
+    margin: 3.5rem 0;
+    padding: 0 6vw;
+  }
+}
