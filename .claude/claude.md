@@ -96,7 +96,7 @@ All colors are CSS custom properties on `:root`. Key tokens:
 --text: #E8E4DC
 --subdued: #B0AAA0
 --muted: #999999
---steel: #7B8FA1
+--steel: #324cde
 --amethyst: #967ABB
 --sage: #6A8E7F
 --teal: #4a6b5f

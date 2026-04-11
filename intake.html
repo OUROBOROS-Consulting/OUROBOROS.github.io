@@ -20,9 +20,15 @@ layout: default
   </div>
   <div class="intake-masthead-rule"></div>
 
-  <!-- Note: this form requires a backend or service (e.g. Formspree) to process submissions.
-       Set action="https://formspree.io/f/YOUR_ID" method="POST" when ready. -->
-  <form class="intake-body" method="POST" action="{{ '/intake' | relative_url }}" enctype="text/plain">
+  <!-- Formspree integration -->
+  <div data-fs-success style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid var(--gold); color: var(--gold);">
+    <strong>Thank you.</strong> I'll follow up within 48 hours.
+  </div>
+  <div data-fs-error style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid #c94c4c; color: #c94c4c;">
+    <strong>Error submitting form.</strong> Try again or email directly.
+  </div>
+
+  <form id="intake-form" class="intake-body" method="POST">
 
     <!-- CONFIDENTIAL BANNER -->
     <div class="intake-banner">
@@ -38,21 +44,21 @@ layout: default
       <div class="field-row col-2">
         <div class="field-group">
           <label for="full-name">Full Name</label>
-          <input type="text" id="full-name" placeholder="Legal name">
+          <input type="text" id="full-name" name="full_name" placeholder="Legal name">
         </div>
         <div class="field-group">
           <label for="alias">Preferred Name / Alias (if applicable)</label>
-          <input type="text" id="alias" placeholder="Name you prefer to be called">
+          <input type="text" id="alias" name="preferred_name" placeholder="Name you prefer to be called">
         </div>
       </div>
       <div class="field-row col-2">
         <div class="field-group">
           <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="(___) ___-____">
+          <input type="tel" id="phone" name="phone" placeholder="(___) ___-____">
         </div>
         <div class="field-group">
           <label for="contact-method">Preferred Contact Method</label>
-          <select id="contact-method">
+          <select id="contact-method" name="contact_method">
             <option value="">— Select —</option>
             <option>Phone call</option>
             <option>Text message</option>
@@ -65,17 +71,17 @@ layout: default
       <div class="field-row">
         <div class="field-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="your@email.com">
+          <input type="email" id="email" name="email" placeholder="your@email.com">
         </div>
       </div>
       <div class="field-row col-2">
         <div class="field-group">
           <label for="location">City / State</label>
-          <input type="text" id="location" placeholder="Minneapolis, MN">
+          <input type="text" id="location" name="location" placeholder="Minneapolis, MN">
         </div>
         <div class="field-group">
           <label for="intake-date">Date</label>
-          <input type="date" id="intake-date">
+          <input type="date" id="intake-date" name="intake_date">
         </div>
       </div>
       <div class="field-row">
@@ -107,25 +113,25 @@ layout: default
       <div class="field-row">
         <div class="field-group">
           <label for="core-problem">What is the core problem or situation you are dealing with?</label>
-          <textarea id="core-problem" rows="4" placeholder="Describe what's happening in your own words..."></textarea>
+          <textarea id="core-problem" name="core_problem" rows="4" placeholder="Describe what's happening in your own words..."></textarea>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="duration">How long has this situation been ongoing?</label>
-          <input type="text" id="duration" placeholder="e.g., 6 months, 2 years">
+          <input type="text" id="duration" name="duration" placeholder="e.g., 6 months, 2 years">
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="urgent-issue">What is the most urgent issue for you right now?</label>
-          <textarea id="urgent-issue" rows="3" placeholder="What needs to be addressed first?"></textarea>
+          <textarea id="urgent-issue" name="urgent_issue" rows="3" placeholder="What needs to be addressed first?"></textarea>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="already-tried">What have you already tried? (technical steps, legal action, other assistance)</label>
-          <textarea id="already-tried" rows="3" placeholder="Anything you've already done to address the situation..."></textarea>
+          <textarea id="already-tried" name="already_tried" rows="3" placeholder="Anything you've already done to address the situation..."></textarea>
         </div>
       </div>
     </div>
@@ -141,7 +147,7 @@ layout: default
       <div class="field-row">
         <div class="field-group">
           <label for="relationship">Relationship to the high-conflict individual</label>
-          <select id="relationship">
+          <select id="relationship" name="relationship">
             <option value="">— Select —</option>
             <option>Ex-spouse</option>
             <option>Co-parent</option>
@@ -157,8 +163,8 @@ layout: default
         <div class="field-group">
           <label>Do you have children in common with this person?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="children"> Yes</label>
-            <label class="check-item"><input type="radio" name="children"> No</label>
+            <label class="check-item"><input type="radio" name="has_children" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="has_children" value="no"> No</label>
           </div>
         </div>
       </div>
@@ -166,37 +172,37 @@ layout: default
         <div class="field-group">
           <label>Are there active legal proceedings?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="legal"> Yes — ongoing</label>
-            <label class="check-item"><input type="radio" name="legal"> Yes — anticipated</label>
-            <label class="check-item"><input type="radio" name="legal"> No</label>
-            <label class="check-item"><input type="radio" name="legal"> Unsure</label>
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="ongoing"> Yes — ongoing</label>
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="anticipated"> Yes — anticipated</label>
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="unsure"> Unsure</label>
           </div>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="proceedings-detail">If yes, describe the nature and current status of proceedings</label>
-          <textarea id="proceedings-detail" rows="3" placeholder="Type of proceedings, current stage, upcoming dates..."></textarea>
+          <textarea id="proceedings-detail" name="proceedings_detail" rows="3" placeholder="Type of proceedings, current stage, upcoming dates..."></textarea>
         </div>
       </div>
       <div class="field-row col-2">
         <div class="field-group">
           <label for="attorney-name">Attorney Name (if applicable)</label>
-          <input type="text" id="attorney-name" placeholder="Full name">
+          <input type="text" id="attorney-name" name="attorney_name" placeholder="Full name">
         </div>
         <div class="field-group">
           <label for="attorney-contact">Attorney Contact</label>
-          <input type="text" id="attorney-contact" placeholder="Phone or email">
+          <input type="text" id="attorney-contact" name="attorney_contact" placeholder="Phone or email">
         </div>
       </div>
       <div class="field-row col-2">
         <div class="field-group">
           <label for="therapist-name">Therapist / Advocate Name (if applicable)</label>
-          <input type="text" id="therapist-name" placeholder="Full name">
+          <input type="text" id="therapist-name" name="therapist_name" placeholder="Full name">
         </div>
         <div class="field-group">
           <label for="therapist-contact">Therapist / Advocate Contact</label>
-          <input type="text" id="therapist-contact" placeholder="Phone or email">
+          <input type="text" id="therapist-contact" name="therapist_contact" placeholder="Phone or email">
         </div>
       </div>
     </div>
@@ -213,13 +219,13 @@ layout: default
         <div class="field-group">
           <label>Devices involved or potentially compromised (select all that apply)</label>
           <div class="check-group">
-            <label class="check-item"><input type="checkbox"> iPhone / iPad</label>
-            <label class="check-item"><input type="checkbox"> Android phone / tablet</label>
-            <label class="check-item"><input type="checkbox"> Windows PC / laptop</label>
-            <label class="check-item"><input type="checkbox"> Mac</label>
-            <label class="check-item"><input type="checkbox"> Smart home devices</label>
-            <label class="check-item"><input type="checkbox"> Vehicle</label>
-            <label class="check-item"><input type="checkbox"> Other</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="iphone_ipad"> iPhone / iPad</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="android"> Android phone / tablet</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="windows"> Windows PC / laptop</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="mac"> Mac</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="smart_home"> Smart home devices</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="vehicle"> Vehicle</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="other"> Other</label>
           </div>
         </div>
       </div>
@@ -227,13 +233,13 @@ layout: default
         <div class="field-group">
           <label>Accounts of concern (select all that apply)</label>
           <div class="check-group">
-            <label class="check-item"><input type="checkbox"> Email</label>
-            <label class="check-item"><input type="checkbox"> Social media</label>
-            <label class="check-item"><input type="checkbox"> Cloud storage</label>
-            <label class="check-item"><input type="checkbox"> Banking / financial</label>
-            <label class="check-item"><input type="checkbox"> Children's accounts</label>
-            <label class="check-item"><input type="checkbox"> Shared family accounts</label>
-            <label class="check-item"><input type="checkbox"> Other</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="email"> Email</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="social_media"> Social media</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="cloud_storage"> Cloud storage</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="banking_financial"> Banking / financial</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="children_accounts"> Children's accounts</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="shared_family"> Shared family accounts</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="other"> Other</label>
           </div>
         </div>
       </div>
@@ -241,10 +247,10 @@ layout: default
         <div class="field-group">
           <label>Do you believe any devices, accounts, or communications may currently be monitored?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="monitoring"> Yes — confirmed</label>
-            <label class="check-item"><input type="radio" name="monitoring"> Yes — suspected</label>
-            <label class="check-item"><input type="radio" name="monitoring"> No</label>
-            <label class="check-item"><input type="radio" name="monitoring"> Unsure</label>
+            <label class="check-item"><input type="radio" name="monitoring" value="confirmed"> Yes — confirmed</label>
+            <label class="check-item"><input type="radio" name="monitoring" value="suspected"> Yes — suspected</label>
+            <label class="check-item"><input type="radio" name="monitoring" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="monitoring" value="unsure"> Unsure</label>
           </div>
         </div>
       </div>
@@ -252,10 +258,10 @@ layout: default
         <div class="field-group">
           <label>How technically sophisticated is the other party?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="tech-sophistication"> Minimal — not tech-savvy</label>
-            <label class="check-item"><input type="radio" name="tech-sophistication"> Moderate</label>
-            <label class="check-item"><input type="radio" name="tech-sophistication"> High — tech professional</label>
-            <label class="check-item"><input type="radio" name="tech-sophistication"> Unknown</label>
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="minimal"> Minimal — not tech-savvy</label>
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="moderate"> Moderate</label>
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="high"> High — tech professional</label>
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="unknown"> Unknown</label>
           </div>
         </div>
       </div>
@@ -263,16 +269,16 @@ layout: default
         <div class="field-group">
           <label>Do you have digital records to preserve, organize, or present as evidence?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="records"> Yes</label>
-            <label class="check-item"><input type="radio" name="records"> No</label>
-            <label class="check-item"><input type="radio" name="records"> Unsure — need guidance</label>
+            <label class="check-item"><input type="radio" name="has_digital_records" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="has_digital_records" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="has_digital_records" value="unsure"> Unsure — need guidance</label>
           </div>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="digital-concerns">Describe any specific digital concerns or incidents</label>
-          <textarea id="digital-concerns" rows="4" placeholder="Stalkerware suspicion, account takeover, document tampering, GPS tracking, unexpected account activity..."></textarea>
+          <textarea id="digital-concerns" name="digital_concerns" rows="4" placeholder="Stalkerware suspicion, account takeover, document tampering, GPS tracking, unexpected account activity..."></textarea>
         </div>
       </div>
     </div>
@@ -292,9 +298,9 @@ layout: default
         <div class="field-group">
           <label>Do you currently feel physically safe?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="safety"> Yes</label>
-            <label class="check-item"><input type="radio" name="safety"> No — I am in immediate danger</label>
-            <label class="check-item"><input type="radio" name="safety"> Situation is volatile but currently stable</label>
+            <label class="check-item"><input type="radio" name="physical_safety" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="physical_safety" value="immediate_danger"> No — I am in immediate danger</label>
+            <label class="check-item"><input type="radio" name="physical_safety" value="volatile"> Situation is volatile but currently stable</label>
           </div>
         </div>
       </div>
@@ -302,10 +308,10 @@ layout: default
         <div class="field-group">
           <label>Are there any active protective or restraining orders?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="orders"> Yes — I have one against them</label>
-            <label class="check-item"><input type="radio" name="orders"> Yes — they have one against me</label>
-            <label class="check-item"><input type="radio" name="orders"> No</label>
-            <label class="check-item"><input type="radio" name="orders"> In process</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="have_against_them"> Yes — I have one against them</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="they_have_against_me"> Yes — they have one against me</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="in_process"> In process</label>
           </div>
         </div>
       </div>
@@ -313,17 +319,17 @@ layout: default
         <div class="field-group">
           <label>Is it safe to contact you at the information you provided above?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="safe-contact"> Yes</label>
-            <label class="check-item"><input type="radio" name="safe-contact"> Email only</label>
-            <label class="check-item"><input type="radio" name="safe-contact"> Phone only</label>
-            <label class="check-item"><input type="radio" name="safe-contact"> No — discuss safe contact in consultation</label>
+            <label class="check-item"><input type="radio" name="safe_contact_method" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="safe_contact_method" value="email_only"> Email only</label>
+            <label class="check-item"><input type="radio" name="safe_contact_method" value="phone_only"> Phone only</label>
+            <label class="check-item"><input type="radio" name="safe_contact_method" value="discuss"> No — discuss safe contact in consultation</label>
           </div>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="safe-comms">Anything we should know about how to communicate with you safely?</label>
-          <textarea id="safe-comms" rows="3" placeholder="Best times to call, whether to leave voicemails, encrypted channels preferred, etc."></textarea>
+          <textarea id="safe-comms" name="safe_communication" rows="3" placeholder="Best times to call, whether to leave voicemails, encrypted channels preferred, etc."></textarea>
         </div>
       </div>
     </div>
@@ -339,34 +345,34 @@ layout: default
       <div class="field-row">
         <div class="field-group">
           <label for="success">What does a successful outcome look like for you?</label>
-          <textarea id="success" rows="3" placeholder="What would be different? What would you have that you don't have now?"></textarea>
+          <textarea id="success" name="desired_outcome" rows="3" placeholder="What would be different? What would you have that you don't have now?"></textarea>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="timeline">Timeline — is there a court date, deadline, or urgent event?</label>
-          <input type="text" id="timeline" placeholder="e.g., custody hearing on June 15, deposition in 3 weeks">
+          <input type="text" id="timeline" name="timeline" placeholder="e.g., custody hearing on June 15, deposition in 3 weeks">
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label>Services you're most interested in (select all that apply)</label>
           <div class="check-group">
-            <label class="check-item"><input type="checkbox"> Digital safety audit</label>
-            <label class="check-item"><input type="checkbox"> Evidence / records management</label>
-            <label class="check-item"><input type="checkbox"> Investigative research</label>
-            <label class="check-item"><input type="checkbox"> Tech development / tools</label>
-            <label class="check-item"><input type="checkbox"> Cybersecurity advisory</label>
-            <label class="check-item"><input type="checkbox"> Educational resources</label>
-            <label class="check-item"><input type="checkbox"> Ongoing advisory retainer</label>
-            <label class="check-item"><input type="checkbox"> One-time consultation</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="digital_safety_audit"> Digital safety audit</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="evidence_records"> Evidence / records management</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="investigative"> Investigative research</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="tech_development"> Tech development / tools</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="cybersecurity"> Cybersecurity advisory</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="educational"> Educational resources</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="ongoing_retainer"> Ongoing advisory retainer</label>
+            <label class="check-item"><input type="checkbox" name="services_interested" value="one_time"> One-time consultation</label>
           </div>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
           <label for="anything-else">Anything else we should know before your consultation?</label>
-          <textarea id="anything-else" rows="3" placeholder="Any context, concerns, or questions you'd like to raise upfront..."></textarea>
+          <textarea id="anything-else" name="additional_information" rows="3" placeholder="Any context, concerns, or questions you'd like to raise upfront..."></textarea>
         </div>
       </div>
     </div>
@@ -385,11 +391,11 @@ layout: default
       <div class="sig-grid">
         <div class="sig-field">
           <label>Client Signature</label>
-          <input type="text" class="sig-line" placeholder="">
+          <input type="text" class="sig-line" name="client_signature" placeholder="">
         </div>
         <div class="sig-field">
           <label>Date</label>
-          <input type="date" class="sig-line">
+          <input type="date" class="sig-line" name="signature_date">
         </div>
       </div>
     </div>
@@ -397,7 +403,7 @@ layout: default
     <!-- SUBMIT -->
     <div class="intake-submit">
       <p class="intake-submit-note">Submit this form and I'll follow up within 48 hours.</p>
-      <button type="submit" class="btn">Submit Intake</button>
+      <button type="submit" class="btn" data-fs-submit-btn>Submit Intake</button>
       <button type="button" class="btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
 
@@ -408,7 +414,15 @@ layout: default
     </div>
 
   </form>
+
 </div>
+
+<!-- Formspree AJAX script -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#intake-form', formId: 'xykbrlgb' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <style>
 /* ── Intake wrapper ── */
