@@ -12,10 +12,11 @@ cta_body: >
   Send a brief description of your situation and what kind of support you're looking for.
   All inquiries are confidential. I respond within 48 hours.
 who: >
-  People navigating hostile, unresponsive, or deliberately obfuscating institutions —
-  survivors of coercive control, workplace misconduct, academic retaliation, or
-  domestic abuse who need a knowledgeable advocate to help them understand their options,
-  build a credible record, and move with clarity rather than exhaustion.
+  Survivors navigating hostile, unresponsive, or deliberately obfuscating institutions.
+  This includes survivors of sexual assault, abuse, intimate partner violence, institutional betrayal,
+  workplace misconduct, academic retaliation, coercive control, and human trafficking.
+  You need a knowledgeable advocate to help you understand your options, build a credible record,
+  and move with clarity and safety rather than exhaustion.
 included:
   - title: Situation Assessment
     description: >
@@ -58,13 +59,14 @@ pricing:
 ---
 
 I am not a lawyer, and I will tell you clearly when you need one. What I bring is
-the knowledge of someone who has studied coercive control,
-institutional betrayal, and the ways systems fail survivors — and who has navigated
-those systems personally and professionally.
+deep knowledge of coercive control, institutional betrayal, trauma responses, and how systems fail survivors.
+I've studied personality pathology, institutional behavior, and the ways power operates in closed systems.
+I've navigated these systems personally and professionally.
 
-Institutions rely on your not knowing how they work. I do. I can help you understand
-what your rights are, which processes are likely to produce results and which are designed
-to exhaust you, and how to document your situation so that it speaks for itself.
+Institutions rely on your not knowing how they work. I do. I understand your rights, which processes
+produce results and which are designed to exhaust you, and how to document your situation so it speaks for itself.
+My approach is trauma-informed: paced for your safety, grounded in what actually happened, built on your expertise
+about your own situation.
 
 This work is confidential. It is not therapy — though I can help you find that too.
-It is strategic, careful, and on your side.
+It is strategic, careful, evidence-based, and entirely on your side.

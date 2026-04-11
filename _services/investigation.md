@@ -4,7 +4,8 @@ title: Research & Investigation
 category: Services
 lede: >
   Finding what's hidden in plain sight. Records, patterns, digital trails—
-  the evidence you need to know what happened.
+  the evidence you need to understand what happened, and documentation courts will believe.
+  Expert-ready investigation and institutional forensics for survivors and legal proceedings.
 tags: [Public Records, FOIA, Background Research, Digital Evidence, Institutional Documentation]
 cta_label: Request a Research Consultation
 cta_body: Describe what you're trying to find and why. I'll outline approach and scope within 48 hours. Initial consultations are free.
@@ -20,7 +21,9 @@ included:
   - title: Digital & Document Research
     description: Trace digital footprints, analyze documents for authenticity and patterns, reconstruct institutional timelines from available evidence.
   - title: Report & Analysis
-    description: Synthesize findings into a coherent narrative with citations. Clear enough for legal proceedings, comprehensive enough to hold up under scrutiny.
+    description: Synthesize findings into a coherent narrative with citations. Attorney-ready, trauma-informed, and built to hold up under legal and institutional scrutiny.
+  - title: Expert Documentation
+    description: Documentation suitable for expert witness support, institutional accountability proceedings, and evidentiary use. Pattern analysis grounded in institutional behavior research.
 specializations:
   - Public records research and FOIA requests
   - Background and identity verification using public sources
@@ -64,8 +67,8 @@ pricing:
       FOIA coordination) can be quoted as fixed price.
 ---
 
-I spent two years at HHS building ML systems that analyzed the institutional behavior of federal agencies. I've read thousands of pages of institutional documentation, learned how records are created and hidden, and come to understand that what looks opaque from the outside often has clear patterns once you know where to look. I work with FOIA, public records systems, institutional archives, and the digital trails organizations leave behind.
+I spent two years at HHS building ML systems that analyzed institutional behavior. I understand how institutions fail, how records are created and hidden, and that what looks opaque from outside has clear patterns once you know where to look. My work draws on research in institutional betrayal, coercive control, and organizational pathology — the same frameworks that explain trauma responses and institutional failure.
 
-Most people who need to know something about an institution or a person face a choice: hire an attorney (expensive, constrained to legal strategy), or do the research alone (time-consuming, easy to miss what matters). I sit in between. I'm fluent in institutional documentation, legal discovery, and the systems that hold records. I work for people who need the evidence, not people who need representation.
+Most survivors face a choice: hire an attorney (expensive, constrained to legal strategy), or research alone (time-consuming, easy to miss critical patterns). I sit in between. Fluent in institutional documentation, legal discovery, evidentiary standards, and the trauma-informed frameworks that explain institutional behavior. I work for people who need the evidence, not people who need representation.
 
-I don't do surveillance. I don't follow people. I don't trespass or access systems I'm not legally entitled to. What I do is research what's already documented or publicly available, find the patterns in what's there, and present it in a form that's useful for your actual goal. Whether that's understanding what happened to you, verifying facts about an organization, or building a timeline for legal proceedings.
+I don't do surveillance, trespass, or illegal access. What I do: research documented and publicly available information, identify patterns in institutional behavior, synthesize findings into evidence courts and investigators believe. For survivors seeking accountability, attorneys building cases, or organizations needing forensic institutional analysis.

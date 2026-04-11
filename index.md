@@ -7,13 +7,13 @@ name_line1: OUROBOROS
 name_line2: Consulting
 eyebrow: Technology ❖ Research ❖ Pedagogy ❖ Advocacy
 tagline: >
-  Bespoke solutions & strategic guidance for justice-oriented technology, research, education, and advocacy.
+  Strategic guidance for survivors and institutionally betrayed groups. Technology, research, documentation, and institutional navigation — evidence-based and on your side.
 
 cta_label: Book a strategy session
 cta_url: /intake
 
 # About
-about_heading: Technology as a Source of Empowerment
+about_heading: Empowering Survivors & Institutionally Betrayed Groups
 
 stats:
   years_experience: "6+"

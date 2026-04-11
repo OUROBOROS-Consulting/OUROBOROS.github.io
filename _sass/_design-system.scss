@@ -1,0 +1,89 @@
+// Design System Page Styles
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.color-swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.75rem;
+
+  .swatch-box {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 8px var(--shadow);
+  }
+
+  code {
+    font-size: 0.85rem;
+    color: var(--gold);
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0;
+    font-family: 'JetBrains Mono', monospace;
+  }
+
+  .contrast-note {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--subdued);
+    font-family: 'Inter', sans-serif;
+    margin-top: 0.25rem;
+  }
+}
+
+.typography-sample {
+  margin: 2rem 0;
+  padding: 2rem;
+  background-color: var(--bg2);
+  @include scallop-standard;
+  border-radius: 0.25rem;
+
+  h3 {
+    color: var(--text);
+    margin-top: 0;
+  }
+
+  p {
+    color: var(--subdued);
+    margin: 0;
+  }
+
+  code {
+    display: block;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: var(--bg1);
+    color: var(--gold);
+    border-radius: 0.25rem;
+    overflow-x: auto;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+}
+
+.elevation-demo {
+  margin: 1.5rem 0;
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+
+  p {
+    margin: 0;
+    font-size: 0.95rem;
+  }
+}
