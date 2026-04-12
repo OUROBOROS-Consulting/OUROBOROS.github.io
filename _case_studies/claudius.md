@@ -1,5 +1,5 @@
 ---
-title: Website Devlopment with Claude by Anthropic
+title: Website Development with Claude by Anthropic
 description: An honest account of using AI as a development collaborator — what it changed, what it didn't, and what it revealed about how good software gets made.
 layout: foundation
 back_url: /work/
@@ -187,4 +187,6 @@ sections:
         someone who knows how to set direction, hold standards, and leverage agentic AI as a multiplier. No
         prompt-and-paste. No treating AI output as ready-to-ship. Just clear thinking, high standards, and
         delivery that reflects them.
+        
+        [See the Agentic AI Strategy & Integration service](/services/agentic-ai/) if you want to explore this model further.
 ---

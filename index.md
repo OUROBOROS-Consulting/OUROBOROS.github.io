@@ -5,9 +5,9 @@ title: null
 # Hero
 name_line1: OUROBOROS
 name_line2: Consulting
-eyebrow: Technology ❖ Research ❖ Pedagogy ❖ Advocacy
+eyebrow: Technology ❖ AI Integration ❖ Research ❖ Advocacy
 tagline: >
-  Strategic guidance for survivors and institutionally betrayed groups. Technology, research, documentation, and institutional navigation — evidence-based and on your side.
+  Strategic guidance for survivors and institutionally betrayed groups. Technology (including operationalizing agentic AI and Claude), research, documentation, and institutional navigation — evidence-based and on your side.
 
 cta_label: Book a strategy session
 cta_url: /intake

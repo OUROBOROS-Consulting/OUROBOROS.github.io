@@ -1,6 +1,8 @@
 - title: Services
   url: /services/
   children:
+    - title: AI Integration
+      url: /services/agentic-ai/
     - title: Technology Solutions
       url: /services/consulting/
     - title: Design Services
