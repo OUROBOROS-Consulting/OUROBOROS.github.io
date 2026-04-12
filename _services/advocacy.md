@@ -68,5 +68,22 @@ produce results and which are designed to exhaust you, and how to document your 
 My approach is trauma-informed: paced for your safety, grounded in what actually happened, built on your expertise
 about your own situation.
 
+## AI and the Acceleration of Coercive Control
+
+The tactics that define coercive control — evidence tampering, impersonation, institutional capture,
+the systematic rewriting of reality — are now AI-accelerated. Fabricated evidence that once required
+weeks of sustained effort takes hours. Impersonation campaigns are scalable in ways no individual
+could sustain. Institutions already skilled at exhausting complainants can automate that exhaustion,
+generating plausible-sounding denials and routing cases through processes designed to look thorough
+but resolve nothing.
+
+If your adversary has technical access or AI literacy and you don't, the power imbalance deepens.
+This service operates with that threat model built in. Documentation strategy accounts for
+AI-resistant evidence formats and timestamped records that can't be quietly altered. Institutional
+navigation accounts for how systems that already failed you might automate that failure. If there is
+reason to believe an AI-literate adversary is involved, we design for it explicitly — not as a
+hypothetical, but as a constraint shaping every decision about what to record, where to store it,
+and how to present it.
+
 This work is confidential. It is not therapy — though I can help you find that too.
 It is strategic, careful, evidence-based, and entirely on your side.

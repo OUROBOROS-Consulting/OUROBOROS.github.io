@@ -70,6 +70,32 @@ sections:
         and in ensuring that accuracy reaches the people who need it most, not only those who
         commission the research.
 
+  - id: ai-threat
+    heading: AI-Accelerated Harm
+    body_paragraphs:
+      - >
+        Anthropic — the company behind Claude — <a href="https://claude.com/blog/preparing-your-security-program-for-ai-accelerated-offense" target="_blank" rel="noopener noreferrer">recently published a framework ↗</a> for how AI compresses
+        the timeline between vulnerability discovery and exploitation. Their focus was cybersecurity
+        infrastructure: patch windows closing, finding volumes surging, processes built for last
+        decade's threat pace. The same compression applies with equal force to coercive control
+        and institutional betrayal. The tactics have always existed. AI gives them velocity.
+      - >
+        Evidence fabrication that once required weeks of sustained manipulation now takes hours.
+        Impersonation is scalable and convincing at a level no human team could sustain. Gaslighting
+        scripts are machine-generated and iterable. Institutions already practiced in delay and denial
+        can use AI to produce plausible-sounding refusals, flood complaint queues with boilerplate,
+        and route cases through processes that look thorough but aren't. The information asymmetry
+        that has always defined institutional power over individuals has been handed a force multiplier —
+        and the people least likely to have AI-literate advocates are the most likely to face
+        AI-equipped adversaries.
+      - >
+        This is why technical literacy is not optional in survivor advocacy. Understanding the
+        threat model operationally — not abstractly — determines whether documentation holds or
+        can be undermined, whether an institutional record survives scrutiny or collapses under
+        a well-timed AI-generated counter-narrative. I work at this intersection because most
+        advocates don't. And because the people who need this knowledge most are the ones least
+        likely to have encountered it.
+
   - id: approach
     heading: How I Work
     body_paragraphs:

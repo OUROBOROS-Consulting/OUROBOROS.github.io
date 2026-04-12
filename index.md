@@ -7,7 +7,7 @@ name_line1: OUROBOROS
 name_line2: Consulting
 eyebrow: Technology ❖ AI Integration ❖ Research ❖ Advocacy
 tagline: >
-  Strategic guidance for survivors and institutionally betrayed groups. Technology (including operationalizing agentic AI and Claude), research, documentation, and institutional navigation — evidence-based and on your side.
+  AI accelerates coercive control. The same tools abusers and institutions use to scale manipulation, fabricate evidence, and automate denial — I use to build your case, your record, and your position. Technology, research, and institutional navigation — evidence-based and on your side.
 
 cta_label: Book a strategy session
 cta_url: /intake

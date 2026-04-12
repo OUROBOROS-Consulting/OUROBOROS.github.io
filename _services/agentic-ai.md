@@ -75,7 +75,13 @@ Agentic AI has specific value for people in difficult institutional situations �
 - **Records management**: Victims of coercive control often have fragmented digital lives — devices accessed by abusers, deleted files, accounts compromised. Recovering and organizing what exists, and creating a secure new structure, is essential work.
 - **Responsible AI choice**: If you use AI in your survival work, which AI tool? Claude is the most ethically grounded option available. That's not a marketing claim — it's a practical judgment about custody of your data and the values embedded in how the system works.
 
-**Important caveat**: The same tools can be weaponized. Abusers can use AI to fabricate evidence, impersonate you, or manipulate institutions more effectively. If you're in a situation where your abuser has technical access or sophistication, we need to build with that threat model in mind. That's explicitly part of the design process.
+## The Threat Model
+
+AI compresses the timeline between vulnerability discovery and exploitation. In cybersecurity, this means patch windows are closing and attack surfaces grow faster than defenders can respond. In coercive control, the same dynamic operates on a human target: fabricated evidence that once took weeks of manipulation now takes hours. Impersonation campaigns are scalable. Gaslighting is machine-generated and iterable. Institutions that were already slow to respond to survivors can now automate denial at scale — plausible-sounding refusals, algorithmic routing designed to exhaust rather than resolve.
+
+If you're in a situation where your adversary has any technical access or AI literacy, that asymmetry is the central design constraint. It affects what we build, how we store it, what formats we use, and what assumptions we refuse to make. Every survivor application I build starts from this: your adversary may be using the same tools. We build accordingly.
+
+This is not a hypothetical. It is a documented and accelerating pattern. Designing around it is not paranoia — it is the only technically responsible approach to advocacy in 2025.
 
 ## A Proof of Concept
 
