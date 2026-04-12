@@ -22,8 +22,8 @@ about:
     COVID-19 response.
 
 pull_quote: >
-  "When institutions refuse to protect you, you build your own. The math is
-  uncomfortable, but the conclusion is not optional."
+  "Caring for myself is not self-indulgence, it is self-preservation, and that
+  is an act of political warfare." — Audre Lorde
 
 sections:
   - id: context

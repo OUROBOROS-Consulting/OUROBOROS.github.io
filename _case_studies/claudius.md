@@ -23,9 +23,9 @@ about:
 
 # ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >
-  "I set the direction. I decided what to build, in what order, and to what standard.
-  Claude executed with tireless coherence, holding context across the codebase while
-  I focused on taste and judgment. That's the model I'm scaling for clients."
+  "The world of the future will be an ever more demanding struggle against the
+  limitations of our own intelligence, not a comfortable hammock in which we can
+  lie down to be waited upon by our robot slaves." — Norbert Wiener
 
 # ── Deep-dive sections ───────────────────────────────────────────────
 sections:

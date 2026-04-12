@@ -23,9 +23,7 @@ about:
 
 # ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >
-  "The union helped when no one else did — before I was even paying dues.
-  Returning that with professional skills is the minimum I can do. It's also
-  a technical problem I know how to solve."
+  "Strong people don't need strong leaders." — Ella Baker
 
 # ── Deep-dive sections ───────────────────────────────────────────────
 sections:

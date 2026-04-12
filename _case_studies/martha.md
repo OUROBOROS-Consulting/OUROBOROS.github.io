@@ -22,9 +22,8 @@ about:
     knowing it, potentially broken the law while trying to help him. This is her case.
 
 pull_quote: >
-  "Documentation is what separates a credible account from a 'he said / she said'
-  situation that institutions use to justify inaction. For Martha, building that record
-  was the first act of reclaiming her own story."
+  "There is no greater agony than bearing an untold story inside you."
+  — Maya Angelou
 
 sections:
   - id: perpetrator

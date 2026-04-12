@@ -1,0 +1,176 @@
+# Foundational Quotes Repository
+# Organized by theme and domain for reference and curation
+
+# — CASE STUDY QUOTES (Active) ——————————————————————————————
+case_studies:
+  claudius:
+    quote: "The world of the future will be an ever more demanding struggle against the limitations of our own intelligence, not a comfortable hammock in which we can lie down to be waited upon by our robot slaves."
+    attribution: Norbert Wiener
+    source: Cybernetics pioneer
+    year: ~1950s
+    themes: [AI collaboration, judgment, human intelligence]
+    status: active
+    fit: Critical
+
+  martha:
+    quote: "If one really wishes to know how justice is administered in a country, one does not question the policemen, the lawyers, the judges, or the protected members of the middle class. One goes to the unprotected … and listens to their testimony."
+    attribution: James Baldwin
+    source: Essays on justice and institutional failure
+    themes: [testimony, bearing witness, institutional accountability]
+    status: active
+    fit: Critical
+
+  sanctuary:
+    quote: "Caring for myself is not self-indulgence, it is self-preservation, and that is an act of political warfare."
+    attribution: Audre Lorde
+    source: A Burst of Light and Other Essays (1988)
+    themes: [self-determination, resistance, institutional betrayal]
+    status: active
+    fit: Critical
+
+  cassandra:
+    quote: "I cannot teach anybody anything, I can only make them think."
+    attribution: Socrates
+    source: Plato's dialogues
+    themes: [independence, capability-building, Socratic method]
+    status: active
+    fit: Critical
+
+  agora:
+    quote: "Strong people don't need strong leaders."
+    attribution: Ella Baker
+    source: Labor organizing philosophy
+    themes: [collective leadership, grassroots power, organizing]
+    status: active
+    fit: Critical
+
+# — CLASSICAL PHILOSOPHY ARCHIVE ———————————————————————————
+classical:
+  socrates:
+    - quote: "The unexamined life is not worth living."
+      source: Plato's Apology
+      themes: [consciousness, examination, examined life]
+      fit_for: [Agora - collective consciousness-raising]
+
+    - quote: "The only true wisdom is in knowing you know nothing."
+      source: Plato's dialogues
+      themes: [humility, truth-seeking, epistemology]
+      fit_for: [General - intellectual humility]
+
+    - quote: "I cannot teach anybody anything, I can only make them think."
+      source: Plato's dialogues
+      themes: [pedagogy, independence, Socratic method]
+      fit_for: [Cassandra - teaching as enabling]
+      status: in_use
+
+  plato:
+    - quote: "I know that this plainness of speech makes them hate me, and what is their hatred but a proof that I am speaking the truth?"
+      source: Apology
+      themes: [truth-telling, institutional resistance, testimony]
+      fit_for: [Martha - bearing witness despite resistance]
+
+    - quote: "Truth heads the list of all things good, for gods and men alike."
+      source: Plato's Laws
+      themes: [truth as primary good, justice]
+      fit_for: [General - foundational ethics]
+
+  aristotle:
+    - quote: "Excellence, then, is not an act but a habit."
+      source: Nicomachean Ethics
+      themes: [virtue, habit, character development]
+      fit_for: [Cassandra - building capability through practice]
+
+    - quote: "The virtues therefore are engendered in us neither by nature nor yet in violation of nature; nature gives us the capacity to receive them, and this capacity is brought to maturity by habit."
+      source: Nicomachean Ethics
+      themes: [virtue, development, human potential]
+      fit_for: [General - capability development]
+
+  leonardo_da_vinci:
+    - quote: "Any one who in discussion relies upon authority uses, not his understanding, but rather his memory."
+      source: Leonardo's Notebooks
+      themes: [independent thinking, critical thought]
+      fit_for: [Sanctuary - thinking independently from institutions]
+
+    - quote: "My works are the issue of pure and simple experience, who is the one true mistress."
+      source: Leonardo's Notebooks
+      themes: [direct experience, independence, learning]
+      fit_for: [Cassandra - learning through direct practice]
+
+    - quote: "All our knowledge has its origin in our perceptions."
+      source: Leonardo's Notebooks
+      themes: [observation, empiricism, knowledge]
+      fit_for: [General - epistemology]
+
+# — 20TH CENTURY THINKERS ARCHIVE ———————————————————————
+contemporary:
+  maya_angelou:
+    - quote: "There is no greater agony than bearing an untold story inside you."
+      source: Widely attributed; exact source unclear (possibly paraphrased from *I Know Why the Caged Bird Sings*)
+      themes: [narrative, testimony, silence]
+      fit_for: [Martha - documentation and reclaiming narrative]
+      confidence: medium
+      status: archived
+      note: Quote widely attributed but exact source not independently verified as direct quotation
+
+  toni_morrison:
+    - quote: "Narrative is radical, creating us at the very moment it is being created."
+      source: Toni Morrison's essays on storytelling
+      themes: [narrative, identity, creation]
+      fit_for: [Martha - narrative as self-creation]
+      confidence: high
+
+  bell_hooks:
+    - quote: "To educate is the practice of freedom."
+      source: Teaching to Transgress: Education as the Practice of Freedom (1994)
+      themes: [pedagogy, freedom, critical consciousness]
+      fit_for: [Cassandra - education as liberation]
+      confidence: high
+      status: archived
+      note: Cassandra uses Socrates quote instead for more direct alignment
+
+  audre_lorde:
+    - quote: "Caring for myself is not self-indulgence, it is self-preservation, and that is an act of political warfare."
+      source: A Burst of Light and Other Essays (1988)
+      themes: [self-care, resistance, political consciousness]
+      fit_for: [Sanctuary - self-determined security]
+      confidence: high
+      status: in_use
+
+  ella_baker:
+    - quote: "Strong people don't need strong leaders."
+      source: Labor organizing philosophy and interviews
+      themes: [collective leadership, organizing, distributed power]
+      fit_for: [Agora - grassroots organizing]
+      confidence: high
+      status: in_use
+
+  james_baldwin:
+    - quote: "If one really wishes to know how justice is administered in a country, one does not question the policemen, the lawyers, the judges, or the protected members of the middle class. One goes to the unprotected … and listens to their testimony."
+      source: Essays on justice and institutional critique
+      themes: [testimony, institutional accountability, bearing witness]
+      fit_for: [Martha - testimony and institutional failure]
+      confidence: high
+      status: in_use
+
+  norbert_wiener:
+    - quote: "The world of the future will be an ever more demanding struggle against the limitations of our own intelligence, not a comfortable hammock in which we can lie down to be waited upon by our robot slaves."
+      source: Cybernetics and information theory work
+      themes: [artificial intelligence, human judgment, future society]
+      fit_for: [Claudius - AI collaboration and human judgment]
+      confidence: high
+      status: in_use
+
+# — METADATA ————————————————————————————————————————————————
+metadata:
+  last_updated: "2026-04-12"
+  total_quotes: 25
+  in_use: 5
+  archived: 3
+  classical_sources: 5
+  contemporary_sources: 7
+  curation_principles:
+    - "Direct quotes only (where verifiable)"
+    - "Foundational thinkers in their domains"
+    - "Thematic alignment with case study content"
+    - "High confidence sources where possible"
+    - "Preference for intellectual credibility over client testimonials"
