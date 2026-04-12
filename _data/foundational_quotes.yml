@@ -121,7 +121,7 @@ contemporary:
 
   bell_hooks:
     - quote: "To educate is the practice of freedom."
-      source: Teaching to Transgress: Education as the Practice of Freedom (1994)
+      source: "Teaching to Transgress: Education as the Practice of Freedom (1994)"
       themes: [pedagogy, freedom, critical consciousness]
       fit_for: [Cassandra - education as liberation]
       confidence: high
