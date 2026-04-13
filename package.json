@@ -8,6 +8,6 @@
     "build": "bundle exec jekyll build"
   },
   "dependencies": {
-    "@OUROBOROS-Consulting/agentic-design": "^1.0.0"
+    "@ouroboros-consulting/agentic-design": "^1.0.0"
   }
 }
