@@ -58,10 +58,12 @@ pricing:
       or chronologies, with written notes returned to you.
 ---
 
-I am not a lawyer, and I will tell you clearly when you need one. What I bring is
-deep knowledge of coercive control, institutional betrayal, trauma responses, and how systems fail survivors.
-I've studied personality pathology, institutional behavior, and the ways power operates in closed systems.
-I've navigated these systems personally and professionally.
+What I bring is deep knowledge of coercive control, institutional betrayal, trauma responses,
+and how systems fail survivors. I've studied personality pathology, institutional behavior, and
+the ways power operates in closed systems — and I've navigated these systems personally and
+professionally. When your situation requires a lawyer, I will tell you clearly and help you find
+the right one. What I offer is the layer of strategic, informed advocacy that comes before and
+alongside legal counsel — and that legal counsel alone rarely provides.
 
 Institutions rely on your not knowing how they work. I do. I understand your rights, which processes
 produce results and which are designed to exhaust you, and how to document your situation so it speaks for itself.

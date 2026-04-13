@@ -36,9 +36,9 @@ sections:
         only insufficient in this context but occasionally actively counterproductive.
         The home needed to function as its own security infrastructure.
       - >
-        I’ve converted my apartment to a smart home, so I don’t have to worry about my
-        physical safety or privacy. My blinds literally close after the sun sets — good
-        luck to any PI my adversaries may hire.
+        The result is a home that functions as its own security infrastructure — one where
+        every sensor event is logged, every ingress point is monitored, and privacy is
+        structurally enforced rather than assumed.
       - >
         The design requirements followed directly from the threat: perimeter awareness
         without relying on a third party to relay it; logging that could not be tampered
@@ -130,7 +130,7 @@ sections:
               <span class="fp-dev fp-c"  style="left:52%;top:88%"  title="Security camera (HomeKit Secure Video)"  aria-label="Security camera">C</span>
               <span class="fp-dev fp-d"  style="left:95%;top:42%"  title="Door contact sensor"                     aria-label="Door contact sensor">D</span>
               <span class="fp-dev fp-l"  style="left:88%;top:18%"  title="Table lamp"                              aria-label="Table lamp">L</span>
-              <span class="fp-dev fp-t"  style="left:68%;top:38%"  title="Climate sensor — 71.24 °F · 35% RH"      aria-label="Climate sensor">T</span>
+              <span class="fp-dev fp-t"  style="left:68%;top:38%"  title="Climate sensor (live reading)"            aria-label="Climate sensor">T</span>
               <span class="fp-dev fp-c"  style="left:74%;top:58%"  title="Security camera (HomeKit Secure Video)"  aria-label="Security camera">C</span>
               <span class="fp-dev fp-m"  style="left:52%;top:52%"  title="Motion sensor"                           aria-label="Motion sensor">M</span>
               <span class="fp-dev fp-w"  style="left:58%;top:90%"  title="Window contact sensor"                   aria-label="Window contact sensor">W</span>
@@ -148,7 +148,7 @@ sections:
             <div class="fp-li"><div class="fp-ld fp-ld--t"></div>Climate sensor</div>
             <div class="fp-li"><div class="fp-ld fp-ld--h"></div>HVAC</div>
           </div>
-          <div class="fp-badge">71.24 °F · 35% RH</div>
+          <div class="fp-badge">Live sensor reading</div>
         </div>
         </div>
         </div>
@@ -160,14 +160,15 @@ sections:
       - >
         Two ceiling fan and light fixtures in the living room run on scheduled automations —
         evening-on, late-night-off — that simulate occupancy patterns regardless of physical
-        location. This is standard deterrence practice. The climate sensor (currently reading
-        71.24 °F and 35% relative humidity) provides environmental monitoring beyond comfort:
+        location. This is standard deterrence practice. The climate sensor (monitoring temperature
+        and relative humidity in real time) provides environmental monitoring beyond comfort:
         humidity spikes can indicate water intrusion; anomalous thermal readings can flag open
         windows or HVAC failure that might otherwise go unnoticed.
       - >
         I’ve set up Apple workflows to automate records management and document interactions
-        with antagonistic individuals and institutions. I’ve used AI to strategically think
-        through situations that no human should ever be in.
+        with antagonistic individuals and institutions. I’ve used Claude to analyze institutional
+        dynamics, draft strategic communications, and think through situations that are too
+        emotionally overwhelming to navigate without a structured analytical framework.
       - >
         A HomePod in the living room provides local voice control for HomeKit without requiring
         cloud connectivity for commands. It also functions as a room-level audio sensor for

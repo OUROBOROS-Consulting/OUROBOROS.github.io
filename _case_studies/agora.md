@@ -36,9 +36,10 @@ sections:
         ingesting health data from across federal and state sources, system transition
         management for Vaccines.gov and HHS Protect. I learned, in a high-stakes environment,
         what it means to keep critical information flowing when failure has real consequences.
-        I then made the mistake of enrolling in a PhD program, and found out quickly that
-        universities treat graduate workers with the same institutional indifference that
-        characterizes bureaucracies everywhere — with less accountability.
+        I then enrolled in a PhD program in Biostatistics at the University of Minnesota,
+        and encountered quickly what many graduate workers find: that universities treat their
+        own workforce with the same institutional indifference that characterizes bureaucracies
+        everywhere — with less accountability and fewer external checks.
       - >
         The union was different. When I needed support, the union showed up — without
         conditions, before I was even a dues-paying member. That kind of institutional

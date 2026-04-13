@@ -117,29 +117,18 @@ sections:
         consuming its own tail, forming an unbroken circle. It appears in ancient Egyptian
         iconography, in Greek alchemical texts, in Gnostic cosmology, and in Carl Jung's
         writing on the psychology of individuation, where he read it as an image of the
-        self that destroys and regenerates itself in the same act. The word is Ancient Greek:
-        οὐροβόρος — tail-devourer.
+        self that destroys and regenerates itself in the same act. What the symbol captures,
+        and why it names this firm, is the idea that endings and beginnings are not opposite
+        states but the same moment viewed from different angles. The work I do — with survivors
+        rebuilding after coercive control, with institutions asked to account for failures they
+        would prefer to forget, with data made to speak clearly about systems designed to obscure
+        — is predicated on exactly this: that what consumed something can become the condition
+        for its renewal. That the record of harm is also the instrument of remedy.
       - >
-        What the symbol captures, and why it names this firm, is the idea that endings and
-        beginnings are not opposite states but the same moment viewed from different angles.
-        The work I do — with survivors rebuilding after coercive control, with institutions
-        asked to account for failures they would prefer to forget, with data made to speak
-        clearly about systems designed to obscure — is predicated on exactly this: that what
-        consumed something can become the condition for its renewal. That the record of harm
-        is also the instrument of remedy.
-      - >
-        The logo renders this as a figure-eight — the lemniscate, the mathematical symbol
-        for infinity — which adds a dimension the circle alone does not carry. Not just
-        cyclical, but continuous and infinite. Not just renewal, but persistence. The loop does not collapse. It keeps moving.
-      - >
-        The logo carries a second mark: ♟→♛. In chess, a pawn reaching the far rank transforms —
-        not by returning to where it started, but by completing a trajectory that was always about
-        forward motion. There is no retreat built into the rule. Transformation is the destination.
-      - >
-        That arc reads differently depending on who is looking at it. For clients, it is literal:
-        forward from harm, through process, into a different kind of standing. For me, it is
-        autobiography — someone who began in one place and built range through the work itself,
-        one domain at a time. The symbol points in both directions at once, at the person across
-        the table and the person behind it, and the meaning shifts depending on who is reading.
-        Most symbols only point one way. This one does not.
+        The logo carries two marks. The ouroboros is rendered as a lemniscate — the figure-eight,
+        the mathematical symbol for infinity — which adds a dimension the circle alone does not
+        carry: not just cyclical, but continuous. Not just renewal, but persistence. Alongside it,
+        ♟→♛. In chess, a pawn reaching the far rank transforms — not by returning to where it
+        started, but by completing a trajectory that was always about forward motion. There is no
+        retreat built into the rule. Transformation is the destination.
 ---

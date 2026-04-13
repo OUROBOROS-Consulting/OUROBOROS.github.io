@@ -13,13 +13,11 @@ cta_label: Book a strategy session
 cta_url: /intake
 
 # About
-about_heading: Empowering Survivors & Institutionally Betrayed Groups
+about_heading: Technology and Advocacy for Survivors and Institutionally Betrayed Groups
 
 stats:
   years_experience: "6+"
-  publications: "3"
   students_tutored: "50+"
-  clients_consulted: "6"
   agencies: "5"
  # phd_program: "Biostatistics, UMN"
 
