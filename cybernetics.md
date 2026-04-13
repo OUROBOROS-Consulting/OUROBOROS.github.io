@@ -84,7 +84,7 @@ sections:
         The Ouroboros — the snake consuming its own tail — is the oldest symbol of this dynamic.
         It represents cycles that are self-sustaining by design: the abuser who cycles through
         idealization and devaluation, the PhD program that delays a student's progress while
-       `claiming to support them, the legal system that grants a protective order while failing
+        claiming to support them, the legal system that grants a protective order while failing
         to enforce it. The loop continues until someone names it, documents it, and refuses
         to participate in it anymore.
 
