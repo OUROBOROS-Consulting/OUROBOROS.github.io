@@ -1,17 +1,5 @@
 ---
 ---
 
-@import "base";
-@import "typography";
-@import "buttons";
-@import "nav";
-@import "footer";
-@import "cards";
-@import "home";
-@import "cv";
-@import "essay";
-@import "linkedin";
-@import "service";
-@import "timeline";
-@import "floorplan";
-@import "design-system";
+// Import design system from npm package
+@import "~@OUROBOROS-Consulting/agentic-design/scss/index";

@@ -4,22 +4,37 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Build & Dev Commands
 
+**Setup (first time only):**
+
 ```bash
-# Local preview (requires Ruby + Bundler)
-bundle exec jekyll serve --livereload
+# Install Node.js dependencies (includes design system package)
+npm install
 
-# Production build
-bundle exec jekyll build
-
-# Build with drafts
-bundle exec jekyll serve --drafts
+# Install Ruby/Jekyll dependencies
+bundle install
 ```
 
-Deployed automatically via GitHub Actions (`.github/workflows/jekyll-gh-pages.yml`) on push to `main`.
+**Development:**
+
+```bash
+npm run dev
+# Runs: bundle exec jekyll serve --livereload
+# Serves at http://localhost:4000
+```
+
+**Production build:**
+
+```bash
+npm run build
+# Runs: bundle exec jekyll build
+# Outputs to _site/
+```
+
+Deployed automatically via GitHub Actions (`.github/workflows/jekyll-gh-pages.yml`) on push to `main`. GitHub Actions will run `npm install` before build.
 
 ## Architecture Overview
 
-Jekyll static site for OUROBOROS Consulting (Apostolos Stamenos). Dark, editorial aesthetic defined in `_sass/_base.scss` and applied globally.
+Jekyll static site for OUROBOROS Consulting (Apostolos Stamenos). Dark, editorial aesthetic pulled from `@OUROBOROS-Consulting/agentic-design` npm package.
 
 ### Layout Hierarchy
 
@@ -63,7 +78,15 @@ PSAs use a `section:` front matter field (e.g. `Technology`, `Psychopathology`) 
 
 ### SCSS Architecture
 
-Entry point: `assets/css/main.scss` — imports all partials in order.
+Design system imported from npm package `@OUROBOROS-Consulting/agentic-design`.
+
+Entry point: `assets/css/main.scss` — single import of design package:
+
+```scss
+@import "~@OUROBOROS-Consulting/agentic-design/scss/index";
+```
+
+The package contains all SCSS partials:
 
 | Partial | Responsibility |
 |---------|----------------|
