@@ -34,7 +34,7 @@ Deployed automatically via GitHub Actions (`.github/workflows/jekyll-gh-pages.ym
 
 ## Architecture Overview
 
-Jekyll static site for OUROBOROS Consulting (Apostolos Stamenos). Dark, editorial aesthetic pulled from `@OUROBOROS-Consulting/agentic-design` npm package.
+Jekyll static site for OUROBOROS Consulting (Apostolos Stamenos). Dark, editorial aesthetic pulled from `@ouroboros-consulting/ouroboros-design` npm package.
 
 ### Layout Hierarchy
 
@@ -78,12 +78,12 @@ PSAs use a `section:` front matter field (e.g. `Technology`, `Psychopathology`) 
 
 ### SCSS Architecture
 
-Design system imported from npm package `@OUROBOROS-Consulting/agentic-design`.
+Design system imported from npm package `@ouroboros-consulting/ouroboros-design`.
 
 Entry point: `assets/css/main.scss` — single import of design package:
 
 ```scss
-@import "~@OUROBOROS-Consulting/agentic-design/scss/index";
+@import "@ouroboros-consulting/ouroboros-design/scss/index";
 ```
 
 The package contains all SCSS partials:
