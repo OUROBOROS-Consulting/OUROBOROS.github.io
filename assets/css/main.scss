@@ -1,16 +1,89 @@
 ---
 ---
 
-@import "base";
-@import "typography";
-@import "buttons";
-@import "nav";
-@import "footer";
-@import "cards";
-@import "home";
-@import "cv";
-@import "essay";
-@import "linkedin";
-@import "service";
-@import "timeline";
-@import "floorplan";
+// Import design system from npm package
+@import "@ouroboros-consulting/ouroboros-design/scss/index";
+
+// ── Safety / Quick-exit button ────────────────────────────────────────────
+// Always-visible escape hatch for survivors. Double-tap Escape also triggers.
+.safety-exit {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.9rem;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  background: #8b1a1a;
+  border: 1px solid #c94a4a;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  transition: background 0.15s ease, transform 0.15s ease;
+
+  &:hover,
+  &:focus {
+    background: #a52222;
+    transform: translateY(-1px);
+    outline: 2px solid #ffd36b;
+    outline-offset: 2px;
+  }
+
+  i { font-size: 0.9rem; }
+
+  @media (max-width: 640px) {
+    font-size: 0.7rem;
+    padding: 0.5rem 0.7rem;
+    span { display: none; }
+  }
+}
+
+// ── Values static grid (homepage) ────────────────────────────────────────
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+// ── Who This Is For (homepage audience section) ───────────────────────────
+#audience {
+  padding: 4rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .audience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.25rem;
+    margin-top: 2rem;
+  }
+
+  .audience-card {
+    padding: 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--bg2);
+    border-radius: 2px;
+
+    h3 {
+      font-family: Lora, serif;
+      font-size: 1.1rem;
+      color: var(--gold);
+      margin: 0 0 0.5rem;
+    }
+
+    p {
+      color: var(--subdued);
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin: 0;
+    }
+  }
+}

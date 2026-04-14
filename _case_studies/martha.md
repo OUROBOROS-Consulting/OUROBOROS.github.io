@@ -3,7 +3,7 @@ title: A Mother's Cross to Bear
 description: Elder abuse, identity theft, and the systematic dismantling of a life — and what it takes to begin rebuilding it.
 layout: foundation
 back_url: /work/
-category: Advocacy
+category: Survivor Security
 lede: >
   When the person destroying your life is also the only one you believe still loves you,
   the abuse becomes nearly impossible to see — and nearly impossible to leave.
@@ -22,9 +22,8 @@ about:
     knowing it, potentially broken the law while trying to help him. This is her case.
 
 pull_quote: >
-  "Documentation is what separates a credible account from a 'he said / she said'
-  situation that institutions use to justify inaction. For Martha, building that record
-  was the first act of reclaiming her own story."
+  "There is no greater agony than bearing an untold story inside you."
+  — Maya Angelou
 
 sections:
   - id: perpetrator

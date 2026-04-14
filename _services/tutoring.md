@@ -53,5 +53,10 @@ because that is what actually transfers to the next problem.
 
 I work especially well with students who feel behind, students whose learning style does not
 match standard instruction, and adult learners navigating technology and the digital world
-for the first time. If you have been told you are not a math person, I would like to
-respectfully disagree.
+for the first time. If you have been told you are not a math person, I disagree.
+
+## Engagement Models
+
+Hourly for individual sessions and ad-hoc support. Monthly retainer for ongoing coursework or research projects. Package rates available for intensive exam prep or multi-subject support.
+
+For students with financial constraints: sliding scale rates and scholarship support are available. Reach out directly.

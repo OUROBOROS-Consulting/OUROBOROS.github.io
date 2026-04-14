@@ -4,7 +4,7 @@ title: Advocacy & Navigation
 category: Services
 lede: >
   Institutions are not designed to make your path clear.
-  I help you find it — with precision, discretion, and someone firmly in your corner.
+  I help you find it — with precision, discretion, and a knowledgeable advocate in your corner.
 tags: [Institutional Navigation, Documentation Strategy, Coercive Control, Workplace Rights, Survivor Support]
 price: Sliding scale · Free consultations
 cta_label: Request a Consultation
@@ -12,10 +12,11 @@ cta_body: >
   Send a brief description of your situation and what kind of support you're looking for.
   All inquiries are confidential. I respond within 48 hours.
 who: >
-  People navigating hostile, unresponsive, or deliberately obfuscating institutions —
-  survivors of coercive control, workplace misconduct, academic retaliation, or
-  domestic abuse who need a knowledgeable advocate to help them understand their options,
-  build a credible record, and move with clarity rather than exhaustion.
+  Survivors navigating hostile, unresponsive, or deliberately obfuscating institutions.
+  This includes survivors of sexual assault, abuse, intimate partner violence, institutional betrayal,
+  workplace misconduct, academic retaliation, coercive control, and human trafficking.
+  You need a knowledgeable advocate to help you understand your options, build a credible record,
+  and move with clarity and safety rather than exhaustion.
 included:
   - title: Situation Assessment
     description: >
@@ -38,7 +39,7 @@ included:
   - title: Accompanied Sessions
     description: >
       Available to accompany you virtually to meetings, hearings, or conversations
-      where having a witness and advisor present changes the dynamic.
+      where having a witness and advisor present shifts what the other party is willing to do.
 pricing:
   - name: Initial Consultation
     rate: Free (45 min)
@@ -57,14 +58,40 @@ pricing:
       or chronologies, with written notes returned to you.
 ---
 
-I am not a lawyer, and I will tell you clearly when you need one. What I offer is
-something different: the knowledge of someone who has studied coercive control,
-institutional betrayal, and the ways systems fail survivors — and who has navigated
-those systems personally and professionally.
+What I bring is deep knowledge of coercive control, institutional betrayal, trauma responses,
+and how systems fail survivors. I've studied personality pathology, institutional behavior, and
+the ways power operates in closed systems — and I've navigated these systems personally and
+professionally. When your situation requires a lawyer, I will tell you clearly and help you find
+the right one. What I offer is the layer of strategic, informed advocacy that comes before and
+alongside legal counsel — and that legal counsel alone rarely provides.
 
-Institutions rely on your not knowing how they work. I do. I can help you understand
-what your rights are, which processes are likely to produce results and which are designed
-to exhaust you, and how to document your situation so that it speaks for itself.
+Institutions rely on your not knowing how they work. I do. I understand your rights, which processes
+produce results and which are designed to exhaust you, and how to document your situation so it speaks for itself.
+My approach is trauma-informed: paced for your safety, grounded in what actually happened, built on your expertise
+about your own situation.
+
+## AI and the Acceleration of Coercive Control
+
+The tactics that define coercive control — evidence tampering, impersonation, institutional capture,
+the systematic rewriting of reality — are now AI-accelerated. Fabricated evidence that once required
+weeks of sustained effort takes hours. Impersonation campaigns are scalable in ways no individual
+could sustain. Institutions already skilled at exhausting complainants can automate that exhaustion,
+generating plausible-sounding denials and routing cases through processes designed to look thorough
+but resolve nothing.
+
+If your adversary has technical access or AI literacy and you don't, the power imbalance deepens.
+This service operates with that threat model built in. Documentation strategy accounts for
+AI-resistant evidence formats and timestamped records that can't be quietly altered. Institutional
+navigation accounts for how systems that already failed you might automate that failure. If there is
+reason to believe an AI-literate adversary is involved, we design for it explicitly — not as a
+hypothetical, but as a constraint shaping every decision about what to record, where to store it,
+and how to present it.
 
 This work is confidential. It is not therapy — though I can help you find that too.
-It is strategic, careful, and on your side.
+It is strategic, careful, evidence-based, and entirely on your side.
+
+## Engagement Models
+
+Hourly for short or scoped advocacy sessions. Project-based for discrete deliverables like document review or strategy roadmaps. Retained monthly for ongoing advisory or support work.
+
+For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.

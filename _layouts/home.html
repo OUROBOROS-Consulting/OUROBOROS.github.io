@@ -83,7 +83,7 @@ layout: default
     <p class="hero-eyebrow">{{ page.eyebrow }}</p>
     <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
     <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
-    <div class="hero-cta"><a href="#work" class="btn">View My Work</a></div>
+    <div class="hero-cta"><a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label | default: 'View My Work' }}</a></div>
   </div>
 
   <div class="hero-emblem" aria-hidden="true">
@@ -93,6 +93,32 @@ layout: default
   <div class="scroll-hint">
     <div class="scroll-line"></div>
     <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ── Who This Is For ────────────────────────────────────────────────────── -->
+<section id="audience">
+  <div class="about-header">
+    <p class="section-label">Who This Is For</p>
+    <h2 class="about-heading">If any of this sounds like you, you're in the right place.</h2>
+  </div>
+  <div class="audience-grid">
+    <div class="audience-card">
+      <h3>Survivors of coercive control</h3>
+      <p>You need to document what happened in a way that institutions will actually take seriously — and protect yourself from digital surveillance while you do it.</p>
+    </div>
+    <div class="audience-card">
+      <h3>Whistleblowers &amp; federal employees</h3>
+      <p>You're pushing back against agency misconduct and need technical, statistical, or records-management support from someone who has worked inside the system.</p>
+    </div>
+    <div class="audience-card">
+      <h3>Advocates &amp; nonprofits</h3>
+      <p>You serve people navigating broken institutions and want AI-literate tooling, research, or investigation capacity you can trust with sensitive cases.</p>
+    </div>
+    <div class="audience-card">
+      <h3>Researchers &amp; clinicians</h3>
+      <p>You study institutional betrayal, personality pathology, or public-health harm and need a collaborator fluent in both statistics and the human stakes.</p>
+    </div>
   </div>
 </section>
 
@@ -128,14 +154,14 @@ layout: default
     {% if page.stats.clients_consulted %}
     <div class="stat">
       <span class="stat-value">{{ page.stats.clients_consulted }}</span>
-      <span class="stat-label">Clients Consulted</span>
+      <span class="stat-label">Consulting Engagements</span>
     </div>
     {% endif %}
 
     {% if page.stats.agencies %}
     <div class="stat">
       <span class="stat-value">{{ page.stats.agencies }}</span>
-      <span class="stat-label">Agencies &amp; Orgs</span>
+      <span class="stat-label">{{ page.stats.agencies_note | default: "Agencies &amp; Orgs" }}</span>
     </div>
     {% endif %}
 
@@ -156,34 +182,17 @@ layout: default
       <p class="section-label">What I Live By</p>
       <h2 class="testimonials-heading">Values</h2>
     </div>
-    <div class="carousel-controls">
-      <button class="carousel-btn carousel-btn--prev" aria-label="Previous value">&#8592;</button>
-      <span class="carousel-count">1 / {{ site.data.values.size }}</span>
-      <button class="carousel-btn carousel-btn--next" aria-label="Next value">&#8594;</button>
-    </div>
   </div>
 
-  <div class="carousel" aria-live="polite" aria-label="Values">
-    <div class="carousel-track">
-      {% for val in site.data.values %}
-      <div class="carousel-slide" role="group" aria-label="Value {{ forloop.index }} of {{ site.data.values.size }}">
-        <div class="card--formula">
-          <div class="card--formula__interior">
-            <i class="{{ val.icon }}"></i>
-            <span class="stat-value">{{ val.title | markdownify }}</span>
-            <p class="card-desc">{{ val.description | markdownify }}</p>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="carousel-dots" role="tablist" aria-label="Value navigation">
+  <div class="values-grid">
     {% for val in site.data.values %}
-    <button class="carousel-dot{% if forloop.first %} active{% endif %}"
-            role="tab"
-            aria-label="Value {{ forloop.index }}"></button>
+    <div class="card--formula">
+      <div class="card--formula__interior">
+        <i class="{{ val.icon }}"></i>
+        <span class="stat-value">{{ val.title | markdownify }}</span>
+        <p class="card-desc">{{ val.description | markdownify }}</p>
+      </div>
+    </div>
     {% endfor %}
   </div>
 </section>
@@ -238,8 +247,9 @@ layout: default
 <section id="testimonials">
   <div class="testimonials-header">
     <div>
-      <p class="section-label">What the Greats Say About Me</p>
+      <p class="section-label">What Clients Say</p>
       <h2 class="testimonials-heading">Testimonials</h2>
+      <p class="testimonials-context" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--muted);letter-spacing:0.01em;font-style:italic;">These testimonials are from federal and corporate engagements. Survivor and advocacy work is confidential by design.</p>
     </div>
     <div class="carousel-controls">
       <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial">&#8592;</button>
@@ -270,6 +280,7 @@ layout: default
     {% for ref in site.data.testimonials %}
     <button class="carousel-dot{% if forloop.first %} active{% endif %}"
             role="tab"
+            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
             aria-label="Testimonial {{ forloop.index }}"></button>
     {% endfor %}
   </div>

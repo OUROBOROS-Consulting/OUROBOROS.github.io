@@ -20,74 +20,146 @@ layout: default
   </div>
   <div class="intake-masthead-rule"></div>
 
-  <!-- Note: this form requires a backend or service (e.g. Formspree) to process submissions.
-       Set action="https://formspree.io/f/YOUR_ID" method="POST" when ready. -->
-  <form class="intake-body" method="POST" action="{{ '/intake' | relative_url }}" enctype="text/plain">
+  <!-- Formspree integration -->
+  <div data-fs-success style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid var(--gold); color: var(--gold);">
+    <strong>Thank you.</strong> I'll follow up within 48 hours.
+  </div>
+  <div data-fs-error style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid #c94c4c; color: #c94c4c;">
+    <strong>Error submitting form.</strong> Try again or email directly.
+  </div>
+
+  <form id="intake-form" class="intake-body" method="POST">
 
     <!-- CONFIDENTIAL BANNER -->
     <div class="intake-banner">
-      <strong>Confidentiality Notice:</strong> This form is held in strict confidence. Information collected here is used solely to assess how we can help you and prepare for your consultation. It will never be shared without your explicit written consent.
+      <strong>Confidentiality Notice:</strong> This form is held in strict confidence. Information collected here is used solely to prepare for your consultation. It will never be shared without your explicit written consent. <strong>Skip anything you're not ready to share</strong> — we can cover it together.
     </div>
 
-    <!-- SECTION 1: CONTACT INFO -->
+    <!-- SECTION 01: SERVICE TYPE -->
     <div class="intake-section">
       <div class="intake-section-header">
         <span class="intake-section-number">01</span>
-        <span class="intake-section-title">Contact Information</span>
+        <span class="intake-section-title">How can I help?</span>
       </div>
+      <div class="intake-note">
+        Select the category that best describes what you're looking for. The form will adapt to show only what's relevant.
+      </div>
+      <div class="service-cards">
+        <label class="service-card">
+          <input type="radio" name="service_type" value="survivor" required>
+          <div class="service-card-inner">
+            <div class="service-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
+            <div class="service-card-title">Protective Services</div>
+            <div class="service-card-desc">Digital safety, surveillance detection, evidence management, adversarial situation support</div>
+          </div>
+        </label>
+        <label class="service-card">
+          <input type="radio" name="service_type" value="investigative" required>
+          <div class="service-card-inner">
+            <div class="service-card-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="service-card-title">Investigative Research</div>
+            <div class="service-card-desc">OSINT, background research, pattern analysis, litigation support</div>
+          </div>
+        </label>
+        <label class="service-card">
+          <input type="radio" name="service_type" value="technical" required>
+          <div class="service-card-inner">
+            <div class="service-card-icon"><i class="fa-solid fa-code"></i></div>
+            <div class="service-card-title">Technical Advisory</div>
+            <div class="service-card-desc">Software development, systems design, cybersecurity consulting, technical strategy</div>
+          </div>
+        </label>
+        <label class="service-card">
+          <input type="radio" name="service_type" value="pedagogy" required>
+          <div class="service-card-inner">
+            <div class="service-card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            <div class="service-card-title">Education &amp; Training</div>
+            <div class="service-card-desc">Workshops, curriculum development, tech literacy, individual or organizational training</div>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <div class="intake-divider"></div>
+
+    <!-- SECTION 02: CONTACT — always shown -->
+    <div class="intake-section">
+      <div class="intake-section-header">
+        <span class="intake-section-number">02</span>
+        <span class="intake-section-title">Contact</span>
+      </div>
+
+      <!-- Safety subsection — survivor track only -->
+      <div class="track-block" data-track="survivor" style="display:none">
+        <div class="intake-note warning">
+          If you are in immediate danger, contact emergency services first. These questions ensure I reach you safely.
+        </div>
+        <div class="field-row col-2">
+          <div class="field-group">
+            <label>Do you currently feel physically safe?</label>
+            <div class="check-group">
+              <label class="check-item"><input type="radio" name="physical_safety" value="yes"> Yes</label>
+              <label class="check-item"><input type="radio" name="physical_safety" value="volatile"> Volatile but stable</label>
+              <label class="check-item"><input type="radio" name="physical_safety" value="immediate_danger"> In immediate danger</label>
+              <label class="check-item"><input type="radio" name="physical_safety" value="prefer_not"> Prefer not to say</label>
+            </div>
+          </div>
+          <div class="field-group">
+            <label>Is it safe to contact you at the information below?</label>
+            <div class="check-group">
+              <label class="check-item"><input type="radio" name="safe_contact_method" value="yes"> Yes</label>
+              <label class="check-item"><input type="radio" name="safe_contact_method" value="email_only"> Email only</label>
+              <label class="check-item"><input type="radio" name="safe_contact_method" value="phone_only"> Phone only</label>
+              <label class="check-item"><input type="radio" name="safe_contact_method" value="discuss"> Discuss in consultation</label>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="field-row col-2">
         <div class="field-group">
           <label for="full-name">Full Name</label>
-          <input type="text" id="full-name" placeholder="Legal name">
+          <input type="text" id="full-name" name="full_name" placeholder="Legal name">
         </div>
         <div class="field-group">
-          <label for="alias">Preferred Name / Alias (if applicable)</label>
-          <input type="text" id="alias" placeholder="Name you prefer to be called">
+          <label for="alias">Preferred Name / Alias</label>
+          <input type="text" id="alias" name="preferred_name" placeholder="Name you go by">
         </div>
       </div>
       <div class="field-row col-2">
-        <div class="field-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" placeholder="(___) ___-____">
-        </div>
-        <div class="field-group">
-          <label for="contact-method">Preferred Contact Method</label>
-          <select id="contact-method">
-            <option value="">— Select —</option>
-            <option>Phone call</option>
-            <option>Text message</option>
-            <option>Email</option>
-            <option>Signal / encrypted messaging</option>
-            <option>Other — explain in safety section</option>
-          </select>
-        </div>
-      </div>
-      <div class="field-row">
         <div class="field-group">
           <label for="email">Email Address</label>
-          <input type="email" id="email" placeholder="your@email.com">
+          <input type="email" id="email" name="email" placeholder="your@email.com">
+        </div>
+        <div class="field-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(___) ___-____">
         </div>
       </div>
       <div class="field-row col-2">
         <div class="field-group">
-          <label for="location">City / State</label>
-          <input type="text" id="location" placeholder="Minneapolis, MN">
+          <label for="contact-method">Preferred Contact Method</label>
+          <select id="contact-method" name="contact_method">
+            <option value="">— Select —</option>
+            <option>Email</option>
+            <option>Phone call</option>
+            <option>Text message</option>
+            <option>Signal / encrypted messaging</option>
+            <option>Discuss in consultation</option>
+          </select>
         </div>
         <div class="field-group">
-          <label for="intake-date">Date</label>
-          <input type="date" id="intake-date">
+          <label for="location">City / State</label>
+          <input type="text" id="location" name="location" placeholder="Minneapolis, MN">
         </div>
       </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>How did you find us?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="checkbox" name="referral_source" value="attorney"> Attorney referral</label>
-            <label class="check-item"><input type="checkbox" name="referral_source" value="therapist"> Therapist referral</label>
-            <label class="check-item"><input type="checkbox" name="referral_source" value="web_search"> Web search</label>
-            <label class="check-item"><input type="checkbox" name="referral_source" value="social_media"> Social media</label>
-            <label class="check-item"><input type="checkbox" name="referral_source" value="word_of_mouth"> Word of mouth</label>
-            <label class="check-item"><input type="checkbox" name="referral_source" value="other"> Other</label>
+
+      <!-- Safe comms — survivor track only -->
+      <div class="track-block" data-track="survivor" style="display:none">
+        <div class="field-row">
+          <div class="field-group">
+            <label for="safe-comms">Safe communication notes (optional)</label>
+            <textarea id="safe-comms" name="safe_communication" rows="2" placeholder="Best times to reach you, whether to leave voicemails, preferred channels..."></textarea>
           </div>
         </div>
       </div>
@@ -95,53 +167,29 @@ layout: default
 
     <div class="intake-divider"></div>
 
-    <!-- SECTION 2: YOUR SITUATION -->
-    <div class="intake-section">
+    <!-- TRACK: SURVIVOR — Situation -->
+    <div class="intake-section track-section" data-track="survivor" style="display:none">
       <div class="intake-section-header">
-        <span class="intake-section-number">02</span>
+        <span class="intake-section-number track-label">—</span>
         <span class="intake-section-title">Your Situation</span>
       </div>
       <div class="intake-note">
-        Please describe your situation in your own words. There are no wrong answers — the more context you provide, the better we can help.
+        Describe what's happening in your own words. Skip anything you'd rather discuss verbally.
       </div>
       <div class="field-row">
         <div class="field-group">
-          <label for="core-problem">What is the core problem or situation you are dealing with?</label>
-          <textarea id="core-problem" rows="4" placeholder="Describe what's happening in your own words..."></textarea>
+          <label for="core-problem">What is the core problem or situation?</label>
+          <textarea id="core-problem" name="core_problem" rows="4" placeholder="What's happening, in your own words..."></textarea>
         </div>
       </div>
-      <div class="field-row">
+      <div class="field-row col-2">
         <div class="field-group">
-          <label for="duration">How long has this situation been ongoing?</label>
-          <input type="text" id="duration" placeholder="e.g., 6 months, 2 years">
+          <label for="duration">How long has this been ongoing?</label>
+          <input type="text" id="duration" name="duration" placeholder="e.g., 6 months, 2 years">
         </div>
-      </div>
-      <div class="field-row">
         <div class="field-group">
-          <label for="urgent-issue">What is the most urgent issue for you right now?</label>
-          <textarea id="urgent-issue" rows="3" placeholder="What needs to be addressed first?"></textarea>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="already-tried">What have you already tried? (technical steps, legal action, other assistance)</label>
-          <textarea id="already-tried" rows="3" placeholder="Anything you've already done to address the situation..."></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="intake-divider"></div>
-
-    <!-- SECTION 3: PEOPLE INVOLVED -->
-    <div class="intake-section">
-      <div class="intake-section-header">
-        <span class="intake-section-number">03</span>
-        <span class="intake-section-title">People Involved</span>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="relationship">Relationship to the high-conflict individual</label>
-          <select id="relationship">
+          <label for="relationship">Your relationship to the person involved</label>
+          <select id="relationship" name="relationship">
             <option value="">— Select —</option>
             <option>Ex-spouse</option>
             <option>Co-parent</option>
@@ -155,249 +203,297 @@ layout: default
       </div>
       <div class="field-row">
         <div class="field-group">
-          <label>Do you have children in common with this person?</label>
+          <label for="urgent-issue">Most urgent issue right now</label>
+          <textarea id="urgent-issue" name="urgent_issue" rows="2" placeholder="What needs to be addressed first?"></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="already-tried">What have you already tried?</label>
+          <textarea id="already-tried" name="already_tried" rows="2" placeholder="Technical steps, legal action, other assistance..."></textarea>
+        </div>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label>Children in common?</label>
           <div class="check-group">
-            <label class="check-item"><input type="radio" name="children"> Yes</label>
-            <label class="check-item"><input type="radio" name="children"> No</label>
+            <label class="check-item"><input type="radio" name="has_children" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="has_children" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="has_children" value="prefer_not"> Prefer not to say</label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Active legal proceedings?</label>
+          <div class="check-group">
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="ongoing"> Yes — ongoing</label>
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="anticipated"> Anticipated</label>
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="legal_proceedings" value="unsure"> Unsure</label>
           </div>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
-          <label>Are there active legal proceedings?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="radio" name="legal"> Yes — ongoing</label>
-            <label class="check-item"><input type="radio" name="legal"> Yes — anticipated</label>
-            <label class="check-item"><input type="radio" name="legal"> No</label>
-            <label class="check-item"><input type="radio" name="legal"> Unsure</label>
-          </div>
+          <label for="proceedings-detail">Legal proceedings — nature and current status (if applicable)</label>
+          <textarea id="proceedings-detail" name="proceedings_detail" rows="2" placeholder="Type of case, current stage, upcoming dates..."></textarea>
         </div>
       </div>
       <div class="field-row">
         <div class="field-group">
-          <label for="proceedings-detail">If yes, describe the nature and current status of proceedings</label>
-          <textarea id="proceedings-detail" rows="3" placeholder="Type of proceedings, current stage, upcoming dates..."></textarea>
+          <label>Protective or restraining orders?</label>
+          <div class="check-group">
+            <label class="check-item"><input type="radio" name="protective_orders" value="have_against_them"> I have one against them</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="they_have_against_me"> They have one against me</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="in_process"> In process</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="protective_orders" value="prefer_not"> Prefer not to say</label>
+          </div>
         </div>
       </div>
       <div class="field-row col-2">
         <div class="field-group">
-          <label for="attorney-name">Attorney Name (if applicable)</label>
-          <input type="text" id="attorney-name" placeholder="Full name">
+          <label for="attorney-name">Attorney (if applicable)</label>
+          <input type="text" id="attorney-name" name="attorney_name" placeholder="Name — phone or email">
         </div>
         <div class="field-group">
-          <label for="attorney-contact">Attorney Contact</label>
-          <input type="text" id="attorney-contact" placeholder="Phone or email">
-        </div>
-      </div>
-      <div class="field-row col-2">
-        <div class="field-group">
-          <label for="therapist-name">Therapist / Advocate Name (if applicable)</label>
-          <input type="text" id="therapist-name" placeholder="Full name">
-        </div>
-        <div class="field-group">
-          <label for="therapist-contact">Therapist / Advocate Contact</label>
-          <input type="text" id="therapist-contact" placeholder="Phone or email">
+          <label for="therapist-name">Therapist / Advocate (if applicable)</label>
+          <input type="text" id="therapist-name" name="therapist_name" placeholder="Name — phone or email">
         </div>
       </div>
     </div>
 
-    <div class="intake-divider"></div>
+    <div class="intake-divider track-section" data-track="survivor" style="display:none"></div>
 
-    <!-- SECTION 4: DIGITAL PROFILE -->
-    <div class="intake-section">
+    <!-- TRACK: SURVIVOR + INVESTIGATIVE — Digital Profile -->
+    <div class="intake-section track-section" data-track="survivor investigative" style="display:none">
       <div class="intake-section-header">
-        <span class="intake-section-number">04</span>
+        <span class="intake-section-number track-label">—</span>
         <span class="intake-section-title">Digital &amp; Technical Profile</span>
       </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Devices involved or potentially compromised (select all that apply)</label>
-          <div class="check-group">
-            <label class="check-item"><input type="checkbox"> iPhone / iPad</label>
-            <label class="check-item"><input type="checkbox"> Android phone / tablet</label>
-            <label class="check-item"><input type="checkbox"> Windows PC / laptop</label>
-            <label class="check-item"><input type="checkbox"> Mac</label>
-            <label class="check-item"><input type="checkbox"> Smart home devices</label>
-            <label class="check-item"><input type="checkbox"> Vehicle</label>
-            <label class="check-item"><input type="checkbox"> Other</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Accounts of concern (select all that apply)</label>
-          <div class="check-group">
-            <label class="check-item"><input type="checkbox"> Email</label>
-            <label class="check-item"><input type="checkbox"> Social media</label>
-            <label class="check-item"><input type="checkbox"> Cloud storage</label>
-            <label class="check-item"><input type="checkbox"> Banking / financial</label>
-            <label class="check-item"><input type="checkbox"> Children's accounts</label>
-            <label class="check-item"><input type="checkbox"> Shared family accounts</label>
-            <label class="check-item"><input type="checkbox"> Other</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Do you believe any devices, accounts, or communications may currently be monitored?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="radio" name="monitoring"> Yes — confirmed</label>
-            <label class="check-item"><input type="radio" name="monitoring"> Yes — suspected</label>
-            <label class="check-item"><input type="radio" name="monitoring"> No</label>
-            <label class="check-item"><input type="radio" name="monitoring"> Unsure</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>How technically sophisticated is the other party?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="radio" name="tech-sophistication"> Minimal — not tech-savvy</label>
-            <label class="check-item"><input type="radio" name="tech-sophistication"> Moderate</label>
-            <label class="check-item"><input type="radio" name="tech-sophistication"> High — tech professional</label>
-            <label class="check-item"><input type="radio" name="tech-sophistication"> Unknown</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Do you have digital records to preserve, organize, or present as evidence?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="radio" name="records"> Yes</label>
-            <label class="check-item"><input type="radio" name="records"> No</label>
-            <label class="check-item"><input type="radio" name="records"> Unsure — need guidance</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="digital-concerns">Describe any specific digital concerns or incidents</label>
-          <textarea id="digital-concerns" rows="4" placeholder="Stalkerware suspicion, account takeover, document tampering, GPS tracking, unexpected account activity..."></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="intake-divider"></div>
-
-    <!-- SECTION 5: SAFETY -->
-    <div class="intake-section">
-      <div class="intake-section-header">
-        <span class="intake-section-number">05</span>
-        <span class="intake-section-title">Safety Assessment</span>
-      </div>
-      <div class="intake-note warning">
-        This section helps us understand the urgency of your situation and ensure we communicate with you safely. If you are in immediate danger, please contact emergency services first.
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Do you currently feel physically safe?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="radio" name="safety"> Yes</label>
-            <label class="check-item"><input type="radio" name="safety"> No — I am in immediate danger</label>
-            <label class="check-item"><input type="radio" name="safety"> Situation is volatile but currently stable</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Are there any active protective or restraining orders?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="radio" name="orders"> Yes — I have one against them</label>
-            <label class="check-item"><input type="radio" name="orders"> Yes — they have one against me</label>
-            <label class="check-item"><input type="radio" name="orders"> No</label>
-            <label class="check-item"><input type="radio" name="orders"> In process</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Is it safe to contact you at the information you provided above?</label>
-          <div class="check-group">
-            <label class="check-item"><input type="radio" name="safe-contact"> Yes</label>
-            <label class="check-item"><input type="radio" name="safe-contact"> Email only</label>
-            <label class="check-item"><input type="radio" name="safe-contact"> Phone only</label>
-            <label class="check-item"><input type="radio" name="safe-contact"> No — discuss safe contact in consultation</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="safe-comms">Anything we should know about how to communicate with you safely?</label>
-          <textarea id="safe-comms" rows="3" placeholder="Best times to call, whether to leave voicemails, encrypted channels preferred, etc."></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="intake-divider"></div>
-
-    <!-- SECTION 6: GOALS -->
-    <div class="intake-section">
-      <div class="intake-section-header">
-        <span class="intake-section-number">06</span>
-        <span class="intake-section-title">Goals &amp; Desired Outcomes</span>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="success">What does a successful outcome look like for you?</label>
-          <textarea id="success" rows="3" placeholder="What would be different? What would you have that you don't have now?"></textarea>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="timeline">Timeline — is there a court date, deadline, or urgent event?</label>
-          <input type="text" id="timeline" placeholder="e.g., custody hearing on June 15, deposition in 3 weeks">
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Services you're most interested in (select all that apply)</label>
-          <div class="check-group">
-            <label class="check-item"><input type="checkbox"> Digital safety audit</label>
-            <label class="check-item"><input type="checkbox"> Evidence / records management</label>
-            <label class="check-item"><input type="checkbox"> Investigative research</label>
-            <label class="check-item"><input type="checkbox"> Tech development / tools</label>
-            <label class="check-item"><input type="checkbox"> Cybersecurity advisory</label>
-            <label class="check-item"><input type="checkbox"> Educational resources</label>
-            <label class="check-item"><input type="checkbox"> Ongoing advisory retainer</label>
-            <label class="check-item"><input type="checkbox"> One-time consultation</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="anything-else">Anything else we should know before your consultation?</label>
-          <textarea id="anything-else" rows="3" placeholder="Any context, concerns, or questions you'd like to raise upfront..."></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="intake-divider"></div>
-
-    <!-- SECTION 7: ACKNOWLEDGMENT -->
-    <div class="intake-section">
-      <div class="intake-section-header">
-        <span class="intake-section-number">07</span>
-        <span class="intake-section-title">Acknowledgment &amp; Signature</span>
-      </div>
       <div class="intake-note">
-        By signing below, you acknowledge that this intake does not constitute legal advice, does not establish an attorney-client relationship, and does not guarantee services will be provided. All information is held in strict confidence.
+        Skip anything you're unsure about — we can assess together during the consultation.
       </div>
-      <div class="sig-grid">
-        <div class="sig-field">
-          <label>Client Signature</label>
-          <input type="text" class="sig-line" placeholder="">
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label>Devices involved or potentially compromised</label>
+          <div class="check-group">
+            <label class="check-item"><input type="checkbox" name="devices" value="iphone_ipad"> iPhone / iPad</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="android"> Android</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="windows"> Windows PC / laptop</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="mac"> Mac</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="smart_home"> Smart home devices</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="vehicle"> Vehicle</label>
+            <label class="check-item"><input type="checkbox" name="devices" value="other"> Other</label>
+          </div>
         </div>
-        <div class="sig-field">
-          <label>Date</label>
-          <input type="date" class="sig-line">
+        <div class="field-group">
+          <label>Accounts of concern</label>
+          <div class="check-group">
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="email"> Email</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="social_media"> Social media</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="cloud_storage"> Cloud storage</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="banking_financial"> Banking / financial</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="children_accounts"> Children's accounts</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="shared_family"> Shared family accounts</label>
+            <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="other"> Other</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label>Are any devices or accounts currently being monitored?</label>
+          <div class="check-group">
+            <label class="check-item"><input type="radio" name="monitoring" value="confirmed"> Yes — confirmed</label>
+            <label class="check-item"><input type="radio" name="monitoring" value="suspected"> Yes — suspected</label>
+            <label class="check-item"><input type="radio" name="monitoring" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="monitoring" value="unsure"> Unsure</label>
+          </div>
+        </div>
+        <div class="field-group">
+          <label>Technical sophistication of the other party</label>
+          <div class="check-group">
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="minimal"> Minimal</label>
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="moderate"> Moderate</label>
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="high"> High — tech professional</label>
+            <label class="check-item"><input type="radio" name="tech_sophistication" value="unknown"> Unknown</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Digital records to preserve or present as evidence?</label>
+          <div class="check-group">
+            <label class="check-item"><input type="radio" name="has_digital_records" value="yes"> Yes</label>
+            <label class="check-item"><input type="radio" name="has_digital_records" value="no"> No</label>
+            <label class="check-item"><input type="radio" name="has_digital_records" value="unsure"> Unsure — need guidance</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="digital-concerns">Specific digital concerns or incidents (optional)</label>
+          <textarea id="digital-concerns" name="digital_concerns" rows="3" placeholder="Stalkerware suspicion, account takeover, document tampering, GPS tracking, unexpected account activity..."></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="intake-divider track-section" data-track="survivor investigative" style="display:none"></div>
+
+    <!-- TRACK: INVESTIGATIVE — Research Context -->
+    <div class="intake-section track-section" data-track="investigative" style="display:none">
+      <div class="intake-section-header">
+        <span class="intake-section-number track-label">—</span>
+        <span class="intake-section-title">Research Context</span>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="research-objective">What are you trying to establish or uncover?</label>
+          <textarea id="research-objective" name="research_objective" rows="3" placeholder="Describe the subject, the question, or the gap you need filled..."></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="existing-evidence">What documentation or evidence do you already have?</label>
+          <textarea id="existing-evidence" name="existing_evidence" rows="2" placeholder="Records, communications, public filings, prior reports..."></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Is this research for litigation or legal proceedings?</label>
+          <div class="check-group">
+            <label class="check-item"><input type="radio" name="research_legal_context" value="yes_active"> Yes — active case</label>
+            <label class="check-item"><input type="radio" name="research_legal_context" value="yes_anticipated"> Yes — anticipated</label>
+            <label class="check-item"><input type="radio" name="research_legal_context" value="no"> No — personal knowledge</label>
+            <label class="check-item"><input type="radio" name="research_legal_context" value="other"> Other</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intake-divider track-section" data-track="investigative" style="display:none"></div>
+
+    <!-- TRACK: TECHNICAL — Project Scope -->
+    <div class="intake-section track-section" data-track="technical" style="display:none">
+      <div class="intake-section-header">
+        <span class="intake-section-number track-label">—</span>
+        <span class="intake-section-title">Project Scope</span>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="tech-problem">What are you building or trying to solve?</label>
+          <textarea id="tech-problem" name="tech_problem" rows="3" placeholder="Describe the problem, system, or product..."></textarea>
+        </div>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label for="tech-stack">Current tech stack or environment (if known)</label>
+          <input type="text" id="tech-stack" name="tech_stack" placeholder="e.g., Python / React / AWS, or 'unsure'">
+        </div>
+        <div class="field-group">
+          <label for="tech-org">Organization or context</label>
+          <input type="text" id="tech-org" name="tech_org" placeholder="Company, agency, nonprofit, individual...">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Type of engagement needed</label>
+          <div class="check-group">
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="architecture"> Architecture / design</label>
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="development"> Development / build</label>
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="security_review"> Security review</label>
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="audit"> Code / system audit</label>
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="strategy"> Technical strategy</label>
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="other"> Other</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intake-divider track-section" data-track="technical" style="display:none"></div>
+
+    <!-- TRACK: PEDAGOGY — Training Context -->
+    <div class="intake-section track-section" data-track="pedagogy" style="display:none">
+      <div class="intake-section-header">
+        <span class="intake-section-number track-label">—</span>
+        <span class="intake-section-title">Training Context</span>
+      </div>
+      <div class="field-row col-2">
+        <div class="field-group">
+          <label for="pedagogy-org">Organization or context</label>
+          <input type="text" id="pedagogy-org" name="pedagogy_org" placeholder="Nonprofit, law firm, school, individual...">
+        </div>
+        <div class="field-group">
+          <label for="audience-size">Estimated audience size</label>
+          <input type="text" id="audience-size" name="audience_size" placeholder="e.g., 1, 12, 50+">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="topic-area">Topic area or subject matter</label>
+          <textarea id="topic-area" name="topic_area" rows="2" placeholder="Tech literacy, digital safety, data analysis, research methods, other..."></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label>Preferred format</label>
+          <div class="check-group">
+            <label class="check-item"><input type="checkbox" name="training_format" value="workshop"> Workshop / group session</label>
+            <label class="check-item"><input type="checkbox" name="training_format" value="one_on_one"> 1-on-1 tutoring</label>
+            <label class="check-item"><input type="checkbox" name="training_format" value="curriculum"> Curriculum development</label>
+            <label class="check-item"><input type="checkbox" name="training_format" value="async"> Asynchronous / self-paced</label>
+            <label class="check-item"><input type="checkbox" name="training_format" value="in_person"> In-person</label>
+            <label class="check-item"><input type="checkbox" name="training_format" value="remote"> Remote / virtual</label>
+          </div>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="prior-training">Prior training or baseline knowledge of your audience</label>
+          <textarea id="prior-training" name="prior_training" rows="2" placeholder="What do they already know? Where are the gaps?"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="intake-divider track-section" data-track="pedagogy" style="display:none"></div>
+
+    <!-- SECTION 03: GOALS — always shown -->
+    <div class="intake-section">
+      <div class="intake-section-header">
+        <span class="intake-section-number">03</span>
+        <span class="intake-section-title">Goals &amp; Next Steps</span>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="success">What does a successful outcome look like?</label>
+          <textarea id="success" name="desired_outcome" rows="3" placeholder="What would be different? What would you have that you don't have now?"></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="timeline">Is there a deadline or urgent event?</label>
+          <input type="text" id="timeline" name="timeline" placeholder="e.g., court hearing June 15, board presentation in 3 weeks, ASAP">
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label for="anything-else">Anything else to share before your consultation? (optional)</label>
+          <textarea id="anything-else" name="additional_information" rows="3" placeholder="Context, questions, or anything you'd like to raise upfront..."></textarea>
+        </div>
+      </div>
+      <div class="field-row">
+        <div class="field-group">
+          <label class="check-item" style="border-color: var(--gold-border); padding: 0.8rem 1.2rem;">
+            <input type="checkbox" name="acknowledgment" value="acknowledged" required>
+            I understand this intake does not constitute legal advice, does not establish a client relationship, and does not guarantee services. My information is held in strict confidence.
+          </label>
         </div>
       </div>
     </div>
 
     <!-- SUBMIT -->
     <div class="intake-submit">
-      <p class="intake-submit-note">Submit this form and I'll follow up within 48 hours.</p>
-      <button type="submit" class="btn">Submit Intake</button>
+      <p class="intake-submit-note">I'll follow up within 48 hours.</p>
+      <button type="submit" class="btn" data-fs-submit-btn>Submit Intake</button>
       <button type="button" class="btn" onclick="window.print()">Print / Save as PDF</button>
     </div>
 
@@ -408,7 +504,34 @@ layout: default
     </div>
 
   </form>
+
 </div>
+
+<!-- Service type branching -->
+<script>
+  document.querySelectorAll('[name="service_type"]').forEach(function(radio) {
+    radio.addEventListener('change', function() {
+      var track = this.value;
+      // Hide all track sections and blocks
+      document.querySelectorAll('.track-section, .track-block').forEach(function(el) {
+        el.style.display = 'none';
+      });
+      // Show sections whose data-track contains the selected track
+      document.querySelectorAll('.track-section[data-track], .track-block[data-track]').forEach(function(el) {
+        if (el.dataset.track.split(' ').indexOf(track) !== -1) {
+          el.style.display = '';
+        }
+      });
+    });
+  });
+</script>
+
+<!-- Formspree AJAX script -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#intake-form', formId: 'xykbrlgb' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 
 <style>
 /* ── Intake wrapper ── */
@@ -504,13 +627,77 @@ layout: default
   animation: fadeUp 0.4s ease both;
 }
 
-.intake-section:nth-child(1) { animation-delay: 0.05s; }
-.intake-section:nth-child(2) { animation-delay: 0.10s; }
-.intake-section:nth-child(3) { animation-delay: 0.15s; }
-.intake-section:nth-child(4) { animation-delay: 0.20s; }
-.intake-section:nth-child(5) { animation-delay: 0.25s; }
-.intake-section:nth-child(6) { animation-delay: 0.30s; }
-.intake-section:nth-child(7) { animation-delay: 0.35s; }
+.track-label { color: var(--border); }
+
+/* ── Service type cards ── */
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.service-card {
+  cursor: pointer;
+  display: block;
+}
+
+.service-card input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0; height: 0;
+}
+
+.service-card-inner {
+  border: 1px solid var(--border);
+  background: var(--bg3);
+  padding: 1.4rem 1.2rem;
+  transition: border-color 0.2s, background 0.2s;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.service-card:hover .service-card-inner {
+  border-color: var(--gold-dim);
+}
+
+.service-card input:checked + .service-card-inner {
+  border-color: var(--gold);
+  background: rgba(201,168,76,0.04);
+}
+
+.service-card-icon {
+  font-size: 1.3rem;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.service-card input:checked + .service-card-inner .service-card-icon {
+  opacity: 1;
+}
+
+.service-card-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  color: var(--text);
+  line-height: 1.2;
+}
+
+.service-card-desc {
+  font-size: 0.72rem;
+  color: var(--muted);
+  line-height: 1.6;
+  font-family: 'Inter', sans-serif;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .service-cards { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .service-cards { grid-template-columns: 1fr; }
+}
 
 .intake-section-header {
   display: flex;

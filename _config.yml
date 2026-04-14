@@ -31,10 +31,18 @@ collections:
   psas:
     output: true
     permalink: /work/psas/:slug/
+  about:
+    output: true
+    permalink: /:slug
   
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]
 markdown: kramdown
+
+# SCSS processing
+sass:
+  load_paths:
+    - node_modules
 #plugins:
 #  - jekyll-avatar
 #  - jekyll-redirect-from

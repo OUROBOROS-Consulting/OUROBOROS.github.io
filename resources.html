@@ -12,14 +12,14 @@ permalink: /resources/
       <h1 class="svc-title">Reference Materials</h1>
       <p class="svc-lede">Curated references drawn from clinical research, legal scholarship, and survivor advocacy — because accurate information is its own form of protection.</p>
     </div>
-    <div class="svc-emblem">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="Ouroboros mark">
+    <div class="svc-emblem svc-emblem--library" aria-hidden="true">
+      <i class="fas fa-scroll" aria-hidden="true"></i>
     </div>
   </div>
 </header>
 
 <div class="svc-body">
-  <div class="related-grid">
+  <div class="related-grid resources-grid">
 
     {% assign sorted_resources = site.resources | sort: "title" %}
     {% for resource in sorted_resources %}

@@ -2,10 +2,11 @@
   tag: Technology
   icon: fa-solid fa-flask
   description: >
-    The best solutions aren't found in manuals — they're engineered in the gap between what exists and what's needed.
-    Whether bridging service continuity during a federal system migration or prototyping a data platform under deadline,
-# I've learned to treat constraints as creative prompts.
-#    The question is never "can we?" but "how?"
+    The best solutions aren't found in manuals — they're engineered in the space between
+    what exists and what's needed.
+    Whether bridging service continuity during a federal system migration or prototyping
+    a data platform under deadline, I've learned to treat constraints as creative prompts.
+    The question is never "can we?" but "should we and how?"
   reference:
   link: "#"
 
@@ -13,9 +14,9 @@
   tag: Science
   icon: fa-solid fa-scale-balanced
   description: >
-    Emotions are data, but they aren't evidence. I trained in biostatistics because I believe rigorous thinking
-    is one of the most compassionate things you can offer a problem — especially in public health,
-    where the stakes are real people's lives.
+    Emotions are data, but they aren't evidence. I trained in biostatistics because I believe
+    rigorous thinking is one of the most compassionate things you can offer a problem —
+    especially in public health, where the stakes are real people's lives.
     Clear reasoning is a form of respect.
   reference:
   link: "#"
@@ -25,9 +26,8 @@
   icon: fa-solid fa-bolt
   description: >
     Wasted effort compounds. I automate what can be automated, document what needs to persist,
-    and focus human attention where it actually matters.
-    At HHS, this meant ensuring critical data pipelines kept flowing even as organizations changed hands.
-    Good systems shouldn't need heroes.
+    and focus human attention where it belongs.
+    At HHS, this meant ensuring critical data pipelines kept flowing even as organizations changed hands. Good systems shouldn't need heroes.
   reference:
   link: "#"
 
@@ -35,8 +35,8 @@
   tag: Personal
   icon: fa-solid fa-person-walking
   description: >
-    I believe people have the right to make informed decisions about their own lives — including, and especially,
-    when institutions make that difficult.
+    I believe people have the right to make informed decisions about their own lives —
+    including, and especially, when institutions make that difficult.
     Autonomy isn't just a personal value; it's a design principle.
     Systems that erode it tend to harm the people they claim to serve.
   reference:
@@ -57,9 +57,10 @@
   tag: Ethics
   icon: fa-solid fa-shield-halved
   description: >
-    Integrity is what you do when no one is watching — and what you're willing to put on record when they are.
+    Integrity is what you do when no one is watching — and what you're willing to put on
+    record when they are.
     I've worked in environments where accountability was optional and silence was rewarded.
-    I've learned that the cost of compromising your principles is always higher than it appears upfront.
+    I chose differently. That choice cost something, and I'd make it again.
   reference:
   link: "#"
 
@@ -78,10 +79,9 @@
   tag: Technology
   icon: fa-solid fa-lock
   description: >
-    Security means different things in different contexts — FedRAMP compliance, data privacy, personal safety —
-    but the underlying principle is the same: people deserve to be protected, not just from external threats,
-    but from systems that are supposed to help them.
-    I take it seriously at every layer.
+    Security means different things in different contexts: FedRAMP compliance, data privacy,
+    personal safety. But the underlying principle is the same — people deserve to be protected,
+    not just from external threats, but from systems that are supposed to help them.
   reference:
   link: "#"
 
@@ -89,9 +89,8 @@
   tag: Personal
   icon: fa-solid fa-hand-holding-heart
   description: >
-    Kindness is not weakness. It's a deliberate choice — one that requires more discipline, not less,
-    especially in adversarial conditions.
-    I've encountered people who mistook my patience for passivity.
-    They were mistaken. Kindness is something I protect, not something I abandon when it's inconvenient.
+    Kindness is not weakness — it requires discipline, especially when trust has been broken.
+    In work with survivors, kindness means meeting people where they are and honoring what they've endured.
+    It's the foundation that makes everything else possible.
   reference:
   link: "#"

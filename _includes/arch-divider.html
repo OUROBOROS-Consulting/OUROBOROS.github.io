@@ -1,0 +1,51 @@
+{% assign color = include.color | default: 'C9A84C' %}
+{% assign height = include.height | default: '60' %}
+
+<div class="arch-divider" style="--arch-color: #{{ color }}">
+  <svg
+    viewBox="0 0 1200 {{ height }}"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <!-- Main arch span -->
+    <path
+      d="M 20 {{ height | minus: 2 }} Q 600 20 1180 {{ height | minus: 2 }}"
+      fill="none"
+      stroke="url(#arch-gradient)"
+      stroke-width="2"
+      stroke-linecap="round"
+    />
+
+    <!-- Scallop texture along arch -->
+    <g opacity="0.25">
+      <path d="M 100 {{ height | minus: 25 }} Q 103 {{ height | minus: 35 }} 106 {{ height | minus: 25 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 160 {{ height | minus: 45 }} Q 163 {{ height | minus: 55 }} 166 {{ height | minus: 45 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 220 {{ height | minus: 58 }} Q 223 {{ height | minus: 68 }} 226 {{ height | minus: 58 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 280 {{ height | minus: 65 }} Q 283 {{ height | minus: 75 }} 286 {{ height | minus: 65 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 340 {{ height | minus: 68 }} Q 343 {{ height | minus: 78 }} 346 {{ height | minus: 68 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 400 {{ height | minus: 70 }} Q 403 {{ height | minus: 80 }} 406 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 460 {{ height | minus: 70 }} Q 463 {{ height | minus: 80 }} 466 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 520 {{ height | minus: 70 }} Q 523 {{ height | minus: 80 }} 526 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 580 {{ height | minus: 70 }} Q 583 {{ height | minus: 80 }} 586 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 640 {{ height | minus: 70 }} Q 643 {{ height | minus: 80 }} 646 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 700 {{ height | minus: 70 }} Q 703 {{ height | minus: 80 }} 706 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 760 {{ height | minus: 70 }} Q 763 {{ height | minus: 80 }} 766 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 820 {{ height | minus: 70 }} Q 823 {{ height | minus: 80 }} 826 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 880 {{ height | minus: 70 }} Q 883 {{ height | minus: 80 }} 886 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 940 {{ height | minus: 70 }} Q 943 {{ height | minus: 80 }} 946 {{ height | minus: 70 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 1000 {{ height | minus: 68 }} Q 1003 {{ height | minus: 78 }} 1006 {{ height | minus: 68 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 1060 {{ height | minus: 65 }} Q 1063 {{ height | minus: 75 }} 1066 {{ height | minus: 65 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+      <path d="M 1120 {{ height | minus: 58 }} Q 1123 {{ height | minus: 68 }} 1126 {{ height | minus: 58 }}" fill="none" stroke="currentColor" stroke-width="0.8"/>
+    </g>
+
+    <!-- Gradient definition -->
+    <defs>
+      <linearGradient id="arch-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" style="stop-color:var(--arch-color);stop-opacity:0.3" />
+        <stop offset="50%" style="stop-color:var(--arch-color);stop-opacity:1" />
+        <stop offset="100%" style="stop-color:var(--arch-color);stop-opacity:0.3" />
+      </linearGradient>
+    </defs>
+  </svg>
+</div>

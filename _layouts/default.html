@@ -17,16 +17,59 @@
   <meta property="og:description" content="{{ _desc | strip_html | truncate: 160 }}"/>
   <meta property="og:image"       content="{{ '/assets/images/AS.png' | absolute_url }}"/>
   <meta name="twitter:card"       content="summary"/>
+  <meta name="keywords" content="institutional betrayal, institutional courage, coercive control, survivor advocacy, whistleblower support, AI safety, federal technology, biostatistics"/>
+
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "OUROBOROS Consulting",
+    "founder": {
+      "@type": "Person",
+      "name": "Apostolos Stamenos"
+    },
+    "areaServed": "US",
+    "knowsAbout": [
+      "institutional betrayal",
+      "institutional courage",
+      "coercive control",
+      "survivor advocacy",
+      "AI safety",
+      "biostatistics",
+      "whistleblower support",
+      "federal technology"
+    ],
+    "url": "{{ site.url }}",
+    "sameAs": [
+      "{{ site.linkedin_url }}",
+      "{{ site.github_url }}"
+    ]
+  }
+  </script>
+  {% endif %}
 
   <link rel="icon" href="{{ '/assets/images/logo.svg' | relative_url }}" type="image/svg+xml"/>
   <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}"/>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
   
 <body>
   {% include nav.html %}
+
+  <!-- Quick-exit button: redirects to a neutral page and purges history/state.
+       Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
+  <a href="https://www.google.com/search?q=weather+today"
+     id="safety-exit"
+     class="safety-exit"
+     aria-label="Quick exit to a neutral page (double-tap Escape)"
+     rel="noopener noreferrer">
+    <i class="fas fa-door-open" aria-hidden="true"></i>
+    <span>Quick exit</span>
+  </a>
+
   {{ content }}
   {% include footer.html %}
   <script src="{{ '/assets/js/main.js' | relative_url }}"></script>

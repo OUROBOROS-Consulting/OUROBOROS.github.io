@@ -1,0 +1,13 @@
+{
+  "name": "ouroboros-consulting-website",
+  "version": "1.0.0",
+  "description": "OUROBOROS Consulting website",
+  "scripts": {
+    "install-design": "npm install",
+    "dev": "bundle exec jekyll serve --livereload",
+    "build": "bundle exec jekyll build"
+  },
+  "dependencies": {
+    "@ouroboros-consulting/ouroboros-design": "file:../ouroboros-design"
+  }
+}

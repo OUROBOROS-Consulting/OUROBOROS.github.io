@@ -1,26 +1,14 @@
-- title: About
-  url: /about/
-  children:
-    - title: Overview
-      url: /about/
-    - title: Mission
-      url: /mission
-    - title: Survival
-      url: /survival
-    - title: Causes
-      url: /causes/
-    - title: Interests
-      url: /interests
-    - title: CV
-      url: /cv
-
 - title: Services
   url: /services/
   children:
-    - title: Overview
-      url: /services/
+    - title: AI Integration
+      url: /services/agentic-ai/
     - title: Technology Solutions
       url: /services/consulting/
+    - title: Design Services
+      url: /services/design/
+    - title: Research & Investigation
+      url: /services/investigation/
     - title: Pedagogy Services
       url: /services/tutoring/
     - title: Advocacy Services
@@ -29,8 +17,6 @@
 - title: Projects
   url: /projects/
   children:
-    - title: Overview
-      url: /projects/
     - title: Case Studies
       url: /work/
     - title: PSAs
@@ -39,11 +25,25 @@
 - title: Resources
   url: /resources/
   children:
-    - title: Overview
-      url: /resources/
-    - title: Survival
-      url: /resources/survival/
     - title: Scholarly
       url: /resources/scholarly/
     - title: Cultural
       url: /resources/artistic/
+    - title: Tutorials
+      url: /resources/tutorials/
+    - title: Glossary
+      url: /resources/glossary/
+
+- title: About
+  url: /about/
+  children:
+    - title: Mission
+      url: /mission
+    - title: Survival
+      url: /survival
+    - title: Causes
+      url: /causes/
+#    - title: Interests
+#      url: /interests
+    - title: CV
+      url: /cv

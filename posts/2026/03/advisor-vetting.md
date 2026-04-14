@@ -5,6 +5,7 @@ date: 2025-03-01
 image: /assets/images/posts/post-name.jpg
 image_alt: Description of the image
 tags: [consulting, statistics]
+published: false
 ---
 
 

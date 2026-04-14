@@ -3,14 +3,14 @@ layout: service
 title: Technology Consulting
 category: Services
 lede: >
-  The right technology, precisely applied, removes friction and returns control to you.
+  The right technology, precisely applied, cuts what slows you down and returns control to you.
   I build bespoke solutions — not off-the-shelf recommendations — for people and organizations
   with real problems.
 tags: [Apple Ecosystem, AI, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python]
 cta_label: Book a Session
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours. Discovery calls are always free.
 who: >
-  Individuals and small organizations who need robust tech solutions so they can focus on what matters to them. I help you figure out what's actually slowing you down, then build the right solution — whether that's an AI tool, a simple automation, a better workflow, or just the right app you didn't know existed.
+  Individuals and small organizations who need robust tech solutions so they can focus on their actual work. I help you figure out what's actually slowing you down, then build the right solution — whether that's an AI tool, a simple automation, a better workflow, or just the right app you didn't know existed.
 included:
   - title: Intake & Discovery
     description: Free 20-minute call to understand your situation and goals before recommending a path forward.
@@ -62,3 +62,9 @@ pricing:
 ---
 
 I have years of experience building creative tech solutions in unconventional situations — from engineering FedRAMP-compliant ML systems for the national COVID response to helping individuals get their digital lives under control. I don't lead with a particular technology. I start with your problem, then find the simplest solution that actually works — whether that's a custom ML pipeline, an Apple Shortcut, or a folder structure you'll actually stick to.
+
+## Engagement Models
+
+Hourly for sessions, audits, and implementation work. Project-based for discrete deliverables like smart home builds or records overhauls. Retained monthly for ongoing technical partnership.
+
+For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.

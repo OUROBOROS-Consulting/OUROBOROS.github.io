@@ -1,3 +1,6 @@
+# TODO: Add 1-2 anonymized survivor/advocacy testimonials (with explicit consent).
+# Contact Apostolos to supply. Do not fabricate quotes or attributions.
+
 - title: Operational Continuity
   tag: Technology
   description: >
@@ -24,5 +27,14 @@
     His recommendation of Salesforce was ultimately adopted, showcasing his foresight in technology solutions. Apostolos consistently demonstrated strong technical abilities, innovative problem-solving skills, and a keen understanding of data management and visualization.
     His contributions were invaluable to our team and the broader efforts in managing and communicating critical health data during challenging times.
   reference: Anthony Caponiti, Director of Data Platforms at HHS
+  link: "#"
+
+- title: Working Principles
+  tag: Commitment
+  type: commitment
+  description: >
+    What to expect in sensitive engagements: full confidentiality, plain-language reporting,
+    no surprises, and zero tolerance for institutional pressure.
+  reference: OUROBOROS Consulting — Working Principles
   link: "#"
 
