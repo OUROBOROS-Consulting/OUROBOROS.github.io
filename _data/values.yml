@@ -1,6 +1,6 @@
 - title: Innovation
   tag: Technology
-  icon: fa-solid fa-flask
+  icon: fa-solid fa-microscope
   description: >
     The best solutions aren't found in manuals — they're engineered in the space between
     what exists and what's needed.
@@ -23,7 +23,7 @@
 
 - title: Efficiency
   tag: Technology
-  icon: fa-solid fa-bolt
+  icon: fa-solid fa-fire-flame-curved
   description: >
     Wasted effort compounds. I automate what can be automated, document what needs to persist,
     and focus human attention where it belongs.
@@ -33,7 +33,7 @@
 
 - title: Autonomy
   tag: Personal
-  icon: fa-solid fa-person-walking
+  icon: fa-solid fa-hand-fist
   description: >
     I believe people have the right to make informed decisions about their own lives —
     including, and especially, when institutions make that difficult.
@@ -55,7 +55,7 @@
 
 - title: Integrity
   tag: Ethics
-  icon: fa-solid fa-shield-halved
+  icon: fa-solid fa-shield-heart
   description: >
     Integrity is what you do when no one is watching — and what you're willing to put on
     record when they are.
@@ -77,7 +77,7 @@
 
 - title: Security
   tag: Technology
-  icon: fa-solid fa-lock
+  icon: fa-solid fa-key
   description: >
     Security means different things in different contexts: FedRAMP compliance, data privacy,
     personal safety. But the underlying principle is the same — people deserve to be protected,
