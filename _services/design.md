@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Design Systems & Implementation
+icon: fa-palette
 category: Services
 lede: >
   Design that scales without breaking. Accessible, dimensional, distinctive—

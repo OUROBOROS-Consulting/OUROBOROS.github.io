@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Research & Investigation
+icon: fa-magnifying-glass
 category: Services
 lede: >
   Finding what's hidden in plain sight. Records, patterns, digital trails—
