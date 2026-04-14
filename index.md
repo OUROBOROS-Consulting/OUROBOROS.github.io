@@ -17,7 +17,7 @@ about_heading: Technology and Advocacy for Survivors and Institutionally Betraye
 
 stats:
   years_experience: "6+"
-  students_tutored: "50+"
+  # students_tutored: "50+"
   agencies: "5"
  # phd_program: "Biostatistics, UMN"
 
