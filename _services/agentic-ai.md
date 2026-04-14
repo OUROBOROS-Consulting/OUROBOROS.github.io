@@ -88,3 +88,9 @@ This is not a hypothetical. It is a documented and accelerating pattern. Designi
 If you want to see this in action, [the Claudius case study](/work/claudius/) documents exactly this process — building a professional website using Claude Code as a collaborator, with full transparency about what worked, what didn't, and what the collaboration actually changed.
 
 That case study is also a model for what kind of client work I do: detailed transparency about how the collaboration worked, what trade-offs were made, and what you actually get for the investment.
+
+## Engagement Models
+
+Hourly for strategy, audit, and discovery work. Project-based for builds and integrations with clear deliverables. Retained monthly for ongoing advisory or expanded scope.
+
+For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.

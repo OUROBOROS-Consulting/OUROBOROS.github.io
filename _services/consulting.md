@@ -62,3 +62,9 @@ pricing:
 ---
 
 I have years of experience building creative tech solutions in unconventional situations — from engineering FedRAMP-compliant ML systems for the national COVID response to helping individuals get their digital lives under control. I don't lead with a particular technology. I start with your problem, then find the simplest solution that actually works — whether that's a custom ML pipeline, an Apple Shortcut, or a folder structure you'll actually stick to.
+
+## Engagement Models
+
+Hourly for sessions, audits, and implementation work. Project-based for discrete deliverables like smart home builds or records overhauls. Retained monthly for ongoing technical partnership.
+
+For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.

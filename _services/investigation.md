@@ -72,3 +72,9 @@ I spent two years at HHS building ML systems that analyzed institutional behavio
 Most survivors face a choice: hire an attorney (expensive, constrained to legal strategy), or research alone (time-consuming, easy to miss critical patterns). I sit in between. Fluent in institutional documentation, legal discovery, evidentiary standards, and the trauma-informed frameworks that explain institutional behavior. I work for people who need the evidence, not people who need representation.
 
 I don't do surveillance, trespass, or illegal access. What I do: research documented and publicly available information, identify patterns in institutional behavior, synthesize findings into evidence courts and investigators believe. For survivors seeking accountability, attorneys building cases, or organizations needing forensic institutional analysis.
+
+## Engagement Models
+
+Hourly for strategy sessions and research work. Project-based for scoped investigations with clear deliverables. Retained monthly for long-form projects with rolling scope.
+
+For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.

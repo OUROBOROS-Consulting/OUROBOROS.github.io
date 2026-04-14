@@ -69,3 +69,9 @@ I've built design systems from scratch, audited existing ones for coherence and 
 Most design work either sacrifices accessibility for aesthetics or accessibility for simplicity. Both choices are failures. The work I do refuses that tradeoff. Accessible design that's also visually distinguished, technically coherent, and built to last.
 
 I don't make generic work. I adapt to your brand's language while refusing to compromise on clarity, accessibility, or coherence. Your aesthetic—whether minimal, ornate, editorial, bright, or something else entirely—should emerge from what your work actually is, not from a template. If you need someone who can talk to both the design and the code, and who'll push back when a choice doesn't serve your users, that's a conversation I'm having.
+
+## Engagement Models
+
+Hourly for audits, direction, and implementation work. Project-based for discrete deliverables like full design systems or rebrand overhauls. Retained monthly for ongoing design partnership.
+
+For nonprofits serving vulnerable populations: sliding scale rates and pro-bono capacity are available. Reach out directly.
