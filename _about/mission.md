@@ -5,8 +5,8 @@ category: Technologist · Researcher · Advocate
 headshot: /assets/images/AS.png
 headshot_alt: Apostolos Stamenos
 lede: >
-  I build tools and arguments that make systems answerable
-  to the people they claim to serve.
+  I build tools and arguments that push institutions from betrayal toward courage —
+  answerable to the people they claim to serve.
 
 # ── About ──────────────────────────────────────────────────────────────────
 about:
@@ -33,30 +33,34 @@ sections:
       - >
         Healthcare, academic, legal, and digital systems carry enormous power over individual lives.
         Most were not designed with the most vulnerable people in mind, and few have meaningful
-        accountability mechanisms when they fail. I work at the intersection of data science and
-        public health because I believe that rigorous, transparent research is one of the most
-        effective tools for holding institutions to account.
+        accountability mechanisms when they fail. Jennifer Freyd's framework names this precisely:
+        institutional betrayal occurs when institutions cause harm through action or inaction against
+        those who depend on them. The affirmative counterpart — institutional courage — is what this
+        firm exists to produce. I work at the intersection of data science and public health because
+        rigorous, transparent research is one of the most effective tools for moving institutions
+        from one toward the other.
       - >
         That shows up differently across my work: statistical methods that make neuroimaging
         research more reproducible; educational resources that demystify data for people navigating
         complex institutions; consulting that helps organizations understand what their data
         actually says rather than what they hoped it would. The thread running through all of it
-        is that information asymmetry is a form of power. Restoring information symmetry is one of my greatest assets, and it's at your disposal.
-      - >
-        A parallel mission is to make survival operational. My version of that
-        mission was shaped by data engineering work on the federal COVID-19 response, and it
-        now shows up in a personal context: smart-home automation for safety and privacy,
-        workflows that preserve records, and AI-assisted thinking for situations no human
-        should have to navigate alone.
+        is that information asymmetry is a form of power. Restoring information symmetry is foundational to that work.
 
   - id: commitment
     heading: Accountability Over Comfort
     body_paragraphs:
       - >
+        Making survival operational is part of that accountability. My version of that
+        work was shaped by data engineering on the federal COVID-19 response, and it
+        now shows up in a personal context: smart-home automation for safety and privacy,
+        workflows that preserve records, and AI-assisted thinking for situations no human
+        should have to navigate alone.
+      - >
         I name what others prefer to leave unnamed. In government, that meant pushing for transparency in systems that defaulted to opacity. In academia, it means treating methodological rigor
         as an ethical commitment, not merely a technical one. In my research on coercive control,
         institutional betrayal, and psychological harm, it means taking the evidence seriously —
-        wherever it leads.
+        wherever it leads. Institutional courage, in Freyd's framing, is not comfort — it is the
+        willingness to prioritize doing right over doing easy. That is the standard I hold this work to.
       - >
         The intersection between social engineering and personality disorders — narcissistic PD,
         borderline PD, antisocial PD — is particularly challenging outside workplace settings

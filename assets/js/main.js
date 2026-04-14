@@ -98,5 +98,34 @@ function initCarousel(sectionId, autoAdvance) {
   startTimer();
 }
 
-initCarousel('values',       false); // manual navigation, no auto-advance
+// values section is now a static grid — no carousel init needed
 initCarousel('testimonials', true);  // auto-advances every 7s
+
+// ── Safety / Quick-exit ──────────────────────────────────────────────────────
+// Redirects to a neutral page and attempts to purge session/local storage plus
+// history state. Double-tap Escape also triggers this.
+(function initSafetyExit() {
+  const NEUTRAL_URL = 'https://www.google.com/search?q=weather+today';
+  const btn = document.getElementById('safety-exit');
+
+  function performExit(event) {
+    if (event) event.preventDefault();
+    try {
+      sessionStorage.clear();
+      localStorage.clear();
+    } catch (err) { /* storage may be blocked; ignore */ }
+    // Replace current entry so Back doesn't return to this site.
+    window.location.replace(NEUTRAL_URL);
+  }
+
+  if (btn) btn.addEventListener('click', performExit);
+
+  // Double-tap Escape within 500ms triggers exit.
+  let lastEsc = 0;
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const now = Date.now();
+    if (now - lastEsc < 500) performExit();
+    lastEsc = now;
+  });
+})();

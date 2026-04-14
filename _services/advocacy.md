@@ -89,3 +89,9 @@ and how to present it.
 
 This work is confidential. It is not therapy — though I can help you find that too.
 It is strategic, careful, evidence-based, and entirely on your side.
+
+## Engagement Models
+
+Hourly for short or scoped advocacy sessions. Project-based for discrete deliverables like document review or strategy roadmaps. Retained monthly for ongoing advisory or support work.
+
+For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.

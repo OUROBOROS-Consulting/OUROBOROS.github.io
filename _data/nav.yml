@@ -25,14 +25,14 @@
 - title: Resources
   url: /resources/
   children:
-    - title: Survival
-      url: /resources/survival/
     - title: Scholarly
       url: /resources/scholarly/
     - title: Cultural
       url: /resources/artistic/
     - title: Tutorials
       url: /resources/tutorials/
+    - title: Glossary
+      url: /resources/glossary/
 
 - title: About
   url: /about/
