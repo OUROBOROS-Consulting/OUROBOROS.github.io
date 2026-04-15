@@ -1,4 +1,5 @@
 <nav aria-label="Main navigation">
+  <div class="w3-container w3-red">
   <a class="nav-logo" href="{{ '/' | relative_url }}">
     <img src="{{ '/assets/images/logo.svg' | relative_url }}"
          alt="OUROBOROS"
@@ -8,14 +9,26 @@
     </span>
   </a>
 
+  <!-- Contact -->
+    <div class="nav-dropdown nav-contact">
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <a href="{{ '/intake' | relative_url }}">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+            <!-- <span>Contact</span> -->
+          </a>
+        </div>
+      </div>
+    </div>
+
   <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
     <span></span>
     <span></span>
     <span></span>
   </button>
 
+  <!-- Main Nav Links -->
   <div class="nav-links">
-
     {% for item in site.data.nav %}
     {% assign nav_icon = 'fas fa-circle' %}
     {% case item.title %}
@@ -33,6 +46,7 @@
           </a>
         </div>
       </div>
+
       <div class="nav-dropdown-menu">
         {% for child in item.children %}
         <div class="card--formula">
@@ -44,18 +58,5 @@
       </div>
     </div>
     {% endfor %}
-
-    <!-- Contact — same wrapper, no dropdown menu -->
-    <div class="nav-dropdown nav-contact">
-      <div class="card--formula">
-        <div class="card--formula__interior">
-          <a href="{{ '/intake' | relative_url }}">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <!-- <span>Contact</span> -->
-          </a>
-        </div>
-      </div>
-    </div>
-
   </div>
 </nav>
