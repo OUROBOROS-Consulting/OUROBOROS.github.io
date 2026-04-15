@@ -45,6 +45,147 @@
   }
 }
 
+// ── Fix header row ──────────────────────────────────────────────────────
+:root {
+  --header-height: 80px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  height: var(--header-height);
+}
+
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .nav-link {
+    text-decoration: none;
+    color: var(--text);
+    font-size: 0.9rem;
+    transition: color 0.15s ease;
+
+    &:hover {
+      color: var(--gold);
+    }
+  }
+}
+
+header > div {
+  .nav-dropdown:last-of-type {
+    margin-left: auto;
+  }
+}
+
+// ── Nav contact buttons (hexagon style) ──────────────────────────────────
+.nav-contact {
+  .card--formula {
+    width: clamp(60px, 10vw, 80px);
+    height: clamp(60px, 10vw, 80px);
+    padding: 0;
+    border: 5px solid var(--gold);
+    clip-path: polygon(50% 0%, 93.3% 25%, 93.3% 75%, 50% 100%, 6.7% 75%, 6.7% 25%);
+  }
+
+  .card--formula__interior {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  i {
+    font-size: 2.5rem;
+    color: var(--text);
+  }
+
+  &:hover i {
+    color: var(--gold);
+  }
+}
+
+// ── Hero section layout ──────────────────────────────────────────────────
+#hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: var(--header-height);
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-emblem {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+// ── Hero title flush right ──────────────────────────────────────────────
+.hero-name {
+  text-align: right;
+}
+
+// ── Footer layout ────────────────────────────────────────────────────────
+.footer-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: var(--text);
+
+  &:hover {
+    color: var(--gold);
+  }
+
+  .footer-logo-mark {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-logo-text {
+    font-family: Papyrus, serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .footer-logo-sub {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--subdued);
+  }
+}
+
 // ── Values static grid (homepage) ────────────────────────────────────────
 .values-grid {
   display: grid;
