@@ -1,299 +1,352 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mahogany Gilded Frame</title>
-  <style>
-    :root {
-      --gold-hi:  #e8c96a;
-      --gold-mid: #b8922a;
-      --gold-low: #7a5e18;
-    }
 
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahogany Gilded Frame</title>
+    <style>
+      :root {
+        --gold-hi: #e8c96a;
+        --gold-mid: #b8922a;
+        --gold-low: #7a5e18;
+      }
 
-    body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      background: #1a1410;
-      background-image:
-        repeating-linear-gradient(
-          45deg,
-          rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 1px,
-          transparent 1px, transparent 6px
-        );
-    }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
 
-    /* Outermost gold bead + drop shadow */
-    .frame-rim {
-      position: relative;
-      padding: 5px;
-      background: var(--gold-low);
-      box-shadow:
-        0 0 0 1px var(--gold-hi),
-        10px 16px 48px rgba(0,0,0,0.75),
-        3px 5px 14px rgba(0,0,0,0.5);
-    }
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #1a1410;
+        background-image:
+          repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px,
+            transparent 1px, transparent 6px);
+      }
 
-    /* Mahogany moulding body with wood-grain texture */
-    .frame-moulding {
-      position: relative;
-      padding: 36px;
-      background:
-        repeating-linear-gradient(
-          175deg,
-          transparent 0px, transparent 3px,
-          rgba(0,0,0,0.06) 3px, rgba(0,0,0,0.06) 4px
-        ),
-        repeating-linear-gradient(
-          92deg,
-          transparent 0px, transparent 18px,
-          rgba(255,255,255,0.03) 18px, rgba(255,255,255,0.03) 19px
-        ),
-        linear-gradient(160deg,
-          #b85840 0%,
-          #8b3a2a 20%,
-          #6b2a1a 40%,
-          #7a3225 55%,
-          #5c2218 70%,
-          #8b3a2a 85%,
-          #a04830 100%
-        );
-      box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.08),
-        inset 2px 2px 6px rgba(255,255,255,0.06),
-        inset -2px -2px 6px rgba(0,0,0,0.4);
-    }
+      /* Outermost gold bead + drop shadow */
+      .frame-rim {
+        position: relative;
+        padding: 5px;
+        background: var(--gold-low);
+        box-shadow:
+          0 0 0 1px var(--gold-hi),
+          10px 16px 48px rgba(0, 0, 0, 0.75),
+          3px 5px 14px rgba(0, 0, 0, 0.5);
+      }
 
-    /* Gilded routed channel */
-    .frame-moulding::before {
-      content: '';
-      position: absolute;
-      inset: 10px;
-      border: 5px solid transparent;
-      border-image: repeating-linear-gradient(
-        90deg,
-        var(--gold-hi)   0px,  var(--gold-hi)   3px,
-        var(--gold-mid)  3px,  var(--gold-mid)   6px,
-        var(--gold-low)  6px,  var(--gold-low)   8px,
-        var(--gold-mid)  8px,  var(--gold-mid)  10px,
-        var(--gold-hi)  10px,  var(--gold-hi)  13px
-      ) 5;
-      pointer-events: none;
-    }
+      /* Mahogany moulding body with wood-grain texture */
+      .frame-moulding {
+        position: relative;
+        padding: 36px;
+        background:
+          repeating-linear-gradient(175deg,
+            transparent 0px, transparent 3px,
+            rgba(0, 0, 0, 0.06) 3px, rgba(0, 0, 0, 0.06) 4px),
+          repeating-linear-gradient(92deg,
+            transparent 0px, transparent 18px,
+            rgba(255, 255, 255, 0.03) 18px, rgba(255, 255, 255, 0.03) 19px),
+          linear-gradient(160deg,
+            #b85840 0%,
+            #8b3a2a 20%,
+            #6b2a1a 40%,
+            #7a3225 55%,
+            #5c2218 70%,
+            #8b3a2a 85%,
+            #a04830 100%);
+        box-shadow:
+          inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+          inset 2px 2px 6px rgba(255, 255, 255, 0.06),
+          inset -2px -2px 6px rgba(0, 0, 0, 0.4);
+      }
 
-    /* Inner gold lip at the sight edge */
-    .frame-moulding::after {
-      content: '';
-      position: absolute;
-      inset: 24px;
-      border: 3px solid var(--gold-mid);
-      box-shadow:
-        inset 0 0 0 1px var(--gold-hi),
-        0 0 0 1px var(--gold-low);
-      pointer-events: none;
-    }
+      /* Gilded routed channel */
+      .frame-moulding::before {
+        content: '';
+        position: absolute;
+        inset: 10px;
+        border: 5px solid transparent;
+        border-image: repeating-linear-gradient(90deg,
+            var(--gold-hi) 0px, var(--gold-hi) 3px,
+            var(--gold-mid) 3px, var(--gold-mid) 6px,
+            var(--gold-low) 6px, var(--gold-low) 8px,
+            var(--gold-mid) 8px, var(--gold-mid) 10px,
+            var(--gold-hi) 10px, var(--gold-hi) 13px) 5;
+        pointer-events: none;
+      }
 
-    /* Dark concave liner between moulding and canvas */
-    .frame-liner {
-      position: relative;
-      padding: 10px;
-      background: linear-gradient(135deg, #1a0a06 0%, #2e1008 50%, #1a0a06 100%);
-      box-shadow:
-        inset 0 0 12px rgba(0,0,0,0.9),
-        inset 0 2px 4px rgba(0,0,0,0.7);
-    }
+      /* Inner gold lip at the sight edge */
+      .frame-moulding::after {
+        content: '';
+        position: absolute;
+        inset: 24px;
+        border: 3px solid var(--gold-mid);
+        box-shadow:
+          inset 0 0 0 1px var(--gold-hi),
+          0 0 0 1px var(--gold-low);
+        pointer-events: none;
+      }
 
-    /*
+      /* Dark concave liner between moulding and canvas */
+      .frame-liner {
+        position: relative;
+        padding: 10px;
+        background: linear-gradient(135deg, #1a0a06 0%, #2e1008 50%, #1a0a06 100%);
+        box-shadow:
+          inset 0 0 12px rgba(0, 0, 0, 0.9),
+          inset 0 2px 4px rgba(0, 0, 0, 0.7);
+      }
+
+      /*
       Canvas — drop your image inside this div.
       Adjust width / height to match your image's aspect ratio.
     */
-    .frame-canvas {
-      width: 360px;
-      height: 260px;
-      overflow: hidden;
-      background: #111;
-    }
+      .frame-canvas {
+        width: 360px;
+        height: 260px;
+        overflow: hidden;
+        background: #111;
+      }
 
-    .frame-canvas img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
+      .frame-canvas img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
 
-    /* Corner ornaments */
-    .corner {
-      position: absolute;
-      width: 64px;
-      height: 64px;
-      z-index: 3;
-      pointer-events: none;
-    }
-    .corner.tl { top: -1px;    left: -1px;   }
-    .corner.tr { top: -1px;    right: -1px;  transform: scaleX(-1); }
-    .corner.bl { bottom: -1px; left: -1px;   transform: scaleY(-1); }
-    .corner.br { bottom: -1px; right: -1px;  transform: scale(-1, -1); }
+      /* Corner ornaments */
+      .corner {
+        position: absolute;
+        width: 64px;
+        height: 64px;
+        z-index: 3;
+        pointer-events: none;
+      }
 
-    /* Side medallions */
-    .side-accent {
-      position: absolute;
-      width: 28px;
-      height: 28px;
-      z-index: 3;
-      pointer-events: none;
-    }
-    .side-accent.top    { top: 13px;    left: 50%; transform: translateX(-50%); }
-    .side-accent.bottom { bottom: 13px; left: 50%; transform: translateX(-50%) scaleY(-1); }
-    .side-accent.left   { left: 13px;   top: 50%;  transform: translateY(-50%) rotate(-90deg); }
-    .side-accent.right  { right: 13px;  top: 50%;  transform: translateY(-50%) rotate(90deg); }
-  </style>
-</head>
-<body>
+      .corner.tl {
+        top: -1px;
+        left: -1px;
+      }
 
-<div class="frame-rim">
-  <div class="frame-moulding">
+      .corner.tr {
+        top: -1px;
+        right: -1px;
+        transform: scaleX(-1);
+      }
 
-    <!-- Corner ornaments (acanthus rosettes — drawn once, mirrored via CSS) -->
-    <svg class="corner tl" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z" fill="#5c2218"/>
-      <path d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z" fill="#8b3a2a" opacity="0.8"/>
-      <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <g transform="translate(32,32)">
-        <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-        <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5"/>
-        <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z"     fill="#e8c96a" opacity="0.6"/>
-        <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z"   fill="#e8c96a" opacity="0.6"/>
-        <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z"  fill="#e8c96a" opacity="0.75"/>
-        <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75"/>
-        <circle r="3.5" fill="#e8c96a"/>
-        <circle r="1.5" fill="#7a5e18"/>
-      </g>
-    </svg>
-    <svg class="corner tr" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z" fill="#5c2218"/>
-      <path d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z" fill="#8b3a2a" opacity="0.8"/>
-      <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <g transform="translate(32,32)">
-        <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-        <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5"/>
-        <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z"     fill="#e8c96a" opacity="0.6"/>
-        <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z"   fill="#e8c96a" opacity="0.6"/>
-        <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z"  fill="#e8c96a" opacity="0.75"/>
-        <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75"/>
-        <circle r="3.5" fill="#e8c96a"/>
-        <circle r="1.5" fill="#7a5e18"/>
-      </g>
-    </svg>
-    <svg class="corner bl" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z" fill="#5c2218"/>
-      <path d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z" fill="#8b3a2a" opacity="0.8"/>
-      <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <g transform="translate(32,32)">
-        <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-        <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5"/>
-        <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z"     fill="#e8c96a" opacity="0.6"/>
-        <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z"   fill="#e8c96a" opacity="0.6"/>
-        <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z"  fill="#e8c96a" opacity="0.75"/>
-        <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75"/>
-        <circle r="3.5" fill="#e8c96a"/>
-        <circle r="1.5" fill="#7a5e18"/>
-      </g>
-    </svg>
-    <svg class="corner br" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z" fill="#5c2218"/>
-      <path d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z" fill="#8b3a2a" opacity="0.8"/>
-      <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6"/>
-      <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5"/>
-      <g transform="translate(32,32)">
-        <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-        <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5"/>
-        <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z"    fill="#e8c96a" opacity="0.75"/>
-        <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z"     fill="#e8c96a" opacity="0.6"/>
-        <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z"    fill="#e8c96a" opacity="0.9"/>
-        <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z"   fill="#e8c96a" opacity="0.6"/>
-        <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z"  fill="#e8c96a" opacity="0.75"/>
-        <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75"/>
-        <circle r="3.5" fill="#e8c96a"/>
-        <circle r="1.5" fill="#7a5e18"/>
-      </g>
-    </svg>
+      .corner.bl {
+        bottom: -1px;
+        left: -1px;
+        transform: scaleY(-1);
+      }
 
-    <!-- Side medallions -->
-    <svg class="side-accent top" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-      <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z"  fill="#e8c96a" opacity="0.9"/>
-      <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9"/>
-      <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z"  fill="#e8c96a" opacity="0.7"/>
-      <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7"/>
-      <circle cx="14" cy="14" r="2.5" fill="#e8c96a"/>
-      <circle cx="14" cy="14" r="1"   fill="#7a5e18"/>
-    </svg>
-    <svg class="side-accent bottom" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-      <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z"  fill="#e8c96a" opacity="0.9"/>
-      <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9"/>
-      <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z"  fill="#e8c96a" opacity="0.7"/>
-      <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7"/>
-      <circle cx="14" cy="14" r="2.5" fill="#e8c96a"/>
-      <circle cx="14" cy="14" r="1"   fill="#7a5e18"/>
-    </svg>
-    <svg class="side-accent left" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-      <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z"  fill="#e8c96a" opacity="0.9"/>
-      <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9"/>
-      <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z"  fill="#e8c96a" opacity="0.7"/>
-      <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7"/>
-      <circle cx="14" cy="14" r="2.5" fill="#e8c96a"/>
-      <circle cx="14" cy="14" r="1"   fill="#7a5e18"/>
-    </svg>
-    <svg class="side-accent right" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
-      <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8"/>
-      <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z"  fill="#e8c96a" opacity="0.9"/>
-      <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9"/>
-      <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z"  fill="#e8c96a" opacity="0.7"/>
-      <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7"/>
-      <circle cx="14" cy="14" r="2.5" fill="#e8c96a"/>
-      <circle cx="14" cy="14" r="1"   fill="#7a5e18"/>
-    </svg>
+      .corner.br {
+        bottom: -1px;
+        right: -1px;
+        transform: scale(-1, -1);
+      }
 
-    <!-- Dark liner + empty canvas -->
-    <div class="frame-liner">
-      <div class="frame-canvas">
+      /* Side medallions */
+      .side-accent {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        z-index: 3;
+        pointer-events: none;
+      }
+
+      .side-accent.top {
+        top: 13px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .side-accent.bottom {
+        bottom: 13px;
+        left: 50%;
+        transform: translateX(-50%) scaleY(-1);
+      }
+
+      .side-accent.left {
+        left: 13px;
+        top: 50%;
+        transform: translateY(-50%) rotate(-90deg);
+      }
+
+      .side-accent.right {
+        right: 13px;
+        top: 50%;
+        transform: translateY(-50%) rotate(90deg);
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div class="frame-rim">
+      <div class="frame-moulding">
+
+        <!-- Corner ornaments (acanthus rosettes — drawn once, mirrored via CSS) -->
+        <svg class="corner tl" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z"
+            fill="#5c2218" />
+          <path
+            d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z"
+            fill="#8b3a2a" opacity="0.8" />
+          <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <g transform="translate(32,32)">
+            <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+            <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5" />
+            <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <circle r="3.5" fill="#e8c96a" />
+            <circle r="1.5" fill="#7a5e18" />
+          </g>
+        </svg>
+        <svg class="corner tr" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z"
+            fill="#5c2218" />
+          <path
+            d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z"
+            fill="#8b3a2a" opacity="0.8" />
+          <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <g transform="translate(32,32)">
+            <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+            <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5" />
+            <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <circle r="3.5" fill="#e8c96a" />
+            <circle r="1.5" fill="#7a5e18" />
+          </g>
+        </svg>
+        <svg class="corner bl" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z"
+            fill="#5c2218" />
+          <path
+            d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z"
+            fill="#8b3a2a" opacity="0.8" />
+          <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <g transform="translate(32,32)">
+            <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+            <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5" />
+            <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <circle r="3.5" fill="#e8c96a" />
+            <circle r="1.5" fill="#7a5e18" />
+          </g>
+        </svg>
+        <svg class="corner br" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0 0 L40 0 Q46 0 46 6 L46 12 Q46 18 52 18 L58 18 Q64 18 64 24 L64 64 L58 64 L58 30 Q58 26 54 26 L48 26 Q44 26 44 22 L44 16 Q44 12 40 12 L0 12 Z"
+            fill="#5c2218" />
+          <path
+            d="M2 2 L38 2 Q42 2 42 6 L42 10 Q42 14 46 14 L52 14 Q56 14 56 18 L56 62 L52 62 L52 28 Q52 24 48 24 L44 24 Q40 24 40 20 L40 14 Q40 10 36 10 L2 10 Z"
+            fill="#8b3a2a" opacity="0.8" />
+          <path d="M4 4 L36 4" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M4 7 L36 7" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <path d="M54 4 L54 36" stroke="#e8c96a" stroke-width="1" fill="none" opacity="0.6" />
+          <path d="M57 4 L57 36" stroke="#b8922a" stroke-width="0.5" fill="none" opacity="0.5" />
+          <g transform="translate(32,32)">
+            <circle r="13" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+            <circle r="11" fill="none" stroke="#b8922a" stroke-width="0.5" />
+            <path d="M0,-10 Q3,-6 0,-3 Q-3,-6 0,-10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M7,-7  Q5,-3  2,-2 Q3,-5  7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M10,0  Q6,3   3,2  Q5,-1  10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M7,7   Q3,5   2,2  Q5,3   7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M0,10  Q-3,6  0,3  Q3,6   0,10Z" fill="#e8c96a" opacity="0.9" />
+            <path d="M-7,7  Q-5,3  -2,2 Q-3,5  -7,7Z" fill="#e8c96a" opacity="0.6" />
+            <path d="M-10,0 Q-6,-3 -3,2 Q-5,1  -10,0Z" fill="#e8c96a" opacity="0.75" />
+            <path d="M-7,-7 Q-3,-5 -2,-2 Q-5,-3 -7,-7Z" fill="#e8c96a" opacity="0.75" />
+            <circle r="3.5" fill="#e8c96a" />
+            <circle r="1.5" fill="#7a5e18" />
+          </g>
+        </svg>
+
+        <!-- Side medallions -->
+        <svg class="side-accent top" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+          <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z" fill="#e8c96a" opacity="0.7" />
+          <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7" />
+          <circle cx="14" cy="14" r="2.5" fill="#e8c96a" />
+          <circle cx="14" cy="14" r="1" fill="#7a5e18" />
+        </svg>
+        <svg class="side-accent bottom" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+          <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z" fill="#e8c96a" opacity="0.7" />
+          <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7" />
+          <circle cx="14" cy="14" r="2.5" fill="#e8c96a" />
+          <circle cx="14" cy="14" r="1" fill="#7a5e18" />
+        </svg>
+        <svg class="side-accent left" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+          <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z" fill="#e8c96a" opacity="0.7" />
+          <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7" />
+          <circle cx="14" cy="14" r="2.5" fill="#e8c96a" />
+          <circle cx="14" cy="14" r="1" fill="#7a5e18" />
+        </svg>
+        <svg class="side-accent right" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="14" cy="14" rx="13" ry="7" fill="#7a5e18" stroke="#e8c96a" stroke-width="0.8" />
+          <path d="M14,6  Q17,10 14,14 Q11,10 14,6Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M14,22 Q11,18 14,14 Q17,18 14,22Z" fill="#e8c96a" opacity="0.9" />
+          <path d="M6,14  Q10,11 14,14 Q10,17 6,14Z" fill="#e8c96a" opacity="0.7" />
+          <path d="M22,14 Q18,17 14,14 Q18,11 22,14Z" fill="#e8c96a" opacity="0.7" />
+          <circle cx="14" cy="14" r="2.5" fill="#e8c96a" />
+          <circle cx="14" cy="14" r="1" fill="#7a5e18" />
+        </svg>
+
+        <!-- Dark liner + empty canvas -->
+        <div class="frame-liner">
+          <div class="frame-canvas">
             <img src="assets/images/AS.png" alt="headshot in picture frame">
+          </div>
+        </div>
+
       </div>
     </div>
 
-  </div>
-</div>
+  </body>
 
-</body>
 </html>

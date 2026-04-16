@@ -1,10 +1,8 @@
 <header aria-label="Main navigation">
-    <nav class="nav-menu" aria-label="Primary">
+  <nav class="nav-menu" aria-label="Primary">
     <!-- Logo -->
     <a class="nav-logo" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}"
-         alt="OUROBOROS"
-         class="nav-logo-mark">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="OUROBOROS" class="nav-logo-mark">
       <div class="nav-logo-text">OUROBOROS
         <span class="nav-logo-sub"> Consulting</span>
       </div>
@@ -15,7 +13,7 @@
       <div class="card--formula">
         <div class="card--formula__interior">
           <a href="{{ '/intake' | relative_url }}">
-          <i class="fas fa-envelope" aria-hidden="true"></i>
+            <i class="fas fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
       </div>
@@ -25,10 +23,8 @@
     <div class="nav-dropdown nav-contact">
       <div class="card--formula">
         <div class="card--formula__interior">
-          <a href="https://www.google.com/search?q=weather+today"
-              id="safety-exit"
-              aria-label="Quick exit to a neutral page (double-tap Escape)"
-              rel="noopener noreferrer">
+          <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
+            aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
             <i class="fas fa-dungeon" aria-hidden="true"></i>
           </a>
         </div>
@@ -42,41 +38,40 @@
     </button>
 
 
-      <div class="nav-menu-inner">
-      <!-- Main Nav Links -->
-      <div class="nav-links">
-        {% for item in site.data.nav %}
-        {% assign nav_icon = 'fas fa-circle' %}
-        {% case item.title %}
-        {% when 'About' %}{% assign nav_icon = 'fa-solid fa-fingerprint' %}
-        {% when 'Services' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
-        {% when 'Projects' %}{% assign nav_icon = 'fa-solid fa-diagram-project' %}
-        {% when 'Work' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
+    <!-- Main Nav Links -->
+    <div class="nav-links">
+      {% for item in site.data.nav %}
+      {% assign nav_icon = 'fas fa-circle' %}
+      {% case item.title %}
+      {% when 'About' %}{% assign nav_icon = 'fa-solid fa-fingerprint' %}
+      {% when 'Services' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
+      {% when 'Projects' %}{% assign nav_icon = 'fa-solid fa-diagram-project' %}
+      {% when 'Work' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
       {% when 'Resources' %}{% assign nav_icon = 'fa-solid fa-scroll' %}
       {% endcase %}
       <div class="nav-dropdown">
-      <div class="card--formula">
-      <div class="card--formula__interior">
-      <a href="{{ item.url | relative_url }}" class="nav-dropdown-toggle">
-      <i class="{{ nav_icon }}" aria-hidden="true"></i>
-      <span>{{ item.title }}</span>
-      </a>
-      {% if item.children %}<button class="nav-accordion-btn" aria-label="Expand {{ item.title }}" aria-expanded="false"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>{% endif %}
-      </div>
-      </div>
+        <div class="card--formula">
+          <div class="card--formula__interior">
+            <a href="{{ item.url | relative_url }}" class="nav-dropdown-toggle">
+              <i class="{{ nav_icon }}" aria-hidden="true"></i>
+              <span>{{ item.title }}</span>
+            </a>
+            {% if item.children %}<button class="nav-accordion-btn" aria-label="Expand {{ item.title }}"
+              aria-expanded="false"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>{% endif %}
+          </div>
+        </div>
 
-  <div class="nav-dropdown-menu">
-{% for child in item.children %}
-<div class="card--formula">
-<div class="card--formula__interior">
-<a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-            </div>
-            </div>
-            {% endfor %}
+        <div class="nav-dropdown-menu">
+          {% for child in item.children %}
+          <div class="card--formula">
+            <div class="card--formula__interior">
+              <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
             </div>
           </div>
           {% endfor %}
         </div>
       </div>
+      {% endfor %}
+    </div>
   </nav>
 </header>

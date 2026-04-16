@@ -28,10 +28,7 @@ layout: default
 
 <!-- ── PDF Embed ─────────────────────────────────────────────────────────── -->
 <div class="psa-embed-wrap">
-  <iframe
-    src="{{ page.pdf | relative_url }}"
-    class="psa-embed"
-    title="{{ page.title }}"
+  <iframe src="{{ page.pdf | relative_url }}" class="psa-embed" title="{{ page.title }}"
     aria-label="{{ page.title }} — PDF document">
   </iframe>
   <p class="psa-embed-fallback">
@@ -51,7 +48,7 @@ layout: default
   const bar = document.getElementById('progress-bar');
   window.addEventListener('scroll', () => {
     const scrolled = window.scrollY;
-    const total    = document.documentElement.scrollHeight - window.innerHeight;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
     bar.style.width = (scrolled / total * 100) + '%';
   });
 </script>

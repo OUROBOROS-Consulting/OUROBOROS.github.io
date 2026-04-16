@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>
-    {% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}
-  </title>
 
-  {% assign _desc = page.lede | default: page.description | default: "Bespoke solutions where technology, rigorous research, and principled advocacy meet." %}
-  <meta name="description" content="{{ _desc | strip_html | truncate: 160 }}"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      {% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}
+    </title>
 
-  <!-- Open Graph / social preview -->
-  <meta property="og:type"        content="website"/>
-  <meta property="og:url"         content="{{ page.url | absolute_url }}"/>
-  <meta property="og:title"       content="{% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}"/>
-  <meta property="og:description" content="{{ _desc | strip_html | truncate: 160 }}"/>
-  <meta property="og:image"       content="{{ '/assets/images/AS.png' | absolute_url }}"/>
-  <meta name="twitter:card"       content="summary"/>
-  <meta name="keywords" content="institutional betrayal, institutional courage, coercive control, survivor advocacy, whistleblower support, AI safety, federal technology, biostatistics"/>
+    {% assign _desc = page.lede | default: page.description | default: "Bespoke solutions where technology, rigorous
+    research, and principled advocacy meet." %}
+    <meta name="description" content="{{ _desc | strip_html | truncate: 160 }}" />
 
-  {% if page.url == "/" %}
-  <script type="application/ld+json">
+    <!-- Open Graph / social preview -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{{ page.url | absolute_url }}" />
+    <meta property="og:title"
+      content="{% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:description" content="{{ _desc | strip_html | truncate: 160 }}" />
+    <meta property="og:image" content="{{ '/assets/images/AS.png' | absolute_url }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="keywords"
+      content="institutional betrayal, institutional courage, coercive control, survivor advocacy, whistleblower support, AI safety, federal technology, biostatistics" />
+
+    {% if page.url == "/" %}
+    <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
@@ -47,19 +51,22 @@
     ]
   }
   </script>
-  {% endif %}
+    {% endif %}
 
-  <link rel="icon" href="{{ '/assets/images/logo.svg' | relative_url }}" type="image/svg+xml"/>
-  <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}"/>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}"/>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-</head>
+    <link rel="icon" href="{{ '/assets/images/logo.svg' | relative_url }}" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  </head>
 
-<body>
-  {% include nav.html %}
-  {{ content }}
-  {% include footer.html %}
-  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-</body>
+  <body>
+    {% include nav.html %}
+    {{ content }}
+    {% include footer.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+  </body>
+
 </html>
