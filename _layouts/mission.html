@@ -1,0 +1,379 @@
+---
+layout: default
+---
+
+<!--
+  MISSION LAYOUT
+  ══════════════
+  Used by pages that define `sections:` in their front matter (12 pages).
+  Data flows top-to-bottom:
+    1. Gold progress bar (fixed to top, animated by JS at the bottom)
+    2. Hero header   — page title, tagline, lede, optional headshot
+    3. About blurb   — optional short intro paragraph (page.about)
+    4. Pull quote    — optional styled blockquote (page.pull_quote)
+    5. Sections loop — the main content, one <section> per front-matter item
+    6. Social links  — optional nav row of profile links (page.links)
+    7. Scripts       — bibtex.js / playlist-carousel.js loaded only if needed
+
+  Each section renders differently based on which key it has:
+    playlist_carousel: true  → swipeable iframe carousel
+    data_source: some_file   → grid of bib-cards from _data/some_file.yml
+    bibtex_src: path.bib     → placeholder div; bibtex.js fills it client-side
+    html: "<raw html>"       → injected verbatim (escape carefully in YAML)
+    body_paragraphs: [...]   → list of markdown strings, each becomes a <p>
+    body: "text"             → single plain-text paragraph
+-->
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PROGRESS BAR
+     A thin gold line pinned to the top of the viewport.
+     Width (0–100%) is set by the <script> at the bottom as the user scrolls.
+     ══════════════════════════════════════════════════════════════════════ -->
+<div id="progress-bar"></div>
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     HERO
+     Full-width header with page metadata + optional hex-cropped headshot.
+
+     Front-matter keys consumed here:
+       back_url     — href for the ← Back link (defaults to /)
+       category     — small eyebrow label above the title
+       title        — main <h1>
+       tagline      — subtitle; parsed as Markdown so **bold** works
+       lede         — one-sentence intro paragraph
+       tags         — list of strings; each renders as a pill/anchor link
+                      that jumps to the matching section id on the page
+       headshot     — path to portrait image (optional)
+       headshot_alt — alt text for that image (required if headshot is set)
+
+     CSS notes:
+       `.svc-hero-inner--single` is added when there is NO headshot —
+       it switches the grid from two columns to one centred column.
+     ══════════════════════════════════════════════════════════════════════ -->
+<header class="svc-hero">
+
+  <!-- ← Back navigation link -->
+  <a class="post-back" href="{{ page.back_url | default: '/' | relative_url }}">Back</a>
+
+  <!-- Two-column grid: text left, portrait right (portrait is optional) -->
+  <div class="svc-hero-inner{% unless page.headshot %} svc-hero-inner--single{% endunless %}">
+
+    <!-- Left column: all text content -->
+    <div class="svc-hero-text">
+      <p class="post-category">{{ page.category }}</p>
+      <h1 class="svc-title">{{ page.title }}</h1>
+
+      <!-- tagline supports inline Markdown (e.g. *emphasis*, **bold**) -->
+      <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+
+      <p class="svc-lede">{{ page.lede }}</p>
+
+      <!-- Tag pills — each links to an anchor (#tag-name) on this page.
+           The matching section must set  id: tag-name  in front matter. -->
+      <div class="svc-tags">
+        {% for tag in page.tags %}
+        <div class="hero-cta"><a href="#{{ tag }}" class="btn">{{ tag }}</a></div>
+        {% endfor %}
+      </div>
+    </div><!-- /svc-hero-text -->
+
+    <!-- Right column: hexagon-cropped portrait (only if headshot is set) -->
+    {% if page.headshot %}
+    <div class="hex-portrait">
+      <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
+    </div>
+    {% endif %}
+
+  </div><!-- /svc-hero-inner -->
+</header><!-- /svc-hero -->
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     ABOUT BLURB  (optional)
+     A single two-column section rendered before the main sections loop.
+     Set in front matter as:
+       about:
+         heading: "Who this is for"
+         body:    "One or two sentences of context."
+     ══════════════════════════════════════════════════════════════════════ -->
+{% if page.about %}
+<div class="svc-body">
+  <section class="svc-section">
+    <!-- Left column: label / heading -->
+    <div class="svc-section-label">
+      <p>{{ page.about.heading }}</p>
+    </div>
+    <!-- Right column: body text -->
+    <div class="svc-section-content">
+      <p>{{ page.about.body }}</p>
+    </div>
+  </section>
+</div>
+{% endif %}
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PULL QUOTE  (optional)
+     A visually prominent blockquote, full-width, between blurb and sections.
+     Set in front matter as:
+       pull_quote: "Whatever you want to emphasise."
+     ══════════════════════════════════════════════════════════════════════ -->
+{% if page.pull_quote %}
+<div class="svc-body">
+  <aside class="pull-quote">
+    <blockquote>{{ page.pull_quote }}</blockquote>
+  </aside>
+</div>
+{% endif %}
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     CONTENT SECTIONS LOOP
+     Iterates over `page.sections` (a YAML list).  Each item is a dict
+     with at least `id` and `heading`, plus exactly one content key.
+     The if/elsif chain below picks the right rendering strategy.
+
+     Common section keys:
+       id:      string  — used as the HTML id attribute (anchor target)
+       heading: string  — shown in the left-column label
+
+     Content keys (pick one per section):
+       playlist_carousel: true   — see PLAYLIST CAROUSEL block below
+       data_source: "filename"   — see DATA SOURCE GRID block below
+       bibtex_src:  "path.bib"   — see BIBTEX block below
+       html: "<raw html>"        — see RAW HTML block below
+       body_paragraphs: [...]    — see CARD BODY block below
+       body: "text"              — see CARD BODY block below
+     ══════════════════════════════════════════════════════════════════════ -->
+{% if page.sections %}
+<div class="svc-body">
+  {% for section in page.sections %}
+
+  <!--
+    Section: {{ section.heading }}
+    id="{{ section.id }}"
+    Layout: two columns — label (left) + content (right)
+  -->
+  <section id="{{ section.id }}" class="svc-section">
+
+    <!-- Left column: small label text -->
+    <div class="svc-section-label">
+      <p>{{ section.heading }}</p>
+    </div>
+
+    <!-- Right column: dynamic content (see branches below) -->
+    <div class="svc-section-content">
+
+      {% if section.playlist_carousel %}
+      <!-- ── PLAYLIST CAROUSEL ──────────────────────────────────────────
+           Triggered by:  playlist_carousel: true
+           Also requires: data_source: "filename"  (no .yml extension)
+                          pointing to a file in _data/ like playlists.yml
+
+           Each entry in that file should have:
+             embed_url:   the Apple Music / Spotify iframe src
+             title:       playlist name
+             description: short blurb
+             height:      iframe height in px (optional, default 450)
+
+           Iframes use  data-src  instead of  src  so they don't load
+           until the slide is active (playlist-carousel.js swaps them).
+      ─────────────────────────────────────────────────────────────────── -->
+      {% assign _playlists = site.data[section.data_source] %}
+      <div class="playlist-carousel" id="{{ section.id }}-carousel"
+        aria-label="{{ section.heading }} playlist carousel">
+
+        <!-- Scrollable track — one slide per playlist -->
+        <div class="playlist-carousel-track" aria-live="polite">
+          {% for pl in _playlists %}
+          <div class="playlist-carousel-slide" role="group"
+            aria-label="Playlist {{ forloop.index }} of {{ _playlists.size }}">
+            <div class="card--formula">
+              <div class="card--formula__interior playlist-card">
+
+                <!-- data-src (not src) → lazy-loaded by playlist-carousel.js -->
+                <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="{{ pl.height | default: 450 }}"
+                  class="playlist-iframe" data-src="{{ pl.embed_url }}" title="{{ pl.title }}"
+                  sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation">
+                </iframe>
+
+                <!-- Optional metadata below the iframe -->
+                {% if pl.title or pl.description %}
+                <div class="playlist-meta">
+                  {% if pl.title %}<p class="playlist-title">{{ pl.title }}</p>{% endif %}
+                  {% if pl.description %}<p class="card-desc">{{ pl.description }}</p>{% endif %}
+                </div>
+                {% endif %}
+
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div><!-- /playlist-carousel-track -->
+
+        <!-- Prev/Next buttons and dot indicators — only if more than 1 slide -->
+        {% if _playlists.size > 1 %}
+        <div class="playlist-carousel-controls">
+          <button class="carousel-btn playlist-btn--prev" aria-label="Previous playlist">&#8592;</button>
+          <span class="playlist-carousel-count">1 / {{ _playlists.size }}</span>
+          <button class="carousel-btn playlist-btn--next" aria-label="Next playlist">&#8594;</button>
+        </div>
+
+        <!-- One dot per slide; JS adds/removes `.active` on navigation -->
+        <div class="carousel-dots playlist-carousel-dots" role="tablist" aria-label="Playlist navigation">
+          {% for pl in _playlists %}
+          <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+            aria-label="Playlist {{ forloop.index }}"></button>
+          {% endfor %}
+        </div>
+        {% endif %}
+
+      </div><!-- /playlist-carousel -->
+
+      {% elsif section.data_source %}
+      <!-- ── DATA SOURCE GRID ───────────────────────────────────────────
+           Triggered by:  data_source: "filename"  (without .yml)
+           Loads _data/filename.yml and renders each item as a bib-card.
+
+           Each item in the data file may have:
+             title:       required — shown as the card title
+             author:      optional byline
+             note:        optional venue / journal (Markdown ok)
+             description: optional longer note (Markdown ok)
+             link:        optional URL; omit or set "#" to hide the link
+      ─────────────────────────────────────────────────────────────────── -->
+      {% assign _items = site.data[section.data_source] %}
+      <div class="testimonials-grid">
+        {% for _item in _items %}
+        <div class="bib-card">
+          <span class="bib-title">{{ _item.title }}</span>
+          {% if _item.author %}<p class="bib-byline">{{ _item.author }}</p>{% endif %}
+          {% if _item.note %}<p class="bib-venue">{{ _item.note | markdownify }}</p>{% endif %}
+          {% if _item.description %}<p class="bib-venue">{{ _item.description | markdownify }}</p>{% endif %}
+          <!-- Only render the link if it's set and isn't the placeholder "#" -->
+          {% if _item.link and _item.link != "#" %}<a class="bib-link" href="{{ _item.link }}" target="_blank"
+            rel="noopener">View →</a>{% endif %}
+        </div>
+        {% endfor %}
+      </div><!-- /testimonials-grid -->
+
+      {% elsif section.bibtex_src %}
+      <!-- ── BIBTEX REFERENCES ──────────────────────────────────────────
+           Triggered by:  bibtex_src: "path/to/refs.bib"
+           The div is a placeholder; bibtex.js fetches the .bib file at
+           runtime, parses it, and injects styled bib-card elements.
+           The `data-bibtex-src` attribute tells the script where to fetch.
+      ─────────────────────────────────────────────────────────────────── -->
+      <div class="testimonials-grid" data-bibtex-src="{{ section.bibtex_src }}">
+        <p class="card-desc">Loading references…</p>
+      </div>
+
+      {% elsif section.html %}
+      <!-- ── RAW HTML ───────────────────────────────────────────────────
+           Triggered by:  html: "<div>…</div>"
+           The value is injected verbatim — use with care.
+           In YAML, wrap multi-line HTML in a literal block scalar (|).
+      ─────────────────────────────────────────────────────────────────── -->
+      {{ section.html }}
+
+      {% else %}
+      <!-- ── CARD BODY (default) ───────────────────────────────────────
+           Used when none of the specialised keys above are present.
+           Supports two sub-variants:
+
+           body_paragraphs: (list of Markdown strings)
+             - "First paragraph with **bold**."
+             - "Second paragraph."
+
+           body: "Single plain-text paragraph."  (simpler fallback)
+      ─────────────────────────────────────────────────────────────────── -->
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          {% if section.body_paragraphs %}
+          <!-- Each list item becomes its own Markdown-rendered block -->
+          {% for paragraph in section.body_paragraphs %}
+          {{ paragraph | markdownify }}
+          {% endfor %}
+          {% elsif section.body %}
+          <p>{{ section.body }}</p>
+          {% endif %}
+        </div>
+      </div>
+
+      {% endif %}
+    </div><!-- /svc-section-content -->
+  </section>
+
+  {% endfor %}
+</div><!-- /svc-body (sections loop) -->
+{% endif %}
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     SOCIAL / PROFILE LINKS  (optional)
+     Rendered as a horizontal nav row at the bottom of the page.
+     Set in front matter as:
+       links:
+         github:   "https://github.com/username"
+         linkedin: "https://linkedin.com/in/username"
+         orcid:    "https://orcid.org/0000-…"
+         tutor:    "https://tutoring-platform.com/…"
+         contact:  "/contact/"   ← relative URL, no target="_blank"
+
+     Omit a key entirely OR set it to "" to hide that link.
+     Note: `contact` does NOT open in a new tab (intentional — it's
+     an internal page, not an external profile).
+     ══════════════════════════════════════════════════════════════════════ -->
+{% if page.links %}
+<div class="svc-body">
+  <nav class="footer-links foundation-links">
+    {% if page.links.github != "" %}<a href="{{ page.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+    {% if page.links.linkedin != "" %}<a href="{{ page.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if page.links.orcid != "" %}<a href="{{ page.links.orcid }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+    {% if page.links.tutor != "" %}<a href="{{ page.links.tutor }}" target="_blank" rel="noopener">Tutoring</a>{% endif %}
+    {% if page.links.contact != "" %}<a href="{{ page.links.contact }}">Contact</a>{% endif %}
+  </nav>
+</div>
+{% endif %}
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     CONDITIONAL SCRIPT LOADING
+     We scan all sections once and only inject the script tags that are
+     actually needed.  This avoids loading ~10 KB of JS on pages that
+     don't use those features.
+
+     _has_bibtex   → true if any section has `bibtex_src:`
+     _has_playlist → true if any section has `playlist_carousel: true`
+     ══════════════════════════════════════════════════════════════════════ -->
+{% assign _has_bibtex = false %}
+{% assign _has_playlist = false %}
+{% for section in page.sections %}
+  {% if section.bibtex_src    %}{% assign _has_bibtex   = true %}{% endif %}
+  {% if section.playlist_carousel %}{% assign _has_playlist = true %}{% endif %}
+{% endfor %}
+
+{% if _has_bibtex %}
+<!-- Parses .bib files and injects styled reference cards into
+     [data-bibtex-src] containers defined in the sections above. -->
+<script src="{{ '/assets/js/bibtex.js' | relative_url }}" defer></script>
+{% endif %}
+
+{% if _has_playlist %}
+<!-- Handles prev/next navigation and lazy-loads iframe embeds
+     by swapping  data-src → src  on the active slide. -->
+<script src="{{ '/assets/js/playlist-carousel.js' | relative_url }}" defer></script>
+{% endif %}
+
+<!-- ══════════════════════════════════════════════════════════════════════
+     PROGRESS BAR SCRIPT
+     Listens for scroll events and updates the width of #progress-bar
+     (defined at the very top of this file) from 0% to 100%.
+     scrollY        = how far the user has scrolled in pixels
+     scrollHeight   = total page height in pixels
+     innerHeight    = visible viewport height in pixels
+     total          = maximum scrollable distance  (scrollHeight - innerHeight)
+     ══════════════════════════════════════════════════════════════════════ -->
+<script>
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+</script>
