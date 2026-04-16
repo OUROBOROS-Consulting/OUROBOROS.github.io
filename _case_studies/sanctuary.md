@@ -1,7 +1,7 @@
 ---
 title: Building a Smart Fortress
 description: An honest account of building a smart home for protecting a survivor who was betrayed by law enforcement — myself.
-layout: foundation
+layout: mission
 back_url: /work/
 category: Survivor Security
 lede: When institutions betrayed me and failed to keep me safe, I built my own.

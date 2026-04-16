@@ -1,7 +1,7 @@
 ---
 title: Scholarly Resources
 description: Academic literature on coercive control, betrayal trauma, psychopathology, and institutional failure.
-layout: foundation
+layout: mission
 category: Resources
 lede: The research that institutions cite but do not follow.
 tags: [Antagonism, Trauma, Institutional Betrayal]

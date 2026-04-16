@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: mission
 title: Mission
 category: Technologist · Researcher · Advocate
 headshot: /assets/images/AS.png

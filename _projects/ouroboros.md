@@ -1,7 +1,7 @@
 ---
 title: OUROBOROS
 description: A carefully researched cybernetic exploration of seemingly infinite positive feedback loops I lived through.
-layout: foundation
+layout: mission
 category: About
 lede: Abandon Most Hope, Ye who Enter
 tags: [Antagonism, Trauma, Institutional Betrayal]
