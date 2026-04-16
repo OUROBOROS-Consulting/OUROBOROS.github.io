@@ -31,12 +31,14 @@ layout: default
   <!-- Right column: portrait -->
   {% if page.headshot %}
   <div class="hero-portrait">
-    <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}"/>
+    <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
   </div>
   {% endif %}
 
   <!-- Outside the grid columns, centered at the bottom -->
-  <div class="scroll-hint"><div class="scroll-line"></div><span>Scroll</span></div>
+  <div class="scroll-hint">
+    <div class="scroll-line"></div><span>Scroll</span>
+  </div>
 </header>
 
 
@@ -76,7 +78,7 @@ layout: default
     </div>
   </section>
   {% endif %}
-  
+
   <!-- Policies -->
   {% if page.policies %}
   <section class="svc-section">
@@ -156,7 +158,8 @@ layout: default
       <p>Get Started</p>
     </div>
     <div class="svc-section-content">
-      <p class="svc-cta-body">{{ page.cta_body | default: 'Reach out and we can find a time to talk through what you need.' }}</p>
+      <p class="svc-cta-body">{{ page.cta_body | default: 'Reach out and we can find a time to talk through what you
+        need.' }}</p>
       <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
         {{ page.cta_label | default: 'Get in Touch' }}
       </a>

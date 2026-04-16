@@ -10,49 +10,50 @@ layout: default
     <defs>
       <!-- Horizontal meander tile (24×14px): classic Greek key spiral running right -->
       <pattern id="hob-h" patternUnits="userSpaceOnUse" width="24" height="14">
-        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24"
-              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
-        <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="24 0" dur="4s" repeatCount="indefinite"/>
+        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="24 0" dur="4s"
+          repeatCount="indefinite" />
       </pattern>
       <!-- Bottom strip flows left -->
       <pattern id="hob-hr" patternUnits="userSpaceOnUse" width="24" height="14">
-        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24"
-              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
-        <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="-24 0" dur="4s" repeatCount="indefinite"/>
+        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="-24 0" dur="4s"
+          repeatCount="indefinite" />
       </pattern>
       <!-- Vertical meander tile (14×24px): 90° CW rotation via (x,y)→(y, 24−x) -->
       <pattern id="hob-v" patternUnits="userSpaceOnUse" width="14" height="24">
-        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24"
-              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
-        <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="0 24" dur="4s" repeatCount="indefinite"/>
+        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="0 24" dur="4s"
+          repeatCount="indefinite" />
       </pattern>
       <!-- Left strip flows up -->
       <pattern id="hob-vr" patternUnits="userSpaceOnUse" width="14" height="24">
-        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24"
-              fill="none" stroke="var(--text)" stroke-width="1.5" stroke-linejoin="miter"/>
-        <animateTransform attributeName="patternTransform" type="translate"
-                          from="0 0" to="0 -24" dur="4s" repeatCount="indefinite"/>
+        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="0 -24" dur="4s"
+          repeatCount="indefinite" />
       </pattern>
     </defs>
-    <rect class="hob-strip hob-strip--top"    fill="url(#hob-h)"/>
-    <rect class="hob-strip hob-strip--bottom" fill="url(#hob-hr)"/>
-    <rect class="hob-strip hob-strip--right"  fill="url(#hob-v)"/>
-    <rect class="hob-strip hob-strip--left"   fill="url(#hob-vr)"/>
+    <rect class="hob-strip hob-strip--top" fill="url(#hob-h)" />
+    <rect class="hob-strip hob-strip--bottom" fill="url(#hob-hr)" />
+    <rect class="hob-strip hob-strip--right" fill="url(#hob-v)" />
+    <rect class="hob-strip hob-strip--left" fill="url(#hob-vr)" />
     <!-- Corner fills cap the intersections of the four strips -->
-    <rect class="hob-corner hob-corner--tl"/>
-    <rect class="hob-corner hob-corner--tr"/>
-    <rect class="hob-corner hob-corner--bl"/>
-    <rect class="hob-corner hob-corner--br"/>
+    <rect class="hob-corner hob-corner--tl" />
+    <rect class="hob-corner hob-corner--tr" />
+    <rect class="hob-corner hob-corner--bl" />
+    <rect class="hob-corner hob-corner--br" />
   </svg>
 
   <div class="hero-text">
     <p class="hero-eyebrow">{{ page.eyebrow }}</p>
-    <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
+    <h1 class="hero-name">{{ page.name_line1 }}<br />{{ page.name_line2 }}</h1>
     <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
-    <div class="hero-cta"><a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label | default: 'View My Work' }}</a></div>
+    <div class="hero-cta"><a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label |
+        default: 'View My Work' }}</a></div>
   </div>
 
   <div class="hero-emblem" aria-hidden="true">
@@ -74,19 +75,23 @@ layout: default
   <div class="audience-grid">
     <div class="audience-card">
       <h3>Survivors of coercive control</h3>
-      <p>You need to document what happened in a way that institutions will actually take seriously — and protect yourself from digital surveillance while you do it.</p>
+      <p>You need to document what happened in a way that institutions will actually take seriously — and protect
+        yourself from digital surveillance while you do it.</p>
     </div>
     <div class="audience-card">
       <h3>Whistleblowers &amp; federal employees</h3>
-      <p>You're pushing back against agency misconduct and need technical, statistical, or records-management support from someone who has worked inside the system.</p>
+      <p>You're pushing back against agency misconduct and need technical, statistical, or records-management support
+        from someone who has worked inside the system.</p>
     </div>
     <div class="audience-card">
       <h3>Advocates &amp; nonprofits</h3>
-      <p>You serve people navigating broken institutions and want AI-literate tooling, research, or investigation capacity you can trust with sensitive cases.</p>
+      <p>You serve people navigating broken institutions and want AI-literate tooling, research, or investigation
+        capacity you can trust with sensitive cases.</p>
     </div>
     <div class="audience-card">
       <h3>Researchers &amp; clinicians</h3>
-      <p>You study institutional betrayal, personality pathology, or public-health harm and need a collaborator fluent in both statistics and the human stakes.</p>
+      <p>You study institutional betrayal, personality pathology, or public-health harm and need a collaborator fluent
+        in both statistics and the human stakes.</p>
     </div>
   </div>
 </section>
@@ -219,7 +224,10 @@ layout: default
     <div>
       <p class="section-label">What Clients Say</p>
       <h2 class="testimonials-heading">Testimonials</h2>
-      <p class="testimonials-context" style="margin-top:0.5rem;font-size:0.8125rem;color:var(--muted);letter-spacing:0.01em;font-style:italic;">These testimonials are from federal and corporate engagements. Survivor and advocacy work is confidential by design.</p>
+      <p class="testimonials-context"
+        style="margin-top:0.5rem;font-size:0.8125rem;color:var(--muted);letter-spacing:0.01em;font-style:italic;">These
+        testimonials are from federal and corporate engagements. Survivor and advocacy work is confidential by design.
+      </p>
     </div>
     <div class="carousel-controls">
       <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial">&#8592;</button>
@@ -231,7 +239,8 @@ layout: default
   <div class="carousel" aria-live="polite" aria-label="Testimonials">
     <div class="carousel-track">
       {% for ref in site.data.testimonials %}
-      <div class="carousel-slide" role="group" aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
+      <div class="carousel-slide" role="group"
+        aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
         <div class="card--formula">
           <div class="card--formula__interior">
             <p class="card-tag">{{ ref.title }}</p>
@@ -248,10 +257,9 @@ layout: default
 
   <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
     {% for ref in site.data.testimonials %}
-    <button class="carousel-dot{% if forloop.first %} active{% endif %}"
-            role="tab"
-            aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-            aria-label="Testimonial {{ forloop.index }}"></button>
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+      aria-label="Testimonial {{ forloop.index }}"></button>
     {% endfor %}
   </div>
 </section>

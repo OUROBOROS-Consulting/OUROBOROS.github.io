@@ -1,7 +1,7 @@
 ---
 title: Communications Infrastructure for Graduate Labor Organizing
 description: Applying Federal IT and data engineering skills to build a more resilient comms pipeline for a graduate worker union than the administration has.
-layout: foundation
+layout: mission
 back_url: /work/
 category: Changemaking
 lede: When the institution fails you, the union shows up. And when it does, you show up back — with a better technical stack than they have.

@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: mission
 title: Feedback Loops
 
 # Hero

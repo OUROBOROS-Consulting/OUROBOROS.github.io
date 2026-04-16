@@ -41,25 +41,40 @@ Jekyll static site for OUROBOROS Consulting (Apostolos Stamenos). Dark, editoria
 ```
 default.html         ← HTML shell: fonts, nav, footer, main.js
   ├── home.html      ← Single-page landing (hero, stats, values, services, work, testimonials)
-  ├── foundation.html ← All multi-section pages — dual-mode (see below)
+  ├── foundation.html ← Prose pages (6): markdown content + who + CTA
+  ├── mission.html   ← Sections pages (12): about + pull_quote + sections loop + links
   ├── essays.html    ← Essay reading layout
   ├── psa.html       ← PDF embed layout with iframe
   ├── blog.html      ← LinkedIn-style post layout
   └── linkedin.html  ← LinkedIn post format
 ```
 
-### foundation.html Dual Mode (Critical)
+### foundation.html (Prose Mode)
 
-`foundation.html` renders in two completely different modes based on front matter:
+Used by 6 pages with markdown body content: `archive/design-system.md`, `archive/record.html`, `_projects/healthdata.ego.md`, `_resources/glossary.md`, `_case_studies/claudius.md`, `causes.md`.
 
-| Mode | Triggered by | Renders |
-|------|-------------|---------|
-| **Mission mode** | `hero:` key present in front matter | Structured hero → `about:` blurb → `pull_quote:` → `sections:` loop |
-| **Service/Prose mode** | No `hero:` or `sections:` key | Markdown `content` block + `.who` + CTA section |
+Renders: progress bar → service hero → `{{ content }}` prose block → optional `who:` section → CTA ("Get Started").
 
-**Mission mode sections** support rich data: `data_source:` (pulls from `_data/*.yml`), `bibtex_src:`, `playlist_carousel:`, `html:`, `body_paragraphs:`, or plain `body:`.
+`back_url` defaults to `/services/`. `headshot:` + `headshot_alt:` renders a `.hex-portrait` in the hero.
 
-The `headshot:` + `headshot_alt:` front matter renders a `.hex-portrait` image in service/prose mode only (in the hero alongside the text column).
+### mission.html (Sections Mode)
+
+Used by 12 pages with structured `sections:` front matter. `back_url` defaults to `/`.
+
+Renders: progress bar → service hero → optional `about:` blurb → optional `pull_quote:` → sections loop → optional social `links:` nav → lazy scripts.
+
+**Section content keys** (pick one per section):
+
+| Key | Renders |
+|-----|---------|
+| `playlist_carousel: true` + `data_source:` | Swipeable iframe carousel; lazy-loads via `playlist-carousel.js` |
+| `data_source: "filename"` | Grid of bib-cards from `_data/filename.yml` |
+| `bibtex_src: "path.bib"` | Placeholder filled client-side by `bibtex.js` |
+| `html: "<raw>"` | Verbatim HTML injection |
+| `body_paragraphs: [...]` | List of Markdown strings, each a `<p>` |
+| `body: "text"` | Single plain-text paragraph |
+
+`bibtex.js` and `playlist-carousel.js` are injected only when a section uses them.
 
 ### Collections (`_config.yml`)
 
@@ -156,11 +171,11 @@ Site-wide data driving dynamic sections:
 | `campaign.html` | Campaign/CTA section include |
 | `linkedinbadge.html` | LinkedIn badge embed |
 
-### foundation.html Additional Patterns
+### Shared Layout Patterns
 
-- **Scroll progress bar**: `#progress-bar` renders on every `foundation.html` page — a gold line at top tracking scroll depth.
-- **Social links block**: `page.links:` front matter (keys: `github`, `linkedin`, `orcid`, `tutor`, `contact`) renders a `.foundation-links` nav at the bottom of mission-mode pages.
-- **Lazy script loading**: `bibtex.js` and `playlist-carousel.js` are injected conditionally — only when a section uses `bibtex_src:` or `playlist_carousel: true` respectively. Playlist iframes use `data-src` instead of `src` for lazy loading; `playlist-carousel.js` swaps `data-src → src` on slide activation.
+- **Scroll progress bar**: `#progress-bar` — gold line pinned to top, on both `foundation.html` and `mission.html`.
+- **Social links** (`mission.html` only): `page.links:` front matter keys `github`, `linkedin`, `orcid`, `tutor`, `contact` render a `.foundation-links` nav at page bottom. Omit a key or set `""` to hide it. `contact` opens in same tab (internal); all others open in new tab.
+- **Playlist lazy-load**: iframes use `data-src` not `src`; `playlist-carousel.js` swaps on slide activation.
 
 ### Typography
 

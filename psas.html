@@ -10,7 +10,8 @@ permalink: /work/psas/
     <div class="svc-hero-text">
       <p class="post-category">Public Interest</p>
       <h1 class="svc-title">PSAs</h1>
-      <p class="svc-lede">Public service announcements on technology, psychopathology, coercive control, and related causes — written for general audiences.</p>
+      <p class="svc-lede">Public service announcements on technology, psychopathology, coercive control, and related
+        causes — written for general audiences.</p>
     </div>
     <div class="svc-hero-cta">
       <p class="work-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</p>
@@ -25,7 +26,7 @@ permalink: /work/psas/
   {% if site.psas.size > 0 %}
 
   {% assign sorted_psas = site.psas | sort: "date" | reverse %}
-  {% assign sections    = sorted_psas | map: "section" | uniq | sort %}
+  {% assign sections = sorted_psas | map: "section" | uniq | sort %}
 
   {% for section_name in sections %}
   {% assign section_psas = sorted_psas | where: "section", section_name %}
@@ -33,7 +34,8 @@ permalink: /work/psas/
   <section class="psa-section">
     <div class="psa-section-header">
       <h2 class="psa-section-heading">{{ section_name }}</h2>
-      <span class="work-count">{{ section_psas.size }} {% if section_psas.size == 1 %}document{% else %}documents{% endif %}</span>
+      <span class="work-count">{{ section_psas.size }} {% if section_psas.size == 1 %}document{% else %}documents{%
+        endif %}</span>
     </div>
     <div class="related-grid">
       {% for psa in section_psas %}

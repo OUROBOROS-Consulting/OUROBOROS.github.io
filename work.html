@@ -10,10 +10,12 @@ permalink: /work/
     <div class="svc-hero-text">
       <p class="post-category">Work</p>
       <h1 class="svc-title">Case Studies</h1>
-      <p class="svc-lede">Technology consulting, advocacy, and research — documented honestly, including what was hard.</p>
+      <p class="svc-lede">Technology consulting, advocacy, and research — documented honestly, including what was hard.
+      </p>
     </div>
     <div class="svc-hero-cta">
-      <p class="work-count">{{ site.case_studies.size }} {% if site.case_studies.size == 1 %}engagement{% else %}engagements{% endif %}</p>
+      <p class="work-count">{{ site.case_studies.size }} {% if site.case_studies.size == 1 %}engagement{% else
+        %}engagements{% endif %}</p>
     </div>
     <div class="svc-emblem svc-emblem--file" aria-hidden="true">
       <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
@@ -25,7 +27,7 @@ permalink: /work/
   {% if site.case_studies.size > 0 %}
 
   {% assign sorted_studies = site.case_studies | sort: "date" | reverse %}
-  {% assign categories     = sorted_studies | map: "category" | uniq | sort %}
+  {% assign categories = sorted_studies | map: "category" | uniq | sort %}
 
   {% for cat_name in categories %}
   {% assign cat_studies = sorted_studies | where: "category", cat_name %}
@@ -33,7 +35,8 @@ permalink: /work/
   <section class="psa-section">
     <div class="psa-section-header">
       <h2 class="psa-section-heading">{{ cat_name }}</h2>
-      <span class="work-count">{{ cat_studies.size }} {% if cat_studies.size == 1 %}engagement{% else %}engagements{% endif %}</span>
+      <span class="work-count">{{ cat_studies.size }} {% if cat_studies.size == 1 %}engagement{% else %}engagements{%
+        endif %}</span>
     </div>
     <div class="related-grid">
       {% for study in cat_studies %}
