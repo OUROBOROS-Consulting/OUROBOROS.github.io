@@ -1,4 +1,4 @@
-- title: Services
+- title: Work
   url: /services/
   children:
     - title: AI Integration
@@ -13,10 +13,6 @@
       url: /services/tutoring/
     - title: Advocacy Services
       url: /services/advocacy/
-
-- title: Projects
-  url: /projects/
-  children:
     - title: Case Studies
       url: /work/
     - title: PSAs
@@ -43,7 +39,5 @@
       url: /survival
     - title: Causes
       url: /causes/
-#    - title: Interests
-#      url: /interests
     - title: CV
       url: /cv
