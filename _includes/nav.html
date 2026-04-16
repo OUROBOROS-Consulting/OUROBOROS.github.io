@@ -51,6 +51,7 @@
         {% when 'About' %}{% assign nav_icon = 'fa-solid fa-fingerprint' %}
         {% when 'Services' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
         {% when 'Projects' %}{% assign nav_icon = 'fa-solid fa-diagram-project' %}
+        {% when 'Work' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
       {% when 'Resources' %}{% assign nav_icon = 'fa-solid fa-scroll' %}
       {% endcase %}
       <div class="nav-dropdown">
@@ -60,6 +61,7 @@
       <i class="{{ nav_icon }}" aria-hidden="true"></i>
       <span>{{ item.title }}</span>
       </a>
+      {% if item.children %}<button class="nav-accordion-btn" aria-label="Expand {{ item.title }}" aria-expanded="false"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>{% endif %}
       </div>
       </div>
 
