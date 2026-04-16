@@ -48,37 +48,6 @@ layout: default
     <rect class="hob-corner hob-corner--br"/>
   </svg>
 
-  <!--<svg class="hero-trellis" xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" aria-hidden="true">
-    <defs>
-      <filter id="marble" x="0%" y="0%" width="100%" height="100%" filterUnits="userSpaceOnUse">
-        <feTurbulence type="turbulence"
-                      baseFrequency="0.012 0.004"
-                      numOctaves="8"
-                      seed="12"
-                      result="raw"/>
-        <feComponentTransfer in="raw" result="banded">
-          <feFuncR type="table" tableValues="0 1 0 1 0 1 0 1 0 1 0"/>
-          <feFuncG type="table" tableValues="0 1 0 1 0 1 0 1 0 1 0"/>
-          <feFuncB type="table" tableValues="0 1 0 1 0 1 0 1 0 1 0"/>
-        </feComponentTransfer>
-        <feColorMatrix type="matrix"
-          values="0 0 0 0 0.788
-                  0 0 0 0 0.659
-                  0 0 0 0 0.298
-                  0 0 40 0 -36"
-          in="banded" result="goldVeins"/>
-        <feColorMatrix type="matrix"
-          values="0 0 0 0 0.91
-                  0 0 0 0 0.89
-                  0 0 0 0 0.87
-                  40 0 0 0 -37"
-          in="banded" result="whiteVeins"/>
-        <feBlend in="goldVeins" in2="whiteVeins" mode="screen"/>
-      </filter>
-    </defs>
-    <rect width="100%" height="100%" fill="#0d0d0d"/>
-    <rect width="100%" height="100%" filter="url(#marble)" opacity="0.18"/>
-  </svg>-->
   <div class="hero-text">
     <p class="hero-eyebrow">{{ page.eyebrow }}</p>
     <h1 class="hero-name">{{ page.name_line1 }}<br/>{{ page.name_line2 }}</h1>
@@ -205,11 +174,12 @@ layout: default
       <h2 class="work-heading">Expertise</h2>
     </div>
   </div>
-  
+
   <div class="testimonials-grid">
     {% for service in site.services %}
     <div class="card--formula">
       <div class="card--formula__interior">
+        {% if service.icon %}<i class="fa-solid {{ service.icon }}"></i>{% endif %}
         <h3 class="card-title">{{ service.title }}</h3>
         <p class="card-desc">{{ service.description }}</p>
         <a href="{{ service.url }}" class="card-link">Learn More →</a>
@@ -228,7 +198,7 @@ layout: default
     </div>
     <span class="work-count">{{ site.case_studies.size }} pieces</span>
   </div>
-  
+
   <div class="testimonials-grid">
     {% for case in site.case_studies %}
     <div class="card--formula">

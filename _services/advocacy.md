@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Advocacy & Navigation
+icon: fa-handshake
 category: Services
 lede: >
   Institutions are not designed to make your path clear.

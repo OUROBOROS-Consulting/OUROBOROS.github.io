@@ -1,8 +1,6 @@
 <footer>
-  <p class="footer-copy">
-    &copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.
-  </p>
-  <div class="footer-links">
+  <div class="footer-container">
+    <div class="footer-links">
     <div class="card--formula">
       <div class="card--formula__interior">
         <a href="{{ site.github_url }}" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="GitHub"><i class="fab fa-github"></i><span class="footer-label">GitHub</span></a>
@@ -15,7 +13,7 @@
     </div>
     <div class="card--formula">
       <div class="card--formula__interior">
-        <a href="{{ site.tutoring_url }}" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Tutoring"><i class="fas fa-book"></i><span class="footer-label">Tutoring</span></a>
+        <a href="{{ site.tutoring_url }}" target="_blank" rel="noopener noreferrer" class="footer-social" aria-label="Tutoring"><i class="fas fa-feather-pointed"></i><span class="footer-label">Tutoring</span></a>
       </div>
     </div>
 <!--     <div class="card--formula">
@@ -28,5 +26,19 @@
         <a href="{{ '/intake' | relative_url }}" class="footer-social" aria-label="Contact"><i class="fas fa-envelope"></i><span class="footer-label">Contact</span></a>
       </div>
     </div>
+    </div>
+
+    <a class="footer-logo" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}"
+           alt="OUROBOROS"
+           class="footer-logo-mark">
+      <div class="footer-logo-text">OUROBOROS
+        <span class="footer-logo-sub"> Consulting</span>
+      </div>
+    </a>
   </div>
+
+  <p class="footer-copy">
+    &copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.
+  </p>
 </footer>

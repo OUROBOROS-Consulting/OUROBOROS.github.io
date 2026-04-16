@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Technology Consulting
+icon: fa-briefcase
 category: Services
 lede: >
   The right technology, precisely applied, cuts what slows you down and returns control to you.

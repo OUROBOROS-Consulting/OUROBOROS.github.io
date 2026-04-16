@@ -1,6 +1,7 @@
 ---
 layout: service
 title: Agentic AI Strategy & Integration
+icon: fa-robot
 category: Services
 lede: >
   High-quality technical work without hiring a team. I use Claude as a force multiplier — judgment + execution — to deliver infrastructure, workflows, and systems that would normally require a full engineering team.

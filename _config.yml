@@ -2,7 +2,7 @@ title: OUROBOROS
 author: Apostolos Stamenos
 contact_url: /intake
 tutoring_url: https://www.wyzant.com/refer/tutor/86925781/?utm_source=TREF&utm_campaign=iphone&utm_content=tutorapp&utm_medium=share
-github_url: https://github.com/astamenos
+github_url: https://github.com/OUROBOROS-Consulting
 linkedin_url: https://www.linkedin.com/in/apostolos-stamenos
 url: "https://ouroborosconsulting.org"
 
@@ -34,7 +34,7 @@ collections:
   about:
     output: true
     permalink: /:slug
-  
+
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]
 markdown: kramdown

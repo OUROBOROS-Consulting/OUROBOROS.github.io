@@ -22,6 +22,15 @@ if (toggle && navLinks) {
   });
 }
 
+// ── Mobile accordion ──────────────────────────────────────────────────────────
+document.querySelectorAll('.nav-accordion-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const dropdown = btn.closest('.nav-dropdown');
+    const open = dropdown.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open);
+  });
+});
+
 // ── Scroll-triggered fade-in ──────────────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
