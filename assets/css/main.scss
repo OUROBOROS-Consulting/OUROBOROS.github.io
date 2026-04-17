@@ -45,51 +45,6 @@
   }
 }
 
-// ── Fix header row ──────────────────────────────────────────────────────
-:root {
-  --header-height: 80px;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 101;
-  height: var(--header-height);
-}
-
-header > div {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 1rem 1.5rem;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  .nav-link {
-    text-decoration: none;
-    color: var(--text);
-    font-size: 0.9rem;
-    transition: color 0.15s ease;
-
-    &:hover {
-      color: var(--gold);
-    }
-  }
-}
-
-header > div {
-  .nav-dropdown:last-of-type {
-    margin-left: auto;
-  }
-}
 
 // ── Nav contact buttons (hexagon style) ──────────────────────────────────
 .nav-contact {
@@ -119,28 +74,6 @@ header > div {
   }
 }
 
-// ── Hero section layout ──────────────────────────────────────────────────
-#hero {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  margin-top: var(--header-height);
-}
-
-.hero-text {
-  flex: 1;
-}
-
-.hero-emblem {
-  flex: 0 0 auto;
-  display: flex;
-  align-items: center;
-}
-
-// ── Hero title flush right ──────────────────────────────────────────────
-.hero-name {
-  text-align: right;
-}
 
 // ── Footer layout ────────────────────────────────────────────────────────
 .footer-container {
