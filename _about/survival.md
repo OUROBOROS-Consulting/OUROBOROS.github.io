@@ -1,10 +1,10 @@
 ---
-title: Survival Considerations
+title: Survival Guide
 layout: mission
 category: About
 lede: What no one tells you about surviving an antagonistic individual.
 tags: [Safety, Documentation, Coercive Control]
-permalink: /survival.html
+permalink: /survival-guide.html
 
 # ── About ──────────────────────────────────────────────────────────────────
 about:

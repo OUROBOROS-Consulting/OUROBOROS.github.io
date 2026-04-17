@@ -8,7 +8,9 @@ name_line1: OUROBOROS
 name_line2: Consulting
 eyebrow: Technology ❖ AI Integration ❖ Research ❖ Advocacy
 tagline: >
-  Technology, research, and institutional navigation for people betrayed by the systems meant to protect them. Grounded in Jennifer Freyd's framework of **institutional betrayal** and **institutional courage** — and in the recognition that AI now accelerates the tactics of coercive control. My work helps you build your record, your case, and your footing.
+  Technology, research, and institutional navigation for people betrayed by the systems meant to protect them.
+
+  # Grounded in Jennifer Freyd's framework of **institutional betrayal** and **institutional courage** — and in the recognition that technology accelerates the tactics of abuse and coercive control. My work helps you build your record, your case, and your footing.
 
 cta_label: Book a strategy session
 cta_url: /intake

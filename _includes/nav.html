@@ -8,17 +8,6 @@
       </div>
     </a>
 
-    <!-- Contact -->
-    <div class="nav-dropdown nav-contact">
-      <div class="card--formula">
-        <div class="card--formula__interior">
-          <a href="{{ '/intake' | relative_url }}">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
     <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
     <div class="nav-dropdown nav-contact">
       <div class="card--formula">
@@ -72,6 +61,29 @@
         </div>
       </div>
       {% endfor %}
+
+    </div>
+
+    <!-- News -->
+    <div class="nav-dropdown nav-contact">
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <a href="{{ '/intake' | relative_url }}">
+            <i class="fas fa-rss" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="nav-dropdown nav-contact">
+      <div class="card--formula">
+        <div class="card--formula__interior">
+          <a href="{{ '/intake' | relative_url }}">
+            <i class="fas fa-envelope" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
     </div>
   </nav>
 </header>

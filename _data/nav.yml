@@ -1,4 +1,4 @@
-- title: Work
+- title: Services
   url: /services/
   children:
     - title: AI Integration
@@ -13,14 +13,12 @@
       url: /services/tutoring/
     - title: Advocacy Services
       url: /services/advocacy/
-    - title: Case Studies
-      url: /work/
-    - title: PSAs
-      url: /work/psas/
 
 - title: Resources
   url: /resources/
   children:
+    - title: PSAs
+      url: /resources/psas/
     - title: Scholarly
       url: /resources/scholarly/
     - title: Cultural
@@ -33,10 +31,12 @@
 - title: About
   url: /about/
   children:
+    - title: Case Studies
+      url: /case-studies/
     - title: Mission
       url: /mission
-    - title: Survival
-      url: /survival
+    - title: Story
+      url: /story
     - title: Causes
       url: /causes/
     - title: CV
