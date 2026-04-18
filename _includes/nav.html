@@ -10,8 +10,8 @@
 
     <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
     <div class="nav-dropdown nav-contact">
-      <div class="card--formula">
-        <div class="card--formula__interior">
+      <div class="nav-card--formula">
+        <div class="nav-card--formula__interior">
           <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
             aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
             <i class="fas fa-dungeon" aria-hidden="true"></i>
@@ -39,8 +39,8 @@
       {% when 'Resources' %}{% assign nav_icon = 'fa-solid fa-scroll' %}
       {% endcase %}
       <div class="nav-dropdown">
-        <div class="card--formula">
-          <div class="card--formula__interior">
+        <div class="nav-card--formula">
+          <div class="nav-card--formula__interior">
             <a href="{{ item.url | relative_url }}" class="nav-dropdown-toggle">
               <i class="{{ nav_icon }}" aria-hidden="true"></i>
               <span>{{ item.title }}</span>
@@ -52,8 +52,8 @@
 
         <div class="nav-dropdown-menu">
           {% for child in item.children %}
-          <div class="card--formula">
-            <div class="card--formula__interior">
+          <div class="nav-card--formula">
+            <div class="nav-card--formula__interior">
               <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
             </div>
           </div>
@@ -66,8 +66,8 @@
 
     <!-- News -->
     <div class="nav-dropdown nav-contact">
-      <div class="card--formula">
-        <div class="card--formula__interior">
+      <div class="nav-card--formula">
+        <div class="nav-card--formula__interior">
           <a href="{{ '/intake' | relative_url }}">
             <i class="fas fa-rss" aria-hidden="true"></i>
           </a>
@@ -77,8 +77,8 @@
 
     <!-- Contact -->
     <div class="nav-dropdown nav-contact">
-      <div class="card--formula">
-        <div class="card--formula__interior">
+      <div class="nav-card--formula">
+        <div class="nav-card--formula__interior">
           <a href="{{ '/intake' | relative_url }}">
             <i class="fas fa-envelope" aria-hidden="true"></i>
           </a>
