@@ -1,5 +1,7 @@
 # OUROBOROS Consulting
 
+[![Deploy Jekyll to GitHub Pages](https://github.com/OUROBOROS-Consulting/OUROBOROS.github.io/actions/workflows/jekyll-gh-pages.yml/badge.svg)](https://github.com/OUROBOROS-Consulting/OUROBOROS.github.io/actions/workflows/jekyll-gh-pages.yml)
+
 **Dark editorial website. Jekyll. Static.**
 
 [→ View Design System](https://astamenos.github.io/design-system)
