@@ -1,0 +1,63 @@
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+<section id="hero">
+
+  <!-- ── Ornate border: Greek key (meander) running clockwise ── -->
+  <svg class="hero-ornate-svg" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <!-- Horizontal meander tile (24×14px): classic Greek key spiral running right -->
+      <pattern id="hob-h" patternUnits="userSpaceOnUse" width="24" height="14">
+        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="24 0" dur="4s"
+          repeatCount="indefinite" />
+      </pattern>
+      <!-- Bottom strip flows left -->
+      <pattern id="hob-hr" patternUnits="userSpaceOnUse" width="24" height="14">
+        <path d="M0,7 H6 V0 H18 V14 H6 V7 H24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="-24 0" dur="4s"
+          repeatCount="indefinite" />
+      </pattern>
+      <!-- Vertical meander tile (14×24px): 90° CW rotation via (x,y)→(y, 24−x) -->
+      <pattern id="hob-v" patternUnits="userSpaceOnUse" width="14" height="24">
+        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="0 24" dur="4s"
+          repeatCount="indefinite" />
+      </pattern>
+      <!-- Left strip flows up -->
+      <pattern id="hob-vr" patternUnits="userSpaceOnUse" width="14" height="24">
+        <path d="M7,0 L7,6 L14,6 L14,18 L0,18 L0,6 L7,6 L7,24" fill="none" stroke="var(--text)" stroke-width="1.5"
+          stroke-linejoin="miter" />
+        <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="0 -24" dur="4s"
+          repeatCount="indefinite" />
+      </pattern>
+    </defs>
+    <rect class="hob-strip hob-strip--top" fill="url(#hob-h)" />
+    <rect class="hob-strip hob-strip--bottom" fill="url(#hob-hr)" />
+    <rect class="hob-strip hob-strip--right" fill="url(#hob-v)" />
+    <rect class="hob-strip hob-strip--left" fill="url(#hob-vr)" />
+    <!-- Corner fills cap the intersections of the four strips -->
+    <rect class="hob-corner hob-corner--tl" />
+    <rect class="hob-corner hob-corner--tr" />
+    <rect class="hob-corner hob-corner--bl" />
+    <rect class="hob-corner hob-corner--br" />
+  </svg>
+
+  <div class="hero-text">
+    <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+    <h1 class="hero-name">{{ page.name_line1 }}<br />{{ page.name_line2 }}</h1>
+    <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+    <div class="hero-cta"><a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label |
+        default: 'View My Work' }}</a></div>
+  </div>
+
+  <div class="hero-emblem" aria-hidden="true">
+    <img src="/assets/images/logo.svg" alt="">
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
