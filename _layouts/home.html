@@ -98,11 +98,19 @@ layout: default
 
   <div class="values-grid">
     {% for val in site.data.values %}
-    <div class="card--formula">
-      <div class="card--formula__interior">
-        <i class="{{ val.icon }}"></i>
-        <span class="stat-value">{{ val.title | markdownify }}</span>
-        <p class="card-desc">{{ val.description | markdownify }}</p>
+    <div class="values-card">
+      <div class="values-card__inner">
+        <div class="values-card__front">
+          <div class="values-card__surface">
+            <i class="{{ val.icon }} values-card__icon"></i>
+            <span class="values-card__name">{{ val.title | markdownify }}</span>
+          </div>
+        </div>
+        <div class="values-card__back">
+          <div class="values-card__surface">
+            <p class="values-card__desc">{{ val.description | markdownify }}</p>
+          </div>
+        </div>
       </div>
     </div>
     {% endfor %}

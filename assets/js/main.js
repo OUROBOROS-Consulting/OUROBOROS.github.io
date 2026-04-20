@@ -1,5 +1,10 @@
 /* main.js */
 
+// ── Values card flip (touch devices) ─────────────────────────────────────────
+document.querySelectorAll('.values-card').forEach(card => {
+  card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+});
+
 // ── Active nav link ───────────────────────────────────────────────────────────
 (function () {
   const links = document.querySelectorAll('.nav-links a');
