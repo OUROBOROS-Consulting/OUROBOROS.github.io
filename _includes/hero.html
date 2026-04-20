@@ -33,6 +33,7 @@
           repeatCount="indefinite" />
       </pattern>
     </defs>
+
     <rect class="hob-strip hob-strip--top" fill="url(#hob-h)" />
     <rect class="hob-strip hob-strip--bottom" fill="url(#hob-hr)" />
     <rect class="hob-strip hob-strip--right" fill="url(#hob-v)" />
@@ -44,17 +45,23 @@
     <rect class="hob-corner hob-corner--br" />
   </svg>
 
-  <div class="hero-text">
-    <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+  <!-- Row 1: brand identity -->
+  <div class="hero-identity">
     <h1 class="hero-name">{{ page.name_line1 }}<br />{{ page.name_line2 }}</h1>
-    <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
-    <div class="hero-cta"><a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label |
-        default: 'View My Work' }}</a></div>
+    <div class="hero-emblem" aria-hidden="true">
+      <img src="/assets/images/logo.svg" alt="">
+    </div>
   </div>
 
-  <div class="hero-emblem" aria-hidden="true">
-    <img src="/assets/images/logo.svg" alt="">
+  <!-- Row 2: copy + CTA -->
+  <div class="hero-text">
+    <p class="hero-eyebrow">{{ page.eyebrow }}</p>
+    <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+    <div class="hero-cta">
+      <a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label | default: 'View My Work' }}</a>
+    </div>
   </div>
+
 
   <div class="scroll-hint">
     <div class="scroll-line"></div>
