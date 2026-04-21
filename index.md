@@ -10,10 +10,10 @@ eyebrow: Technology ❖ AI Integration ❖ Research ❖ Advocacy
 tagline: >
   Technology, research, and institutional navigation for people betrayed by the systems meant to protect them.
 
-  # Grounded in Jennifer Freyd's framework of **institutional betrayal** and **institutional courage** — and in the recognition that technology accelerates the tactics of abuse and coercive control. My work helps you build your record, your case, and your footing.
+  Grounded in Jennifer Freyd's framework of **institutional betrayal** and **institutional courage** — and in the recognition that technology accelerates the tactics of abuse and coercive control. My work helps you build your record, your case, and your footing.
 
-cta_label: Book a strategy session
-cta_url: /intake
+cta_label: null
+cta_url: /case-studies/
 
 # About
 about_heading: Technology and Advocacy for Survivors of Institutional Betrayal
