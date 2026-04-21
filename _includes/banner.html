@@ -1,0 +1,29 @@
+{% assign b = site.data.banner %}
+{% if b.visible %}
+
+{% if b.url %}
+<a href="{{ b.url | relative_url }}" class="site-banner site-banner--{{ b.type }}" aria-label="Site banner">
+{% else %}
+<div class="site-banner site-banner--{{ b.type }}" role="banner">
+{% endif %}
+
+  {% if b.type == "announcement" %}
+    <i class="fa-solid fa-bullhorn site-banner__icon" aria-hidden="true"></i>
+    <span>{{ b.text }}</span>
+    {% if b.url %}<span class="site-banner__arrow" aria-hidden="true">→</span>{% endif %}
+
+  {% elsif b.type == "tagline" %}
+    <span>{{ b.text }}</span>
+
+  {% elsif b.type == "brand" %}
+    <span>{{ b.text }}</span>
+
+  {% endif %}
+
+{% if b.url %}
+</a>
+{% else %}
+</div>
+{% endif %}
+
+{% endif %}
