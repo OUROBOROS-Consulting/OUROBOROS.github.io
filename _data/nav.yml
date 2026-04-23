@@ -1,17 +1,17 @@
 - title: Services
   url: /services/
   children:
-    - title: AI Integration
-      url: /services/agentic-ai/
     - title: Technology Solutions
       url: /services/consulting/
+    - title: AI Integration
+      url: /services/agentic-ai/
     - title: Design Services
       url: /services/design/
     - title: Research & Investigation
       url: /services/investigation/
-    - title: Pedagogy Services
+    - title: Pedagogy
       url: /services/tutoring/
-    - title: Advocacy Services
+    - title: Advocacy
       url: /services/advocacy/
 
 - title: Resources
@@ -31,6 +31,8 @@
 - title: About
   url: /about/
   children:
+    - title: Framework
+      url: /framework/
     - title: Case Studies
       url: /case-studies/
     - title: Mission
@@ -41,5 +43,3 @@
       url: /causes/
     - title: CV
       url: /cv
-    - title: Framework
-      url: /framework/

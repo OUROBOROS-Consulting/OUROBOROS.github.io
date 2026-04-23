@@ -5,20 +5,28 @@ category: About
 permalink: /framework/
 back_url: /about/
 lede: >
-  Seven commitments — theoretical and operational in equal measure —
+  Nine commitments — theoretical, methodological, and operational in equal measure —
   that define how this firm names harm, gathers evidence, and chooses its tools.
 ---
 
 This firm operates from a set of explicit intellectual commitments — theoretical and operational in equal measure. The frameworks below are not decorative. They define how harm is named, how evidence is gathered, how tools are chosen, and what accountability actually looks like. Each one earns its place by doing real work in practice.
 
-The technology choices here are held to the same standard as the theoretical ones. Principled tool selection — based on privacy architecture, transparency, and values alignment — is itself an intellectual commitment. These are not defaults.
-
 <div class="framework-grid">
 
   <div class="framework-pillar">
     <div class="fw-header">
+      <span class="fw-tag">Systems</span>
+      <span class="fw-numeral">I</span>
+    </div>
+    <h3 class="fw-name">Cybernetics</h3>
+    <hr class="fw-rule">
+    <p class="fw-body">Cybernetics — the study of control systems, feedback loops, and adaptation in complex systems — is the theoretical lens through which this firm understands institutional harm and survivor agency. Control is not unidirectional; it is maintained through information asymmetry, feedback suppression, and adaptation to resistance. Perpetrators adjust tactics when survivors push back. Institutions adapt when accountability pressure mounts. Survivors develop counterintelligence. Understanding any of this requires understanding circular causality: harm is not linear cause-and-effect, but a system of mutual feedback. This framework shapes how the firm analyzes coercive control, interprets psychological patterns, and designs interventions — all of which function as perturbations to systems that will adapt, resist, or genuinely transform in response.</p>
+  </div>
+
+  <div class="framework-pillar">
+    <div class="fw-header">
       <span class="fw-tag">Theory</span>
-      <span class="fw-numeral">i</span>
+      <span class="fw-numeral">II</span>
     </div>
     <h3 class="fw-name">Betrayal Trauma Theory</h3>
     <hr class="fw-rule">
@@ -28,7 +36,7 @@ The technology choices here are held to the same standard as the theoretical one
   <div class="framework-pillar">
     <div class="fw-header">
       <span class="fw-tag">Taxonomy</span>
-      <span class="fw-numeral">ii</span>
+      <span class="fw-numeral">III</span>
     </div>
     <h3 class="fw-name">HiTOP</h3>
     <hr class="fw-rule">
@@ -38,7 +46,7 @@ The technology choices here are held to the same standard as the theoretical one
   <div class="framework-pillar">
     <div class="fw-header">
       <span class="fw-tag">Framework</span>
-      <span class="fw-numeral">iii</span>
+      <span class="fw-numeral">IV</span>
     </div>
     <h3 class="fw-name">Coercive Control</h3>
     <hr class="fw-rule">
@@ -48,7 +56,7 @@ The technology choices here are held to the same standard as the theoretical one
   <div class="framework-pillar">
     <div class="fw-header">
       <span class="fw-tag">Practice</span>
-      <span class="fw-numeral">iv</span>
+      <span class="fw-numeral">V</span>
     </div>
     <h3 class="fw-name">Trauma-Informed</h3>
     <hr class="fw-rule">
@@ -57,8 +65,25 @@ The technology choices here are held to the same standard as the theoretical one
 
   <div class="framework-pillar">
     <div class="fw-header">
+      <span class="fw-tag">Methodology</span>
+      <span class="fw-numeral">VI</span>
+    </div>
+    <h3 class="fw-name">Human-Centered Design</h3>
+    <hr class="fw-rule">
+    <p class="fw-body"><a href="https://www.lancaster.ac.uk/arts-and-social-sciences/people/emmanuel-tsekleves" target="_blank" rel="noopener noreferrer">Emmanuel Tsekleves</a>'s work — and the participatory design tradition more broadly — establishes one standard: solutions that affect people should be built with them, not for them. Co-design is not a method for softening deliverables; it is how you avoid replicating the power structures an intervention claims to disrupt. In survivor advocacy and public health work, lived experience is not a qualitative supplement to quantitative data — it is authoritative. Every platform, resource, and engagement this firm produces is evaluated against a single question: does it center the person it claims to serve? This is a design constraint, not aspiration.</p>
+  </div>
+
+</div>
+
+## Methodology & Infrastructure
+
+The technology choices and platforms below are held to the same standard as the theoretical frameworks. Principled selection — based on privacy architecture, transparency, and values alignment — is itself an intellectual commitment. These are not defaults.
+
+<div class="framework-grid">
+
+  <div class="framework-pillar">
+    <div class="fw-header">
       <span class="fw-tag">AI</span>
-      <span class="fw-numeral">v</span>
     </div>
     <h3 class="fw-name">Claude</h3>
     <hr class="fw-rule">
@@ -68,7 +93,6 @@ The technology choices here are held to the same standard as the theoretical one
   <div class="framework-pillar">
     <div class="fw-header">
       <span class="fw-tag">Infrastructure</span>
-      <span class="fw-numeral">vi</span>
     </div>
     <h3 class="fw-name"><a href="https://github.com/" target="_blank" rel="noopener noreferrer">GitHub</a></h3>
     <hr class="fw-rule">
@@ -78,21 +102,10 @@ The technology choices here are held to the same standard as the theoretical one
   <div class="framework-pillar">
     <div class="fw-header">
       <span class="fw-tag">Hardware</span>
-      <span class="fw-numeral">vii</span>
     </div>
     <h3 class="fw-name"><a href="https://www.apple.com/" target="_blank" rel="noopener noreferrer">Apple</a></h3>
     <hr class="fw-rule">
     <p class="fw-body">The firm's hardware and software stack is built on Apple's privacy-first architecture — on-device processing, end-to-end encrypted storage, and a platform where privacy is a design constraint rather than a compliance checkbox. For survivor advocacy work, operational security is not optional. The choice of Apple hardware is a direct consequence of the threat model: adversaries with resources, AI-accelerated tactics, and institutional cover require a baseline that treats privacy as default.</p>
-  </div>
-
-  <div class="framework-pillar">
-    <div class="fw-header">
-      <span class="fw-tag">Methodology</span>
-      <span class="fw-numeral">viii</span>
-    </div>
-    <h3 class="fw-name">Human-Centered Design</h3>
-    <hr class="fw-rule">
-    <p class="fw-body"><a href="https://www.lancaster.ac.uk/arts-and-social-sciences/people/emmanuel-tsekleves" target="_blank" rel="noopener noreferrer">Emmanuel Tsekleves</a>'s work — and the participatory design tradition more broadly — establishes one standard: solutions that affect people should be built with them, not for them. Co-design is not a method for softening deliverables; it is how you avoid replicating the power structures an intervention claims to disrupt. In survivor advocacy and public health work, lived experience is not a qualitative supplement to quantitative data — it is authoritative. Every platform, resource, and engagement this firm produces is evaluated against a single question: does it center the person it claims to serve? This is a design constraint, not aspiration.</p>
   </div>
 
 </div>
