@@ -10,7 +10,7 @@ eyebrow: Technology ❖ AI Integration ❖ Research ❖ Advocacy
 tagline: >
   Technology, research, and institutional navigation for people betrayed by the systems meant to protect them.
 
-  Grounded in frameworks of **institutional betrayal**, coercive control, and the specific ways technology accelerates abuse — my work helps you build your record, your case, and your footing.
+  Grounded in frameworks of **institutional betrayal**, coercive control, and the specific ways technology accelerates abuse — my work helps you build your record, your case, and the tools to level the field.
 
 cta_label: null
 cta_url: /case-studies/
