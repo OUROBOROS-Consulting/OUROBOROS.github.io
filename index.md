@@ -6,11 +6,11 @@ description: "Tech consulting for survivors of institutional betrayal and coerci
 # Hero
 name_line1: OUROBOROS
 name_line2: Consulting
-eyebrow: Technology ❖ AI Integration ❖ Research ❖ Advocacy
+eyebrow: Technology ❖ AI Integration ❖ Research ❖ Systems Design
 tagline: >
-  Technology, research, and institutional navigation for people betrayed by the systems meant to protect them.
+  Systems design and technology for people betrayed by the institutions meant to protect them.
 
-  Grounded in frameworks of **institutional betrayal**, coercive control, and the specific ways technology accelerates abuse — my work helps you build your record, your case, and the tools to level the field.
+  Institutional failures are design failures. Grounded in frameworks of **institutional betrayal** and coercive control, my work gives you the record, the case, and the tools to level the field.
 
 cta_label: null
 cta_url: /case-studies/
