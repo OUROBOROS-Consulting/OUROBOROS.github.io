@@ -2,6 +2,7 @@
 layout: service
 title: Tutoring Services
 icon: fa-book
+description: "Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level."
 category: Services
 lede: Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level.
 tags: [Statistics, Mathematics, Probability, R, Python, LaTeX, Biostatistics, Programming]

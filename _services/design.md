@@ -2,6 +2,7 @@
 layout: service
 title: Design Systems & Implementation
 icon: fa-palette
+description: "Design systems that hold up under scrutiny — accessible, dimensional, and built to scale from SCSS architecture to full frontend implementation."
 category: Services
 lede: >
   Design that scales without breaking. Accessible, dimensional, distinctive—

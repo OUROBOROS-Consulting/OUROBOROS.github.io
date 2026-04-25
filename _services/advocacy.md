@@ -2,6 +2,7 @@
 layout: service
 title: Advocacy & Navigation
 icon: fa-handshake
+description: "Precision navigation through hostile institutions — documentation strategy, grievance processes, and a knowledgeable advocate in your corner."
 category: Services
 lede: >
   Institutions are not designed to make your path clear.

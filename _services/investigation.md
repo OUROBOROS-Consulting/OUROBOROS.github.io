@@ -2,6 +2,7 @@
 layout: service
 title: Research & Investigation
 icon: fa-magnifying-glass
+description: "Public records, FOIA, digital trails, and institutional forensics — evidence found and documented to court-ready standard."
 category: Services
 lede: >
   Finding what's hidden in plain sight. Records, patterns, digital trails—

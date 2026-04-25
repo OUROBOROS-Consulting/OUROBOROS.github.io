@@ -2,6 +2,7 @@
 layout: service
 title: Technology Consulting
 icon: fa-briefcase
+description: "Bespoke technology solutions for real problems — the right tool, precisely applied, not off-the-shelf recommendations."
 category: Services
 lede: >
   The right technology, precisely applied, cuts what slows you down and returns control to you.

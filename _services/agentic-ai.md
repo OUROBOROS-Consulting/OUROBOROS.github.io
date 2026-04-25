@@ -2,6 +2,7 @@
 layout: service
 title: Agentic AI Strategy & Integration
 icon: fa-robot
+description: "AI workflows, automation pipelines, and agentic systems — judgment plus execution, without the overhead of a full engineering team."
 category: Services
 lede: >
   High-quality technical work without hiring a team. I use Claude as a force multiplier — judgment + execution — to deliver infrastructure, workflows, and systems that would normally require a full engineering team.
