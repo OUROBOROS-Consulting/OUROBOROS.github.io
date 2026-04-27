@@ -8,9 +8,9 @@ name_line1: OUROBOROS
 name_line2: Consulting
 eyebrow: Technology ❖ AI Integration ❖ Research ❖ Systems Design
 tagline: >
-  Systems design and technology for people betrayed by the institutions meant to protect them.
+  The world isn't designed for survivors. So I designed something that is.
 
-  Institutional failures are design failures. Grounded in frameworks of **institutional betrayal** and coercive control, my work gives you the record, the case, and the tools to level the field.
+  Systems design, AI tools, and research for people fighting institutions that failed them.
 
 cta_label: null
 cta_url: /case-studies/
