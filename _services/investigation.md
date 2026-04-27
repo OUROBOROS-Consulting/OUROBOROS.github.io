@@ -25,7 +25,7 @@ included:
   - title: Report & Analysis
     description: Synthesize findings into a coherent narrative with citations. Attorney-ready, trauma-informed, and built to hold up under legal and institutional scrutiny.
   - title: Expert Documentation
-    description: Documentation suitable for expert witness support, institutional accountability proceedings, and evidentiary use. Pattern analysis grounded in institutional behavior research.
+    description: Documentation meeting evidentiary standards for institutional accountability proceedings and legal use. Pattern analysis grounded in institutional behavior research.
 specializations:
   - Public records research and FOIA requests
   - Background and identity verification using public sources
@@ -69,9 +69,9 @@ pricing:
       FOIA coordination) can be quoted as fixed price.
 ---
 
-I spent two years at HHS building ML systems that analyzed institutional behavior. I understand how institutions fail, how records are created and hidden, and that what looks opaque from outside has clear patterns once you know where to look. My work draws on research in institutional betrayal, coercive control, and organizational pathology — the same frameworks that explain trauma responses and institutional failure.
-
 Most survivors face a choice: hire an attorney (expensive, constrained to legal strategy), or research alone (time-consuming, easy to miss critical patterns). I sit in between. Fluent in institutional documentation, legal discovery, evidentiary standards, and the trauma-informed frameworks that explain institutional behavior. I work for people who need the evidence, not people who need representation.
+
+I spent two years at HHS building ML systems that analyzed institutional behavior. I understand how institutions fail, how records are created and hidden, and that what looks opaque from outside has clear patterns once you know where to look. My work draws on research in institutional betrayal, coercive control, and organizational pathology — the same frameworks that explain trauma responses and institutional failure.
 
 I don't do surveillance, trespass, or illegal access. What I do: research documented and publicly available information, identify patterns in institutional behavior, synthesize findings into evidence courts and investigators believe. For survivors seeking accountability, attorneys building cases, or organizations needing forensic institutional analysis.
 
@@ -79,6 +79,4 @@ If you need strategic navigation alongside evidence gathering — understanding 
 
 ## Engagement Models
 
-Hourly for strategy sessions and research work. Project-based for scoped investigations with clear deliverables. Retained monthly for long-form projects with rolling scope.
-
-For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.
+Hourly, project-based, or retained monthly. Sliding scale rates and pro-bono capacity available for survivors and individuals in active disputes — reach out directly.

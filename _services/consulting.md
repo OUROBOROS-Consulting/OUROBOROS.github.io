@@ -41,7 +41,7 @@ policies:
   - item: "Response time: Within 48 hours"
 specializations:
   - Apple ecosystem & devices
-  - AI tools & ethical automation
+  - AI tool selection & ethical automation (non-agentic)
   - Smart home (HomeKit, Matter)
   - Records & digital organization
   - Data science, ML, & statistical modeling
@@ -89,8 +89,8 @@ Design is part of that. I've built design systems from scratch, audited existing
 
 If you need someone who can talk to both the design and the engineering, and who'll push back when a choice doesn't serve your users, that's a conversation I'm having.
 
+If your problem is specifically about AI workflow design, agentic systems, or integrating Claude into existing infrastructure, that's a distinct service — [Agentic AI Strategy & Integration](/services/agentic-ai/) is the right place to start.
+
 ## Engagement Models
 
-Hourly for sessions, audits, and implementation work. Project-based for discrete deliverables — smart home builds, records overhauls, design systems, frontend implementations. Retained monthly for ongoing technical or design partnership.
-
-For survivors, advocates, nonprofits, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.
+Hourly, project-based, or retained monthly. Sliding scale rates and pro-bono capacity available for survivors and individuals in active disputes — reach out directly.

@@ -5,7 +5,8 @@ icon: fa-robot
 description: "AI workflows, automation pipelines, and agentic systems — judgment plus execution, without the overhead of a full engineering team."
 category: Services
 lede: >
-  High-quality technical work without hiring a team. I use Claude as a force multiplier — judgment + execution — to deliver infrastructure, workflows, and systems that would normally require a full engineering team.
+  The gap between "we should use AI" and "we have a system that works" is where most projects fail.
+  I close that gap — strategic judgment about what to build, and the technical execution to build it right.
 tags: [Claude, Agentic AI, AI Workflow Design, Claude Code, Automation, Human-AI Collaboration, Prompt Engineering]
 cta_label: Book a Strategy Session
 cta_body: Reach out with a brief description of what you're trying to build, or what's slowing you down. I'll follow up within 48 hours for a free discovery call.
@@ -40,15 +41,15 @@ pricing:
   - name: AI Strategy & Advisory
     rate: "$175–$275/hr"
     notes: >
-      You need to understand what AI can actually do for your problem. Includes discovery, audit, design of AI workflows, and strategic recommendations. Not for implementation — just for figuring out what to build.
-  - name: Integration & Implementation
-    rate: "$200–$350/hr"
-    notes: >
-      Let's build it. Covers setup, configuration, prompt engineering, integration with existing tools, testing, and documentation. Rate scales with technical complexity and novelty of the problem.
+      You're starting fresh and need to know what to build. Includes discovery, workflow design, and strategic recommendations — the thinking before the building.
   - name: AI Audit & Assessment
     rate: "Contact for scope"
     notes: >
-      You have a system or a workflow and want to know if AI could improve it. Includes a thorough assessment and a written report with specific recommendations and confidence levels.
+      You have a workflow or system and want to know if AI could improve it — or where a current AI integration is falling short. Produces a written report with specific, confidence-rated recommendations.
+  - name: Integration & Implementation
+    rate: "$200–$350/hr"
+    notes: >
+      Build phase. Setup, configuration, prompt engineering, integration with existing tools, testing, and documentation. Rate scales with technical complexity and novelty of the problem.
   - name: Ongoing Retainer
     rate: Contact me
     notes: >
@@ -56,8 +57,6 @@ pricing:
 ---
 
 I've spent two years building and deploying AI systems in Federal environments, and more recently working with individuals and organizations facing difficult institutional situations. What I've learned: the value of AI isn't in the automation itself. It's in having someone who understands both the problem and the tool — who can tell you when AI is actually useful and when it's not, who can design a system that humans stay in control of, and who can build it without requiring you to become an AI expert yourself.
-
-That's what this service is.
 
 ## How I Work with Claude
 
@@ -87,12 +86,10 @@ This is not a hypothetical. It is a documented and accelerating pattern. Designi
 
 ## A Proof of Concept
 
-If you want to see this in action, [the Claudius case study](/work/claudius/) documents exactly this process — building a professional website using Claude Code as a collaborator, with full transparency about what worked, what didn't, and what the collaboration actually changed.
+[The Claudius case study](/work/claudius/) documents this process in full — what was built, what Claude contributed, where it needed correction, and what the collaboration actually changed. It's also a model for how I work: transparent about trade-offs, honest about what AI can and can't do, and clear about what you're getting for the investment.
 
-That case study is also a model for what kind of client work I do: detailed transparency about how the collaboration worked, what trade-offs were made, and what you actually get for the investment.
+When survivor applications involve evidence gathering — public records, FOIA, institutional documentation, or forensic timelines — [Research & Investigation](/services/investigation/) works alongside this to build the full evidentiary record.
 
 ## Engagement Models
 
-Hourly for strategy, audit, and discovery work. Project-based for builds and integrations with clear deliverables. Retained monthly for ongoing advisory or expanded scope.
-
-For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.
+Hourly, project-based, or retained monthly. Sliding scale rates and pro-bono capacity available for survivors and individuals in active disputes — reach out directly.

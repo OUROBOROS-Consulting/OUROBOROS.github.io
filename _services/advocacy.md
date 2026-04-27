@@ -17,8 +17,8 @@ who: >
   Survivors navigating hostile, unresponsive, or deliberately obfuscating institutions.
   This includes survivors of sexual assault, abuse, intimate partner violence, institutional betrayal,
   workplace misconduct, academic retaliation, coercive control, and human trafficking.
-  You need a knowledgeable advocate to help you understand your options, build a credible record,
-  and move with clarity and safety rather than exhaustion.
+  You need someone who understands how these systems work — who can help you build a credible record
+  and move with clarity and safety, not exhaustion.
 included:
   - title: Situation Assessment
     description: >
@@ -54,18 +54,18 @@ pricing:
       Rate is set by your circumstances, not by a formula. No one is turned away
       for inability to pay. Ask during the consultation.
   - name: Record & Document Review
-    rate: $50/hr
+    rate: $75–$100/hr
     notes: >
       Structured review of existing correspondence, institutional records,
       or chronologies, with written notes returned to you.
 ---
 
-What I bring is deep knowledge of coercive control, institutional betrayal, trauma responses,
-and how systems fail survivors. I've studied personality pathology, institutional behavior, and
-the ways power operates in closed systems — and I've navigated these systems personally and
-professionally. When your situation requires a lawyer, I will tell you clearly and help you find
-the right one. What I offer is the layer of strategic, informed advocacy that comes before and
-alongside legal counsel — and that legal counsel alone rarely provides.
+Coercive control, institutional betrayal, trauma responses, the ways power operates in closed systems —
+I've studied this deeply and navigated it personally and professionally. What I offer is the layer of
+strategic, informed advocacy that comes before and alongside legal counsel — and that legal counsel
+alone rarely provides. When your situation requires a lawyer, I will tell you clearly — and I can connect you with
+attorneys who specialize in narcissistic abuse and coercive control cases. I can also connect
+you with trauma-informed therapists who understand these dynamics.
 
 Institutions rely on your not knowing how they work. I do. I understand your rights, which processes
 produce results and which are designed to exhaust you, and how to document your situation so it speaks for itself.
@@ -89,13 +89,10 @@ reason to believe an AI-literate adversary is involved, we design for it explici
 hypothetical, but as a constraint shaping every decision about what to record, where to store it,
 and how to present it.
 
-This work is confidential. It is not therapy — though I can help you find that too.
-It is not legal advice, and I am not an attorney. It is strategic, careful, evidence-based, and entirely on your side.
+This work is confidential. It is not therapy, and it is not legal advice — I am not an attorney. It is strategic, careful, evidence-based, and entirely on your side.
 
 When your situation calls for formal evidence gathering — FOIA requests, institutional records, forensic documentation — [Research & Investigation](/services/investigation/) extends what we build here into attorney-ready form.
 
 ## Engagement Models
 
-Hourly for short or scoped advocacy sessions. Project-based for discrete deliverables like document review or strategy roadmaps. Retained monthly for ongoing advisory or support work.
-
-For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.
+Hourly, project-based, or retained monthly. Sliding scale rates and pro-bono capacity available for survivors and individuals in active disputes — reach out directly.
