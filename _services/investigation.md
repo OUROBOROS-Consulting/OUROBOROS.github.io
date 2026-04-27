@@ -75,6 +75,8 @@ Most survivors face a choice: hire an attorney (expensive, constrained to legal 
 
 I don't do surveillance, trespass, or illegal access. What I do: research documented and publicly available information, identify patterns in institutional behavior, synthesize findings into evidence courts and investigators believe. For survivors seeking accountability, attorneys building cases, or organizations needing forensic institutional analysis.
 
+If you need strategic navigation alongside evidence gathering — understanding your rights, institutional processes, documentation strategy, or an informed advocate in your corner — [Advocacy & Navigation](/services/advocacy/) runs parallel to this work.
+
 ## Engagement Models
 
 Hourly for strategy sessions and research work. Project-based for scoped investigations with clear deliverables. Retained monthly for long-form projects with rolling scope.

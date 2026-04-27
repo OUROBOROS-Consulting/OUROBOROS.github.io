@@ -90,7 +90,9 @@ hypothetical, but as a constraint shaping every decision about what to record, w
 and how to present it.
 
 This work is confidential. It is not therapy — though I can help you find that too.
-It is strategic, careful, evidence-based, and entirely on your side.
+It is not legal advice, and I am not an attorney. It is strategic, careful, evidence-based, and entirely on your side.
+
+When your situation calls for formal evidence gathering — FOIA requests, institutional records, forensic documentation — [Research & Investigation](/services/investigation/) extends what we build here into attorney-ready form.
 
 ## Engagement Models
 
