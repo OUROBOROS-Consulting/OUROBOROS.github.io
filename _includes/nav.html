@@ -64,11 +64,22 @@
 
     </div>
 
+    <!-- Announcements -->
+    <div class="nav-dropdown nav-button">
+      <div class="nav-card">
+        <div class="nav-card__interior">
+          <a href="{{ '/announcements/' | relative_url }}" aria-label="Announcements">
+            <i class="fas fa-bullhorn" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <!-- News -->
     <div class="nav-dropdown nav-button">
       <div class="nav-card">
         <div class="nav-card__interior">
-          <a href="{{ '/intake' | relative_url }}">
+          <a href="{{ '/news/' | relative_url }}" aria-label="News">
             <i class="fas fa-rss" aria-hidden="true"></i>
           </a>
         </div>
@@ -77,13 +88,13 @@
 
     <!-- Contact -->
     <div class="nav-dropdown nav-button">
-      <!-- <div class="nav-card"> -->
+      <div class="nav-card">
         <div class="nav-card__interior">
-          <a href="{{ '/intake' | relative_url }}">
+          <a href="{{ '/intake' | relative_url }}" aria-label="Contact">
             <i class="fas fa-envelope" aria-hidden="true"></i>
           </a>
         </div>
-      <!-- </div> -->
+      </div>
     </div>
   </nav>
 </header>

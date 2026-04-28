@@ -1,0 +1,92 @@
+---
+layout: default
+title: News
+permalink: /news/
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
+  <div class="svc-hero-inner">
+    <div class="svc-hero-text">
+      <p class="post-category">Signal</p>
+      <h1 class="svc-title">News</h1>
+      <p class="svc-lede">Research, technology, and accountability — curated from primary sources.</p>
+    </div>
+    <div class="svc-emblem" aria-hidden="true">
+      <i class="fas fa-rss"></i>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  <nav class="news-tabs" role="tablist" aria-label="News categories">
+    <button class="news-tab is-active" data-tab="all" role="tab" aria-selected="true">All</button>
+    <button class="news-tab" data-tab="AI" role="tab" aria-selected="false">AI</button>
+    <button class="news-tab" data-tab="Technology" role="tab" aria-selected="false">Technology</button>
+    <button class="news-tab" data-tab="Accountability" role="tab" aria-selected="false">Accountability</button>
+    <button class="news-tab" data-tab="Institutional Betrayal" role="tab" aria-selected="false">Institutional Betrayal</button>
+    <button class="news-tab" data-tab="Psychopathology" role="tab" aria-selected="false">Psychopathology</button>
+  </nav>
+
+  {% if site.data.news and site.data.news.size > 0 %}
+    {% assign grouped = site.data.news | group_by: "date" %}
+    <div class="news-feed">
+      {% for day in grouped %}
+      <div class="news-date-group">
+        <p class="news-date-heading">{{ day.name | date: "%B %-d, %Y" }}</p>
+        {% for item in day.items %}
+        <article class="news-item" data-category="{{ item.category }}">
+          <h2 class="news-title">
+            <a href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+          </h2>
+          {% if item.description and item.description != "" %}
+          <p class="news-desc">{{ item.description }}</p>
+          {% endif %}
+          <div class="news-meta">
+            <span class="news-source">{{ item.source }}</span>
+            <span class="news-category" data-category="{{ item.category }}">{{ item.category }}</span>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="news-feed">
+      <p class="news-empty">No news yet — check back after the first scheduled fetch.</p>
+    </div>
+  {% endif %}
+</div>
+
+<script>
+(function () {
+  var tabs = document.querySelectorAll('.news-tab');
+  var items = document.querySelectorAll('.news-item');
+  var groups = document.querySelectorAll('.news-date-group');
+
+  function filter(category) {
+    items.forEach(function (item) {
+      item.hidden = category !== 'all' && item.dataset.category !== category;
+    });
+    groups.forEach(function (group) {
+      var hasVisible = Array.prototype.some.call(
+        group.querySelectorAll('.news-item'),
+        function (i) { return !i.hidden; }
+      );
+      group.hidden = !hasVisible;
+    });
+  }
+
+  tabs.forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      tabs.forEach(function (t) {
+        t.classList.remove('is-active');
+        t.setAttribute('aria-selected', 'false');
+      });
+      tab.classList.add('is-active');
+      tab.setAttribute('aria-selected', 'true');
+      filter(tab.dataset.tab);
+    });
+  });
+})();
+</script>

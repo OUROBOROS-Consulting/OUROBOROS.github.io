@@ -34,6 +34,8 @@ collections:
   about:
     output: true
     permalink: /:slug
+  announcements:
+    output: false
 
 # build settings
 exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules"]

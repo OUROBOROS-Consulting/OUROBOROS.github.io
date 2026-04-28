@@ -1,0 +1,37 @@
+---
+layout: default
+title: Announcements
+permalink: /announcements/
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
+  <div class="svc-hero-inner">
+    <div class="svc-hero-text">
+      <p class="post-category">Firm</p>
+      <h1 class="svc-title">Announcements</h1>
+      <p class="svc-lede">Updates and dispatches from OUROBOROS Consulting.</p>
+    </div>
+    <div class="svc-emblem" aria-hidden="true">
+      <i class="fas fa-bullhorn"></i>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  <div class="announcements-feed">
+    {% assign sorted = site.announcements | sort: 'date' | reverse %}
+    {% if sorted.size > 0 %}
+      {% for ann in sorted %}
+      <article class="announcement-entry">
+        <time class="ann-date" datetime="{{ ann.date | date: '%Y-%m-%d' }}">{{ ann.date | date: "%B %-d, %Y" }}</time>
+        <h2 class="ann-title">{{ ann.title }}</h2>
+        <div class="ann-body">{{ ann.content | markdownify }}</div>
+        {% if ann.tag %}<span class="ann-tag">{{ ann.tag }}</span>{% endif %}
+      </article>
+      {% endfor %}
+    {% else %}
+      <p class="announcements-empty">No announcements yet.</p>
+    {% endif %}
+  </div>
+</div>
