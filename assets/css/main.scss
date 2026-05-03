@@ -46,6 +46,21 @@
 }
 
 
+// ── Light-mode overrides for dark-background sections ────────────────────
+// The nav and hero backgrounds stay dark in light mode, so re-anchor --text
+// to the dark-mode cream so text remains readable against the dark surface.
+@media (prefers-color-scheme: light) {
+  nav.nav-menu,
+  #hero,
+  .svc-hero {
+    --text: #E8E4DC;
+    color: var(--text);
+
+    a { color: inherit; }
+  }
+}
+
+
 // ── Nav contact buttons (hexagon style) ──────────────────────────────────
 .nav-contact {
   .card--formula {
