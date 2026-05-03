@@ -61,6 +61,12 @@
 }
 
 
+// ── Nav icon buttons — gold-dim border ───────────────────────────────────
+.nav-dropdown.nav-button .nav-card {
+  border: 1px solid var(--gold);
+}
+
+
 // ── Nav contact buttons (hexagon style) ──────────────────────────────────
 .nav-contact {
   .card--formula {
