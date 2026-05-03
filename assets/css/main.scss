@@ -61,9 +61,24 @@
 }
 
 
-// ── Nav icon buttons — gold-dim border ───────────────────────────────────
-.nav-dropdown.nav-button .nav-card {
-  border: 1px solid var(--gold);
+// ── Nav icon buttons — gold border ───────────────────────────────────────
+nav.nav-menu .nav-dropdown.nav-button .nav-card {
+  border: 1px solid var(--gold) !important;
+}
+
+// ── Hero name two-line ratio (OUROBOROS large, Consulting smaller) ────────
+#hero .hero-name-sub {
+  display: block;
+  font-size: 0.5em;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  color: var(--subdued);
+  text-transform: uppercase;
+}
+
+// ── Hero text flush right ─────────────────────────────────────────────────
+#hero .hero-text {
+  text-align: right;
 }
 
 
