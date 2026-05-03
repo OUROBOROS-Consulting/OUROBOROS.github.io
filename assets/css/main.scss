@@ -61,6 +61,13 @@
 }
 
 
+// ── Logo font: EB Garamond everywhere ────────────────────────────────────
+.nav-logo-text,
+.footer-logo-text {
+  font-family: "EB Garamond", serif !important;
+}
+
+
 // ── Nav icon buttons — gold border ───────────────────────────────────────
 nav.nav-menu .nav-dropdown.nav-button .nav-card {
   border: 1px solid var(--gold) !important;
@@ -142,7 +149,7 @@ nav.nav-menu .nav-dropdown.nav-button .nav-card {
   }
 
   .footer-logo-text {
-    font-family: Lora, serif;
+    font-family: "EB Garamond", serif;
     font-size: 1.1rem;
     font-weight: 600;
   }
