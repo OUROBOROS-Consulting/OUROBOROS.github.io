@@ -61,9 +61,31 @@
 }
 
 
-// ── Nav icon buttons — gold-dim border ───────────────────────────────────
-.nav-dropdown.nav-button .nav-card {
-  border: 1px solid var(--gold);
+// ── Logo font: EB Garamond everywhere ────────────────────────────────────
+.nav-logo-text,
+.footer-logo-text {
+  font-family: "EB Garamond", serif !important;
+}
+
+
+// ── Nav icon buttons — gold border ───────────────────────────────────────
+nav.nav-menu .nav-dropdown.nav-button .nav-card {
+  border: 1px solid var(--gold) !important;
+}
+
+// ── Hero name two-line ratio (OUROBOROS large, Consulting smaller) ────────
+#hero .hero-name-sub {
+  display: block;
+  font-size: 0.5em;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  color: var(--subdued);
+  text-transform: uppercase;
+}
+
+// ── Hero text flush right ─────────────────────────────────────────────────
+#hero .hero-text {
+  text-align: right;
 }
 
 
@@ -122,19 +144,19 @@
   }
 
   .footer-logo-mark {
-    width: 40px;
-    height: 40px;
+    width: 48px;
+    height: 48px;
   }
 
   .footer-logo-text {
-    font-family: Papyrus, serif;
-    font-size: 0.95rem;
+    font-family: "EB Garamond", serif;
+    font-size: 1.1rem;
     font-weight: 600;
   }
 
   .footer-logo-sub {
     display: block;
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     font-weight: 400;
     color: var(--subdued);
   }
