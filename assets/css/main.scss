@@ -74,10 +74,21 @@
 }
 
 
-// ── Logo font: EB Garamond everywhere ────────────────────────────────────
+// ── Logo text: EB Garamond everywhere (nav, footer, hero) ────────────────
 .nav-logo-text,
 .footer-logo-text {
   font-family: "EB Garamond", serif !important;
+}
+
+.hero-name {
+  font-family: "EB Garamond", Georgia, serif;
+}
+
+// ── Nav links: Cormorant SC small caps ───────────────────────────────────
+.nav-links a,
+.nav-links .nav-dropdown-toggle {
+  font-family: 'Cormorant SC', Georgia, serif;
+  letter-spacing: 0.08em;
 }
 
 
