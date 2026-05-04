@@ -51,6 +51,7 @@
 // to the dark-mode cream so text remains readable against the dark surface.
 @media (prefers-color-scheme: light) {
   nav.nav-menu,
+  footer,
   #hero,
   .svc-hero {
     --text: #E8E4DC;
@@ -59,14 +60,16 @@
     a { color: inherit; }
   }
 
-  // Nav stays dark in light mode — restore all dark-mode tokens so card
+  // Nav and footer stay dark — restore all dark-mode tokens so card
   // interiors, borders, gold accents, and icon colors don't go light.
-  nav.nav-menu {
+  nav.nav-menu,
+  footer {
     --bg1: #141414;
     --bg2: #1E1E1E;
     --bg3: #252525;
     --border: #333333;
     --bright: #FFFFFF;
+    --subdued: #B0AAA0;
     --muted: #999999;
     --gold: #C9A84C;
     --gold-border: #B1935D;
