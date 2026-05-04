@@ -58,6 +58,19 @@
 
     a { color: inherit; }
   }
+
+  // Nav stays dark in light mode — restore all dark-mode tokens so card
+  // interiors, borders, gold accents, and icon colors don't go light.
+  nav.nav-menu {
+    --bg1: #141414;
+    --bg2: #1E1E1E;
+    --bg3: #252525;
+    --border: #333333;
+    --bright: #FFFFFF;
+    --muted: #999999;
+    --gold: #C9A84C;
+    --gold-border: #B1935D;
+  }
 }
 
 
