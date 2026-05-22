@@ -31,6 +31,9 @@ collections:
   psas:
     output: true
     permalink: /work/psas/:slug/
+  announcements:
+    output: true
+    permalink: /announcements/:slug/
   about:
     output: true
     permalink: /:slug
