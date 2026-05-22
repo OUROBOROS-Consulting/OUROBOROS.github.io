@@ -1,0 +1,133 @@
+---
+layout: dashboard
+title: "Workplace & Reporting — CMD/CTRL Institutional Tool"
+permalink: /del-cmd-ctrl/institutional/
+---
+
+<div class="db-layout db-layout--sidebar">
+
+  <nav class="sidebar" aria-label="Page sections">
+    <ul class="sidebar-nav">
+      <li><a href="#fed-statutes" class="sidebar-link">Federal Statutes</a></li>
+      <li><a href="#reporting-tree" class="sidebar-link">Reporting Pathways</a></li>
+      <li><a href="#state-lookup" class="sidebar-link">State Lookup</a></li>
+      <li><a href="#resources" class="sidebar-link">Resources</a></li>
+    </ul>
+    <a href="/del-cmd-ctrl/" class="sidebar-back">← All modules</a>
+  </nav>
+
+  <main class="db-main">
+
+    <header class="module-header module-header--institutional">
+      <div class="module-header__eyebrow">Institutional Response</div>
+      <h1 class="module-header__title">Workplace &amp; Institutional Reporting</h1>
+      <p class="module-header__desc">Federal statutory frameworks, reporting pathway decision trees, and state-level coercive control context for HR professionals, attorneys, and advocates.</p>
+    </header>
+
+    <section id="fed-statutes" class="db-section">
+      <h2 class="section-title">Federal Statutory Frameworks</h2>
+
+      <div class="tab-group" role="tablist" aria-label="Federal statute categories">
+        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="panel-workplace" id="tab-workplace" onclick="switchTab(this, 'panel-workplace')">Workplace Protections</button>
+        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="panel-whistleblower" id="tab-whistleblower" onclick="switchTab(this, 'panel-whistleblower')">Whistleblower Programs</button>
+      </div>
+
+      <div id="panel-workplace" class="tab-panel" role="tabpanel" aria-labelledby="tab-workplace">
+        <div class="table-scroll">
+          <table class="data-table data-table--fed" aria-label="Federal workplace protection statutes">
+            <thead>
+              <tr>
+                <th scope="col">Statute</th>
+                <th scope="col">Agency</th>
+                <th scope="col">Filing Deadline</th>
+                <th scope="col">Scope</th>
+              </tr>
+            </thead>
+            <tbody id="workplace-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="panel-whistleblower" class="tab-panel tab-panel--hidden" role="tabpanel" aria-labelledby="tab-whistleblower">
+        <div class="table-scroll">
+          <table class="data-table data-table--fed" aria-label="Federal whistleblower protection statutes">
+            <thead>
+              <tr>
+                <th scope="col">Statute</th>
+                <th scope="col">Agency</th>
+                <th scope="col">Filing Deadline</th>
+                <th scope="col">Scope</th>
+              </tr>
+            </thead>
+            <tbody id="whistleblower-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="reporting-tree" class="db-section">
+      <h2 class="section-title">Reporting Pathway Decision Tree</h2>
+      <p class="section-intro">Select the type of claim to see the applicable reporting pathway and key deadlines.</p>
+
+      <div class="tree-grid">
+        <button class="tree-card" onclick="selectPath('eeoc')">
+          <div class="tree-card__title">Employment Discrimination</div>
+          <div class="tree-card__agency">EEOC</div>
+          <div class="tree-card__deadline">180-day window</div>
+        </button>
+        <button class="tree-card" onclick="selectPath('fmla')">
+          <div class="tree-card__title">Medical / Family Leave</div>
+          <div class="tree-card__agency">DOL / FMLA</div>
+          <div class="tree-card__deadline">Notify promptly</div>
+        </button>
+        <button class="tree-card" onclick="selectPath('nlrb')">
+          <div class="tree-card__title">Unfair Labor Practice</div>
+          <div class="tree-card__agency">NLRB</div>
+          <div class="tree-card__deadline">6-month window</div>
+        </button>
+        <button class="tree-card tree-card--urgent" onclick="selectPath('osha')">
+          <div class="tree-card__title">Safety Whistleblower</div>
+          <div class="tree-card__agency">OSHA</div>
+          <div class="tree-card__deadline tree-card__deadline--urgent">30-day window ⚠</div>
+        </button>
+      </div>
+
+      <div id="tree-result" class="tree-result" aria-live="polite"></div>
+    </section>
+
+    <section id="state-lookup" class="db-section">
+      <h2 class="section-title">State Law Lookup</h2>
+      <p class="section-intro">Check a state's coercive control statute and recording consent tier for institutional context.</p>
+
+      <div class="state-select-row">
+        <label for="state-lookup-select" class="sr-only">Select a state</label>
+        <select id="state-lookup-select" class="select-input" onchange="lookupState(this.value)">
+          <option value="">— Select a state —</option>
+        </select>
+      </div>
+
+      <div id="state-result" class="state-result-panel" aria-live="polite"></div>
+    </section>
+
+    <section id="resources" class="db-section">
+      <h2 class="section-title">Institutional Resources</h2>
+      <p class="section-intro">Workplace and whistleblower-specific organizations and legal resources.</p>
+      <div id="resource-cards" class="resource-grid" aria-live="polite"></div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.tab-btn').forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.add('tab-panel--hidden'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    document.getElementById(panelId).classList.remove('tab-panel--hidden');
+  }
+</script>
+<script src="/assets/js/dashboard/institutional.js"></script>

@@ -1,0 +1,116 @@
+---
+layout: dashboard
+title: "U.S. Law Map — CMD/CTRL Advocate Tool"
+permalink: /del-cmd-ctrl/advocate/
+scripts:
+  - "https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"
+  - "https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"
+---
+
+<div class="db-layout db-layout--sidebar">
+
+  <nav class="sidebar" aria-label="Page sections">
+    <ul class="sidebar-nav">
+      <li><a href="#map" class="sidebar-link">Law Map</a></li>
+      <li><a href="#state-detail" class="sidebar-link">State Detail</a></li>
+      <li><a href="#resources" class="sidebar-link">Resources</a></li>
+    </ul>
+    <a href="/del-cmd-ctrl/" class="sidebar-back">← All modules</a>
+  </nav>
+
+  <main class="db-main">
+
+    <header class="module-header module-header--advocate">
+      <div class="module-header__eyebrow">Advocacy &amp; Research</div>
+      <h1 class="module-header__title">U.S. Coercive Control &amp; Recording Law Map</h1>
+      <p class="module-header__desc">Interactive map of all 51 jurisdictions. Toggle between coercive control statute coverage and recording consent tiers. Click any state for details.</p>
+    </header>
+
+    <section id="map" class="db-section">
+      <div class="map-controls">
+        <div class="toggle-group" role="group" aria-label="Map layer">
+          <button class="toggle-btn active" onclick="setLayer('cc', this)">Coercive Control</button>
+          <button class="toggle-btn" onclick="setLayer('rec', this)">Recording Law</button>
+        </div>
+        <div class="state-select-row">
+          <label for="state-select" class="sr-only">Jump to state</label>
+          <select id="state-select" class="select-input select-input--sm" onchange="selectState(this.value)">
+            <option value="">— Jump to state —</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="map-wrap" role="img" aria-label="U.S. choropleth map">
+        <svg id="us-map" viewBox="0 0 975 610" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="map-tooltip" class="map-tooltip" role="tooltip" aria-live="polite"></div>
+      </div>
+
+      <div id="map-legend" class="map-legend" aria-label="Map legend"></div>
+    </section>
+
+    <section id="state-detail" class="db-section">
+      <h2 class="section-title">State Detail</h2>
+      <p class="section-intro">Click a state on the map or use the dropdown above to view its statute details.</p>
+
+      <div id="detail-panel" class="detail-panel" aria-live="polite">
+        <div class="detail-panel__header">
+          <span id="detail-name" class="detail-name"></span>
+          <span id="detail-abbr" class="detail-abbr"></span>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-cell">
+            <div class="detail-cell__label">Recording Tier</div>
+            <div id="detail-rec-row" class="detail-value-row"></div>
+            <div id="detail-rec-statute" class="detail-statute"></div>
+            <div id="detail-rec-practical" class="detail-note"></div>
+            <div id="detail-rec-interstate" class="detail-note detail-note--interstate"></div>
+          </div>
+
+          <div class="detail-cell">
+            <div class="detail-cell__label">Coercive Control Status</div>
+            <div id="detail-cc-row" class="detail-value-row"></div>
+            <div id="detail-cc-statute" class="detail-statute"></div>
+            <div id="detail-cc-scope" class="detail-note"></div>
+          </div>
+        </div>
+
+        <div id="detail-pilot-block"></div>
+        <div id="detail-pending-block"></div>
+      </div>
+    </section>
+
+    <section id="resources" class="db-section">
+      <h2 class="section-title">National Resources</h2>
+      <p class="section-intro">Data last verified: <span id="resources-verified">—</span></p>
+
+      <div class="filter-row">
+        <label for="filter-type" class="sr-only">Filter by type</label>
+        <select id="filter-type" class="select-input select-input--sm" onchange="filterResources()">
+          <option value="">All types</option>
+          <option value="crisis">Crisis</option>
+          <option value="legal">Legal</option>
+          <option value="digital">Digital safety</option>
+          <option value="advocacy">Advocacy</option>
+          <option value="policy">Policy</option>
+        </select>
+        <label for="filter-pop" class="sr-only">Filter by population</label>
+        <select id="filter-pop" class="select-input select-input--sm" onchange="filterResources()">
+          <option value="">All populations</option>
+          <option value="lgbtq+">LGBTQ+</option>
+          <option value="immigrants">Immigrants</option>
+          <option value="teens">Teens</option>
+          <option value="rural">Rural</option>
+          <option value="workplace">Workplace</option>
+        </select>
+      </div>
+
+      <div id="resource-grid" class="resource-grid" aria-live="polite"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="/assets/js/dashboard/advocate.js"></script>

@@ -26,6 +26,9 @@
     - title: Glossary
       url: /resources/glossary/
 
+- title: CMD/CTRL
+  url: /del-cmd-ctrl/
+
 - title: About
   url: /about/
   children:

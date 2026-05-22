@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+{% if page.exit_bar %}
+<div id="exit-bar" role="banner" aria-label="Quick exit">
+  <span class="exit-bar__label">You can leave this page quickly.</span>
+  <button class="exit-bar__btn" id="exit-btn" onclick="leaveNow()" aria-label="Exit site now">
+    Exit Site ✕
+  </button>
+</div>
+{% endif %}
+
+<div class="dashboard-wrap{% if page.exit_bar %} dashboard-wrap--has-exit{% endif %}">
+  {{ content }}
+</div>

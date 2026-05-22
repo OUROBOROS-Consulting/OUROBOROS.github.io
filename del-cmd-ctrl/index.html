@@ -1,0 +1,205 @@
+---
+layout: dashboard
+title: "Del CMD+CTRL — Coercive Control Dashboard"
+permalink: /del-cmd-ctrl/
+---
+
+<section class="gate-hero">
+  <header class="gate-header">
+    <div class="gate-header__eyebrow">Research Tool</div>
+    <h1 class="gate-header__title">Del CMD+CTRL</h1>
+    <p class="gate-header__subtitle">Coercive Control &amp; Digital Safety Dashboard</p>
+    <p class="gate-header__desc">A policy research and survivor support tool mapping U.S. coercive control statutes, recording laws, and institutional reporting pathways. Select a module below.</p>
+  </header>
+</section>
+
+<div class="gate-page">
+  <div class="gate-grid">
+
+    <a href="/del-cmd-ctrl/survivor/" class="gate-card gate-card--surv">
+      <div class="gate-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        </svg>
+      </div>
+      <div class="gate-card__body">
+        <div class="gate-card__label">Survivor Safety</div>
+        <h2 class="gate-card__title">Am I Safe to Record?</h2>
+        <p class="gate-card__desc">Check your state's recording consent law, identify coercive control patterns, and find immediate support resources.</p>
+      </div>
+      <div class="gate-card__footer">
+        <span class="gate-card__cta">Open tool</span>
+        <span class="gate-card__badge gate-card__badge--private">Private page · not indexed</span>
+      </div>
+    </a>
+
+    <a href="#map" class="gate-card gate-card--advocate">
+      <div class="gate-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+      </div>
+      <div class="gate-card__body">
+        <div class="gate-card__label">Advocacy &amp; Research</div>
+        <h2 class="gate-card__title">U.S. Law Map</h2>
+        <p class="gate-card__desc">Interactive choropleth map of coercive control statutes and recording consent tiers by state, with per-state detail panels.</p>
+      </div>
+      <div class="gate-card__footer">
+        <span class="gate-card__cta">View map ↓</span>
+      </div>
+    </a>
+
+    <a href="/del-cmd-ctrl/policy/" class="gate-card gate-card--policy">
+      <div class="gate-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="16" y1="13" x2="8" y2="13"/>
+          <line x1="16" y1="17" x2="8" y2="17"/>
+          <polyline points="10 9 9 9 8 9"/>
+        </svg>
+      </div>
+      <div class="gate-card__body">
+        <div class="gate-card__label">Policy Analysis</div>
+        <h2 class="gate-card__title">Comparative Law Table</h2>
+        <p class="gate-card__desc">Sortable, filterable table of all 51 jurisdictions. Federal workplace statutes, pending legislation tracker, and CSV export.</p>
+      </div>
+      <div class="gate-card__footer">
+        <span class="gate-card__cta">View table</span>
+      </div>
+    </a>
+
+    <a href="/del-cmd-ctrl/institutional/" class="gate-card gate-card--institutional">
+      <div class="gate-card__icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+          <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+        </svg>
+      </div>
+      <div class="gate-card__body">
+        <div class="gate-card__label">Institutional Response</div>
+        <h2 class="gate-card__title">Workplace &amp; Reporting</h2>
+        <p class="gate-card__desc">Federal reporting pathways (EEOC, FMLA, NLRB, OSHA), state-level context lookup, and institutional resource directory.</p>
+      </div>
+      <div class="gate-card__footer">
+        <span class="gate-card__cta">View pathways</span>
+      </div>
+    </a>
+
+  </div>
+
+  <footer class="gate-footer">
+    <p>Data covers all 50 states + D.C. Laws change — verify current status with a licensed attorney in your jurisdiction before taking action.</p>
+    <p class="gate-footer__updated">Dashboard last updated: <span id="data-updated">—</span></p>
+  </footer>
+</div>
+
+<div class="db-layout gate-map-embed">
+  <main class="db-main">
+
+    <header class="module-header module-header--advocate">
+      <div class="module-header__eyebrow">Advocacy &amp; Research</div>
+      <h2 class="module-header__title">U.S. Coercive Control &amp; Recording Law Map</h2>
+      <p class="module-header__desc">Interactive map of all 51 jurisdictions. Toggle between coercive control statute coverage and recording consent tiers. Click any state for details.</p>
+    </header>
+
+    <section id="map" class="db-section">
+      <div class="map-controls">
+        <div class="toggle-group" role="group" aria-label="Map layer">
+          <button class="toggle-btn active" onclick="setLayer('cc', this)">Coercive Control</button>
+          <button class="toggle-btn" onclick="setLayer('rec', this)">Recording Law</button>
+        </div>
+        <div class="state-select-row">
+          <label for="state-select" class="sr-only">Jump to state</label>
+          <select id="state-select" class="select-input select-input--sm" onchange="selectState(this.value)">
+            <option value="">— Jump to state —</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="map-wrap" role="img" aria-label="U.S. choropleth map">
+        <svg id="us-map" viewBox="0 0 975 610" preserveAspectRatio="xMidYMid meet"></svg>
+        <div id="map-tooltip" class="map-tooltip" role="tooltip" aria-live="polite"></div>
+      </div>
+
+      <div id="map-legend" class="map-legend" aria-label="Map legend"></div>
+    </section>
+
+    <section id="state-detail" class="db-section">
+      <h2 class="section-title">State Detail</h2>
+      <p class="section-intro">Click a state on the map or use the dropdown above to view its statute details.</p>
+
+      <div id="detail-panel" class="detail-panel" aria-live="polite">
+        <div class="detail-panel__header">
+          <span id="detail-name" class="detail-name"></span>
+          <span id="detail-abbr" class="detail-abbr"></span>
+        </div>
+
+        <div class="detail-grid">
+          <div class="detail-cell">
+            <div class="detail-cell__label">Recording Tier</div>
+            <div id="detail-rec-row" class="detail-value-row"></div>
+            <div id="detail-rec-statute" class="detail-statute"></div>
+            <div id="detail-rec-practical" class="detail-note"></div>
+            <div id="detail-rec-interstate" class="detail-note detail-note--interstate"></div>
+          </div>
+
+          <div class="detail-cell">
+            <div class="detail-cell__label">Coercive Control Status</div>
+            <div id="detail-cc-row" class="detail-value-row"></div>
+            <div id="detail-cc-statute" class="detail-statute"></div>
+            <div id="detail-cc-scope" class="detail-note"></div>
+          </div>
+        </div>
+
+        <div id="detail-pilot-block"></div>
+        <div id="detail-pending-block"></div>
+      </div>
+    </section>
+
+    <section id="resources" class="db-section">
+      <h2 class="section-title">National Resources</h2>
+      <p class="section-intro">Data last verified: <span id="resources-verified">—</span></p>
+
+      <div class="filter-row">
+        <label for="filter-type" class="sr-only">Filter by type</label>
+        <select id="filter-type" class="select-input select-input--sm" onchange="filterResources()">
+          <option value="">All types</option>
+          <option value="crisis">Crisis</option>
+          <option value="legal">Legal</option>
+          <option value="digital">Digital safety</option>
+          <option value="advocacy">Advocacy</option>
+          <option value="policy">Policy</option>
+        </select>
+        <label for="filter-pop" class="sr-only">Filter by population</label>
+        <select id="filter-pop" class="select-input select-input--sm" onchange="filterResources()">
+          <option value="">All populations</option>
+          <option value="lgbtq+">LGBTQ+</option>
+          <option value="immigrants">Immigrants</option>
+          <option value="teens">Teens</option>
+          <option value="rural">Rural</option>
+          <option value="workplace">Workplace</option>
+        </select>
+      </div>
+
+      <div id="resource-grid" class="resource-grid" aria-live="polite"></div>
+    </section>
+
+  </main>
+</div>
+
+<script>
+  fetch('/assets/js/dashboard/data.json')
+    .then(r => r.json())
+    .then(d => {
+      const el = document.getElementById('data-updated');
+      const date = d.meta && d.meta.last_verified_default;
+      if (el && date) el.textContent = new Date(date).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+    })
+    .catch(() => {});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="/assets/js/dashboard/advocate.js"></script>

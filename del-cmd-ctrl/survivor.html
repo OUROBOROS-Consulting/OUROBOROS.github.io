@@ -1,0 +1,119 @@
+---
+layout: dashboard
+title: "Am I Safe to Record? — CMD/CTRL Survivor Tool"
+permalink: /del-cmd-ctrl/survivor/
+noindex: true
+exit_bar: true
+---
+
+<div class="db-layout db-layout--sidebar">
+
+  <nav class="sidebar" aria-label="Page sections">
+    <ul class="sidebar-nav">
+      <li><a href="#recording-law" class="sidebar-link">Recording Law</a></li>
+      <li><a href="#patterns" class="sidebar-link">Pattern Checklist</a></li>
+      <li><a href="#resources" class="sidebar-link">Resources</a></li>
+    </ul>
+    <button class="sidebar-exit-btn" onclick="leaveNow()">Exit Site ✕</button>
+  </nav>
+
+  <main class="db-main">
+
+    <header class="module-header module-header--surv">
+      <div class="module-header__eyebrow">Survivor Safety Tool</div>
+      <h1 class="module-header__title">Am I Safe to Record?</h1>
+      <p class="module-header__desc">This page does not store any data. Your answers never leave your browser. Press <kbd>Escape</kbd> at any time to leave immediately.</p>
+    </header>
+
+    <section id="recording-law" class="db-section">
+      <h2 class="section-title">Recording Consent Law</h2>
+      <p class="section-intro">Select your state to see whether you may legally record a conversation or phone call without the other person's knowledge.</p>
+
+      <div class="state-select-row">
+        <label for="state-select" class="sr-only">Select your state</label>
+        <select id="state-select" class="select-input" onchange="showLaw(this.value)">
+          <option value="">— Select your state —</option>
+        </select>
+      </div>
+
+      <div id="law-result" class="law-result-card" aria-live="polite">
+        <div class="law-verdict-row">
+          <span class="law-verdict-label">Consent required:</span>
+          <span id="law-verdict" class="law-verdict-value"></span>
+        </div>
+        <div class="law-citation-row">
+          <span class="law-citation-label">Statute:</span>
+          <code id="law-citation" class="law-citation-code"></code>
+        </div>
+        <div class="law-plain-row">
+          <p id="law-plain" class="law-plain-text"></p>
+        </div>
+        <div id="law-interstate-block" class="law-interstate-block">
+          <strong class="law-interstate-label">Interstate note:</strong>
+          <p id="law-interstate-text" class="law-interstate-text"></p>
+        </div>
+        <div class="law-disclaimer">
+          <strong>This is not legal advice.</strong> Laws change. Consult a local attorney before recording.
+        </div>
+      </div>
+    </section>
+
+    <section id="patterns" class="db-section">
+      <h2 class="section-title">Coercive Control Pattern Checklist</h2>
+      <p class="section-intro">Check any behaviors you have experienced. This list is for your awareness only — it is never submitted or saved anywhere.</p>
+
+      <div class="tally-bar">
+        <span class="tally-label">Patterns checked:</span>
+        <span id="tally-num" class="tally-num">0</span>
+      </div>
+
+      <ul id="pattern-list" class="pattern-list" aria-label="Coercive control patterns">
+        <li class="pattern-item" onclick="toggleItem(this)">Monitoring calls, messages, or location without consent</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Controlling finances or withholding money</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Isolating from friends or family</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Threatening harm to you, children, or pets</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Demanding access to all passwords and accounts</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Installing tracking apps or spyware without permission</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Humiliating or degrading in private or public</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Using children as messengers or leverage</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Controlling what you wear, eat, or who you see</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Threatening to report you to immigration authorities</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Sabotaging employment or education</li>
+        <li class="pattern-item" onclick="toggleItem(this)">Denying access to medication or healthcare</li>
+      </ul>
+
+      <div class="pattern-note" aria-live="polite">
+        <p>Even a single checked item may indicate coercive control. You do not need to experience physical violence for this to be abuse.</p>
+      </div>
+    </section>
+
+    <section id="resources" class="db-section">
+      <h2 class="section-title">Support Resources</h2>
+      <p class="section-intro">National and specialized resources. All calls to the National DV Hotline are confidential.</p>
+
+      <div class="filter-row">
+        <label for="filter-type" class="sr-only">Filter by type</label>
+        <select id="filter-type" class="select-input select-input--sm" onchange="filterResources()">
+          <option value="">All types</option>
+          <option value="crisis">Crisis</option>
+          <option value="legal">Legal</option>
+          <option value="digital">Digital safety</option>
+          <option value="advocacy">Advocacy</option>
+        </select>
+        <label for="filter-pop" class="sr-only">Filter by population</label>
+        <select id="filter-pop" class="select-input select-input--sm" onchange="filterResources()">
+          <option value="">All populations</option>
+          <option value="lgbtq+">LGBTQ+</option>
+          <option value="immigrants">Immigrants</option>
+          <option value="teens">Teens</option>
+          <option value="rural">Rural</option>
+        </select>
+      </div>
+
+      <div id="resource-list" class="resource-list" aria-live="polite"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="/assets/js/dashboard/survivor.js"></script>

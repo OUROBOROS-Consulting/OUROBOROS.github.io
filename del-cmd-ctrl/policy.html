@@ -1,0 +1,130 @@
+---
+layout: dashboard
+title: "Comparative Law Table — CMD/CTRL Policy Tool"
+permalink: /del-cmd-ctrl/policy/
+---
+
+<div class="db-layout db-layout--sidebar">
+
+  <nav class="sidebar" aria-label="Page sections">
+    <ul class="sidebar-nav">
+      <li><a href="#state-table" class="sidebar-link">State Table</a></li>
+      <li><a href="#federal" class="sidebar-link">Federal Law</a></li>
+      <li><a href="#tracker" class="sidebar-link">Bill Tracker</a></li>
+      <li><a href="#survey" class="sidebar-link">Survey</a></li>
+    </ul>
+    <a href="/del-cmd-ctrl/" class="sidebar-back">← All modules</a>
+  </nav>
+
+  <main class="db-main">
+
+    <header class="module-header module-header--policy">
+      <div class="module-header__eyebrow">Policy Analysis</div>
+      <h1 class="module-header__title">Comparative Law Table</h1>
+      <p class="module-header__desc">Sortable, filterable reference table of coercive control statutes and recording consent laws across all 51 U.S. jurisdictions.</p>
+    </header>
+
+    <section id="state-table" class="db-section">
+      <div class="table-toolbar">
+        <div class="table-toolbar__filters">
+          <label for="state-search" class="sr-only">Search by state name or abbreviation</label>
+          <input id="state-search" type="search" class="search-input" placeholder="Search state…" oninput="renderTable()" autocomplete="off" />
+          <label for="cc-filter" class="sr-only">Filter by CC status</label>
+          <select id="cc-filter" class="select-input select-input--sm" onchange="renderTable()">
+            <option value="">All CC status</option>
+            <option value="criminal">Criminal</option>
+            <option value="civil">Civil only</option>
+            <option value="both">Both</option>
+            <option value="pending">Pending</option>
+            <option value="none">None</option>
+          </select>
+          <label for="rec-filter" class="sr-only">Filter by recording tier</label>
+          <select id="rec-filter" class="select-input select-input--sm" onchange="renderTable()">
+            <option value="">All recording tiers</option>
+            <option value="one-party">One-party</option>
+            <option value="all-party">All-party</option>
+            <option value="two-party">Two-party</option>
+          </select>
+        </div>
+        <div class="table-toolbar__actions">
+          <span id="row-count" class="row-count"></span>
+          <button class="btn-export" onclick="exportCSV()">Export CSV</button>
+        </div>
+      </div>
+
+      <div class="table-scroll">
+        <table class="data-table" aria-label="State coercive control and recording laws">
+          <thead>
+            <tr>
+              <th data-col="name" onclick="sortTable('name')" scope="col" class="sort-asc">State</th>
+              <th data-col="abbr" onclick="sortTable('abbr')" scope="col">Abbr</th>
+              <th data-col="cc_status" onclick="sortTable('cc_status')" scope="col">CC Status</th>
+              <th data-col="cc_citation" onclick="sortTable('cc_citation')" scope="col">CC Statute</th>
+              <th data-col="rec_tier" onclick="sortTable('rec_tier')" scope="col">Recording Tier</th>
+              <th data-col="rec_citation" onclick="sortTable('rec_citation')" scope="col">Rec Statute</th>
+              <th data-col="cc_effective" onclick="sortTable('cc_effective')" scope="col">Effective</th>
+            </tr>
+          </thead>
+          <tbody id="table-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="federal" class="db-section">
+      <h2 class="section-title">Federal Law</h2>
+
+      <h3 class="subsection-title">Workplace Protections</h3>
+      <div class="table-scroll">
+        <table class="data-table data-table--fed" aria-label="Federal workplace statutes">
+          <thead>
+            <tr>
+              <th scope="col">Statute</th>
+              <th scope="col">Agency</th>
+              <th scope="col">Scope</th>
+              <th scope="col">Filing Deadline</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody id="fed-workplace-body"></tbody>
+        </table>
+      </div>
+
+      <h3 class="subsection-title">Whistleblower Protections</h3>
+      <div class="table-scroll">
+        <table class="data-table data-table--fed" aria-label="Federal whistleblower statutes">
+          <thead>
+            <tr>
+              <th scope="col">Statute</th>
+              <th scope="col">Agency</th>
+              <th scope="col">Scope</th>
+              <th scope="col">Filing Deadline</th>
+              <th scope="col">Notes</th>
+            </tr>
+          </thead>
+          <tbody id="fed-whistleblower-body"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="tracker" class="db-section">
+      <h2 class="section-title">Pending Legislation Tracker</h2>
+      <p class="section-intro">Bills with recent legislative action, sorted by last action date.</p>
+      <div id="tracker-grid" class="tracker-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="survey" class="db-section">
+      <h2 class="section-title">Research Survey</h2>
+      <div class="survey-card">
+        <div class="survey-card__status">
+          <span class="survey-status-label">Status:</span>
+          <span id="survey-status-value" class="survey-status-value"></span>
+        </div>
+        <p id="survey-note-text" class="survey-note"></p>
+        <p class="survey-privacy">Participation is anonymous. No personal information is collected or stored.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="/assets/js/dashboard/policy.js"></script>
