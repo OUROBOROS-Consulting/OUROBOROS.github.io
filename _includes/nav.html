@@ -21,49 +21,6 @@
       </div>
     </div>
 
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <!-- Main Nav Links -->
-    <div class="nav-links">
-      {% for item in site.data.nav %}
-      {% assign nav_icon = 'fas fa-circle' %}
-      {% case item.title %}
-      {% when 'About' %}{% assign nav_icon = 'fa-solid fa-fingerprint' %}
-      {% when 'Services' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
-      {% when 'Projects' %}{% assign nav_icon = 'fa-solid fa-diagram-project' %}
-      {% when 'Work' %}{% assign nav_icon = 'fa-solid fa-pen-ruler' %}
-      {% when 'Resources' %}{% assign nav_icon = 'fa-solid fa-scroll' %}
-      {% endcase %}
-      <div class="nav-dropdown">
-        <div class="nav-card">
-          <div class="nav-card__interior">
-            <a href="{{ item.url | relative_url }}" class="nav-dropdown-toggle">
-              <i class="{{ nav_icon }}" aria-hidden="true"></i>
-              <span>{{ item.title }}</span>
-            </a>
-            {% if item.children %}<button class="nav-accordion-btn" aria-label="Expand {{ item.title }}"
-              aria-expanded="false"><i class="fas fa-chevron-down" aria-hidden="true"></i></button>{% endif %}
-          </div>
-        </div>
-
-        <div class="nav-dropdown-menu">
-          {% for child in item.children %}
-          <div class="nav-card">
-            <div class="nav-card__interior">
-              <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
-            </div>
-          </div>
-          {% endfor %}
-        </div>
-      </div>
-      {% endfor %}
-
-    </div>
-
     <!-- CMD/CTRL -->
     <div class="nav-dropdown nav-button">
       <div class="nav-card">
