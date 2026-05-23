@@ -69,11 +69,29 @@
       {% include nav.html %}
       {% assign pu = page.url %}
       <nav class="nav-secondary" aria-label="Section navigation">
-        <a class="nav-sec-card{% if pu contains '/services' %} active{% endif %}" href="{{ '/services/' | relative_url }}"><div class="nav-sec-item">Services</div></a>
-        <a class="nav-sec-card{% if pu contains '/resources' or pu contains '/psas' or pu contains '/glossary' or pu contains '/tutorials' or pu contains '/scholarly' %} active{% endif %}" href="{{ '/resources/' | relative_url }}"><div class="nav-sec-item">Resources</div></a>
-        <a class="nav-sec-card{% if pu contains '/about' or pu contains '/mission' or pu contains '/framework' or pu contains '/causes' or pu contains '/cv' or pu contains '/story' %} active{% endif %}" href="{{ '/about/' | relative_url }}"><div class="nav-sec-item">About</div></a>
-        <a class="nav-sec-card{% if pu contains '/case-studies' or pu contains '/work/' %} active{% endif %}" href="{{ '/case-studies/' | relative_url }}"><div class="nav-sec-item">Work</div></a>
-        <a class="nav-sec-card{% if pu contains '/projects' %} active{% endif %}" href="{{ '/projects/' | relative_url }}"><div class="nav-sec-item">Projects</div></a>
+        {% for item in site.data.nav %}
+        {% assign is_active = false %}
+        {% if pu contains item.url %}{% assign is_active = true %}{% endif %}
+        {% for ap in item.active_paths %}{% if pu contains ap %}{% assign is_active = true %}{% endif %}{% endfor %}
+        <div class="nav-sec-dropdown">
+          <a class="nav-sec-card{% if is_active %} active{% endif %}"
+             href="{{ item.url | relative_url }}">
+            <div class="nav-sec-item">
+              {{ item.title }}{% if item.children %} <i class="fas fa-chevron-down nav-sec-chevron" aria-hidden="true"></i>{% endif %}
+            </div>
+          </a>
+          {% if item.children %}
+          <div class="nav-sec-dropdown-menu">
+            {% for child in item.children %}
+            <a class="nav-sec-child-card{% if pu contains child.url %} active{% endif %}"
+               href="{{ child.url | relative_url }}">
+              <div class="nav-sec-child-item">{{ child.title }}</div>
+            </a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
       </nav>
     </div>
     {{ content }}
