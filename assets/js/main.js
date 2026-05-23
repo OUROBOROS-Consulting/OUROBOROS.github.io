@@ -5,37 +5,6 @@ document.querySelectorAll('.values-card').forEach(card => {
   card.addEventListener('click', () => card.classList.toggle('is-flipped'));
 });
 
-// ── Active nav link ───────────────────────────────────────────────────────────
-(function () {
-  const links = document.querySelectorAll('.nav-links a');
-  const path  = window.location.pathname.split('/').pop() || 'index.html';
-  links.forEach(a => {
-    const href = a.getAttribute('href');
-    if (href === path || (path === '' && href === 'index.html')) {
-      a.classList.add('active');
-    }
-  });
-})();
-
-// ── Mobile nav toggle ─────────────────────────────────────────────────────────
-const toggle   = document.querySelector('.nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-if (toggle && navLinks) {
-  toggle.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', open);
-  });
-}
-
-// ── Mobile accordion ──────────────────────────────────────────────────────────
-document.querySelectorAll('.nav-accordion-btn').forEach(btn => {
-  btn.addEventListener('click', () => {
-    const dropdown = btn.closest('.nav-dropdown');
-    const open = dropdown.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open);
-  });
-});
-
 // ── Scroll-triggered fade-in ──────────────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
