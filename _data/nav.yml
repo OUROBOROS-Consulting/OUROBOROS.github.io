@@ -16,6 +16,11 @@
 
 - title: Resources
   url: /resources/
+  active_paths:
+    - /psas
+    - /glossary
+    - /tutorials
+    - /scholarly
   children:
     - title: PSAs
       url: /resources/psas/
@@ -28,6 +33,12 @@
 
 - title: About
   url: /about/
+  active_paths:
+    - /mission
+    - /framework
+    - /causes
+    - /cv
+    - /story
   children:
     - title: Framework
       url: /framework/
@@ -41,3 +52,11 @@
       url: /causes/
     - title: CV
       url: /cv
+
+- title: Work
+  url: /case-studies/
+  active_paths:
+    - /work/
+
+- title: Projects
+  url: /projects/
