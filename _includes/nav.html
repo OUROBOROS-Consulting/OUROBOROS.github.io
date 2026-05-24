@@ -8,22 +8,8 @@
       </div>
     </a>
 
-    <div class="nav-utils">
-      <!-- Search -->
-      <div id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap">
-        <div class="nav-card">
-          <div class="nav-card__interior">
-            <button type="button" class="nav-search__toggle" aria-label="Open search" aria-expanded="false">
-              <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
-              <span class="nav-btn-label">Search</span>
-            </button>
-            <input class="nav-search__input" type="search" aria-label="Search site" placeholder="Search…" autocomplete="off">
-            <button type="button" class="nav-search-close" aria-label="Close search">×</button>
-          </div>
-        </div>
-        <div id="search-results" role="region" aria-live="polite" aria-label="Search results"></div>
-      </div>
-
+    <!-- Centered button group -->
+    <div class="nav-buttons">
       <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
       <div class="nav-dropdown nav-button">
         <div class="nav-card">
@@ -73,6 +59,18 @@
         </div>
       </div>
     </div>
+
+    <!-- Search — right-anchored, input expands leftward -->
+    <form id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap" action="/search/" method="get" role="search">
+      <div class="nav-card">
+        <div class="nav-card__interior">
+          <input class="nav-search__input" type="search" name="q" aria-label="Search site" placeholder="Search…" autocomplete="off">
+          <button type="submit" class="nav-search__submit" aria-label="Search site">
+            <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </form>
 
   </nav>
 </header>
