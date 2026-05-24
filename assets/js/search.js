@@ -161,7 +161,7 @@
         updateActive(cards);
       } else if (e.key === 'ArrowUp') {
         e.preventDefault();
-        activeIdx = Math.max(activeIdx - 1, 0);
+        activeIdx = Math.max(activeIdx - 1, -1);
         updateActive(cards);
       } else if (e.key === 'Enter') {
         if (activeIdx >= 0 && cards[activeIdx]) {
@@ -216,8 +216,9 @@
       }
 
       if (e.key === '/' && !isOpen()) {
-        var tag = document.activeElement && document.activeElement.tagName;
-        if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+        var el = document.activeElement;
+        var tag = el && el.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || el.isContentEditable) return;
         e.preventDefault();
         open();
       }
