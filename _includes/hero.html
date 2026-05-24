@@ -59,6 +59,7 @@
     <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
     <div class="hero-cta">
       <a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label | default: 'View My Work' }}</a>
+      {% if page.cta2_label %}<a href="{{ page.cta2_url | relative_url }}" class="btn btn--ghost">{{ page.cta2_label }}</a>{% endif %}
     </div>
   </div>
 

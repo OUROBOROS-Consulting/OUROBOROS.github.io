@@ -14,6 +14,8 @@ tagline: >
 
 cta_label: null
 cta_url: /case-studies/
+cta2_label: Open Dashboard
+cta2_url: /del-cmd-ctrl/
 
 # About
 about_heading: Technology and Advocacy for Survivors of Institutional Betrayal

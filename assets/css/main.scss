@@ -1,7 +1,4 @@
----
----
-
-// Import design system from npm package
+--- --- // Import design system from npm package
 @import "@ouroboros-consulting/ouroboros-design/scss/index";
 
 // ── Safety / Quick-exit button ────────────────────────────────────────────
@@ -36,12 +33,17 @@
     outline-offset: 2px;
   }
 
-  i { font-size: 0.9rem; }
+  i {
+    font-size: 0.9rem;
+  }
 
   @media (max-width: 640px) {
     font-size: 0.7rem;
     padding: 0.5rem 0.7rem;
-    span { display: none; }
+
+    span {
+      display: none;
+    }
   }
 }
 
@@ -50,6 +52,7 @@
 // The nav and hero backgrounds stay dark in light mode, so re-anchor --text
 // to the dark-mode cream so text remains readable against the dark surface.
 @media (prefers-color-scheme: light) {
+
   nav.nav-menu,
   footer,
   #hero,
@@ -57,7 +60,9 @@
     --text: #E8E4DC;
     color: var(--text);
 
-    a { color: inherit; }
+    a {
+      color: inherit;
+    }
   }
 
   // Nav and footer stay dark — restore all dark-mode tokens so card
@@ -151,7 +156,7 @@ nav.nav-menu .nav-dropdown.nav-button .nav-card {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0rem;
 }
 
 .footer-links {
