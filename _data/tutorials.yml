@@ -1,64 +1,81 @@
-- tag: Cybersecurity
+# ── Digital Security & Privacy ────────────────────────────────────────────────
+- section: Digital Security & Privacy
+  tag: Cybersecurity
   title: Recognizing Social Engineering Tactics
   description: Learn to identify common manipulation techniques used in phishing, pretexting, and personal interactions. Includes real-world examples and defense strategies.
   link: "#"
 
-- tag: Data Privacy
+- section: Digital Security & Privacy
+  tag: Data Privacy
   title: Securing Your Digital Footprint
   description: Step-by-step guide to auditing and minimizing your online presence. Covers account management, privacy settings, and monitoring tools.
   link: "#"
 
-- tag: Institutional Navigation
-  title: Documenting Interactions with Authorities
-  description: Best practices for recording conversations, preserving evidence, and maintaining records when dealing with government or institutional entities.
-  link: /resources/tutorial-documenting-interactions/
-
-- tag: Survival Strategies
-  title: Building a Personal Safety Plan
-  description: Comprehensive framework for assessing threats, establishing support networks, and creating actionable emergency protocols.
-  link: /resources/tutorial-safety-plan/
-
-- tag: Mental Health
-  title: Managing Trauma Responses in High-Stress Situations
-  description: Techniques for recognizing and coping with trauma triggers, maintaining mental clarity, and accessing appropriate support resources.
-  link: /resources/tutorial-trauma-responses/
-
-- tag: Technology
+- section: Digital Security & Privacy
+  tag: Technology
   title: Setting Up Encrypted Communication Channels
   description: Guide to choosing and configuring secure messaging apps, email encryption, and voice communication tools for sensitive conversations.
   link: "#"
 
-- tag: Apple Devices
+# ── Institutional Navigation & Survival ───────────────────────────────────────
+- section: Institutional Navigation & Survival
+  tag: Institutional Navigation
+  title: Documenting Interactions with Authorities
+  description: Best practices for recording conversations, preserving evidence, and maintaining records when dealing with government or institutional entities.
+  link: /resources/tutorial-documenting-interactions/
+
+- section: Institutional Navigation & Survival
+  tag: Survival Strategies
+  title: Building a Personal Safety Plan
+  description: Comprehensive framework for assessing threats, establishing support networks, and creating actionable emergency protocols.
+  link: /resources/tutorial-safety-plan/
+
+- section: Institutional Navigation & Survival
+  tag: Mental Health
+  title: Managing Trauma Responses in High-Stress Situations
+  description: Techniques for recognizing and coping with trauma triggers, maintaining mental clarity, and accessing appropriate support resources.
+  link: /resources/tutorial-trauma-responses/
+
+# ── Apple Devices ──────────────────────────────────────────────────────────────
+- section: Apple Devices
+  tag: Apple Devices
   title: Auditing Your Apple Device for Surveillance Risks
   description: Step-by-step audit of Find My, Family Sharing location access, Screen Time controls, Location Services, and trusted device settings — with practical steps to identify and remove unauthorized access.
   link: /resources/tutorial-apple-security-audit/
 
-- tag: Apple Devices
+- section: Apple Devices
+  tag: Apple Devices
   title: Protecting Your Data with iCloud Advanced Data Protection
   description: How to enable end-to-end encryption for your iCloud data, set up a recovery method, audit trusted devices, and understand what is and isn't protected by default.
   link: /resources/tutorial-icloud-adp/
 
-- tag: Apple Devices
+- section: Apple Devices
+  tag: Apple Devices
   title: Using Focus Modes to Compartmentalize Your Digital Life
   description: Configure Focus modes to enforce context boundaries, manage notification allowlists, disable Focus status sharing, and build a minimal-input recovery mode for high-stress periods.
   link: /resources/tutorial-focus-modes/
 
-- tag: Apple Devices
+- section: Apple Devices
+  tag: Apple Devices
   title: Setting Up Encrypted Communication on Apple Devices
   description: Verify iMessage E2EE status, configure iCloud Messages with Advanced Data Protection, set up Signal for cross-platform contacts, and audit which devices receive your messages.
   link: /resources/tutorial-encrypted-communication/
 
-- tag: AI Threats
+# ── AI Threats ─────────────────────────────────────────────────────────────────
+- section: AI Threats
+  tag: AI Threats
   title: Recognizing and Responding to Deepfakes and Voice Cloning
   description: How to identify AI-generated images, audio, and video — and what to do when synthetic media is used against you.
   link: /resources/tutorial-ai-deepfakes/
 
-- tag: AI Threats
+- section: AI Threats
+  tag: AI Threats
   title: AI Surveillance and Reducing Your Exposure
   description: How AI-powered facial recognition, behavioral profiling, and data brokerage work — and practical steps to reduce your exposure.
   link: /resources/tutorial-ai-surveillance/
 
-- tag: AI Threats
+- section: AI Threats
+  tag: AI Threats
   title: Algorithmic Decision Systems — Detecting and Challenging Automated Decisions
   description: How automated systems make consequential decisions about housing, credit, employment, and criminal justice — and the legal tools available to challenge them.
   link: /resources/tutorial-ai-algorithmic-decisions/

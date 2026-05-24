@@ -38,7 +38,7 @@ Work through the steps in order. Each step takes one to three minutes. If you fi
 
 4. **Audit Location Services per app.** Go to Settings → Privacy &amp; Security → Location Services. Review which apps have Always or While Using access. Social media apps, navigation apps, and any app you don't recognize should be set to Never or While Using. Always access means the app can track your location in the background without you opening it.
 
-5. **Disable GPS in photo EXIF data.** Within Location Services, scroll to Camera and set it to Never. When location access is on, every photo you take is embedded with GPS coordinates that persist when you share the file via email, AirDrop, or MMS. iMessage strips EXIF data on send; email does not. Setting Camera to Never prevents this entirely.
+5. **Disable GPS in photo EXIF data.** Within Location Services, scroll to Camera and set it to Never. When location access is on, every photo you take is embedded with GPS coordinates that persist when you share the file via any channel — including iMessage, AirDrop, and email. No messaging app reliably strips GPS metadata before delivery. Setting Camera to Never is the only safeguard that works consistently.
 
 6. **Check Text Message Forwarding.** Go to Settings → Messages → Text Message Forwarding. Any device listed here receives copies of every SMS and iMessage you send or receive. Remove any device you don't recognize or no longer use. Note that Macs and iPads registered to the same Apple ID can be added here without you seeing a prompt on the secondary device.
 
@@ -51,7 +51,7 @@ Work through the steps in order. Each step takes one to three minutes. If you fi
 - **Assuming "only family" have access.** Family Sharing grants real-time location visibility by default. A family member added under duress is still a surveillance point.
 - **Ignoring AirTag alerts.** iOS alerts only appear after the tag has been separated from its owner for a period — by the time you see the alert, it has been with you for hours.
 - **Leaving Location Services on Always for apps that don't need it.** Weather apps, retail apps, and social media do not need background location. Set them to While Using or Never.
-- **Sharing original photos via email.** iMessage and AirDrop strip GPS metadata before sending. Email does not. If you need to share a photo securely, send it via iMessage or manually remove EXIF data first.
+- **Sharing photos without removing GPS metadata first.** No messaging app — including iMessage and AirDrop — reliably strips GPS coordinates before delivery. Every photo taken with location access enabled carries embedded GPS data that travels with the file. Remove EXIF data manually before sharing any photo where location privacy matters.
 - **Assuming Screen Time limits were self-set.** Screen Time can be configured remotely through Family Sharing. If you see limits or content restrictions you don't remember setting, someone else may have configured them.
 
 ## Resources
