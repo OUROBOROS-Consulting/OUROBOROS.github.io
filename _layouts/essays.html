@@ -20,10 +20,13 @@ layout: default
   </div>
 </header>
 
-<!-- ── Prose body ── -->
-<article class="post-body">
-  {{ content }}
-</article>
+<!-- ── Prose body + TOC sidebar ── -->
+<div class="page-toc-wrap page-toc-wrap--essay">
+  <article class="post-body">
+    {{ content }}
+  </article>
+  {% include toc.html %}
+</div>
 
 <!-- ── Related posts ── -->
 {% assign other_essays = site.essays | where_exp: "e", "e.url != page.url" | sort: "date" | reverse | limit: 3 %}
@@ -42,6 +45,7 @@ layout: default
 </section>
 {% endif %}
 
+<script src="/assets/js/toc.js" defer></script>
 <script>
   const bar = document.getElementById('progress-bar');
   window.addEventListener('scroll', () => {

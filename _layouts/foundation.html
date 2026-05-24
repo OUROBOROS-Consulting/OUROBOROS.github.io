@@ -25,11 +25,14 @@ layout: default
   </div>
 </header>
 
-<article class="svc-body">
-  <div class="post-body">
-    {{ content }}
-  </div>
-</article>
+<div class="page-toc-wrap page-toc-wrap--svc">
+  <article class="svc-body">
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </article>
+  {% include toc.html %}
+</div>
 
 <div class="svc-body">
   {% if page.who %}
@@ -56,6 +59,7 @@ layout: default
   </section>
 </div>
 
+<script src="/assets/js/toc.js" defer></script>
 <script>
   const bar = document.getElementById('progress-bar');
   window.addEventListener('scroll', () => {

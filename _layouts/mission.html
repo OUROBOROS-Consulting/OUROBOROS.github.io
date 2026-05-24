@@ -143,6 +143,7 @@ layout: default
        body: "text"              — see CARD BODY block below
      ══════════════════════════════════════════════════════════════════════ -->
 {% if page.sections %}
+<div class="page-toc-wrap page-toc-wrap--svc">
 <div class="svc-body">
   {% for section in page.sections %}
 
@@ -303,6 +304,8 @@ layout: default
 
   {% endfor %}
 </div><!-- /svc-body (sections loop) -->
+{% include toc.html %}
+</div><!-- /page-toc-wrap -->
 {% endif %}
 
 <!-- ══════════════════════════════════════════════════════════════════════
@@ -359,6 +362,8 @@ layout: default
      by swapping  data-src → src  on the active slide. -->
 <script src="{{ '/assets/js/playlist-carousel.js' | relative_url }}" defer></script>
 {% endif %}
+
+<script src="/assets/js/toc.js" defer></script>
 
 <!-- ══════════════════════════════════════════════════════════════════════
      PROGRESS BAR SCRIPT

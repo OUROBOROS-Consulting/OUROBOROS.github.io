@@ -11,7 +11,9 @@ exit_bar: true
   <nav class="sidebar" aria-label="Page sections">
     <ul class="sidebar-nav">
       <li><a href="#recording-law" class="sidebar-link">Recording Law</a></li>
+      <li><a href="#interstate" class="sidebar-link">Interstate Risk</a></li>
       <li><a href="#patterns" class="sidebar-link">Pattern Checklist</a></li>
+      <li><a href="#device" class="sidebar-link">Device Safety</a></li>
       <li><a href="#resources" class="sidebar-link">Resources</a></li>
     </ul>
     <button class="sidebar-exit-btn" onclick="leaveNow()">Exit Site ✕</button>
@@ -58,6 +60,29 @@ exit_bar: true
       </div>
     </section>
 
+    <section id="interstate" class="db-section">
+      <h2 class="section-title">Interstate Recording Risk</h2>
+      <p class="section-intro">If you and the other person are in different states, the stricter consent law governs. Select both states to see which rule applies.</p>
+
+      <div class="interstate-selects">
+        <div>
+          <label for="interstate-my-state" class="sr-only">Your state</label>
+          <select id="interstate-my-state" class="select-input" onchange="calcInterstate()">
+            <option value="">— Your state —</option>
+          </select>
+        </div>
+        <span class="interstate-selects__sep">calling</span>
+        <div>
+          <label for="interstate-their-state" class="sr-only">Their state</label>
+          <select id="interstate-their-state" class="select-input" onchange="calcInterstate()">
+            <option value="">— Their state —</option>
+          </select>
+        </div>
+      </div>
+
+      <div id="interstate-verdict" class="interstate-verdict" aria-live="polite"></div>
+    </section>
+
     <section id="patterns" class="db-section">
       <h2 class="section-title">Coercive Control Pattern Checklist</h2>
       <p class="section-intro">Check any behaviors you have experienced. This list is for your awareness only — it is never submitted or saved anywhere.</p>
@@ -67,23 +92,67 @@ exit_bar: true
         <span id="tally-num" class="tally-num">0</span>
       </div>
 
-      <ul id="pattern-list" class="pattern-list" aria-label="Coercive control patterns">
-        <li class="pattern-item" onclick="toggleItem(this)">Monitoring calls, messages, or location without consent</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Controlling finances or withholding money</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Isolating from friends or family</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Threatening harm to you, children, or pets</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Demanding access to all passwords and accounts</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Installing tracking apps or spyware without permission</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Humiliating or degrading in private or public</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Using children as messengers or leverage</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Controlling what you wear, eat, or who you see</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Threatening to report you to immigration authorities</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Sabotaging employment or education</li>
-        <li class="pattern-item" onclick="toggleItem(this)">Denying access to medication or healthcare</li>
-      </ul>
+      <div id="checklist-root" aria-label="Coercive control pattern checklist"></div>
 
       <div class="pattern-note" aria-live="polite">
         <p>Even a single checked item may indicate coercive control. You do not need to experience physical violence for this to be abuse.</p>
+      </div>
+
+      <div id="escalation-banner" class="escalation-banner" aria-live="assertive" role="alert">
+        <div class="escalation-banner__title"></div>
+        <p class="escalation-banner__text"></p>
+        <button class="escalation-banner__action" onclick="document.getElementById('resources').scrollIntoView({behavior:'smooth'})">View support resources →</button>
+      </div>
+    </section>
+
+    <section id="device" class="db-section">
+      <h2 class="section-title">Device Safety Audit</h2>
+      <p class="section-intro">Check any items that are true for you. Nothing is submitted or stored. If any apply, assume your device may be monitored.</p>
+
+      <div class="tally-bar">
+        <span class="tally-label">Risks identified:</span>
+        <span id="device-tally-num" class="tally-num">0</span>
+      </div>
+
+      <ul id="device-list" class="device-list" aria-label="Device safety audit checklist">
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">There are apps on my device I don't recognize or didn't install</span>
+        </li>
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">My battery drains unusually fast or the device runs warm when idle</span>
+        </li>
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">Apps have location access I don't remember granting</span>
+        </li>
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">Another person's Apple ID, Google account, or Microsoft account is linked to my device</span>
+        </li>
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">Find My iPhone or Find My Device is shared with someone I did not choose</span>
+        </li>
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">My iCloud, Google, or email account recovery phone number or address is not mine</span>
+        </li>
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">I share a phone plan and the account holder may access my call or message history</span>
+        </li>
+        <li class="device-item" onclick="toggleDeviceItem(this)">
+          <span class="device-item__check" aria-hidden="true"></span>
+          <span class="device-item__text">My browser is signed into a shared or someone else's account (Chrome Sync, iCloud Safari)</span>
+        </li>
+      </ul>
+
+      <div id="device-alert" class="device-alert" aria-live="polite">
+        <div class="device-alert__title">Surveillance risk identified</div>
+        <p class="device-alert__text">Two or more items suggest active tracking or account compromise. The Coalition Against Stalkerware provides free device audit guidance — check their safety checklist before continuing to use this device.</p>
+        <a href="https://stopstalkerware.org" target="_blank" rel="noopener noreferrer" class="device-alert__link">stopstalkerware.org →</a>
       </div>
     </section>
 
