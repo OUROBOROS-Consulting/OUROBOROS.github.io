@@ -16,7 +16,7 @@ permalink: /assets/js/search-index.json
 {%- for page in site.pages -%}
   {%- if page.title -%}
     {%- unless first_item -%},{%- endunless -%}
-    {"title":{{ page.title | jsonify }},"url":{{ page.url | relative_url | jsonify }},"description":{{ page.description | default: "" | strip_html | truncatewords: 30 | strip_newlines | jsonify }},"type":"page"}
+    {"title":{{ page.title | jsonify }},"url":{{ page.url | relative_url | jsonify }},"description":{{ page.description | default: page.excerpt | default: "" | strip_html | truncatewords: 30 | strip_newlines | jsonify }},"type":"page"}
     {%- assign first_item = false -%}
   {%- endif -%}
 {%- endfor -%}
