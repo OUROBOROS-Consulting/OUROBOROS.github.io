@@ -8,51 +8,68 @@
       </div>
     </a>
 
-    <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
-    <div class="nav-dropdown nav-button">
-      <div class="nav-card">
-        <div class="nav-card__interior">
-          <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
-            aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
-            <i class="fas fa-dungeon" aria-hidden="true"></i>
-            <span class="nav-btn-label">Exit</span>
-          </a>
+    <div class="nav-utils">
+      <!-- Search -->
+      <div id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap">
+        <div class="nav-card">
+          <div class="nav-card__interior">
+            <button class="nav-search__toggle" aria-label="Open search" aria-expanded="false">
+              <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+              <span class="nav-btn-label">Search</span>
+            </button>
+            <input class="nav-search__input" type="search" aria-label="Search site" placeholder="Search…" autocomplete="off">
+            <button class="nav-search-close" aria-label="Close search">×</button>
+          </div>
+        </div>
+        <div id="search-results" role="listbox" aria-label="Search results"></div>
+      </div>
+
+      <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
+      <div class="nav-dropdown nav-button">
+        <div class="nav-card">
+          <div class="nav-card__interior">
+            <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
+              aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
+              <i class="fas fa-dungeon" aria-hidden="true"></i>
+              <span class="nav-btn-label">Exit</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- CMD/CTRL -->
-    <div class="nav-dropdown nav-button">
-      <div class="nav-card">
-        <div class="nav-card__interior">
-          <a href="{{ '/del-cmd-ctrl/' | relative_url }}" aria-label="CMD/CTRL Dashboard">
-            <i class="fas fa-compass" aria-hidden="true"></i>
-            <span class="nav-btn-label">CMD/CTRL</span>
-          </a>
+      <!-- CMD/CTRL -->
+      <div class="nav-dropdown nav-button">
+        <div class="nav-card">
+          <div class="nav-card__interior">
+            <a href="{{ '/del-cmd-ctrl/' | relative_url }}" aria-label="CMD/CTRL Dashboard">
+              <i class="fas fa-compass" aria-hidden="true"></i>
+              <span class="nav-btn-label">CMD/CTRL</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- News -->
-    <div class="nav-dropdown nav-button">
-      <div class="nav-card">
-        <div class="nav-card__interior">
-          <a href="{{ '/announcements' | relative_url }}">
-            <i class="fas fa-rss" aria-hidden="true"></i>
-            <span class="nav-btn-label">News</span>
-          </a>
+      <!-- News -->
+      <div class="nav-dropdown nav-button">
+        <div class="nav-card">
+          <div class="nav-card__interior">
+            <a href="{{ '/announcements' | relative_url }}">
+              <i class="fas fa-rss" aria-hidden="true"></i>
+              <span class="nav-btn-label">News</span>
+            </a>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Contact -->
-    <div class="nav-dropdown nav-button">
-      <div class="nav-card">
-        <div class="nav-card__interior">
-          <a href="{{ '/intake' | relative_url }}">
-            <i class="fas fa-envelope" aria-hidden="true"></i>
-            <span class="nav-btn-label">Contact</span>
-          </a>
+      <!-- Contact -->
+      <div class="nav-dropdown nav-button">
+        <div class="nav-card">
+          <div class="nav-card__interior">
+            <a href="{{ '/intake' | relative_url }}">
+              <i class="fas fa-envelope" aria-hidden="true"></i>
+              <span class="nav-btn-label">Contact</span>
+            </a>
+          </div>
         </div>
       </div>
     </div>
