@@ -13,15 +13,15 @@
       <div id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap">
         <div class="nav-card">
           <div class="nav-card__interior">
-            <button class="nav-search__toggle" aria-label="Open search" aria-expanded="false">
+            <button type="button" class="nav-search__toggle" aria-label="Open search" aria-expanded="false">
               <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
               <span class="nav-btn-label">Search</span>
             </button>
             <input class="nav-search__input" type="search" aria-label="Search site" placeholder="Search…" autocomplete="off">
-            <button class="nav-search-close" aria-label="Close search">×</button>
+            <button type="button" class="nav-search-close" aria-label="Close search">×</button>
           </div>
         </div>
-        <div id="search-results" role="listbox" aria-label="Search results"></div>
+        <div id="search-results" role="region" aria-live="polite" aria-label="Search results"></div>
       </div>
 
       <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
