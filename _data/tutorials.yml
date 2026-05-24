@@ -47,3 +47,18 @@
   title: Setting Up Encrypted Communication on Apple Devices
   description: Verify iMessage E2EE status, configure iCloud Messages with Advanced Data Protection, set up Signal for cross-platform contacts, and audit which devices receive your messages.
   link: /resources/tutorial-encrypted-communication/
+
+- tag: AI Threats
+  title: Recognizing and Responding to Deepfakes and Voice Cloning
+  description: How to identify AI-generated images, audio, and video — and what to do when synthetic media is used against you.
+  link: /resources/tutorial-ai-deepfakes/
+
+- tag: AI Threats
+  title: AI Surveillance and Reducing Your Exposure
+  description: How AI-powered facial recognition, behavioral profiling, and data brokerage work — and practical steps to reduce your exposure.
+  link: /resources/tutorial-ai-surveillance/
+
+- tag: AI Threats
+  title: Algorithmic Decision Systems — Detecting and Challenging Automated Decisions
+  description: How automated systems make consequential decisions about housing, credit, employment, and criminal justice — and the legal tools available to challenge them.
+  link: /resources/tutorial-ai-algorithmic-decisions/
