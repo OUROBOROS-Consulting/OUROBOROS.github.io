@@ -27,3 +27,23 @@
   title: Setting Up Encrypted Communication Channels
   description: Guide to choosing and configuring secure messaging apps, email encryption, and voice communication tools for sensitive conversations.
   link: "#"
+
+- tag: Apple Devices
+  title: Auditing Your Apple Device for Surveillance Risks
+  description: Step-by-step audit of Find My, Family Sharing location access, Screen Time controls, Location Services, and trusted device settings — with practical steps to identify and remove unauthorized access.
+  link: /resources/tutorial-apple-security-audit/
+
+- tag: Apple Devices
+  title: Protecting Your Data with iCloud Advanced Data Protection
+  description: How to enable end-to-end encryption for your iCloud data, set up a recovery method, audit trusted devices, and understand what is and isn't protected by default.
+  link: /resources/tutorial-icloud-adp/
+
+- tag: Apple Devices
+  title: Using Focus Modes to Compartmentalize Your Digital Life
+  description: Configure Focus modes to enforce context boundaries, manage notification allowlists, disable Focus status sharing, and build a minimal-input recovery mode for high-stress periods.
+  link: /resources/tutorial-focus-modes/
+
+- tag: Apple Devices
+  title: Setting Up Encrypted Communication on Apple Devices
+  description: Verify iMessage E2EE status, configure iCloud Messages with Advanced Data Protection, set up Signal for cross-platform contacts, and audit which devices receive your messages.
+  link: /resources/tutorial-encrypted-communication/
