@@ -1,0 +1,48 @@
+---
+layout: default
+---
+
+<div id="progress-bar"></div>
+
+<header class="post-header">
+  <a class="post-back" href="{{ '/announcements/' | relative_url }}">All Announcements</a>
+  {% if page.category %}<p class="post-category">{{ page.category }}</p>{% endif %}
+  <h1 class="post-title">{{ page.title }}</h1>
+  {% if page.lede %}<p class="post-lede">{{ page.lede }}</p>{% endif %}
+  <div class="post-meta">
+    {% if page.date %}<span class="post-meta-date">{{ page.date | date: "%B %-d, %Y" }}</span>{% endif %}
+    {% if page.tags %}
+    <span class="post-meta-divider"></span>
+    <span class="post-meta-tag">{{ page.tags | join: ' · ' }}</span>
+    {% endif %}
+  </div>
+</header>
+
+<article class="post-body">
+  {{ content }}
+</article>
+
+{% assign other = site.announcements | where_exp: "a", "a.url != page.url" | sort: "date" | reverse | limit: 3 %}
+{% if other.size > 0 %}
+<section class="post-related">
+  <p class="post-related-label">More Announcements</p>
+  <div class="related-grid">
+    {% for item in other %}
+    <a href="{{ item.url | relative_url }}" class="related-card">
+      {% if item.category %}<p class="rc-tag">{{ item.category }}</p>{% endif %}
+      <p class="rc-title">{{ item.title }}</p>
+      {% if item.date %}<p class="rc-date">{{ item.date | date: "%B %-d, %Y" }}</p>{% endif %}
+    </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+<script>
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+</script>

@@ -1,0 +1,38 @@
+---
+layout: default
+title: Announcements
+permalink: /announcements/
+---
+
+<header class="svc-hero">
+  <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
+  <div class="svc-hero-inner">
+    <div class="svc-hero-text">
+      <p class="post-category">News</p>
+      <h1 class="svc-title">Announcements</h1>
+      <p class="svc-lede">Updates on new projects, partnerships, publications, and practice developments.</p>
+    </div>
+    <div class="svc-emblem" aria-hidden="true">
+      <i class="fas fa-rss"></i>
+    </div>
+  </div>
+</header>
+
+<div class="svc-body">
+  {% assign sorted_announcements = site.announcements | sort: "date" | reverse %}
+  {% if sorted_announcements.size > 0 %}
+  <div class="related-grid">
+    {% for item in sorted_announcements %}
+    <a href="{{ item.url | relative_url }}" class="related-card">
+      {% if item.category %}<p class="rc-tag">{{ item.category }}</p>{% endif %}
+      <h2 class="rc-title">{{ item.title }}</h2>
+      {% if item.lede %}<p class="card-desc">{{ item.lede }}</p>{% endif %}
+      {% if item.date %}<p class="rc-date">{{ item.date | date: "%B %-d, %Y" }}</p>{% endif %}
+      <span class="card-link">Read →</span>
+    </a>
+    {% endfor %}
+  </div>
+  {% else %}
+  <p class="svc-lede" style="color:var(--muted);padding:2rem 0">No announcements yet.</p>
+  {% endif %}
+</div>
