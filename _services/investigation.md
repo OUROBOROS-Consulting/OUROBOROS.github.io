@@ -9,8 +9,8 @@ lede: >
   the evidence you need to understand what happened, and documentation courts will believe.
   Expert-ready investigation and institutional forensics for survivors and legal proceedings.
 tags: [Public Records, FOIA, Background Research, Digital Evidence, Institutional Documentation]
-cta_label: Request a Research Consultation
-cta_body: Describe what you're trying to find and why. I'll outline approach and scope within 48 hours. Initial consultations are free.
+cta_label: Request a Case Assessment
+cta_body: Describe what you're trying to find and why. Assessments start at $300. I'll outline approach and scope within 48 hours — initial consultations are free.
 who: >
   Individuals and small organizations who need to understand their own institutional records, gather evidence for legal proceedings, verify claims about people or organizations, or navigate systems built to obscure the facts. Attorneys, survivors, veterans, workers, and whistleblowers who need someone fluent in both institutional documentation and digital evidence.
 included:

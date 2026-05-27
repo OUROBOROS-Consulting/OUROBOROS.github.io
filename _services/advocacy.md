@@ -9,10 +9,8 @@ lede: >
   I help you find it — with precision, discretion, and a knowledgeable advocate in your corner.
 tags: [Institutional Navigation, Documentation Strategy, Coercive Control, Workplace Rights, Survivor Support]
 price: Sliding scale · Free consultations
-cta_label: Request a Consultation
-cta_body: >
-  Send a brief description of your situation and what kind of support you're looking for.
-  All inquiries are confidential. I respond within 48 hours.
+cta_label: Book a Free Advocacy Consultation
+cta_body: First consultation is free. No commitment required. Send a brief description of your situation — all inquiries are confidential. I respond within 48 hours.
 who: >
   Survivors navigating hostile, unresponsive, or deliberately obfuscating institutions.
   This includes survivors of sexual assault, abuse, intimate partner violence, institutional betrayal,

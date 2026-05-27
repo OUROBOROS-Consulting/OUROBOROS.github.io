@@ -8,7 +8,7 @@ lede: >
   Design that scales without breaking. Accessible, dimensional, distinctive—
   built for clarity and built to last.
 tags: [Design Systems, Typography, Accessibility, Brand Identity, Frontend Implementation, SCSS]
-cta_label: Schedule a Design Consultation
+cta_label: Start a Design Conversation
 cta_body: Describe your project, audience, and constraints. I'll respond within 48 hours with initial thoughts. Exploratory calls are free.
 who: >
   Organizations and solo practitioners who need design that holds up under scrutiny—visually distinguished, fundamentally accessible, and sustainable to build and maintain. You need someone who understands both the aesthetic intent and the technical constraints, speaks both language, and refuses to compromise on either.

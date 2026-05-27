@@ -7,8 +7,8 @@ category: Services
 lede: >
   High-quality technical work without hiring a team. I use Claude as a force multiplier — judgment + execution — to deliver infrastructure, workflows, and systems that would normally require a full engineering team.
 tags: [Claude, Agentic AI, AI Workflow Design, Claude Code, Automation, Human-AI Collaboration, Prompt Engineering]
-cta_label: Book a Strategy Session
-cta_body: Reach out with a brief description of what you're trying to build, or what's slowing you down. I'll follow up within 48 hours for a free discovery call.
+cta_label: Schedule an AI Strategy Call
+cta_body: No team needed. One call to scope your project. Describe what you're trying to build or what's slowing you down — I'll follow up within 48 hours for a free discovery call.
 who: >
   Startups and small firms that need solid technical infrastructure, clear AI workflows, or strategic thinking about what AI can actually solve — without the overhead of a full engineering team. Also: individuals and organizations facing institutional challenges (survivors, activists, whistleblowers) who need AI as a tool for documentation, strategic analysis, or institutional navigation. This service is for people who need judgment + execution, not prompt-and-paste shortcuts.
 specializations:

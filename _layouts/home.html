@@ -136,7 +136,7 @@ layout: default
         <div class="svc-card-body">
           <h3 class="card-title">{{ service.title }}</h3>
           <p class="card-desc">{{ service.description }}</p>
-          <a href="{{ service.url }}" class="card-link">Learn More →</a>
+          <a href="{{ service.url }}" class="card-link">{{ service.cta_label | default: 'Learn More' }} →</a>
         </div>
       </div>
     </div>

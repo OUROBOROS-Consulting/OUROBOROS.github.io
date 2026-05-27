@@ -12,10 +12,10 @@ tagline: >
 
   Institutional failures are design failures. Grounded in frameworks of **institutional betrayal** and coercive control, my work gives you the record, the case, and the tools to level the field.
 
-cta_label: null
-cta_url: /case-studies/
-cta2_label: Open Dashboard
-cta2_url: /del-cmd-ctrl/
+cta_label: Book a Free Consultation
+cta_url: /intake
+cta2_label: View My Work
+cta2_url: /case-studies/
 
 # About
 about_heading: Technology and Advocacy for Survivors of Institutional Betrayal

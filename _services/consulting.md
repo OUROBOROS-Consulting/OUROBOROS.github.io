@@ -9,8 +9,8 @@ lede: >
   I build bespoke solutions — not off-the-shelf recommendations — for people and organizations
   with real problems.
 tags: [Apple Ecosystem, AI, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python]
-cta_label: Book a Session
-cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours. Discovery calls are always free.
+cta_label: Describe Your Problem
+cta_body: Reach out with a brief description of what you're working on. Discovery calls are always free — I'll follow up within 48 hours.
 who: >
   Individuals and small organizations who need robust tech solutions so they can focus on their actual work. I help you figure out what's actually slowing you down, then build the right solution — whether that's an AI tool, a simple automation, a better workflow, or just the right app you didn't know existed.
 included:

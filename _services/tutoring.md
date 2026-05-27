@@ -7,8 +7,9 @@ category: Services
 lede: Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level.
 tags: [Statistics, Mathematics, Probability, R, Python, LaTeX, Biostatistics, Programming]
 price: Starting at $65/hr
-cta_label: Book a Session
-cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 48 hours. Discovery calls are always free.
+cta_label: Book a Session on Wyzant
+cta_url: https://www.wyzant.com/refer/tutor/86925781/?utm_source=TREF&utm_campaign=iphone&utm_content=tutorapp&utm_medium=share
+cta_body: Session rates start at $65/hr. Book directly on Wyzant — no intake process, no wait.
 who: >
   Students from high school through PhD level working through statistics,
   mathematics, probability, or programming. I work especially well with
