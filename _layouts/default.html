@@ -65,7 +65,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   </head>
 
-  <body>
+  {% assign _show_banner = false %}
+  {% if page.title and page.layout != 'home' and page.layout != 'foundation' and page.layout != 'mission' and page.banner != false %}
+    {% assign _show_banner = true %}
+  {% endif %}
+  <body{% if _show_banner %} class="has-title-banner"{% endif %}>
     <div class="nav-shell">
       {% include nav.html %}
       {% assign pu = page.url %}
@@ -94,6 +98,12 @@
         </div>
         {% endfor %}
       </nav>
+      {% if _show_banner %}
+      <div class="page-title-banner">
+        {% if page.eyebrow %}<span class="page-title-banner__eyebrow">{{ page.eyebrow }}</span>{% endif %}
+        <span class="page-title-banner__title">{{ page.title }}</span>
+      </div>
+      {% endif %}
     </div>
     {{ content }}
     {% include footer.html %}
