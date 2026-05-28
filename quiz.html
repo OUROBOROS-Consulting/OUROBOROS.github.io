@@ -31,7 +31,19 @@ description: "A scenario-based quiz on power-abuse tactics — DARVO, institutio
   import { init as initEngine } from '/assets/js/quiz/engine.js';
   import { init as initShare }  from '/assets/js/quiz/share.js';
 
-  const quizData = await fetch('/assets/js/quiz/quiz.json').then(r => r.json());
+  let quizData;
+  try {
+    const res = await fetch('/assets/js/quiz/quiz.json');
+    if (!res.ok) throw new Error(res.status);
+    quizData = await res.json();
+  } catch (e) {
+    document.getElementById('quiz-map-area').innerHTML = '';
+    const err = document.createElement('p');
+    err.textContent = 'Quiz content could not be loaded. Please try refreshing the page.';
+    err.style.cssText = 'color:var(--subdued);text-align:center;padding:4rem 2rem;font-family:Inter,sans-serif;font-size:.85rem;';
+    document.getElementById('quiz-wrap').appendChild(err);
+    throw e;
+  }
   const wrap     = document.getElementById('quiz-wrap');
   const mapArea  = document.getElementById('quiz-map-area');
   const panel    = document.getElementById('quiz-panel-area');
