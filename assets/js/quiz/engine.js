@@ -1,7 +1,7 @@
 export function init(quizData, { onComplete, onBack }) {
   const container = document.getElementById('quiz-engine-container');
 
-  let state = { topicId: null, questionIndex: 0, answered: false };
+  let state = { topicId: null, questionIndex: 0, answered: false, answers: [], completed: false };
 
   function getTopic(id) {
     return quizData.topics.find(t => t.id === id);
@@ -60,6 +60,7 @@ export function init(quizData, { onComplete, onBack }) {
   }
 
   function handleAnswer(chosen, q, isLast) {
+    state.answers.push(chosen);
     if (state.answered) return;
     state.answered = true;
 
@@ -97,6 +98,7 @@ export function init(quizData, { onComplete, onBack }) {
     next.textContent = isLast ? 'See results →' : 'Next question →';
     next.addEventListener('click', () => {
       if (isLast) {
+        state.completed = true;
         onComplete(state.topicId);
       } else {
         state.questionIndex++;
@@ -109,7 +111,7 @@ export function init(quizData, { onComplete, onBack }) {
 
   return {
     loadTopic(topicId) {
-      state = { topicId, questionIndex: 0, answered: false };
+      state = { topicId, questionIndex: 0, answered: false, answers: [], completed: false };
       renderQuestion();
     }
   };
