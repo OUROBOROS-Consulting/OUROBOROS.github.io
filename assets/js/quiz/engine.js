@@ -20,6 +20,7 @@ export function init(quizData, { onComplete, onBack }) {
 
   function renderQuestion() {
     const topic    = getTopic(state.topicId);
+    if (!topic) { container.textContent = 'Topic not found.'; return; }
     const q        = topic.questions[state.questionIndex];
     const total    = topic.questions.length;
     const isLast   = state.questionIndex === total - 1;
@@ -60,9 +61,9 @@ export function init(quizData, { onComplete, onBack }) {
   }
 
   function handleAnswer(chosen, q, isLast) {
-    state.answers.push(chosen);
     if (state.answered) return;
     state.answered = true;
+    state.answers.push(chosen);
 
     const correct = chosen === q.correct;
     const opts    = container.querySelectorAll('.engine-option');
