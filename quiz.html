@@ -1,0 +1,68 @@
+---
+layout: default
+title: "Know the Tactics"
+permalink: /quiz/
+extra_css: quiz
+description: "A scenario-based quiz on power-abuse tactics — DARVO, institutional betrayal, whistleblowing, and more."
+---
+
+<div class="quiz-wrap" id="quiz-wrap">
+
+  <div class="quiz-map-area" id="quiz-map-area">
+    <header class="quiz-header">
+      <p class="quiz-header__eyebrow">Knowledge Quiz</p>
+      <h1 class="quiz-header__title">Know the Tactics</h1>
+      <p class="quiz-header__desc">Select a topic to begin. Three scenarios, two minutes.</p>
+    </header>
+    <div class="quiz-map" id="quiz-map" aria-label="Topic selection map">
+      <!-- map.js renders here -->
+    </div>
+  </div>
+
+  <div class="quiz-panel-area" id="quiz-panel-area" hidden>
+    <div id="quiz-engine-container"></div>
+    <div id="quiz-share-container" hidden></div>
+  </div>
+
+</div>
+
+<script type="module">
+  import { init as initMap }    from '/assets/js/quiz/map.js';
+  import { init as initEngine } from '/assets/js/quiz/engine.js';
+  import { init as initShare }  from '/assets/js/quiz/share.js';
+
+  const quizData = await fetch('/assets/js/quiz/quiz.json').then(r => r.json());
+  const wrap     = document.getElementById('quiz-wrap');
+  const mapArea  = document.getElementById('quiz-map-area');
+  const panel    = document.getElementById('quiz-panel-area');
+
+  const share = initShare(quizData);
+
+  const engine = initEngine(quizData, {
+    onComplete(topicId) {
+      map.markCompleted(topicId);
+      document.getElementById('quiz-engine-container').hidden = true;
+      document.getElementById('quiz-share-container').hidden  = false;
+      share.show(topicId, () => {
+        // "Explore another" — return to map
+        panel.hidden = true;
+        document.getElementById('quiz-engine-container').hidden = false;
+        document.getElementById('quiz-share-container').hidden  = true;
+        wrap.classList.remove('quiz-wrap--open');
+        map.expand();
+      });
+    },
+    onBack() {
+      panel.hidden = true;
+      wrap.classList.remove('quiz-wrap--open');
+      map.expand();
+    }
+  });
+
+  const map = initMap(quizData.topics, topicId => {
+    panel.hidden = false;
+    wrap.classList.add('quiz-wrap--open');
+    map.collapse();
+    engine.loadTopic(topicId);
+  });
+</script>
