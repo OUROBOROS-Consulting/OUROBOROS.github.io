@@ -29,6 +29,7 @@
   overflow-y: auto;
   max-height: 90vh;
   padding: 3rem 0 2rem 2rem;
+  border-left: 1px solid var(--border);
 }
 
 /* ── Quiz header ─────────────────────────────────────────────────────────── */
@@ -218,12 +219,6 @@
     border-top: 1px solid var(--border);
     padding: 1.5rem 0 1rem;
   }
-}
-
-/* ── Quiz panel ──────────────────────────────────────────────────────────── */
-
-.quiz-panel-area {
-  border-left: 1px solid var(--border);
 }
 
 /* ── Engine ──────────────────────────────────────────────────────────────── */
