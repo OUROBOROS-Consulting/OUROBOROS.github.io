@@ -140,8 +140,13 @@ export function init(topics, onSelect) {
       el.classList.remove('map-node--dimmed');
     });
     Object.values(connectors).forEach(({ line }) => {
-      line.setAttribute('stroke', 'var(--border)');
-      line.setAttribute('stroke-opacity', '0.6');
+      if (line.classList.contains('map-connector--completed')) {
+        line.setAttribute('stroke', 'var(--sage)');
+        line.setAttribute('stroke-opacity', '1');
+      } else {
+        line.setAttribute('stroke', 'var(--border)');
+        line.setAttribute('stroke-opacity', '0.6');
+      }
       line.setAttribute('stroke-width', '1');
     });
     hubLabel.textContent = 'Know the Tactics';
