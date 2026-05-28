@@ -349,3 +349,121 @@
     color: var(--bg1);
   }
 }
+
+/* ── Share card ──────────────────────────────────────────────────────────── */
+
+.share-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 1.8rem 1.6rem 1.4rem;
+  margin-bottom: 1.6rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.share-card__rule {
+  position: absolute;
+  left: 0; right: 0;
+  height: 2px;
+
+  &--top {
+    top: 0;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  &--bottom {
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+}
+
+.share-card__eyebrow {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--amethyst);
+  margin: 0 0 1rem;
+}
+
+.share-card__hook {
+  font-family: 'Lora', serif;
+  font-size: 1.15rem;
+  font-weight: 500;
+  line-height: 1.45;
+  color: var(--gold);
+  margin: 0 0 0.6rem;
+}
+
+.share-card__sub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.68rem;
+  line-height: 1.55;
+  color: var(--subdued);
+  margin: 0 0 1.1rem;
+}
+
+.share-card__badge {
+  display: inline-block;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--badge-color, var(--text));
+  border: 1px solid var(--badge-color, var(--border));
+  border-radius: 20px;
+  padding: 0.22rem 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.share-card__url {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.55rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* ── Share actions ───────────────────────────────────────────────────────── */
+
+.share-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.share-btn {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 0.6rem 1.1rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  border: 1px solid transparent;
+
+  &--primary {
+    background: var(--gold);
+    color: var(--bg1);
+    border-color: var(--gold);
+
+    &:hover { background: var(--gold-border); border-color: var(--gold-border); }
+  }
+
+  &--secondary {
+    background: none;
+    color: var(--text);
+    border-color: var(--border);
+
+    &:hover { border-color: var(--gold); color: var(--gold); }
+  }
+
+  &--ghost {
+    background: none;
+    color: var(--muted);
+    border-color: transparent;
+
+    &:hover { color: var(--subdued); }
+  }
+}
