@@ -12,9 +12,17 @@ export function init(quizData) {
 
     container.innerHTML = '';
 
+    const heading = document.createElement('h2');
+    heading.className = 'share-heading';
+    heading.setAttribute('tabindex', '-1');
+    heading.textContent = 'You finished the quiz.';
+    container.appendChild(heading);
+
     // Share card
     const card = document.createElement('div');
     card.className = 'share-card';
+    card.setAttribute('role', 'region');
+    card.setAttribute('aria-label', 'Share your results');
 
     const topRule = document.createElement('div');
     topRule.className = 'share-card__rule share-card__rule--top';
@@ -71,9 +79,11 @@ export function init(quizData) {
           });
         } catch (_) { /* user cancelled or not supported */ }
       } else {
-        await navigator.clipboard.writeText(shareUrl).catch(() => {});
-        shareBtn.textContent = 'Link copied!';
-        setTimeout(() => { shareBtn.textContent = 'Share this card'; }, 2000);
+        if (navigator.clipboard?.writeText) {
+          await navigator.clipboard.writeText(shareUrl).catch(() => {});
+          shareBtn.textContent = 'Link copied!';
+          setTimeout(() => { shareBtn.textContent = 'Share this card'; }, 2000);
+        }
       }
     });
     actions.appendChild(shareBtn);
@@ -84,9 +94,11 @@ export function init(quizData) {
     copyBtn.textContent = 'Copy link to this topic';
     copyBtn.addEventListener('click', async () => {
       const topicUrl = 'https://ouroborosconsulting.org' + share.url_path;
-      await navigator.clipboard.writeText(topicUrl).catch(() => {});
-      copyBtn.textContent = 'Copied!';
-      setTimeout(() => { copyBtn.textContent = 'Copy link to this topic'; }, 2000);
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(topicUrl).catch(() => {});
+        copyBtn.textContent = 'Copied!';
+        setTimeout(() => { copyBtn.textContent = 'Copy link to this topic'; }, 2000);
+      }
     });
     actions.appendChild(copyBtn);
 
@@ -98,6 +110,8 @@ export function init(quizData) {
     actions.appendChild(exploreBtn);
 
     container.appendChild(actions);
+
+    heading.focus();
   }
 
   return { show };

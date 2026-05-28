@@ -424,6 +424,17 @@
   margin: 0;
 }
 
+.share-heading {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 1.2rem;
+  font-weight: 400;
+  outline: none;
+}
+
 /* ── Share actions ───────────────────────────────────────────────────────── */
 
 .share-actions {
