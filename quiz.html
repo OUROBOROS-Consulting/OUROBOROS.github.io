@@ -71,10 +71,9 @@ description: "A scenario-based quiz on power-abuse tactics — DARVO, institutio
     }
   });
 
-  const map = initMap(quizData.topics, topicId => {
+  const map = initMap(quizData.topics, (topicId, submoduleId) => {
     panel.hidden = false;
     wrap.classList.add('quiz-wrap--open');
-    map.collapse();
-    engine.loadTopic(topicId);
+    engine.loadSubmodule(topicId, submoduleId);
   });
 </script>

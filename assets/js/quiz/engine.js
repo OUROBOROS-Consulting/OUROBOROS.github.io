@@ -1,7 +1,7 @@
 export function init(quizData, { onComplete, onBack }) {
   const container = document.getElementById('quiz-engine-container');
 
-  let state = { topicId: null, questionIndex: 0, answered: false, answers: [], completed: false };
+  let state = { topicId: null, sub: null, questionIndex: 0, answered: false, answers: [], completed: false };
 
   function getTopic(id) {
     return quizData.topics.find(t => t.id === id);
@@ -18,21 +18,87 @@ export function init(quizData, { onComplete, onBack }) {
     return bar;
   }
 
-  function renderQuestion() {
-    const topic    = getTopic(state.topicId);
-    if (!topic) { container.textContent = 'Topic not found.'; return; }
-    const q        = topic.questions[state.questionIndex];
-    const total    = topic.questions.length;
-    const isLast   = state.questionIndex === total - 1;
-
-    container.innerHTML = '';
-
+  function makeBackButton() {
     const back = document.createElement('button');
     back.className = 'engine-back';
     back.setAttribute('type', 'button');
     back.textContent = '← All topics';
     back.addEventListener('click', onBack);
-    container.appendChild(back);
+    return back;
+  }
+
+  function renderInfo(topic, sub) {
+    container.replaceChildren();
+
+    container.appendChild(makeBackButton());
+
+    const eyebrow = document.createElement('p');
+    eyebrow.className = 'engine-type';
+    eyebrow.textContent = topic.label;
+    container.appendChild(eyebrow);
+
+    const title = document.createElement('h2');
+    title.className = 'engine-info__title';
+    title.textContent = sub.title;
+    container.appendChild(title);
+
+    const def = document.createElement('p');
+    def.className = 'engine-info__definition';
+    def.textContent = sub.definition;
+    container.appendChild(def);
+
+    if (sub.tips && sub.tips.length) {
+      const ul = document.createElement('ul');
+      ul.className = 'engine-tips';
+      sub.tips.forEach(tip => {
+        const li = document.createElement('li');
+        li.className = 'engine-tips__item';
+        li.textContent = tip;
+        ul.appendChild(li);
+      });
+      container.appendChild(ul);
+    }
+  }
+
+  function renderCases(topic, sub) {
+    container.replaceChildren();
+
+    container.appendChild(makeBackButton());
+
+    const eyebrow = document.createElement('p');
+    eyebrow.className = 'engine-type';
+    eyebrow.textContent = topic.label;
+    container.appendChild(eyebrow);
+
+    const title = document.createElement('h2');
+    title.className = 'engine-cases__title';
+    title.textContent = sub.title;
+    container.appendChild(title);
+
+    (sub.cases || []).forEach(c => {
+      const div = document.createElement('div');
+      div.className = 'engine-case';
+      const name = document.createElement('p');
+      name.className = 'engine-case__name';
+      name.textContent = c.name;
+      const body = document.createElement('p');
+      body.className = 'engine-case__body';
+      body.textContent = c.body;
+      div.appendChild(name);
+      div.appendChild(body);
+      container.appendChild(div);
+    });
+  }
+
+  function renderQuestion() {
+    if (!state.sub) { container.textContent = 'Content not found.'; return; }
+    const q      = state.sub.questions[state.questionIndex];
+    const total  = state.sub.questions.length;
+    const isLast = state.questionIndex === total - 1;
+
+    container.replaceChildren();
+
+    container.appendChild(makeBackButton());
 
     container.appendChild(renderProgress(state.questionIndex, total));
 
@@ -111,9 +177,14 @@ export function init(quizData, { onComplete, onBack }) {
   }
 
   return {
-    loadTopic(topicId) {
-      state = { topicId, questionIndex: 0, answered: false, answers: [], completed: false };
-      renderQuestion();
+    loadSubmodule(topicId, submoduleId) {
+      const topic = getTopic(topicId);
+      const sub   = topic?.submodules?.find(s => s.id === submoduleId);
+      if (!topic || !sub) { container.textContent = 'Content not found.'; return; }
+      state = { topicId, sub, questionIndex: 0, answered: false, answers: [], completed: false };
+      if (sub.type === 'info')   renderInfo(topic, sub);
+      else if (sub.type === 'cases') renderCases(topic, sub);
+      else if (sub.type === 'quiz')  renderQuestion();
     }
   };
 }

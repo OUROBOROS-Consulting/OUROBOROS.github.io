@@ -4,35 +4,70 @@
       "id": "darvo",
       "label": "DARVO",
       "color": "--gold",
-      "questions": [
+      "submodules": [
         {
-          "scenario": "After a teacher files a sexual harassment complaint against a principal, the principal tells the school board: 'I'm the one being harassed — she's ruining my reputation and my career is the real victim here.' This pattern has a name. What is it?",
-          "options": ["Legitimate counter-complaint", "DARVO", "Whistleblower protection claim"],
-          "correct": 1,
-          "reveal": "DARVO stands for Deny, Attack, Reverse Victim and Offender. The accused denies the behavior, attacks the credibility of the person reporting, then positions themselves as the real victim. It's one of the most commonly used tactics to derail accountability processes.",
-          "citation": "Harsey, S.J., Zurbriggen, E.L., & Freyd, J.J. (2017). Perpetrator Responses to Victim Confrontation: DARVO and Victim Self-Blame. Journal of Aggression, Maltreatment & Trauma."
+          "id": "learn",
+          "type": "info",
+          "label": "Learn",
+          "title": "What is DARVO?",
+          "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. DARVO — Deny, Attack, Reverse Victim and Offender — is a response pattern used by accused parties to deflect accountability. The accused denies the behavior, attacks the credibility of the person reporting, then positions themselves as the real victim.",
+          "tips": [
+            "Denial often comes first and is categorical — not just 'I don't remember' but 'that never happened.'",
+            "The attack phase targets the reporter's credibility, mental state, or motives rather than the substance of the complaint.",
+            "Reversal is the most psychologically damaging element: it forces the original reporter to defend themselves against a counter-narrative."
+          ]
         },
         {
-          "scenario": "DARVO is effective even when the reversal is implausible. Why?",
-          "options": [
-            "Because investigators are legally required to treat all parties equally, regardless of evidence",
-            "Because it shifts the emotional and administrative burden onto the reporter — who now must also defend themselves",
-            "Because most institutions have no policy for handling counter-complaints"
-          ],
-          "correct": 1,
-          "reveal": "When an abuser reverses victim and offender, the original reporter suddenly has to manage two processes: their own complaint and the counter-allegation against them. The emotional labor, credibility scrutiny, and procedural costs double — which often causes reporters to withdraw.",
-          "citation": "Freyd, J.J. (2020). Institutional courage as an antidote to institutional betrayal. In B. Hamber & E. Palmary (Eds.), Trauma, Peacebuilding and Development."
+          "id": "explore",
+          "type": "cases",
+          "label": "Cases",
+          "title": "DARVO in Practice",
+          "cases": [
+            {
+              "name": "The Academic Reversal",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A faculty member filed a harassment complaint. Within days, the respondent filed a counter-complaint alleging the complainant had created a hostile environment for them. The original complaint was placed on hold pending resolution of the counter-claim."
+            },
+            {
+              "name": "The Corporate Pivot",
+              "body": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. An employee raised safety violations to an external regulator. The company's legal team issued a statement describing the disclosure as 'a coordinated effort to damage our reputation' and filed a defamation claim against the employee."
+            }
+          ]
         },
         {
-          "scenario": "A colleague tells you their abuser is now claiming to be the victim. Your colleague is scared and thinking of dropping their complaint. What would be most helpful?",
-          "options": [
-            "Encourage them to drop it to avoid further conflict",
-            "Stay neutral — you can't know what really happened",
-            "Name the pattern, help document the original complaint timeline, and connect them to an advocate"
-          ],
-          "correct": 2,
-          "reveal": "Recognizing DARVO doesn't mean prejudging the outcome — it means naming a known tactic so the reporter can make informed decisions. Documenting a clear timeline of the original complaint vs. the counter-allegation is protective. Advocates familiar with this pattern can help navigate the process.",
-          "citation": "Freyd, J.J., & Birrell, P.J. (2013). Blind to Betrayal. Wiley."
+          "id": "quiz",
+          "type": "quiz",
+          "label": "Quiz",
+          "questions": [
+            {
+              "scenario": "After a teacher files a sexual harassment complaint against a principal, the principal tells the school board: 'I'm the one being harassed — she's ruining my reputation and my career is the real victim here.' This pattern has a name. What is it?",
+              "options": ["Legitimate counter-complaint", "DARVO", "Whistleblower protection claim"],
+              "correct": 1,
+              "reveal": "DARVO stands for Deny, Attack, Reverse Victim and Offender. The accused denies the behavior, attacks the credibility of the person reporting, then positions themselves as the real victim. It's one of the most commonly used tactics to derail accountability processes.",
+              "citation": "Harsey, S.J., Zurbriggen, E.L., & Freyd, J.J. (2017). Perpetrator Responses to Victim Confrontation: DARVO and Victim Self-Blame. Journal of Aggression, Maltreatment & Trauma."
+            },
+            {
+              "scenario": "DARVO is effective even when the reversal is implausible. Why?",
+              "options": [
+                "Because investigators are legally required to treat all parties equally, regardless of evidence",
+                "Because it shifts the emotional and administrative burden onto the reporter — who now must also defend themselves",
+                "Because most institutions have no policy for handling counter-complaints"
+              ],
+              "correct": 1,
+              "reveal": "When an abuser reverses victim and offender, the original reporter suddenly has to manage two processes: their own complaint and the counter-allegation against them. The emotional labor, credibility scrutiny, and procedural costs double — which often causes reporters to withdraw.",
+              "citation": "Freyd, J.J. (2020). Institutional courage as an antidote to institutional betrayal. In B. Hamber & E. Palmary (Eds.), Trauma, Peacebuilding and Development."
+            },
+            {
+              "scenario": "A colleague tells you their abuser is now claiming to be the victim. Your colleague is scared and thinking of dropping their complaint. What would be most helpful?",
+              "options": [
+                "Encourage them to drop it to avoid further conflict",
+                "Stay neutral — you can't know what really happened",
+                "Name the pattern, help document the original complaint timeline, and connect them to an advocate"
+              ],
+              "correct": 2,
+              "reveal": "Recognizing DARVO doesn't mean prejudging the outcome — it means naming a known tactic so the reporter can make informed decisions. Documenting a clear timeline of the original complaint vs. the counter-allegation is protective. Advocates familiar with this pattern can help navigate the process.",
+              "citation": "Freyd, J.J., & Birrell, P.J. (2013). Blind to Betrayal. Wiley."
+            }
+          ]
         }
       ],
       "share": {
@@ -45,35 +80,70 @@
       "id": "institutional-betrayal",
       "label": "Institutional Betrayal",
       "color": "--amethyst",
-      "questions": [
+      "submodules": [
         {
-          "scenario": "A university investigates a sexual assault complaint internally rather than involving law enforcement. The survivor is later penalized academically. This is an example of:",
-          "options": ["Due process in action", "Institutional betrayal", "Standard campus policy"],
-          "correct": 1,
-          "reveal": "Institutional betrayal occurs when a trusted institution causes harm — or fails to prevent it — especially after someone depends on them for protection.",
-          "citation": "Freyd, J.J. (1994). Betrayal trauma: Traumatic amnesia as an adaptive response to childhood abuse."
+          "id": "learn",
+          "type": "info",
+          "label": "Learn",
+          "title": "Understanding Institutional Betrayal",
+          "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Institutional betrayal occurs when a trusted institution — a university, employer, government body, or professional organization — causes harm through action or inaction, especially when an individual depends on that institution for safety or redress.",
+          "tips": [
+            "Institutional betrayal is distinct from individual wrongdoing: the institution itself, through its policies or inaction, becomes complicit in the harm.",
+            "Betrayal by a trusted institution amplifies trauma beyond the original harm — the brain processes dependency violation differently than stranger harm.",
+            "Institutional courage is the antidote: proactive, bold steps including outcome audits, public accountability, and structural reform."
+          ]
         },
         {
-          "scenario": "Why does institutional betrayal tend to cause more lasting harm than harm from a stranger?",
-          "options": [
-            "Because institutions have more resources to cover up wrongdoing",
-            "Because the victim depended on the institution — betrayal by a trusted system amplifies trauma beyond the original harm",
-            "Because institutional cases take longer to resolve legally"
-          ],
-          "correct": 1,
-          "reveal": "Betrayal trauma theory explains that harm inflicted by those we depend on is processed differently by the brain. The need to maintain the relationship creates a split between awareness and memory, intensifying long-term trauma symptoms compared to harm by a stranger.",
-          "citation": "Freyd, J.J. (1996). Betrayal Trauma: The Logic of Forgetting Childhood Abuse. Harvard University Press."
+          "id": "explore",
+          "type": "cases",
+          "label": "Cases",
+          "title": "Institutional Betrayal in Context",
+          "cases": [
+            {
+              "name": "The Internal Investigation",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A survivor reported sexual assault to a university's Title IX office. The investigation was conducted internally, the respondent was cleared, and the survivor received a grade change that affected her academic standing. No external oversight was sought."
+            },
+            {
+              "name": "The HR Redirect",
+              "body": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris. An employee reported financial misconduct to HR. HR's written response acknowledged receipt. Three months later, the employee was informed her role was being 'restructured.' No follow-up on the original report was provided."
+            }
+          ]
         },
         {
-          "scenario": "An employee reports harassment to HR. HR clears the respondent, and the employee is moved to a lower-visibility role. What does institutional courage look like here?",
-          "options": [
-            "HR conducting the same investigation it would for any complaint",
-            "The institution proactively reviewing outcomes for signs of retaliation and publishing its findings",
-            "Leadership expressing public sympathy for the employee"
-          ],
-          "correct": 1,
-          "reveal": "Institutional courage means taking bold, proactive steps — not just technically complying. It includes auditing whether reporters experience retaliation after complaints, publishing outcome data, and holding the institution publicly accountable for its own processes.",
-          "citation": "Freyd, J.J. (2020). Institutional courage as an antidote to institutional betrayal."
+          "id": "quiz",
+          "type": "quiz",
+          "label": "Quiz",
+          "questions": [
+            {
+              "scenario": "A university investigates a sexual assault complaint internally rather than involving law enforcement. The survivor is later penalized academically. This is an example of:",
+              "options": ["Due process in action", "Institutional betrayal", "Standard campus policy"],
+              "correct": 1,
+              "reveal": "Institutional betrayal occurs when a trusted institution causes harm — or fails to prevent it — especially after someone depends on them for protection.",
+              "citation": "Freyd, J.J. (1994). Betrayal trauma: Traumatic amnesia as an adaptive response to childhood abuse."
+            },
+            {
+              "scenario": "Why does institutional betrayal tend to cause more lasting harm than harm from a stranger?",
+              "options": [
+                "Because institutions have more resources to cover up wrongdoing",
+                "Because the victim depended on the institution — betrayal by a trusted system amplifies trauma beyond the original harm",
+                "Because institutional cases take longer to resolve legally"
+              ],
+              "correct": 1,
+              "reveal": "Betrayal trauma theory explains that harm inflicted by those we depend on is processed differently by the brain. The need to maintain the relationship creates a split between awareness and memory, intensifying long-term trauma symptoms compared to harm by a stranger.",
+              "citation": "Freyd, J.J. (1996). Betrayal Trauma: The Logic of Forgetting Childhood Abuse. Harvard University Press."
+            },
+            {
+              "scenario": "An employee reports harassment to HR. HR clears the respondent, and the employee is moved to a lower-visibility role. What does institutional courage look like here?",
+              "options": [
+                "HR conducting the same investigation it would for any complaint",
+                "The institution proactively reviewing outcomes for signs of retaliation and publishing its findings",
+                "Leadership expressing public sympathy for the employee"
+              ],
+              "correct": 1,
+              "reveal": "Institutional courage means taking bold, proactive steps — not just technically complying. It includes auditing whether reporters experience retaliation after complaints, publishing outcome data, and holding the institution publicly accountable for its own processes.",
+              "citation": "Freyd, J.J. (2020). Institutional courage as an antidote to institutional betrayal."
+            }
+          ]
         }
       ],
       "share": {
@@ -86,35 +156,70 @@
       "id": "whistleblowing",
       "label": "Whistleblowing",
       "color": "--steel",
-      "questions": [
+      "submodules": [
         {
-          "scenario": "A federal employee discloses evidence of contractor fraud to the agency Inspector General. Within two months, her performance reviews decline, she's excluded from key meetings, and her security clearance is flagged. This sequence is best described as:",
-          "options": ["Performance management", "Retaliation for protected disclosure", "Coincidental role changes"],
-          "correct": 1,
-          "reveal": "Federal whistleblower statutes — including the Whistleblower Protection Act — define retaliation as any personnel action taken as a result of a protected disclosure. Exclusion, adverse reviews, and security clearance challenges are all recognized retaliatory patterns.",
-          "citation": "Merit Systems Protection Board. (2022). Whistleblower Protections for Federal Employees."
+          "id": "learn",
+          "type": "info",
+          "label": "Learn",
+          "title": "Whistleblowing & Protected Disclosure",
+          "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Whistleblowing is the act of disclosing information about illegal activity, safety violations, or ethical misconduct to an authorized body. Federal statutes such as the Whistleblower Protection Act define what constitutes a protected disclosure and which channels trigger statutory protections.",
+          "tips": [
+            "Not all disclosure channels offer equal legal protection — consult a whistleblower attorney before selecting a reporting channel.",
+            "Contemporaneous documentation is the single most protective action before and after disclosure.",
+            "Retaliation rarely looks like retaliation — it is typically labeled as performance management, restructuring, or 'fit' concerns."
+          ]
         },
         {
-          "scenario": "Why do many whistleblowers face retaliation even when their disclosures are accurate and made through official channels?",
-          "options": [
-            "Official channels don't protect disclosures about their own agency",
-            "Reporting accurate misconduct disrupts existing power structures — those structures often respond defensively regardless of legal protections",
-            "Most whistleblower laws only protect false allegations that can't be verified"
-          ],
-          "correct": 1,
-          "reveal": "Legal protections exist but are difficult to enforce. Retaliation often takes subtle forms — reassignment, exclusion, changed duties — that are hard to prove in isolation. The power imbalance means whistleblowers bear most of the personal, professional, and financial cost of disclosure.",
-          "citation": "Government Accountability Project. (2021). Whistleblower Survival Guide."
+          "id": "explore",
+          "type": "cases",
+          "label": "Cases",
+          "title": "Whistleblowing Under Pressure",
+          "cases": [
+            {
+              "name": "The Federal Disclosure",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. A federal contractor employee disclosed billing irregularities to the agency Inspector General. Within eight weeks, her access to classified systems was suspended pending a 'routine review,' and her annual performance rating was downgraded from Outstanding to Fully Successful."
+            },
+            {
+              "name": "The Internal Channel",
+              "body": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum. An employee reported environmental violations through the company's internal ethics hotline, which was operated by the same legal team representing the company. The disclosure was logged but no investigation was opened. The employee was terminated six months later for 'performance reasons.'"
+            }
+          ]
         },
         {
-          "scenario": "A colleague is considering reporting financial misconduct and asks what to do before disclosing. What's the most protective first step?",
-          "options": [
-            "Submit the report immediately before anything can be altered",
-            "Tell their manager first to give the organization a chance to self-correct",
-            "Document the misconduct with dates and specifics, then consult a whistleblower attorney before filing"
-          ],
-          "correct": 2,
-          "reveal": "Documentation protects the whistleblower as much as the disclosure itself. A whistleblower attorney can advise on which channel offers the strongest legal protection — some channels don't trigger statutory protections. Telling a manager first often accelerates retaliation and can undermine later claims.",
-          "citation": "National Whistleblower Center. (2023). Know Your Rights."
+          "id": "quiz",
+          "type": "quiz",
+          "label": "Quiz",
+          "questions": [
+            {
+              "scenario": "A federal employee discloses evidence of contractor fraud to the agency Inspector General. Within two months, her performance reviews decline, she's excluded from key meetings, and her security clearance is flagged. This sequence is best described as:",
+              "options": ["Performance management", "Retaliation for protected disclosure", "Coincidental role changes"],
+              "correct": 1,
+              "reveal": "Federal whistleblower statutes — including the Whistleblower Protection Act — define retaliation as any personnel action taken as a result of a protected disclosure. Exclusion, adverse reviews, and security clearance challenges are all recognized retaliatory patterns.",
+              "citation": "Merit Systems Protection Board. (2022). Whistleblower Protections for Federal Employees."
+            },
+            {
+              "scenario": "Why do many whistleblowers face retaliation even when their disclosures are accurate and made through official channels?",
+              "options": [
+                "Official channels don't protect disclosures about their own agency",
+                "Reporting accurate misconduct disrupts existing power structures — those structures often respond defensively regardless of legal protections",
+                "Most whistleblower laws only protect false allegations that can't be verified"
+              ],
+              "correct": 1,
+              "reveal": "Legal protections exist but are difficult to enforce. Retaliation often takes subtle forms — reassignment, exclusion, changed duties — that are hard to prove in isolation. The power imbalance means whistleblowers bear most of the personal, professional, and financial cost of disclosure.",
+              "citation": "Government Accountability Project. (2021). Whistleblower Survival Guide."
+            },
+            {
+              "scenario": "A colleague is considering reporting financial misconduct and asks what to do before disclosing. What's the most protective first step?",
+              "options": [
+                "Submit the report immediately before anything can be altered",
+                "Tell their manager first to give the organization a chance to self-correct",
+                "Document the misconduct with dates and specifics, then consult a whistleblower attorney before filing"
+              ],
+              "correct": 2,
+              "reveal": "Documentation protects the whistleblower as much as the disclosure itself. A whistleblower attorney can advise on which channel offers the strongest legal protection — some channels don't trigger statutory protections. Telling a manager first often accelerates retaliation and can undermine later claims.",
+              "citation": "National Whistleblower Center. (2023). Know Your Rights."
+            }
+          ]
         }
       ],
       "share": {
@@ -127,35 +232,70 @@
       "id": "workplace-abuse",
       "label": "Workplace Abuse",
       "color": "--teal",
-      "questions": [
+      "submodules": [
         {
-          "scenario": "Over six months, a manager consistently interrupts an employee in meetings, assigns tasks below their role, and tells others the employee is 'not a good fit.' No single incident would qualify as formal misconduct. This pattern is called:",
-          "options": ["Personality conflict", "Workplace mobbing / targeted abuse", "Performance coaching"],
-          "correct": 1,
-          "reveal": "Targeted workplace abuse — sometimes called mobbing — is defined by its pattern and cumulative effect, not individual incidents. Each act alone seems minor; the sustained pattern causes significant psychological harm and is often designed to be deniable.",
-          "citation": "Lutgen-Sandvik, P., Tracy, S.J., & Alberts, J.K. (2007). Burned by bullying in the American workplace. Journal of Management Studies."
+          "id": "learn",
+          "type": "info",
+          "label": "Learn",
+          "title": "Recognizing Workplace Abuse",
+          "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Workplace abuse — sometimes called mobbing or targeted abuse — is defined by its cumulative pattern rather than individual incidents. Each act alone appears minor; the sustained pattern causes significant psychological harm and is often deliberately designed to be deniable.",
+          "tips": [
+            "Targets often can't name what's happening. Naming the pattern is the first step toward documentation.",
+            "Mobbing typically involves multiple actors, sometimes including bystanders who participate through silence or complicity.",
+            "Keep a contemporaneous log: date, description, who was present, and how it relates to earlier incidents."
+          ]
         },
         {
-          "scenario": "Why do targets of workplace abuse often fail to report it?",
-          "options": [
-            "Because they usually can't identify what's happening as abuse",
-            "Because workplace abuse only occurs in low-income industries",
-            "Because HR is legally required to protect them, which removes motivation to document"
-          ],
-          "correct": 0,
-          "reveal": "Targets often can't name what's happening. Workplace abuse is rarely dramatic — it's exclusion, tone, ambient undermining. When someone can't name the pattern, they internalize it as a personal failure. Naming the tactic is often the first step toward reporting.",
-          "citation": "Namie, G., & Namie, R. (2009). The Bully at Work. Sourcebooks."
+          "id": "explore",
+          "type": "cases",
+          "label": "Cases",
+          "title": "Workplace Abuse Patterns",
+          "cases": [
+            {
+              "name": "The Deniable Campaign",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Over seven months, a manager interrupted a direct report in every team meeting, assigned tasks below her classification, and described her to peers as 'not strategic.' Each incident was minor. The cumulative record, when documented, showed a clear pattern of targeted undermining."
+            },
+            {
+              "name": "The Team Exclusion",
+              "body": "Excepteur sint occaecat cupidatat non proident. A new hire was excluded from informal communications, not copied on relevant emails, and physically relocated from the team bay after raising a process concern. When they raised the issue with HR, they were told the changes were 'operational decisions unrelated to any complaint.'"
+            }
+          ]
         },
         {
-          "scenario": "You witness a colleague being systematically undermined by their supervisor. The colleague hasn't reported it. What's the most effective bystander action?",
-          "options": [
-            "Report it on their behalf immediately",
-            "Ask privately if they're aware of the pattern and whether they want support documenting it",
-            "Confront the supervisor directly during a team meeting"
-          ],
-          "correct": 1,
-          "reveal": "Bystander effectiveness research consistently shows that checking in privately, naming what you've observed, and asking what support is wanted is more helpful than acting on someone's behalf. Reporting without consent can remove the target's agency and sometimes escalate retaliation.",
-          "citation": "D'Cruz, P., & Noronha, E. (2011). The limits to workplace friendship. Employee Relations."
+          "id": "quiz",
+          "type": "quiz",
+          "label": "Quiz",
+          "questions": [
+            {
+              "scenario": "Over six months, a manager consistently interrupts an employee in meetings, assigns tasks below their role, and tells others the employee is 'not a good fit.' No single incident would qualify as formal misconduct. This pattern is called:",
+              "options": ["Personality conflict", "Workplace mobbing / targeted abuse", "Performance coaching"],
+              "correct": 1,
+              "reveal": "Targeted workplace abuse — sometimes called mobbing — is defined by its pattern and cumulative effect, not individual incidents. Each act alone seems minor; the sustained pattern causes significant psychological harm and is often designed to be deniable.",
+              "citation": "Lutgen-Sandvik, P., Tracy, S.J., & Alberts, J.K. (2007). Burned by bullying in the American workplace. Journal of Management Studies."
+            },
+            {
+              "scenario": "Why do targets of workplace abuse often fail to report it?",
+              "options": [
+                "Because they usually can't identify what's happening as abuse",
+                "Because workplace abuse only occurs in low-income industries",
+                "Because HR is legally required to protect them, which removes motivation to document"
+              ],
+              "correct": 0,
+              "reveal": "Targets often can't name what's happening. Workplace abuse is rarely dramatic — it's exclusion, tone, ambient undermining. When someone can't name the pattern, they internalize it as a personal failure. Naming the tactic is often the first step toward reporting.",
+              "citation": "Namie, G., & Namie, R. (2009). The Bully at Work. Sourcebooks."
+            },
+            {
+              "scenario": "You witness a colleague being systematically undermined by their supervisor. The colleague hasn't reported it. What's the most effective bystander action?",
+              "options": [
+                "Report it on their behalf immediately",
+                "Ask privately if they're aware of the pattern and whether they want support documenting it",
+                "Confront the supervisor directly during a team meeting"
+              ],
+              "correct": 1,
+              "reveal": "Bystander effectiveness research consistently shows that checking in privately, naming what you've observed, and asking what support is wanted is more helpful than acting on someone's behalf. Reporting without consent can remove the target's agency and sometimes escalate retaliation.",
+              "citation": "D'Cruz, P., & Noronha, E. (2011). The limits to workplace friendship. Employee Relations."
+            }
+          ]
         }
       ],
       "share": {
@@ -168,39 +308,74 @@
       "id": "retaliatory-tactics",
       "label": "Retaliatory Tactics",
       "color": "--sage",
-      "questions": [
+      "submodules": [
         {
-          "scenario": "After a nonprofit employee raises concerns about financial irregularities, she is assigned to a satellite office, removed from email lists, and told her 'team fit' is under review. When she flags this to a board member, she's told: 'This is a performance issue, not retaliation.' Which element is the strongest indicator of retaliation?",
-          "options": [
-            "Being moved to a satellite office — this is always retaliatory",
-            "The timing: all actions followed the protected disclosure and were characterized as performance issues",
-            "Being told it's a performance issue — this confirms the organization is hiding something"
-          ],
-          "correct": 1,
-          "reveal": "Timing is the strongest indicator of retaliation. When a cluster of adverse actions follows a protected disclosure — especially when labeled as something else — that pattern is what investigators look for. Retaliation is rarely labeled as such; it's disguised as performance management, restructuring, or 'fit.'",
-          "citation": "Equal Employment Opportunity Commission. (2021). Retaliation — Making it Personal."
+          "id": "learn",
+          "type": "info",
+          "label": "Learn",
+          "title": "How Retaliation Works",
+          "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Retaliation is any adverse action taken against someone because of a protected activity — filing a complaint, cooperating in an investigation, or refusing to participate in illegal conduct. The legal test is timing and causation: did the adverse action follow the protected activity, and would it deter a reasonable person from reporting?",
+          "tips": [
+            "Timing is the strongest single indicator: retaliation typically follows protected disclosure within days to weeks.",
+            "Soft retaliation — exclusion, changed duties, isolation — is the most common form. Each act is deniable; the cumulative pattern is the evidence.",
+            "Contemporaneous documentation, written at the time of each incident, is what investigators and courts weight most heavily."
+          ]
         },
         {
-          "scenario": "Why is 'soft retaliation' — exclusion, changed duties, isolation — particularly effective at silencing reporters?",
-          "options": [
-            "Because soft retaliation is legally protected under at-will employment doctrine",
-            "Because each act is deniable and the cumulative harm is hard to prove, while the target bears daily psychological cost",
-            "Because most employees don't notice soft retaliation until it escalates"
-          ],
-          "correct": 1,
-          "reveal": "Soft retaliation works because it operates below the threshold of provability while inflicting real harm. The target is left in a degraded work environment, increasingly isolated, while the organization maintains plausible deniability. The cost of fighting it often exceeds the perceived benefit.",
-          "citation": "Cortina, L.M., & Magley, V.J. (2003). Raising voice, risking retaliation. Journal of Occupational Health Psychology."
+          "id": "explore",
+          "type": "cases",
+          "label": "Cases",
+          "title": "Retaliation in the Record",
+          "cases": [
+            {
+              "name": "The Soft Campaign",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Following a protected disclosure, an employee was removed from a high-visibility project, relocated to a building annex, and excluded from distribution lists for agency-wide communications. Each action was individually justified by management. The EEOC found the cumulative pattern constituted actionable retaliation."
+            },
+            {
+              "name": "The Performance Pretext",
+              "body": "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit. Three weeks after filing a harassment complaint, an employee received her first negative performance review in four years. Management characterized it as 'a long-overdue honest assessment.' The review cited no incidents predating the complaint. The timing was the decisive factor in the subsequent retaliation finding."
+            }
+          ]
         },
         {
-          "scenario": "A colleague believes they are experiencing retaliation but isn't sure. What's the most important thing to do right now?",
-          "options": [
-            "File a formal complaint immediately to establish a paper trail",
-            "Say nothing and wait to see if it escalates before involving anyone",
-            "Document each incident with date, description, witnesses, and its proximity to the original disclosure — before escalating"
-          ],
-          "correct": 2,
-          "reveal": "Contemporaneous documentation — written at the time of each incident — is the most protective action a target can take. Courts and investigators weight it heavily. The connection between disclosure and adverse action is the central legal test; a documented timeline makes that connection visible.",
-          "citation": "National Employment Law Project. (2022). Retaliation: What It Is and How to Document It."
+          "id": "quiz",
+          "type": "quiz",
+          "label": "Quiz",
+          "questions": [
+            {
+              "scenario": "After a nonprofit employee raises concerns about financial irregularities, she is assigned to a satellite office, removed from email lists, and told her 'team fit' is under review. When she flags this to a board member, she's told: 'This is a performance issue, not retaliation.' Which element is the strongest indicator of retaliation?",
+              "options": [
+                "Being moved to a satellite office — this is always retaliatory",
+                "The timing: all actions followed the protected disclosure and were characterized as performance issues",
+                "Being told it's a performance issue — this confirms the organization is hiding something"
+              ],
+              "correct": 1,
+              "reveal": "Timing is the strongest indicator of retaliation. When a cluster of adverse actions follows a protected disclosure — especially when labeled as something else — that pattern is what investigators look for. Retaliation is rarely labeled as such; it's disguised as performance management, restructuring, or 'fit.'",
+              "citation": "Equal Employment Opportunity Commission. (2021). Retaliation — Making it Personal."
+            },
+            {
+              "scenario": "Why is 'soft retaliation' — exclusion, changed duties, isolation — particularly effective at silencing reporters?",
+              "options": [
+                "Because soft retaliation is legally protected under at-will employment doctrine",
+                "Because each act is deniable and the cumulative harm is hard to prove, while the target bears daily psychological cost",
+                "Because most employees don't notice soft retaliation until it escalates"
+              ],
+              "correct": 1,
+              "reveal": "Soft retaliation works because it operates below the threshold of provability while inflicting real harm. The target is left in a degraded work environment, increasingly isolated, while the organization maintains plausible deniability. The cost of fighting it often exceeds the perceived benefit.",
+              "citation": "Cortina, L.M., & Magley, V.J. (2003). Raising voice, risking retaliation. Journal of Occupational Health Psychology."
+            },
+            {
+              "scenario": "A colleague believes they are experiencing retaliation but isn't sure. What's the most important thing to do right now?",
+              "options": [
+                "File a formal complaint immediately to establish a paper trail",
+                "Say nothing and wait to see if it escalates before involving anyone",
+                "Document each incident with date, description, witnesses, and its proximity to the original disclosure — before escalating"
+              ],
+              "correct": 2,
+              "reveal": "Contemporaneous documentation — written at the time of each incident — is the most protective action a target can take. Courts and investigators weight it heavily. The connection between disclosure and adverse action is the central legal test; a documented timeline makes that connection visible.",
+              "citation": "National Employment Law Project. (2022). Retaliation: What It Is and How to Document It."
+            }
+          ]
         }
       ],
       "share": {
@@ -213,39 +388,74 @@
       "id": "recovery",
       "label": "Recovery",
       "color": "--subdued",
-      "questions": [
+      "submodules": [
         {
-          "scenario": "After leaving an abusive work environment, a person finds they second-guess every professional interaction, have difficulty trusting colleagues' motives, and feel responsible for not leaving sooner. These responses are best understood as:",
-          "options": [
-            "Signs of an anxiety disorder requiring clinical diagnosis",
-            "Adaptive responses to institutional trauma — normal reactions to abnormal treatment",
-            "Character weaknesses unrelated to the environment"
-          ],
-          "correct": 1,
-          "reveal": "Hypervigilance, trust disruption, and self-blame are recognized trauma responses — not character flaws. They are adaptive: they developed to protect someone in a threatening environment. Naming them as normal responses to abnormal situations is a critical first step in reducing their hold.",
-          "citation": "Herman, J.L. (1992). Trauma and Recovery. Basic Books."
+          "id": "learn",
+          "type": "info",
+          "label": "Learn",
+          "title": "Recovery from Institutional Trauma",
+          "definition": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Recovery from institutional betrayal is complicated by the fact that the harm was inflicted by a system the person depended on. Hypervigilance, trust disruption, and self-blame are adaptive trauma responses — not character flaws. They developed to protect someone in a threatening environment.",
+          "tips": [
+            "Situating experience within a systemic framework — 'this is what institutions typically do' — reduces isolation and self-blame more effectively than minimizing.",
+            "Self-blame is a psychological strategy to preserve a sense of control and maintain attachment to the institution. Recognizing it as such is the first step.",
+            "Recovery is not linear. Setbacks triggered by environmental cues (similar workplaces, authority figures) are expected and do not indicate failure to heal."
+          ]
         },
         {
-          "scenario": "Why do survivors of institutional abuse so often blame themselves for what happened?",
-          "options": [
-            "Because self-blame is a cognitive shortcut that reduces the need to process complex institutional failures",
-            "Because self-blame preserves a sense of control — 'if I caused it, I can prevent it next time' — and protects attachment to the institution",
-            "Because most institutional abuse involves behaviors the survivor actually caused"
-          ],
-          "correct": 1,
-          "reveal": "Betrayal trauma theory explains self-blame as a psychological strategy to preserve relationship with an institution on which someone depends. Acknowledging the institution caused harm requires confronting the loss of that safety. Self-blame, paradoxically, maintains the survivor's sense of agency.",
-          "citation": "Freyd, J.J., & Birrell, P.J. (2013). Blind to Betrayal. Wiley."
+          "id": "explore",
+          "type": "cases",
+          "label": "Cases",
+          "title": "Recovery Pathways",
+          "cases": [
+            {
+              "name": "The Hypervigilance Response",
+              "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. After leaving a toxic workplace, a former employee found she questioned every piece of feedback from new colleagues, interpreted neutral requests as potential threats, and spent hours reviewing emails before sending them. Her therapist contextualized these as adaptive responses to an environment where trust was consistently punished — not signs of clinical disorder."
+            },
+            {
+              "name": "The Self-Blame Pattern",
+              "body": "At vero eos et accusamus et iusto odio dignissimos ducimus. A whistleblower who had lost his job spent two years convinced he had mishandled the disclosure. Reviewing the documented timeline with an advocate revealed the retaliation had begun within 48 hours of his protected report — long before any alleged misstep on his part. The documentation was the intervention."
+            }
+          ]
         },
         {
-          "scenario": "A friend who experienced institutional betrayal says: 'I keep replaying what I should have done differently.' What response best supports recovery?",
-          "options": [
-            "'You need to stop thinking about it and move forward'",
-            "'Have you considered that you're describing a very normal response to what institutions do to people who report? You didn't cause it — the system responded the way it usually does.'",
-            "'At least you know now what to avoid in the future'"
-          ],
-          "correct": 1,
-          "reveal": "Situating someone's experience within a systemic framework — 'this is what institutions typically do' — reduces isolation and self-blame more effectively than minimizing or silver-lining. Validation of the response as normal and situational is consistently supported by trauma research as a first step toward recovery.",
-          "citation": "van der Kolk, B. (2014). The Body Keeps the Score. Viking."
+          "id": "quiz",
+          "type": "quiz",
+          "label": "Quiz",
+          "questions": [
+            {
+              "scenario": "After leaving an abusive work environment, a person finds they second-guess every professional interaction, have difficulty trusting colleagues' motives, and feel responsible for not leaving sooner. These responses are best understood as:",
+              "options": [
+                "Signs of an anxiety disorder requiring clinical diagnosis",
+                "Adaptive responses to institutional trauma — normal reactions to abnormal treatment",
+                "Character weaknesses unrelated to the environment"
+              ],
+              "correct": 1,
+              "reveal": "Hypervigilance, trust disruption, and self-blame are recognized trauma responses — not character flaws. They are adaptive: they developed to protect someone in a threatening environment. Naming them as normal responses to abnormal situations is a critical first step in reducing their hold.",
+              "citation": "Herman, J.L. (1992). Trauma and Recovery. Basic Books."
+            },
+            {
+              "scenario": "Why do survivors of institutional abuse so often blame themselves for what happened?",
+              "options": [
+                "Because self-blame is a cognitive shortcut that reduces the need to process complex institutional failures",
+                "Because self-blame preserves a sense of control — 'if I caused it, I can prevent it next time' — and protects attachment to the institution",
+                "Because most institutional abuse involves behaviors the survivor actually caused"
+              ],
+              "correct": 1,
+              "reveal": "Betrayal trauma theory explains self-blame as a psychological strategy to preserve relationship with an institution on which someone depends. Acknowledging the institution caused harm requires confronting the loss of that safety. Self-blame, paradoxically, maintains the survivor's sense of agency.",
+              "citation": "Freyd, J.J., & Birrell, P.J. (2013). Blind to Betrayal. Wiley."
+            },
+            {
+              "scenario": "A friend who experienced institutional betrayal says: 'I keep replaying what I should have done differently.' What response best supports recovery?",
+              "options": [
+                "'You need to stop thinking about it and move forward'",
+                "'Have you considered that you're describing a very normal response to what institutions do to people who report? You didn't cause it — the system responded the way it usually does.'",
+                "'At least you know now what to avoid in the future'"
+              ],
+              "correct": 1,
+              "reveal": "Situating someone's experience within a systemic framework — 'this is what institutions typically do' — reduces isolation and self-blame more effectively than minimizing or silver-lining. Validation of the response as normal and situational is consistently supported by trauma research as a first step toward recovery.",
+              "citation": "van der Kolk, B. (2014). The Body Keeps the Score. Viking."
+            }
+          ]
         }
       ],
       "share": {

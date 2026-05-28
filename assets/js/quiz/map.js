@@ -6,6 +6,7 @@ export function init(topics, onSelect) {
   const SIZE      = 300;
   const CENTER    = SIZE / 2;
   const RADIUS    = 108;
+  const SUB_D     = 65;
 
   if (_abortCtrl) _abortCtrl.abort();
   _abortCtrl = new AbortController();
@@ -34,7 +35,7 @@ export function init(topics, onSelect) {
   ring.setAttribute('stroke-dasharray', '3 7');
   svg.appendChild(ring);
 
-  // One connector line per topic
+  // One connector line per topic — store angle for subnode positioning
   const connectors = {};
   topics.forEach((topic, i) => {
     const angle = (i / topics.length) * 2 * Math.PI - Math.PI / 2;
@@ -48,7 +49,7 @@ export function init(topics, onSelect) {
     line.setAttribute('stroke-opacity', '0.6');
     line.dataset.id = topic.id;
     svg.appendChild(line);
-    connectors[topic.id] = { line, x, y };
+    connectors[topic.id] = { line, x, y, angle };
   });
 
   dial.appendChild(svg);
@@ -64,6 +65,99 @@ export function init(topics, onSelect) {
   hub.appendChild(hubLabel);
   dial.appendChild(hub);
 
+  // Subnode state
+  let activeTopicId = null;
+  let activeSubnodes = []; // { btn, sline }
+
+  function deactivateTopic() {
+    if (!activeTopicId) return;
+    const prev = activeTopicId;
+    activeTopicId = null;
+
+    activeSubnodes.forEach(({ btn, sline }) => {
+      btn.classList.remove('map-subnode--visible');
+      setTimeout(() => { btn.remove(); sline.remove(); }, 300);
+    });
+    activeSubnodes = [];
+
+    const prevNode = nodeEls[prev];
+    if (prevNode) prevNode.classList.remove('map-node--selected');
+
+    const subrow = mobileGrid.querySelector('.map-mobile-subrow');
+    if (subrow) subrow.remove();
+    const mobileNode = nodeEls['mobile_' + prev];
+    if (mobileNode) mobileNode.classList.remove('map-mobile-node--active');
+  }
+
+  function activateTopic(topic) {
+    deactivateTopic();
+    activeTopicId = topic.id;
+
+    const { x, y, angle } = connectors[topic.id];
+    const subs = topic.submodules || [];
+    const offsets = [-30, 0, 30].slice(0, subs.length).map(d => d * Math.PI / 180);
+
+    subs.forEach((sub, idx) => {
+      const theta = angle + offsets[idx];
+      const sx = x + SUB_D * Math.cos(theta);
+      const sy = y + SUB_D * Math.sin(theta);
+
+      const sline = document.createElementNS(ns, 'line');
+      sline.setAttribute('x1', x);  sline.setAttribute('y1', y);
+      sline.setAttribute('x2', sx); sline.setAttribute('y2', sy);
+      sline.setAttribute('stroke', `var(${topic.color})`);
+      sline.setAttribute('stroke-width', '1');
+      sline.setAttribute('stroke-opacity', '0.5');
+      svg.appendChild(sline);
+
+      const btn = document.createElement('button');
+      btn.className = 'map-subnode';
+      btn.dataset.topicId = topic.id;
+      btn.dataset.subId   = sub.id;
+      btn.style.cssText   = `left:${sx}px;top:${sy}px;--node-color:var(${topic.color});`;
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('aria-label', `${sub.label}: ${topic.label}`);
+
+      const lbl = document.createElement('span');
+      lbl.className = 'map-subnode__label';
+      lbl.textContent = sub.label;
+      btn.appendChild(lbl);
+
+      btn.addEventListener('click', () => onSelect(topic.id, sub.id));
+      dial.appendChild(btn);
+      requestAnimationFrame(() => btn.classList.add('map-subnode--visible'));
+
+      activeSubnodes.push({ btn, sline });
+    });
+
+    nodeEls[topic.id].classList.add('map-node--selected');
+  }
+
+  function showMobileSubrow(topic) {
+    const existing = mobileGrid.querySelector('.map-mobile-subrow');
+    if (existing) existing.remove();
+
+    const row = document.createElement('div');
+    row.className = 'map-mobile-subrow';
+
+    (topic.submodules || []).forEach(sub => {
+      const btn = document.createElement('button');
+      btn.className = 'map-mobile-subnode';
+      btn.style.setProperty('--node-color', `var(${topic.color})`);
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('aria-label', `${sub.label}: ${topic.label}`);
+      const lbl = document.createElement('span');
+      lbl.textContent = sub.label;
+      btn.appendChild(lbl);
+      btn.addEventListener('click', () => onSelect(topic.id, sub.id));
+      row.appendChild(btn);
+    });
+
+    const tapNode = mobileGrid.querySelector(`[data-id="${topic.id}"]`);
+    tapNode.insertAdjacentElement('afterend', row);
+    nodeEls['mobile_' + topic.id].classList.add('map-mobile-node--active');
+  }
+
   // Topic nodes
   const nodeEls = {};
   topics.forEach((topic, i) => {
@@ -75,7 +169,7 @@ export function init(topics, onSelect) {
     node.className = 'map-node';
     node.dataset.id = topic.id;
     node.style.cssText  = `left:${x}px;top:${y}px;--node-color:var(${topic.color});`;
-    node.setAttribute('aria-label', `Start quiz: ${topic.label}`);
+    node.setAttribute('aria-label', `Select topic: ${topic.label}`);
     node.setAttribute('type', 'button');
 
     const label = document.createElement('span');
@@ -83,7 +177,13 @@ export function init(topics, onSelect) {
     label.textContent = topic.label;
     node.appendChild(label);
 
-    node.addEventListener('click', () => onSelect(topic.id));
+    node.addEventListener('click', () => {
+      if (activeTopicId === topic.id) {
+        deactivateTopic();
+      } else {
+        activateTopic(topic);
+      }
+    });
     dial.appendChild(node);
     nodeEls[topic.id] = node;
   });
@@ -99,11 +199,18 @@ export function init(topics, onSelect) {
     btn.dataset.id = topic.id;
     btn.style.setProperty('--node-color', `var(${topic.color})`);
     btn.setAttribute('type', 'button');
-    btn.setAttribute('aria-label', `Start quiz: ${topic.label}`);
+    btn.setAttribute('aria-label', `Select topic: ${topic.label}`);
     const label = document.createElement('span');
     label.textContent = topic.label;
     btn.appendChild(label);
-    btn.addEventListener('click', () => onSelect(topic.id));
+    btn.addEventListener('click', () => {
+      if (activeTopicId === topic.id) {
+        deactivateTopic();
+      } else {
+        activateTopic(topic);
+        showMobileSubrow(topic);
+      }
+    });
     mobileGrid.appendChild(btn);
     nodeEls['mobile_' + topic.id] = btn;
   });
@@ -111,6 +218,7 @@ export function init(topics, onSelect) {
 
   // Hover: dim others, brighten connector, update hub label
   container.addEventListener('mouseover', e => {
+    if (activeTopicId) return;
     const node = e.target.closest('.map-node');
     if (!node) return;
     const id    = node.dataset.id;
@@ -135,6 +243,7 @@ export function init(topics, onSelect) {
   }, { signal });
 
   container.addEventListener('mouseleave', () => {
+    if (activeTopicId) return;
     Object.entries(nodeEls).forEach(([tid, el]) => {
       if (tid.startsWith('mobile_')) return;
       el.classList.remove('map-node--dimmed');
@@ -166,6 +275,6 @@ export function init(topics, onSelect) {
       }
     },
     collapse() {},
-    expand() {}
+    expand() { deactivateTopic(); }
   };
 }
