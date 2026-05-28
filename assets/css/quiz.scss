@@ -161,8 +161,6 @@
 
 .map-mobile-grid {
   display: none;
-  grid-template-columns: 1fr 1fr;
-  gap: 0.75rem;
   width: 100%;
 }
 
@@ -191,5 +189,9 @@
 
 @media (max-width: 700px) {
   .map-dial { display: none; }
-  .map-mobile-grid { display: grid; }
+  .map-mobile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
 }

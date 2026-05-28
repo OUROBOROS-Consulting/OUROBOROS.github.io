@@ -1,9 +1,15 @@
 // Public API — stable interface for v1 (CSS) and v2 (D3) swap
+let _abortCtrl;
+
 export function init(topics, onSelect) {
   const container = document.getElementById('quiz-map');
   const SIZE      = 300;
   const CENTER    = SIZE / 2;
   const RADIUS    = 108;
+
+  if (_abortCtrl) _abortCtrl.abort();
+  _abortCtrl = new AbortController();
+  const { signal } = _abortCtrl;
 
   container.innerHTML = '';
   const dial = document.createElement('div');
@@ -111,6 +117,7 @@ export function init(topics, onSelect) {
     const topic = topics.find(t => t.id === id);
 
     Object.entries(nodeEls).forEach(([tid, el]) => {
+      if (tid.startsWith('mobile_')) return;
       el.classList.toggle('map-node--dimmed', tid !== id);
     });
     Object.entries(connectors).forEach(([tid, { line }]) => {
@@ -125,17 +132,20 @@ export function init(topics, onSelect) {
       }
     });
     hubLabel.textContent = topic.label;
-  });
+  }, { signal });
 
   container.addEventListener('mouseleave', () => {
-    Object.values(nodeEls).forEach(el => el.classList.remove('map-node--dimmed'));
+    Object.entries(nodeEls).forEach(([tid, el]) => {
+      if (tid.startsWith('mobile_')) return;
+      el.classList.remove('map-node--dimmed');
+    });
     Object.values(connectors).forEach(({ line }) => {
       line.setAttribute('stroke', 'var(--border)');
       line.setAttribute('stroke-opacity', '0.6');
       line.setAttribute('stroke-width', '1');
     });
     hubLabel.textContent = 'Know the Tactics';
-  });
+  }, { signal });
 
   return {
     markCompleted(topicId) {
