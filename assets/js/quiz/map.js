@@ -155,6 +155,7 @@ export function init(topics, onSelect) {
       if (mobileNode) mobileNode.classList.add('map-mobile-node--completed');
       const c = connectors[topicId];
       if (c) {
+        c.line.classList.add('map-connector--completed');
         c.line.setAttribute('stroke', 'var(--sage)');
         c.line.setAttribute('stroke-opacity', '1');
       }

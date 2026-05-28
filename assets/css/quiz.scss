@@ -26,7 +26,8 @@
 }
 
 .quiz-panel-area {
-  overflow: hidden;
+  overflow-y: auto;
+  max-height: 90vh;
   padding: 3rem 0 2rem 2rem;
 }
 
@@ -157,6 +158,10 @@
   pointer-events: none;
 }
 
+.map-connector--completed {
+  opacity: 1 !important;
+}
+
 /* ── Mobile node grid ────────────────────────────────────────────────────── */
 
 .map-mobile-grid {
@@ -193,6 +198,25 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
+  }
+
+  .quiz-wrap {
+    grid-template-columns: 1fr;
+    padding: 0 1rem 3rem;
+  }
+
+  .quiz-wrap--open {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-map-area {
+    padding: 2rem 0.5rem 1rem;
+  }
+
+  .quiz-panel-area {
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 0 1rem;
   }
 }
 
