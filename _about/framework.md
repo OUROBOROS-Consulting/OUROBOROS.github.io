@@ -70,7 +70,7 @@ This firm operates from a set of explicit intellectual commitments — theoretic
     </div>
     <h3 class="fw-name">Human-Centered Design</h3>
     <hr class="fw-rule">
-    <p class="fw-body"><a href="https://www.lancaster.ac.uk/arts-and-social-sciences/people/emmanuel-tsekleves" target="_blank" rel="noopener noreferrer">Emmanuel Tsekleves</a>'s work — and the participatory design tradition more broadly — establishes one standard: solutions that affect people should be built with them, not for them. Co-design is not a method for softening deliverables; it is how you avoid replicating the power structures an intervention claims to disrupt. In survivor advocacy and public health work, lived experience is not a qualitative supplement to quantitative data — it is authoritative. Every platform, resource, and engagement this firm produces is evaluated against a single question: does it center the person it claims to serve? This is a design constraint, not aspiration.</p>
+    <p class="fw-body">The participatory design tradition establishes one standard: solutions that affect people should be built with them, not for them. Co-design is not a method for softening deliverables; it is how you avoid replicating the power structures an intervention claims to disrupt. In survivor advocacy and public health work, lived experience is not a qualitative supplement to quantitative data — it is authoritative. Every platform, resource, and engagement this firm produces is evaluated against a single question: does it center the person it claims to serve? This is a design constraint, not aspiration.</p>
   </div>
 
 </div>
