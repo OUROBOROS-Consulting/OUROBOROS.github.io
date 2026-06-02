@@ -73,7 +73,7 @@
     <div class="nav-shell">
       {% include nav.html %}
       {% assign pu = page.url %}
-      <nav class="nav-secondary" aria-label="Section navigation">
+      <nav id="nav-secondary-menu" class="nav-secondary" aria-label="Section navigation">
         {% for item in site.data.nav %}
         {% assign is_active = false %}
         {% if pu contains item.url %}{% assign is_active = true %}{% endif %}
