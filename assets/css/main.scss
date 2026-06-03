@@ -189,6 +189,50 @@ nav.nav-menu .nav-dropdown.nav-button .nav-card {
   }
 }
 
+// ── Mobile hamburger toggle for secondary nav ─────────────────────────────
+.nav-hamburger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  color: var(--text);
+  padding: 0.4rem 0.65rem;
+  cursor: pointer;
+  font-size: 1rem;
+  line-height: 1;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover,
+  &:focus {
+    background: rgba(201, 168, 76, 0.15);
+    color: var(--gold);
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-hamburger {
+    display: flex;
+  }
+
+  // Keep secondary nav hidden by default on mobile; show when toggled open
+  #nav-secondary-menu {
+    display: none !important;
+
+    &.nav-secondary--open {
+      display: flex !important;
+      flex-direction: column;
+      background: var(--bg1);
+      border-bottom: 1px solid var(--border);
+      padding: 0.25rem 0;
+      z-index: 90;
+    }
+  }
+}
+
 // ── Values static grid (homepage) ────────────────────────────────────────
 .values-grid {
   display: grid;

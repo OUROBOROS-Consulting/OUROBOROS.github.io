@@ -84,6 +84,28 @@ function initCarousel(sectionId, autoAdvance) {
 // values section is now a static grid — no carousel init needed
 initCarousel('testimonials', true);  // auto-advances every 7s
 
+// ── Mobile hamburger — toggles secondary nav on small screens ─────────────────
+(function initMobileNav() {
+  const hamburger = document.querySelector('.nav-hamburger');
+  const navMenu   = document.getElementById('nav-secondary-menu');
+  if (!hamburger || !navMenu) return;
+
+  hamburger.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navMenu.classList.toggle('nav-secondary--open');
+    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    hamburger.querySelector('i').className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+      navMenu.classList.remove('nav-secondary--open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      hamburger.querySelector('i').className = 'fas fa-bars';
+    }
+  });
+})();
+
 // ── Safety / Quick-exit ──────────────────────────────────────────────────────
 // Redirects to a neutral page and attempts to purge session/local storage plus
 // history state. Double-tap Escape also triggers this.
