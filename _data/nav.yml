@@ -1,18 +1,14 @@
 - title: Services
   url: /services/
   children:
-    - title: Technology Solutions
-      url: /services/consulting/
-    - title: AI Integration
-      url: /services/agentic-ai/
-    - title: Design Services
+    - title: Technology & AI
+      url: /services/technology/
+    - title: Design Systems
       url: /services/design/
-    - title: Research & Investigation
-      url: /services/investigation/
+    - title: Advocacy & Investigation
+      url: /services/advocacy-investigation/
     - title: Pedagogy
       url: /services/tutoring/
-    - title: Advocacy
-      url: /services/advocacy/
 
 - title: Resources
   url: /resources/
