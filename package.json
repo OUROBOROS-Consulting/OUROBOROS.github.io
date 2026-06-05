@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "OUROBOROS Consulting website",
   "scripts": {
-    "install-design": "npm install",
+    "predev": "lsof -ti:35729 | xargs kill -9 2>/dev/null; cd ../ouroboros-design && npm run build",
     "dev": "bundle exec jekyll serve --livereload",
     "build": "bundle exec jekyll build"
   },

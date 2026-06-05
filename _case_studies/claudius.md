@@ -6,7 +6,7 @@ back_url: /work/
 category: Startup Operations
 lede: When the consultant becomes the client — how Claude Code was used to design and build this very site, with a lot of human input.
 date: 2026-04-01
-tags: [Technology, Development, AI Use Case, Web Design, Design Systems]
+tags: [Context, Approach, Technical, What Changed, Lessons]
 
 # ── Overview blurb ──────────────────────────────────────────────────
 about:

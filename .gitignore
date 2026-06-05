@@ -1,10 +1,15 @@
+.claude
+.github
+_Claude/
 _site/
 .sass-cache/
 .jekyll-cache/
 .jekyll-metadata
+docs/
 node_modules/
 npm-debug.log
 package-lock.json
+posts/
 .DS_Store
 .env
 .vscode/*

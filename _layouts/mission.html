@@ -72,7 +72,7 @@ layout: default
            The matching section must set  id: tag-name  in front matter. -->
       <div class="svc-tags">
         {% for tag in page.tags %}
-        <div class="hero-cta"><a href="#{{ tag }}" class="btn">{{ tag }}</a></div>
+        <div class="hero-cta"><a href="#{{ tag | slugify }}" class="btn">{{ tag }}</a></div>
         {% endfor %}
       </div>
     </div><!-- /svc-hero-text -->

@@ -24,6 +24,10 @@ pull_quote: >
 
 # ── Page sections ──────────────────────────────────────────────────────────
 sections:
+  - id: tech-abuse
+    heading: Technology-Facilitated Abuse
+    bibtex_src: /assets/bib/tech-abuse.bib
+
   - id: psychopathology
     heading: Psychopathology
     bibtex_src: /assets/bib/psychopathology.bib
@@ -47,6 +51,14 @@ sections:
   - id: institutional-betrayal
     heading: Institutional Betrayal
     bibtex_src: /assets/bib/institutional-betrayal.bib
+
+  - id: workplace-abuse
+    heading: Workplace Abuse
+    bibtex_src: /assets/bib/workplace-abuse.bib
+
+  - id: tech-abuse
+    heading: Technology-Facilitated Abuse
+    bibtex_src: /assets/bib/tech-abuse.bib
 
   - id: context
     heading: A Note on This List

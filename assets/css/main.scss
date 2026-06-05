@@ -239,6 +239,14 @@ nav.nav-menu .nav-dropdown.nav-button .nav-card {
   grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
   gap: 1.25rem;
   margin-top: 2rem;
+
+  @media (max-width: 949px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 // ── Who This Is For (homepage audience section) ───────────────────────────
@@ -246,6 +254,10 @@ nav.nav-menu .nav-dropdown.nav-button .nav-card {
   padding: 4rem 2rem;
   max-width: 1100px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    padding: 4rem 6vw;
+  }
 
   .audience-grid {
     display: grid;
