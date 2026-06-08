@@ -32,9 +32,6 @@
   active_paths:
     - /mission
     - /framework
-    - /causes
-    - /cv
-    - /story
   children:
     - title: Framework
       url: /framework/
@@ -42,12 +39,6 @@
       url: /case-studies/
     - title: Mission
       url: /mission
-    - title: Story
-      url: /story
-    - title: Causes
-      url: /causes/
-    - title: CV
-      url: /cv
 
 - title: Work
   url: /case-studies/

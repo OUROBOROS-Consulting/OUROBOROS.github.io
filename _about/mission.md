@@ -1,24 +1,19 @@
 ---
 layout: mission
 title: Mission
-category: Technologist · Researcher · Advocate
-headshot: /assets/images/AS.png
-headshot_alt: Apostolos Stamenos
+category: Technology · Research · Advocacy
 lede: >
-  I build tools and arguments that push institutions from betrayal toward courage —
+  Tools and arguments that push institutions from betrayal toward courage —
   answerable to the people they claim to serve.
 
 # ── About ──────────────────────────────────────────────────────────────────
 about:
-  heading: Data in service of people
+  heading: What this firm does
   body: >
-    My career began at the intersection of technology and public service.
-    After graduating from Penn State with a B.S. in Economics in 2021, I joined
-    the U.S. Department of Health &amp; Human Services during the federal COVID-19
-    response, advancing from Data &amp; Analytics Intern to IT Specialist. I moved
-    into doctoral research in Biostatistics at the University of Minnesota, where
-    I develop statistical methods for neuroimaging data — working on questions at
-    the boundary of public health, mental health, and institutional accountability.
+    OUROBOROS Consulting works at the intersection of technology, rigorous research,
+    and principled advocacy — serving survivors, researchers, and institutions ready
+    to account for their failures honestly. We specialize in data science for public
+    health, AI-facilitated harm documentation, and institutional accountability work.
 
 # ── Pull quote ─────────────────────────────────────────────────────────────
 pull_quote: >
