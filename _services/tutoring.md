@@ -45,8 +45,7 @@ pricing:
     notes: Custom arrangements for intensive exam prep or multi-subject support.
 ---
 
-I hold a Master of Statistics from North Carolina State University and am completing a PhD
-in Biostatistics at the University of Minnesota. I have been teaching mathematics and
+I hold a Master of Statistics from North Carolina State University. I have been teaching mathematics and
 statistics for over eight years, working with students from high school through doctoral level.
 I am also a CRLA-certified tutor (International Tutor Training Program, Level II).
 
