@@ -1,5 +1,6 @@
 ---
 layout: home
+show_banner: true
 title: null
 description: "Tech consulting for survivors of institutional betrayal and coercive control. Building institutional courage through AI, research, and advocacy."
 
