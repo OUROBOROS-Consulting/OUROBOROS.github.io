@@ -87,36 +87,6 @@ layout: default
   </div>
 </section> -->
 
-<!-- ── Values ─────────────────────────────────────────────────────────────── -->
-<section id="values">
-  <div class="testimonials-header">
-    <div>
-      <p class="section-label">What I Live By</p>
-      <h2 class="testimonials-heading">Values</h2>
-    </div>
-  </div>
-
-  <div class="values-grid">
-    {% for val in site.data.values %}
-    <div class="values-card">
-      <div class="values-card__inner">
-        <div class="values-card__front">
-          <div class="values-card__surface">
-            <i class="{{ val.icon }} values-card__icon"></i>
-            <span class="values-card__name">{{ val.title | markdownify }}</span>
-          </div>
-        </div>
-        <div class="values-card__back">
-          <div class="values-card__surface">
-            <p class="values-card__desc">{{ val.description | markdownify }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
 <!-- ── Services / Expertise ───────────────────────────────────────────────── -->
 <section id="services">
   <div class="work-header">
@@ -210,6 +180,36 @@ layout: default
     <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
       aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
       aria-label="Testimonial {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── Values ─────────────────────────────────────────────────────────────── -->
+<section id="values">
+  <div class="testimonials-header">
+    <div>
+      <p class="section-label">What I Live By</p>
+      <h2 class="testimonials-heading">Values</h2>
+    </div>
+  </div>
+
+  <div class="values-grid">
+    {% for val in site.data.values %}
+    <div class="values-card">
+      <div class="values-card__inner">
+        <div class="values-card__front">
+          <div class="values-card__surface">
+            <i class="{{ val.icon }} values-card__icon"></i>
+            <span class="values-card__name">{{ val.title | markdownify }}</span>
+          </div>
+        </div>
+        <div class="values-card__back">
+          <div class="values-card__surface">
+            <p class="values-card__desc">{{ val.description | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
     {% endfor %}
   </div>
 </section>
