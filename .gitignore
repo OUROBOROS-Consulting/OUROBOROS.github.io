@@ -7,6 +7,7 @@ _site/
 .jekyll-cache/
 .jekyll-metadata
 docs/
+!docs/superpowers/
 node_modules/
 npm-debug.log
 package-lock.json
