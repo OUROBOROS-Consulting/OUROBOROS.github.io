@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Technology & AI Consulting
-icon: fa-microchip
+icon: fa-laptop-code
 description: "Bespoke technology and AI solutions — precision-applied tools, agentic workflows, and systems that give you control without requiring a full team."
 category: Services
 lede: >

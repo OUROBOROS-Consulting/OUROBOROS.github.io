@@ -10,7 +10,9 @@ npm run dev       # jekyll serve --livereload → http://localhost:4000
 npm run build     # jekyll build → _site/
 ```
 
-**After any SCSS edit in `ouroboros-design/`:**
+**`predev` auto-runs before `npm run dev`:** kills livereload port 35729, then rebuilds the design system. Manual rebuild is only needed when bypassing `npm run dev`.
+
+**After any SCSS edit in `ouroboros-design/` outside of `npm run dev`:**
 ```bash
 cd ../ouroboros-design && npm run build
 cd ../OUROBOROS-Consulting.github.io && npm install && npm run dev
@@ -21,22 +23,37 @@ cd ../OUROBOROS-Consulting.github.io && npm install && npm run dev
 ## Layout Hierarchy
 
 ```
-default.html      ← HTML shell: fonts, nav, footer, main.js, nav-shell
-  ├── home.html   ← Single-page landing
+default.html      ← HTML shell: fonts, nav, secondary nav, footer, main.js
+  ├── home.html       ← Single-page landing
   ├── foundation.html ← Prose pages: progress bar → hero → content → who → CTA
+  ├── service.html    ← Service detail pages: hero → specializations → policies → included → pricing → CTA
   ├── mission.html    ← Sections pages: hero → about → sections loop → links
+  ├── dashboard.html  ← Loads dashboard.css automatically
   ├── essays.html
-  ├── psa.html    ← PDF embed via iframe
+  ├── psa.html        ← PDF embed via iframe
   └── linkedin.html
 ```
 
-`foundation.html` — `back_url` defaults to `/services/`. `headshot:` + `headshot_alt:` renders `.hex-portrait` in hero.
+`foundation.html` — `back_url` defaults to `/services/`. `headshot:` + `headshot_alt:` renders `.hex-portrait` in hero. `tags:` render as anchor `<a>` buttons (jump links).
+
+`service.html` — Used by `_services/`. Tags render as plain `<span>` labels (not jump links). Front matter keys:
+- `icon`: Font Awesome class (e.g. `fa-shield`)
+- `specializations`: plain string list
+- `policies`: list of `{item: "..."}`
+- `included`: list of `{title: "...", description: "..."}`
+- `pricing`: list of `{name: "...", rate: "...", notes: "..."}`
 
 `mission.html` — `back_url` defaults to `/`. Social `links:` front matter keys: `github`, `linkedin`, `orcid`, `tutor`, `contact`. `contact` opens same tab; all others new tab.
 
 **`_about/` is a mixed collection** — each file sets its own `layout:` (foundation, mission, or default). Permalink is `/:slug`. Don't assume a single layout.
 
-**`_announcements/` is not registered in `_config.yml`** — posts exist but won't build until added to the `collections:` block.
+## Page-Level Front Matter (default.html)
+
+| Key | Effect |
+|-----|--------|
+| `noindex: true` | Adds `<meta name="robots" content="noindex,nofollow">` |
+| `banner: false` | Suppresses the page title banner (shown by default for titled pages outside home/foundation/mission) |
+| `extra_css: "name"` | Loads `assets/css/name.css` alongside main.css |
 
 ## mission.html Section Keys
 
@@ -55,9 +72,13 @@ Pick one per section:
 
 **Playlist lazy-load:** iframes use `data-src` not `src` — `playlist-carousel.js` swaps on slide activation. Never set `src` directly.
 
+## Navigation
+
+Secondary nav is data-driven from `_data/nav.yml`. Each entry supports `active_paths` — a list of additional URL prefixes that mark the item active beyond its own `url`. Use this when a section spans multiple URL roots.
+
 ## Gotchas
 
-**Narrow text:** `_essay.scss` sets `.post-body { max-width: 680px }` globally. Foundation pages needing full-width prose require:
+**Narrow text:** `.post-body` has `max-width: 680px` globally. Foundation pages needing full-width prose require:
 ```scss
 .svc-body .post-body { max-width: none; }
 ```
