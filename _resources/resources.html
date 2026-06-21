@@ -22,15 +22,33 @@ permalink: /resources/
 <div class="svc-body">
   <div class="related-grid resources-grid">
 
-    {% assign sorted_resources = site.resources | sort: "title" %}
-    {% for resource in sorted_resources %}
-    <a href="{{ resource.url | relative_url }}" class="related-card">
-      <p class="rc-tag">{{ resource.category | default: 'Resources' }}</p>
-      <h2 class="rc-title">{{ resource.title }}</h2>
-      {% if resource.lede %}<p class="card-desc">{{ resource.lede }}</p>{% endif %}
+    <a href="{{ '/work/psas/' | relative_url }}" class="related-card">
+      <p class="rc-tag">Public Interest</p>
+      <h2 class="rc-title">PSAs</h2>
+      <p class="card-desc">Public service announcements on technology, psychopathology, coercive control, and related causes — written for general audiences.</p>
       <span class="card-link">View →</span>
     </a>
-    {% endfor %}
+
+    <a href="{{ '/resources/scholarly/' | relative_url }}" class="related-card">
+      <p class="rc-tag">Research</p>
+      <h2 class="rc-title">Scholarly</h2>
+      <p class="card-desc">The research that institutions cite but do not follow.</p>
+      <span class="card-link">View →</span>
+    </a>
+
+    <a href="{{ '/resources/tutorials/' | relative_url }}" class="related-card">
+      <p class="rc-tag">Guides</p>
+      <h2 class="rc-title">Tutorials</h2>
+      <p class="card-desc">Practical guides on cybersecurity, data privacy, institutional navigation, and survival strategies — designed for real-world application.</p>
+      <span class="card-link">View →</span>
+    </a>
+
+    <a href="{{ '/resources/glossary/' | relative_url }}" class="related-card">
+      <p class="rc-tag">Reference</p>
+      <h2 class="rc-title">Glossary</h2>
+      <p class="card-desc">Plain-language definitions of terms used across OUROBOROS Consulting resources.</p>
+      <span class="card-link">View →</span>
+    </a>
 
   </div>
 </div>

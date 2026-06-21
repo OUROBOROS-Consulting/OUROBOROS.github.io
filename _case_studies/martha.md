@@ -2,6 +2,7 @@
 title: A Mother's Cross to Bear
 description: Elder abuse, identity theft, and the systematic dismantling of a life — and what it takes to begin rebuilding it.
 layout: mission
+section_layout: stacked
 back_url: /work/
 category: Survivor Security
 lede: >
