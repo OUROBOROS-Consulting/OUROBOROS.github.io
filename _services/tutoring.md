@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Tutoring Services
-icon: fa-book
+icon: fa-graduation-cap
 description: "Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level."
 category: Services
 lede: Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level.
