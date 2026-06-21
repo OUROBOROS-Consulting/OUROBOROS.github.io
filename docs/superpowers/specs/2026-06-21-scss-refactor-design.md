@@ -6,12 +6,17 @@
 ---
 
 ## Problem Statement
-
+### Structural
 Three structural problems cause maintenance friction:
 
 1. **Split-brain duplicates.** `main.scss` redefines `.footer-links`, `.footer-logo`, `.values-grid`, etc., which already exist in `ouroboros-design`. Two sources of truth for the same class → unpredictable cascade.
 2. **Orphan classes.** ~35 class names appear in templates with no SCSS definition (silent unstyled elements).
 3. **nav.scss monolith.** At 925 lines, `_nav.scss` is 18% of all SCSS. Primary nav and secondary nav are unrelated concerns.
+
+### Design
+
+1. **Glyphs.** Select trauma-informed, elegant, appropriate glyphs.
+2. **Box-model.** The box model needs to be examined. Some paddings, borders, margins overflow and aren't symmetric or properly nested.
 
 ---
 
@@ -20,7 +25,39 @@ Three structural problems cause maintenance friction:
 - Class renames (including `rc-` → `related-*`)
 - Template/HTML changes
 - Stylelint enforcement (deferred to a follow-up PR)
-- Any visual changes
+
+---
+
+## 5. Glyph Audit (done first)
+
+Audit and replace visual symbols across three categories. Implementation order: glyphs → structural work.
+
+### Font Awesome icons
+Inventory all `fa-*` icon classes across layouts, includes, and front matter. Replace any icons that are:
+- Generically corporate (briefcase, chart-bar, cog)
+- Toneally mismatched for trauma-informed work (shield-alt used as pure security metaphor, etc.)
+- Redundant or decorative noise
+
+Replacements must be: precise, warm, earned. Each icon should carry intentional meaning. Audit covers: `_layouts/`, `_includes/`, `_services/`, `_about/`, `_case_studies/`.
+
+### Typographic ornaments
+Audit: section dividers, pull-quote marks, decorative separators, bullet/list ornaments. Replace generic horizontal rules or ASCII dividers with appropriate Unicode or SVG ornaments consistent with the Gothic-modern aesthetic. No decorative inflation — each ornament earns its place.
+
+### Logo / wordmark glyphs
+Audit the ouroboros SVG mark and wordmark letterforms. Confirm the mark reads correctly at all sizes (nav, footer, favicon). Flag any rendering issues or inconsistencies.
+
+---
+
+## 6. Box-Model Audit (full scope)
+
+Full audit across all layouts: `home.html`, `foundation.html`, `service.html`, `mission.html`, `dashboard.html`. Check every component for:
+
+- **Overflow:** padding or margin that pushes content outside its container
+- **Asymmetry:** mismatched left/right or top/bottom spacing with no intentional reason
+- **Nesting violations:** margin on an element that is also a flex/grid child (double-spacing)
+- **Mobile breakpoints:** spacing that looks right on desktop but collapses incorrectly below 768px
+
+Document findings as a table (component, issue, fix). Apply fixes to the appropriate SCSS partial in `ouroboros-design/`.
 
 ---
 
@@ -124,6 +161,11 @@ Add a comment block to the top of `ouroboros-design/scss/index.scss`:
 
 ## Success Criteria
 
+- All `fa-*` icons audited; replacements documented and applied
+- No generic/corporate/toneally mismatched icons remain
+- Typographic ornaments consistent with Gothic-modern aesthetic
+- Box-model audit complete; findings table written; fixes applied
+- No overflow, asymmetry, or nesting violations remain across all five layouts
 - `main.scss` contains ≤ 3 sections: `@use`, `.safety-exit`, light-mode overrides
 - No class defined in both `main.scss` and `ouroboros-design`
 - Every class used in a layout/include has a corresponding SCSS definition
