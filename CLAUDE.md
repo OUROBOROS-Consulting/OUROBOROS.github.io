@@ -1,4 +1,7 @@
-# CLAUDE.md — Firm
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
 Frontend and design work context. Extends global CLAUDE.md.
 
 ## Output Path
