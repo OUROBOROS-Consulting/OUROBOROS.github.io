@@ -4,6 +4,7 @@ title: Tutoring Services
 icon: fa-graduation-cap
 description: "Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level."
 category: Services
+order: 5
 lede: Rigorous, patient instruction in statistics, mathematics, and programming — from high school through graduate level.
 tags: [Statistics, Mathematics, Probability, R, Python, LaTeX, Biostatistics, Programming]
 price: Starting at $65/hr

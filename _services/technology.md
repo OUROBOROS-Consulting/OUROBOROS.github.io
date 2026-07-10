@@ -4,6 +4,7 @@ title: Technology & AI Consulting
 icon: fa-laptop-code
 description: "Bespoke technology and AI solutions — precision-applied tools, agentic workflows, and systems that give you control without requiring a full team."
 category: Services
+order: 3
 lede: >
   The right technology, precisely applied — with AI as a force multiplier when it helps, and honest advice when it doesn't.
   I build bespoke solutions for real problems: from agentic Claude workflows to Apple ecosystem overhauls,

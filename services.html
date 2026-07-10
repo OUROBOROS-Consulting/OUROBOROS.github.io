@@ -26,7 +26,7 @@ banner: false
 <div class="svc-body">
   <div class="related-grid">
 
-    {% assign sorted_services = site.services | sort: "title" %}
+    {% assign sorted_services = site.services | sort: "order" %}
     {% for service in sorted_services %}
     <a href="{{ service.url | relative_url }}" class="related-card">
       <p class="rc-tag">{{ service.category | default: 'Services' }}</p>

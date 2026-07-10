@@ -97,7 +97,8 @@ layout: default
   </div>
 
   <div class="testimonials-grid">
-    {% for service in site.services %}
+    {% assign sorted_services = site.services | sort: "order" %}
+    {% for service in sorted_services %}
     <div class="card--formula">
       <div class="card--formula__interior">
         {% if service.icon %}
