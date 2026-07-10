@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Technology & AI Consulting
-icon: fa-laptop-code
+icon: fa-terminal
 description: "Bespoke technology and AI solutions — precision-applied tools, agentic workflows, and systems that give you control without requiring a full team."
 category: Services
 order: 3

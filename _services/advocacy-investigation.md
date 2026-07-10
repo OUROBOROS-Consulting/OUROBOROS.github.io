@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Advocacy & Investigation
-icon: fa-magnifying-glass
+icon: fa-gavel
 description: "Precision navigation through hostile institutions — documentation strategy, records research, FOIA, and a knowledgeable advocate in your corner."
 category: Services
 order: 1

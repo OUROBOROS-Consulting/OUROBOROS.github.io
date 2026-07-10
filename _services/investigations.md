@@ -1,7 +1,7 @@
 ---
 layout: service
 title: Investigations & Due Diligence
-icon: fa-magnifying-glass-chart
+icon: fa-binoculars
 description: "Rigorous open-source investigation for attorneys, journalists, and organizations — methodologically sound, ethically bounded, attorney-ready."
 category: Services
 order: 2
