@@ -8,7 +8,7 @@
 
 Market demand spans five areas: OSINT investigations, brand growth, graphic design, web development, and AI. Current lineup (Technology & AI, Advocacy & Investigation, Tutoring) covers AI well, covers OSINT only under survivor-focused framing, buries web development in Technology tags, and has no home for brand growth or graphic design. The nav also links a dead page (`/services/design/`, removed in commit `6ff4340`).
 
-Demand is roughly even between mission-aligned clients (survivors, advocates) and commercial clients (attorneys, small orgs, businesses). All services delivered personally by Apostolos.
+Demand is roughly even between survivor-facing work and commercial work (attorneys, small orgs, businesses) — but both serve the same mission: helping survivors and their allies. Commercial clients are allies, not a separate audience; the pages differ in framing and rates, not in mission. All services delivered personally by Apostolos.
 
 ## Design
 
