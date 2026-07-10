@@ -1,12 +1,14 @@
 - title: Services
   url: /services/
   children:
-    - title: Technology & AI
-      url: /services/technology/
-    - title: Design Systems
-      url: /services/design/
     - title: Advocacy & Investigation
       url: /services/advocacy-investigation/
+    - title: Investigations & Due Diligence
+      url: /services/investigations/
+    - title: Technology & AI
+      url: /services/technology/
+    - title: Brand & Digital Studio
+      url: /services/design/
     - title: Pedagogy
       url: /services/tutoring/
 
