@@ -78,15 +78,6 @@ layout: default
           </div>
         </label>
         <label class="service-card">
-          <input type="radio" name="service_type" value="pedagogy" required>
-          <div class="service-card-inner">
-            <div class="service-card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
-            <div class="service-card-title">Education &amp; Training</div>
-            <div class="service-card-desc">Workshops, curriculum development, tech literacy, individual or
-              organizational training</div>
-          </div>
-        </label>
-        <label class="service-card">
           <input type="radio" name="service_type" value="studio" required>
           <div class="service-card-inner">
             <div class="service-card-icon"><i class="fa-solid fa-pen-nib"></i></div>
@@ -465,59 +456,6 @@ layout: default
     </div>
 
     <div class="intake-divider track-section" data-track="technical studio" style="display:none"></div>
-
-    <!-- TRACK: PEDAGOGY — Training Context -->
-    <div class="intake-section track-section" data-track="pedagogy" style="display:none">
-      <div class="intake-section-header">
-        <span class="intake-section-number track-label">—</span>
-        <span class="intake-section-title">Training Context</span>
-      </div>
-      <div class="field-row col-2">
-        <div class="field-group">
-          <label for="pedagogy-org">Organization or context</label>
-          <input type="text" id="pedagogy-org" name="pedagogy_org"
-            placeholder="Nonprofit, law firm, school, individual...">
-        </div>
-        <div class="field-group">
-          <label for="audience-size">Estimated audience size</label>
-          <input type="text" id="audience-size" name="audience_size" placeholder="e.g., 1, 12, 50+">
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="topic-area">Topic area or subject matter</label>
-          <textarea id="topic-area" name="topic_area" rows="2"
-            placeholder="Tech literacy, digital safety, data analysis, research methods, other..."></textarea>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label>Preferred format</label>
-          <div class="check-group">
-            <label class="check-item"><input type="checkbox" name="training_format" value="workshop"> Workshop / group
-              session</label>
-            <label class="check-item"><input type="checkbox" name="training_format" value="one_on_one"> 1-on-1
-              tutoring</label>
-            <label class="check-item"><input type="checkbox" name="training_format" value="curriculum"> Curriculum
-              development</label>
-            <label class="check-item"><input type="checkbox" name="training_format" value="async"> Asynchronous /
-              self-paced</label>
-            <label class="check-item"><input type="checkbox" name="training_format" value="in_person"> In-person</label>
-            <label class="check-item"><input type="checkbox" name="training_format" value="remote"> Remote /
-              virtual</label>
-          </div>
-        </div>
-      </div>
-      <div class="field-row">
-        <div class="field-group">
-          <label for="prior-training">Prior training or baseline knowledge of your audience</label>
-          <textarea id="prior-training" name="prior_training" rows="2"
-            placeholder="What do they already know? Where are the gaps?"></textarea>
-        </div>
-      </div>
-    </div>
-
-    <div class="intake-divider track-section" data-track="pedagogy" style="display:none"></div>
 
     <!-- SECTION 03: GOALS — always shown -->
     <div class="intake-section">
