@@ -47,13 +47,14 @@ layout: default
 <div class="svc-body">
 
   <!-- Markdown body content -->
-  {% if content %}
-  <div class="svc-section svc-prose">
+  {% assign svc_body = content | strip %}
+  {% unless svc_body == "" %}
+  <div class="svc-section svc-section--stacked">
     <div class="svc-section-content">
       {{ content }}
     </div>
   </div>
-  {% endif %}
+  {% endunless %}
 
   <!-- Who it's for -->
   {% if page.who %}
