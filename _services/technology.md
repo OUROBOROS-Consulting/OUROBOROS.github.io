@@ -9,7 +9,7 @@ lede: >
   The right technology, precisely applied — with AI as a force multiplier when it helps, and honest advice when it doesn't.
   I build bespoke solutions for real problems: from agentic Claude workflows to Apple ecosystem overhauls,
   from FedRAMP-grade automation to a folder structure you'll actually stick to.
-tags: [Apple Ecosystem, Agentic AI, Claude, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python, Workflow Design, Design Systems, Accessibility, Frontend Implementation, SCSS]
+tags: [Apple Ecosystem, Agentic AI, Claude, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python, Workflow Design]
 cta_label: Describe Your Problem
 cta_body: Reach out with a brief description of what you're working on. Discovery calls are always free — I'll follow up within 48 hours.
 who: >
@@ -47,11 +47,7 @@ specializations:
   - Data science, ML, & statistical modeling
   - Workflow design & process improvement
   - Survivor-focused AI applications
-  - Systems design (data tooling, automations, workflow architecture, frontend)
-  - Design systems & component architecture (SCSS, CSS custom properties)
-  - Frontend implementation (vanilla JS, Jekyll, performance-first, no unnecessary frameworks)
-  - Accessibility (WCAG, ARIA, semantic HTML, keyboard navigation)
-  - Typography & editorial systems
+  - Systems design (data tooling, automations, workflow architecture)
 pricing:
   - name: Technology Advisory
     rate: $100–$175/hr
