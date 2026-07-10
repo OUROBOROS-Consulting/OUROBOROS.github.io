@@ -89,6 +89,8 @@ Institutions rely on your not knowing how they work. I do. I understand your rig
 
 I don't do surveillance, trespass, or illegal access. What I do: research publicly documented information, identify patterns in institutional behavior, help you navigate institutional channels strategically, and synthesize findings into evidence courts and investigators believe.
 
+*Attorney, journalist, or organization? See [Investigations & Due Diligence](/services/investigations/).*
+
 ## AI and the Acceleration of Coercive Control
 
 The tactics that define coercive control — evidence tampering, impersonation, institutional capture, the systematic rewriting of reality — are now AI-accelerated. Fabricated evidence that once required weeks of sustained effort takes hours. Impersonation campaigns are scalable. Institutions already skilled at exhausting complainants can automate that exhaustion.

@@ -46,6 +46,15 @@ layout: default
 <!-- ── Service Body ── -->
 <div class="svc-body">
 
+  <!-- Markdown body content -->
+  {% if content %}
+  <div class="svc-section svc-prose">
+    <div class="svc-section-content">
+      {{ content }}
+    </div>
+  </div>
+  {% endif %}
+
   <!-- Who it's for -->
   {% if page.who %}
   <section class="svc-section">
