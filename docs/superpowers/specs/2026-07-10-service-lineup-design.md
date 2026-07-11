@@ -2,6 +2,7 @@
 
 **Date:** 2026-07-10
 **Status:** Approved approach (A: audience-led, 5 services); spec pending user review
+**Amended 2026-07-10:** Tutoring service and agora case study removed by user direction during implementation. Shipped lineup: four services (advocacy-investigation, investigations, technology, design). Investigations icon shipped as `fa-binoculars` (site-wide icon unification), not `fa-magnifying-glass-chart`. Pedagogy references below no longer apply.
 **Scope:** Content restructure only. No visual/design changes. Navbar and hero remain frozen; the Services dropdown change is content, not design.
 
 ## Problem

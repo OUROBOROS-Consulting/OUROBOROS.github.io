@@ -49,11 +49,11 @@ layout: default
   <!-- Markdown body content -->
   {% assign svc_body = content | strip %}
   {% unless svc_body == "" %}
-  <div class="svc-section svc-section--stacked">
+  <section class="svc-section svc-section--stacked">
     <div class="svc-section-content">
       {{ content }}
     </div>
-  </div>
+  </section>
   {% endunless %}
 
   <!-- Who it's for -->
