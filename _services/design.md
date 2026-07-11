@@ -49,3 +49,13 @@ pricing:
     rate: Contact me
     notes: Monthly retainer for ongoing updates, iteration, and reporting.
 ---
+
+A small organization's public presence usually fails in predictable ways: a logo that doesn't scale, a site built on a page builder nobody can maintain, analytics nobody reads. The fix isn't more tooling. It's a coherent identity, a fast accessible site, and a plan — built in that order.
+
+I build static-first: sites that load fast, work on any device, and meet WCAG accessibility standards by default. No framework bloat, no subscription lock-in, no platform you can't leave.
+
+You own everything. Source files, code, accounts, documentation — all of it transfers to you, with enough documentation to maintain it yourself or hand it to whoever comes after me. Vendor lock-in is a business model. It isn't mine.
+
+## One Project Ladder
+
+Identity first: positioning, voice, and a visual system. Then the site, designed and built on that identity. Then growth: content strategy, SEO fundamentals, and measurement that tells you what's working. Each rung stands alone — stop after any of them and you have something complete.

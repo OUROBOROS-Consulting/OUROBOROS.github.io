@@ -48,3 +48,15 @@ pricing:
 ---
 
 *Navigating this as a survivor of abuse or institutional betrayal? Start with [Advocacy & Investigation](/services/advocacy-investigation/) instead.*
+
+Court records, corporate filings, property databases, licensing boards, news archives, digital footprints — the public record holds more than most people expect, and all of it is legally accessible. Everything is indexed. Everything is searchable. The skill is knowing where to look, how to verify what you find, and how to document it so it holds up.
+
+This is not surveillance. It is research. Public sources only — no pretexting, no trespass, no illegal access. Findings are reported as sourced facts with documented methodology, so an attorney can rely on them and an opposing party can't dismiss them.
+
+## Dual Use, Screened
+
+The same techniques that support due diligence, fraud investigation, and locating missing persons can serve stalking and harassment. That dual use is why every engagement starts with a conflict check and misuse screening. I don't take investigations targeting survivors, and I decline work whose purpose I can't verify.
+
+## Engagement Models
+
+Hourly for records research and analysis. Flat-rate for scoped investigations with a defined question and a defined deliverable. Retained for litigation support across the life of a matter.
