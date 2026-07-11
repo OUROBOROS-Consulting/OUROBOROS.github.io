@@ -72,3 +72,18 @@
     --gold-border: #B1935D;
   }
 }
+
+// ── Hero background pattern ───────────────────────────────────────────────
+// Dimmed marble checkerboard watermark, sits above #hero's own background
+// layers and below the ornate border (z-index:1) and content (unpositioned).
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: url("../images/Pattern-hero.jpg");
+  background-size: 900px 900px;
+  background-repeat: repeat;
+  opacity: 0.07;
+  pointer-events: none;
+}

@@ -34,8 +34,54 @@ layout: default
   </div>
 </section>
 
+<!-- ── Testimonials ───────────────────────────────────────────────────────── -->
+<section id="testimonials">
+  <div class="testimonials-header">
+    <div>
+      <p class="section-label">What Clients Say</p>
+      <h2 class="testimonials-heading">Testimonials</h2>
+      <p class="testimonials-context"
+        style="margin-top:0.5rem;font-size:0.8125rem;color:var(--muted);letter-spacing:0.01em;font-style:italic;">These
+        testimonials are from federal and corporate engagements. Survivor and advocacy work is confidential by design.
+      </p>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial">&#8592;</button>
+      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="carousel" aria-live="polite" aria-label="Testimonials">
+    <div class="carousel-track">
+      {% for ref in site.data.testimonials %}
+      <div class="carousel-slide" role="group"
+        aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
+        <div class="card--formula">
+          <div class="card--formula__interior">
+            <p class="card-tag">{{ ref.title }}</p>
+            <blockquote>
+              <div class="card-desc">{{ ref.description | markdownify }}</div>
+              <cite>— {{ ref.reference }}</cite>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+    {% for ref in site.data.testimonials %}
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+      aria-label="Testimonial {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+</section>
+
 <!-- ── About / Stats ──────────────────────────────────────────────────────── -->
-<!-- <section id="about">
+<section id="about">
   <div class="about-header">
     <p class="section-label">By the Numbers</p>
     <h2 class="about-heading">{{ page.about_heading }}</h2>
@@ -85,7 +131,7 @@ layout: default
     {% endif %}
 
   </div>
-</section> -->
+</section>
 
 <!-- ── Services / Expertise ───────────────────────────────────────────────── -->
 <section id="services">
@@ -94,11 +140,12 @@ layout: default
       <p class="section-label">What I Offer</p>
       <h2 class="work-heading">Expertise</h2>
     </div>
+    <a href="{{ '/services/' | relative_url }}" class="work-viewall">View All →</a>
   </div>
 
   <div class="testimonials-grid">
     {% assign sorted_services = site.services | sort: "order" %}
-    {% for service in sorted_services %}
+    {% for service in sorted_services limit: 3 %}
     <div class="card--formula">
       <div class="card--formula__interior">
         {% if service.icon %}
@@ -122,11 +169,15 @@ layout: default
       <p class="section-label">Selected Work</p>
       <h2 class="work-heading">Case Studies</h2>
     </div>
-    <span class="work-count">{{ site.case_studies.size }} pieces</span>
+    <div class="work-header-right">
+      <span class="work-count">{{ site.case_studies.size }} pieces</span>
+      <a href="{{ '/case-studies/' | relative_url }}" class="work-viewall">View All →</a>
+    </div>
   </div>
 
   <div class="testimonials-grid">
-    {% for case in site.case_studies %}
+    {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
+    {% for case in sorted_cases limit: 3 %}
     <div class="card--formula">
       <div class="card--formula__interior">
         <p class="card-tag">{{ case.tag }}</p>
@@ -135,52 +186,6 @@ layout: default
         <a href="{{ case.url }}" class="card-link">Read More →</a>
       </div>
     </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- ── Testimonials ───────────────────────────────────────────────────────── -->
-<section id="testimonials">
-  <div class="testimonials-header">
-    <div>
-      <p class="section-label">What Clients Say</p>
-      <h2 class="testimonials-heading">Testimonials</h2>
-      <p class="testimonials-context"
-        style="margin-top:0.5rem;font-size:0.8125rem;color:var(--muted);letter-spacing:0.01em;font-style:italic;">These
-        testimonials are from federal and corporate engagements. Survivor and advocacy work is confidential by design.
-      </p>
-    </div>
-    <div class="carousel-controls">
-      <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial">&#8592;</button>
-      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
-      <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial">&#8594;</button>
-    </div>
-  </div>
-
-  <div class="carousel" aria-live="polite" aria-label="Testimonials">
-    <div class="carousel-track">
-      {% for ref in site.data.testimonials %}
-      <div class="carousel-slide" role="group"
-        aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
-        <div class="card--formula">
-          <div class="card--formula__interior">
-            <p class="card-tag">{{ ref.title }}</p>
-            <blockquote>
-              <div class="card-desc">{{ ref.description | markdownify }}</div>
-              <cite>— {{ ref.reference }}</cite>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-
-  <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
-    {% for ref in site.data.testimonials %}
-    <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
-      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-      aria-label="Testimonial {{ forloop.index }}"></button>
     {% endfor %}
   </div>
 </section>
@@ -212,5 +217,19 @@ layout: default
       </div>
     </div>
     {% endfor %}
+  </div>
+</section>
+
+<!-- ── Closing CTA ────────────────────────────────────────────────────────── -->
+<section id="cta">
+  <div class="about-header">
+    <p class="section-label">Ready to Start</p>
+    <h2 class="about-heading">{{ page.cta_body | default: "Reach out with a brief description of what you're working on and your availability." }}</h2>
+  </div>
+  <div class="hero-cta">
+    <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">{{ page.cta_label | default: 'Book a Free Consultation' }}</a>
+    {% if page.cta2_label %}
+    <a href="{{ page.cta2_url | relative_url }}" class="btn btn--ghost">{{ page.cta2_label }}</a>
+    {% endif %}
   </div>
 </section>

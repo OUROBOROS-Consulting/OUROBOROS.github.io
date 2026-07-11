@@ -8,71 +8,73 @@
       </div>
     </a>
 
-    <!-- Centered button group -->
+    <!-- Right-anchored button group -->
     <div class="nav-buttons">
-      <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
-      <div class="nav-dropdown nav-button">
+      <!-- Search — input expands leftward, overlaying the nav bar. Input is a
+           sibling of .nav-card (not nested inside it) so the card's chamfer
+           clip-path doesn't clip the input as it grows past the card's edge. -->
+      <form id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap" action="/search/" method="get" role="search">
+        <input class="nav-search__input" type="search" name="q" aria-label="Search site" placeholder="Search…" autocomplete="off">
         <div class="nav-card">
           <div class="nav-card__interior">
-            <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
-              aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
-              <i class="fas fa-dungeon" aria-hidden="true"></i>
-              <span class="nav-btn-label">Exit</span>
-            </a>
+            <button type="submit" class="nav-search__submit" aria-label="Search site">
+              <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+            </button>
           </div>
         </div>
+      </form>
+
+      <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
+      <div class="nav-dropdown nav-button">
+        <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
+          aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
+          <div class="nav-card">
+            <div class="nav-card__interior">
+              <i class="fas fa-door-open" aria-hidden="true"></i>
+            </div>
+          </div>
+          <span class="nav-btn-label">Exit</span>
+        </a>
       </div>
 
       <!-- CMD/CTRL -->
       {% comment %}
       <div class="nav-dropdown nav-button">
-        <div class="nav-card">
-          <div class="nav-card__interior">
-            <a href="{{ '/del-cmd-ctrl/' | relative_url }}" aria-label="CMD/CTRL Dashboard">
+        <a href="{{ '/del-cmd-ctrl/' | relative_url }}" aria-label="CMD/CTRL Dashboard">
+          <div class="nav-card">
+            <div class="nav-card__interior">
               <i class="fas fa-compass" aria-hidden="true"></i>
-              <span class="nav-btn-label">CMD/CTRL</span>
-            </a>
+            </div>
           </div>
-        </div>
+          <span class="nav-btn-label">CMD/CTRL</span>
+        </a>
       </div>
       {% endcomment %}
 
       <!-- News -->
       <div class="nav-dropdown nav-button">
-        <div class="nav-card">
-          <div class="nav-card__interior">
-            <a href="{{ '/announcements' | relative_url }}">
+        <a href="{{ '/announcements' | relative_url }}">
+          <div class="nav-card">
+            <div class="nav-card__interior">
               <i class="fas fa-newspaper" aria-hidden="true"></i>
-              <span class="nav-btn-label">News</span>
-            </a>
+            </div>
           </div>
-        </div>
+          <span class="nav-btn-label">News</span>
+        </a>
       </div>
 
       <!-- Contact -->
       <div class="nav-dropdown nav-button">
-        <div class="nav-card">
-          <div class="nav-card__interior">
-            <a href="{{ '/intake' | relative_url }}">
+        <a href="{{ '/intake' | relative_url }}">
+          <div class="nav-card">
+            <div class="nav-card__interior">
               <i class="fas fa-envelope" aria-hidden="true"></i>
-              <span class="nav-btn-label">Contact</span>
-            </a>
+            </div>
           </div>
-        </div>
+          <span class="nav-btn-label">Contact</span>
+        </a>
       </div>
     </div>
-
-    <!-- Search — right-anchored, input expands leftward -->
-    <form id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap" action="/search/" method="get" role="search">
-      <div class="nav-card">
-        <div class="nav-card__interior">
-          <input class="nav-search__input" type="search" name="q" aria-label="Search site" placeholder="Search…" autocomplete="off">
-          <button type="submit" class="nav-search__submit" aria-label="Search site">
-            <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
-          </button>
-        </div>
-      </div>
-    </form>
 
     <!-- Mobile menu toggle — only visible on small screens -->
     <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-secondary-menu">

@@ -1,5 +1,6 @@
 .claude
 .github
+.superpowers
 !.github/pull_request_template.md
 _Claude/
 _site/
