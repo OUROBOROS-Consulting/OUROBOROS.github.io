@@ -166,7 +166,7 @@ layout: default
           <div class="card--formula__interior">
             <p class="card-tag">{{ ref.title }}</p>
             <blockquote>
-              <p class="card-desc">{{ ref.description }}</p>
+              <div class="card-desc">{{ ref.description | markdownify }}</div>
               <cite>— {{ ref.reference }}</cite>
             </blockquote>
           </div>
