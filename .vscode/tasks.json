@@ -4,16 +4,15 @@
 		{
 			"type": "shell",
 			"command": "npm run build",
-			"group": {
-				"kind": "build",
-				"isDefault": true
-			},
+			"group": "build",
 			"problemMatcher": [],
 			"label": "npm: build",
 			"options": {
 				"shell": {
 					"executable": "/bin/zsh",
-					"args": ["-c"]
+					"args": [
+						"-c"
+					]
 				},
 				"env": {
 					"PATH": "/Users/apostolos/.rbenv/shims:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"
@@ -25,11 +24,16 @@
 			"command": "npm run dev",
 			"problemMatcher": [],
 			"label": "npm: dev",
-			"group": "build",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
 			"options": {
 				"shell": {
 					"executable": "/bin/zsh",
-					"args": ["-c"]
+					"args": [
+						"-c"
+					]
 				},
 				"env": {
 					"PATH": "/Users/apostolos/.rbenv/shims:/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin"

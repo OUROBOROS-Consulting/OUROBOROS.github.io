@@ -2,6 +2,7 @@
 layout: service
 title: Brand & Digital Studio
 icon: fa-pen-nib
+hero_svg: /assets/images/hero-design.svg
 description: "Identity, website, and growth for small organizations and practitioners — accessible, performance-first, no framework bloat."
 category: Services
 order: 4

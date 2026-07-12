@@ -66,9 +66,6 @@
   </head>
 
   {% assign _show_banner = false %}
-  {% if page.title and page.layout != 'home' and page.layout != 'foundation' and page.layout != 'mission' and page.banner != false %}
-    {% assign _show_banner = true %}
-  {% endif %}
   <body{% if _show_banner %} class="has-title-banner"{% elsif page.show_banner %} class="has-banner"{% endif %}>
     {% if page.show_banner %}{% include banner.html %}{% endif %}
     <div class="nav-shell">

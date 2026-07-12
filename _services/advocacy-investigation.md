@@ -2,6 +2,7 @@
 layout: service
 title: Advocacy & Investigation
 icon: fa-gavel
+hero_svg: /assets/images/hero-advocacy-investigation.svg
 description: "Precision navigation through hostile institutions — documentation strategy, records research, FOIA, and a knowledgeable advocate in your corner."
 category: Services
 order: 1

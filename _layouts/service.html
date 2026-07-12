@@ -9,7 +9,6 @@ layout: default
   <a class="post-back" href="{{ '/services/' | relative_url }}">All Services</a>
   <div class="svc-hero-inner">
     <div class="svc-hero-text">
-      {% if page.icon %}<i class="fa-solid {{ page.icon }} svc-hero-icon"></i>{% endif %}
       <p class="post-category">{{ page.category }}</p>
       <h1 class="svc-title">{{ page.title }}</h1>
       <p class="svc-lede">{{ page.lede }}</p>
@@ -18,25 +17,26 @@ layout: default
         <span class="lp-tag">{{ tag }}</span>
         {% endfor %}
       </div>
+      <div class="svc-hero-cta">
+        <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
+          {{ page.cta_label | default: 'Get in Touch' }}
+        </a>
+        {% if page.price %}
+        <p class="svc-price">{{ page.price }}</p>
+        {% endif %}
+      </div>
     </div>
-    <div class="svc-hero-cta">
-      <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
-        {{ page.cta_label | default: 'Get in Touch' }}
-      </a>
-      {% if page.price %}
-      <p class="svc-price">{{ page.price }}</p>
+
+    <!-- Right column: hand-crafted SVG art (falls back to Font Awesome icon) -->
+    <div class="svc-hero-art">
+      {% if page.hero_svg %}
+      <img src="{{ page.hero_svg | relative_url }}" alt="" class="svc-hero-svg" aria-hidden="true" />
+      {% elsif page.icon %}
+      <i class="fa-solid {{ page.icon }} svc-hero-icon" aria-hidden="true"></i>
       {% endif %}
     </div>
   </div>
 
-  <!-- Right column: portrait -->
-  {% if page.headshot %}
-  <div class="hero-portrait">
-    <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
-  </div>
-  {% endif %}
-
-  <!-- Outside the grid columns, centered at the bottom -->
   <div class="scroll-hint">
     <div class="scroll-line"></div><span>Scroll</span>
   </div>
