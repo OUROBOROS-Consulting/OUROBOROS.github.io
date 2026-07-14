@@ -55,6 +55,11 @@ policies:
   - item: "Retainer discount: 10% off 20+ hours booked upfront"
   - item: "Survivor sliding scale: Available upon request — no one turned away for inability to pay"
   - item: "Response time: Within 48 hours"
+rate_principle: >
+  This page mixes sliding-scale advocacy with paid research work. Advocacy sessions
+  are set by your circumstances, and no one is turned away for inability to pay. The
+  paid research and analysis tiers fund that access. We set every figure together
+  before anything begins.
 pricing:
   - name: Initial Consultation
     rate: Free (45 min)

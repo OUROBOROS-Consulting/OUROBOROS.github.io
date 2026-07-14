@@ -1,6 +1,7 @@
 ---
 title: Client Intake
 layout: default
+noindex: true
 ---
 
 <div class="intake-wrapper">
@@ -555,7 +556,12 @@ layout: default
     align-items: start;
     gap: 1.5rem;
     padding: 2.5rem 3rem;
-    background: var(--bg2);
+    background-image:
+      linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
+      url('{{ "/assets/images/Marble.png" | relative_url }}');
+    background-size: cover, 520px 520px;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
     border: 1px solid var(--border);
     border-bottom: none;
     position: relative;
@@ -575,7 +581,7 @@ layout: default
   }
 
   .intake-masthead-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', Georgia, serif;
     font-size: clamp(1.4rem, 3vw, 2rem);
     font-weight: 600;
     color: var(--text);
@@ -595,7 +601,7 @@ layout: default
   }
 
   .intake-masthead-name {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', Georgia, serif;
     font-size: 0.95rem;
     color: var(--text);
   }
@@ -615,7 +621,7 @@ layout: default
 
   /* ── Form body ── */
   .intake-body {
-    background: var(--bg2);
+    background-color: var(--bg2);
     border: 1px solid var(--border);
     border-top: none;
   }
@@ -695,7 +701,7 @@ layout: default
   }
 
   .service-card-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', Georgia, serif;
     font-size: 0.95rem;
     color: var(--text);
     line-height: 1.2;
@@ -739,7 +745,7 @@ layout: default
   }
 
   .intake-section-title {
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', Georgia, serif;
     font-size: 1.1rem;
     font-weight: 400;
     color: var(--text);
@@ -911,7 +917,7 @@ layout: default
     height: 44px;
     background: transparent;
     padding: 0 0.3rem;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Lora', Georgia, serif;
     font-size: 1rem;
     color: var(--text);
     width: 100%;

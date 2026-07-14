@@ -93,13 +93,24 @@
 // #0D0D0D fallback. Site-owned because the raster lives in this repo.
 .work-header,
 .testimonials-header,
-.about-header {
+.about-header,
+.svc-body--banded .svc-section-label,
+.psa-section-header,
+#cta {
   background-image:
     linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
     url("../images/Marble.png");
   background-size: cover, 520px 520px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
+}
+
+// ── Intake form: card-surface texture ─────────────────────────────────────
+// The intake body is a large card surface. Layer the design system's standard
+// scallop over its flat --bg2 (set as background-color inline, so this
+// background-image composes rather than conflicts) to match the site's cards.
+.intake-body {
+  @include scallop-standard;
 }
 
 // ── Hero background pattern ───────────────────────────────────────────────

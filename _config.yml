@@ -4,6 +4,7 @@ contact_url: /intake
 tutoring_url: https://www.wyzant.com/refer/tutor/86925781/?utm_source=TREF&utm_campaign=iphone&utm_content=tutorapp&utm_medium=share
 github_url: https://github.com/OUROBOROS-Consulting
 linkedin_url: https://www.linkedin.com/in/apostolos-stamenos
+substack_url: https://ouroborosconsult.substack.com
 url: "https://ouroborosconsulting.org"
 
 collections:
@@ -46,10 +47,6 @@ markdown: kramdown
 sass:
   load_paths:
     - node_modules
-#plugins:
-#  - jekyll-avatar
-#  - jekyll-redirect-from
-#  - jekyll-seo-tag
-#  - jekyll-coffeescript
-#  - jekyll-sitemap
-#  - jekyll-octicons
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap

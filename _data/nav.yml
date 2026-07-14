@@ -39,11 +39,3 @@
       url: /case-studies/
     - title: Mission
       url: /mission
-
-- title: Work
-  url: /case-studies/
-  active_paths:
-    - /work/
-
-- title: Projects
-  url: /projects/

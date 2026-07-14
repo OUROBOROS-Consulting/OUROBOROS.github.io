@@ -13,8 +13,10 @@
       <!-- Search — input expands leftward, overlaying the nav bar. Input is a
            sibling of .nav-card (not nested inside it) so the card's chamfer
            clip-path doesn't clip the input as it grows past the card's edge. -->
-      <form id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap" action="/search/" method="get" role="search">
-        <input class="nav-search__input" type="search" name="q" aria-label="Search site" placeholder="Search…" autocomplete="off">
+      <form id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap" action="/search/" method="get"
+        role="search">
+        <input class="nav-search__input" type="search" name="q" aria-label="Search site" placeholder="Search…"
+          autocomplete="off">
         <div class="nav-card">
           <div class="nav-card__interior">
             <button type="submit" class="nav-search__submit" aria-label="Search site">
@@ -23,19 +25,6 @@
           </div>
         </div>
       </form>
-
-      <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
-      <div class="nav-dropdown nav-button">
-        <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
-          aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
-          <div class="nav-card">
-            <div class="nav-card__interior">
-              <i class="fas fa-door-open" aria-hidden="true"></i>
-            </div>
-          </div>
-          <span class="nav-btn-label">Exit</span>
-        </a>
-      </div>
 
       <!-- CMD/CTRL -->
       {% comment %}
@@ -76,8 +65,22 @@
       </div>
     </div>
 
+    <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
+    <div class="nav-dropdown nav-button">
+      <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
+        aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
+        <div class="nav-card">
+          <div class="nav-card__interior">
+            <i class="fas fa-door-open" aria-hidden="true"></i>
+          </div>
+        </div>
+        <span class="nav-btn-label">Exit</span>
+      </a>
+    </div>
+
     <!-- Mobile menu toggle — only visible on small screens -->
-    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-secondary-menu">
+    <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false"
+      aria-controls="nav-secondary-menu">
       <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
 

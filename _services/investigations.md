@@ -40,12 +40,26 @@ policies:
 pricing:
   - name: Records & OSINT Research
     rate: $150–$250/hr
+    notes: >
+      Open-source and public-records investigation for attorneys, journalists, and
+      organizations. Rate reflects the evidentiary standard the work is held to and
+      the scope of sourcing required.
   - name: Analysis & Written Reports
     rate: $175–$275/hr
+    notes: >
+      Findings synthesized into a sourced, attorney-ready report. Priced above
+      case-facing advocacy work because the output is built to withstand adversarial
+      scrutiny and formal proceedings.
   - name: Litigation Support Retainer
     rate: Contact me
+    notes: >
+      Ongoing support through active litigation. Priority turnaround and continuity
+      across the life of the case, quoted to scope.
   - name: Flat-Rate Scoped Investigations
     rate: Contact me
+    notes: >
+      A well-defined question with a clear boundary can be quoted as a fixed price,
+      agreed before work begins. No open meter.
 ---
 
 *Navigating this as a survivor of abuse or institutional betrayal? Start with [Advocacy & Investigation](/services/advocacy-investigation/) instead.*

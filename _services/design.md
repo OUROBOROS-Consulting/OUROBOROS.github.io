@@ -41,8 +41,14 @@ policies:
 pricing:
   - name: Brand & Growth Advisory
     rate: $100–$175/hr
+    notes: >
+      Strategy, positioning, and growth planning. Discovery and recommendations
+      without a build commitment.
   - name: Design & Build
     rate: $125–$200/hr
+    notes: >
+      Identity, website, and asset production. Rate scales with the depth of the
+      build and the number of surfaces involved.
   - name: Flat-Rate Site Packages
     rate: Contact me
     notes: Identity + site bundles quoted as a fixed price.

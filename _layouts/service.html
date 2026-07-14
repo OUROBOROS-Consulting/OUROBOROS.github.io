@@ -144,6 +144,7 @@ layout: default
       <p>Pricing</p>
     </div>
     <div class="svc-section-content">
+      <p class="svc-rate-principle">{{ page.rate_principle | default: "Rates run on a subsidy model. Commercial engagements fund sliding-scale and pro bono work for survivors and whistleblowers. No one is turned away for inability to pay. Ranges reflect the complexity and scope of the work, and we set the figure together before anything begins." }}</p>
       {% for tier in page.pricing %}
       <div class="svc-pricing-tier">
         <div class="card--formula">
@@ -164,7 +165,7 @@ layout: default
   {% endif %}
 
   <!-- How to get started -->
-  <section class="svc-section svc-section--cta">
+  <!-- <section class="svc-section svc-section--cta">
     <div class="svc-section-label">
       <p>Get Started</p>
     </div>
@@ -175,7 +176,7 @@ layout: default
         {{ page.cta_label | default: 'Get in Touch' }}
       </a>
     </div>
-  </section>
+  </section> -->
 </div>
 
 <script>

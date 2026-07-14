@@ -145,10 +145,12 @@ layout: default
 
   <div class="testimonials-grid">
     {% assign sorted_services = site.services | sort: "order" %}
-    {% for service in sorted_services limit: 3 %}
+    {% for service in sorted_services limit: 4 %}
     <div class="card--formula">
       <div class="card--formula__interior">
-        {% if service.icon %}
+        {% if service.hero_svg %}
+        <div class="svc-card-icon"><img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true"></div>
+        {% elsif service.icon %}
         <div class="svc-card-icon"><i class="fa-solid {{ service.icon }}"></i></div>
         {% endif %}
         <div class="svc-card-body">
@@ -177,7 +179,7 @@ layout: default
 
   <div class="testimonials-grid">
     {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
-    {% for case in sorted_cases limit: 3 %}
+    {% for case in sorted_cases limit: 4 %}
     <div class="card--formula">
       <div class="card--formula__interior">
         <p class="card-tag">{{ case.tag }}</p>
@@ -187,49 +189,5 @@ layout: default
       </div>
     </div>
     {% endfor %}
-  </div>
-</section>
-
-<!-- ── Values ─────────────────────────────────────────────────────────────── -->
-<section id="values">
-  <div class="testimonials-header">
-    <div>
-      <p class="section-label">What I Live By</p>
-      <h2 class="testimonials-heading">Values</h2>
-    </div>
-  </div>
-
-  <div class="values-grid">
-    {% for val in site.data.values %}
-    <div class="values-card">
-      <div class="values-card__inner">
-        <div class="values-card__front">
-          <div class="values-card__surface">
-            <i class="{{ val.icon }} values-card__icon"></i>
-            <span class="values-card__name">{{ val.title | markdownify }}</span>
-          </div>
-        </div>
-        <div class="values-card__back">
-          <div class="values-card__surface">
-            <p class="values-card__desc">{{ val.description | markdownify }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
-
-<!-- ── Closing CTA ────────────────────────────────────────────────────────── -->
-<section id="cta">
-  <div class="about-header">
-    <p class="section-label">Ready to Start</p>
-    <h2 class="about-heading">{{ page.cta_body | default: "Reach out with a brief description of what you're working on and your availability." }}</h2>
-  </div>
-  <div class="hero-cta">
-    <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">{{ page.cta_label | default: 'Book a Free Consultation' }}</a>
-    {% if page.cta2_label %}
-    <a href="{{ page.cta2_url | relative_url }}" class="btn btn--ghost">{{ page.cta2_label }}</a>
-    {% endif %}
   </div>
 </section>
