@@ -85,6 +85,7 @@
   background-size: cover, 620px 620px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
+  border: 2px solid var(--gold-border);
 }
 
 // ── Navbars: marble texture (replaces the scallop / flat fill) ────────────
@@ -101,6 +102,7 @@ nav.nav-menu,
   background-size: cover, 380px 380px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
+  border: 2px solid var(--gold-border);
 }
 
 // ── Sidebar offset ────────────────────────────────────────────────────────
@@ -134,6 +136,7 @@ body {
   background-size: cover, 520px 520px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
+  border: 2px solid var(--gold-border);
 }
 
 // ── Intake form: card-surface texture ─────────────────────────────────────

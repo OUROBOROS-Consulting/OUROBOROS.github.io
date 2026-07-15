@@ -12,7 +12,7 @@ lede: >
   verification, litigation support, and timeline reconstruction.
 tags: [OSINT, Public Records, Due Diligence, Background Research, Litigation Support, Timeline Analysis]
 cta_label: Book a Scoping Call
-cta_body: Scoping calls are always free — we define the question, the sources, and the deliverable before any work begins. Every engagement starts with a conflict check. I respond within 48 hours.
+cta_body: Scoping calls are always free — we define the question, the sources, and the deliverable before any work begins. Every engagement starts with a conflict check. I respond within 72 hours.
 who: >
   Attorneys, journalists, nonprofits, and small businesses that need
   investigation capacity — vetting a counterparty, supporting litigation,
@@ -36,7 +36,7 @@ policies:
   - item: "No investigations targeting survivors, or serving stalking or harassment purposes — engagements are screened for misuse"
   - item: "Conflict check before every engagement"
   - item: "Findings reported as sourced facts, not conclusions for hire"
-  - item: "Response time: Within 48 hours"
+  - item: "Response time: Within 72 hours"
 pricing:
   - name: Records & OSINT Research
     rate: $150–$250/hr

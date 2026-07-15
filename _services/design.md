@@ -12,7 +12,7 @@ lede: >
   One project ladder: identity, then site, then growth.
 tags: [Brand Strategy, Visual Identity, Graphic Design, Web Design, Web Development, Accessibility, Design Systems, SCSS, Typography, Content Strategy]
 cta_label: Book a Discovery Call
-cta_body: Discovery calls are free (20 minutes). Tell me where your public presence stands and where you want it to go — I respond within 48 hours.
+cta_body: Discovery calls are free (20 minutes). Tell me where your public presence stands and where you want it to go — I respond within 72 hours.
 who: >
   Small organizations, independent practitioners, and nonprofits that need
   a credible public presence — a coherent identity, a site that loads fast
@@ -37,7 +37,7 @@ policies:
   - item: "Sites built accessible by default — WCAG conformance is included, not an add-on"
   - item: "You own everything: source files, code, accounts, documentation"
   - item: "Nonprofits, students & survivors: Reduced and sliding-scale rates available — ask"
-  - item: "Response time: Within 48 hours"
+  - item: "Response time: Within 72 hours"
 pricing:
   - name: Brand & Growth Advisory
     rate: $100–$175/hr

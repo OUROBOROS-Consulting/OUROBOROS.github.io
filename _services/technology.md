@@ -10,9 +10,9 @@ lede: >
   The right technology, precisely applied — with AI as a force multiplier when it helps, and honest advice when it doesn't.
   I build bespoke solutions for real problems: from agentic Claude workflows to Apple ecosystem overhauls,
   from FedRAMP-grade automation to a folder structure you'll actually stick to.
-tags: [Apple Ecosystem, Agentic AI, Claude, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python, Workflow Design]
+tags: [Apple Ecosystem, Agentic AI, Claude Integration, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python, Workflow Design]
 cta_label: Describe Your Problem
-cta_body: Reach out with a brief description of what you're working on. Discovery calls are always free — I'll follow up within 48 hours.
+cta_body: Reach out with a brief description of what you're working on. Discovery calls are always free — I'll follow up within 72 hours.
 who: >
   Individuals, small organizations, and startups that need robust technical solutions without the overhead of a full engineering team.
   I help you figure out what's actually slowing you down, then build the right solution — whether that's an AI workflow, a custom automation, a better records system, or just the right tool you didn't know existed.
@@ -34,7 +34,7 @@ policies:
   - item: "Prepaid discount: 10% off for 10+ hours booked upfront"
   - item: "Nonprofits, students & survivors: Reduced and sliding scale rates available — ask"
   - item: "AI projects include a post-delivery audit (no extra charge)"
-  - item: "Response time: Within 48 hours"
+  - item: "Response time: Within 72 hours"
 specializations:
   - Agentic workflow design (Claude Code, multi-turn systems, automation pipelines)
   - Human-AI collaboration architecture
@@ -51,21 +51,21 @@ specializations:
   - Systems design (data tooling, automations, workflow architecture)
 pricing:
   - name: Technology Advisory
-    rate: $100–$175/hr
+    rate: $150–$200/hr
     notes: >
       Discovery, recommendations, audits, and planning for non-AI or general tech work. Right for figuring out what to build,
       what to fix, or whether a problem needs a technical solution at all.
   - name: AI Strategy & Advisory
-    rate: $175–$275/hr
+    rate: $225–$325/hr
     notes: >
       For scoping and designing AI workflows. Includes audit, discovery, workflow design, and strategic recommendations.
       Not for implementation — for figuring out what to build and how.
   - name: Technology Implementation
-    rate: $125–$200/hr
+    rate: $150–$225/hr
     notes: >
       Build it. Covers setup, configuration, automation, development, and integration work. Rate scales with technical complexity.
   - name: AI Integration & Build
-    rate: $200–$350/hr
+    rate: $250–$375/hr
     notes: >
       Build and ship an agentic system. Covers prompt engineering, integration with existing tools, testing, and documentation.
       Rate scales with complexity and novelty of the problem.

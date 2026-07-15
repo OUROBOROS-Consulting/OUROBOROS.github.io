@@ -32,6 +32,11 @@ banner: false
     {% assign sorted_services = site.services | sort: "order" %}
     {% for service in sorted_services %}
     <a href="{{ service.url | relative_url }}" class="related-card">
+      {% if service.hero_svg %}
+      <div class="rc-icon"><img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true"></div>
+      {% elsif service.icon %}
+      <div class="rc-icon"><i class="fa-solid {{ service.icon }}" aria-hidden="true"></i></div>
+      {% endif %}
       <p class="rc-tag">{{ service.category | default: 'Services' }}</p>
       <h2 class="rc-title">{{ service.title }}</h2>
       {% if service.lede %}<p class="card-desc">{{ service.lede }}</p>{% endif %}

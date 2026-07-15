@@ -13,7 +13,7 @@ lede: >
 tags: [Institutional Navigation, Documentation Strategy, Coercive Control, Survivor Support, Public Records, FOIA, Digital Evidence]
 price: Sliding scale · Free consultations
 cta_label: Book a Free Consultation
-cta_body: First consultation is always free. Send a brief description of your situation — all inquiries are confidential. I respond within 48 hours.
+cta_body: First consultation is always free. Send a brief description of your situation — all inquiries are confidential. I respond within 72 hours.
 who: >
   Survivors navigating hostile or unresponsive institutions — sexual assault, abuse, intimate partner violence,
   institutional betrayal, workplace misconduct, academic retaliation, coercive control, and trafficking.
@@ -54,7 +54,7 @@ policies:
   - item: "Travel surcharge: +$25/hr for in-person outside Minneapolis metro"
   - item: "Retainer discount: 10% off 20+ hours booked upfront"
   - item: "Survivor sliding scale: Available upon request — no one turned away for inability to pay"
-  - item: "Response time: Within 48 hours"
+  - item: "Response time: Within 72 hours"
 rate_principle: >
   This page mixes sliding-scale advocacy with paid research work. Advocacy sessions
   are set by your circumstances, and no one is turned away for inability to pay. The
