@@ -25,7 +25,7 @@ noindex: true
   <!-- Formspree integration -->
   <div data-fs-success
     style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid var(--gold); color: var(--gold);">
-    <strong>Thank you.</strong> I'll follow up within 48 hours.
+    <strong>Thank you.</strong> I'll follow up within 72 hours.
   </div>
   <div data-fs-error
     style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid #c94c4c; color: #c94c4c;">
@@ -37,8 +37,12 @@ noindex: true
     <!-- CONFIDENTIAL BANNER -->
     <div class="intake-banner">
       <p><strong>Confidentiality Notice:</strong> This form is held in strict confidence. Information collected here is
-        used solely to prepare for your consultation. It will never be shared without your explicit written consent.</p>
+        used solely to prepare for your consultation and is delivered to me through Formspree, the form processor. It
+        will never be shared beyond that without your explicit written consent.</p>
       <p><strong>Skip anything you're not ready to share</strong> — we can cover it together.</p>
+      <p><strong>Browsing safety:</strong> The Quick exit button (or pressing Escape twice) leaves this site
+        immediately and clears what it stored. If someone may monitor this device, use a safer one — no website can
+        erase your browser history for you.</p>
     </div>
 
     <!-- SECTION 01: SERVICE TYPE -->
@@ -92,8 +96,8 @@ noindex: true
             If you are in immediate danger, contact emergency services first. These questions ensure I reach you safely.
           </div>
           <div class="field-row col-2">
-            <div class="field-group">
-              <label>Do you currently feel physically safe?</label>
+            <fieldset class="field-group">
+              <legend>Do you currently feel physically safe?</legend>
               <div class="check-group">
                 <label class="check-item"><input type="radio" name="physical_safety" value="yes"> Yes</label>
                 <label class="check-item"><input type="radio" name="physical_safety" value="volatile"> Volatile but
@@ -103,9 +107,9 @@ noindex: true
                 <label class="check-item"><input type="radio" name="physical_safety" value="prefer_not"> Prefer not to
                   say</label>
               </div>
-            </div>
-            <div class="field-group">
-              <label>Is it safe to contact you at the information below?</label>
+            </fieldset>
+            <fieldset class="field-group">
+              <legend>Is it safe to contact you at the information below?</legend>
               <div class="check-group">
                 <label class="check-item"><input type="radio" name="safe_contact_method" value="yes"> Yes</label>
                 <label class="check-item"><input type="radio" name="safe_contact_method" value="email_only"> Email
@@ -115,7 +119,7 @@ noindex: true
                 <label class="check-item"><input type="radio" name="safe_contact_method" value="discuss"> Discuss in
                   consultation</label>
               </div>
-            </div>
+            </fieldset>
           </div>
         </div>
 
@@ -221,17 +225,17 @@ noindex: true
           </div>
         </div>
         <div class="field-row col-2">
-          <div class="field-group">
-            <label>Children in common?</label>
+          <fieldset class="field-group">
+            <legend>Children in common?</legend>
             <div class="check-group">
               <label class="check-item"><input type="radio" name="has_children" value="yes"> Yes</label>
               <label class="check-item"><input type="radio" name="has_children" value="no"> No</label>
               <label class="check-item"><input type="radio" name="has_children" value="prefer_not"> Prefer not to
                 say</label>
             </div>
-          </div>
-          <div class="field-group">
-            <label>Active legal proceedings?</label>
+          </fieldset>
+          <fieldset class="field-group">
+            <legend>Active legal proceedings?</legend>
             <div class="check-group">
               <label class="check-item"><input type="radio" name="legal_proceedings" value="ongoing"> Yes —
                 ongoing</label>
@@ -240,7 +244,7 @@ noindex: true
               <label class="check-item"><input type="radio" name="legal_proceedings" value="no"> No</label>
               <label class="check-item"><input type="radio" name="legal_proceedings" value="unsure"> Unsure</label>
             </div>
-          </div>
+          </fieldset>
         </div>
         <div class="field-row">
           <div class="field-group">
@@ -250,8 +254,8 @@ noindex: true
           </div>
         </div>
         <div class="field-row">
-          <div class="field-group">
-            <label>Protective or restraining orders?</label>
+          <fieldset class="field-group">
+            <legend>Protective or restraining orders?</legend>
             <div class="check-group">
               <label class="check-item"><input type="radio" name="protective_orders" value="have_against_them"> I have
                 one
@@ -264,7 +268,7 @@ noindex: true
               <label class="check-item"><input type="radio" name="protective_orders" value="prefer_not"> Prefer not to
                 say</label>
             </div>
-          </div>
+          </fieldset>
         </div>
         <div class="field-row col-2">
           <div class="field-group">
@@ -291,8 +295,8 @@ noindex: true
         </div>
 
         <div class="field-row col-2">
-          <div class="field-group">
-            <label>Devices involved or potentially compromised</label>
+          <fieldset class="field-group">
+            <legend>Devices involved or potentially compromised</legend>
             <div class="check-group">
               <label class="check-item"><input type="checkbox" name="devices" value="iphone_ipad"> iPhone / iPad</label>
               <label class="check-item"><input type="checkbox" name="devices" value="android"> Android</label>
@@ -304,10 +308,10 @@ noindex: true
               <label class="check-item"><input type="checkbox" name="devices" value="vehicle"> Vehicle</label>
               <label class="check-item"><input type="checkbox" name="devices" value="other"> Other</label>
             </div>
-          </div>
+          </fieldset>
 
-          <div class="field-group">
-            <label>Accounts of concern</label>
+          <fieldset class="field-group">
+            <legend>Accounts of concern</legend>
             <div class="check-group">
               <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="email"> Email</label>
               <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="social_media"> Social
@@ -322,22 +326,22 @@ noindex: true
                 family accounts</label>
               <label class="check-item"><input type="checkbox" name="accounts_of_concern" value="other"> Other</label>
             </div>
-          </div>
+          </fieldset>
         </div>
 
         <div class="field-row col-2">
-          <div class="field-group">
-            <label>Are any devices or accounts currently being monitored?</label>
+          <fieldset class="field-group">
+            <legend>Are any devices or accounts currently being monitored?</legend>
             <div class="check-group">
               <label class="check-item"><input type="radio" name="monitoring" value="confirmed"> Yes — confirmed</label>
               <label class="check-item"><input type="radio" name="monitoring" value="suspected"> Yes — suspected</label>
               <label class="check-item"><input type="radio" name="monitoring" value="no"> No</label>
               <label class="check-item"><input type="radio" name="monitoring" value="unsure"> Unsure</label>
             </div>
-          </div>
+          </fieldset>
 
-          <div class="field-group">
-            <label>Technical sophistication of the other party</label>
+          <fieldset class="field-group">
+            <legend>Technical sophistication of the other party</legend>
             <div class="check-group">
               <label class="check-item"><input type="radio" name="tech_sophistication" value="minimal"> Minimal</label>
               <label class="check-item"><input type="radio" name="tech_sophistication" value="moderate">
@@ -346,19 +350,19 @@ noindex: true
                 professional</label>
               <label class="check-item"><input type="radio" name="tech_sophistication" value="unknown"> Unknown</label>
             </div>
-          </div>
+          </fieldset>
         </div>
 
         <div class="field-row">
-          <div class="field-group">
-            <label>Digital records to preserve or present as evidence?</label>
+          <fieldset class="field-group">
+            <legend>Digital records to preserve or present as evidence?</legend>
             <div class="check-group">
               <label class="check-item"><input type="radio" name="has_digital_records" value="yes"> Yes</label>
               <label class="check-item"><input type="radio" name="has_digital_records" value="no"> No</label>
               <label class="check-item"><input type="radio" name="has_digital_records" value="unsure"> Unsure — need
                 guidance</label>
             </div>
-          </div>
+          </fieldset>
         </div>
         <div class="field-row">
           <div class="field-group">
@@ -392,8 +396,8 @@ noindex: true
           </div>
         </div>
         <div class="field-row">
-          <div class="field-group">
-            <label>Is this research for litigation or legal proceedings?</label>
+          <fieldset class="field-group">
+            <legend>Is this research for litigation or legal proceedings?</legend>
             <div class="check-group">
               <label class="check-item"><input type="radio" name="research_legal_context" value="yes_active"> Yes —
                 active
@@ -404,7 +408,7 @@ noindex: true
                 knowledge</label>
               <label class="check-item"><input type="radio" name="research_legal_context" value="other"> Other</label>
             </div>
-          </div>
+          </fieldset>
         </div>
       </div>
 
@@ -439,8 +443,8 @@ noindex: true
         </div>
 
         <div class="field-row">
-          <div class="field-group">
-            <label>Type of engagement needed</label>
+          <fieldset class="field-group">
+            <legend>Type of engagement needed</legend>
             <div class="check-group">
               <label class="check-item"><input type="checkbox" name="tech_engagement" value="architecture"> Architecture
                 /
@@ -455,7 +459,7 @@ noindex: true
                 strategy</label>
               <label class="check-item"><input type="checkbox" name="tech_engagement" value="other"> Other</label>
             </div>
-          </div>
+          </fieldset>
         </div>
       </div>
 
@@ -507,7 +511,7 @@ noindex: true
 
       <!-- SUBMIT -->
       <div class="intake-submit">
-        <p class="intake-submit-note">I'll follow up within 48 hours.</p>
+        <p class="intake-submit-note">I'll follow up within 72 hours.</p>
         <button type="submit" class="btn" data-fs-submit-btn>Submit Intake</button>
         <button type="button" class="btn" onclick="window.print()">Print / Save as PDF</button>
       </div>
@@ -546,7 +550,8 @@ noindex: true
   window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
   formspree('initForm', { formElement: '#intake-form', formId: 'xykbrlgb' });
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+<!-- Pinned local copy of @formspree/ajax@1 — no unpkg request -->
+<script src="{{ '/assets/js/formspree-ajax.min.js' | relative_url }}" defer></script>
 
 <style>
   /* ── Intake wrapper ── */
@@ -696,6 +701,12 @@ noindex: true
     background: rgba(201, 168, 76, 0.04);
   }
 
+  /* The radio itself is visually hidden — surface keyboard focus on the card */
+  .service-card input:focus-visible+.service-card-inner {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
   .service-card-icon {
     font-size: 1.3rem;
     color: var(--gold);
@@ -810,6 +821,22 @@ noindex: true
     text-transform: uppercase;
   }
 
+  /* Fieldsets group each radio/checkbox question with its options for
+     assistive tech; render them exactly like the plain label rows. */
+  .intake-body fieldset {
+    border: none;
+    min-width: 0;
+  }
+
+  .intake-body legend {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
   /* ── Inputs ── */
   .intake-body input[type="text"],
   .intake-body input[type="email"],
@@ -825,7 +852,6 @@ noindex: true
     background: var(--bg3);
     border: 1px solid var(--border);
     padding: 0.6rem 0.9rem;
-    outline: none;
     transition: border-color 0.2s;
     -webkit-appearance: none;
   }

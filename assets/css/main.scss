@@ -7,7 +7,7 @@
 // Always-visible escape hatch for survivors. Double-tap Escape also triggers.
 .safety-exit {
   position: fixed;
-  top: 1rem;
+  bottom: 1rem;
   right: 1rem;
   z-index: 9999;
   display: inline-flex;
@@ -85,6 +85,37 @@
   background-size: cover, 620px 620px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
+}
+
+// ── Navbars: marble texture (replaces the scallop / flat fill) ────────────
+// Both the top primary bar and the left section rail get the same black-marble
+// treatment as the section headers — a dark scrim over Marble.png so the
+// veining reads subtly and nav content stays legible. Overrides the design
+// system's scallop pattern (top bar) and flat translucent fill (rail).
+// Site-owned because the raster lives in this repo's assets/images.
+nav.nav-menu,
+.rail {
+  background-image:
+    linear-gradient(rgba(18, 18, 18, 0.88), rgba(10, 10, 10, 0.93)),
+    url("../images/Marble.png");
+  background-size: cover, 380px 380px;
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+}
+
+// ── Sidebar offset ────────────────────────────────────────────────────────
+// Reserve the collapsed rail's width so page content is never underlapped by
+// the fixed rail. Intentionally overrides the rail partial's "pure overlay,
+// no offset" assumption. Fixed elements (nav-shell, rail, #safety-exit) ignore
+// body padding, so only flow content (main, cta, footer) shifts right; the
+// rail sits in the reserved strip. Dropped on mobile, where the rail is an
+// off-canvas drawer rather than a persistent column.
+body {
+  padding-left: var(--rail-w);
+
+  @media (max-width: 768px) {
+    padding-left: 0;
+  }
 }
 
 // ── Section headers: black marble ─────────────────────────────────────────

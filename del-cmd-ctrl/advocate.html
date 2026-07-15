@@ -4,8 +4,8 @@ title: "U.S. Law Map — CMD/CTRL Advocate Tool"
 permalink: /del-cmd-ctrl/advocate/
 noindex: true
 scripts:
-  - "https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"
-  - "https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"
+  - "/assets/vendor/d3/d3.min.js"
+  - "/assets/vendor/d3/topojson-client.min.js"
 ---
 
 <div class="db-layout db-layout--sidebar">
@@ -112,6 +112,6 @@ scripts:
   </main>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+<script src="{{ '/assets/vendor/d3/d3.min.js' | relative_url }}"></script>
+<script src="{{ '/assets/vendor/d3/topojson-client.min.js' | relative_url }}"></script>
 <script src="/assets/js/dashboard/advocate.js"></script>

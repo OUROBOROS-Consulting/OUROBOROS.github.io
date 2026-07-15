@@ -62,22 +62,12 @@
       </div>
     </div>
 
-    <!-- Quick-exit button: redirects to a neutral page and purges history/state. Always visible for survivors needing to leave fast. Keyboard shortcut: ESC x2. -->
-    <div class="nav-dropdown nav-button">
-      <a href="https://www.google.com/search?q=weather+today" id="safety-exit"
-        aria-label="Quick exit to a neutral page (double-tap Escape)" rel="noopener noreferrer">
-        <div class="nav-card">
-          <div class="nav-card__interior">
-            <i class="fas fa-door-open" aria-hidden="true"></i>
-          </div>
-        </div>
-        <span class="nav-btn-label">Exit</span>
-      </a>
-    </div>
+    <!-- Quick exit lives in the fixed red button (see default.html #safety-exit),
+         so it is not duplicated here. Keyboard shortcut: ESC x2. -->
 
     <!-- Mobile menu toggle — only visible on small screens -->
     <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false"
-      aria-controls="nav-secondary-menu">
+      aria-controls="rail">
       <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
 

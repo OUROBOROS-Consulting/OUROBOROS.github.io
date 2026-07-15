@@ -1,0 +1,28 @@
+{% assign pu = page.url %}
+<aside id="rail" class="rail" aria-label="Section navigation">
+  <nav class="rail-nav">
+    {% for item in site.data.nav %}
+    {% assign is_active = false %}
+    {% if item.url == "/" %}
+      {% if pu == "/" %}{% assign is_active = true %}{% endif %}
+    {% else %}
+      {% if pu contains item.url %}{% assign is_active = true %}{% endif %}
+      {% for ap in item.active_paths %}{% if pu contains ap %}{% assign is_active = true %}{% endif %}{% endfor %}
+    {% endif %}
+    <div class="rail-group{% if is_active %} rail-group--active{% endif %}">
+      <a class="rail-item" href="{{ item.url | relative_url }}"{% if is_active %} aria-current="page"{% endif %}>
+        <span class="rail-ic"><i class="fas {{ item.icon }}" aria-hidden="true"></i></span>
+        <span class="rail-tx">{{ item.title }}</span>
+      </a>
+      {% if item.children %}
+      <div class="rail-sub">
+        {% for child in item.children %}
+        <a class="rail-subitem{% if pu contains child.url %} rail-subitem--active{% endif %}"
+           href="{{ child.url | relative_url }}">{{ child.title }}</a>
+        {% endfor %}
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </nav>
+</aside>

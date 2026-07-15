@@ -55,47 +55,24 @@
 
     <link rel="icon" href="{{ '/assets/images/logo.svg' | relative_url }}" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-      rel="stylesheet" />
+    <!-- Self-hosted fonts — no third-party requests (see /assets/fonts/LICENSE.md) -->
+    <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}" />
     {% if page.noindex %}<meta name="robots" content="noindex,nofollow" />{% endif %}
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     {% if page.layout == 'dashboard' %}<link rel="stylesheet" href="{{ '/assets/css/dashboard.css' | relative_url }}" />{% endif %}
     {% if page.extra_css %}<link rel="stylesheet" href="{{ '/assets/css/' | append: page.extra_css | append: '.css' | relative_url }}" />{% endif %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="{{ '/assets/vendor/fontawesome/css/all.min.css' | relative_url }}" />
   </head>
 
   {% assign _show_banner = false %}
   <body{% if _show_banner %} class="has-title-banner"{% elsif page.show_banner %} class="has-banner"{% endif %}>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <button id="safety-exit" class="safety-exit" aria-label="Quick exit — leave this site immediately"
+      title="Leaves this site immediately and clears its stored data. Pressing Escape twice does the same.">Quick
+      exit</button>
     {% if page.show_banner %}{% include banner.html %}{% endif %}
     <div class="nav-shell">
       {% include nav.html %}
-      {% assign pu = page.url %}
-      <nav id="nav-secondary-menu" class="nav-secondary" aria-label="Section navigation">
-        {% for item in site.data.nav %}
-        {% assign is_active = false %}
-        {% if pu contains item.url %}{% assign is_active = true %}{% endif %}
-        {% for ap in item.active_paths %}{% if pu contains ap %}{% assign is_active = true %}{% endif %}{% endfor %}
-        <div class="nav-sec-dropdown">
-          <a class="nav-sec-card{% if is_active %} active{% endif %}"
-             href="{{ item.url | relative_url }}">
-            <div class="nav-sec-item">
-              {{ item.title }}{% if item.children %} <i class="fas fa-chevron-down nav-sec-chevron" aria-hidden="true"></i>{% endif %}
-            </div>
-          </a>
-          {% if item.children %}
-          <div class="nav-sec-dropdown-menu">
-            {% for child in item.children %}
-            <a class="nav-sec-child-card{% if pu contains child.url %} active{% endif %}"
-               href="{{ child.url | relative_url }}">
-              <div class="nav-sec-child-item">{{ child.title }}</div>
-            </a>
-            {% endfor %}
-          </div>
-          {% endif %}
-        </div>
-        {% endfor %}
-      </nav>
       {% if _show_banner %}
       <div class="page-title-banner">
         {% if page.eyebrow %}<span class="page-title-banner__eyebrow">{{ page.eyebrow }}</span>{% endif %}
@@ -103,7 +80,10 @@
       </div>
       {% endif %}
     </div>
-    {{ content }}
+    {% include sidebar.html %}
+    <main id="main">
+      {{ content }}
+    </main>
     <!-- Closing CTA -->
     {% include cta.html %}
     {% include footer.html %}

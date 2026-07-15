@@ -293,7 +293,7 @@
     try {
       const [dataRes, topoRes] = await Promise.all([
         fetch('/assets/js/dashboard/data.json').then(r => r.json()),
-        fetch('https://cdn.jsdelivr.net/npm/us-atlas@3/states-10m.json').then(r => r.json())
+        fetch('/assets/vendor/d3/us-states-10m.json').then(r => r.json())
       ]);
 
       appData = dataRes;
