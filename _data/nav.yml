@@ -32,7 +32,10 @@
   active_paths:
     - /mission
     - /framework
+    - /team
   children:
+    - title: Team
+      url: /team/
     - title: Framework
       url: /framework/
     - title: Case Studies

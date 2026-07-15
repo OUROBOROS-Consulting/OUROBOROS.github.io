@@ -1,0 +1,25 @@
+# ── Team ──────────────────────────────────────────────────────────────────────
+# One block per person. The /team/ page loops over this file, so adding a future
+# hire is a single block here — no HTML or CSS changes required.
+#
+# photo: 5:6 portrait recommended (hex frame crops to that ratio).
+# bio:   2 to 4 sentences.
+
+- name: Apostolos Stamenos
+  role: Founder & Principal
+  # PLACEHOLDER photo — swap for the new headshot when it arrives.
+  photo: /assets/images/AS.png
+  photo_alt: Apostolos Stamenos
+  credentials:
+    - Statistical research
+    - Federal IT
+    - Personality psychopathology
+  # BIO STUB — replace with approved copy.
+  bio: >
+    Founder of OUROBOROS Consulting. Background in statistical research,
+    federal information technology, and the study of personality psychopathology.
+    Builds technology, research, and advocacy for people failed by the institutions
+    meant to protect them.
+  links:
+    linkedin: "#"
+    contact: /intake/

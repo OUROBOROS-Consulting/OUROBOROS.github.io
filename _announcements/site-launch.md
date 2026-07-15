@@ -14,6 +14,6 @@ OUROBOROS Consulting is now online. This site serves as the central hub for the 
 - **Services** — bespoke engagements across technology consulting, research, and instruction
 - **Case Studies** — documented project outcomes and methodologies
 - **Resources** — public-access guides, PSAs, and reference materials
-- **Essays** — long-form writing on systems, cognition, and practice
+<!-- - **Essays** — long-form writing on systems, cognition, and practice -->
 
 More to come. Reach out via the [intake form](/intake) for inquiries.
