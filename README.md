@@ -21,15 +21,14 @@
 - `foundation.html` — dual-mode multi-section pages
   - **Mission mode**: hero → about → pull_quote → rich sections (bibtex, playlists, data)
   - **Service/prose mode**: markdown content + hex-portrait headshot + CTA
-- `essays.html`, `psa.html`, `blog.html`, `linkedin.html` — specialized reading layouts
+- `psa.html` — specialized reading layout
 
 **Collections** (`_config.yml`):
 
 - `_services/` → `/services/:slug/`
-- `_essays/` → `/essays/:slug/`
-- `_projects/`, `_case_studies/` → `/projects/:slug/`, `/work/:slug/`
+- `_case_studies/` → `/work/:slug/`
 - `_psas/` → `/work/psas/:slug/` (grouped by `section:` front matter)
-- `_resources/`, `_notes/`, `_linkedin/` → `/resources/:slug/`, `/notes/:slug/`, `/posts/:year/:slug/`
+- `_resources/` → `/resources/:slug/`
 
 </details>
 
@@ -76,7 +75,7 @@ Lora (serif), Inter (sans), JetBrains Mono (monospace) via Google Fonts + Font A
 - `_base.scss` — reset, tokens, texture, 404
 - `_typography.scss` — prose scale
 - `_buttons.scss`, `_nav.scss`, `_footer.scss` — components
-- `_cards.scss`, `_home.scss`, `_service.scss`, `_essay.scss`, `_linkedin.scss`, `_cv.scss`, `_timeline.scss` — layouts
+- `_cards.scss`, `_home.scss`, `_service.scss`, `_essay.scss`, `_cv.scss` — layouts
 
 </details>
 
@@ -89,7 +88,6 @@ Lora (serif), Inter (sans), JetBrains Mono (monospace) via Google Fonts + Font A
 
 - `_data/nav.yml` — navigation structure
 - `_data/values.yml`, `testimonials.yml` — home carousels
-- `_data/timeline.yml`, `projects.yml` — structured project data
 - `_data/tutorials.yml`, `reading.yml`, `listening.yml`, `playlists.yml` — personal pages
 - `_data/survival*.yml` — survival guide resources (crisis, legal, mental health, whistleblower)
 
@@ -104,10 +102,6 @@ Lora (serif), Inter (sans), JetBrains Mono (monospace) via Google Fonts + Font A
 
 - `nav.html` — hamburger + active link logic
 - `footer.html` — site footer
-- `timeline.html` — timeline component
-- `framed.html` — generic framed block
-- `campaign.html` — CTA section
-- `linkedinbadge.html` — LinkedIn embed
 
 **Dynamic scripts** (lazy-loaded):
 
