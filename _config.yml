@@ -28,7 +28,7 @@ collections:
     permalink: /:slug
 
 # build settings
-exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "package.json", "node_modules", "archive"]
+exclude: ["script", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "README.md", "CLAUDE.md", "package.json", "package-lock.json", "node_modules", "archive", "docs"]
 markdown: kramdown
 
 # SCSS processing

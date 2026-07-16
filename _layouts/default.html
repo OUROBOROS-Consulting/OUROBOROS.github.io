@@ -4,9 +4,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      {% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}
-    </title>
+    {% assign _title = "OUROBOROS Consulting — Technology, Research & Advocacy" %}
+    {% if page.title %}{% capture _title %}{{ page.title }} — {{ site.author }}{% endcapture %}{% endif %}
+    <title>{{ _title }}</title>
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
     {% assign _desc = page.lede | default: page.description | default: "Bespoke solutions where technology, rigorous
     research, and principled advocacy meet." %}
@@ -14,12 +15,13 @@
 
     <!-- Open Graph / social preview -->
     <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="OUROBOROS Consulting" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
-    <meta property="og:title"
-      content="{% if page.title %}{{ page.title }} — {{ site.author }}{% else %}{{ site.title }}{% endif %}" />
+    <meta property="og:title" content="{{ _title }}" />
     <meta property="og:description" content="{{ _desc | strip_html | truncate: 160 }}" />
-    <meta property="og:image" content="{{ '/assets/images/Social.png' | absolute_url }}" />
-    <meta name="twitter:card" content="summary" />
+    <meta property="og:image" content="{{ '/assets/images/Social-Preview.png' | absolute_url }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    {% feed_meta %}
     <meta name="keywords"
       content="institutional betrayal, institutional courage, coercive control, survivor advocacy, whistleblower support, AI safety, federal technology, biostatistics" />
 
