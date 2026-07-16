@@ -1,0 +1,488 @@
+---
+---
+  /* ── Intake wrapper ── */
+  .intake-wrapper {
+    max-width: 1500px;
+    margin: 6rem auto 0;
+    padding: 2rem 10vw 6rem;
+  }
+
+  /* ── Masthead ── */
+  .intake-masthead {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 1.5rem;
+    padding: 2.5rem 3rem;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
+    url('{{ "/assets/images/Marble.png" | relative_url }}');
+    background-size: cover, 520px 520px;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    border: 1px solid var(--border);
+    border-bottom: none;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .intake-masthead::after {
+    content: '';
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 30px solid rgba(201, 168, 76, 0.05);
+    pointer-events: none;
+  }
+
+  .intake-masthead-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.1;
+  }
+
+  .intake-masthead-subtitle {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+
+  .intake-masthead-meta {
+    text-align: right;
+  }
+
+  .intake-masthead-name {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--text);
+  }
+
+  .intake-masthead-contact {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--muted);
+    margin-top: 0.4rem;
+    line-height: 1.8;
+  }
+
+  .intake-masthead-rule {
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+
+  /* ── Form body ── */
+  .intake-body {
+    background-color: var(--bg2);
+    border: 1px solid var(--border);
+    border-top: none;
+  }
+
+  /* ── Confidential banner ── */
+  .intake-banner {
+    padding: 0.9rem 1.5rem;
+    border-left: 2px solid var(--gold);
+    background: var(--bg3);
+    font-size: 0.8rem;
+    color: var(--muted);
+    line-height: 1.7;
+
+    strong {
+      color: var(--gold);
+      font-weight: 500;
+    }
+  }
+
+  /* ── Sections ── */
+  .intake-section {
+    padding: 2.5rem 3rem 0;
+    animation: fadeUp 0.4s ease both;
+  }
+
+  .track-label {
+    color: var(--border);
+  }
+
+  /* ── Service type cards ── */
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.8rem;
+  }
+
+  .service-card {
+    cursor: pointer;
+    display: block;
+  }
+
+  .service-card input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .service-card-inner {
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    padding: 1.4rem 1.2rem;
+    transition: border-color 0.2s, background 0.2s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .service-card:hover .service-card-inner {
+    border-color: var(--gold-dim);
+  }
+
+  .service-card input:checked+.service-card-inner {
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.04);
+  }
+
+  /* The radio itself is visually hidden — surface keyboard focus on the card */
+  .service-card input:focus-visible+.service-card-inner {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
+
+  .service-card-icon {
+    font-size: 1.3rem;
+    color: var(--gold);
+    opacity: 0.7;
+  }
+
+  .service-card input:checked+.service-card-inner .service-card-icon {
+    opacity: 1;
+  }
+
+  .service-card-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 0.95rem;
+    color: var(--text);
+    line-height: 1.2;
+  }
+
+  .service-card-desc {
+    font-size: 0.72rem;
+    color: var(--muted);
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+  }
+
+  @media (max-width: 768px) {
+    .service-cards {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .service-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .intake-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding-bottom: 0.9rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.8rem;
+  }
+
+  .intake-section-number {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+  }
+
+  .intake-section-title {
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text);
+  }
+
+  .intake-divider {
+    height: 1px;
+    background: var(--border);
+    margin: 0 3rem;
+    opacity: 0.6;
+  }
+
+  /* ── Note boxes ── */
+  .intake-note {
+    background: var(--bg3);
+    border-left: 2px solid var(--border);
+    padding: 0.9rem 1.2rem;
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+  }
+
+  .intake-note.warning {
+    border-left-color: var(--gold);
+    color: var(--muted);
+  }
+
+  /* ── Field layout ── */
+  .field-row {
+    display: grid;
+    gap: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .field-row.col-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .field-row.col-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  /* ── Labels ── */
+  .intake-body label {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  /* Fieldsets group each radio/checkbox question with its options for
+     assistive tech; render them exactly like the plain label rows. */
+  .intake-body fieldset {
+    border: none;
+    min-width: 0;
+  }
+
+  .intake-body legend {
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: var(--muted);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+  }
+
+  /* ── Inputs ── */
+  .intake-body input[type="text"],
+  .intake-body input[type="email"],
+  .intake-body input[type="tel"],
+  .intake-body input[type="date"],
+  .intake-body select,
+  .intake-body textarea {
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 1.00rem;
+    color: var(--text);
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    padding: 0.6rem 0.9rem;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+  }
+
+  .intake-body input:focus,
+  .intake-body select:focus,
+  .intake-body textarea:focus {
+    border-color: var(--gold-dim);
+  }
+
+  .intake-body textarea {
+    resize: vertical;
+    min-height: 90px;
+    line-height: 1.7;
+  }
+
+  .intake-body select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7269' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.9rem center;
+    background-color: var(--bg3);
+    padding-right: 2.2rem;
+    cursor: pointer;
+    color: var(--text);
+  }
+
+  /* ── Checkbox / radio groups ── */
+  .check-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.3rem;
+  }
+
+  .check-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--border);
+    background: var(--bg3);
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    transition: border-color 0.2s, color 0.2s;
+    user-select: none;
+  }
+
+  .check-item:hover {
+    border-color: var(--gold-dim);
+    color: var(--text);
+  }
+
+  .check-item:has(input:checked) {
+    border-color: var(--gold);
+    color: var(--gold);
+  }
+
+  .check-item input[type="checkbox"],
+  .check-item input[type="radio"] {
+    width: 13px;
+    height: 13px;
+    accent-color: var(--gold);
+    cursor: pointer;
+    flex-shrink: 0;
+    border: none;
+    padding: 0;
+    background: none;
+    box-shadow: none;
+  }
+
+  .check-item input:focus {
+    box-shadow: none;
+  }
+
+  /* ── Signature block ── */
+  .sig-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 0.3rem;
+  }
+
+  .sig-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .sig-line {
+    border: none;
+    border-bottom: 1px solid var(--border);
+    height: 44px;
+    background: transparent;
+    padding: 0 0.3rem;
+    font-family: 'Lora', Georgia, serif;
+    font-size: 1rem;
+    color: var(--text);
+    width: 100%;
+    transition: border-color 0.2s;
+    outline: none;
+  }
+
+  .sig-line:focus {
+    border-color: var(--gold-dim);
+  }
+
+  /* ── Submit area ── */
+  .intake-submit {
+    padding: 2.5rem 3rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+  }
+
+  .intake-submit-note {
+    font-size: 0.78rem;
+    color: var(--muted);
+    max-width: 400px;
+    line-height: 1.6;
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold-dim);
+
+      &:hover {
+        border-color: var(--gold);
+      }
+    }
+  }
+
+  /* ── Doc footer ── */
+  .intake-doc-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  /* ── Mobile / tablet responsive ── */
+  @media (max-width: 768px) {
+
+    /* Halve the doubled horizontal padding (wrapper 10vw + section 3rem was
+       crushing field width on phones). */
+    .intake-wrapper {
+      padding: 2rem 5vw 4rem;
+    }
+
+    /* Masthead: stack title over meta instead of the cramped 1fr/auto row that
+       let the two columns visually collide. */
+    .intake-masthead {
+      grid-template-columns: 1fr;
+      padding: 1.8rem 1.4rem;
+    }
+
+    .intake-masthead-meta {
+      text-align: left;
+    }
+
+    .intake-section,
+    .intake-submit {
+      padding-left: 1.4rem;
+      padding-right: 1.4rem;
+    }
+
+    .intake-divider {
+      margin-left: 1.4rem;
+      margin-right: 1.4rem;
+    }
+
+    /* Two-up field pairs stack to one column so inputs get full width. */
+    .field-row.col-2,
+    .field-row.col-3 {
+      grid-template-columns: 1fr;
+    }
+
+    /* Doc footer: stack the two confidentiality lines instead of colliding. */
+    .intake-doc-footer {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35rem;
+    }
+  }
