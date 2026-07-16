@@ -24,7 +24,7 @@ about_heading: Technology and Advocacy for Survivors of Institutional Betrayal
 stats:
   years_experience: "4+"
   agencies: "5"
-  agencies_note: "HHS divisions & partner orgs"
+  agencies_note: "HHS Divisions Served (Federal Career)"
 
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 72 hours.
 ---

@@ -21,8 +21,8 @@
   text-transform: uppercase;
   text-decoration: none;
   color: #fff;
-  background: #8b1a1a;
-  border: 1px solid #c94a4a;
+  background: #4f0606;
+  border: 1px solid var(--gold-border);
   border-radius: 3px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: background 0.15s ease, transform 0.15s ease;
@@ -128,15 +128,50 @@ body {
 .testimonials-header,
 .about-header,
 .svc-body--banded .svc-section-label,
-.psa-section-header,
+#psa-section-header,
+footer,
+.disclaimer-bar {
+    background-image:
+      linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
+      url("../images/Marble.png");
+    background-size: cover, 720px 720px;
+    background-position: center, center;
+    background-repeat: no-repeat, repeat;
+    border: 2px solid var(--gold-border);
+  }
+
+// The disclaimer strip is subordinate to the footer directly above it: it takes
+// the marble fill but keeps a single gold top rule instead of the full 2px
+// frame, which would otherwise double up against the footer's bottom edge.
+.disclaimer-bar {
+  border: none;
+  border-top: 1.5px solid var(--gold-border);
+}
+
 #cta {
   background-image:
     linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
-    url("../images/Marble.png");
-  background-size: cover, 520px 520px;
+    url("../images/Chess-Abstract.png");
+  background-size: cover, 720px 720px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
   border: 2px solid var(--gold-border);
+}
+
+// Tuck the three home section-header bands under the sidebar rail so their
+// marble background emerges from behind the nav chrome rather than butting
+// against its right edge. body's padding-left reserves the rail's width for
+// flow content, so the package's -10vw bleed stops at the rail edge; pulling
+// left by an extra var(--rail-w) carries the band to the true viewport edge,
+// underlapping the semi-transparent rail. Desktop only — on mobile the rail is
+// an off-canvas drawer and body has no left padding, so the extra pull would
+// overflow. Border stays the bold 2px frame from the block above.
+@media (min-width: 769px) {
+  .work-header,
+  .testimonials-header,
+  .about-header {
+    margin-left: calc(-10vw - var(--rail-w));
+  }
 }
 
 // ── Intake form: card-surface texture ─────────────────────────────────────
