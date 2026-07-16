@@ -11,18 +11,6 @@ collections:
   services:
     output: true
     permalink: /services/:slug/
-  essays:
-    output: true
-    permalink: /essays/:slug/
-  projects:
-    output: true
-    permalink: /projects/:slug/
-  notes:
-    output: true
-    permalink: /notes/:slug/
-  linkedin:
-    output: true
-    permalink: /posts/:year/:slug/
   resources:
     output: true
     permalink: /resources/:slug/
