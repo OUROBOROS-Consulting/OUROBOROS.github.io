@@ -38,31 +38,6 @@ layout: default
   {% include toc.html %}
 </div>
 
-<div class="svc-body">
-  {% if page.who %}
-  <section class="svc-section">
-    <div class="svc-section-label">
-      <p>Who It's For</p>
-    </div>
-    <div class="svc-section-content">
-      {{ page.who | markdownify }}
-    </div>
-  </section>
-  {% endif %}
-
-  <section class="svc-section svc-section--cta">
-    <div class="svc-section-label">
-      <p>Get Started</p>
-    </div>
-    <div class="svc-section-content">
-      <p class="svc-cta-body">{{ page.cta_body | default: 'Reach out and we can find a time to talk through what you need.' }}</p>
-      <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
-        {{ page.cta_label | default: 'Get in Touch' }}
-      </a>
-    </div>
-  </section>
-</div>
-
 <script src="/assets/js/toc.js" defer></script>
 <script>
   const bar = document.getElementById('progress-bar');
