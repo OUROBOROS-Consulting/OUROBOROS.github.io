@@ -89,13 +89,15 @@
 }
 
 // ── Navbars: marble texture (replaces the scallop / flat fill) ────────────
-// Both the top primary bar and the left section rail get the same black-marble
-// treatment as the section headers — a dark scrim over Marble.png so the
-// veining reads subtly and nav content stays legible. Overrides the design
-// system's scallop pattern (top bar) and flat translucent fill (rail).
-// Site-owned because the raster lives in this repo's assets/images.
+// The top primary bar, the left section rail, and the right TOC panel all get
+// the same black-marble treatment as the section headers — a dark scrim over
+// Marble.png so the veining reads subtly and nav content stays legible.
+// Overrides the design system's scallop pattern (top bar) and flat
+// translucent fill (rail). Site-owned because the raster lives in this
+// repo's assets/images.
 nav.nav-menu,
-.rail {
+.rail,
+.page-toc {
   background-image:
     linear-gradient(rgba(18, 18, 18, 0.88), rgba(10, 10, 10, 0.93)),
     url("../images/Marble.png");
@@ -117,6 +119,18 @@ body {
 
   @media (max-width: 768px) {
     padding-left: 0;
+  }
+}
+
+// ── TOC offset ────────────────────────────────────────────────────────────
+// Mirror of the rail offset on the right: pages that render the fixed TOC
+// panel (foundation, mission) reserve its strip so flow content never slides
+// under it. :has() keeps TOC-less pages full-width; toc.js sets [hidden] when
+// a page has no headings, which also drops the reservation. Below 1100px the
+// design package hides the panel entirely, so no strip is reserved.
+@media (min-width: 1101px) {
+  body:has(#page-toc:not([hidden])) {
+    padding-right: var(--toc-w);
   }
 }
 

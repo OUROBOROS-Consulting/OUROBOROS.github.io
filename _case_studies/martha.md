@@ -21,6 +21,8 @@ about:
     facing a civil judgment exceeding $3 million, had been physically assaulted multiple
     times, and had been isolated from nearly everyone in her life. She had also, without
     knowing it, potentially broken the law while trying to help him. This is her case.
+    "Martha" is a pseudonym, and identifying details have been altered to protect
+    her privacy.
 
 pull_quote: >
   "There is no greater agony than bearing an untold story inside you."

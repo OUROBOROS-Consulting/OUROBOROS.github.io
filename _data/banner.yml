@@ -1,4 +1,4 @@
 visible: true
 type: announcement        # announcement | tagline | brand
 text: "Now accepting new clients for Q3 2026"
-url: "/contact"           # optional — omit to render as plain text
+url: "/intake"            # optional — omit to render as plain text

@@ -4,6 +4,7 @@ layout: default
 noindex: true
 sitemap: false
 extra_css: intake
+hide_cta: true
 ---
 
 <div class="intake-wrapper">
@@ -30,7 +31,7 @@ extra_css: intake
     <strong>Thank you.</strong> I'll follow up within 72 hours.
   </div>
   <div data-fs-error
-    style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid #c94c4c; color: #c94c4c;">
+    style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid #e06666; color: #e06666;">
     <strong>Error submitting form.</strong> Try again or email directly.
   </div>
 
@@ -134,6 +135,9 @@ extra_css: intake
             <label for="alias">Preferred Name / Alias</label>
             <input type="text" id="alias" name="preferred_name" placeholder="Name you go by">
           </div>
+        </div>
+        <div class="intake-note">
+          Provide at least one way to reach you — email or phone. Everything else in this section is optional.
         </div>
         <div class="field-row col-2">
           <div class="field-group">
@@ -530,9 +534,16 @@ extra_css: intake
 
 <!-- Service type branching -->
 <script>
+  // Service slugs (radio values) → track tokens used in data-track attributes
+  var SERVICE_TRACKS = {
+    'advocacy-investigation': 'survivor',
+    'investigations': 'investigative',
+    'technology': 'technical',
+    'design': 'studio'
+  };
   document.querySelectorAll('[name="service_type"]').forEach(function (radio) {
     radio.addEventListener('change', function () {
-      var track = this.value;
+      var track = SERVICE_TRACKS[this.value] || this.value;
       // Hide all track sections and blocks
       document.querySelectorAll('.track-section, .track-block').forEach(function (el) {
         el.style.display = 'none';
@@ -545,6 +556,19 @@ extra_css: intake
       });
     });
   });
+
+  // Require at least one contact method — email or phone
+  (function () {
+    var email = document.getElementById('email');
+    var phone = document.getElementById('phone');
+    function validateContact() {
+      var hasOne = email.value.trim() !== '' || phone.value.trim() !== '';
+      email.setCustomValidity(hasOne ? '' : 'Provide an email or a phone number so I can follow up.');
+    }
+    email.addEventListener('input', validateContact);
+    phone.addEventListener('input', validateContact);
+    validateContact();
+  })();
 </script>
 
 <!-- Formspree AJAX script -->

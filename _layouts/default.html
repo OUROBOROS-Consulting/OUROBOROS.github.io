@@ -86,8 +86,8 @@
     <main id="main">
       {{ content }}
     </main>
-    <!-- Closing CTA -->
-    {% include cta.html %}
+    <!-- Closing CTA — suppressed via hide_cta front matter (e.g. intake) -->
+    {% unless page.hide_cta %}{% include cta.html %}{% endunless %}
     {% include footer.html %}
     <script defer src="/assets/js/search.js"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>

@@ -68,6 +68,10 @@ function initCarousel(sectionId, autoAdvance) {
   if (autoAdvance) {
     section.addEventListener('mouseenter', () => clearInterval(timer));
     section.addEventListener('mouseleave', startTimer);
+    // Keyboard and touch users need the same pause affordance as hover
+    section.addEventListener('focusin', () => clearInterval(timer));
+    section.addEventListener('focusout', startTimer);
+    track.addEventListener('touchstart', () => clearInterval(timer), { passive: true });
   }
 
   let touchStartX = 0;
