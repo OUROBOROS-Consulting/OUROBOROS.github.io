@@ -400,11 +400,12 @@
     color: var(--text);
     width: 100%;
     transition: border-color 0.2s;
-    outline: none;
   }
 
-  .sig-line:focus {
-    border-color: var(--gold-dim);
+  .sig-line:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+    border-color: var(--gold);
   }
 
   /* ── Submit area ── */

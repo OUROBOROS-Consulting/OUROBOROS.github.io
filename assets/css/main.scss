@@ -112,14 +112,10 @@ nav.nav-menu,
 // the fixed rail. Intentionally overrides the rail partial's "pure overlay,
 // no offset" assumption. Fixed elements (nav-shell, rail, #safety-exit) ignore
 // body padding, so only flow content (main, cta, footer) shifts right; the
-// rail sits in the reserved strip. Dropped on mobile, where the rail is an
-// off-canvas drawer rather than a persistent column.
+// rail sits in the reserved strip. Applies at every breakpoint — the rail is
+// a permanent strip on mobile too, not an off-canvas drawer.
 body {
   padding-left: var(--rail-w);
-
-  @media (max-width: 768px) {
-    padding-left: 0;
-  }
 }
 
 // ── TOC offset ────────────────────────────────────────────────────────────

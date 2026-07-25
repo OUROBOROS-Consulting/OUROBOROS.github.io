@@ -1,7 +1,3 @@
-- title: Home
-  url: /
-  icon: fa-house
-
 - title: Services
   url: /services/
   icon: fa-briefcase

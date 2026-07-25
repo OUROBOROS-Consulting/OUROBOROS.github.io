@@ -5,11 +5,44 @@
       <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="OUROBOROS" class="nav-logo-mark">
     </a>
 
-    <!-- Right-anchored button group -->
+    <!-- Page links — reuses the .nav-links/.nav-dropdown dropdown CSS in the
+         design package (previously dormant, dating from before the section
+         rail existed). Hover/focus-within reveals children on desktop; on
+         mobile the hamburger toggles this list open beneath the bar, and
+         each top-level link still routes straight to its section index. -->
+    <div class="nav-links" id="primary-nav-links">
+      {% for item in site.data.nav %}
+      <div class="nav-dropdown">
+        {% if item.children %}
+        <div class="nav-dropdown-row">
+          <a href="{{ item.url | relative_url }}">
+            <i class="fas {{ item.icon }}" aria-hidden="true"></i>
+            {{ item.title }}
+          </a>
+          <button type="button" class="nav-accordion-btn" aria-expanded="false"
+            aria-controls="nav-dropdown-menu-{{ forloop.index }}" aria-label="Toggle {{ item.title }} submenu">
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="nav-dropdown-menu" id="nav-dropdown-menu-{{ forloop.index }}">
+          {% for child in item.children %}
+          <a href="{{ child.url | relative_url }}">{{ child.title }}</a>
+          {% endfor %}
+        </div>
+        {% else %}
+        <a href="{{ item.url | relative_url }}">
+          <i class="fas {{ item.icon }}" aria-hidden="true"></i>
+          {{ item.title }}
+        </a>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Search — input expands leftward, overlaying the nav bar. Input is a
+         sibling of .nav-card (not nested inside it) so the card's chamfer
+         clip-path doesn't clip the input as it grows past the card's edge. -->
     <div class="nav-buttons">
-      <!-- Search — input expands leftward, overlaying the nav bar. Input is a
-           sibling of .nav-card (not nested inside it) so the card's chamfer
-           clip-path doesn't clip the input as it grows past the card's edge. -->
       <form id="nav-search-wrap" class="nav-dropdown nav-button nav-search-wrap" action="/search/" method="get"
         role="search">
         <input class="nav-search__input" type="search" name="q" aria-label="Search site" placeholder="Search…"
@@ -22,52 +55,16 @@
           </div>
         </div>
       </form>
-
-      <!-- CMD/CTRL -->
-      {% comment %}
-      <div class="nav-dropdown nav-button">
-        <a href="{{ '/del-cmd-ctrl/' | relative_url }}" aria-label="CMD/CTRL Dashboard">
-          <div class="nav-card">
-            <div class="nav-card__interior">
-              <i class="fas fa-compass" aria-hidden="true"></i>
-            </div>
-          </div>
-          <span class="nav-btn-label">CMD/CTRL</span>
-        </a>
-      </div>
-      {% endcomment %}
-
-      <!-- News -->
-      <div class="nav-dropdown nav-button">
-        <a href="{{ '/announcements' | relative_url }}">
-          <div class="nav-card">
-            <div class="nav-card__interior">
-              <i class="fas fa-newspaper" aria-hidden="true"></i>
-            </div>
-          </div>
-          <span class="nav-btn-label">News</span>
-        </a>
-      </div>
-
-      <!-- Contact -->
-      <div class="nav-dropdown nav-button">
-        <a href="{{ '/intake' | relative_url }}">
-          <div class="nav-card">
-            <div class="nav-card__interior">
-              <i class="fas fa-envelope" aria-hidden="true"></i>
-            </div>
-          </div>
-          <span class="nav-btn-label">Contact</span>
-        </a>
-      </div>
     </div>
 
     <!-- Quick exit lives in the fixed red button (see default.html #safety-exit),
          so it is not duplicated here. Keyboard shortcut: ESC x2. -->
 
-    <!-- Mobile menu toggle — only visible on small screens -->
+    <!-- Mobile menu toggle — opens the page-links list below the bar. The
+         contact/announcements rail is a permanent fixed strip, not a drawer,
+         so the hamburger no longer controls it. -->
     <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false"
-      aria-controls="rail">
+      aria-controls="primary-nav-links">
       <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
 

@@ -610,7 +610,15 @@
   color: var(--muted);
   margin: 0 0 1.2rem;
   font-weight: 400;
-  outline: none;
+
+  // Receives programmatic focus (tabindex="-1", never reached via Tab) when
+  // quiz results render, to move screen-reader focus to the new content —
+  // plain :focus (not :focus-visible) so the ring is guaranteed to render on
+  // that programmatic focus, matching the requirement it's meant to satisfy.
+  &:focus {
+    outline: 2px solid var(--gold);
+    outline-offset: 2px;
+  }
 }
 
 /* ── Share actions ───────────────────────────────────────────────────────── */

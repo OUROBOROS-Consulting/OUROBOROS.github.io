@@ -515,7 +515,7 @@
   padding-right: 2rem;
   cursor: pointer;
 
-  &:focus { outline: none; border-color: var(--module-accent); }
+  &:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-color: var(--module-accent); }
 
   &.select-input--sm {
     font-size: var(--db-text-base);
@@ -535,7 +535,7 @@
   flex: 1;
   min-width: 180px;
 
-  &:focus { outline: none; border-color: var(--module-accent); }
+  &:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-color: var(--module-accent); }
   &::placeholder { color: var(--muted); }
 }
 

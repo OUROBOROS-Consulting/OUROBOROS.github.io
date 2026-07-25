@@ -88,25 +88,41 @@ function initCarousel(sectionId, autoAdvance) {
 // values section is now a static grid — no carousel init needed
 initCarousel('testimonials', true);  // auto-advances every 7s
 
-// ── Mobile hamburger — slides the section rail in/out on small screens ────────
+// ── Mobile hamburger — opens the page-links list beneath the bar ──────────────
+// The contact/announcements rail is a permanent fixed strip, not a drawer,
+// so it isn't part of this toggle.
 (function initMobileNav() {
   const hamburger = document.querySelector('.nav-hamburger');
-  const rail      = document.getElementById('rail');
-  if (!hamburger || !rail) return;
+  const navLinks  = document.getElementById('primary-nav-links');
+  if (!hamburger || !navLinks) return;
 
   hamburger.addEventListener('click', (e) => {
     e.stopPropagation();
-    const isOpen = rail.classList.toggle('rail--open');
+    const isOpen = navLinks.classList.toggle('open');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     hamburger.querySelector('i').className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
   });
 
   document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !rail.contains(e.target)) {
-      rail.classList.remove('rail--open');
+    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
+      navLinks.classList.remove('open');
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.querySelector('i').className = 'fas fa-bars';
     }
+  });
+})();
+
+// ── Mobile nav accordion — chevron toggles a dropdown's children in place ─────
+// Desktop reveals children on hover/focus-within (CSS only); this only fires
+// via the accordion button, which the design package hides above 768px.
+(function initNavAccordion() {
+  document.querySelectorAll('.nav-accordion-btn').forEach((btn) => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const dropdown = btn.closest('.nav-dropdown');
+      const isOpen = dropdown.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
   });
 })();
 
