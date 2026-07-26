@@ -53,7 +53,7 @@ default.html          ← HTML shell: fonts, nav, rail, footer, main.js
 | Key | Effect |
 |-----|--------|
 | `noindex: true` | Adds `<meta name="robots" content="noindex,nofollow">` |
-| `banner: false` | Suppresses the page title banner (shown by default for titled pages outside home/article/sections) |
+| `show_banner: true` | Renders `_includes/banner.html` and adds `body.has-banner`. Only `index.md` uses it |
 | `extra_css: "name"` | Loads `assets/css/name.css` alongside main.css |
 
 ## sections.html Section Keys

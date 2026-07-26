@@ -66,8 +66,7 @@
     <link rel="stylesheet" href="{{ '/assets/vendor/fontawesome/css/all.min.css' | relative_url }}" />
   </head>
 
-  {% assign _show_banner = false %}
-  <body{% if _show_banner %} class="has-title-banner"{% elsif page.show_banner %} class="has-banner"{% endif %}>
+  <body{% if page.show_banner %} class="has-banner"{% endif %}>
     <a class="skip-link" href="#main">Skip to main content</a>
     <button id="safety-exit" class="safety-exit" aria-label="Quick exit — leave this site immediately"
       title="Leaves this site immediately and clears its stored data. Pressing Escape twice does the same.">Quick
@@ -75,12 +74,6 @@
     {% if page.show_banner %}{% include banner.html %}{% endif %}
     <div class="nav-shell">
       {% include nav.html %}
-      {% if _show_banner %}
-      <div class="page-title-banner">
-        {% if page.eyebrow %}<span class="page-title-banner__eyebrow">{{ page.eyebrow }}</span>{% endif %}
-        <span class="page-title-banner__title">{{ page.title }}</span>
-      </div>
-      {% endif %}
     </div>
     {% include sidebar.html %}
     <main id="main">

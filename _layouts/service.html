@@ -49,8 +49,8 @@ layout: default
   <!-- Markdown body content -->
   {% assign svc_body = content | strip %}
   {% unless svc_body == "" %}
-  <section class="svc-section svc-section--stacked">
-    <div class="svc-section-content">
+  <section class="page-section page-section--stacked">
+    <div class="page-section-content">
       {{ content }}
     </div>
   </section>
@@ -58,24 +58,24 @@ layout: default
 
   <!-- Who it's for -->
   {% if page.who %}
-  <section class="svc-section">
-    <div class="svc-section-label">
+  <section class="page-section">
+    <div class="page-section-label">
       <p>Who It's For</p>
     </div>
-    <div class="svc-section-content">
+    <div class="page-section-content">
       {{ page.who | markdownify }}
     </div>
   </section>
   {% endif %}
 
   {% if page.specializations %}
-  <section class="svc-section">
-    <div class="svc-section-label">
+  <section class="page-section">
+    <div class="page-section-label">
       <p>Specialties</p>
     </div>
     <div class="card--formula">
       <div class="card--formula__interior">
-        <div class="svc-section-content svc-included">
+        <div class="page-section-content svc-included">
           {% for item in page.specializations %}
           <div class="svc-item">
             <span class="svc-item-marker">◇</span>
@@ -92,13 +92,13 @@ layout: default
 
   <!-- Policies -->
   {% if page.policies %}
-  <section class="svc-section">
-    <div class="svc-section-label">
+  <section class="page-section">
+    <div class="page-section-label">
       <p>Policies</p>
     </div>
     <div class="card--formula">
       <div class="card--formula__interior">
-        <div class="svc-section-content svc-included">
+        <div class="page-section-content svc-included">
           {% for item in page.policies %}
           <div class="svc-item">
             <span class="svc-item-marker">◇</span>
@@ -115,13 +115,13 @@ layout: default
 
   <!-- What's included -->
   {% if page.included %}
-  <section class="svc-section">
-    <div class="svc-section-label">
+  <section class="page-section">
+    <div class="page-section-label">
       <p>What's Included</p>
     </div>
     <div class="card--formula">
       <div class="card--formula__interior">
-        <div class="svc-section-content svc-included">
+        <div class="page-section-content svc-included">
           {% for item in page.included %}
           <div class="svc-item">
             <span class="svc-item-marker">◇</span>
@@ -139,11 +139,11 @@ layout: default
 
   <!-- Pricing -->
   {% if page.pricing %}
-  <section class="svc-section">
-    <div class="svc-section-label">
+  <section class="page-section">
+    <div class="page-section-label">
       <p>Pricing</p>
     </div>
-    <div class="svc-section-content">
+    <div class="page-section-content">
       <p class="svc-rate-principle">{{ page.rate_principle | default: "Rates run on a subsidy model. Commercial engagements fund sliding-scale and pro bono work for survivors and whistleblowers. No one is turned away for inability to pay. Ranges reflect the complexity and scope of the work, and we set the figure together before anything begins." }}</p>
       {% for tier in page.pricing %}
       <div class="svc-pricing-tier">

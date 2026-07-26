@@ -157,11 +157,11 @@ layout: default
     <div class="card--formula">
       <div class="card--formula__interior">
         {% if service.hero_svg %}
-        <div class="svc-card-icon"><img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true"></div>
+        <div class="card-icon"><img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true"></div>
         {% elsif service.icon %}
-        <div class="svc-card-icon"><i class="fa-solid {{ service.icon }}"></i></div>
+        <div class="card-icon"><i class="fa-solid {{ service.icon }}"></i></div>
         {% endif %}
-        <div class="svc-card-body">
+        <div class="card-body">
           <h3 class="card-title">{{ service.title }}</h3>
           <p class="card-desc">{{ service.description }}</p>
           <a href="{{ service.url }}" class="card-link">{{ service.cta_label | default: 'Learn More' }} →</a>

@@ -3,7 +3,7 @@ title: A Mother's Cross to Bear
 description: Elder abuse, identity theft, and the systematic dismantling of a life — and what it takes to begin rebuilding it.
 layout: sections
 section_layout: stacked
-back_url: /work/
+back_url: /case-studies/
 category: Survivor Security
 lede: >
   When the person destroying your life is also the only one you believe still loves you,

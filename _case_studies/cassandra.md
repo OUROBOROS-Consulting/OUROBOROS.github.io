@@ -3,7 +3,7 @@ title: Cassandra's Advisory Firm
 description: Building a Foundation for a Solo Entrepreneur Entering the Digital World
 layout: sections
 section_layout: stacked
-back_url: /work/
+back_url: /case-studies/
 category: Startup Operations
 lede: Entering the digital world for the first time as a practicing professional is harder than the industry admits. Cassandra did it without asking for help twice.
 date: 2026-02-01

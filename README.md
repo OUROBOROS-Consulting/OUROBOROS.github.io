@@ -20,7 +20,7 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 ├── service.html        service detail: hero → specializations → policies → included → pricing → CTA
 ├── announcement.html   single announcement
 ├── dashboard.html      auto-loads dashboard.css
-└── psa.html            PDF embed via iframe   ⚠ currently unreachable, see Anomalies
+└── psa.html            PDF embed via iframe
 ```
 
 `article` vs `sections` is the only non-obvious choice. **`article` renders the Markdown body; `sections` ignores the body and renders the `sections:` list from front matter.** One continuous document is an `article`. Discrete blocks, often fed from `_data/`, are `sections`. Both were renamed on 2026-07-26 from `foundation` and `mission`, which named the first page that used them rather than the structure.
@@ -115,15 +115,15 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 </details>
 
 <details>
-<summary><strong>home</strong> — 1 page &nbsp;·&nbsp; <strong>announcement</strong> — 1 page &nbsp;·&nbsp; <strong>psa</strong> — 0 pages</summary>
+<summary><strong>home</strong> — 1 page &nbsp;·&nbsp; <strong>announcement</strong> — 1 page &nbsp;·&nbsp; <strong>psa</strong> — 2 pages</summary>
 
 | URL | Source | Layout |
 |---|---|---|
 | `/` | `index.md` | home |
 | `/announcements/site-launch/` | `_announcements/site-launch.md` | announcement |
-| — | `_resources/_psas/DSM.md` | psa ⚠ does not build |
-| — | `_resources/_psas/ai-price.md` | psa ⚠ does not build |
-| — | `_resources/_psas/dark-data.md` | psa ⚠ does not build |
+| `/resources/psas/ai-price/` | `_psas/ai-price.md` | psa |
+| `/resources/psas/dark-data/` | `_psas/dark-data.md` | psa |
+| — | `_psas/DSM.md` | psa ⚠ `published: false` |
 
 </details>
 
@@ -138,18 +138,13 @@ Declared in `_config.yml`. A collection sets the **URL**, never the layout.
 | `case_studies` | `_case_studies/` | `/work/:slug/` | 4 | sections |
 | `resources` | `_resources/` | `/resources/:slug/` | 12 | article, sections |
 | `announcements` | `_announcements/` | `/announcements/:slug/` | 1 | announcement |
-| `psas` | `_psas/` | `/work/psas/:slug/` | **0** | ⚠ directory does not exist |
+| `psas` | `_psas/` | `/resources/psas/:slug/` | 3 (2 published) | psa |
 
 Layout is chosen by **content shape**, not by collection: `default` for hub/listing pages, `article` for linear prose, `sections` for block-assembled pages. `_about/` mixes all three. Do not assume one layout per collection.
 
 **Hub pages belong at repo root, not inside a collection.** `resources.html`, `psas.html`, and `services.html` all loop over or link into collections; they are not items in one. Keeping them out avoids permalink overrides that fight the collection pattern.
 
 ### Anomalies
-
-⚠ **The `psas` collection is empty and `/resources/psas/` renders "0 documents" in production.**
-Jekyll reads a collection from `_<name>/` at repo root. There is no `_psas/`. The three PSA files sit in `_resources/_psas/`, and Jekyll skips any entry beginning with `_` inside a collection, so they are not picked up by `resources` either. They build nowhere and have no URL. Fix is to move `_resources/_psas/` to `_psas/` at repo root.
-
-⚠ **`psa.html` is therefore dead code.** It is the only layout with zero pages.
 
 **Extensionless URL forms.** `/intake.html`, `/mission.html`, and `/survival-guide.html` build as files, not directories, because their permalinks lack a trailing slash. Internal links use the extensionless form (`/intake` × 154, `/mission` × 48). GitHub Pages resolves these by appending `.html`, so they work, but they are inconsistent with the trailing-slash directories used everywhere else.
 

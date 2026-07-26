@@ -3,7 +3,7 @@ title: Building a Smart Fortress
 description: An honest account of building a smart home for protecting a survivor who was betrayed by law enforcement — myself.
 layout: sections
 section_layout: stacked
-back_url: /work/
+back_url: /case-studies/
 category: Survivor Security
 lede: When institutions betrayed me and failed to keep me safe, I built my own.
 date: 2026-04-01

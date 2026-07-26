@@ -67,11 +67,11 @@ hide_cta: true
           <input type="radio" name="service_type" value="{{ service.slug }}" required>
           <div class="service-card-inner">
             {% if service.hero_svg %}
-            <div class="svc-card-icon">
+            <div class="card-icon">
               <img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true">
             </div>
             {% elsif service.icon %}
-            <div class="svc-card-icon">
+            <div class="card-icon">
               <i class="fa-solid {{ service.icon }}">
               </i>
             </div>

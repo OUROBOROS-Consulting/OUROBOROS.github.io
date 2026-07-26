@@ -19,7 +19,7 @@ collections:
     permalink: /work/:slug/
   psas:
     output: true
-    permalink: /work/psas/:slug/
+    permalink: /resources/psas/:slug/
   announcements:
     output: true
     permalink: /announcements/:slug/

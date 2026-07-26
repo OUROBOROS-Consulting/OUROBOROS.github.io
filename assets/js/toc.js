@@ -7,7 +7,7 @@
   var targets = [];
 
   if (mode === 'sections') {
-    targets = [].slice.call(document.querySelectorAll('section.svc-section[id]'));
+    targets = [].slice.call(document.querySelectorAll('section.page-section[id]'));
   } else {
     targets = [].slice.call(
       document.querySelectorAll('.post-body h2, .post-body h3')
@@ -27,7 +27,7 @@
     var id, label, cls;
 
     if (mode === 'sections') {
-      var labelEl = el.querySelector('.svc-section-label p');
+      var labelEl = el.querySelector('.page-section-label p');
       id = el.id;
       label = labelEl ? labelEl.textContent.trim() : '';
       cls = 'toc-item';

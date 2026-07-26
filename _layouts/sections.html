@@ -97,13 +97,13 @@ layout: default
      ══════════════════════════════════════════════════════════════════════ -->
 {% if page.about %}
 <div class="page-body page-body--banded">
-  <section class="svc-section">
+  <section class="page-section">
     <!-- Left column: label / heading -->
-    <div class="svc-section-label">
+    <div class="page-section-label">
       <p>{{ page.about.heading }}</p>
     </div>
     <!-- Right column: body text -->
-    <div class="svc-section-content">
+    <div class="page-section-content">
       <p>{{ page.about.body }}</p>
     </div>
   </section>
@@ -152,15 +152,15 @@ layout: default
     id="{{ section.id }}"
     Layout: two columns — label (left) + content (right)
   -->
-  <section id="{{ section.id }}" class="svc-section{% if page.section_layout == 'stacked' %} svc-section--stacked{% endif %}">
+  <section id="{{ section.id }}" class="page-section{% if page.section_layout == 'stacked' %} page-section--stacked{% endif %}">
 
     <!-- Left column: small label text -->
-    <div class="svc-section-label">
+    <div class="page-section-label">
       <p>{{ section.heading }}</p>
     </div>
 
     <!-- Right column: dynamic content (see branches below) -->
-    <div class="svc-section-content">
+    <div class="page-section-content">
 
       {% if section.playlist_carousel %}
       <!-- ── PLAYLIST CAROUSEL ──────────────────────────────────────────
@@ -299,7 +299,7 @@ layout: default
       </div>
 
       {% endif %}
-    </div><!-- /svc-section-content -->
+    </div><!-- /page-section-content -->
   </section>
 
   {% endfor %}
