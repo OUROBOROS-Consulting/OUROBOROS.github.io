@@ -4,25 +4,25 @@ title: PSAs
 permalink: /resources/psas/
 ---
 
-<header class="svc-hero">
+<header class="page-hero">
   <a class="post-back" href="{{ '/work/' | relative_url }}">All Work</a>
-  <div class="svc-hero-inner">
-    <div class="svc-hero-text">
+  <div class="page-hero-inner">
+    <div class="page-hero-text">
       <p class="post-category">Public Interest</p>
-      <h1 class="svc-title">PSAs</h1>
-      <p class="svc-lede">Public service announcements on technology, psychopathology, coercive control, and related
+      <h1 class="page-hero-title">PSAs</h1>
+      <p class="page-hero-lede">Public service announcements on technology, psychopathology, coercive control, and related
         causes — written for general audiences.</p>
     </div>
-    <div class="svc-hero-cta">
+    <div class="page-hero-cta">
       <p class="work-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</p>
     </div>
-    <div class="svc-emblem svc-emblem--bullhorn" aria-hidden="true">
+    <div class="page-hero-emblem page-hero-emblem--bullhorn" aria-hidden="true">
       <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
     </div>
   </div>
 </header>
 
-<div class="svc-body">
+<div class="page-body">
   {% if site.psas.size > 0 %}
 
   {% assign sorted_psas = site.psas | sort: "date" | reverse %}

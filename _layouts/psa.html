@@ -4,20 +4,20 @@ layout: default
 <div id="progress-bar"></div>
 
 <!-- ── PSA Hero ──────────────────────────────────────────────────────────── -->
-<header class="svc-hero">
+<header class="page-hero">
   <a class="post-back" href="{{ '/work/psas/' | relative_url }}">All PSAs</a>
-  <div class="svc-hero-inner">
-    <div class="svc-hero-text">
+  <div class="page-hero-inner">
+    <div class="page-hero-text">
       <p class="post-category">{{ page.category | default: 'PSA' }}</p>
-      <h1 class="svc-title">{{ page.title }}</h1>
-      {% if page.lede %}<p class="svc-lede">{{ page.lede }}</p>{% endif %}
-      <div class="svc-tags">
+      <h1 class="page-hero-title">{{ page.title }}</h1>
+      {% if page.lede %}<p class="page-hero-lede">{{ page.lede }}</p>{% endif %}
+      <div class="page-hero-tags">
         {% for tag in page.tags %}
         <span class="lp-tag">{{ tag }}</span>
         {% endfor %}
       </div>
     </div>
-    <div class="svc-hero-cta">
+    <div class="page-hero-cta">
       <a href="{{ page.pdf | relative_url }}" download class="btn">Download PDF</a>
       {% if page.date %}
       <p class="svc-price">{{ page.date | date: "%B %Y" }}</p>
@@ -39,7 +39,7 @@ layout: default
 
 <!-- ── Optional prose body ───────────────────────────────────────────────── -->
 {% if content != "" %}
-<div class="svc-body">
+<div class="page-body">
   <div class="post-body">{{ content }}</div>
 </div>
 {% endif %}

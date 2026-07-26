@@ -6,21 +6,21 @@ description: "News and updates from OUROBOROS Consulting."
 banner: false
 ---
 
-<header class="svc-hero">
+<header class="page-hero">
   <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
-  <div class="svc-hero-inner">
-    <div class="svc-hero-text">
+  <div class="page-hero-inner">
+    <div class="page-hero-text">
       <p class="post-category">News</p>
-      <h1 class="svc-title">Announcements</h1>
-      <p class="svc-lede">Updates on new projects, partnerships, publications, and practice developments.</p>
+      <h1 class="page-hero-title">Announcements</h1>
+      <p class="page-hero-lede">Updates on new projects, partnerships, publications, and practice developments.</p>
     </div>
-    <div class="svc-emblem" aria-hidden="true">
+    <div class="page-hero-emblem" aria-hidden="true">
       <i class="fas fa-rss"></i>
     </div>
   </div>
 </header>
 
-<div class="svc-body">
+<div class="page-body">
   {% assign sorted_announcements = site.announcements | sort: "date" | reverse %}
   {% if sorted_announcements.size > 0 %}
   <div class="related-grid">
@@ -35,6 +35,6 @@ banner: false
     {% endfor %}
   </div>
   {% else %}
-  <p class="svc-lede" style="color:var(--muted);padding:2rem 0">No announcements yet.</p>
+  <p class="page-hero-lede" style="color:var(--muted);padding:2rem 0">No announcements yet.</p>
   {% endif %}
 </div>

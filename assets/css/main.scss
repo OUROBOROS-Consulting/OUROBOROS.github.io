@@ -52,7 +52,7 @@
   nav.nav-menu,
   footer,
   #hero,
-  .svc-hero {
+  .page-hero {
     --text: #E8E4DC;
     color: var(--text);
 
@@ -78,7 +78,7 @@
 // legible. Overrides the design system's flat `background-image: none`; the
 // navy `--bg-hero` stays as the base fallback. Site-owned because the raster
 // asset lives in this repo's assets/images, not the shared design package.
-.svc-hero {
+.page-hero {
   background-image:
     linear-gradient(rgba(30, 33, 62, 0.74), rgba(12, 14, 32, 0.88)),
     url("../images/Marble.png");
@@ -132,12 +132,12 @@ body {
 
 // ── Section headers: black marble ─────────────────────────────────────────
 // Near-black scrim over Marble.png so the veining reads as black stone. Same
-// asset as the svc-hero, darker scrim. Overrides the design system's flat
+// asset as the page-hero, darker scrim. Overrides the design system's flat
 // #0D0D0D fallback. Site-owned because the raster lives in this repo.
 .work-header,
 .testimonials-header,
 .about-header,
-.svc-body--banded .svc-section-label,
+.page-body--banded .svc-section-label,
 #psa-section-header,
 footer,
 .disclaimer-bar {

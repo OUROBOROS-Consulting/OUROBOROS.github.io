@@ -79,9 +79,9 @@ Secondary nav is data-driven from `_data/nav.yml`. Each entry supports `active_p
 
 ## Gotchas
 
-**Narrow text:** `.post-body` has `max-width: 680px` globally. Foundation pages needing full-width prose require:
+**Narrow text:** `.post-body` has `max-width: 680px` globally. Article pages needing full-width prose require:
 ```scss
-.svc-body .post-body { max-width: none; }
+.page-body .post-body { max-width: none; }
 ```
 
 **PSAs:** `section:` front matter (e.g. `Technology`) drives category grouping in `psas.html`. Separate from the `category:` eyebrow label. PDFs live at `assets/files/PSA/<Category>/filename.pdf`.

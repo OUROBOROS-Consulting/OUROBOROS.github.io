@@ -4,29 +4,29 @@ title: Case Studies
 permalink: /case-studies/
 ---
 
-<header class="svc-hero">
+<header class="page-hero">
   <a class="post-back" href="{{ '/projects/' | relative_url }}">
     All Projects
   </a>
-  <div class="svc-hero-inner">
-    <div class="svc-hero-text">
+  <div class="page-hero-inner">
+    <div class="page-hero-text">
       <p class="post-category">Work</p>
-      <h1 class="svc-title">Case Studies</h1>
-      <p class="svc-lede">
+      <h1 class="page-hero-title">Case Studies</h1>
+      <p class="page-hero-lede">
         Technology consulting, advocacy, and research — documented honestly, including what was hard.
       </p>
     </div>
-    <div class="svc-hero-cta">
+    <div class="page-hero-cta">
       <p class="work-count">{{ site.case_studies.size }} {% if site.case_studies.size == 1 %}engagement{% else
         %}engagements{% endif %}</p>
     </div>
-    <div class="svc-emblem svc-emblem--file" aria-hidden="true">
+    <div class="page-hero-emblem page-hero-emblem--file" aria-hidden="true">
       <i class="fa-solid fa-folder-open" aria-hidden="true"></i>
     </div>
   </div>
 </header>
 
-<div class="svc-body">
+<div class="page-body">
   {% if site.case_studies.size > 0 %}
 
   {% assign sorted_studies = site.case_studies | sort: "date" | reverse %}

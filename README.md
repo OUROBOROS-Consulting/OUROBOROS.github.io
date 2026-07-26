@@ -267,7 +267,7 @@ bundle exec jekyll serve --drafts
 
 - **Progress bar**: `#progress-bar` (gold) tracks scroll depth on all `article.html` pages
 - **Social links**: `page.links:` front matter (github, linkedin, orcid, tutor, contact) → `.foundation-links` nav
-- **Narrow text gotcha**: `_essay.scss` sets `.post-body { max-width: 680px }` — override with `.svc-body .post-body { max-width: none }` if needed
+- **Narrow text gotcha**: `_essay.scss` sets `.post-body { max-width: 680px }` — override with `.page-body .post-body { max-width: none }` if needed
 - **PSA categories**: Front matter `section:` field (Technology, Psychopathology, etc.) groups PSAs in `psas.html`
 
 </details>
