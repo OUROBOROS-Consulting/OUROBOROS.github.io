@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Disclaimer
 category: About
 hero_svg: /assets/images/disclaimer.svg

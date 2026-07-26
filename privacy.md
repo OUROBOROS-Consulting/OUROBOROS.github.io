@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Privacy
 category: About
 hero_svg: /assets/images/privacy.svg

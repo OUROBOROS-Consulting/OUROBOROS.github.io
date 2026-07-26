@@ -68,7 +68,7 @@ git commit -m "data: add Apple Devices tutorial cluster to tutorials index"
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Auditing Your Apple Device for Surveillance Risks
 description: Step-by-step audit of Find My, Family Sharing, Screen Time, Location Services, and trusted device settings.
 permalink: /resources/tutorial-apple-security-audit/
@@ -150,7 +150,7 @@ git commit -m "feat: add Apple device security audit tutorial"
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Protecting Your Data with iCloud Advanced Data Protection
 description: How to enable end-to-end encryption for iCloud data, set up a recovery method, and audit trusted devices.
 permalink: /resources/tutorial-icloud-adp/
@@ -230,7 +230,7 @@ git commit -m "feat: add iCloud Advanced Data Protection tutorial"
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Using Focus Modes to Compartmentalize Your Digital Life
 description: Configure Focus modes to enforce context boundaries, manage notification allowlists, and build a minimal-input recovery mode for high-stress periods.
 permalink: /resources/tutorial-focus-modes/
@@ -312,7 +312,7 @@ git commit -m "feat: add Focus Modes tutorial"
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Setting Up Encrypted Communication on Apple Devices
 description: Verify iMessage E2EE status, configure iCloud Messages with Advanced Data Protection, set up Signal for cross-platform contacts, and audit which devices receive your messages.
 permalink: /resources/tutorial-encrypted-communication/

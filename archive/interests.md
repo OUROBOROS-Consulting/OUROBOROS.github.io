@@ -1,6 +1,6 @@
 ---
 title: Interests
-layout: mission
+layout: sections
 category: About
 lede: Three fields that look separate until you've needed all three at once.
 tags: [Technology, Data Science, Psychopathology]

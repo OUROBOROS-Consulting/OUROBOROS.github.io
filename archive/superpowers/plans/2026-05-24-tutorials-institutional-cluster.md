@@ -80,7 +80,7 @@ git commit -m "data: wire tutorial links for institutional cluster"
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Documenting Interactions with Authorities
 description: Best practices for recording conversations, preserving evidence, and maintaining records when dealing with government or institutional entities.
 permalink: /resources/tutorial-documenting-interactions/
@@ -174,7 +174,7 @@ git commit -m "feat: add documenting interactions tutorial"
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Building a Personal Safety Plan
 description: Comprehensive framework for assessing threats, establishing support networks, and creating actionable emergency protocols.
 permalink: /resources/tutorial-safety-plan/
@@ -264,7 +264,7 @@ git commit -m "feat: add personal safety plan tutorial"
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Managing Trauma Responses in High-Stress Situations
 description: Techniques for recognizing and coping with trauma triggers, maintaining mental clarity, and accessing appropriate support resources.
 permalink: /resources/tutorial-trauma-responses/

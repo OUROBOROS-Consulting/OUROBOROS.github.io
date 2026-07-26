@@ -1,7 +1,7 @@
 ---
 title: Cassandra's Advisory Firm
 description: Building a Foundation for a Solo Entrepreneur Entering the Digital World
-layout: mission
+layout: sections
 section_layout: stacked
 back_url: /work/
 category: Startup Operations

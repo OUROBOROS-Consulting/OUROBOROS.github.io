@@ -23,18 +23,19 @@ cd ../OUROBOROS-Consulting.github.io && npm install && npm run dev
 ## Layout Hierarchy
 
 ```
-default.html      ← HTML shell: fonts, nav, secondary nav, footer, main.js
-  ├── home.html       ← Single-page landing
-  ├── foundation.html ← Prose pages: progress bar → hero → content → who → CTA
-  ├── service.html    ← Service detail pages: hero → specializations → policies → included → pricing → CTA
-  ├── mission.html    ← Sections pages: hero → about → sections loop → links
-  ├── dashboard.html  ← Loads dashboard.css automatically
-  ├── essays.html
-  ├── psa.html        ← PDF embed via iframe
-  └── linkedin.html
+default.html          ← HTML shell: fonts, nav, rail, footer, main.js
+  ├── home.html         ← Single-page landing
+  ├── article.html      ← BODY-driven: progress bar → hero → {{ content }} → who → CTA
+  ├── sections.html     ← FRONT-MATTER-driven: hero → about → page.sections loop → links
+  ├── service.html      ← Service detail: hero → specializations → policies → included → pricing → CTA
+  ├── dashboard.html    ← Loads dashboard.css automatically
+  ├── announcement.html ← Single announcement
+  └── psa.html          ← PDF embed via iframe ⚠ zero pages, see README Anomalies
 ```
 
-`foundation.html` — `back_url` defaults to `/services/`. `headshot:` + `headshot_alt:` renders `.hex-portrait` in hero. `tags:` render as anchor `<a>` buttons (jump links).
+**Choosing between `article` and `sections`:** `article` renders the Markdown body. `sections` ignores the body and renders the `sections:` list from front matter. One continuous document → `article`. Discrete blocks, often fed from `_data/` → `sections`. Renamed from `foundation`/`mission` on 2026-07-26; those names described the first page that used them, not the structure.
+
+`article.html` — `back_url` defaults to `/services/`. `headshot:` + `headshot_alt:` renders `.hex-portrait` in hero. `tags:` render as anchor `<a>` buttons (jump links).
 
 `service.html` — Used by `_services/`. Tags render as plain `<span>` labels (not jump links). Front matter keys:
 - `icon`: Font Awesome class (e.g. `fa-shield`)
@@ -43,19 +44,19 @@ default.html      ← HTML shell: fonts, nav, secondary nav, footer, main.js
 - `included`: list of `{title: "...", description: "..."}`
 - `pricing`: list of `{name: "...", rate: "...", notes: "..."}`
 
-`mission.html` — `back_url` defaults to `/`. Social `links:` front matter keys: `github`, `linkedin`, `orcid`, `tutor`, `contact`. `contact` opens same tab; all others new tab.
+`sections.html` — `back_url` defaults to `/`. Social `links:` front matter keys: `github`, `linkedin`, `orcid`, `tutor`, `contact`. `contact` opens same tab; all others new tab.
 
-**`_about/` is a mixed collection** — each file sets its own `layout:` (foundation, mission, or default). Permalink is `/:slug`. Don't assume a single layout.
+**`_about/` is a mixed collection** — each file sets its own `layout:` (article, sections, or default). Permalink is `/:slug`. Don't assume a single layout.
 
 ## Page-Level Front Matter (default.html)
 
 | Key | Effect |
 |-----|--------|
 | `noindex: true` | Adds `<meta name="robots" content="noindex,nofollow">` |
-| `banner: false` | Suppresses the page title banner (shown by default for titled pages outside home/foundation/mission) |
+| `banner: false` | Suppresses the page title banner (shown by default for titled pages outside home/article/sections) |
 | `extra_css: "name"` | Loads `assets/css/name.css` alongside main.css |
 
-## mission.html Section Keys
+## sections.html Section Keys
 
 Pick one per section:
 

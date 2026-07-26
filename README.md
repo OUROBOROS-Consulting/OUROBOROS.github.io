@@ -10,27 +10,148 @@
 
 ## Architecture
 
+Every layout descends from `default.html`. There is no `defaults:` block in `_config.yml`, so **each page declares its own `layout:` in front matter.** Nothing is inherited by directory.
+
+```
+default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
+├── home.html           single-page landing
+├── article.html        body-driven: progress bar → hero → {{ content }} → who → CTA
+├── sections.html       front-matter-driven: hero → about → page.sections loop → links
+├── service.html        service detail: hero → specializations → policies → included → pricing → CTA
+├── announcement.html   single announcement
+├── dashboard.html      auto-loads dashboard.css
+└── psa.html            PDF embed via iframe   ⚠ currently unreachable, see Anomalies
+```
+
+`article` vs `sections` is the only non-obvious choice. **`article` renders the Markdown body; `sections` ignores the body and renders the `sections:` list from front matter.** One continuous document is an `article`. Discrete blocks, often fed from `_data/`, are `sections`. Both were renamed on 2026-07-26 from `foundation` and `mission`, which named the first page that used them rather than the structure.
+
+### Page → layout, complete
+
+46 pages build. Sorted by layout, then URL. `archive/` and `docs/` are in `exclude:` and never build.
+
 <details>
-<summary>Show all</summary>
+<summary><strong>default</strong> — 12 pages</summary>
 
-**Entry**: `default.html` — fonts, nav, footer, main.js orchestration.
-
-**Layouts** (`_layouts/`):
-
-- `home.html` — landing (hero, stats, values, services, work, testimonials)
-- `foundation.html` — dual-mode multi-section pages
-  - **Mission mode**: hero → about → pull_quote → rich sections (bibtex, playlists, data)
-  - **Service/prose mode**: markdown content + hex-portrait headshot + CTA
-- `psa.html` — specialized reading layout
-
-**Collections** (`_config.yml`):
-
-- `_services/` → `/services/:slug/`
-- `_case_studies/` → `/work/:slug/`
-- `_psas/` → `/work/psas/:slug/` (grouped by `section:` front matter)
-- `_resources/` → `/resources/:slug/`
+| URL | Source |
+|---|---|
+| `/404.html` | `404.md` |
+| `/about/` | `_about/about.html` |
+| `/announcements/` | `announcements.html` |
+| `/case-studies/` | `_about/case-studies.html` |
+| `/intake.html` | `intake.html` |
+| `/projects/` | `projects.html` |
+| `/quiz/` | `quiz.html` |
+| `/resources/` | `resources.html` |
+| `/resources/psas/` | `psas.html` |
+| `/resources/tutorials/` | `tutorials.html` |
+| `/search/` | `search.html` |
+| `/services/` | `services.html` |
+| `/team/` | `_about/team.html` |
 
 </details>
+
+<details>
+<summary><strong>article</strong> — 14 pages</summary>
+
+| URL | Source |
+|---|---|
+| `/accessibility/` | `accessibility.md` |
+| `/disclaimer/` | `disclaimer.md` |
+| `/framework/` | `_about/framework.md` |
+| `/privacy/` | `privacy.md` |
+| `/resources/glossary/` | `_resources/glossary.md` |
+| `/resources/tutorial-ai-algorithmic-decisions/` | `_resources/tutorials/tutorial-ai-algorithmic-decisions.md` |
+| `/resources/tutorial-ai-deepfakes/` | `_resources/tutorials/tutorial-ai-deepfakes.md` |
+| `/resources/tutorial-ai-surveillance/` | `_resources/tutorials/tutorial-ai-surveillance.md` |
+| `/resources/tutorial-apple-security-audit/` | `_resources/tutorials/tutorial-apple-security-audit.md` |
+| `/resources/tutorial-documenting-interactions/` | `_resources/tutorials/tutorial-documenting-interactions.md` |
+| `/resources/tutorial-encrypted-communication/` | `_resources/tutorials/tutorial-encrypted-communication.md` |
+| `/resources/tutorial-focus-modes/` | `_resources/tutorials/tutorial-focus-modes.md` |
+| `/resources/tutorial-icloud-adp/` | `_resources/tutorials/tutorial-icloud-adp.md` |
+| `/resources/tutorial-safety-plan/` | `_resources/tutorials/tutorial-safety-plan.md` |
+| `/resources/tutorial-trauma-responses/` | `_resources/tutorials/tutorial-trauma-responses.md` |
+
+</details>
+
+<details>
+<summary><strong>sections</strong> — 8 pages</summary>
+
+| URL | Source |
+|---|---|
+| `/mission.html` | `_about/mission.md` |
+| `/resources/scholarly/` | `_resources/scholarly.md` |
+| `/resources/survival/` | `_resources/survival.md` |
+| `/survival-guide.html` | `_about/survival.md` |
+| `/work/cassandra/` | `_case_studies/cassandra.md` |
+| `/work/claudius/` | `_case_studies/claudius.md` |
+| `/work/martha/` | `_case_studies/martha.md` |
+| `/work/sanctuary/` | `_case_studies/sanctuary.md` |
+
+</details>
+
+<details>
+<summary><strong>service</strong> — 4 pages</summary>
+
+| URL | Source |
+|---|---|
+| `/services/advocacy-investigation/` | `_services/advocacy-investigation.md` |
+| `/services/design/` | `_services/design.md` |
+| `/services/investigations/` | `_services/investigations.md` |
+| `/services/technology/` | `_services/technology.md` |
+
+</details>
+
+<details>
+<summary><strong>dashboard</strong> — 5 pages</summary>
+
+| URL | Source |
+|---|---|
+| `/del-cmd-ctrl/` | `del-cmd-ctrl/index.html` |
+| `/del-cmd-ctrl/advocate/` | `del-cmd-ctrl/advocate.html` |
+| `/del-cmd-ctrl/institutional/` | `del-cmd-ctrl/institutional.html` |
+| `/del-cmd-ctrl/policy/` | `del-cmd-ctrl/policy.html` |
+| `/del-cmd-ctrl/survivor/` | `del-cmd-ctrl/survivor.html` |
+
+</details>
+
+<details>
+<summary><strong>home</strong> — 1 page &nbsp;·&nbsp; <strong>announcement</strong> — 1 page &nbsp;·&nbsp; <strong>psa</strong> — 0 pages</summary>
+
+| URL | Source | Layout |
+|---|---|---|
+| `/` | `index.md` | home |
+| `/announcements/site-launch/` | `_announcements/site-launch.md` | announcement |
+| — | `_resources/_psas/DSM.md` | psa ⚠ does not build |
+| — | `_resources/_psas/ai-price.md` | psa ⚠ does not build |
+| — | `_resources/_psas/dark-data.md` | psa ⚠ does not build |
+
+</details>
+
+### Collections
+
+Declared in `_config.yml`. A collection sets the **URL**, never the layout.
+
+| Collection | Source dir | Permalink | Items | Layouts used |
+|---|---|---|---|---|
+| `about` | `_about/` | `/:slug` | 5 | mixed: default, article, sections |
+| `services` | `_services/` | `/services/:slug/` | 4 | service |
+| `case_studies` | `_case_studies/` | `/work/:slug/` | 4 | sections |
+| `resources` | `_resources/` | `/resources/:slug/` | 12 | article, sections |
+| `announcements` | `_announcements/` | `/announcements/:slug/` | 1 | announcement |
+| `psas` | `_psas/` | `/work/psas/:slug/` | **0** | ⚠ directory does not exist |
+
+Layout is chosen by **content shape**, not by collection: `default` for hub/listing pages, `article` for linear prose, `sections` for block-assembled pages. `_about/` mixes all three. Do not assume one layout per collection.
+
+**Hub pages belong at repo root, not inside a collection.** `resources.html`, `psas.html`, and `services.html` all loop over or link into collections; they are not items in one. Keeping them out avoids permalink overrides that fight the collection pattern.
+
+### Anomalies
+
+⚠ **The `psas` collection is empty and `/resources/psas/` renders "0 documents" in production.**
+Jekyll reads a collection from `_<name>/` at repo root. There is no `_psas/`. The three PSA files sit in `_resources/_psas/`, and Jekyll skips any entry beginning with `_` inside a collection, so they are not picked up by `resources` either. They build nowhere and have no URL. Fix is to move `_resources/_psas/` to `_psas/` at repo root.
+
+⚠ **`psa.html` is therefore dead code.** It is the only layout with zero pages.
+
+**Extensionless URL forms.** `/intake.html`, `/mission.html`, and `/survival-guide.html` build as files, not directories, because their permalinks lack a trailing slash. Internal links use the extensionless form (`/intake` × 154, `/mission` × 48). GitHub Pages resolves these by appending `.html`, so they work, but they are inconsistent with the trailing-slash directories used everywhere else.
 
 ---
 
@@ -41,13 +162,18 @@
 <details>
 <summary>CSS custom properties in `_base.scss`</summary>
 
-- `--bg1: #141414` — page background
+Defined in the design package, not here. `ouroboros-design/scss/_base.scss` is the single source of truth; this site must not redefine them.
+
+- `--bg1: #0c101a` — page background
+- `--bg-hero: #1e213e` — dark navy, homepage + service hero
 - `--bg2: #1E1E1E` — card/surface
 - `--bg3: #252525` — elevated surface
 - `--gold: #C9A84C` — primary accent
 - `--text: #E8E4DC` — body text
 - `--subdued: #B0AAA0`, `--muted: #999999` — hierarchy
-- `--steel: #7B8FA1`, `--amethyst: #967ABB`, `--sage: #6A8E7F`, `--teal: #4a6b5f` — semantic colors
+- `--steel: #7F94A6`, `--amethyst: #A284CA`, `--sage: #6DA187`, `--teal: #5DA19C` — semantic accents
+
+Each accent also has `-dim` (alpha 0.35) and `-ghost` (alpha 0.12) variants. All four were raised on 2026-07-25 to clear WCAG 4.5:1; the prior values failed, `--teal` worst at 3.22:1. Keep at least 18° of hue separation between accents when adjusting, or teal and sage collapse into each other.
 
 </details>
 
@@ -139,7 +265,7 @@ bundle exec jekyll serve --drafts
 <details>
 <summary>Show all patterns</summary>
 
-- **Progress bar**: `#progress-bar` (gold) tracks scroll depth on all `foundation.html` pages
+- **Progress bar**: `#progress-bar` (gold) tracks scroll depth on all `article.html` pages
 - **Social links**: `page.links:` front matter (github, linkedin, orcid, tutor, contact) → `.foundation-links` nav
 - **Narrow text gotcha**: `_essay.scss` sets `.post-body { max-width: 680px }` — override with `.svc-body .post-body { max-width: none }` if needed
 - **PSA categories**: Front matter `section:` field (Technology, Psychopathology, etc.) groups PSAs in `psas.html`

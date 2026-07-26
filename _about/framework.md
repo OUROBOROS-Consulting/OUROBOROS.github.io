@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Intellectual Framework
 category: About
 permalink: /framework/

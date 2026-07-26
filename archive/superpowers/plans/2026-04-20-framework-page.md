@@ -201,7 +201,7 @@ Create `/Users/apostolos/Claude/Code/OUROBOROS-Consulting.github.io/_about/frame
 
 ```markdown
 ---
-layout: foundation
+layout: article
 title: Intellectual Framework
 category: About
 permalink: /framework/

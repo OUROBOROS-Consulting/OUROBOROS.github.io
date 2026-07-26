@@ -1,5 +1,5 @@
 ---
-layout: mission
+layout: sections
 title: Feedback Loops
 
 # Hero

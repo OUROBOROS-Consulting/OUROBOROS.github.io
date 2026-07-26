@@ -6,7 +6,7 @@
   var mode = toc.dataset.tocMode;
   var targets = [];
 
-  if (mode === 'mission') {
+  if (mode === 'sections') {
     targets = [].slice.call(document.querySelectorAll('section.svc-section[id]'));
   } else {
     targets = [].slice.call(
@@ -26,7 +26,7 @@
   targets.forEach(function (el) {
     var id, label, cls;
 
-    if (mode === 'mission') {
+    if (mode === 'sections') {
       var labelEl = el.querySelector('.svc-section-label p');
       id = el.id;
       label = labelEl ? labelEl.textContent.trim() : '';

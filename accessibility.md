@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Accessibility
 category: About
 hero_svg: /assets/images/accessibility.svg

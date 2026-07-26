@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 category: Reference
 title: Design System
 tagline: Color, typography, elevation. The complete palette.

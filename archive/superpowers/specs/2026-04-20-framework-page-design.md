@@ -30,7 +30,7 @@ A new `/framework` page under About that presents the firm's seven equal intelle
 
 ```yaml
 ---
-layout: foundation
+layout: article
 title: Intellectual Framework
 category: About
 permalink: /framework/

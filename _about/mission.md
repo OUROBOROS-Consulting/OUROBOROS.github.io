@@ -1,5 +1,5 @@
 ---
-layout: mission
+layout: sections
 title: Mission
 category: Technology · Research · Advocacy
 lede: >

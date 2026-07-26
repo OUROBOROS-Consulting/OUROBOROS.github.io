@@ -1,7 +1,7 @@
 ---
 title: Website Development with Claude by Anthropic
 description: An honest account of using AI as a development collaborator — what it changed, what it didn't, and what it revealed about how good software gets made.
-layout: mission
+layout: sections
 section_layout: stacked
 back_url: /work/
 category: Startup Operations
