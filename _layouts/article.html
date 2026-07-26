@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<div id="progress-bar"></div>
+
+<header class="page-hero">
+  <a class="post-back" href="{{ page.back_url | default: '/services/' | relative_url }}">Back</a>
+  <div class="page-hero-inner{% unless page.headshot or page.hero_svg %} page-hero-inner--single{% endunless %}">
+    <div class="page-hero-text">
+      <p class="post-category">{{ page.category }}</p>
+      <h1 class="page-hero-title">{{ page.title }}</h1>
+      <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+      <p class="page-hero-lede">{{ page.lede }}</p>
+      <div class="page-hero-tags">
+        {% for tag in page.tags %}
+        <div class="hero-cta"><a href="#{{ tag }}" class="btn">{{ tag }}</a></div>
+        {% endfor %}
+      </div>
+    </div>
+    {% if page.headshot %}
+    <div class="hex-portrait">
+      <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
+    </div>
+    {% elsif page.hero_svg %}
+    <div class="page-hero-art">
+      <img src="{{ page.hero_svg | relative_url }}" alt="" class="page-hero-svg" aria-hidden="true" />
+    </div>
+    {% endif %}
+  </div>
+</header>
+
+<div class="page-toc-wrap page-toc-wrap--svc">
+  <article class="page-body">
+    <div class="post-body">
+      {{ content }}
+    </div>
+  </article>
+  {% include toc.html %}
+</div>
+
+<script src="/assets/js/toc.js" defer></script>
+<script>
+  const bar = document.getElementById('progress-bar');
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY;
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    bar.style.width = (scrolled / total * 100) + '%';
+  });
+</script>
