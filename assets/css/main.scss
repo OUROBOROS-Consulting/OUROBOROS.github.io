@@ -46,33 +46,38 @@
 
 
 // ── Light-mode overrides for dark-background sections ────────────────────
-// Nav and hero backgrounds stay dark in light mode — re-anchor --text to
-// dark-mode cream so text remains readable against the dark surface.
+// Nav, footer and heroes keep dark backgrounds in light mode, so their links
+// inherit cream rather than gold to stay legible against that dark surface.
+//
+// This block used to also re-declare nine design tokens (--bg1/2/3, --border,
+// --bright, --subdued, --muted, --gold, --gold-border) scoped to nav+footer.
+// Removed 2026-07-26. The design system has no light mode at all — tokens are
+// defined once on :root, unconditionally — so those declarations only ever
+// restated values that were already in effect, while silently freezing them at
+// whatever they happened to be when the block was written. They had already
+// drifted (--bg1 #141414 vs the real #0c101a, --gold-border #B1935D vs
+// #b39f7b) and would have excluded nav and footer from the navy surface shift.
+// Do not reintroduce token declarations here.
 @media (prefers-color-scheme: light) {
   nav.nav-menu,
   footer,
   #hero,
   .page-hero {
-    --text: #E8E4DC;
     color: var(--text);
 
     a { color: inherit; }
   }
-
-  nav.nav-menu,
-  footer {
-    --bg1: #141414;
-    --bg2: #1E1E1E;
-    --bg3: #252525;
-    --border: #333333;
-    --bright: #FFFFFF;
-    --subdued: #B0AAA0;
-    --muted: #999999;
-    --gold: #C9A84C;
-    --gold-border: #B1935D;
-  }
 }
 
+// ── Marble texture: TWO tile scales only ──────────────────────────────────
+// Marble.png is tiled at exactly two sizes across the whole site:
+//   380px — narrow chrome (.rail, .page-toc)
+//   720px — broad surfaces (.page-hero, footer, .disclaimer-bar, #cta)
+// Adjacent regions at different scales read as different stone. If you add a
+// marble surface, pick one of these two. Do not invent a third.
+// (The 900px tile further down is Pattern-hero.jpg at 7% opacity, a separate
+// asset and not part of this system.)
+//
 // ── Service hero: marble background ───────────────────────────────────────
 // Dark navy scrim over Marble.png keeps the veining subtle and the hero text
 // legible. Overrides the design system's flat `background-image: none`; the
@@ -82,7 +87,7 @@
   background-image:
     linear-gradient(rgba(30, 33, 62, 0.74), rgba(12, 14, 32, 0.88)),
     url("../images/Marble.png");
-  background-size: cover, 620px 620px;
+  background-size: cover, 720px 720px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
   border: 2px solid var(--gold-border);

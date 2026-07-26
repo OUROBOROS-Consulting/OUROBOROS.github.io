@@ -20,7 +20,7 @@ layout: default
     <div class="page-hero-cta">
       <a href="{{ page.pdf | relative_url }}" download class="btn">Download PDF</a>
       {% if page.date %}
-      <p class="svc-price">{{ page.date | date: "%B %Y" }}</p>
+      <p class="page-hero-meta">{{ page.date | date: "%B %Y" }}</p>
       {% endif %}
     </div>
   </div>

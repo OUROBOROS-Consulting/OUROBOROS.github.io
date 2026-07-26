@@ -40,7 +40,7 @@ description: "Consulting services in technology, investigations, design, and sur
       <p class="rc-tag">{{ service.category | default: 'Services' }}</p>
       <h2 class="rc-title">{{ service.title }}</h2>
       {% if service.lede %}<p class="card-desc">{{ service.lede }}</p>{% endif %}
-      {% if service.price %}<p class="svc-price">{{ service.price }}</p>{% endif %}
+      {% if service.price %}<p class="page-hero-meta">{{ service.price }}</p>{% endif %}
       <span class="card-link">Learn more →</span>
     </a>
     {% endfor %}

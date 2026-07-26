@@ -77,12 +77,37 @@ Pick one per section:
 
 Secondary nav is data-driven from `_data/nav.yml`. Each entry supports `active_paths` — a list of additional URL prefixes that mark the item active beyond its own `url`. Use this when a section spans multiple URL roots.
 
+## Styling lives in the other repo
+
+`../ouroboros-design/` owns every token, mixin, and component style. **Read its `README.md` before writing CSS here** — tokens, accent semantics, elevation, class naming, and accessibility invariants are all documented there.
+
+**Never redeclare a design token in this repo.** A `@media (prefers-color-scheme: light)` block used to re-pin nine tokens on nav and footer; the values silently went stale and nearly excluded those elements from a palette change. Removed 2026-07-26, with a comment at `assets/css/main.scss:48` explaining why. The design system has no light mode — tokens are defined once, unconditionally.
+
+**What this repo legitimately owns:** raster-backed textures (the `Marble.png` / `Abstract.png` / `Pattern-hero.jpg` rules), because the image assets live in `assets/images/` here, not in the package.
+
+**Push order:** design repo first, then this one. CI checks out the design repo's default branch with no `ref:`, and pushing the design repo does not trigger this site's workflow.
+
+## Class Prefixes
+
+| Prefix | Scope |
+|---|---|
+| `page-*` | Universal page chrome (hero, body, sections) — every layout |
+| `post-*` | Prose reading chrome — article and announcement layouts |
+| `svc-*` | Service-specific only: `svc-included`, `svc-item*`, `svc-pricing-*`, `svc-rate-principle` |
+| `card-*` | Card internals — home and intake |
+
+⚠ **`assets/js/toc.js` hardcodes `section.page-section[id]` and `.page-section-label p`.** It has broken silently on two separate renames. Grep it before touching any `page-section` class.
+
+⚠ **After any layout rename, run `git ls-tree -r --name-only HEAD -- _layouts/`.** A passing local build proves nothing — untracked files on disk still resolve. A half-staged rename once left 22 pages on `main` with no layout at all.
+
 ## Gotchas
 
 **Narrow text:** `.post-body` has `max-width: 680px` globally. Article pages needing full-width prose require:
 ```scss
 .page-body .post-body { max-width: none; }
 ```
+
+**Hero metadata:** `.page-hero-meta` renders a price on services and a date on PSAs. It was called `.svc-price` until 2026-07-26, which was wrong for the PSA case.
 
 **PSAs:** `section:` front matter (e.g. `Technology`) drives category grouping in `psas.html`. Separate from the `category:` eyebrow label. PDFs live at `assets/files/PSA/<Category>/filename.pdf`.
 
