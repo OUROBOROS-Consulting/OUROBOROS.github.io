@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Building a Personal Safety Plan
 description: Comprehensive framework for assessing threats, establishing support networks, and creating actionable emergency protocols.
 permalink: /resources/tutorial-safety-plan/

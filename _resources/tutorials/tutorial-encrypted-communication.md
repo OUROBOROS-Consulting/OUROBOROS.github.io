@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Setting Up Encrypted Communication on Apple Devices
 description: Verify iMessage E2EE status, configure iCloud Messages with Advanced Data Protection, set up Signal for cross-platform contacts, and audit which devices receive your messages.
 permalink: /resources/tutorial-encrypted-communication/

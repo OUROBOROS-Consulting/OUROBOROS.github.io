@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Glossary
 description: Plain-language definitions of terms used across OUROBOROS Consulting resources.
 permalink: /resources/glossary/

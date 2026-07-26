@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Recognizing and Responding to Deepfakes and Voice Cloning
 description: How to identify AI-generated images, audio, and video — and what to do when synthetic media is used against you.
 permalink: /resources/tutorial-ai-deepfakes/

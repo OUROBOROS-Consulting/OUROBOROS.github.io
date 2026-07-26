@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Protecting Your Data with iCloud Advanced Data Protection
 description: How to enable end-to-end encryption for your iCloud data, set up a recovery method, audit trusted devices, and understand what is and isn't protected by default.
 permalink: /resources/tutorial-icloud-adp/

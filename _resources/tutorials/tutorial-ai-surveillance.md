@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: AI Surveillance and Reducing Your Exposure
 description: How AI-powered facial recognition, behavioral profiling, and data brokerage work — and practical steps to reduce your exposure.
 permalink: /resources/tutorial-ai-surveillance/

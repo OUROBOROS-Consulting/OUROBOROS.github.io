@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Managing Trauma Responses in High-Stress Situations
 description: Techniques for recognizing and coping with trauma triggers, maintaining mental clarity, and accessing appropriate support resources.
 permalink: /resources/tutorial-trauma-responses/

@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Algorithmic Decision Systems — Detecting and Challenging Automated Decisions
 description: How automated systems make consequential decisions about housing, credit, employment, and criminal justice — and the legal tools available to challenge them.
 permalink: /resources/tutorial-ai-algorithmic-decisions/

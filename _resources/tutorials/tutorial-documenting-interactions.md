@@ -1,5 +1,5 @@
 ---
-layout: foundation
+layout: article
 title: Documenting Interactions with Authorities
 description: Best practices for recording conversations, preserving evidence, and maintaining records when dealing with government or institutional entities.
 permalink: /resources/tutorial-documenting-interactions/
