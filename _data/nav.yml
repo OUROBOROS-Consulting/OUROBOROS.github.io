@@ -2,10 +2,10 @@
   url: /services/
   icon: fa-briefcase
   children:
-    - title: Advocacy & Investigation
+    - title: Advocacy & Institutional Navigation
       url: /services/advocacy-investigation/
-    - title: Investigations & Due Diligence
-      url: /services/investigations/
+    - title: Research Literacy & Digital Self-Defense
+      url: /services/osint-literacy/
     - title: Technology & AI
       url: /services/technology/
     - title: Brand & Digital Studio

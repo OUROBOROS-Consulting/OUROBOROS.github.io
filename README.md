@@ -74,7 +74,7 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 </details>
 
 <details>
-<summary><strong>sections</strong> — 8 pages</summary>
+<summary><strong>sections</strong> — 7 pages</summary>
 
 | URL | Source |
 |---|---|
@@ -84,7 +84,6 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 | `/survival-guide.html` | `_about/survival.md` |
 | `/work/cassandra/` | `_case_studies/cassandra.md` |
 | `/work/claudius/` | `_case_studies/claudius.md` |
-| `/work/martha/` | `_case_studies/martha.md` |
 | `/work/sanctuary/` | `_case_studies/sanctuary.md` |
 
 </details>
@@ -96,7 +95,7 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 |---|---|
 | `/services/advocacy-investigation/` | `_services/advocacy-investigation.md` |
 | `/services/design/` | `_services/design.md` |
-| `/services/investigations/` | `_services/investigations.md` |
+| `/services/osint-literacy/` | `_services/osint-literacy.md` |
 | `/services/technology/` | `_services/technology.md` |
 
 </details>

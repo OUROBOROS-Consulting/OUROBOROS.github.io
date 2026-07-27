@@ -291,7 +291,7 @@ hide_cta: true
       <div class="intake-divider track-section" data-track="survivor" style="display:none"></div>
 
       <!-- TRACK: SURVIVOR + INVESTIGATIVE — Digital Profile -->
-      <div class="intake-section track-section" data-track="survivor investigative" style="display:none">
+      <div class="intake-section track-section" data-track="survivor literacy" style="display:none">
         <div class="intake-section-header">
           <span class="intake-section-number track-label">—</span>
           <span class="intake-section-title">Digital &amp; Technical Profile</span>
@@ -379,46 +379,56 @@ hide_cta: true
         </div>
       </div>
 
-      <div class="intake-divider track-section" data-track="survivor investigative" style="display:none"></div>
+      <div class="intake-divider track-section" data-track="survivor literacy" style="display:none"></div>
 
-      <!-- TRACK: INVESTIGATIVE — Research Context -->
-      <div class="intake-section track-section" data-track="investigative" style="display:none">
+      <!-- TRACK: LITERACY — Training Context -->
+      <div class="intake-section track-section" data-track="literacy" style="display:none">
         <div class="intake-section-header">
           <span class="intake-section-number track-label">—</span>
-          <span class="intake-section-title">Research Context</span>
+          <span class="intake-section-title">Training Context</span>
+        </div>
+        <div class="intake-note">
+          I teach research method and digital self-defense. I do not research other people on a client's behalf.
         </div>
         <div class="field-row">
           <div class="field-group">
-            <label for="research-objective">What are you trying to establish or uncover?</label>
-            <textarea id="research-objective" name="research_objective" rows="3"
-              placeholder="Describe the subject, the question, or the gap you need filled..."></textarea>
-          </div>
-        </div>
-        <div class="field-row">
-          <div class="field-group">
-            <label for="existing-evidence">What documentation or evidence do you already have?</label>
-            <textarea id="existing-evidence" name="existing_evidence" rows="2"
-              placeholder="Records, communications, public filings, prior reports..."></textarea>
+            <label for="training-goal">What do you want to be able to do on your own?</label>
+            <textarea id="training-goal" name="training_goal" rows="3"
+              placeholder="Verify sources, run our own records checks, find and remove what's public about me..."></textarea>
           </div>
         </div>
         <div class="field-row">
           <fieldset class="field-group">
-            <legend>Is this research for litigation or legal proceedings?</legend>
+            <legend>Who is being trained?</legend>
             <div class="check-group">
-              <label class="check-item"><input type="radio" name="research_legal_context" value="yes_active"> Yes —
-                active
-                case</label>
-              <label class="check-item"><input type="radio" name="research_legal_context" value="yes_anticipated"> Yes —
-                anticipated</label>
-              <label class="check-item"><input type="radio" name="research_legal_context" value="no"> No — personal
-                knowledge</label>
-              <label class="check-item"><input type="radio" name="research_legal_context" value="other"> Other</label>
+              <label class="check-item"><input type="radio" name="training_audience" value="individual"> Just
+                me</label>
+              <label class="check-item"><input type="radio" name="training_audience" value="small_team"> A small
+                team</label>
+              <label class="check-item"><input type="radio" name="training_audience" value="organization"> A whole
+                organization</label>
+              <label class="check-item"><input type="radio" name="training_audience" value="other"> Other</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="field-row">
+          <fieldset class="field-group">
+            <legend>Which direction matters most right now?</legend>
+            <div class="check-group">
+              <label class="check-item"><input type="checkbox" name="training_focus" value="finding"> Finding and
+                verifying public information</label>
+              <label class="check-item"><input type="checkbox" name="training_focus" value="footprint"> Reducing my own
+                footprint</label>
+              <label class="check-item"><input type="checkbox" name="training_focus" value="media"> Spotting fabricated
+                documents and media</label>
+              <label class="check-item"><input type="checkbox" name="training_focus" value="unsure"> Not sure
+                yet</label>
             </div>
           </fieldset>
         </div>
       </div>
 
-      <div class="intake-divider track-section" data-track="investigative" style="display:none">
+      <div class="intake-divider track-section" data-track="literacy" style="display:none">
       </div>
 
       <!-- TRACK: TECHNICAL — Project Scope -->
@@ -537,7 +547,7 @@ hide_cta: true
   // Service slugs (radio values) → track tokens used in data-track attributes
   var SERVICE_TRACKS = {
     'advocacy-investigation': 'survivor',
-    'investigations': 'investigative',
+    'osint-literacy': 'literacy',
     'technology': 'technical',
     'design': 'studio'
   };
