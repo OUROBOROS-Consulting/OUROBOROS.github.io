@@ -14,7 +14,7 @@ about:
   heading: Engagement Overview
   body: >
     The client is an experienced professional and small business owner with years of domain expertise in her field. Accomplished, perceptive, and highly capable in her work, she was in the process of formalizing her practice into a standalone advisory firm when she sought my help. Like many professionals of her generation, she had navigated her career largely without needing to engage deeply with digital infrastructure — and was now building a firm that required it.
-    "Cassandra" is a pseudonym, and identifying details have been altered to protect the client's privacy.
+    "Cassandra" is a pseudonym. Identifying details have been changed or withheld to protect the client's privacy.
 
 # ── Pull quote ───────────────────────────────────────────────────────
 pull_quote: >

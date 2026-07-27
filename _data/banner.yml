@@ -1,4 +1,6 @@
 visible: true
 type: announcement        # announcement | tagline | brand
-text: "Now accepting new clients for Q3 2026"
+# Keep this copy free of dates and quarters. A date-bound banner goes stale
+# silently and nobody notices until a visitor does.
+text: "Now accepting new clients"
 url: "/intake"            # optional — omit to render as plain text

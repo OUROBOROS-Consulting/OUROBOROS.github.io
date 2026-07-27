@@ -24,10 +24,15 @@
             <h3 class="rc-title">Digital-safety tips and AI tutorials, straight to your inbox.</h3>
             <p class="card-desc">No pitch and no pressure. Just clear steps you can take on your
                 own time to protect your accounts, your devices, and your peace of mind.</p>
-            <div class="cta-newsletter__embed-wrap">
-                <iframe class="cta-newsletter__embed" loading="lazy"
-                    src="{{ site.substack_url }}/embed?transparent=1&light=1"
-                    title="Subscribe to the OUROBOROS newsletter" frameborder="0" scrolling="no"></iframe>
+            {%- comment -%}
+              Link, not an embed. The Substack iframe was the last third-party
+              request on the site and it fired on every page, including the
+              survivor case studies. A visit to those pages should not be
+              reported to a third party. Do not reinstate the iframe.
+            {%- endcomment -%}
+            <div class="cta-newsletter__action">
+                <a href="{{ site.substack_url }}" class="btn btn--ghost" target="_blank"
+                    rel="noopener">Subscribe on Substack</a>
             </div>
         </div>
 
