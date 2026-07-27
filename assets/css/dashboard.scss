@@ -23,7 +23,9 @@
   --pend-border:   rgba(36, 72, 130, 0.35);
 
   --accent-gate:   var(--gold);
-  --accent-surv:   #c0392b;
+  // #c0392b was 3.09:1 on --bg2 — under AA for the 12px .gate-card__label it
+  // colours. Lightened to clear 4.5:1 on every surface (5.03:1 floor).
+  --accent-surv:   #e07a6d;
   --accent-adv:    var(--sage);
   --accent-pol:    var(--amethyst);
   --accent-inst:   var(--steel);
