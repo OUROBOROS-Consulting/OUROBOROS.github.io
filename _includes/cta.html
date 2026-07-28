@@ -11,9 +11,20 @@
                   heading list learns nothing. The <h3> carries the meaning.
                 {%- endcomment -%}
                 <p class="rc-answer" aria-hidden="true">YES</p>
-                <h3 class="rc-title">{{ page.cta_title | default: "Let's talk about your project." }}</h3>
-                <p class="card-desc">{{ page.cta_body | default: "Reach out with a brief description of what
-                    you're working on and your availability." }}</p>
+                {%- comment -%}
+                  cta_body is the heading when a page gives no cta_title, which
+                  is every page today. Pages write cta_body as the whole pitch
+                  ("Navigating a dispute while managing trauma? Let's talk
+                  through your situation."), so a generic title stacked above it
+                  reads as boilerplate and, on the survivor tutorials, as the
+                  wrong register entirely. Set cta_title only when the page
+                  wants a separate headline and body.
+                {%- endcomment -%}
+                <h3 class="rc-title">{{ page.cta_title | default: page.cta_body | default: "Let's talk about your
+                    project." }}</h3>
+                {%- if page.cta_title and page.cta_body %}
+                <p class="card-desc">{{ page.cta_body }}</p>
+                {%- endif %}
                 <div class="hero-cta">
                     <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">{{ page.cta_label |
                         default: 'Book a Free Consultation' }}
