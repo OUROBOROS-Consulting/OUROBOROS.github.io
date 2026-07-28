@@ -1,13 +1,19 @@
-<section id="cta">
+<section id="cta" aria-labelledby="cta-question">
+    <h2 id="cta-question" class="section-label">Ready to Start?</h2>
+
     <div class="cta-split">
 
         <div class="related-card cta-primary">
             <div class="about-header">
-                <p class="section-label">Ready to Start?</p>
-                <h2 class="about-heading">
-                    {{ page.cta_body | default: "Reach out with a brief description of what you're working
-                    on and your availability." }}
-                </h2>
+                {%- comment -%}
+                  YES / NO are aria-hidden: they answer the visible section
+                  heading above, and a screen reader reading "YES" out of a flat
+                  heading list learns nothing. The <h3> carries the meaning.
+                {%- endcomment -%}
+                <p class="rc-answer" aria-hidden="true">YES</p>
+                <h3 class="rc-title">{{ page.cta_title | default: "Let's talk about your project." }}</h3>
+                <p class="card-desc">{{ page.cta_body | default: "Reach out with a brief description of what
+                    you're working on and your availability." }}</p>
                 <div class="hero-cta">
                     <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">{{ page.cta_label |
                         default: 'Book a Free Consultation' }}
@@ -20,8 +26,8 @@
         </div>
 
         <div class="related-card cta-newsletter">
-            <p class="rc-tag">Not Ready to Reach Out?</p>
-            <h3 class="rc-title">Digital-safety tips and AI tutorials, straight to your inbox.</h3>
+            <p class="rc-answer" aria-hidden="true">NO</p>
+            <h3 class="rc-title">Not yet. Send digital-safety tips and AI tutorials to my inbox instead.</h3>
             <p class="card-desc">No pitch and no pressure. Just clear steps you can take on your
                 own time to protect your accounts, your devices, and your peace of mind.</p>
             {%- comment -%}
