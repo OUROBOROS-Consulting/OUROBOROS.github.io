@@ -23,7 +23,9 @@ This is a feature, not a shortfall. Legal questions deserve a licensed attorney 
 
 Every engagement here is one of two things: helping you obtain and organize records that are yours to ask for, or teaching you a skill you then own. I do not accept work directed at a third party, on anyone's behalf, for any reason.
 
-That boundary is ethical before it is anything else. The same techniques that let a journalist verify a source let an abuser find someone who moved. I screen every engagement for purpose, and I decline what I cannot establish.
+Part of that boundary is not mine to choose. Minnesota licenses investigative work under Minn. Stat. §326.338, and I am not licensed. The rest of it I would hold anyway: the same techniques that let a journalist verify a source let an abuser find someone who moved. I screen every engagement for purpose, and I decline what I cannot establish.
+
+The [FAQ](/faq/) sets out exactly where that line falls, including what happens inside a training session.
 
 ## This is not mental-health or crisis care
 

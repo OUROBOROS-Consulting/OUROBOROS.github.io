@@ -36,6 +36,7 @@
     - /mission
     - /framework
     - /team
+    - /faq
   children:
     - title: Team
       url: /team/
@@ -45,3 +46,5 @@
       url: /case-studies/
     - title: Mission
       url: /mission
+    - title: FAQ
+      url: /faq/

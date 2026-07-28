@@ -22,13 +22,13 @@ The site itself does not log your visit. It is hosted on GitHub Pages, which ser
 
 You do not have to believe me. Open your browser's developer tools and go to the Network tab. Reload any page. You will see what the page loads and where each request goes.
 
-Every font, every icon, every script on this site is served from this site. Nothing calls out to Google Fonts. Nothing calls a content delivery network. Nothing loads from a third party. The one exception is described below, and you will see it in the network tab too.
+Every font, every icon, every script on this site is served from this site. Nothing calls out to Google Fonts. Nothing calls a content delivery network. Nothing loads from a third party. Reading this site sends no request anywhere but this site.
 
-## The one exception: newsletter signup
+## Links that leave this site
 
-Some pages, the ones with the contact call-to-action, include a newsletter signup box. That box is an embedded frame from Substack (`ouroborosconsult.substack.com`). When that frame loads, Substack can see your IP address, the same way any website you open can see it.
+The footer and the contact call-to-action carry links to the newsletter on Substack (`ouroborosconsult.substack.com`) and to other outside pages. Those are ordinary links. Nothing loads from Substack while you are reading here, and no request reaches them until you choose to click.
 
-I am telling you this plainly because you deserve to know before it happens. If seeing that request matters to your safety, you now know which pages carry it and what it does.
+Once you follow a link, you are on someone else's site under their rules. Substack can see your IP address the same way any site you open can. That is true of every outbound link on the internet, and I would rather name it than let you assume this site can protect you past its own edge.
 
 ## The contact form
 
