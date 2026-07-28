@@ -93,7 +93,7 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 
 | URL | Source |
 |---|---|
-| `/services/advocacy-investigation/` | `_services/advocacy-investigation.md` |
+| `/services/advocacy/` | `_services/advocacy.md` |
 | `/services/design/` | `_services/design.md` |
 | `/services/research-literacy/` | `_services/research-literacy.md` |
 | `/services/technology/` | `_services/technology.md` |

@@ -41,7 +41,7 @@ included:
     description: Reference material your team keeps. The point is that you stop needing me.
 policies:
   - item: "Intro call: Free (30 min)"
-  - item: "I teach method. I do not conduct investigations on behalf of clients, and I am not a licensed private detective"
+  - item: "I teach method. I do not run research on a third party for a client"
   - item: "No training delivered where the purpose is locating, monitoring, or pursuing another person — every engagement is screened for misuse"
   - item: "Survivor sliding scale: $50/hr, available on request"
   - item: "Response time: Within 72 hours"
@@ -73,7 +73,7 @@ pricing:
       Written reference material built for your team's specific work, priced as a fixed-scope project.
 ---
 
-*Navigating this as a survivor of abuse or institutional betrayal? [Advocacy & Institutional Navigation](/services/advocacy-investigation/) may be the better starting point.*
+*Navigating this as a survivor of abuse or institutional betrayal? [Advocacy & Institutional Navigation](/services/advocacy/) may be the better starting point.*
 
 Court records, corporate filings, property databases, licensing boards, news archives. The public record holds far more than most people expect, and nearly all of it is free. The barrier was never access. It is knowing where to look, how to confirm that what you found is real, and how to write down where it came from so the work survives someone checking it.
 
@@ -87,9 +87,9 @@ For most people that is a nuisance. For someone being pursued, it is a map. The 
 
 ## What I Do Not Do
 
-**I do not run investigations for clients.** I am not a licensed private detective, and I do not accept work that involves researching a third party on someone else's behalf. If that is what you need, you need a licensed investigator, and I will say so on the intro call rather than waste your time.
+**I teach. I do not do the work for you.** I do not accept engagements that involve researching a third party on someone else's behalf. If that is what you need, I am the wrong person, and I will say so on the intro call rather than waste your time.
 
-The reason for the boundary is not only regulatory. The techniques that let a journalist verify a source are the same techniques that let an abuser find someone who moved. I screen every engagement for that, and I decline work whose purpose I cannot establish. A person asking to be taught how to locate someone specific is not a training client.
+The reason for the boundary is not only regulatory. The techniques that let a journalist verify a source are the same techniques that let an abuser find someone who moved. I screen every engagement for that, and I decline work whose purpose I cannot establish. A person asking to be taught how to locate someone specific is not a training client, and I say no.
 
 ## Start Free
 

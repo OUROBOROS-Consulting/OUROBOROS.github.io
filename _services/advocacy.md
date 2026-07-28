@@ -2,7 +2,7 @@
 layout: service
 title: Advocacy & Institutional Navigation
 icon: fa-gavel
-hero_svg: /assets/images/hero-advocacy-investigation.svg
+hero_svg: /assets/images/hero-advocacy.svg
 description: "Precision navigation through hostile institutions — documentation strategy, your own records, FOIA, and a knowledgeable advocate in your corner."
 category: Services
 order: 1
@@ -47,7 +47,7 @@ specializations:
   - Records for survivors, veterans, and institutional survivors
 policies:
   - item: "Initial consultation: Free (45 min)"
-  - item: "I am not an attorney and not a licensed private detective. I do not give legal advice and I do not investigate third parties"
+  - item: "I work only with your own records. I do not take work aimed at a third party, and I do not give legal advice"
   - item: "Travel surcharge: +$25/hr for in-person outside Minneapolis metro"
   - item: "Retainer discount: 10% off 20+ hours booked upfront"
   - item: "Survivor sliding scale: $50/hr, available on request"
@@ -90,7 +90,7 @@ Most survivors face a choice: hire an attorney (expensive, constrained to legal 
 
 Institutions rely on your not knowing how they work. I do. I understand your rights, which processes produce results and which are designed to exhaust you, and how to document your situation so it speaks for itself. My approach is trauma-informed: paced for your safety, grounded in what actually happened, built on your expertise about your own situation.
 
-What I do not do: investigate other people. I am not a licensed private detective, I do not take work aimed at a third party, and I do not do surveillance, trespass, or unauthorized access. What I do is work with your own record. Request the files you are entitled to, organize what you already hold, identify patterns in how the institution has behaved toward you, and help you decide which channel to use and when.
+I work with your own record and nothing else. No work aimed at a third party, no surveillance, no trespass, no unauthorized access. What that looks like in practice: request the files you are entitled to, organize what you already hold, identify patterns in how the institution has behaved toward you, and help you decide which channel to use and when.
 
 I am also not an attorney. Nothing here is legal advice, and I do not tell you what your rights are or what to file. If you need that, you need a lawyer, and I will say so plainly.
 

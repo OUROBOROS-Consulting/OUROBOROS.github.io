@@ -3,7 +3,7 @@
   icon: fa-briefcase
   children:
     - title: Advocacy & Institutional Navigation
-      url: /services/advocacy-investigation/
+      url: /services/advocacy/
     - title: Research Literacy & Digital Self-Defense
       url: /services/research-literacy/
     - title: Technology & AI
