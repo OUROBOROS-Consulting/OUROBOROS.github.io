@@ -50,12 +50,12 @@ policies:
   - item: "I am not an attorney and not a licensed private detective. I do not give legal advice and I do not investigate third parties"
   - item: "Travel surcharge: +$25/hr for in-person outside Minneapolis metro"
   - item: "Retainer discount: 10% off 20+ hours booked upfront"
-  - item: "Survivor sliding scale: Available upon request — no one turned away for inability to pay"
+  - item: "Survivor sliding scale: $50/hr, available on request"
   - item: "Response time: Within 72 hours"
 rate_principle: >
   This page mixes sliding-scale advocacy with paid documentation work. Advocacy sessions
-  are set by your circumstances, and no one is turned away for inability to pay. The
-  paid records and chronology tiers fund that access. We set every figure together
+  are set by your circumstances, down to a $50/hr floor. The paid records and
+  chronology tiers fund that access. We set every figure together
   before anything begins.
 pricing:
   - name: Initial Consultation
@@ -63,9 +63,9 @@ pricing:
     notes: >
       A no-commitment conversation to understand your situation and determine whether I can be useful to you. No referral required.
   - name: Advocacy Sessions
-    rate: Sliding scale — $0 to $75/hr
+    rate: $50/hr
     notes: >
-      Rate set by your circumstances. No one is turned away for inability to pay. Ask during the consultation.
+      For survivors, seniors, and veterans. Ask during the consultation.
   - name: Record & Document Review
     rate: $50/hr
     notes: >
@@ -94,7 +94,7 @@ What I do not do: investigate other people. I am not a licensed private detectiv
 
 I am also not an attorney. Nothing here is legal advice, and I do not tell you what your rights are or what to file. If you need that, you need a lawyer, and I will say so plainly.
 
-*Need to learn the research skills yourself, or find out what the internet exposes about you? See [Research Literacy & Digital Self-Defense](/services/osint-literacy/).*
+*Need to learn the research skills yourself, or find out what the internet exposes about you? See [Research Literacy & Digital Self-Defense](/services/research-literacy/).*
 
 ## AI and the Acceleration of Coercive Control
 

@@ -43,11 +43,11 @@ policies:
   - item: "Intro call: Free (30 min)"
   - item: "I teach method. I do not conduct investigations on behalf of clients, and I am not a licensed private detective"
   - item: "No training delivered where the purpose is locating, monitoring, or pursuing another person — every engagement is screened for misuse"
-  - item: "Survivor sliding scale: Available upon request — no one turned away for inability to pay"
+  - item: "Survivor sliding scale: $50/hr, available on request"
   - item: "Response time: Within 72 hours"
 rate_principle: >
   Organizational training funds the sliding scale. A newsroom or a law firm paying
-  a workshop rate is what makes it possible to sit with a survivor for free and
+  a workshop rate is what makes it possible to sit with a survivor at $50/hr and
   walk her through taking her own address off the internet. We set every figure
   together before anything begins.
 pricing:
@@ -56,19 +56,19 @@ pricing:
     notes: >
       No commitment. We work out whether training is the right fit, and if it is not, I say so.
   - name: Sliding Scale Sessions
-    rate: $0 to $75/hr
+    rate: $50/hr
     notes: >
-      For survivors, seniors, and veterans. Rate set by your circumstances. No one is turned away for inability to pay.
+      For survivors, seniors, and veterans. One rate, no means test, no paperwork.
   - name: One-on-One Training
-    rate: $75–$125/hr
+    rate: $95/hr
     notes: >
       Individual instruction, paced to you. Most people want three to five sessions, not a standing engagement.
   - name: Organizational Workshops
-    rate: $150/hr
+    rate: $1,200 half-day / $2,000 full day
     notes: >
-      Groups, delivered live. Half-day and full-day formats available, quoted to scope and headcount.
+      Flat fee, groups delivered live. For a team of eight, a half-day is $150 a person for a skill they keep.
   - name: Curriculum Development
-    rate: Contact me
+    rate: Fixed scope, from $2,500
     notes: >
       Written reference material built for your team's specific work, priced as a fixed-scope project.
 ---

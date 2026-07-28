@@ -95,7 +95,7 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 |---|---|
 | `/services/advocacy-investigation/` | `_services/advocacy-investigation.md` |
 | `/services/design/` | `_services/design.md` |
-| `/services/osint-literacy/` | `_services/osint-literacy.md` |
+| `/services/research-literacy/` | `_services/research-literacy.md` |
 | `/services/technology/` | `_services/technology.md` |
 
 </details>
