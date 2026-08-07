@@ -156,7 +156,10 @@ footer,
   border-top: 1.5px solid var(--gold-border);
 }
 
+// The near-black scrim below paints over the package's themed `var(--bg1)`, so
+// this band is a permanent dark surface and needs the island treatment too.
 #cta {
+  @include dark-island;
   background-image:
     linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
     url("../images/Abstract.png");

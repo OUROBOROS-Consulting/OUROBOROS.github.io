@@ -23,6 +23,41 @@
     border-bottom: none;
     position: relative;
     overflow: hidden;
+    /* Permanent dark island: an 80-90% black scrim over Marble.png, so this
+       masthead stays dark in both themes. Full dark-island token set,
+       hand-copied because this file has no @use of the design package. Keep in
+       sync with ouroboros-design/scss/_base.scss's dark-tokens mixin. */
+    --bg1: #0c101a;
+    --bg2: #1a1d26;
+    --bg3: #22262f;
+    --border: #30343e;
+    --calloutbg: #252831;
+    --shadow: #06080d;
+    --bright: #FFFFFF;
+    --text: #E8E4DC;
+    --subdued: #B0AAA0;
+    --muted: #999999;
+    --gold: #C9A84C;
+    --gold-dim: rgba(201, 168, 76, 0.35);
+    --gold-ghost: rgba(201, 168, 76, 0.12);
+    --gold-border: #b39f7b;
+    --steel: #7F94A6;
+    --steel-dim: rgba(127, 148, 166, 0.35);
+    --steel-ghost: rgba(127, 148, 166, 0.12);
+    --amethyst: #A284CA;
+    --amethyst-dim: rgba(162, 132, 202, 0.35);
+    --amethyst-ghost: rgba(162, 132, 202, 0.12);
+    --sage: #6DA187;
+    --sage-dim: rgba(109, 161, 135, 0.35);
+    --sage-ghost: rgba(109, 161, 135, 0.12);
+    --teal: #5DA19C;
+    --teal-dim: rgba(93, 161, 156, 0.35);
+    --teal-ghost: rgba(93, 161, 156, 0.12);
+    --ruby: #ba6868;
+    --claude: #E8640A;
+    --sapphire: var(--steel);
+    --emerald: var(--sage);
+    color: var(--text);
   }
 
   .intake-masthead::after {
