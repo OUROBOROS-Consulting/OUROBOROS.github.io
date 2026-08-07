@@ -173,6 +173,31 @@
     gap: 0.6rem;
   }
 
+  /* Corner icon: same treatment as the home services cards, sized down because
+     this grid is four across. Two-class selectors so they beat the design
+     package's bare .card-icon rules regardless of stylesheet order. */
+  .service-card-inner:has(.card-icon) {
+    position: relative;
+  }
+
+  .service-card-inner .card-icon {
+    position: absolute;
+    top: 1.4rem;   /* matches .service-card-inner padding */
+    right: 1.2rem;
+    width: clamp(28px, 22%, 40px);
+    margin-bottom: 0;
+    font-size: 1.6rem;
+    color: var(--gold);
+  }
+
+  /* Only the title sits beside the icon, so only the title gives up width. The
+     min-height matches the icon box, which guarantees the description always
+     starts below it and can stay full width. */
+  .service-card-inner:has(.card-icon) .service-card-title {
+    padding-right: calc(40px + 0.6rem);
+    min-height: 40px;
+  }
+
   .service-card:hover .service-card-inner {
     border-color: var(--gold-dim);
   }
