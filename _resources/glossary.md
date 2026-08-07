@@ -1,6 +1,8 @@
 ---
 layout: article
 title: Glossary
+icon: fa-book-open
+category: Resources
 description: Plain-language definitions of terms used across OUROBOROS Consulting resources.
 permalink: /resources/glossary/
 ---

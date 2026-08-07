@@ -45,10 +45,12 @@ layout: default
                       that jumps to the matching section id on the page
        headshot     — path to portrait image (optional)
        headshot_alt — alt text for that image (required if headshot is set)
+       icon         — Font Awesome class (e.g. fa-microscope), used when there
+                      is no headshot; renders as the right-column glyph
 
      CSS notes:
-       `.page-hero-inner--single` is added when there is NO headshot —
-       it switches the grid from two columns to one centred column.
+       `.page-hero-inner--single` is added when there is NO headshot and no
+       icon — it switches the grid from two columns to one centred column.
      ══════════════════════════════════════════════════════════════════════ -->
 <header class="page-hero">
 
@@ -56,7 +58,7 @@ layout: default
   <a class="post-back" href="{{ page.back_url | default: '/' | relative_url }}">Back</a>
 
   <!-- Two-column grid: text left, portrait right (portrait is optional) -->
-  <div class="page-hero-inner{% unless page.headshot %} page-hero-inner--single{% endunless %}">
+  <div class="page-hero-inner{% unless page.headshot or page.icon %} page-hero-inner--single{% endunless %}">
 
     <!-- Left column: all text content -->
     <div class="page-hero-text">
@@ -77,10 +79,14 @@ layout: default
       </div>
     </div><!-- /page-hero-text -->
 
-    <!-- Right column: hexagon-cropped portrait (only if headshot is set) -->
+    <!-- Right column: hexagon-cropped portrait, else a Font Awesome glyph -->
     {% if page.headshot %}
     <div class="hex-portrait">
       <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
+    </div>
+    {% elsif page.icon %}
+    <div class="page-hero-art">
+      <i class="fa-solid {{ page.icon }} page-hero-icon" aria-hidden="true"></i>
     </div>
     {% endif %}
 

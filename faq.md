@@ -1,6 +1,7 @@
 ---
 layout: article
 title: Frequently Asked Questions
+icon: fa-circle-question
 category: About
 permalink: /faq/
 back_url: /about/
@@ -17,7 +18,7 @@ cta_body: Still have a question I did not answer?
 
 Four things, and they are less related than the word "consulting" makes them sound.
 
-I help people navigate institutions that are not built to be navigated. I teach research and digital self-defense as skills you keep. I build technology and AI systems for people and small organizations. And I design brands and websites.
+I help people navigate institutions that are not built to be navigated. I teach courses in AI, public records research, digital self-defense, and the Mac sitting in front of you. I build technology and AI systems for people and small organizations. And I design brands and websites.
 
 The first two exist because I have been through institutional processes without help and know what that costs. The second two are how I make a living, and they fund the first two.
 
@@ -28,7 +29,7 @@ The clearest way to tell them apart is by who does the work.
 | Service | Who does the work | Typical rate |
 |---|---|---|
 | [Advocacy & Institutional Navigation](/services/advocacy/) | We do it together, on your own records | $50/hr sliding, $125 to $225 for records and chronology work |
-| [Research Literacy & Digital Self-Defense](/services/research-literacy/) | You do it, I teach you how | $50/hr sliding, $95/hr individual, $1,200 half-day workshop |
+| [Courses & Coaching](/services/courses/) | You do it, I teach you how | $75 to $150 a session, $1,200 half-day workshop |
 | [Technology & AI](/services/technology/) | I build it and hand you the keys | $150 to $375/hr |
 | [Brand & Digital Studio](/services/design/) | I build it and hand you the keys | $100 to $200/hr |
 

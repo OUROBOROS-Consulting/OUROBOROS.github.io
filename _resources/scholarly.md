@@ -1,5 +1,6 @@
 ---
 title: Scholarly Resources
+icon: fa-microscope
 description: Academic literature on coercive control, betrayal trauma, psychopathology, and institutional failure.
 layout: sections
 section_layout: stacked
@@ -56,10 +57,6 @@ sections:
   - id: workplace-abuse
     heading: Workplace Abuse
     bibtex_src: /assets/bib/workplace-abuse.bib
-
-  - id: tech-abuse
-    heading: Technology-Facilitated Abuse
-    bibtex_src: /assets/bib/tech-abuse.bib
 
   - id: context
     heading: A Note on This List
