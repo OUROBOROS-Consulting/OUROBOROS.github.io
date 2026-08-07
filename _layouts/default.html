@@ -60,6 +60,20 @@
     <!-- Self-hosted fonts — no third-party requests (see /assets/fonts/LICENSE.md) -->
     <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}" />
     {% if page.noindex %}<meta name="robots" content="noindex,nofollow" />{% endif %}
+    <script>
+      // Blocking, inline, runs before any stylesheet paints. Applies a
+      // previously-chosen theme immediately so there is no flash of the
+      // wrong theme. No stored choice = follow the OS preference, which is
+      // handled purely in CSS (prefers-color-scheme) — nothing to do here.
+      (function () {
+        try {
+          var stored = localStorage.getItem('ouroboros-theme');
+          if (stored === 'light' || stored === 'dark') {
+            document.documentElement.setAttribute('data-theme', stored);
+          }
+        } catch (err) { /* localStorage may be blocked; OS preference still applies via CSS */ }
+      })();
+    </script>
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
     {% if page.layout == 'dashboard' %}<link rel="stylesheet" href="{{ '/assets/css/dashboard.css' | relative_url }}" />{% endif %}
     {% if page.extra_css %}<link rel="stylesheet" href="{{ '/assets/css/' | append: page.extra_css | append: '.css' | relative_url }}" />{% endif %}
