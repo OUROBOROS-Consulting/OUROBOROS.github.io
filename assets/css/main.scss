@@ -27,6 +27,10 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: background 0.15s ease, transform 0.15s ease;
 
+  @include light-mode {
+    box-shadow: 0 2px 10px rgba(28, 32, 41, 0.2);
+  }
+
   &:hover,
   &:focus {
     background: #a52222;
@@ -45,29 +49,15 @@
 }
 
 
-// ── Light-mode overrides for dark-background sections ────────────────────
-// Nav, footer and heroes keep dark backgrounds in light mode, so their links
-// inherit cream rather than gold to stay legible against that dark surface.
-//
-// This block used to also re-declare nine design tokens (--bg1/2/3, --border,
-// --bright, --subdued, --muted, --gold, --gold-border) scoped to nav+footer.
-// Removed 2026-07-26. The design system has no light mode at all — tokens are
-// defined once on :root, unconditionally — so those declarations only ever
-// restated values that were already in effect, while silently freezing them at
-// whatever they happened to be when the block was written. They had already
-// drifted (--bg1 #141414 vs the real #0c101a, --gold-border #B1935D vs
-// #b39f7b) and would have excluded nav and footer from the navy surface shift.
+// ── Light mode ─────────────────────────────────────────────────────────────
+// The design system now has a real light mode (_base.scss dark-tokens /
+// light-tokens / light-mode / dark-island — see its README). Nav, footer,
+// #hero, and .page-hero are dark-island surfaces in the package itself
+// (_nav-primary.scss, _footer.scss, _home.scss, _service.scss) and the
+// marble surfaces below in this file are dark-island too, so none of them
+// need a manual color/link override here anymore — dark-island keeps their
+// --text/--gold tokens pinned to dark regardless of the active theme.
 // Do not reintroduce token declarations here.
-@media (prefers-color-scheme: light) {
-  nav.nav-menu,
-  footer,
-  #hero,
-  .page-hero {
-    color: var(--text);
-
-    a { color: inherit; }
-  }
-}
 
 // ── Marble texture: TWO tile scales only ──────────────────────────────────
 // Marble.png is tiled at exactly two sizes across the whole site:
@@ -84,6 +74,7 @@
 // navy `--bg-hero` stays as the base fallback. Site-owned because the raster
 // asset lives in this repo's assets/images, not the shared design package.
 .page-hero {
+  @include dark-island;
   background-image:
     linear-gradient(rgba(30, 33, 62, 0.74), rgba(12, 14, 32, 0.88)),
     url("../images/Marble.png");
@@ -103,6 +94,7 @@
 nav.nav-menu,
 .rail,
 .page-toc {
+  @include dark-island;
   background-image:
     linear-gradient(rgba(18, 18, 18, 0.88), rgba(10, 10, 10, 0.93)),
     url("../images/Marble.png");
@@ -146,6 +138,7 @@ body {
 #psa-section-header,
 footer,
 .disclaimer-bar {
+    @include dark-island;
     background-image:
       linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
       url("../images/Marble.png");

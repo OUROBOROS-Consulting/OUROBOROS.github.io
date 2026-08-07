@@ -1,6 +1,22 @@
 # TODO: Add 1-2 anonymized survivor/advocacy testimonials (with explicit consent).
 # Contact Apostolos to supply. Do not fabricate quotes or attributions.
 
+# D.A.K.: quoted with his permission (granted 2026-08-06). INITIALS ONLY.
+# Apostolos narrowed the attribution on 2026-08-06 after the full name shipped.
+# Do not restore the full name here or anywhere else on the site.
+# Excerpt is contiguous with ellipses where cut, per the source file's rule.
+# Full text and identity: vault _Firm/Marketing/Testimonials/, dated 2026-08-02.
+# Age added 2026-08-06 at Apostolos's direction, to evidence teaching across age.
+# His letter opens "I am 78 years old"; published as "late seventies" so the page
+# does not carry an exact age that goes stale. Do not sharpen it back to a number.
+- title: From Skeptic to Daily User
+  tag: Teaching
+  description: >
+    I had become skeptical of AI for a multitude of reasons... Through conversations with Apostolos, I began to open my eyes, so to speak, and then my ears... I am now an avid user of Claude. I'm using it in ways I never would have thought possible...
+    His sensitivity to people who ask basic questions is remarkable. He listens patiently all the way to the end, no matter how long, repetitive, or elementary the question might be, and he responds to every level of competency without ever making someone feel behind.
+  reference: D.A.K., medical illustrator in his late seventies
+  link: "#"
+
 - title: Operational Continuity
   tag: Technology
   description: >
@@ -33,8 +49,9 @@
   tag: Commitment
   type: commitment
   description: >
-    What to expect in sensitive engagements: full confidentiality, plain-language reporting,
-    no surprises, and zero tolerance for institutional pressure.
+    What to expect in sensitive engagements: confidentiality by default, with the limits
+    stated in writing before you sign, plain-language reporting, no surprises, and zero
+    tolerance for institutional pressure.
   reference: OUROBOROS Consulting — Working Principles
   link: "#"
 

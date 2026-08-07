@@ -154,3 +154,46 @@ initCarousel('testimonials', true);  // auto-advances every 7s
     lastEsc = now;
   });
 })();
+
+// ── Theme toggle ───────────────────────────────────────────────────────────
+// Persists an explicit choice in localStorage under 'ouroboros-theme'. No
+// stored value = follow the OS preference, handled purely in CSS. The
+// blocking inline script in <head> already applied any stored choice before
+// this file loaded, so this only wires the button and keeps its icon/label
+// in sync.
+(function initThemeToggle() {
+  const STORAGE_KEY = 'ouroboros-theme';
+  const btn = document.getElementById('theme-toggle');
+  if (!btn) return;
+
+  const icon = btn.querySelector('i');
+  const label = btn.querySelector('.rail-tx');
+
+  function currentTheme() {
+    const stored = document.documentElement.getAttribute('data-theme');
+    if (stored === 'light' || stored === 'dark') return stored;
+    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  }
+
+  function applyIcon(theme) {
+    if (icon) {
+      icon.classList.toggle('fa-moon', theme === 'dark');
+      icon.classList.toggle('fa-sun', theme === 'light');
+    }
+    if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
+    btn.setAttribute('aria-label', theme === 'dark'
+      ? 'Dark theme. Activate to switch to light theme.'
+      : 'Light theme. Activate to switch to dark theme.');
+  }
+
+  applyIcon(currentTheme());
+
+  btn.addEventListener('click', () => {
+    const next = currentTheme() === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try {
+      localStorage.setItem(STORAGE_KEY, next);
+    } catch (err) { /* storage may be blocked; theme still applies for this page load */ }
+    applyIcon(next);
+  });
+})();

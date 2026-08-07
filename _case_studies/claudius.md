@@ -189,5 +189,5 @@ sections:
         prompt-and-paste. No treating AI output as ready-to-ship. Just clear thinking, high standards, and
         delivery that reflects them.
 
-        [See the Agentic AI Strategy & Integration service](/services/agentic-ai/) if you want to explore this model further.
+        [See the Technology & AI Consulting service](/services/technology/) if you want to explore this model further.
 ---
