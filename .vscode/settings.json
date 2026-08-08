@@ -27,5 +27,7 @@
       "titleBar.inactiveForeground": "#e7e7e799",
       "sideBar.background": "#000000"
    },
-   "peacock.color": "#2e010a"
+   "peacock.color": "#2e010a",
+   "editor.fontFamily": "",
+   "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen"
 }

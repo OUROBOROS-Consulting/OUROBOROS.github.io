@@ -28,7 +28,7 @@ The first two exist because I have been through institutional processes without 
 The clearest way to tell them apart is by who does the work.
 
 | Service | Who does the work | Typical rate |
-|---|---|---|
+| --- | --- | --- |
 | [Advocacy & Institutional Navigation](/services/advocacy/) | We do it together, on your own records | $50/hr sliding, $125 to $225 for records and chronology work |
 | [Courses & Coaching](/services/courses/) | You do it, I teach you how | $75 to $150 a session, $1,200 half-day workshop |
 | [Technology & AI](/services/technology/) | I build it and hand you the keys | $150 to $375/hr |

@@ -17,7 +17,7 @@ permalink: /case-studies/
       </p>
     </div>
     <div class="page-hero-cta">
-      <p class="work-count">{{ site.case_studies.size }} {% if site.case_studies.size == 1 %}engagement{% else
+      <p class="band-count">{{ site.case_studies.size }} {% if site.case_studies.size == 1 %}engagement{% else
         %}engagements{% endif %}</p>
     </div>
     <div class="page-hero-emblem page-hero-emblem--file" aria-hidden="true">
@@ -36,9 +36,9 @@ permalink: /case-studies/
   {% assign cat_studies = sorted_studies | where: "category", cat_name %}
 
   <section class="psa-section">
-    <div class="psa-section-header">
-      <h2 class="psa-section-heading">{{ cat_name }}</h2>
-      <span class="work-count">{{ cat_studies.size }} {% if cat_studies.size == 1 %}engagement{% else %}engagements{%
+    <div class="band-header band-header--compact">
+      <h2 class="band-heading band-heading--compact">{{ cat_name }}</h2>
+      <span class="band-count">{{ cat_studies.size }} {% if cat_studies.size == 1 %}engagement{% else %}engagements{%
         endif %}
       </span>
     </div>

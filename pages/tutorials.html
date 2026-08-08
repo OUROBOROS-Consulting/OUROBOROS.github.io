@@ -24,8 +24,8 @@ description: "Step-by-step privacy, security, and safety tutorials — from Appl
   {% assign sections = site.data.tutorials | group_by: "section" %}
   {% for group in sections %}
   <div class="psa-section">
-    <div class="psa-section-header">
-      <h2 class="psa-section-heading">{{ group.name }}</h2>
+    <div class="band-header band-header--compact">
+      <h2 class="band-heading band-heading--compact">{{ group.name }}</h2>
     </div>
     <div class="related-grid">
       {% for tutorial in group.items %}

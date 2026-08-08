@@ -240,11 +240,12 @@ footer,
 // Near-black scrim over Marble.png so the veining reads as black stone. Same
 // asset as the page-hero, darker scrim. Overrides the design system's flat
 // #0D0D0D fallback. Site-owned because the raster lives in this repo.
-.work-header,
-.testimonials-header,
-.about-header,
+// `#psa-section-header` sat in this list until 2026-08-08. It was an ID selector
+// for a class, so it matched nothing and the PSA / tutorial / case-study group
+// headers went without the marble for as long as they existed. Folding them into
+// .band-header--compact fixes that by name rather than by patch.
+.band-header,
 .page-body--banded .page-section-label,
-#psa-section-header,
 footer,
 .disclaimer-bar {
     @include dark-island;
@@ -278,8 +279,8 @@ footer,
   border: 2px solid var(--mark-border);
 }
 
-// The three home section-header bands run edge to edge inside their section.
-// They do that by cancelling the section's own horizontal padding with a
+// The section-header bands run edge to edge inside their section. They do
+// that by cancelling the section's own horizontal padding with a
 // matching negative margin — so the moment that padding became --gutter
 // instead of a bare 10vw, the package's -10vw stopped reaching, and this repo's
 // old `-10vw - var(--rail-total)` started overshooting. Pull by the gutter
@@ -292,19 +293,17 @@ footer,
 // Not scoped to a breakpoint. --gutter already carries its own mobile
 // step, and the package's -6vw / 6vw pair below 769px has the identical problem
 // at the identical scale. Border stays the bold 2px frame from the block above.
-.work-header,
-.testimonials-header,
-.about-header {
+.band-header {
   margin-left: calc(var(--gutter) * -1);
   margin-right: calc(var(--gutter) * -1);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
 }
 
-// ...except inside the closing CTA, where .about-header is reused as a plain
+// ...except inside the closing CTA, where .band-header is reused as a plain
 // text block with no band at all. The package already zeroes its margin and
 // padding there; restate it so the rule above cannot leak in.
-#cta .cta-split .about-header {
+#cta .cta-split .band-header {
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;

@@ -14,7 +14,7 @@ permalink: /resources/psas/
         causes — written for general audiences.</p>
     </div>
     <div class="page-hero-cta">
-      <p class="work-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</p>
+      <p class="band-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</p>
     </div>
     <div class="page-hero-emblem page-hero-emblem--bullhorn" aria-hidden="true">
       <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
@@ -32,9 +32,9 @@ permalink: /resources/psas/
   {% assign section_psas = sorted_psas | where: "section", section_name %}
 
   <section class="psa-section">
-    <div class="psa-section-header">
-      <h2 class="psa-section-heading">{{ section_name }}</h2>
-      <span class="work-count">{{ section_psas.size }} {% if section_psas.size == 1 %}document{% else %}documents{%
+    <div class="band-header band-header--compact">
+      <h2 class="band-heading band-heading--compact">{{ section_name }}</h2>
+      <span class="band-count">{{ section_psas.size }} {% if section_psas.size == 1 %}document{% else %}documents{%
         endif %}</span>
     </div>
     <div class="related-grid">

@@ -10,13 +10,12 @@ timezone: Central Time
 timezone_note: Minneapolis, Minnesota
 
 hours:
-  - days: Monday to Thursday
-    time: 9:00 AM to 6:00 PM
-  - days: Friday
-    time: 9:00 AM to 1:00 PM
-  - days: Saturday and Sunday
-    time: Closed
-    closed: true
+  - days: Mon to Fri
+    time: 12:00 PM to 8:00 PM
+    closed: false
+  - days: Sat & Sun
+    time: 12:00 PM to 8:00 PM
+    closed: false
 
 # Single source for the intake page's three response-time lines: the strip at
 # the top, the note beside the submit button, and the post-submit confirmation.

@@ -6,9 +6,9 @@ layout: default
 
 <!-- ── Who This Is For ────────────────────────────────────────────────────── -->
 <section id="audience">
-  <div class="about-header">
-    <p class="section-label">Who This Is For</p>
-    <h2 class="about-heading">If any of this sounds like you, you're in the right place.</h2>
+  <div class="band-header band-header--stacked">
+    <p class="band-label">Who This Is For</p>
+    <h2 class="band-heading band-heading--stacked">If any of this sounds like you, you're in the right place.</h2>
   </div>
   <div class="testimonials-grid">
     <div class="card--formula">
@@ -44,10 +44,10 @@ layout: default
 
 <!-- ── Testimonials ───────────────────────────────────────────────────────── -->
 <section id="testimonials">
-  <div class="testimonials-header">
+  <div class="band-header">
     <div>
-      <p class="section-label">What Clients Say</p>
-      <h2 class="testimonials-heading">Testimonials</h2>
+      <p class="band-label">What Clients Say</p>
+      <h2 class="band-heading">Testimonials</h2>
       <p class="testimonials-context"
         style="margin-top:0.5rem;font-size:0.8125rem;color:var(--ink-1);letter-spacing:0.01em;font-style:italic;">These
         testimonials are from federal, corporate, and private engagements, quoted with permission. Survivor and
@@ -91,9 +91,9 @@ layout: default
 
 <!-- ── About / Stats ──────────────────────────────────────────────────────── -->
 <section id="about">
-  <div class="about-header">
-    <p class="section-label">By the Numbers</p>
-    <h2 class="about-heading">{{ page.about_heading }}</h2>
+  <div class="band-header band-header--stacked">
+    <p class="band-label">By the Numbers</p>
+    <h2 class="band-heading band-heading--stacked">{{ page.about_heading }}</h2>
   </div>
   <div class="stats-grid">
 
@@ -144,12 +144,12 @@ layout: default
 
 <!-- ── Services / Expertise ───────────────────────────────────────────────── -->
 <section id="services">
-  <div class="work-header">
+  <div class="band-header">
     <div>
-      <p class="section-label">What I Offer</p>
-      <h2 class="work-heading">Expertise</h2>
+      <p class="band-label">What I Offer</p>
+      <h2 class="band-heading">Expertise</h2>
     </div>
-    <a href="{{ '/services/' | relative_url }}" class="work-viewall">View All →</a>
+    <a href="{{ '/services/' | relative_url }}" class="band-link">View All →</a>
   </div>
 
   <div class="testimonials-grid">
@@ -175,14 +175,14 @@ layout: default
 
 <!-- ── Work ───────────────────────────────────────────────────────────────── -->
 <section id="work">
-  <div class="work-header">
+  <div class="band-header">
     <div>
-      <p class="section-label">Selected Work</p>
-      <h2 class="work-heading">Case Studies</h2>
+      <p class="band-label">Selected Work</p>
+      <h2 class="band-heading">Case Studies</h2>
     </div>
-    <div class="work-header-right">
-      <span class="work-count">{{ site.case_studies.size }} pieces</span>
-      <a href="{{ '/case-studies/' | relative_url }}" class="work-viewall">View All →</a>
+    <div class="band-aside">
+      <span class="band-count">{{ site.case_studies.size }} pieces</span>
+      <a href="{{ '/case-studies/' | relative_url }}" class="band-link">View All →</a>
     </div>
   </div>
 
