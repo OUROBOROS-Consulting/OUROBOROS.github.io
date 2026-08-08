@@ -1,0 +1,53 @@
+name: Refresh news feed
+
+# Fetches the curated headline sources and commits the result as _data/news.yml.
+#
+# The whole reason this is a build-time job rather than client-side JavaScript:
+# /privacy/ promises the site makes no third-party requests. Fetching here means
+# the published page is static HTML with plain outbound links, and a visitor's
+# browser never touches any of these outlets.
+#
+# The commit to main triggers "Deploy Jekyll to GitHub Pages" through the normal
+# push event, so no explicit deploy call is needed here.
+
+on:
+  schedule:
+    # 09:10 UTC daily, a few minutes off the hour because GitHub queues
+    # everything scheduled on the hour and delays it.
+    - cron: "10 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: "news"
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout site
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # No pip install step on purpose: fetch_news.py is standard library only.
+      - name: Fetch headlines
+        run: python3 scripts/fetch_news.py
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- _data/news.yml; then
+            echo "No change to _data/news.yml. Nothing to commit."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add _data/news.yml
+          git commit -m "chore(news): refresh headlines"
+          git push
