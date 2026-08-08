@@ -1,6 +1,11 @@
 ---
 title: Client Intake
 layout: default
+# Explicit because this file moved to legal/ on 2026-08-08. It was the only page
+# in the repo relying on Jekyll's default path-derived URL, so the move would have
+# silently sent it to /legal/intake.html. Every link to it in the site goes through
+# site.contact_url (/intake), which GitHub Pages 301s to this.
+permalink: /intake/
 noindex: true
 sitemap: false
 extra_css: intake

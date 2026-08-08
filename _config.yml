@@ -31,7 +31,7 @@ collections:
 # "scripts" is listed explicitly: fetch_news.py is a build-time tool, not site
 # content. The pre-existing "script" entry already excluded it by prefix match,
 # which is a coincidence, not an intention.
-exclude: ["script", "scripts", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "README.md", "CLAUDE.md", "package.json", "package-lock.json", "node_modules", "archive", "docs"]
+exclude: ["script", "scripts", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "README.md", "CLAUDE.md", "package.json", "package-lock.json", "node_modules", "docs"]
 markdown: kramdown
 
 # SCSS processing

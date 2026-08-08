@@ -27,38 +27,45 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 
 ### Page → layout, complete
 
-46 pages build. Sorted by layout, then URL. `archive/` and `docs/` are in `exclude:` and never build.
+54 pages build. Sorted by layout, then URL. `docs/` is in `exclude:` and never builds.
+
+Standalone pages live in two folders, not at the repo root: `pages/` for hub and index
+pages, `legal/` for legal, contact and utility pages. Only `index.md` sits at the root.
+The folder names never appear in a URL — every one of these files carries an explicit
+`permalink:`, which is what makes the grouping free to change.
 
 <details>
-<summary><strong>default</strong> — 12 pages</summary>
+<summary><strong>default</strong> — 14 pages</summary>
 
 | URL | Source |
 |---|---|
-| `/404.html` | `404.md` |
+| `/404.html` | `legal/404.md` |
 | `/about/` | `_about/about.html` |
-| `/announcements/` | `announcements.html` |
+| `/announcements/` | `pages/announcements.html` |
 | `/case-studies/` | `_about/case-studies.html` |
-| `/intake.html` | `intake.html` |
-| `/projects/` | `projects.html` |
+| `/design-system/` | `pages/design-system.html` |
+| `/intake/` | `legal/intake.html` |
+| `/projects/` | `pages/projects.html` |
 | `/quiz/` | `quiz.html` |
-| `/resources/` | `resources.html` |
-| `/resources/psas/` | `psas.html` |
-| `/resources/tutorials/` | `tutorials.html` |
-| `/search/` | `search.html` |
-| `/services/` | `services.html` |
+| `/resources/` | `pages/resources.html` |
+| `/resources/psas/` | `pages/psas.html` |
+| `/resources/tutorials/` | `pages/tutorials.html` |
+| `/search/` | `legal/search.html` |
+| `/services/` | `pages/services.html` |
 | `/team/` | `_about/team.html` |
 
 </details>
 
 <details>
-<summary><strong>article</strong> — 14 pages</summary>
+<summary><strong>article</strong> — 15 pages</summary>
 
 | URL | Source |
 |---|---|
-| `/accessibility/` | `accessibility.md` |
-| `/disclaimer/` | `disclaimer.md` |
+| `/accessibility/` | `legal/accessibility.md` |
+| `/disclaimer/` | `legal/disclaimer.md` |
 | `/framework/` | `_about/framework.md` |
-| `/privacy/` | `privacy.md` |
+| `/news/` | `pages/news.html` |
+| `/privacy/` | `legal/privacy.md` |
 | `/resources/glossary/` | `_resources/glossary.md` |
 | `/resources/tutorial-ai-algorithmic-decisions/` | `_resources/tutorials/tutorial-ai-algorithmic-decisions.md` |
 | `/resources/tutorial-ai-deepfakes/` | `_resources/tutorials/tutorial-ai-deepfakes.md` |
@@ -141,7 +148,7 @@ Declared in `_config.yml`. A collection sets the **URL**, never the layout.
 
 Layout is chosen by **content shape**, not by collection: `default` for hub/listing pages, `article` for linear prose, `sections` for block-assembled pages. `_about/` mixes all three. Do not assume one layout per collection.
 
-**Hub pages belong at repo root, not inside a collection.** `resources.html`, `psas.html`, and `services.html` all loop over or link into collections; they are not items in one. Keeping them out avoids permalink overrides that fight the collection pattern.
+**Hub pages belong in `pages/`, not inside a collection.** `pages/resources.html`, `pages/psas.html`, and `pages/services.html` all loop over or link into collections; they are not items in one. Keeping them out avoids permalink overrides that fight the collection pattern. They sat at the repo root until 2026-08-08, when 17 loose files there made the root unreadable; the folder is organisational only, and the explicit permalinks mean it costs nothing.
 
 ### Anomalies
 
@@ -262,7 +269,7 @@ bundle exec jekyll serve --drafts
 - **Progress bar**: `#progress-bar` (gold) tracks scroll depth on all `article.html` pages
 - **Social links**: `page.links:` front matter (github, linkedin, orcid, tutor, contact) → `.foundation-links` nav
 - **Narrow text gotcha**: `_essay.scss` sets `.post-body { max-width: 680px }` — override with `.page-body .post-body { max-width: none }` if needed
-- **PSA categories**: Front matter `section:` field (Technology, Psychopathology, etc.) groups PSAs in `psas.html`
+- **PSA categories**: Front matter `section:` field (Technology, Psychopathology, etc.) groups PSAs in `pages/psas.html`
 
 </details>
 

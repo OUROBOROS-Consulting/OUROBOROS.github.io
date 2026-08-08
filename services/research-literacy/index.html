@@ -5,13 +5,15 @@ sitemap: false
 noindex: true
 ---
 <!-- Redirect stub. The teaching service absorbed the AI, macOS, and coaching tracks
-     on 2026-08-06 and was renamed "Courses & Coaching", so the old slug no longer
-     described it. Keep this file so inbound links and anything already indexed do
-     not 404. /services/osint-literacy/ was repointed at /services/courses/ in the
-     same commit rather than at this page, so no inbound link takes two hops. -->
+     on 2026-08-06, so the old slug no longer described it. Keep this file so inbound
+     links and anything already indexed do not 404.
+     Pointed at /services/courses/ until 2026-08-08 — a slug that was planned but
+     never shipped, so this stub sent every inbound link to a 404 for two days.
+     /services/osint-literacy/ points at the same target rather than at this page,
+     so no inbound link takes two hops. -->
 <meta charset="utf-8">
 <meta name="robots" content="noindex,nofollow">
-<meta http-equiv="refresh" content="0; url={{ '/services/courses/' | relative_url }}">
-<link rel="canonical" href="{{ '/services/courses/' | absolute_url }}">
+<meta http-equiv="refresh" content="0; url={{ '/services/education/' | relative_url }}">
+<link rel="canonical" href="{{ '/services/education/' | absolute_url }}">
 <title>Moved</title>
-<p>This page moved to <a href="{{ '/services/courses/' | relative_url }}">Courses &amp; Coaching</a>.</p>
+<p>This page moved to <a href="{{ '/services/education/' | relative_url }}">Education &amp; Training</a>.</p>

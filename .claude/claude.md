@@ -48,6 +48,10 @@ default.html          ← HTML shell: fonts, nav, rail, footer, main.js
 
 **`_about/` is a mixed collection** — each file sets its own `layout:` (article, sections, or default). Permalink is `/:slug`. Don't assume a single layout.
 
+**Standalone pages live in `pages/` and `legal/`, not at the repo root.** `pages/` holds the hub and index pages (services, resources, tutorials, psas, projects, announcements, news, design-system); `legal/` holds disclaimer, privacy, accessibility, intake, search and 404. Only `index.md` is still at the root. Moved 2026-08-08.
+
+⚠ **Every file in those two folders must carry an explicit `permalink:`.** The folders are organisational and must never reach a URL. `intake.html` was the one page relying on Jekyll's path-derived URL, and the move silently sent `/intake` to `/legal/intake.html` until a permalink was added. Adding a page to either folder without one repeats that.
+
 ## Page-Level Front Matter (default.html)
 
 | Key | Effect |
@@ -109,6 +113,6 @@ Secondary nav is data-driven from `_data/nav.yml`. Each entry supports `active_p
 
 **Hero metadata:** `.page-hero-meta` renders a price on services and a date on PSAs. It was called `.svc-price` until 2026-07-26, which was wrong for the PSA case.
 
-**PSAs:** `section:` front matter (e.g. `Technology`) drives category grouping in `psas.html`. Separate from the `category:` eyebrow label. PDFs live at `assets/files/PSA/<Category>/filename.pdf`.
+**PSAs:** `section:` front matter (e.g. `Technology`) drives category grouping in `pages/psas.html`. Separate from the `category:` eyebrow label. PDFs live at `assets/files/PSA/<Category>/filename.pdf`.
 
 **Custom agent:** `.github/agents/gothic-designer.agent.md` — invoke for visual/design tasks to get on-brand token values and geometry.
