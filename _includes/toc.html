@@ -1,5 +1,8 @@
 <aside id="page-toc" class="page-toc" aria-label="Page outline" aria-hidden="true"
-  data-toc-mode="{{ page.layout }}">
-  <p class="toc-label">Contents</p>
+  data-toc-mode="{{ page.layout }}" data-spine>
+  <p class="toc-label"><span class="toc-label-tx">Contents</span></p>
+  <!-- data-spine on the panel root above makes it the host for the golden
+       thread, so the thread runs the panel's full height; toc.js tags each row
+       data-spine-node and spine.js crests the path through their centres. -->
   <ul class="toc-nav" role="list"></ul>
 </aside>

@@ -78,6 +78,11 @@
     {% if page.layout == 'dashboard' %}<link rel="stylesheet" href="{{ '/assets/css/dashboard.css' | relative_url }}" />{% endif %}
     {% if page.extra_css %}<link rel="stylesheet" href="{{ '/assets/css/' | append: page.extra_css | append: '.css' | relative_url }}" />{% endif %}
     <link rel="stylesheet" href="{{ '/assets/vendor/fontawesome/css/all.min.css' | relative_url }}" />
+    <!-- Draws the golden thread in the rail and the TOC. Deferred from <head>
+         so it executes ahead of the body's deferred scripts: toc.js calls
+         OuroSpine.draw() as soon as it has built the outline, and that call is
+         a no-op if this has not defined window.OuroSpine yet. -->
+    <script defer src="{{ '/assets/js/spine.js' | relative_url }}"></script>
   </head>
 
   <body{% if page.show_banner %} class="has-banner"{% endif %}>

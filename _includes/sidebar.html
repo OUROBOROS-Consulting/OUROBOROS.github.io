@@ -1,18 +1,25 @@
-<aside id="rail" class="rail" aria-label="Contact and announcements">
+<aside id="rail" class="rail" aria-label="Contact and announcements" data-spine>
+  <!-- data-spine on the panel root makes it the host for the golden thread, so
+       the thread spans the rail's full height rather than just the group stack;
+       spine.js crests it through the centre of each data-spine-node group. Each row reveals its
+       OWN label on hover; the rail itself never widens. -->
   <nav class="rail-nav">
-    <div class="rail-group{% if page.url contains '/intake' %} rail-group--active{% endif %}">
+    <div class="rail-group{% if page.url contains '/intake' %} rail-group--active{% endif %}" data-spine-node>
+      <span class="spine-tick" aria-hidden="true"></span>
       <a class="rail-item" href="{{ '/intake' | relative_url }}" title="Contact"{% if page.url contains '/intake' %} aria-current="page"{% endif %}>
         <span class="rail-ic"><i class="fas fa-envelope" aria-hidden="true"></i></span>
         <span class="rail-tx">Contact</span>
       </a>
     </div>
-    <div class="rail-group{% if page.url contains '/announcements' %} rail-group--active{% endif %}">
+    <div class="rail-group{% if page.url contains '/announcements' %} rail-group--active{% endif %}" data-spine-node>
+      <span class="spine-tick" aria-hidden="true"></span>
       <a class="rail-item" href="{{ '/announcements' | relative_url }}" title="Announcements"{% if page.url contains '/announcements' %} aria-current="page"{% endif %}>
         <span class="rail-ic"><i class="fas fa-newspaper" aria-hidden="true"></i></span>
         <span class="rail-tx">Announcements</span>
       </a>
     </div>
-    <div class="rail-group">
+    <div class="rail-group" data-spine-node>
+      <span class="spine-tick" aria-hidden="true"></span>
       <button type="button" id="theme-toggle" class="rail-item rail-item--button" title="Toggle theme" aria-label="Dark theme. Activate to switch to light theme.">
         <span class="rail-ic"><i class="fas fa-moon" aria-hidden="true"></i></span>
         <span class="rail-tx">Dark</span>

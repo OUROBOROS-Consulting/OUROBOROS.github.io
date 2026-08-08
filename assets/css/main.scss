@@ -61,7 +61,7 @@
 
 // ── Marble texture: TWO tile scales only ──────────────────────────────────
 // Marble.png is tiled at exactly two sizes across the whole site:
-//   380px — narrow chrome (.rail, .page-toc)
+//   380px — narrow chrome (nav.nav-menu)
 //   720px — broad surfaces (.page-hero, footer, .disclaimer-bar, #cta)
 // Adjacent regions at different scales read as different stone. If you add a
 // marble surface, pick one of these two. Do not invent a third.
@@ -84,16 +84,18 @@
   border: 2px solid var(--mark-border);
 }
 
-// ── Navbars: marble texture (replaces the scallop / flat fill) ────────────
-// The top primary bar, the left section rail, and the right TOC panel all get
-// the same black-marble treatment as the section headers — a dark scrim over
-// Marble.png so the veining reads subtly and nav content stays legible.
-// Overrides the design system's scallop pattern (top bar) and flat
-// translucent fill (rail). Site-owned because the raster lives in this
-// repo's assets/images.
-nav.nav-menu,
-.rail,
-.page-toc {
+// ── Primary bar: marble texture (replaces the scallop fill) ───────────────
+// A dark scrim over Marble.png so the veining reads subtly and nav content
+// stays legible. Overrides the design system's scallop pattern. Site-owned
+// because the raster lives in this repo's assets/images.
+//
+// .rail and .page-toc used to be in this selector and are deliberately not
+// any more. Collapsed, both edge panels are now bare: the golden thread runs
+// down an otherwise empty strip, with no slab behind it. Putting marble back
+// here would also break their open state, which cross-fades a flat scrim in
+// on hover — background-image cannot be transitioned, so the texture would
+// snap on while everything else eased. See _sidebar.scss / _sidebar-rail.scss.
+nav.nav-menu {
   @include dark-island;
   background-image:
     linear-gradient(rgba(18, 18, 18, 0.88), rgba(10, 10, 10, 0.93)),
@@ -111,20 +113,127 @@ nav.nav-menu,
 // body padding, so only flow content (main, cta, footer) shifts right; the
 // rail sits in the reserved strip. Applies at every breakpoint — the rail is
 // a permanent strip on mobile too, not an off-canvas drawer.
+//
+// --rail-total, NOT --rail-w. The rail is --rail-w wide but sits --rail-x
+// inboard of the viewport edge, so reserving the width alone left the icons and
+// the right two thirds of the thread lying on top of the prose. The rail never
+// widens — hovering an icon slides that one label out as a plaque, which
+// reserves nothing. So this reservation is the only left offset the site has,
+// and it is exact.
 body {
-  padding-left: var(--rail-w);
+  padding-left: var(--rail-total);
 }
 
 // ── TOC offset ────────────────────────────────────────────────────────────
 // Mirror of the rail offset on the right: pages that render the fixed TOC
-// panel (foundation, mission) reserve its strip so flow content never slides
+// panel (article, sections) reserve its strip so flow content never slides
 // under it. :has() keeps TOC-less pages full-width; toc.js sets [hidden] when
 // a page has no headings, which also drops the reservation. Below 1100px the
 // design package hides the panel entirely, so no strip is reserved.
+//
+// --toc-w is the whole panel. Like the rail, it never widens — hovering an
+// entry slides that one label out over the page as a plaque, which reserves
+// nothing and never moves the reading measure. So this reservation is exact.
 @media (min-width: 1101px) {
   body:has(#page-toc:not([hidden])) {
     padding-right: var(--toc-w);
   }
+}
+
+// ── Full-bleed bands ──────────────────────────────────────────────────────
+// The two reservations above keep flow content clear of the fixed edge panels.
+// The page's edge-to-edge bands are the exceptions: a bare gutter running down
+// one or both sides of a full-height marble hero, or of the footer, reads as a
+// broken layout rather than as breathing room. Cancel the reservation on those
+// bands by pulling them back out over it.
+//
+// Negative margin, not width:100vw — 100vw includes the classic scrollbar and
+// would push a horizontal scroll onto every page. width stays auto, so each
+// band simply grows into the padding it is pulled across. The one exception is
+// the footer, which the package pins to width:100% — 100% of body's CONTENT
+// box, which is exactly the width that is short. The pull alone would only
+// slide that too-narrow box left and open the same gap on the right, so the
+// width has to go back to auto as well.
+//
+// KEEP THIS LIST SHORT. Every other block in the flow needs the reservation;
+// add one that does not belong and it slides under the rail or the TOC. The
+// consequence of the pull is that the golden thread and its icons now overlay
+// these bands rather than sitting beside them — intended, and the reason the
+// rail is transparent at rest, and the reason the heroes below re-pad.
+#hero,
+.page-hero,
+#cta,
+#audience,
+#about,
+#values,
+#services,
+#work,
+#testimonials,
+footer,
+.disclaimer-bar {
+  margin-left: calc(var(--rail-total) * -1);
+}
+
+footer {
+  width: auto;
+}
+
+// Mirror on the right, only where a TOC strip was actually reserved. Scoped to
+// the same :has() test and the same breakpoint as the reservation itself, so
+// the pull and the padding can never disagree. The home sections are absent
+// here on purpose — home renders no TOC, so there is no right strip to clear.
+@media (min-width: 1101px) {
+  body:has(#page-toc:not([hidden])) :is(#hero, .page-hero, #cta, footer, .disclaimer-bar) {
+    margin-right: calc(var(--toc-w) * -1);
+  }
+}
+
+// ── Band geometry ─────────────────────────────────────────────────────────
+// The pull above puts every band's left edge at the viewport edge, underneath
+// the rail, so each one has to re-pad past it.
+//
+// --gutter-min is the floor: far enough inboard to clear the rail, plus air.
+// --gutter is that floor with a proportional term over it, so it never SHRINKS
+// a band that already had more — 10vw passes the floor at wide viewports and
+// keeps winning there.
+//
+// Both used to be declared here as --band-inset / --band-gutter. They are now
+// design tokens, defined once in the package's _base.scss alongside the type
+// and spacing scales, because they turned out not to be site-specific at all:
+// .page-body and the TOC wrapper need exactly the same numbers to line up with
+// these bands, and while the gutter lived in this repo they could not reach it
+// and drifted (/resources/ sat 96px right of /). See the page-band mixin.
+//
+// Keeping the gutter in one property is what stops the marble headers further
+// down drifting out of register with the sections they sit inside — they pull
+// by exactly this, so the two cannot disagree.
+
+// Applied to both sides, not just the left: these bands hold optically or
+// literally centred content, so padding one side alone would slide it off the
+// viewport's centre line by half the pull.
+#hero,
+.page-hero,
+#cta,
+#audience,
+#about,
+#values,
+#services,
+#work,
+#testimonials {
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+// The footer is a `1fr auto 1fr` grid, so its LEFT column — the social cards —
+// starts at the padding edge and would sit under the rail without this. The
+// disclaimer bar carries only centred text and needs the inset purely to stay
+// centred. Neither has a vw-based padding to floor against, so both take the
+// bare inset rather than the gutter; it is always larger than the package's
+// --space-10 / --space-8.
+footer,
+.disclaimer-bar {
+  padding-left: var(--gutter-min);
+  padding-right: var(--gutter-min);
 }
 
 // ── Section headers: black marble ─────────────────────────────────────────
@@ -169,20 +278,37 @@ footer,
   border: 2px solid var(--mark-border);
 }
 
-// Tuck the three home section-header bands under the sidebar rail so their
-// marble background emerges from behind the nav chrome rather than butting
-// against its right edge. body's padding-left reserves the rail's width for
-// flow content, so the package's -10vw bleed stops at the rail edge; pulling
-// left by an extra var(--rail-w) carries the band to the true viewport edge,
-// underlapping the semi-transparent rail. Desktop only — on mobile the rail is
-// an off-canvas drawer and body has no left padding, so the extra pull would
-// overflow. Border stays the bold 2px frame from the block above.
-@media (min-width: 769px) {
-  .work-header,
-  .testimonials-header,
-  .about-header {
-    margin-left: calc(-10vw - var(--rail-w));
-  }
+// The three home section-header bands run edge to edge inside their section.
+// They do that by cancelling the section's own horizontal padding with a
+// matching negative margin — so the moment that padding became --gutter
+// instead of a bare 10vw, the package's -10vw stopped reaching, and this repo's
+// old `-10vw - var(--rail-total)` started overshooting. Pull by the gutter
+// itself and the two can never disagree again.
+//
+// The padding is restated for the same reason: the band's own 10vw is what
+// holds its text off the viewport edge, and below roughly 960px that is less
+// than the rail's footprint, which would put the heading behind the thread.
+//
+// Not scoped to a breakpoint. --gutter already carries its own mobile
+// step, and the package's -6vw / 6vw pair below 769px has the identical problem
+// at the identical scale. Border stays the bold 2px frame from the block above.
+.work-header,
+.testimonials-header,
+.about-header {
+  margin-left: calc(var(--gutter) * -1);
+  margin-right: calc(var(--gutter) * -1);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+}
+
+// ...except inside the closing CTA, where .about-header is reused as a plain
+// text block with no band at all. The package already zeroes its margin and
+// padding there; restate it so the rule above cannot leak in.
+#cta .cta-split .about-header {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 // ── Intake form: card-surface texture ─────────────────────────────────────
