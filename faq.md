@@ -5,6 +5,7 @@ icon: fa-circle-question
 category: About
 permalink: /faq/
 back_url: /about/
+collapse_questions: true
 lede: >
   Straight answers, including the ones that cost me work. If a question you
   have is not here, ask it. I will answer it the same way and then add it to

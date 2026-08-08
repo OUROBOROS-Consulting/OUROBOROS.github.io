@@ -12,8 +12,8 @@
   z-index: 9999;
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 0.9rem;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
   font-family: Inter, system-ui, sans-serif;
   font-size: 0.8rem;
   font-weight: 600;
@@ -22,8 +22,8 @@
   text-decoration: none;
   color: #fff;
   background: #4f0606;
-  border: 1px solid var(--gold-border);
-  border-radius: 3px;
+  border: 1px solid var(--mark-border);
+  border-radius: var(--radius-2);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
   transition: background 0.15s ease, transform 0.15s ease;
 
@@ -43,7 +43,7 @@
 
   @media (max-width: 640px) {
     font-size: 0.7rem;
-    padding: 0.5rem 0.7rem;
+    padding: var(--space-3) var(--space-4);
     span { display: none; }
   }
 }
@@ -81,7 +81,7 @@
   background-size: cover, 720px 720px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
-  border: 2px solid var(--gold-border);
+  border: 2px solid var(--mark-border);
 }
 
 // ── Navbars: marble texture (replaces the scallop / flat fill) ────────────
@@ -101,7 +101,7 @@ nav.nav-menu,
   background-size: cover, 380px 380px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
-  border: 2px solid var(--gold-border);
+  border: 2px solid var(--mark-border);
 }
 
 // ── Sidebar offset ────────────────────────────────────────────────────────
@@ -145,7 +145,7 @@ footer,
     background-size: cover, 720px 720px;
     background-position: center, center;
     background-repeat: no-repeat, repeat;
-    border: 2px solid var(--gold-border);
+    border: 2px solid var(--mark-border);
   }
 
 // The disclaimer strip is subordinate to the footer directly above it: it takes
@@ -153,10 +153,10 @@ footer,
 // frame, which would otherwise double up against the footer's bottom edge.
 .disclaimer-bar {
   border: none;
-  border-top: 1.5px solid var(--gold-border);
+  border-top: 1.5px solid var(--mark-border);
 }
 
-// The near-black scrim below paints over the package's themed `var(--bg1)`, so
+// The near-black scrim below paints over the package's themed `var(--surface-1)`, so
 // this band is a permanent dark surface and needs the island treatment too.
 #cta {
   @include dark-island;
@@ -166,7 +166,7 @@ footer,
   background-size: cover, 720px 720px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
-  border: 2px solid var(--gold-border);
+  border: 2px solid var(--mark-border);
 }
 
 // Tuck the three home section-header bands under the sidebar rail so their

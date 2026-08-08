@@ -19,6 +19,7 @@
     - /glossary
     - /tutorials
     - /scholarly
+    - /news
   children:
     - title: PSAs
       url: /resources/psas/
@@ -28,6 +29,8 @@
       url: /resources/tutorials/
     - title: Glossary
       url: /resources/glossary/
+    - title: What I'm Reading
+      url: /news/
 
 - title: About
   url: /about/

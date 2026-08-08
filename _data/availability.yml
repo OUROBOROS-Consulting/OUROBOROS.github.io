@@ -1,0 +1,33 @@
+# Business hours and response time. Rendered by _includes/hours.html on the
+# intake page (full strip) and inside the closing CTA (compact line).
+#
+# Hand-written on purpose. Every booking widget on the market (Cal.com,
+# Calendly, Google Calendar embeds) is a third-party request, and /privacy/
+# promises the site makes none. Verify that claim before replacing this with an
+# embed: the promise is the cost.
+
+timezone: Central Time
+timezone_note: Minneapolis, Minnesota
+
+hours:
+  - days: Monday to Thursday
+    time: 9:00 AM to 6:00 PM
+  - days: Friday
+    time: 9:00 AM to 1:00 PM
+  - days: Saturday and Sunday
+    time: Closed
+    closed: true
+
+# Single source for the intake page's three response-time lines: the strip at
+# the top, the note beside the submit button, and the post-submit confirmation.
+response: I read every intake within 72 hours, and usually the same day.
+
+after_hours: >-
+  Messages sent outside these hours still reach me. If you are in danger right
+  now, contact emergency services rather than waiting on a reply.
+
+# One line, used in the closing CTA on every page. Deliberately says nothing
+# about response time: every page's cta_body already states "within 72 hours"
+# directly above this line, and repeating it inside the same card reads as
+# padding. What the CTA was missing is *when*, not *how fast*.
+compact: Monday to Thursday, 9 to 6 Central. Friday until 1.

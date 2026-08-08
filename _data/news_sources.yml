@@ -1,0 +1,129 @@
+# Feeds for the /news/ page. Read at build time only, by
+# scripts/fetch_news.py running in .github/workflows/news.yml. The published
+# page is plain HTML with plain outbound links: nothing here is requested by a
+# visitor's browser, so /privacy/ stays true.
+#
+# Each source:
+#   name      display label on the headline row
+#   url       feed URL, verified working 2026-08-07
+#   category  must match a key in the `categories` list below
+#   match     optional. Broad general-interest feeds only appear on the page
+#             when a headline or dek contains one of these substrings
+#             (case-insensitive). Omit it for feeds that are already on-topic.
+#   max_age_days
+#             optional, default 60. Widen it for a source that posts a few
+#             times a year: the default window would silence it entirely.
+#
+# Adding a source: confirm the feed returns 200 and contains <item> or <entry>
+# before committing it. A dead feed is skipped silently by the fetcher, so it
+# will not break the build and it will also not tell you it is gone.
+
+categories:
+  - id: ai
+    title: Artificial intelligence
+    blurb: >-
+      What the systems can actually do, who is deploying them, and what that
+      costs the people on the receiving end.
+  - id: coercive-control
+    title: Coercive control and technology-facilitated abuse
+    blurb: >-
+      Surveillance inside relationships, stalkerware, and the safety practice
+      built around both.
+  - id: institutional-betrayal
+    title: Institutional accountability
+    blurb: >-
+      Reporting on what institutions do to the people who depend on them, and
+      on the records that prove it.
+  - id: privacy
+    title: Privacy and surveillance
+    blurb: >-
+      Data brokers, monitoring, and the law that does or does not restrain
+      them.
+
+sources:
+  - name: Ars Technica
+    url: https://arstechnica.com/ai/feed/
+    category: ai
+
+  - name: MIT Technology Review
+    url: https://www.technologyreview.com/topic/artificial-intelligence/feed
+    category: ai
+
+  - name: The Guardian
+    url: https://www.theguardian.com/technology/artificialintelligenceai/rss
+    category: ai
+
+  - name: The Guardian
+    url: https://www.theguardian.com/society/domestic-violence/rss
+    category: coercive-control
+
+  - name: NNEDV Safety Net
+    url: https://www.techsafety.org/blog?format=rss
+    category: coercive-control
+    # Posts a few times a year and is the single most on-topic feed on this
+    # list. At the default 60 days it never appears at all.
+    max_age_days: 400
+
+  - name: ProPublica
+    url: https://www.propublica.org/feeds/propublica/main
+    category: institutional-betrayal
+    # ProPublica covers everything. Without a filter this one feed would fill
+    # the section with unrelated national reporting.
+    match:
+      - abuse
+      - accountability
+      - court
+      - disability
+      - misconduct
+      - negligence
+      - nursing home
+      - oversight
+      - police
+      - records
+      - retaliation
+      - survivor
+      - veteran
+      - whistleblower
+
+  - name: Retraction Watch
+    url: https://retractionwatch.com/feed/
+    category: institutional-betrayal
+
+  - name: EFF Deeplinks
+    url: https://www.eff.org/rss/updates.xml
+    category: privacy
+    # EFF posts several times a day across its whole docket.
+    match:
+      - broker
+      - data privacy
+      - facial recognition
+      - location
+      - stalkerware
+      - surveillance
+      - tracking
+
+  - name: EPIC
+    url: https://epic.org/feed/
+    category: privacy
+
+  - name: The Markup
+    url: https://themarkup.org/feeds/rss.xml
+    category: privacy
+
+  - name: Krebs on Security
+    url: https://krebsonsecurity.com/feed/
+    category: privacy
+    match:
+      - breach
+      - broker
+      - doxx
+      - extortion
+      - identity theft
+      - phish
+      - proxy
+      - scam
+      - spyware
+      - stalk
+      - surveillance
+      - swat
+      - tracking

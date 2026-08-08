@@ -30,7 +30,7 @@ export function init(topics, onSelect) {
   ring.setAttribute('cy', CENTER);
   ring.setAttribute('r', RADIUS + 16);
   ring.setAttribute('fill', 'none');
-  ring.setAttribute('stroke', 'var(--bg3)');
+  ring.setAttribute('stroke', 'var(--surface-3)');
   ring.setAttribute('stroke-width', '1');
   ring.setAttribute('stroke-dasharray', '3 7');
   svg.appendChild(ring);
@@ -44,7 +44,7 @@ export function init(topics, onSelect) {
     const line  = document.createElementNS(ns, 'line');
     line.setAttribute('x1', CENTER); line.setAttribute('y1', CENTER);
     line.setAttribute('x2', x);      line.setAttribute('y2', y);
-    line.setAttribute('stroke', 'var(--border)');
+    line.setAttribute('stroke', 'var(--line-3)');
     line.setAttribute('stroke-width', '1');
     line.setAttribute('stroke-opacity', '0.6');
     line.dataset.id = topic.id;
@@ -234,7 +234,7 @@ export function init(topics, onSelect) {
         line.setAttribute('stroke-opacity', '1');
         line.setAttribute('stroke-width', '1.5');
       } else {
-        line.setAttribute('stroke', 'var(--border)');
+        line.setAttribute('stroke', 'var(--line-3)');
         line.setAttribute('stroke-opacity', '0.2');
         line.setAttribute('stroke-width', '1');
       }
@@ -253,7 +253,7 @@ export function init(topics, onSelect) {
         line.setAttribute('stroke', 'var(--sage)');
         line.setAttribute('stroke-opacity', '1');
       } else {
-        line.setAttribute('stroke', 'var(--border)');
+        line.setAttribute('stroke', 'var(--line-3)');
         line.setAttribute('stroke-opacity', '0.6');
       }
       line.setAttribute('stroke-width', '1');

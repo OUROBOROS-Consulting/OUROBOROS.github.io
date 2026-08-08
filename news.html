@@ -1,0 +1,88 @@
+---
+layout: article
+title: What I'm Reading
+icon: fa-newspaper
+category: Resources
+permalink: /news/
+back_url: /resources/
+lede: >
+  Headlines on artificial intelligence, coercive control, institutional
+  accountability, and surveillance. Gathered from outlets that do the
+  reporting, refreshed daily, and linked plainly.
+cta_body: Want help making sense of any of this?
+---
+
+{%- comment -%}
+  Rendered entirely from _data/news.yml, which is written by
+  scripts/fetch_news.py in the "Refresh news feed" workflow. Nothing here
+  fetches anything at page load. That is the point: /privacy/ promises the
+  site makes no third-party requests, and a JavaScript feed reader or an
+  embedded widget would break that promise on the one page where the visitor
+  is least likely to expect it.
+
+  The h2 ids are what assets/js/toc.js builds the sidebar outline from.
+{%- endcomment -%}
+
+{%- assign news = site.data.news -%}
+
+<div class="feed-intro">
+  <p>These are other people's headlines, not mine. Linking a story is not an
+    endorsement of it, and I have not verified every claim in every piece. Read
+    them the way you would read anything: with the outlet's name in view.</p>
+  <p>Every link goes straight to the publisher. There is no tracker on this page,
+    no script counting your clicks, and nothing loaded from any of these sites
+    while you read.</p>
+</div>
+
+{% if news and news.sections %}
+
+<p class="feed-updated">Updated {{ news.generated | date: "%B %-d, %Y" }}</p>
+
+{% for section in news.sections %}
+<h2 id="{{ section.id }}">{{ section.title }}</h2>
+
+<p class="feed-blurb">{{ section.blurb }}</p>
+
+<ol class="feed-list" role="list">
+  {%- for item in section.items %}
+  <li class="feed-item">
+    <p class="feed-date">
+      <time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %-d" }}</time>
+    </p>
+    <div class="feed-text">
+      {%- comment -%}
+        rel="noopener" on every outbound link, and no referrer: a visitor
+        clicking through from a domestic-violence resource page should not
+        hand the destination a record of where they came from.
+      {%- endcomment -%}
+      <a class="feed-title" href="{{ item.url }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+      <p class="feed-outlet">{{ item.source }}</p>
+      {%- if item.summary and item.summary != "" %}
+      <p class="feed-summary">{{ item.summary }}</p>
+      {%- endif %}
+    </div>
+  </li>
+  {%- endfor %}
+</ol>
+{% endfor %}
+
+{% else %}
+
+<p class="feed-blurb">The headline list is being rebuilt. Check back shortly.</p>
+
+{% endif %}
+
+<h2 id="sources">Where these come from</h2>
+
+<p class="feed-blurb">The full source list lives in the repository, in
+  <code>_data/news_sources.yml</code>. Suggest an addition and I will look at it.</p>
+
+<ul class="feed-roll" role="list">
+  {%- assign seen = "" -%}
+  {%- for source in site.data.news_sources.sources -%}
+  {%- unless seen contains source.name -%}
+  {%- assign seen = seen | append: source.name | append: "|" -%}
+  <li>{{ source.name }}</li>
+  {%- endunless -%}
+  {%- endfor -%}
+</ul>

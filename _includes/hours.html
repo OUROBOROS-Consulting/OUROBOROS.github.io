@@ -1,0 +1,35 @@
+{%- comment -%}
+  Static availability block. Data lives in _data/availability.yml.
+
+  Usage:
+    {% include hours.html %}                    full strip (intake page)
+    {% include hours.html variant="compact" %}  one line (closing CTA)
+
+  No booking widget by design. See the header comment in the data file.
+{%- endcomment -%}
+{%- assign a = site.data.availability -%}
+{%- if include.variant == "compact" -%}
+<div class="hours-compact">
+  <p class="hours-compact-label">Hours</p>
+  <p class="hours-compact-line">{{ a.compact }}</p>
+</div>
+{%- else -%}
+<aside class="hours" aria-labelledby="hours-label">
+  <div class="hours-head">
+    <p class="hours-label" id="hours-label">Availability</p>
+    <p class="hours-tz">{{ a.timezone }}<span>{{ a.timezone_note }}</span></p>
+  </div>
+  <dl class="hours-list">
+    {%- for row in a.hours %}
+    <div class="hours-row{% if row.closed %} hours-row--closed{% endif %}">
+      <dt>{{ row.days }}</dt>
+      <dd>{{ row.time }}</dd>
+    </div>
+    {%- endfor %}
+  </dl>
+  <div class="hours-reply">
+    <p class="hours-response">{{ a.response }}</p>
+    <p class="hours-after">{{ a.after_hours }}</p>
+  </div>
+</aside>
+{%- endif -%}

@@ -1,0 +1,382 @@
+---
+layout: default
+title: Design System
+description: The live token specimen for the OUROBOROS design system. Type, spacing, surface, ink, contrast, elevation, radius and line, measured rather than described.
+permalink: /design-system/
+hide_cta: true
+---
+
+<div class="spec">
+
+  <header class="spec-masthead">
+    <div>
+      <p class="spec-eyebrow">Specimen &middot; ouroboros-design</p>
+      <h1 class="spec-title">Design System</h1>
+      <p class="spec-lede">Every value on this page is a live token. Nothing here is
+        a screenshot or a hand-copied hex. Switch the theme and the page restates
+        itself, because it is built out of the thing it documents.</p>
+
+      <div class="spec-spine" aria-label="The modular scale: 1, 1.25, 1.563, 1.953, 2.441">
+        <b>1</b><b>1.25</b><b>1.563</b><b>1.953</b><b>2.441</b>
+      </div>
+    </div>
+
+    <!-- Five squares, each 1.25 times the side of the one inside it, sharing a
+         centre. Under a constant ratio the corners fall on a straight line, so
+         the diagonals are the construction, not decoration. This is the actual
+         geometry of --f-1 through --f-5. -->
+    <svg class="spec-figure" viewBox="0 0 56 63" role="img"
+         aria-label="Five concentric squares, each 1.25 times the side of the one inside it, with their corners falling on two straight diagonals.">
+      <line x1="10.91" y1="10.91" x2="45.09" y2="45.09" />
+      <line x1="45.09" y1="10.91" x2="10.91" y2="45.09" />
+      <rect x="21.00" y="21.00" width="14.00" height="14.00" />
+      <rect x="19.25" y="19.25" width="17.50" height="17.50" />
+      <rect x="17.06" y="17.06" width="21.88" height="21.88" />
+      <rect x="14.33" y="14.33" width="27.34" height="27.34" />
+      <rect x="10.91" y="10.91" width="34.18" height="34.18" />
+      <text x="28" y="58" text-anchor="middle">ratio 1.25</text>
+    </svg>
+  </header>
+
+  <!-- ── TYPE ────────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="type">
+    <div class="spec-band-head">
+      <h2>Type</h2>
+      <span class="spec-formula">--fs-1 &hellip; --fs-11</span>
+    </div>
+    <p class="spec-note">Eleven steps, ascending. Steps 1 to 6 are the text range and
+      hold fixed rem values. Steps 7 to 11 are the display range and are fluid: each
+      one is a <code>clamp()</code> with a viewport term, so a headline shrinks on a
+      phone without a media query.</p>
+
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-6</strong>1.6rem &middot; 25.6px<br>text range, top</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-6)">Institutional betrayal</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-5</strong>1.4rem &middot; 22.4px</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-5)">Institutional betrayal</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-4</strong>1.2rem &middot; 19.2px</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-4)">Institutional betrayal</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-3</strong>1rem &middot; 16px<br>body copy</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-3)">Institutional betrayal</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-2</strong>0.9rem &middot; 14.4px</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-2)">Institutional betrayal</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-1</strong>0.8rem &middot; 12.8px<br>floor</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-1)">Institutional betrayal</p>
+    </div>
+
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-9</strong>clamp(2rem, 4vw, 3rem)</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-9)">A record that holds</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--fs-11</strong>clamp(3.5rem, 10vw, 8rem)<br>display, top</p>
+      <p class="spec-demo spec-demo--type" style="font-size:var(--fs-11)">Ouroboros</p>
+    </div>
+
+    <div class="spec-callout">
+      <p><strong>The text range is not the modular scale.</strong>
+        <code>--fs-1</code> through <code>--fs-6</code> run 0.8, 0.9, 1, 1.2, 1.4, 1.6rem.
+        That is a hand-tuned ramp, not 1.25 compounded, and pretending otherwise
+        would be a nicer story than a true one.</p>
+      <p>The ratio steps live separately as <code>--f-1</code> through
+        <code>--f-5</code>, unitless, for anything that genuinely needs to compute
+        off the scale. The masthead spine above is one such thing. Its tile widths
+        are the ratios, so the spine measures itself.</p>
+    </div>
+  </section>
+
+  <!-- ── LEADING ─────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="leading">
+    <div class="spec-band-head">
+      <h2>Leading</h2>
+      <span class="spec-formula">--lh-1 &hellip; --lh-4</span>
+    </div>
+    <p class="spec-note">Leading runs backwards against size. Small text needs air
+      between lines to stay trackable. A 64px headline at 1.75 reads as two
+      unrelated lines instead of one sentence, so display type takes
+      <code>--lh-1</code> and body copy takes <code>--lh-3</code>.</p>
+
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--lh-4</strong>1.85<br>long-form prose</p>
+      <p class="spec-demo" style="line-height:var(--lh-4);max-width:var(--measure)">Survivors of
+        institutional betrayal rarely arrive needing to be convinced that something
+        went wrong. They arrive needing a record.</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--lh-3</strong>1.75<br>body default</p>
+      <p class="spec-demo" style="line-height:var(--lh-3);max-width:var(--measure)">They arrive
+        needing a record that holds up later, when the people who caused the harm
+        are the ones writing the summary.</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--lh-2</strong>1.35<br>labels, meta</p>
+      <p class="spec-demo" style="line-height:var(--lh-2);font-size:var(--fs-5);max-width:var(--measure)">A
+        record that holds up later.</p>
+    </div>
+    <div class="spec-row">
+      <p class="spec-meta"><strong>--lh-1</strong>1<br>display only</p>
+      <p class="spec-demo" style="line-height:var(--lh-1);font-size:var(--fs-9);max-width:var(--measure)">A record
+        that holds</p>
+    </div>
+  </section>
+
+  <!-- ── SPACING ─────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="spacing">
+    <div class="spec-band-head">
+      <h2>Spacing</h2>
+      <span class="spec-formula">--space-1 &hellip; --space-13</span>
+    </div>
+    <p class="spec-note">Thirteen steps, derived from an audit of the 719 spacing
+      literals that preceded them rather than from a generic 4px grid. The ten
+      values the system already leaned on are all present at their exact former
+      size, which is why most of the migration moved nothing at all.</p>
+
+    <div class="spec-row"><p class="spec-meta"><strong>--space-1</strong>0.25rem &middot; 4px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-1)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-2</strong>0.375rem &middot; 6px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-2)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-3</strong>0.5rem &middot; 8px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-3)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-4</strong>0.75rem &middot; 12px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-4)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-5</strong>1rem &middot; 16px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-5)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-6</strong>1.25rem &middot; 20px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-6)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-7</strong>1.5rem &middot; 24px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-7)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-8</strong>2rem &middot; 32px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-8)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-9</strong>2.5rem &middot; 40px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-9)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-10</strong>3rem &middot; 48px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-10)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-11</strong>4rem &middot; 64px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-11)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-12</strong>6rem &middot; 96px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-12)"></div></div></div>
+    <div class="spec-row"><p class="spec-meta"><strong>--space-13</strong>8rem &middot; 128px</p><div class="spec-demo"><div class="spec-bar" style="width:var(--space-13)"></div></div></div>
+
+    <div class="spec-callout">
+      <p><strong>Two values sit outside the ramp on purpose.</strong>
+        <code>--space-card</code> is 1.4rem and <code>--space-band-lg</code> is 3.5rem.
+        Both are component metrics, and snapping either one would have moved real
+        chrome to satisfy a number.</p>
+      <p>Sixteen more call sites were left as raw literals. Nine are sub-pixel chip
+        pads at 0.05 to 0.15rem, where the nearest step is a 67% change. Seven are
+        outliers between 4.5 and 10rem. The migration rule was no more than 0.25rem
+        and no more than 25% of movement, and those sixteen failed it. Leaving them
+        visible is more honest than resizing them quietly.</p>
+    </div>
+  </section>
+
+  <!-- ── SURFACE ─────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="surface">
+    <div class="spec-band-head">
+      <h2>Surface</h2>
+      <span class="spec-formula">--surface-1 &hellip; --surface-5</span>
+    </div>
+    <p class="spec-note">Ascending means further forward, in both themes. On a dark
+      ground a drop shadow has almost nothing left to darken, so a raised panel
+      reads as raised because it is brighter than what it sits on. The light ramp
+      keeps the same order rather than inverting it, so hover-to-brighter still
+      reads as lift and not as sink.</p>
+
+    <div class="spec-swatches">
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--surface-1)"></div><figcaption><b>--surface-1</b>page floor<br>#0c101a &middot; #E7EAF0</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--surface-2)"></div><figcaption><b>--surface-2</b>cards<br>#1a1d26 &middot; #EFF1F5</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--surface-3)"></div><figcaption><b>--surface-3</b>hover, wells<br>#22262f &middot; #F5F7FA</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--surface-4)"></div><figcaption><b>--surface-4</b>callouts<br>#252831 &middot; #FCFDFE</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--surface-5)"></div><figcaption><b>--surface-5</b>ink only<br>#2b2f39 &middot; #FFFFFF</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ── INK ─────────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="ink">
+    <div class="spec-band-head">
+      <h2>Ink</h2>
+      <span class="spec-formula">--ink-1 &hellip; --ink-4</span>
+    </div>
+    <p class="spec-note">Four steps, ascending by emphasis. Brightness accelerates as
+      it climbs: the gap from meta to body is small, and the gap from body to
+      display is large. Faint text sits far from its neighbours so it never
+      competes; display text crowds toward the extreme so it always wins.</p>
+
+    <div class="spec-swatches">
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--ink-1)"></div><figcaption><b>--ink-1</b>meta, captions<br>#999999 &middot; #535971</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--ink-2)"></div><figcaption><b>--ink-2</b>secondary<br>#B0AAA0 &middot; #3D4353</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--ink-3)"></div><figcaption><b>--ink-3</b>body copy<br>#E8E4DC &middot; #34394A</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--ink-4)"></div><figcaption><b>--ink-4</b>headings<br>#FFFFFF &middot; #1C2029</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ── CONTRAST ────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="contrast">
+    <div class="spec-band-head">
+      <h2>Contrast</h2>
+      <span class="spec-formula">WCAG 2.1, every pairing</span>
+    </div>
+    <p class="spec-note">Measured, not assumed. Every ink and every accent against
+      every surface, computed with the sRGB relative-luminance formula. The same
+      numbers run as a build gate: <code>npm run check:contrast</code> reads the
+      compiled CSS and fails the build if any token drops below its declared floor.</p>
+
+    <div class="spec-table-scroll">
+      <table class="spec-table">
+        <caption>Dark theme. AA requires 4.5:1 for body text and 3:1 for large text
+          and non-text. The worst pairing in the system is 4.26:1, and it is the
+          reason <code>--surface-5</code> is ink only. In light theme the worst
+          pairing is <code>--mark</code> at 4.93:1 on <code>--surface-1</code>.</caption>
+        <thead>
+          <tr>
+            <th scope="col" style="text-align:left">on &rarr;</th>
+            <th scope="col">surface-1</th><th scope="col">surface-2</th>
+            <th scope="col">surface-3</th><th scope="col">surface-4</th>
+            <th scope="col">surface-5</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">ink-1</th><td>6.67</td><td>5.91</td><td>5.32</td><td>5.17</td><td>4.70</td></tr>
+          <tr><th scope="row">ink-2</th><td>8.24</td><td>7.30</td><td>6.57</td><td>6.38</td><td>5.80</td></tr>
+          <tr><th scope="row">ink-3</th><td>14.99</td><td>13.27</td><td>11.95</td><td>11.61</td><td>10.56</td></tr>
+          <tr><th scope="row">ink-4</th><td>19.01</td><td>16.83</td><td>15.15</td><td>14.72</td><td>13.39</td></tr>
+          <tr><th scope="row">mark</th><td>7.39</td><td>6.54</td><td>5.89</td><td>5.72</td><td>5.20</td></tr>
+          <tr><th scope="row">sage</th><td>6.43</td><td>5.69</td><td>5.12</td><td>4.98</td><td>4.53</td></tr>
+          <tr><th scope="row">teal</th><td>6.38</td><td>5.65</td><td>5.08</td><td>4.94</td><td class="is-fail">4.49 &#10007;</td></tr>
+          <tr><th scope="row">amethyst</th><td>6.06</td><td>5.36</td><td>4.83</td><td>4.69</td><td class="is-fail">4.27 &#10007;</td></tr>
+          <tr><th scope="row">steel</th><td>6.06</td><td>5.36</td><td>4.83</td><td>4.69</td><td class="is-fail">4.26 &#10007;</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="spec-callout">
+      <p><strong>The one place the system runs out of room.</strong>
+        <code>--steel</code> is the binding token. Holding it at 4.5:1 caps the
+        surface luminance at 0.02432, and <code>--surface-4</code> already sits at
+        0.02133. That leaves about one perceptual step, and
+        <code>--surface-5</code> spends it.</p>
+      <p>So <code>--surface-5</code> carries ink and never accent text. The
+        alternative was lightening steel, amethyst and teal, which is a brand
+        change rather than a CSS change. The restriction is written into the token
+        source, the contrast script and the README, so the next person to reach for
+        it finds the reason before they find the bug.</p>
+    </div>
+  </section>
+
+  <!-- ── ACCENT ──────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="accent">
+    <div class="spec-band-head">
+      <h2>Accent</h2>
+      <span class="spec-formula">categorical, not a ramp</span>
+    </div>
+    <p class="spec-note">Five accents, each bound to a meaning. Gold is the house
+      colour and the only accent allowed to decorate. The other four carry
+      category: announcement type, dashboard audience, service family. Call-site
+      counts are in the captions, and the distribution is the point.</p>
+
+    <div class="spec-swatches">
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--mark)"></div><figcaption><b>--mark</b>house gold &middot; 211 uses<br>#b39f7b &middot; #7A6028</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--amethyst)"></div><figcaption><b>--amethyst</b>12 uses<br>#A284CA &middot; #6B4F94</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--sage)"></div><figcaption><b>--sage</b>10 uses<br>#6DA187 &middot; #38624C</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--teal)"></div><figcaption><b>--teal</b>9 uses<br>#5DA19C &middot; #295F5A</figcaption></figure>
+      <figure class="spec-swatch"><div class="spec-chip" style="background:var(--steel)"></div><figcaption><b>--steel</b>5 uses<br>#7F94A6 &middot; #4A5A68</figcaption></figure>
+    </div>
+
+    <div class="spec-callout">
+      <p><strong>--accent-1 through --accent-5 exist, and you almost certainly want
+          the semantic name.</strong> They are aliases, added so the numbered
+        vocabulary is complete. They are not a lightness ramp and the numbers imply
+        an interchangeability this palette does not have.</p>
+      <p>Reach for <code>--accent-N</code> only when you genuinely mean the nth
+        swatch in the palette, which in practice means a page like this one.
+        Everywhere else, name the meaning.</p>
+    </div>
+  </section>
+
+  <!-- ── ELEVATION ───────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="elevation">
+    <div class="spec-band-head">
+      <h2>Elevation</h2>
+      <span class="spec-formula">--elev-0 &hellip; --elev-5</span>
+    </div>
+    <p class="spec-note">Shadow carries elevation and lightness carries it back.
+      <code>--shadow</code> is itself a theme token, so every level re-resolves per
+      palette: a near-black at low alpha on dark, a cool grey at 18% on light. Pair
+      each level with the matching surface step and the two channels agree.</p>
+
+    <div class="spec-elevs">
+      <div class="spec-elev spec-elev--0">--elev-0<br>none</div>
+      <div class="spec-elev spec-elev--1">--elev-1<br>0 1px 3px</div>
+      <div class="spec-elev spec-elev--2">--elev-2<br>0 2px 8px</div>
+      <div class="spec-elev spec-elev--3">--elev-3<br>0 2px 12px</div>
+      <div class="spec-elev spec-elev--4">--elev-4<br>0 4px 16px</div>
+      <div class="spec-elev spec-elev--5">--elev-5<br>0 24px 60px</div>
+    </div>
+  </section>
+
+  <!-- ── RADIUS ──────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="radius">
+    <div class="spec-band-head">
+      <h2>Radius</h2>
+      <span class="spec-formula">px, not rem</span>
+    </div>
+    <p class="spec-note">A corner radius is a fixed optical detail, not rhythm, so
+      it does not scale with the root font the way spacing does. The low end is
+      spaced one pixel at a time because 2px, 3px and 4px account for 54 of the 65
+      radius call sites in the system.</p>
+
+    <div class="spec-radii">
+      <div class="spec-radius" style="border-radius:var(--radius-1)">--radius-1<br>2px</div>
+      <div class="spec-radius" style="border-radius:var(--radius-2)">--radius-2<br>3px</div>
+      <div class="spec-radius" style="border-radius:var(--radius-3)">--radius-3<br>4px</div>
+      <div class="spec-radius" style="border-radius:var(--radius-4)">--radius-4<br>8px</div>
+      <div class="spec-radius" style="border-radius:var(--radius-5)">--radius-5<br>20px</div>
+      <div class="spec-radius" style="border-radius:var(--radius-round)">--radius-round<br>50%</div>
+    </div>
+  </section>
+
+  <!-- ── LINE ────────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="line">
+    <div class="spec-band-head">
+      <h2>Line</h2>
+      <span class="spec-formula">--line-1 &hellip; --line-4</span>
+    </div>
+    <p class="spec-note">Four hairlines, ascending by assertiveness. They are opaque
+      steps rather than white at low alpha, so a border keeps the same value
+      whatever surface it lands on. In dark theme <code>--line-1</code> is the same
+      value as <code>--surface-3</code>, which is what makes it read as a seam
+      rather than a frame.</p>
+
+    <div class="spec-swatches">
+      <figure class="spec-swatch" style="border-color:var(--line-1)"><div class="spec-chip" style="background:var(--surface-3)"></div><figcaption><b>--line-1</b>row separators<br>#22262f &middot; #E1E4EC</figcaption></figure>
+      <figure class="spec-swatch" style="border-color:var(--line-2)"><div class="spec-chip" style="background:var(--surface-3)"></div><figcaption><b>--line-2</b>cell borders<br>#2b3038 &middot; #D4D8E2</figcaption></figure>
+      <figure class="spec-swatch" style="border-color:var(--line-3)"><div class="spec-chip" style="background:var(--surface-3)"></div><figcaption><b>--line-3</b>default border<br>#30343e &middot; #C7CBD6</figcaption></figure>
+      <figure class="spec-swatch" style="border-color:var(--line-4)"><div class="spec-chip" style="background:var(--surface-3)"></div><figcaption><b>--line-4</b>assertive frame<br>#3d424e &middot; #B3B8C6</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ── MEASURE ─────────────────────────────────────────────────────────── -->
+  <section class="spec-band" id="measure">
+    <div class="spec-band-head">
+      <h2>Measure</h2>
+      <span class="spec-formula">--measure: 68ch</span>
+    </div>
+    <p class="spec-note">Set in <code>ch</code> rather than rem, so the column tracks
+      the font actually rendering rather than a guess about it. Sixty-eight
+      characters is roughly the span the eye tracks before it starts losing the
+      beginning of the next line.</p>
+
+    <div class="spec-measure-demo">
+      <p>This column is exactly one measure wide. Drag the window narrower and it
+        shrinks with you. Drag it wider and it refuses to follow. A text column
+        that grows to fill a 27-inch display is not generous, it is unreadable, and
+        no amount of leading rescues it. That matters more here than on most sites:
+        a good share of the people reading this are doing it at 200% zoom, on a
+        phone, or under stress, and often all three.</p>
+    </div>
+  </section>
+
+  <footer class="spec-foot">
+    <p>@ouroboros-consulting/ouroboros-design &middot; specimen &middot; every value on
+      this page reads from the shipped tokens</p>
+  </footer>
+
+</div>

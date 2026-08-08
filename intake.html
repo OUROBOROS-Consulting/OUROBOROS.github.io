@@ -25,10 +25,16 @@ hide_cta: true
   </div>
   <div class="intake-masthead-rule"></div>
 
+  {%- comment -%}
+    Answers "when will I hear back" before someone spends twenty minutes on the
+    form, not after. Static by design: see _data/availability.yml.
+  {%- endcomment -%}
+  {% include hours.html %}
+
   <!-- Formspree integration -->
   <div data-fs-success
     style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid var(--gold); color: var(--gold);">
-    <strong>Thank you.</strong> I'll follow up within 72 hours.
+    <strong>Thank you.</strong> {{ site.data.availability.response }}
   </div>
   <div data-fs-error
     style="display:none; padding: 1rem 3rem; background: var(--bg3); border-left: 2px solid #e06666; color: #e06666;">
@@ -527,7 +533,11 @@ hide_cta: true
 
       <!-- SUBMIT -->
       <div class="intake-submit">
-        <p class="intake-submit-note">I'll follow up within 72 hours.</p>
+        {%- comment -%}
+          Same string as the availability strip at the top of the page and the
+          success message above. One source so the number cannot drift.
+        {%- endcomment -%}
+        <p class="intake-submit-note">{{ site.data.availability.response }}</p>
         <button type="submit" class="btn" data-fs-submit-btn>Submit Intake</button>
         <button type="button" class="btn" onclick="window.print()">Print / Save as PDF</button>
       </div>
