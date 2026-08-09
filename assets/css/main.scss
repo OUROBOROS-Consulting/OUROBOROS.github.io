@@ -98,12 +98,12 @@
 nav.nav-menu {
   @include dark-island;
   background-image:
-    linear-gradient(rgba(18, 18, 18, 0.88), rgba(10, 10, 10, 0.93)),
+    linear-gradient(rgba(18, 18, 18, 0.6), rgba(10, 10, 10, 0.23)),
     url("../images/Marble.png");
   background-size: cover, 380px 380px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
-  border: 2px solid var(--mark-border);
+  border: 1px solid var(--mark-border);
 }
 
 // ── Sidebar offset ────────────────────────────────────────────────────────
