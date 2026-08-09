@@ -29,4 +29,4 @@ after_hours: >-
 # about response time: every page's cta_body already states "within 72 hours"
 # directly above this line, and repeating it inside the same card reads as
 # padding. What the CTA was missing is *when*, not *how fast*.
-compact: Monday to Thursday, 9 to 6 Central. Friday until 1.
+compact: Monday to Sunday, 12PM to 8PM Central.

@@ -5,7 +5,7 @@ title: null
 description: "Tech consulting for survivors of institutional betrayal and coercive control. Building institutional courage through AI, research, and advocacy."
 
 # Hero
-name_line1: OUROBOROS
+name_line1: ouroborOS
 name_line2: Consulting
 eyebrow: Technology ❖ AI Integration ❖ Research ❖ Systems Design
 tagline: >
@@ -25,6 +25,7 @@ stats:
   years_experience: "4+"
   agencies: "5"
   agencies_note: "HHS Divisions Served (Federal Career)"
+  clients: "4+"
 
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 72 hours.
 ---
