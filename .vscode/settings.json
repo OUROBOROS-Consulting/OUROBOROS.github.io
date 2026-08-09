@@ -29,5 +29,7 @@
    },
    "peacock.color": "#2e010a",
    "editor.fontFamily": "",
-   "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen"
+   "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
+   "editor.defaultFormatter": "vscode.html-language-features",
+   "editor.wordWrap": "bounded"
 }

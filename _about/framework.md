@@ -18,7 +18,7 @@ This firm operates from a set of explicit intellectual commitments — theoretic
       <span class="fw-tag">Systems</span>
       <span class="fw-numeral">I</span>
     </div>
-    <h3 class="fw-name">Cybernetics</h3>
+    <h2 class="fw-name">Cybernetics</h2>
     <hr class="fw-rule">
     <p class="fw-body">Cybernetics — the study of control systems, feedback loops, and adaptation in complex systems — is the theoretical lens through which this firm understands institutional harm and survivor agency. Control is not unidirectional; it is maintained through information asymmetry, feedback suppression, and adaptation to resistance. Perpetrators adjust tactics when survivors push back. Institutions adapt when accountability pressure mounts. Survivors develop counterintelligence. Understanding any of this requires understanding circular causality: harm is not linear cause-and-effect, but a system of mutual feedback. This framework shapes how the firm analyzes coercive control, interprets psychological patterns, and designs interventions — all of which function as perturbations to systems that will adapt, resist, or genuinely transform in response.</p>
   </div>
@@ -28,7 +28,7 @@ This firm operates from a set of explicit intellectual commitments — theoretic
       <span class="fw-tag">Theory</span>
       <span class="fw-numeral">II</span>
     </div>
-    <h3 class="fw-name">Betrayal Trauma Theory</h3>
+    <h2 class="fw-name">Betrayal Trauma Theory</h2>
     <hr class="fw-rule">
     <p class="fw-body"><a href="https://www.jjfreyd.com/" target="_blank" rel="noopener noreferrer">Jennifer Freyd</a>'s framework identifies a specific category of harm: trauma inflicted by institutions or individuals on whom the victim depends. Dependency suppresses detection and disclosure — a survival mechanism that institutions routinely exploit. The affirmative counterpart, institutional courage, defines the standard this firm holds organizations to: prioritizing accountability over self-protection. This is the load-bearing theory behind every institutional accountability engagement.</p>
   </div>
@@ -38,7 +38,7 @@ This firm operates from a set of explicit intellectual commitments — theoretic
       <span class="fw-tag">Taxonomy</span>
       <span class="fw-numeral">III</span>
     </div>
-    <h3 class="fw-name">HiTOP</h3>
+    <h2 class="fw-name">HiTOP</h2>
     <hr class="fw-rule">
     <p class="fw-body">The Hierarchical Taxonomy of Psychopathology replaces DSM categorical diagnoses with empirically derived spectra. Personality pathology, internalizing disorders, and externalizing behavior exist on dimensions — not in discrete boxes. This matters operationally: coercive control perpetrators rarely fit clean diagnostic profiles, and survivors rarely present with single-disorder pictures. HiTOP gives the firm a more accurate map of the psychological terrain it works in.</p>
   </div>
@@ -48,7 +48,7 @@ This firm operates from a set of explicit intellectual commitments — theoretic
       <span class="fw-tag">Framework</span>
       <span class="fw-numeral">IV</span>
     </div>
-    <h3 class="fw-name">Coercive Control</h3>
+    <h2 class="fw-name">Coercive Control</h2>
     <hr class="fw-rule">
     <p class="fw-body"><a href="https://evanstark.weebly.com/" target="_blank" rel="noopener noreferrer">Evan Stark</a>'s framework reframes intimate partner abuse as a liberty crime rather than an injury crime. Physical violence is one tactic within a larger pattern of isolation, surveillance, degradation, and microregulation of daily life. Measuring abuse by incident count systematically undercounts harm. This firm uses the coercive control framework in all survivor-facing work, in institutional accountability assessments, and in public education that addresses how harm actually operates.</p>
   </div>
@@ -58,7 +58,7 @@ This firm operates from a set of explicit intellectual commitments — theoretic
       <span class="fw-tag">Practice</span>
       <span class="fw-numeral">V</span>
     </div>
-    <h3 class="fw-name">Trauma-Informed</h3>
+    <h2 class="fw-name">Trauma-Informed</h2>
     <hr class="fw-rule">
     <p class="fw-body">Trauma-informed practice — grounded in <a href="https://www.samhsa.gov/" target="_blank" rel="noopener noreferrer">SAMHSA</a>'s six principles — shapes both how services are delivered and how research is conducted. Safety, trustworthiness, peer support, collaboration, empowerment, and attention to cultural context are not aspirational values; they are design constraints. Work that ignores trauma history in its process will replicate harm regardless of its stated intent. Every client engagement and public resource is built against this standard.</p>
   </div>
@@ -68,7 +68,7 @@ This firm operates from a set of explicit intellectual commitments — theoretic
       <span class="fw-tag">Methodology</span>
       <span class="fw-numeral">VI</span>
     </div>
-    <h3 class="fw-name">Human-Centered Design</h3>
+    <h2 class="fw-name">Human-Centered Design</h2>
     <hr class="fw-rule">
     <p class="fw-body">The participatory design tradition establishes one standard: solutions that affect people should be built with them, not for them. Co-design is not a method for softening deliverables; it is how you avoid replicating the power structures an intervention claims to disrupt. In survivor advocacy and public health work, lived experience is not a qualitative supplement to quantitative data — it is authoritative. Every platform, resource, and engagement this firm produces is evaluated against a single question: does it center the person it claims to serve? This is a design constraint, not aspiration.</p>
   </div>

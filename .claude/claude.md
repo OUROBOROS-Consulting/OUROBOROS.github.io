@@ -85,7 +85,7 @@ Secondary nav is data-driven from `_data/nav.yml`. Each entry supports `active_p
 
 `../ouroboros-design/` owns every token, mixin, and component style. **Read its `README.md` before writing CSS here** — tokens, accent semantics, elevation, class naming, and accessibility invariants are all documented there.
 
-**Never redeclare a design token in this repo.** A `@media (prefers-color-scheme: light)` block used to re-pin nine tokens on nav and footer; the values silently went stale and nearly excluded those elements from a palette change. Removed 2026-07-26, with a comment at `assets/css/main.scss:48` explaining why. The design system has no light mode — tokens are defined once, unconditionally.
+**Never redeclare a design token in this repo.** A `@media (prefers-color-scheme: light)` block used to re-pin nine tokens on nav and footer; the values silently went stale and nearly excluded those elements from a palette change. Removed 2026-07-26, with a comment at `assets/css/main.scss:48` explaining why. Light mode is real and fully implemented — via a dual guard, `:root[data-theme="light"]` for the explicit toggle plus `@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) }` for OS preference — but both live in the design package. Tokens are still defined exactly once per theme, unconditionally, and never redeclared here.
 
 **What this repo legitimately owns:** raster-backed textures (the `Marble.png` / `Abstract.png` / `Pattern-hero.jpg` rules), because the image assets live in `assets/images/` here, not in the package.
 

@@ -94,7 +94,7 @@ I work with your own record and nothing else. No work aimed at a third party, no
 
 I am also not an attorney. Nothing here is legal advice, and I do not tell you what your rights are or what to file. If you need that, you need a lawyer, and I will say so plainly.
 
-*Need to learn the research skills yourself, or find out what the internet exposes about you? See [Courses & Coaching](/services/courses/).*
+*Need to learn the research skills yourself, or find out what the internet exposes about you? See [Education & Training](/services/education/).*
 
 ## AI and the Acceleration of Coercive Control
 

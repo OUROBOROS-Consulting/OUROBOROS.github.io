@@ -102,7 +102,7 @@ The folder names never appear in a URL — every one of these files carries an e
 |---|---|
 | `/services/advocacy/` | `_services/advocacy.md` |
 | `/services/design/` | `_services/design.md` |
-| `/services/courses/` | `_services/courses.md` |
+| `/services/education/` | `_services/education.md` |
 | `/services/technology/` | `_services/technology.md` |
 
 </details>

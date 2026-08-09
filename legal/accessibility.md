@@ -2,7 +2,7 @@
 layout: article
 title: Accessibility
 category: About
-hero_svg: /assets/images/accessibility.svg
+hero_svg: /assets/images/logo.svg
 permalink: /accessibility/
 lede: >
   Where this site stands on accessibility: what is built, what is not yet done,

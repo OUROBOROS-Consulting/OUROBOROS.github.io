@@ -42,6 +42,9 @@
   }
 
   .intake-masthead-title {
+    // Became an <h1> for a11y (was a div). Reset the UA block margin the
+    // masthead layout was never built to absorb.
+    margin: 0;
     font-family: 'Lora', Georgia, serif;
     font-size: clamp(1.4rem, 3vw, 2rem);
     font-weight: 600;

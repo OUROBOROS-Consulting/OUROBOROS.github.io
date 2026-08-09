@@ -37,11 +37,11 @@ permalink: /about/
 
   <div class="values-grid">
     {% for val in site.data.values %}
-    <div class="values-card">
+    <div class="values-card" role="button" tabindex="0" aria-expanded="false" aria-label="{{ val.title }}">
       <div class="values-card__inner">
         <div class="values-card__front">
           <div class="values-card__surface">
-            <i class="{{ val.icon }} values-card__icon"></i>
+            <i class="{{ val.icon }} values-card__icon" aria-hidden="true"></i>
             <span class="values-card__name">{{ val.title | markdownify }}</span>
           </div>
         </div>

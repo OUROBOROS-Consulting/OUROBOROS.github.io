@@ -1,8 +1,22 @@
 /* main.js */
 
-// ── Values card flip (touch devices) ─────────────────────────────────────────
+// ── Values card flip ──────────────────────────────────────────────────────────
+// Each card's front and back are separate absolutely-positioned faces inside
+// .values-card__inner, so a single nested <button> can't sit "on" both without
+// its own layout rules. .values-card itself already carries role="button",
+// tabindex="0" and aria-expanded (see _about/about.html) — this wires up
+// click plus Enter/Space, and keeps aria-expanded in sync with the flip state.
 document.querySelectorAll('.values-card').forEach(card => {
-  card.addEventListener('click', () => card.classList.toggle('is-flipped'));
+  function toggleFlip() {
+    const isFlipped = card.classList.toggle('is-flipped');
+    card.setAttribute('aria-expanded', isFlipped ? 'true' : 'false');
+  }
+  card.addEventListener('click', toggleFlip);
+  card.addEventListener('keydown', (e) => {
+    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+    e.preventDefault(); // stop Space from scrolling the page
+    toggleFlip();
+  });
 });
 
 // ── Scroll-triggered fade-in ──────────────────────────────────────────────────
@@ -41,6 +55,9 @@ function initCarousel(sectionId, autoAdvance) {
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let current   = 0;
   let timer     = null;
+  // Set once the user hits the pause toggle below. Hover/focus leaving the
+  // carousel must NOT override an explicit pause (WCAG 2.2.2).
+  let userPaused = false;
 
   function go(n) {
     current = ((n % total) + total) % total;
@@ -53,25 +70,60 @@ function initCarousel(sectionId, autoAdvance) {
     if (countEl) countEl.textContent = `${current + 1} / ${total}`;
   }
 
+  function stopTimer() {
+    clearInterval(timer);
+  }
+
   function startTimer() {
-    if (!autoAdvance || reduced || total <= 1) return;
+    if (!autoAdvance || reduced || total <= 1 || userPaused) return;
     clearInterval(timer);
     timer = setInterval(() => go(current + 1), 7000);
   }
 
+  // ── Pause/Play toggle (WCAG 2.2.2) ───────────────────────────────────────
+  // Reuses .carousel-btn for styling. Only rendered for autoplaying carousels
+  // with more than one slide and no reduced-motion preference (nothing to
+  // pause otherwise).
+  if (autoAdvance && !reduced && total > 1) {
+    const controls = section.querySelector('.carousel-controls');
+    if (controls) {
+      const toggleBtn = document.createElement('button');
+      toggleBtn.type = 'button';
+      toggleBtn.className = 'carousel-btn carousel-btn--toggle';
+      controls.appendChild(toggleBtn);
+
+      const syncToggle = () => {
+        toggleBtn.innerHTML = userPaused
+          ? '<i class="fas fa-play" aria-hidden="true"></i>'
+          : '<i class="fas fa-pause" aria-hidden="true"></i>';
+        toggleBtn.setAttribute('aria-label', userPaused ? 'Play testimonials' : 'Pause testimonials');
+      };
+      syncToggle();
+
+      toggleBtn.addEventListener('click', () => {
+        userPaused = !userPaused;
+        if (userPaused) stopTimer(); else startTimer();
+        syncToggle();
+      });
+    }
+  }
+
+  // Manual navigation means the user has taken over — stop rather than
+  // restart, so paging back to re-read a slide doesn't get yanked forward
+  // again a few seconds later.
   section.querySelector('.carousel-btn--prev')
-    ?.addEventListener('click', () => { go(current - 1); startTimer(); });
+    ?.addEventListener('click', () => { go(current - 1); stopTimer(); });
   section.querySelector('.carousel-btn--next')
-    ?.addEventListener('click', () => { go(current + 1); startTimer(); });
+    ?.addEventListener('click', () => { go(current + 1); stopTimer(); });
   dots.forEach((d, i) => d.addEventListener('click', () => { go(i); startTimer(); }));
 
   if (autoAdvance) {
-    section.addEventListener('mouseenter', () => clearInterval(timer));
+    section.addEventListener('mouseenter', stopTimer);
     section.addEventListener('mouseleave', startTimer);
     // Keyboard and touch users need the same pause affordance as hover
-    section.addEventListener('focusin', () => clearInterval(timer));
+    section.addEventListener('focusin', stopTimer);
     section.addEventListener('focusout', startTimer);
-    track.addEventListener('touchstart', () => clearInterval(timer), { passive: true });
+    track.addEventListener('touchstart', stopTimer, { passive: true });
   }
 
   let touchStartX = 0;

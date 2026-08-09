@@ -2,7 +2,7 @@
 layout: article
 title: Disclaimer
 category: About
-hero_svg: /assets/images/disclaimer.svg
+hero_svg: /assets/images/logo.svg
 permalink: /disclaimer/
 back_url: /about/
 lede: >

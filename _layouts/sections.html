@@ -153,11 +153,11 @@ layout: default
 <div class="page-body page-body--banded">
   {% for section in page.sections %}
 
-  <!--
+  {%- comment -%}
     Section: {{ section.heading }}
     id="{{ section.id }}"
     Layout: two columns — label (left) + content (right)
-  -->
+  {%- endcomment -%}
   <section id="{{ section.id }}" class="page-section{% if page.section_layout == 'stacked' %} page-section--stacked{% endif %}">
 
     <!-- Left column: small label text -->
@@ -314,29 +314,31 @@ layout: default
 </div><!-- /page-toc-wrap -->
 {% endif %}
 
-<!-- ══════════════════════════════════════════════════════════════════════
-     SOCIAL / PROFILE LINKS  (optional)
-     Rendered as a horizontal nav row at the bottom of the page.
-     Set in front matter as:
-       links:
-         github:   "https://github.com/username"
-         linkedin: "https://linkedin.com/in/username"
-         orcid:    "https://orcid.org/0000-…"
-         tutor:    "https://tutoring-platform.com/…"
-         contact:  "/contact/"   ← relative URL, no target="_blank"
+{%- comment -%}
+  ══════════════════════════════════════════════════════════════════════
+  SOCIAL / PROFILE LINKS  (optional)
+  Rendered as a horizontal nav row at the bottom of the page.
+  Set in front matter as:
+    links:
+      github:   "https://github.com/username"
+      linkedin: "https://linkedin.com/in/username"
+      orcid:    "https://orcid.org/0000-…"
+      tutor:    "https://tutoring-platform.com/…"
+      contact:  "/contact/"   ← relative URL, no target="_blank"
 
-     Omit a key entirely OR set it to "" to hide that link.
-     Note: `contact` does NOT open in a new tab (intentional — it's
-     an internal page, not an external profile).
-     ══════════════════════════════════════════════════════════════════════ -->
+  Omit a key entirely OR set it to "" to hide that link.
+  Note: `contact` does NOT open in a new tab (intentional — it's
+  an internal page, not an external profile).
+  ══════════════════════════════════════════════════════════════════════
+{%- endcomment -%}
 {% if page.links %}
 <div class="page-body">
   <nav class="footer-links foundation-links">
-    {% if page.links.github != "" %}<a href="{{ page.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
-    {% if page.links.linkedin != "" %}<a href="{{ page.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
-    {% if page.links.orcid != "" %}<a href="{{ page.links.orcid }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
-    {% if page.links.tutor != "" %}<a href="{{ page.links.tutor }}" target="_blank" rel="noopener">Tutoring</a>{% endif %}
-    {% if page.links.contact != "" %}<a href="{{ page.links.contact }}">Contact</a>{% endif %}
+    {% if page.links.github %}<a href="{{ page.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+    {% if page.links.linkedin %}<a href="{{ page.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if page.links.orcid %}<a href="{{ page.links.orcid }}" target="_blank" rel="noopener">ORCID</a>{% endif %}
+    {% if page.links.tutor %}<a href="{{ page.links.tutor }}" target="_blank" rel="noopener">Tutoring</a>{% endif %}
+    {% if page.links.contact %}<a href="{{ page.links.contact }}">Contact</a>{% endif %}
   </nav>
 </div>
 {% endif %}
