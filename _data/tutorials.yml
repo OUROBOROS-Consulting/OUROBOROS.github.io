@@ -1,22 +1,3 @@
-# ── Digital Security & Privacy ────────────────────────────────────────────────
-- section: Digital Security & Privacy
-  tag: Cybersecurity
-  title: Recognizing Social Engineering Tactics
-  description: Learn to identify common manipulation techniques used in phishing, pretexting, and personal interactions. Includes real-world examples and defense strategies.
-  link: "#"
-
-- section: Digital Security & Privacy
-  tag: Data Privacy
-  title: Securing Your Digital Footprint
-  description: Step-by-step guide to auditing and minimizing your online presence. Covers account management, privacy settings, and monitoring tools.
-  link: "#"
-
-- section: Digital Security & Privacy
-  tag: Technology
-  title: Setting Up Encrypted Communication Channels
-  description: Guide to choosing and configuring secure messaging apps, email encryption, and voice communication tools for sensitive conversations.
-  link: "#"
-
 # ── Institutional Navigation & Survival ───────────────────────────────────────
 - section: Institutional Navigation & Survival
   tag: Institutional Navigation

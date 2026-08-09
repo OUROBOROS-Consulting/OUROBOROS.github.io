@@ -1106,7 +1106,7 @@
         "extended_deadline_days": 300,
         "extended_deadline_note": "300 days in FEPA states",
         "scope": "PTSD and other trauma-related conditions may constitute a covered disability. Employers must provide reasonable accommodation and may not retaliate for accommodation requests.",
-        "url": "https://www.eeoc.gov/statutes/americans-disabilities-act-1990",
+        "url": "https://www.eeoc.gov/americans-disabilities-act-1990-original-text",
         "last_verified": "2026-05-22"
       },
       {
@@ -1135,7 +1135,7 @@
         "agency": "OSHA / DOL",
         "filing_deadline_days": 180,
         "scope": "Protects employees of publicly traded companies who report mail, wire, bank, or securities fraud. Covers reports to federal agencies, Congress, or supervisors. Remedies include reinstatement, back pay, and attorney fees.",
-        "url": "https://www.whistleblowers.gov/statutes/sox",
+        "url": "https://www.whistleblowers.gov/statutes",
         "last_verified": "2026-05-22"
       },
       {
@@ -1162,7 +1162,7 @@
         "agency": "OSHA",
         "filing_deadline_days": 30,
         "scope": "Prohibits employer retaliation against workers who report workplace safety violations to OSHA. Strict 30-day filing window from the retaliatory act.",
-        "url": "https://www.whistleblowers.gov/statutes/osha",
+        "url": "https://www.whistleblowers.gov/statutes",
         "last_verified": "2026-05-22"
       }
     ]

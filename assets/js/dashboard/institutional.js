@@ -65,7 +65,7 @@
       steps: [
         'Identify the specific statute that protects your activity (OSHA has 25+ programs).',
         'File within 30 days of the adverse action — this deadline is absolute.',
-        'Submit online at osha.gov/whistleblower or call 1-800-321-OSHA.',
+        'Submit online at whistleblowers.gov or call 1-800-321-OSHA.',
         'OSHA will screen, investigate, and may seek reinstatement and back pay.'
       ],
       deadlineNote: 'Strict 30-day window — no exceptions'

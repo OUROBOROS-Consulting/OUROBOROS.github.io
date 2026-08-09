@@ -6,7 +6,12 @@ permalink: /assets/js/search-index.json
 {%- assign first_item = true -%}
 {%- for collection in site.collections -%}
   {%- for doc in collection.docs -%}
-    {%- if doc.title -%}
+    {%- comment -%}
+      noindex pages are excluded here as well as from the sitemap. Indexing
+      internal tooling in site search surfaces it to visitors even when search
+      engines are told to stay away.
+    {%- endcomment -%}
+    {%- if doc.title and doc.noindex != true -%}
       {%- unless first_item -%},{%- endunless -%}
       {"title":{{ doc.title | jsonify }},"url":{{ doc.url | relative_url | jsonify }},"description":{{ doc.description | default: doc.excerpt | default: "" | strip_html | truncatewords: 30 | strip_newlines | jsonify }},"type":{{ doc.collection | jsonify }}}
       {%- assign first_item = false -%}
@@ -14,7 +19,7 @@ permalink: /assets/js/search-index.json
   {%- endfor -%}
 {%- endfor -%}
 {%- for page in site.pages -%}
-  {%- if page.title -%}
+  {%- if page.title and page.noindex != true -%}
     {%- unless first_item -%},{%- endunless -%}
     {"title":{{ page.title | jsonify }},"url":{{ page.url | relative_url | jsonify }},"description":{{ page.description | default: page.excerpt | default: "" | strip_html | truncatewords: 30 | strip_newlines | jsonify }},"type":"page"}
     {%- assign first_item = false -%}
