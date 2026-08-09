@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Our Team
+description: "Who does the work at OUROBOROS Consulting. One person, named, with the background and the limits stated plainly."
 permalink: /team/
 ---
 
@@ -34,7 +35,7 @@ permalink: /team/
         {% endfor %}
       </ul>
       {% endif %}
-      <p class="team-bio">{{ member.bio | markdownify | strip_html | strip_newlines }}</p>
+      <div class="team-bio">{{ member.bio | markdownify }}</div>
       {% if member.links %}
       <div class="team-links">
         {% if member.links.linkedin %}<a href="{{ member.links.linkedin }}" class="team-link"

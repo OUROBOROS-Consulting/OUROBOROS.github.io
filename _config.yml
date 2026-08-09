@@ -1,4 +1,10 @@
 title: ouroborOS
+# Consumed by jekyll-feed and jekyll-sitemap. Not used by default.html, which
+# builds its own <meta name="description"> from page front matter.
+description: >-
+  Technology, research, and advocacy consulting for survivors of institutional
+  betrayal, senior citizens, veterans, nonprofits, legal aid organizations,
+  small businesses, and startups.
 author: Apostolos Stamenos
 contact_url: /intake
 tutoring_url: https://www.wyzant.com/refer/tutor/86925781/?utm_source=TREF&utm_campaign=iphone&utm_content=tutorapp&utm_medium=share

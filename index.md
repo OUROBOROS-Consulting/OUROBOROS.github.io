@@ -2,7 +2,7 @@
 layout: home
 show_banner: true
 title: null
-description: "Tech consulting for survivors of institutional betrayal and coercive control. Building institutional courage through AI, research, and advocacy."
+description: "Twin Cities tech consulting for survivors of institutional betrayal, nonprofits, small businesses, and startups. AI, automation, research, and advocacy."
 
 # Hero
 name_line1: ouroborOS

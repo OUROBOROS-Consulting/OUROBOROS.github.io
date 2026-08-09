@@ -1,0 +1,276 @@
+{%- comment -%}
+  schema.html — one JSON-LD @graph per page.
+
+  Called from <head> in default.html on EVERY page. Node identity is stable
+  across the site (#org, #website, #person), so search engines and LLM crawlers
+  can merge every page's graph into one picture of the firm rather than reading
+  each page as an unrelated document.
+
+  Always emitted:
+    Organization  (#org)      — the firm, its founder, what it knows, who it serves
+    WebSite       (#website)  — the site itself, published by #org
+    Person        (#person)   — Apostolos, referenced as #org's founder
+
+  Conditionally emitted:
+    BreadcrumbList  every page except the homepage
+    Service         pages in the _services collection
+    FAQPage         any page with collapse_questions: true
+    Article         article and announcement layouts that carry a date
+
+  ⚠ Every string that reaches JSON goes through `| jsonify`, which emits its own
+  surrounding quotes and escapes internal ones. Do not wrap those in quotes here
+  and do not add `| strip` after it — the quotes would land inside the string.
+
+  ⚠ Credential floor is MS. The Person node must never carry a doctorate, a
+  "PhD candidate" style credential, or a university affiliation for a degree
+  that was not completed.
+{%- endcomment -%}
+{%- assign _org_desc = "Technology, research, and advocacy consulting for survivors of institutional betrayal, senior citizens, veterans, nonprofits, legal aid organizations, small businesses, and startups." -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["Organization", "ProfessionalService"],
+      "@id": {{ site.url | append: '/#org' | jsonify }},
+      "name": "OUROBOROS Consulting",
+      "alternateName": "ouroborOS Consulting",
+      "url": {{ site.url | append: '/' | jsonify }},
+      "description": {{ _org_desc | jsonify }},
+      "logo": {
+        "@type": "ImageObject",
+        "@id": {{ site.url | append: '/#logo' | jsonify }},
+        "url": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
+        "contentUrl": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
+        "caption": "OUROBOROS Consulting"
+      },
+      "image": { "@id": {{ site.url | append: '/#logo' | jsonify }} },
+      "founder": { "@id": {{ site.url | append: '/#person' | jsonify }} },
+      "employee": { "@id": {{ site.url | append: '/#person' | jsonify }} },
+      "areaServed": [
+        { "@type": "Country", "name": "United States" },
+        { "@type": "City", "name": "Minneapolis" },
+        { "@type": "City", "name": "Saint Paul" }
+      ],
+      "availableLanguage": "en",
+      "priceRange": "$50–$375/hr, sliding scale for individuals",
+      "knowsAbout": [
+        "institutional betrayal",
+        "institutional courage",
+        "coercive control",
+        "survivor advocacy",
+        "public records research",
+        "digital self-defense",
+        "AI adoption for small business",
+        "agentic AI workflows",
+        "workflow automation",
+        "data systems consulting",
+        "biostatistics",
+        "federal technology"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Sales and general enquiries",
+        "url": {{ '/intake' | absolute_url | jsonify }},
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        {{ site.linkedin_url | jsonify }},
+        {{ site.github_url | jsonify }}
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Services",
+        "itemListElement": [
+          {%- assign _svcs = site.services | sort: 'order' -%}
+          {%- for s in _svcs %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "@id": {{ s.url | absolute_url | append: '#service' | jsonify }},
+              "name": {{ s.title | jsonify }},
+              "description": {{ s.description | strip_html | jsonify }},
+              "url": {{ s.url | absolute_url | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor %}
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": {{ site.url | append: '/#website' | jsonify }},
+      "url": {{ site.url | append: '/' | jsonify }},
+      "name": "OUROBOROS Consulting",
+      "description": {{ _org_desc | jsonify }},
+      "publisher": { "@id": {{ site.url | append: '/#org' | jsonify }} },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Person",
+      "@id": {{ site.url | append: '/#person' | jsonify }},
+      "name": "Apostolos Stamenos",
+      "honorificSuffix": "MS",
+      "jobTitle": "Founder & Principal",
+      "url": {{ '/team/' | absolute_url | jsonify }},
+      "image": {{ '/assets/images/AS.jpg' | absolute_url | jsonify }},
+      "worksFor": { "@id": {{ site.url | append: '/#org' | jsonify }} },
+      "knowsAbout": [
+        "statistics",
+        "Bayesian modeling",
+        "machine learning",
+        "natural language processing",
+        "personality psychopathology",
+        "federal information technology"
+      ],
+      "sameAs": [
+        {{ site.linkedin_url | jsonify }},
+        "https://github.com/astamenos"
+      ]
+    }
+    {%- comment -%} ── Breadcrumbs: every page except the homepage ── {%- endcomment -%}
+    {%- if page.url != '/' %},
+    {
+      "@type": "BreadcrumbList",
+      "@id": {{ page.url | absolute_url | append: '#breadcrumb' | jsonify }},
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": {{ site.url | append: '/' | jsonify }} },
+        {%- if page.collection == 'services' %}
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": {{ '/services/' | absolute_url | jsonify }} },
+        { "@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }} }
+        {%- else %}
+        { "@type": "ListItem", "position": 2, "name": {{ page.title | default: 'Page' | jsonify }} }
+        {%- endif %}
+      ]
+    }
+    {%- endif %}
+    {%- comment -%} ── Service detail pages ── {%- endcomment -%}
+    {%- if page.collection == 'services' %},
+    {
+      "@type": "Service",
+      "@id": {{ page.url | absolute_url | append: '#service' | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "description": {{ page.description | default: page.lede | strip_html | jsonify }},
+      "serviceType": {{ page.title | jsonify }},
+      "provider": { "@id": {{ site.url | append: '/#org' | jsonify }} },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      {%- if page.who %}
+      "audience": { "@type": "Audience", "audienceType": {{ page.who | strip_html | strip_newlines | jsonify }} },
+      {%- endif %}
+      {%- if page.pricing %}
+      {%- comment -%}
+        The rate goes in the offer NAME and DESCRIPTION, not in a
+        priceSpecification. schema.org `price` is a number, and these rates are
+        ranges ("$150–$200/hr") or "Contact me". Publishing those as `price`
+        emits structurally invalid data that a validator rejects outright, which
+        is worse than publishing no price node at all. The Organization carries
+        the honest summary as `priceRange`.
+      {%- endcomment -%}
+      "offers": [
+        {%- for p in page.pricing %}
+        {
+          "@type": "Offer",
+          "name": {{ p.name | append: ' — ' | append: p.rate | jsonify }},
+          "description": {{ p.notes | strip_html | strip_newlines | strip | jsonify }},
+          "priceCurrency": "USD",
+          "url": {{ page.url | absolute_url | jsonify }},
+          "availability": "https://schema.org/InStock"
+        }{% unless forloop.last %},{% endunless %}
+        {%- endfor %}
+      ],
+      {%- endif %}
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": {{ page.title | append: ' — what is included' | jsonify }},
+        "itemListElement": [
+          {%- for inc in page.included %}
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": {{ inc.title | jsonify }},
+              "description": {{ inc.description | strip_html | strip_newlines | jsonify }}
+            }
+          }{% unless forloop.last %},{% endunless %}
+          {%- endfor %}
+        ]
+      }
+    }
+    {%- endif %}
+    {%- comment -%}
+      ── FAQ pages ──
+      Built from the RENDERED body, not the Markdown source, so the questions
+      stay in sync with the page no matter how kramdown handles them. Each
+      question is an <h3>; its answer is everything up to the next <h2> or <h3>.
+      collapse.js later reparents these into <details>, which does not change
+      the text, so the schema keeps matching what a reader sees.
+    {%- endcomment -%}
+    {%- if page.collapse_questions %},
+    {
+      "@type": "FAQPage",
+      "@id": {{ page.url | absolute_url | append: '#faq' | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "name": {{ page.title | jsonify }},
+      "isPartOf": { "@id": {{ site.url | append: '/#website' | jsonify }} },
+      "mainEntity": [
+        {%- comment -%}
+          The separating comma is emitted BEFORE each entry after the first,
+          tracked with a counter rather than forloop.last. Questions with an
+          empty heading or an empty answer are skipped, so the loop index and
+          the emitted index are not the same number and forloop.last would put
+          a comma before the closing bracket.
+        {%- endcomment -%}
+        {%- assign _emitted = 0 -%}
+        {%- assign _chunks = content | split: '<h3' -%}
+        {%- for chunk in _chunks offset: 1 -%}
+        {%- assign _q = chunk | split: '</h3>' | first | split: '>' | last | strip_html | strip -%}
+        {%- comment -%}
+          Block ends get a trailing space BEFORE strip_html, or strip_newlines
+          welds the last word of one paragraph onto the first word of the next
+          ("makes them sound.I help people").
+        {%- endcomment -%}
+        {%- assign _a = chunk | split: '</h3>' | last | split: '<h2' | first -%}
+        {%- assign _a = _a | replace: '</p>', '</p> ' | replace: '</li>', '</li> ' | replace: '</td>', '</td> ' | replace: '</tr>', '</tr> ' -%}
+        {%- assign _a = _a | strip_html | strip_newlines | replace: '  ', ' ' | strip -%}
+        {%- if _q != '' and _a != '' -%}
+        {%- if _emitted > 0 %},{% endif %}
+        {
+          "@type": "Question",
+          "name": {{ _q | jsonify }},
+          "acceptedAnswer": { "@type": "Answer", "text": {{ _a | jsonify }} }
+        }
+        {%- assign _emitted = _emitted | plus: 1 -%}
+        {%- endif -%}
+        {%- endfor %}
+      ]
+    }
+    {%- endif %}
+    {%- comment -%} ── Long-form prose with a date ── {%- endcomment -%}
+    {%- comment -%}
+      Liquid `or` is right-associative and has no grouping, so the two-clause
+      test is precomputed here instead of written inline.
+    {%- endcomment -%}
+    {%- assign _is_prose = false -%}
+    {%- if page.layout == 'announcement' or page.layout == 'article' -%}
+      {%- if page.date -%}{%- assign _is_prose = true -%}{%- endif -%}
+    {%- endif -%}
+    {%- if _is_prose %},
+    {
+      "@type": "Article",
+      "@id": {{ page.url | absolute_url | append: '#article' | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "url": {{ page.url | absolute_url | jsonify }},
+      "description": {{ page.description | default: page.lede | strip_html | strip_newlines | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ page.last_modified_at | default: page.date | date_to_xmlschema | jsonify }},
+      "author": { "@id": {{ site.url | append: '/#person' | jsonify }} },
+      "publisher": { "@id": {{ site.url | append: '/#org' | jsonify }} },
+      "isPartOf": { "@id": {{ site.url | append: '/#website' | jsonify }} },
+      "inLanguage": "en-US"
+    }
+    {%- endif %}
+  ]
+}
+</script>

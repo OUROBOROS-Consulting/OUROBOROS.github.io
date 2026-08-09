@@ -9,57 +9,48 @@
     <title>{{ _title }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
-    {% assign _desc = page.lede | default: page.description | default: "Bespoke solutions where technology, rigorous
+    {%- comment -%}
+      `description` first, then `lede`. `description` is written to be a meta
+      description; `lede` is display prose that happens to sit near the top of
+      the page. The order was the other way round, so every page carrying both
+      published its long-form lede truncated mid-sentence at 160 characters.
+    {%- endcomment -%}
+    {% assign _desc = page.description | default: page.lede | default: "Bespoke solutions where technology, rigorous
     research, and principled advocacy meet." %}
-    <meta name="description" content="{{ _desc | strip_html | truncate: 160 }}" />
+    {% assign _desc = _desc | strip_html | strip_newlines | truncate: 160 %}
+    <meta name="description" content="{{ _desc }}" />
+    <meta name="author" content="Apostolos Stamenos" />
 
     <!-- Open Graph / social preview -->
+    {% if page.layout == 'article' or page.layout == 'announcement' %}
+    <meta property="og:type" content="article" />
+    {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />{% endif %}
+    <meta property="article:author" content="Apostolos Stamenos" />
+    {% else %}
     <meta property="og:type" content="website" />
+    {% endif %}
     <meta property="og:site_name" content="OUROBOROS Consulting" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:title" content="{{ _title }}" />
-    <meta property="og:description" content="{{ _desc | strip_html | truncate: 160 }}" />
+    <meta property="og:description" content="{{ _desc }}" />
     <meta property="og:image" content="{{ '/assets/images/Social-Preview.jpg' | absolute_url }}" />
+    <meta property="og:image:alt" content="OUROBOROS Consulting" />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ _title }}" />
+    <meta name="twitter:description" content="{{ _desc }}" />
+    <meta name="twitter:image" content="{{ '/assets/images/Social-Preview.jpg' | absolute_url }}" />
     {% feed_meta %}
-    <meta name="keywords"
-      content="institutional betrayal, institutional courage, coercive control, survivor advocacy, whistleblower support, AI safety, federal technology, biostatistics" />
 
-    {% if page.url == "/" %}
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "OUROBOROS Consulting",
-    "founder": {
-      "@type": "Person",
-      "name": "Apostolos Stamenos"
-    },
-    "areaServed": "US",
-    "knowsAbout": [
-      "institutional betrayal",
-      "institutional courage",
-      "coercive control",
-      "survivor advocacy",
-      "AI safety",
-      "biostatistics",
-      "whistleblower support",
-      "federal technology"
-    ],
-    "url": "{{ site.url }}",
-    "sameAs": [
-      "{{ site.linkedin_url }}",
-      "{{ site.github_url }}"
-    ]
-  }
-  </script>
-    {% endif %}
+    {% unless page.noindex %}{% include schema.html %}{% endunless %}
 
     <link rel="icon" href="{{ '/assets/images/logo.svg' | relative_url }}" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}" />
     <!-- Self-hosted fonts — no third-party requests (see /assets/fonts/LICENSE.md) -->
     <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}" />
-    {% if page.noindex %}<meta name="robots" content="noindex,nofollow" />{% endif %}
+    {% if page.noindex %}<meta name="robots" content="noindex,nofollow" />
+    {% else %}<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+    {% endif %}
     <script>
       // Blocking, inline, runs before any stylesheet paints. Applies a
       // previously-chosen theme immediately so there is no flash of the

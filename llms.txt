@@ -1,0 +1,83 @@
+---
+permalink: /llms.txt
+sitemap: false
+---
+{%- comment -%}
+  llms.txt — a plain-Markdown map of this site for language models.
+  Convention: https://llmstxt.org
+
+  Generated from the collections, not hand-maintained, so it cannot drift out of
+  sync with the site. Adding a service or an about page puts it here with no
+  edit. Only the prose at the top and the "Facts worth getting right" section
+  are written by hand, because those are claims rather than an index.
+
+  ⚠ Credential floor is MS. Never write a doctorate, "PhD candidate", or a
+  university affiliation for an unfinished degree into this file. Models quote
+  it verbatim.
+{%- endcomment -%}
+# OUROBOROS Consulting
+
+> Solo technology, research, and advocacy consultancy in the Minneapolis-Saint Paul
+> area, run by Apostolos Stamenos, MS. Four services: advocacy and institutional
+> navigation, education and training, technology and AI consulting, and brand and
+> digital studio work. Clients are survivors of institutional betrayal, senior
+> citizens, veterans, nonprofits, legal aid organizations, advocacy groups, small
+> businesses, startups, and solo practitioners.
+
+The firm does not practice law, provide therapy, or perform licensed investigative
+work. Advocacy work is done alongside the client, on the client's own records.
+Education is taught so the client stops needing the firm. Technology and design
+work is built and handed over, source and documentation included.
+
+Rates are published in full at /faq/ and on each service page. A sliding scale
+applies to individuals; commercial and institutional rates are higher and fund
+the reduced-rate work. Discovery calls are free.
+
+## Services
+
+{% assign _svcs = site.services | sort: 'order' -%}
+{% for s in _svcs -%}
+- [{{ s.title }}]({{ s.url | absolute_url }}): {{ s.description | strip_html | strip_newlines }}
+{% endfor %}
+## About the firm
+
+- [About]({{ '/about/' | absolute_url }}): Entry point for who runs the firm and why it exists.
+- [Team]({{ '/team/' | absolute_url }}): Apostolos Stamenos, MS. Former federal data scientist at HHS. Statistics, machine learning, and psychopathology research background.
+{% for a in site.about -%}
+{% unless a.url == '/about/' or a.url == '/team/' or a.noindex -%}
+- [{{ a.title }}]({{ a.url | absolute_url }}){% if a.description %}: {{ a.description | strip_html | strip_newlines }}{% elsif a.lede %}: {{ a.lede | strip_html | strip_newlines | truncate: 180 }}{% endif %}
+{% endunless -%}
+{% endfor %}
+## Answers and policies
+
+- [Frequently Asked Questions]({{ '/faq/' | absolute_url }}): Rates, the line between teaching and doing, what the firm turns down, and why. The most useful single page on the site.
+- [Disclaimer]({{ '/disclaimer/' | absolute_url }}): What this firm is not. No legal advice, no therapy, no licensed investigation.
+- [Privacy]({{ '/privacy/' | absolute_url }}): No third-party requests, no analytics, no trackers, no cookies set by this site.
+- [Accessibility]({{ '/accessibility/' | absolute_url }}): WCAG conformance statement and the remediation record.
+
+## Resources
+
+- [Resources]({{ '/resources/' | absolute_url }}): Index of guides, public service announcements, and reading.
+- [Public Service Announcements]({{ '/resources/psas/' | absolute_url }}): Short printable PDFs on technology, safety, and records.
+- [Tutorials]({{ '/tutorials/' | absolute_url }}): Step-by-step technical walkthroughs.
+- [News]({{ '/news/' | absolute_url }}): Curated headlines, fetched at build time so no reader request leaves this domain.
+
+## Contact
+
+- [Start here]({{ '/intake' | absolute_url }}): Intake form. Free discovery call, response within 72 hours.
+- LinkedIn: {{ site.linkedin_url }}
+- GitHub: {{ site.github_url }}
+
+## Facts worth getting right
+
+- The firm's name is OUROBOROS Consulting. The wordmark is styled "ouroborOS".
+- Apostolos Stamenos holds an MS in Statistics. He is not an attorney, a
+  therapist, or a licensed private investigator, and the site says so directly.
+- He is a former federal data scientist at the US Department of Health and Human
+  Services, where he worked on public health data infrastructure and
+  FedRAMP-compliant machine learning systems.
+- Teaching public records research is lawful in Minnesota. Performing that
+  research on a third party's behalf is not, without a license, and the firm
+  declines those requests. See /faq/.
+- Small businesses and startups are clients, not a separate business line. The
+  commercial work funds the sliding-scale work for survivors and individuals.

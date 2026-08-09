@@ -3,7 +3,10 @@
 # hire is a single block here — no HTML or CSS changes required.
 #
 # photo: 5:6 portrait recommended (hex frame crops to that ratio).
-# bio:   2 to 4 sentences.
+# bio:   Markdown, rendered as paragraphs. Blank line between them.
+#
+# ⚠ Credential floor is MS. Never list a doctorate, "PhD candidate", or a
+#   university affiliation that did not award a completed degree.
 
 - name: Apostolos Stamenos
   role: Founder & Principal
@@ -11,15 +14,27 @@
   photo: /assets/images/AS.jpg
   photo_alt: Apostolos Stamenos
   credentials:
-    - Statistical research
-    - Federal IT
-    - Personality psychopathology
-  # BIO STUB — replace with approved copy.
-  bio: >
-    Founder of OUROBOROS Consulting. Background in statistical research,
-    federal information technology, and the study of personality psychopathology.
-    Builds technology, research, and advocacy for people failed by the institutions
-    meant to protect them.
+    - MS, Statistics
+    - Former federal data scientist
+    - Psychopathology research
+  bio: |
+    Founder of OUROBOROS Consulting. Former federal data scientist at HHS, where
+    I led agency-wide transitions of public health infrastructure during the
+    COVID response and built FedRAMP-compliant machine learning and language
+    systems on Palantir Foundry.
+
+    My technical work spans Bayesian modeling, neuroimaging, high-throughput
+    data pipelines, and anomaly detection in national health data systems. I
+    build things that have to work: under deadline, under regulatory constraint,
+    at scale.
+
+    I work with survivors, senior citizens, veterans, nonprofits, legal aid
+    organizations, and advocacy groups. I also work with small businesses,
+    startups, and solo practitioners who need technical capacity they cannot
+    afford to hire full-time. The job is the same either way. Find what is
+    slowing you down, then build the right fix. Sometimes that is an AI tool.
+    Sometimes it is a simple automation, a better workflow, or an app you have
+    not heard of.
   links:
     linkedin: https://www.linkedin.com/in/apostolos-stamenos
     contact: /intake
