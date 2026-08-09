@@ -8,7 +8,7 @@
 - name: Apostolos Stamenos
   role: Founder & Principal
   # PLACEHOLDER photo — swap for the new headshot when it arrives.
-  photo: /assets/images/AS.png
+  photo: /assets/images/AS.jpg
   photo_alt: Apostolos Stamenos
   credentials:
     - Statistical research
