@@ -2,11 +2,26 @@
 ---
 
 @use "@ouroboros-consulting/ouroboros-design/scss/tokens" as *;
-  /* ── Intake wrapper ── */
+  /* ── Intake wrapper ──
+     Was `max-width + margin: auto + padding: 10vw` — the exact anti-pattern
+     the page-band mixin (_base.scss) exists to fix. body reserves
+     --rail-total in its own padding-left, so an auto-margin container in here
+     centred on a box that's already offset right, then added symmetric
+     padding on top of that — stacking the rail gap onto the left only. That
+     was the whole "form has left margin" bug.
+     Hand-inlined rather than `@include page-band` because this file only
+     imports the tokens partial, not base (same reason dark-island's values
+     are hand-copied below instead of pulled in via base — see that comment).
+     The custom properties themselves (--rail-total, --gutter, --measure-page)
+     are plain runtime CSS vars main.css already sets at :root, so no Sass
+     import is needed to reach them — only the mixin's math is reproduced.
+     Same technique, same cap, as .page-body site-wide. */
   .intake-wrapper {
-    max-width: 1500px;
-    margin: var(--space-12) auto 0;
-    padding: var(--space-8) 10vw var(--space-12);
+    width: calc(100% + var(--rail-total, 0px));
+    margin-left: calc(var(--rail-total, 0px) * -1);
+    padding-inline: max(var(--gutter), calc((100% + var(--rail-total, 0px) - var(--measure-page)) / 2));
+    padding-block: var(--space-8) var(--space-12);
+    margin-top: var(--space-8);
   }
 
   /* ── Masthead ── */
@@ -115,16 +130,32 @@
     color: var(--line-3);
   }
 
-  /* ── Service type cards ── */
+  /* ── Service type cards ──
+     minmax(0, 1fr), not bare 1fr: a plain `1fr` track carries an implicit
+     minmax(auto, 1fr), so it won't shrink below its content's min-content
+     width. On a laptop viewport — still 4 columns, less width than desktop —
+     that pushed the row wider than .intake-wrapper and the cards overflowed
+     the page. minmax(0, 1fr) removes that floor. */
   .service-cards {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-4);
   }
 
+  /* ⚠ .service-card IS a <label>, so the field-caption rule above it applies:
+     0.68rem, 0.12em tracking, ALL CAPS. That treatment is right for a two-word
+     caption and wrong for a card holding a serif title and a sentence of body
+     copy — it rendered the descriptions as unreadable uppercase. The children
+     already re-declare font-size, family and colour; only case and tracking
+     inherit through, so only those need resetting. Scoped here rather than
+     loosened on the label rule, because the short .check-item chips ("YES",
+     "EMAIL ONLY") do want the caps. */
   .service-card {
     cursor: pointer;
     display: block;
+    text-transform: none;
+    letter-spacing: normal;
+    font-weight: 400;
   }
 
   .service-card input[type="radio"] {
@@ -135,6 +166,12 @@
   }
 
   .service-card-inner {
+    /* One definition, two consumers: the icon's own box and the width the
+       title has to give up for it. They were independent numbers and drifted
+       apart — see the padding-right rule below. */
+    --card-icon-size: clamp(31px, 24.2%, 44px);
+    --card-icon-inset: 1.2rem;
+
     border: 1px solid var(--line-3);
     background: var(--surface-3);
     padding: var(--space-card) var(--space-6);
@@ -143,6 +180,10 @@
     display: flex;
     flex-direction: column;
     gap: var(--space-3);
+    // Flex items default to min-width: auto, which reasserts the same
+    // content-based floor minmax(0, 1fr) above just removed on the grid
+    // track. Belt and suspenders against the same overflow.
+    min-width: 0;
   }
 
   /* Corner icon: same treatment as the home services cards, sized down because
@@ -155,8 +196,8 @@
   .service-card-inner .card-icon {
     position: absolute;
     top: 1.4rem;   /* matches .service-card-inner padding */
-    right: 1.2rem;
-    width: clamp(31px, 24.2%, 44px);
+    right: var(--card-icon-inset);
+    width: var(--card-icon-size);
     margin-bottom: 0;
     font-size: 1.6rem;
     color: var(--mark);
@@ -164,10 +205,13 @@
 
   /* Only the title sits beside the icon, so only the title gives up width. The
      min-height matches the icon box, which guarantees the description always
-     starts below it and can stay full width. */
+     starts below it and can stay full width.
+     ⚠ The reservation must count the icon's inset as well as its width. It
+     counted the width alone, so on the two cards with a long title the last
+     word ran under the glyph. */
   .service-card-inner:has(.card-icon) .service-card-title {
-    padding-right: calc(44px + 0.6rem);
-    min-height: 44px;
+    padding-right: calc(var(--card-icon-size) + var(--card-icon-inset) + 0.6rem);
+    min-height: var(--card-icon-size);
   }
 
   .service-card:hover .service-card-inner {
@@ -330,6 +374,11 @@
     background: var(--surface-3);
     border: 1px solid var(--line-3);
     padding: var(--space-3) var(--space-5);
+    /* Explicit, because <select> and <input> take different `normal`
+       line-heights from the UA. Same padding and font-size still produced two
+       different box heights, and the pair sitting side by side in the contact
+       row made it obvious. */
+    line-height: 1.5;
     transition: border-color 0.2s;
     -webkit-appearance: none;
   }
@@ -407,6 +456,69 @@
     box-shadow: none;
   }
 
+  /* ── Acknowledgment ──
+     The only required checkbox on the page, and a sentence rather than a chip.
+     It borrowed .check-item, which centred a two-line sentence on a 13px box
+     and uppercased it. Its own class: sentence case, top-aligned box, and the
+     gold edge that marks it as the one thing that must be ticked. */
+  .intake-ack {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+    cursor: pointer;
+    padding: var(--space-4) var(--space-5);
+    border: 1px solid var(--mark-border);
+    background: var(--surface-3);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 300;
+    letter-spacing: normal;
+    text-transform: none;
+    line-height: 1.6;
+    color: var(--ink-2);
+    transition: border-color 0.2s, color 0.2s;
+
+    &:hover {
+      color: var(--ink-3);
+    }
+
+    &:has(input:checked) {
+      border-color: var(--mark);
+    }
+
+    input[type="checkbox"] {
+      width: 13px;
+      height: 13px;
+      /* Optical centring on the first line of text, not the first pixel. */
+      margin-top: 0.28em;
+      accent-color: var(--mark);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+  }
+
+  /* ── Formspree result banners ──
+     ⚠ Never add a `display` declaration here. Both banners carry the [hidden]
+     attribute; the UA's display:none for it loses to any author display rule,
+     and they would show on page load. */
+  .intake-banner {
+    padding: var(--space-5) var(--space-10);
+    background: var(--surface-3);
+    border-left: 2px solid;
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .intake-banner--ok {
+    border-left-color: var(--mark);
+    color: var(--mark);
+  }
+
+  .intake-banner--err {
+    border-left-color: var(--alert);
+    color: var(--alert);
+  }
+
   /* ── Signature block ── */
   .sig-grid {
     display: grid;
@@ -478,10 +590,12 @@
   /* ── Mobile / tablet responsive ── */
   @media (max-width: 768px) {
 
-    /* Halve the doubled horizontal padding (wrapper 10vw + section 3rem was
-       crushing field width on phones). */
+    /* Horizontal padding no longer needs a local override: --gutter itself
+       drops to max(6vw, --rail-total + --space-4) at this breakpoint (see
+       _base.scss), which is what used to be hand-duplicated here. Only the
+       bottom padding still shrinks for mobile rhythm. */
     .intake-wrapper {
-      padding: var(--space-8) 5vw var(--space-11);
+      padding-block-end: var(--space-11);
     }
 
     /* Masthead: stack title over meta instead of the cramped 1fr/auto row that
