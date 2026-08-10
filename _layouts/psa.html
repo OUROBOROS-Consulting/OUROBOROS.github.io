@@ -2,27 +2,16 @@
 layout: default
 ---
 <!-- ── PSA Hero ──────────────────────────────────────────────────────────── -->
-<header class="page-hero">
-  <a class="post-back" href="{{ '/resources/psas/' | relative_url }}">All PSAs</a>
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <p class="post-category">{{ page.category | default: 'PSA' }}</p>
-      <h1 class="page-hero-title">{{ page.title }}</h1>
-      {% if page.lede %}<p class="page-hero-lede">{{ page.lede }}</p>{% endif %}
-      <div class="page-hero-tags">
-        {% for tag in page.tags %}
-        <span class="lp-tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-    </div>
-    <div class="page-hero-cta">
-      <a href="{{ page.pdf | relative_url }}" download class="btn">Download PDF</a>
-      {% if page.date %}
-      <p class="page-hero-meta">{{ page.date | date: "%B %Y" }}</p>
-      {% endif %}
-    </div>
-  </div>
-</header>
+{% include page-hero.html
+  back_url="/resources/psas/"
+  back_label="All PSAs"
+  art="none"
+  tagline="false"
+  lede_optional="true"
+  category_default="PSA"
+  tag_style="pill"
+  cta_mode="psa"
+%}
 
 <!-- ── PDF Embed ─────────────────────────────────────────────────────────── -->
 <div class="psa-embed-wrap">
