@@ -2,47 +2,57 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-09
+generated: 2026-08-10
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Convince an AI it’s not alive in psychological horror game Prove You’re Human"
+        url: "https://www.theguardian.com/games/2026/aug/10/ai-psychological-horror-game-prove-youre-human-sunset-visitor-studio"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "Sunset Visitor studio’s founder tells us about their new, unnerving Captcha-filled world which prompts players to ask what it means to have a ‘meat body’ Sunset Visitor is a studio that has long engaged with the idea..."
+      - title: "These startups are chasing the next big thing in LLMs"
+        url: "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/"
+        source: "MIT Technology Review"
+        date: 2026-08-10
+        summary: "MIT Technology Review’s What’s Next series looks across industries, trends, and technologies to give you a first look at the future. You can read the rest of them here. Way back in the summer of 2017, AI researchers at..."
+      - title: "AI for science needs reasoning, not just data"
+        url: "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/"
+        source: "MIT Technology Review"
+        date: 2026-08-10
+        summary: "Every few decades, someone announces that science has reached its end. In 1903, the revered physicist Albert Michelson wrote that the “facts of physical science have all been discovered.” In the 1980s, Stephen Hawking..."
+      - title: "SA premier announces royal commission into AI – as it happened"
+        url: "https://www.theguardian.com/australia-news/live/2026/aug/10/australia-news-live-transport-minister-sydney-airport-air-traffic-control-catherine-king-aukus-public-inquiry-malcolm-turnbull-alan-jones-trial-ntwnfb"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "This blog is now closed Get our breaking news email , free app or daily news podcast Police say the remains found in a suitcase near Goulburn are not human. Supt Linda Bradbury with NSW police said: Some good news here..."
+      - title: "Meme factories are churning out hard right AI slop on Facebook | First Dog on the Moon"
+        url: "https://www.theguardian.com/commentisfree/picture/2026/aug/10/meme-factories-are-churning-out-pro-one-nation-ai-slop-on-facebook-im-frightened"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "What does it even mean? You don’t want to know – stop reading now! I’m serious Sign up here to get an email whenever First Dog cartoons are published Get all your needs met at the First Dog shop if what you need is..."
+      - title: "UK manufacturers face rising hacking risk as survey shows 30% were hit last year"
+        url: "https://www.theguardian.com/technology/2026/aug/10/uk-companies-cyber-attack-third-jlr"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "Big companies describe being under constant threat but only half have a plan in place to respond to an attack Nearly a third of British manufacturers have been hit by a cyber-attack on them or a company in their supply..."
+      - title: "As AI guzzles water and energy, we are already facing a choice: datacentres or homes? | John Harris"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/09/slough-famous-the-office-datacentres-locals-hub-europe"
+        source: "The Guardian"
+        date: 2026-08-09
+        summary: "Whitehall wants to triple their number in the UK. Yet in Slough, I saw the impact they’re having on communities Amid headlines about the UK’s drought , Europe’s wildfires and impossible global temperatures, it was 28C..."
       - title: "AI push is putting banks at mercy of tech firms, warns Moody’s"
         url: "https://www.theguardian.com/business/2026/aug/09/ai-push-banks-tech-firms-moodys-risks-financial-sector"
         source: "The Guardian"
         date: 2026-08-09
         summary: "Finance sector will gain from the tech but it will need substantial investment and create risks, says rating agency The rating agency Moody’s has said the race to adopt AI is putting big banks at the mercy of a small..."
-      - title: "OpenAI to pause some work on AI model Astra due to security concerns"
-        url: "https://www.theguardian.com/technology/2026/aug/08/openai-astra-security-concerns"
-        source: "The Guardian"
-        date: 2026-08-08
-        summary: "Agent found to be able to find and exploit vulnerabilities without human intervention, and to carry out cyber-attacks OpenAI will pause some work on an artificial intelligence model because of security concerns, the..."
-      - title: "Google DeepMind enters a new era as co-founder Demis Hassabis shifts AI role"
-        url: "https://www.theguardian.com/technology/2026/aug/08/google-demis-hassabis-deepmind-shifts-role"
-        source: "The Guardian"
-        date: 2026-08-08
-        summary: "Observers express concern that the division has lost its independence and commercial reality has taken over When Sir Demis Hassabis said AI had brought the world to a “pivotal moment in human history” last month, he..."
       - title: "DeepMind’s hurricane breakthrough has surprised weather scientists"
         url: "https://arstechnica.com/science/2026/08/deepminds-hurricane-model-bought-forecasters-an-extra-day/"
         source: "Ars Technica"
         date: 2026-08-08
         summary: "Open source WeatherNext model can make accurate predictions with lower-resolution weather data."
-      - title: "Parenting is hard. Should we let AI do it for us? | Dave Schilling"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/08/ai-optimized-parenting"
-        source: "The Guardian"
-        date: 2026-08-08
-        summary: "Tech companies offer eye-movement trackers, personalized podcasts and ‘optimized nap predictions’. Who actually needs this? What job in our world is less lucrative than being a parent? A Hollywood internship?..."
-      - title: "President Xi never wastes a good crisis. As Iran, Ukraine and Palestine distract the world, he tightens his grip | Simon Tisdall"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/08/president-xi-jinping-global-order-minorities-china"
-        source: "The Guardian"
-        date: 2026-08-08
-        summary: "Ever the strategist, the Chinese leader is taking the offensive, both abroad and at home. That’s bad news for global order, and minorities in his country Imagine what would happen if a British prime minister in London..."
-      - title: "‘I hate what AI is doing to the minds and happiness of the young’: Katherine Rundell on the view from the classroom"
-        url: "https://www.theguardian.com/books/ng-interactive/2026/aug/08/i-hate-what-ai-is-doing-to-the-minds-and-happiness-of-the-young-katherine-rundell-on-the-view-from-the-classroom"
-        source: "The Guardian"
-        date: 2026-08-08
-        summary: "Education is at a crossroads, argues the author and academic. Should we embrace new technology in the name of efficiency, or is it time to fight back? If you set out to design from scratch a tool to facilitate..."
       - title: "OpenAI’s expensive smart speaker will use moving parts to seem “more alive”"
         url: "https://arstechnica.com/gadgets/2026/08/openais-expensive-smart-speaker-will-use-moving-parts-to-seem-more-alive/"
         source: "Ars Technica"
@@ -58,20 +68,15 @@ sections:
         source: "Ars Technica"
         date: 2026-08-07
         summary: "TikTok owner training a model with 10 trillion parameters."
-      - title: "Suno hopes to go legit with watermarks for AI-generated music"
-        url: "https://arstechnica.com/ai/2026/08/suno-hopes-to-go-legit-with-watermarks-for-ai-generated-music/"
-        source: "Ars Technica"
-        date: 2026-08-06
-        summary: "Suno plans watermarks and download limits to stop \"large-scale abuse.\""
-      - title: "Anthropic will design its own hardware to power Claude"
-        url: "https://arstechnica.com/ai/2026/08/anthropic-confirms-plans-to-build-an-in-house-silicon-team/"
-        source: "Ars Technica"
-        date: 2026-08-06
-        summary: "Anthropic and OpenAI are racing to scale up while reducing dependence on Nvidia."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Woman assaulted after Travelodge staff gave room key to her abuser"
+        url: "https://www.theguardian.com/society/2026/aug/10/woman-assaulted-after-travelodge-staff-gave-room-key-to-her-abuser"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "Woman had gone to London hotel for ‘night away from the fear’ in latest incident of chain giving keys to men without checking Travelodge staff gave a room key to the domestic abuser of a woman, who then physically..."
       - title: "A Queensland domestic violence victim was promised a voice – then told she was no longer welcome to call the minister’s office"
         url: "https://www.theguardian.com/australia-news/2026/aug/08/a-queensland-domestic-violence-victim-was-promised-a-voice-then-told-she-was-no-longer-welcome-to-call-the-ministers-office-ntwnfb"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-03
         summary: "After the rejection of the voice, the conversation about structural reform of the federal arrangements governing Aboriginal affairs must resume Indigenous leaders look to the future at Garma: ‘People are feeling strong..."
-      - title: "Pauline Hanson and Malcolm Roberts deride family law system, calling DV a ‘weapon’ and court a ‘slaughterhouse’"
-        url: "https://www.theguardian.com/australia-news/2026/jul/27/pauline-hanson-labels-dv-a-weapon-while-malcolm-roberts-calls-family-court-a-slaughterhouse-ntwnfb"
-        source: "The Guardian"
-        date: 2026-07-27
-        summary: "Exclusive: Resurfaced comments by the One Nation leader underline her criticism of paid family violence leave and domestic violence support groups Follow our Australia news live blog for latest updates Get our breaking..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -176,11 +176,6 @@ sections:
         source: "ProPublica"
         date: 2026-07-30
         summary: "The post Andy Beshear Set Out to Make Drug Treatment Widely Available in Kentucky. Fraud and Abuse Followed. appeared first on ProPublica ."
-      - title: "How Videos Helped Me Uncover Abuse at an Arkansas Private School"
-        url: "https://www.propublica.org/article/arkansas-private-school-abuse-video"
-        source: "ProPublica"
-        date: 2026-07-24
-        summary: "The post How Videos Helped Me Uncover Abuse at an Arkansas Private School appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
