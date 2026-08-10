@@ -1,35 +1,15 @@
 ---
 layout: default
 ---
-<header class="page-hero">
-  <a class="post-back" href="{{ page.back_url | default: '/services/' | relative_url }}">Back</a>
-  <div class="page-hero-inner{% unless page.headshot or page.hero_svg or page.icon %} page-hero-inner--single{% endunless %}">
-    <div class="page-hero-text">
-      <p class="post-category">{{ page.category }}</p>
-      <h1 class="page-hero-title">{{ page.title }}</h1>
-      <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
-      <p class="page-hero-lede">{{ page.lede }}</p>
-      <div class="page-hero-tags">
-        {% for tag in page.tags %}
-        <div class="hero-cta"><a href="#{{ tag }}" class="btn">{{ tag }}</a></div>
-        {% endfor %}
-      </div>
-    </div>
-    {% if page.headshot %}
-    <div class="hex-portrait">
-      <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
-    </div>
-    {% elsif page.hero_svg %}
-    <div class="page-hero-art">
-      <img src="{{ page.hero_svg | relative_url }}" alt="" class="page-hero-svg" aria-hidden="true" />
-    </div>
-    {% elsif page.icon %}
-    <div class="page-hero-art">
-      <i class="fa-solid {{ page.icon }} page-hero-icon" aria-hidden="true"></i>
-    </div>
-    {% endif %}
-  </div>
-</header>
+{% assign hero_back_url = page.back_url | default: '/services/' %}
+{% include page-hero.html
+  back_url=hero_back_url
+  back_label="Back"
+  art="headshot,hero_svg,icon"
+  tagline="true"
+  tag_style="anchor"
+  cta_mode="none"
+%}
 
 <div class="page-toc-wrap page-toc-wrap--svc">
   <article class="page-body">

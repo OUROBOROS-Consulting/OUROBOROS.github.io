@@ -27,64 +27,18 @@ layout: default
 <!-- ══════════════════════════════════════════════════════════════════════
      HERO
      Full-width header with page metadata + optional hex-cropped headshot.
-
-     Front-matter keys consumed here:
-       back_url     — href for the ← Back link (defaults to /)
-       category     — small eyebrow label above the title
-       title        — main <h1>
-       tagline      — subtitle; parsed as Markdown so **bold** works
-       lede         — one-sentence intro paragraph
-       tags         — list of strings; each renders as a pill/anchor link
-                      that jumps to the matching section id on the page
-       headshot     — path to portrait image (optional)
-       headshot_alt — alt text for that image (required if headshot is set)
-       icon         — Font Awesome class (e.g. fa-microscope), used when there
-                      is no headshot; renders as the right-column glyph
-
-     CSS notes:
-       `.page-hero-inner--single` is added when there is NO headshot and no
-       icon — it switches the grid from two columns to one centred column.
+     Markup lives in _includes/page-hero.html (shared with article / service /
+     psa layouts) — see its header comment for the full front-matter key list.
      ══════════════════════════════════════════════════════════════════════ -->
-<header class="page-hero">
-
-  <!-- ← Back navigation link -->
-  <a class="post-back" href="{{ page.back_url | default: '/' | relative_url }}">Back</a>
-
-  <!-- Two-column grid: text left, portrait right (portrait is optional) -->
-  <div class="page-hero-inner{% unless page.headshot or page.icon %} page-hero-inner--single{% endunless %}">
-
-    <!-- Left column: all text content -->
-    <div class="page-hero-text">
-      <p class="post-category">{{ page.category }}</p>
-      <h1 class="page-hero-title">{{ page.title }}</h1>
-
-      <!-- tagline supports inline Markdown (e.g. *emphasis*, **bold**) -->
-      <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
-
-      <p class="page-hero-lede">{{ page.lede }}</p>
-
-      <!-- Tag pills — each links to an anchor (#tag-name) on this page.
-           The matching section must set  id: tag-name  in front matter. -->
-      <div class="page-hero-tags">
-        {% for tag in page.tags %}
-        <div class="hero-cta"><a href="#{{ tag | slugify }}" class="btn">{{ tag }}</a></div>
-        {% endfor %}
-      </div>
-    </div><!-- /page-hero-text -->
-
-    <!-- Right column: hexagon-cropped portrait, else a Font Awesome glyph -->
-    {% if page.headshot %}
-    <div class="hex-portrait">
-      <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
-    </div>
-    {% elsif page.icon %}
-    <div class="page-hero-art">
-      <i class="fa-solid {{ page.icon }} page-hero-icon" aria-hidden="true"></i>
-    </div>
-    {% endif %}
-
-  </div><!-- /page-hero-inner -->
-</header><!-- /page-hero -->
+{% assign hero_back_url = page.back_url | default: '/' %}
+{% include page-hero.html
+  back_url=hero_back_url
+  back_label="Back"
+  art="headshot,icon"
+  tagline="true"
+  tag_style="anchor"
+  cta_mode="none"
+%}
 
 <!-- ══════════════════════════════════════════════════════════════════════
      ABOUT BLURB  (optional)

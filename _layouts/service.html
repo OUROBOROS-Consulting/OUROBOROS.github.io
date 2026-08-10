@@ -3,42 +3,15 @@ layout: default
 ---
 
 <!-- ── Service Hero ── -->
-<header class="page-hero">
-  <a class="post-back" href="{{ '/services/' | relative_url }}">All Services</a>
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <p class="post-category">{{ page.category }}</p>
-      <h1 class="page-hero-title">{{ page.title }}</h1>
-      <p class="page-hero-lede">{{ page.lede }}</p>
-      <div class="page-hero-tags">
-        {% for tag in page.tags %}
-        <span class="lp-tag">{{ tag }}</span>
-        {% endfor %}
-      </div>
-      <div class="page-hero-cta">
-        <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
-          {{ page.cta_label | default: 'Get in Touch' }}
-        </a>
-        {% if page.price %}
-        <p class="page-hero-meta">{{ page.price }}</p>
-        {% endif %}
-      </div>
-    </div>
-
-    <!-- Right column: hand-crafted SVG art (falls back to Font Awesome icon) -->
-    <div class="page-hero-art">
-      {% if page.hero_svg %}
-      <img src="{{ page.hero_svg | relative_url }}" alt="" class="page-hero-svg" aria-hidden="true" />
-      {% elsif page.icon %}
-      <i class="fa-solid {{ page.icon }} page-hero-icon" aria-hidden="true"></i>
-      {% endif %}
-    </div>
-  </div>
-
-  <div class="scroll-hint">
-    <div class="scroll-line"></div><span>Scroll</span>
-  </div>
-</header>
+{% include page-hero.html
+  back_url="/services/"
+  back_label="All Services"
+  art="hero_svg,icon"
+  tagline="false"
+  tag_style="pill"
+  cta_mode="service"
+  scroll_hint="true"
+%}
 
 
 <!-- ── Service Body ── -->
