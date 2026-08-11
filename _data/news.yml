@@ -2,12 +2,57 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-10
+generated: 2026-08-11
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Experts are warning: our AI arms race is putting humanity at risk | Stuart Russell"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/11/openai-anthropic-google-deepmind-letter"
+        source: "The Guardian"
+        date: 2026-08-11
+        summary: "A recent letter signed by 1,367 researchers and engineers at frontier AI labs – mainly OpenAI, Anthropic and Google Deepmind – points to a dangerous moment It is fashionable in certain circles to dismiss the..."
+      - title: "AI ‘will do more to boost fossil fuel production than green energy’"
+        url: "https://www.theguardian.com/technology/2026/aug/11/ai-will-do-more-to-boost-fossil-fuel-production-than-green-energy"
+        source: "The Guardian"
+        date: 2026-08-11
+        summary: "Study finds technology could boost recoverable oil and gas reserves by 5% and cut cost of deepwater projects by 10% AI-driven productivity gains enable more planet-heating pollution from fossil fuels than they avoid..."
+      - title: "Zuckerberg pushes ‘superintelligent’ AI for all as Meta drops open-source model"
+        url: "https://www.theguardian.com/technology/2026/aug/10/mark-zuckerberg-superintelligent-ai-essay-meta"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "Meta CEO presents utopian vision of AI in 6,000-word essay amid Silicon Valley debate over government regulation Mark Zuckerberg published a lengthy essay on Monday detailing his views on artificial intelligence and..."
+      - title: "With new open models, Meta pitches another reboot of its struggling AI strategy"
+        url: "https://arstechnica.com/ai/2026/08/with-new-open-models-meta-pitches-another-reboot-of-its-struggling-ai-strategy/"
+        source: "Ars Technica"
+        date: 2026-08-10
+        summary: "Meta has been trailing competitors. Zuckerberg thinks he's found a way forward."
+      - title: "Amazon backs power plant that may become top source of US climate pollution"
+        url: "https://arstechnica.com/tech-policy/2026/08/amazon-funds-biggest-gas-power-plant-in-us-despite-climate-pledge/"
+        source: "Ars Technica"
+        date: 2026-08-10
+        summary: "Amazon announces first off-the-grid data center in race to reap AI profits."
+      - title: "AI professors are negotiating the new realities of academic research"
+        url: "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/"
+        source: "MIT Technology Review"
+        date: 2026-08-10
+        summary: "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Last week, I headed 30 miles south of San Francisco to a hotel in Mountain View..."
+      - title: "Bernie Sanders calls on Silicon Valley to ‘pause AI development’ in interest of humanity"
+        url: "https://www.theguardian.com/technology/2026/aug/10/bernie-sanders-ai-development-pause-letter"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "Progressive US senator urges Meta, OpenAI and Anthropic to ‘stop building machines that humans cannot control’ Senator Bernie Sanders has called on Meta, OpenAI and Anthropic executives to halt their development of..."
+      - title: "What happens when medical students rely on AI – and never develop their own judgment? | Simar Bajaj and Joseph Sakran"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/10/ai-medical-students-judgment"
+        source: "The Guardian"
+        date: 2026-08-10
+        summary: "AI’s danger isn’t just in experts losing the ability to reason. It’s that trainees may never learn how to do so in the first place In healthcare, there’s growing concern over doctors becoming less clinically adept as..."
+      - title: "Peer review is overwhelmed—can it survive in the AI era?"
+        url: "https://arstechnica.com/science/2026/08/peer-review-is-overwhelmed-can-it-survive-in-the-ai-era/"
+        source: "Ars Technica"
+        date: 2026-08-10
+        summary: "As research and AI-assisted papers surge, volunteer reviewers struggle to keep up."
       - title: "Convince an AI it’s not alive in psychological horror game Prove You’re Human"
         url: "https://www.theguardian.com/games/2026/aug/10/ai-psychological-horror-game-prove-youre-human-sunset-visitor-studio"
         source: "The Guardian"
@@ -23,51 +68,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-10
         summary: "Every few decades, someone announces that science has reached its end. In 1903, the revered physicist Albert Michelson wrote that the “facts of physical science have all been discovered.” In the 1980s, Stephen Hawking..."
-      - title: "SA premier announces royal commission into AI – as it happened"
-        url: "https://www.theguardian.com/australia-news/live/2026/aug/10/australia-news-live-transport-minister-sydney-airport-air-traffic-control-catherine-king-aukus-public-inquiry-malcolm-turnbull-alan-jones-trial-ntwnfb"
-        source: "The Guardian"
-        date: 2026-08-10
-        summary: "This blog is now closed Get our breaking news email , free app or daily news podcast Police say the remains found in a suitcase near Goulburn are not human. Supt Linda Bradbury with NSW police said: Some good news here..."
-      - title: "Meme factories are churning out hard right AI slop on Facebook | First Dog on the Moon"
-        url: "https://www.theguardian.com/commentisfree/picture/2026/aug/10/meme-factories-are-churning-out-pro-one-nation-ai-slop-on-facebook-im-frightened"
-        source: "The Guardian"
-        date: 2026-08-10
-        summary: "What does it even mean? You don’t want to know – stop reading now! I’m serious Sign up here to get an email whenever First Dog cartoons are published Get all your needs met at the First Dog shop if what you need is..."
-      - title: "UK manufacturers face rising hacking risk as survey shows 30% were hit last year"
-        url: "https://www.theguardian.com/technology/2026/aug/10/uk-companies-cyber-attack-third-jlr"
-        source: "The Guardian"
-        date: 2026-08-10
-        summary: "Big companies describe being under constant threat but only half have a plan in place to respond to an attack Nearly a third of British manufacturers have been hit by a cyber-attack on them or a company in their supply..."
-      - title: "As AI guzzles water and energy, we are already facing a choice: datacentres or homes? | John Harris"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/09/slough-famous-the-office-datacentres-locals-hub-europe"
-        source: "The Guardian"
-        date: 2026-08-09
-        summary: "Whitehall wants to triple their number in the UK. Yet in Slough, I saw the impact they’re having on communities Amid headlines about the UK’s drought , Europe’s wildfires and impossible global temperatures, it was 28C..."
-      - title: "AI push is putting banks at mercy of tech firms, warns Moody’s"
-        url: "https://www.theguardian.com/business/2026/aug/09/ai-push-banks-tech-firms-moodys-risks-financial-sector"
-        source: "The Guardian"
-        date: 2026-08-09
-        summary: "Finance sector will gain from the tech but it will need substantial investment and create risks, says rating agency The rating agency Moody’s has said the race to adopt AI is putting big banks at the mercy of a small..."
-      - title: "DeepMind’s hurricane breakthrough has surprised weather scientists"
-        url: "https://arstechnica.com/science/2026/08/deepminds-hurricane-model-bought-forecasters-an-extra-day/"
-        source: "Ars Technica"
-        date: 2026-08-08
-        summary: "Open source WeatherNext model can make accurate predictions with lower-resolution weather data."
-      - title: "OpenAI’s expensive smart speaker will use moving parts to seem “more alive”"
-        url: "https://arstechnica.com/gadgets/2026/08/openais-expensive-smart-speaker-will-use-moving-parts-to-seem-more-alive/"
-        source: "Ars Technica"
-        date: 2026-08-07
-        summary: "Gurman report claims OpenAI confirmed the speaker is not an Apple ripoff."
-      - title: "AI chatbots have failed people in crisis. Can that be fixed?"
-        url: "https://arstechnica.com/ai/2026/08/ai-chatbots-have-failed-people-in-crisis-can-that-be-fixed/"
-        source: "Ars Technica"
-        date: 2026-08-07
-        summary: "Clinicians and researchers say AI companies need to open up their safety data."
-      - title: "ByteDance trains massive AI model in bid to rival Anthropic"
-        url: "https://arstechnica.com/ai/2026/08/bytedance-trains-massive-ai-model-in-bid-to-rival-anthropic/"
-        source: "Ars Technica"
-        date: 2026-08-07
-        summary: "TikTok owner training a model with 10 trillion parameters."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "A college student had to retract her paper. The move was ‘the starting point for a better study’"
+        url: "https://retractionwatch.com/2026/08/10/college-student-rishika-porandla-retract-own-paper-wiley-macromolecular-materials-engineering/"
+        source: "Retraction Watch"
+        date: 2026-08-10
+        summary: "As a sophomore at Princeton University, Rishika Porandla took a course called “The Curious Scientist,” where students practice disciplinary research skills and act as a “PI” on a project of their choosing. Porandla..."
       - title: "Weekend reads: Second gene editing death in China reported; Jason Arday’s resignation from Cambridge; Retraction Watch’s sweet 16"
         url: "https://retractionwatch.com/2026/08/08/weekend-reads-second-gene-editing-death-in-china-reported-jason-ardays-resignation-from-cambridge-retraction-watchs-sweet-16/"
         source: "Retraction Watch"
@@ -161,11 +166,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-05
         summary: "Some people compose music or make YouTube videos for a hobby. That’s Brandon Yates’ job — so in his spare time, he tries his hand at theoretical physics. But his only published paper was questioned because of his lack..."
-      - title: "High-profile anesthesiologists earning retractions for data, image problems"
-        url: "https://retractionwatch.com/2026/08/04/anesthesiologists-earning-retractions-for-data-image-problems/"
-        source: "Retraction Watch"
-        date: 2026-08-04
-        summary: "In July 2021, John Loadsman received a manuscript about a clinical trial that immediately roused his suspicion. Then the editor-in-chief of Anaesthesia and Intensive Care, Loadsman asked the authors for the raw data..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
