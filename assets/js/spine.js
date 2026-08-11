@@ -34,7 +34,7 @@
   var NS = 'http://www.w3.org/2000/svg';
   // Keeps the stroke's outer half inside the viewBox. Must stay above half the
   // widest .spine-wave stroke-width in _spine.scss.
-  var STROKE_PAD = 3;
+  var STROKE_PAD = 4;
   var FALLBACK_STEP = 44; // period to use when a host has only one node
   var SEQ = 0; // gradient ids must be unique across the two panels on a page
 
