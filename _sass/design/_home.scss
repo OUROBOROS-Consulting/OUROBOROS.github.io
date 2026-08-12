@@ -138,7 +138,11 @@
 }
 
 // ── Values flip cards ─────────────────────────────────────────────────────────
-#values .values-grid {
+// #audience reuses the same flip-card component as #values (identical grid
+// geometry) — see .values-card__icon--svg below for the audience-specific
+// mask-image icon variant.
+#values .values-grid,
+#audience .values-grid {
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
   margin-top: var(--space-8);
@@ -226,6 +230,28 @@
     color: var(--ink-4);
     opacity: 0.6;
     line-height: 1;
+  }
+
+  // SVG icon variant (#audience) — no glyph font metric to size against, so
+  // width/height stand in for font-size, set at the golden ratio (1.618×)
+  // over &__name's font-size. mask-image (not background-image) keeps the
+  // icon theme-reactive: it paints in currentColor, so color/opacity are set
+  // here directly rather than inherited from the Font Awesome &__icon above
+  // — gold (--mark), not the neutral --ink-4 those glyphs use.
+  &__icon--svg {
+    width: calc(var(--fs-9) * 1.618);
+    height: calc(var(--fs-9) * 1.618);
+    color: var(--mark);
+    opacity: 1;
+    background-color: currentColor;
+    mask-image: var(--icon-mask);
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+    -webkit-mask-image: var(--icon-mask);
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    -webkit-mask-size: contain;
   }
 
   &__name {
@@ -413,8 +439,13 @@
   text-align: left;
 }
 
-// Left column: matching card chassis, minus the .related-card hover lift
+// Left column: matching card chassis, minus the .related-card hover lift.
+// Flex column + full height so the band-header below can fill it and dock the
+// button to the bottom — same mechanism as .cta-newsletter's own flex column.
 #cta .cta-primary {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-align: left;
 
   &:hover {
@@ -436,6 +467,7 @@
 // the class only for the accent rule and the column stack. Worth its own class
 // eventually; left alone in the 2026-08-08 rename so the pass stayed a rename.
 #cta .cta-split .band-header {
+  flex: 1; // fill .cta-primary's full (grid-stretched) height so .hero-cta below has room to dock to the bottom
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -466,7 +498,10 @@
   grid-template-columns: max-content;
   justify-content: start;
   gap: var(--space-4);
-  margin-top: 0; // TUNE: aligns the button with the embed's Subscribe row
+  // Docks to the bottom of .band-header (now flex: 1, full card height) so the
+  // button lands in the same place regardless of how long the page's cta_body
+  // copy runs. Replaces a fixed margin-top that only matched one copy length.
+  margin-top: auto;
 }
 
 // Right column: newsletter card copy stays left-aligned despite #cta centering
@@ -488,8 +523,8 @@
     }
   }
 
-  // Top-pin the copy + embed (override the design system's flex-grow) so the
-  // Subscribe row sits at a fixed offset that the left button is aligned to
+  // Top-pin the copy (override the design system's flex-grow) — .cta-newsletter__action
+  // below takes over pushing itself to the bottom instead.
   .card-desc {
     flex-grow: 0;
     margin: var(--space-4) 0 0;
@@ -497,10 +532,11 @@
 }
 
 // Subscribe link. Replaced a cropped Substack iframe on 2026-07-26 — it was the
-// last third-party request on the site and it loaded on every page. The 2.4rem
-// offset is what aligns this button with the CTA button in the left column.
+// last third-party request on the site and it loaded on every page. Docks to
+// the bottom of the (grid-stretched) card, matching how the left column's
+// button anchors — both track the taller card instead of a tuned constant.
 #cta .cta-newsletter__action {
-  margin-top: var(--space-9);
+  margin-top: auto;
 }
 
 // ── Responsive ────────────────────────────────────────────────────────────────
