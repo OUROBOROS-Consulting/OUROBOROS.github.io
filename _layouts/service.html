@@ -39,7 +39,20 @@ layout: default
   </section>
   {% endif %}
 
+  {% assign divider_glyphs = "snake,infinity,quill,lantern,compass" | split: "," %}
+  {% assign divider_i = 0 %}
+  {% assign svc_block_shown = false %}
+
   {% if page.specializations %}
+  {% if svc_block_shown %}
+    {% assign divider_idx = divider_i | modulo: divider_glyphs.size %}
+    <div class="divider-major">
+      <span class="divider-line"></span>
+      <span class="divider-glyph" style="background-image: url('/assets/images/divider-{{ divider_glyphs[divider_idx] }}.svg')"></span>
+      <span class="divider-line"></span>
+    </div>
+    {% assign divider_i = divider_i | plus: 1 %}
+  {% endif %}
   <section class="page-section">
     <div class="page-section-label">
       <p>Specialties</p>
@@ -59,10 +72,20 @@ layout: default
       </div>
     </div>
   </section>
+  {% assign svc_block_shown = true %}
   {% endif %}
 
   <!-- Policies -->
   {% if page.policies %}
+  {% if svc_block_shown %}
+    {% assign divider_idx = divider_i | modulo: divider_glyphs.size %}
+    <div class="divider-major">
+      <span class="divider-line"></span>
+      <span class="divider-glyph" style="background-image: url('/assets/images/divider-{{ divider_glyphs[divider_idx] }}.svg')"></span>
+      <span class="divider-line"></span>
+    </div>
+    {% assign divider_i = divider_i | plus: 1 %}
+  {% endif %}
   <section class="page-section">
     <div class="page-section-label">
       <p>Policies</p>
@@ -82,10 +105,20 @@ layout: default
       </div>
     </div>
   </section>
+  {% assign svc_block_shown = true %}
   {% endif %}
 
   <!-- What's included -->
   {% if page.included %}
+  {% if svc_block_shown %}
+    {% assign divider_idx = divider_i | modulo: divider_glyphs.size %}
+    <div class="divider-major">
+      <span class="divider-line"></span>
+      <span class="divider-glyph" style="background-image: url('/assets/images/divider-{{ divider_glyphs[divider_idx] }}.svg')"></span>
+      <span class="divider-line"></span>
+    </div>
+    {% assign divider_i = divider_i | plus: 1 %}
+  {% endif %}
   <section class="page-section">
     <div class="page-section-label">
       <p>What's Included</p>
@@ -106,10 +139,20 @@ layout: default
       </div>
     </div>
   </section>
+  {% assign svc_block_shown = true %}
   {% endif %}
 
   <!-- Pricing -->
   {% if page.pricing %}
+  {% if svc_block_shown %}
+    {% assign divider_idx = divider_i | modulo: divider_glyphs.size %}
+    <div class="divider-major">
+      <span class="divider-line"></span>
+      <span class="divider-glyph" style="background-image: url('/assets/images/divider-{{ divider_glyphs[divider_idx] }}.svg')"></span>
+      <span class="divider-line"></span>
+    </div>
+    {% assign divider_i = divider_i | plus: 1 %}
+  {% endif %}
   <section class="page-section">
     <div class="page-section-label">
       <p>Pricing</p>
@@ -133,6 +176,7 @@ layout: default
       {% endfor %}
     </div>
   </section>
+  {% assign svc_block_shown = true %}
   {% endif %}
 </div>
 

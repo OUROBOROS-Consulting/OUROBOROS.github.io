@@ -118,19 +118,28 @@
     font-style: italic;
   }
 
-  // Ornamental section break
+  // Ornamental section break — three lozenges (tick divider), echoing
+  // .spine-tick's opacity language (_spine.scss). All three diamonds are
+  // drawn in one inline SVG and painted onto hr itself via mask-image;
+  // the SVG's own fill-opacity gives the center diamond its brighter look
+  // against the two dimmer flankers. A prior approach clip-path'd hr into
+  // a single diamond and relied on ::before/::after for the flankers —
+  // clip-path scopes to the element's entire subtree, so it clipped away
+  // its own generated-content children and collapsed three lozenges into
+  // one. Masking a single element sidesteps that, and still stays
+  // theme-reactive since var(--mark) paints through the mask.
   hr {
     border: none;
-    display: flex;
-    justify-content: center;
-    margin: var(--space-band-lg) 0;
-
-    &::after {
-      content: '◇  ◇  ◇';
-      color: var(--line-3);
-      font-size: var(--fs-1);
-      letter-spacing: 0.5em;
-    }
+    width: 41px;
+    height: 9px;
+    margin: var(--space-band-lg) auto;
+    background: var(--mark);
+    mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41 9'%3E%3Cpath d='M4.5 1 L8 4.5 L4.5 8 L1 4.5 Z' fill='%23fff' fill-opacity='.55'/%3E%3Cpath d='M20.5 0 L25 4.5 L20.5 9 L16 4.5 Z' fill='%23fff' fill-opacity='.9'/%3E%3Cpath d='M36.5 1 L40 4.5 L36.5 8 L33 4.5 Z' fill='%23fff' fill-opacity='.55'/%3E%3C/svg%3E");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 41 9'%3E%3Cpath d='M4.5 1 L8 4.5 L4.5 8 L1 4.5 Z' fill='%23fff' fill-opacity='.55'/%3E%3Cpath d='M20.5 0 L25 4.5 L20.5 9 L16 4.5 Z' fill='%23fff' fill-opacity='.9'/%3E%3Cpath d='M36.5 1 L40 4.5 L36.5 8 L33 4.5 Z' fill='%23fff' fill-opacity='.55'/%3E%3C/svg%3E");
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
   }
 
   // Blockquote inside prose — scoped here, distinct from standalone .pull-quote
