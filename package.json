@@ -3,11 +3,8 @@
   "version": "1.0.0",
   "description": "OUROBOROS Consulting website",
   "scripts": {
-    "predev": "lsof -ti:35729 | xargs kill -9 2>/dev/null; cd ../ouroboros-design && npm run build",
+    "predev": "lsof -ti:35729 | xargs kill -9 2>/dev/null",
     "dev": "bundle exec jekyll serve --livereload",
     "build": "bundle exec jekyll build"
-  },
-  "dependencies": {
-    "@ouroboros-consulting/ouroboros-design": "file:../ouroboros-design"
   }
 }

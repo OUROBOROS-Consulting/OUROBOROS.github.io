@@ -23,12 +23,6 @@ jobs:
         with:
           path: site
 
-      - name: Checkout design system
-        uses: actions/checkout@v4
-        with:
-          repository: OUROBOROS-Consulting/ouroboros-design
-          path: ouroboros-design
-
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

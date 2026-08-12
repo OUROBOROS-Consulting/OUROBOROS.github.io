@@ -1,7 +1,7 @@
 ---
 ---
 
-@use "@ouroboros-consulting/ouroboros-design/scss/tokens" as *;
+@use "design/tokens" as *;
   /* ── Intake wrapper ──
      Was `max-width + margin: auto + padding: 10vw` — the exact anti-pattern
      the page-band mixin (_base.scss) exists to fix. body reserves

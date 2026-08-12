@@ -1,7 +1,7 @@
 ---
 ---
 
-@use "@ouroboros-consulting/ouroboros-design/scss/index" as *;
+@use "design/index" as *;
 
 // ── Safety / Quick-exit button ────────────────────────────────────────────
 // Always-visible escape hatch for survivors. Double-tap Escape also triggers.

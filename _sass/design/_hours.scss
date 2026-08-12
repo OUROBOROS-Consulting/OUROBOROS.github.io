@@ -1,0 +1,147 @@
+@use "typography" as *;
+
+// ── Availability ──────────────────────────────────────────────────────────────
+// Hand-written business hours, rendered from the site's _data/availability.yml
+// through _includes/hours.html. Two variants, one source of truth.
+//
+//   .hours          full strip, sits between the intake masthead and the form
+//   .hours-compact  one line under the closing CTA button
+//
+// There is deliberately no booking widget behind this. Every calendar embed is
+// a third-party request and /privacy/ promises the site makes none.
+
+// The strip reads as document metadata under a masthead, not as a card: it is
+// recessed to --bg1 between the dark masthead above it and the --bg2 form
+// below, so it sits a step down the brightness ramp from both. Side borders
+// only, so masthead → hours → form reads as one continuous document.
+.hours {
+  display: grid;
+  grid-template-columns: minmax(0, 13rem) minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: var(--space-7) var(--space-10);
+  align-items: start;
+  padding: var(--space-7) var(--space-10);
+  background: var(--surface-1);
+  border-left: 1px solid var(--line-3);
+  border-right: 1px solid var(--line-3);
+}
+
+.hours-label {
+  @include label-caps(var(--fs-1), 0.22em);
+  margin-bottom: var(--space-3);
+}
+
+.hours-tz {
+  font-size: var(--fs-1);
+  line-height: 1.6;
+  color: var(--ink-2);
+
+  // City drops to --muted on its own line: the zone is what a visitor needs to
+  // convert the hours, the city is only there to explain the zone.
+  span {
+    display: block;
+    color: var(--ink-1);
+  }
+}
+
+.hours-list {
+  display: grid;
+  gap: var(--space-3);
+}
+
+// Tabular figures so the times form a clean right column without a table.
+.hours-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-7);
+  font-size: var(--fs-1);
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums;
+
+  dt {
+    color: var(--ink-2);
+  }
+
+  dd {
+    color: var(--ink-3);
+    text-align: right;
+    white-space: nowrap;
+  }
+}
+
+// Closed days stay in the list rather than being omitted: an absent Saturday
+// row is ambiguous, a "Closed" row is an answer.
+.hours-row--closed dd {
+  color: var(--ink-1);
+}
+
+.hours-response {
+  position: relative;
+  padding-left: var(--space-card);
+  font-size: var(--fs-2);
+  line-height: 1.7;
+  color: var(--ink-3);
+
+  // Same ◇ as the prose <hr> ornament and the FAQ disclosure marker, so the
+  // site keeps one shape vocabulary instead of importing a new glyph here.
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55em;
+    width: 6px;
+    height: 6px;
+    background: var(--mark);
+    transform: rotate(45deg);
+  }
+}
+
+.hours-after {
+  margin-top: var(--space-3);
+  padding-left: var(--space-card);
+  font-size: var(--fs-1);
+  line-height: 1.7;
+  color: var(--ink-1);
+}
+
+// ── Compact line (closing CTA) ────────────────────────────────────────────────
+// Rides under the CTA button on every page, so it stays to two lines of type.
+// It lengthens the left CTA column; the right newsletter card stretches to
+// match, which is why the grid is align-items: stretch.
+.hours-compact {
+  margin-top: var(--space-7);
+  padding-top: var(--space-5);
+  border-top: 1px solid var(--line-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.hours-compact-label {
+  @include label-caps(var(--fs-1), 0.18em);
+  margin-bottom: var(--space-2);
+}
+
+.hours-compact-line {
+  font-size: var(--fs-1);
+  line-height: 1.8;
+  color: var(--ink-2);
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+@media (max-width: 900px) {
+
+  // Three columns cannot hold a day range, a time, and a sentence at tablet
+  // width without the times wrapping under their own labels.
+  .hours {
+    grid-template-columns: 1fr;
+    gap: var(--space-6);
+  }
+}
+
+@media (max-width: 768px) {
+
+  // Matches the intake form's own mobile gutter.
+  .hours {
+    padding-left: var(--space-card);
+    padding-right: var(--space-card);
+  }
+}

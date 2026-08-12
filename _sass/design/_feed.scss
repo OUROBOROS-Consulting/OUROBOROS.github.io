@@ -1,0 +1,215 @@
+@use "typography" as *;
+
+// ── Headline feed ─────────────────────────────────────────────────────────────
+// The /news/ page: a dated ledger of headlines pulled from other outlets at
+// build time and committed as data. Every rule here is scoped inside
+// .post-body, because the page runs through the article layout and inherits
+// prose styling it has to opt out of in a few places.
+//
+// Prefixed feed-, not news-: _announcements.scss used to own a news-* set
+// (.news-card, .news-date, .news-source, .news-category), and reusing those
+// names silently inherited a bordered chip on every outlet label. That file was
+// deleted 2026-08-08, so news-* is free again — but keep feed-, because the
+// prefix names what these rows are rather than which page first showed them.
+//
+// The visual model is a ledger, not a card grid. Rows share one hairline, the
+// date sits in a fixed gutter so the eye can scan down it, and the only colour
+// is the ◇ that appears in that gutter on hover. Forty-five rows of gold
+// outlet labels would read as decoration; one gold mark that follows the
+// cursor reads as a pointer.
+
+.post-body {
+
+  // ── Framing note ──────────────────────────────────────────────────────────
+  // Sits above everything: these are other people's headlines and the page
+  // says so before it says anything else.
+  .feed-intro {
+    margin-bottom: var(--space-9);
+    padding: var(--space-card) 0 var(--space-card) var(--space-7);
+    border-left: 2px solid var(--mark-dim);
+
+    p {
+      font-size: var(--fs-2);
+      line-height: 1.8;
+      color: var(--ink-1);
+      margin-bottom: var(--space-5);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // The article layout drop-caps the first direct-child <p>. On a prose page
+  // that is the opening sentence. Here it is a one-line timestamp, and a
+  // 3.8rem gold "U" floating beside it is nonsense.
+  //
+  // The `p` qualifier is load-bearing. `.post-body > p:first-of-type` scores
+  // (0,2,2); without the element selector this reset scores (0,2,1) and loses.
+  p.feed-updated::first-letter,
+  p.feed-blurb::first-letter {
+    all: unset;
+  }
+
+  .feed-updated {
+    @include label-caps(var(--fs-1), 0.22em);
+    margin-bottom: 0;
+    font-variant-numeric: tabular-nums;
+  }
+
+  // Section standfirst. Serif italic keeps it clearly editorial voice, so it
+  // does not get mistaken for one of the headlines below it.
+  .feed-blurb {
+    font-family: $font-serif;
+    font-size: var(--fs-2);
+    font-style: italic;
+    line-height: 1.8;
+    color: var(--ink-2);
+    margin-bottom: var(--space-8);
+    max-width: 52ch;
+  }
+
+  // ── The ledger ────────────────────────────────────────────────────────────
+  // <ol> because the order carries meaning (newest first). The markers are
+  // suppressed: a visible "1." would imply a ranking, which this is not.
+  .feed-list {
+    list-style: none;
+    margin: 0 0 var(--space-5);
+    padding: 0;
+    border-top: 1px solid var(--line-3);
+  }
+
+  .feed-item {
+    display: grid;
+    grid-template-columns: 4.5rem minmax(0, 1fr);
+    gap: 0 var(--space-card);
+    padding: var(--space-6) 0 var(--space-6) var(--space-5);
+    margin: 0;
+    border-bottom: 1px solid var(--line-3);
+    transition: background-color 0.2s;
+
+    // The row lifts one step off the page floor rather than tinting toward
+    // an accent, so the hover state survives both palettes unchanged.
+    &:hover,
+    &:focus-within {
+      background: var(--surface-2);
+    }
+  }
+
+  .feed-date {
+    position: relative;
+    margin: 0;
+    padding-top: 0.28em;
+    font-family: $font-mono;
+    font-size: var(--fs-1);
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    color: var(--ink-1);
+    font-variant-numeric: tabular-nums;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    // The ◇ that marks the active row. Same shape as the prose <hr> ornament,
+    // the FAQ disclosure marker, and the availability strip: one shape
+    // vocabulary, reused, instead of a new glyph per component.
+    &::before {
+      content: '';
+      position: absolute;
+      left: -0.9rem;
+      top: 0.85em;
+      width: 5px;
+      height: 5px;
+      background: var(--mark);
+      transform: rotate(45deg) scale(0);
+      transition: transform 0.2s;
+    }
+  }
+
+  .feed-item:hover .feed-date::before,
+  .feed-item:focus-within .feed-date::before {
+    transform: rotate(45deg) scale(1);
+  }
+
+  // Headline. Opts out of the prose anchor rule (gold text on a gold
+  // underline), which is right for one link inside a sentence and wrong for
+  // forty-five links stacked in a column.
+  .feed-title {
+    display: block;
+    font-family: $font-serif;
+    font-size: var(--fs-4);
+    line-height: 1.4;
+    color: var(--ink-3);
+    text-decoration: none;
+    border-bottom: none;
+    text-wrap: pretty;
+
+    &:hover,
+    &:focus-visible {
+      color: var(--mark);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.18em;
+    }
+  }
+
+  .feed-outlet {
+    @include label-caps(0.68rem, 0.16em);
+    color: var(--ink-1);
+    margin: var(--space-3) 0 0;
+    line-height: 1.4;
+  }
+
+  // Capped by measure rather than left to fill the column: at --fs-xs the full
+  // column runs well past a comfortable line length, and a summary that is
+  // wider than the headline above it inverts the hierarchy.
+  .feed-summary {
+    font-size: var(--fs-1);
+    line-height: 1.75;
+    color: var(--ink-1);
+    margin: var(--space-3) 0 0;
+    max-width: 72ch;
+  }
+
+  // ── Source roll ───────────────────────────────────────────────────────────
+  // Plain names, not links. Every one of them is already linked dozens of
+  // times above, and a second set of links here would be noise.
+  .feed-roll {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    list-style: none;
+    margin: var(--space-7) 0 0;
+    padding: 0;
+
+    li {
+      padding: var(--space-2) var(--space-4);
+      border: 1px solid var(--line-3);
+      font-family: $font-sans;
+      font-size: var(--fs-1);
+      line-height: 1.5;
+      color: var(--ink-2);
+    }
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+@media (max-width: 600px) {
+  .post-body {
+
+    // A 4.5rem gutter leaves too little for a headline at phone width, so the
+    // date moves above it and becomes a caption rather than a column.
+    .feed-item {
+      grid-template-columns: minmax(0, 1fr);
+      gap: var(--space-2);
+      padding-left: var(--space-5);
+    }
+
+    .feed-date {
+      padding-top: 0;
+
+      &::before {
+        top: 0.5em;
+      }
+    }
+  }
+}

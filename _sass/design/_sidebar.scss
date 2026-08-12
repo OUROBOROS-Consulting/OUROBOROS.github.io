@@ -1,0 +1,343 @@
+@use "typography" as *;
+@use "base" as *;
+@use "spine" as *;
+// ── Page TOC Sidebar ──────────────────────────────────────────────────────────
+// Shared wrapper + fixed right-edge panel used by the article and sections
+// layouts. The panel mirrors the left .rail: pinned to the viewport edge, full
+// height below the primary bar.
+//
+// It is a narrow strip carrying the golden thread (see _spine.scss), which runs
+// the panel's whole height with one tick per entry. The entries are centred
+// vertically in the panel, so the thread runs clean above and below the tick
+// cluster.
+//
+// THE PANEL NEVER OPENS. It used to widen to --toc-w-open on hover, sliding a
+// scrim and every label out over the prose at once; that is gone. Hovering or
+// focusing a SINGLE entry now slides out THAT entry's label alone, as a plaque
+// hinged on the strip's inner edge — the mirror of the left rail, which works
+// the same way. Do not reintroduce a width transition here: --toc-w is what the
+// consuming site reserves in body's padding-right AND what the --essay grid
+// column below tracks, so a panel that grows past it is a panel, not a strip.
+
+:root {
+  --toc-w: 2.75rem;       // the strip — the panel is always exactly this wide
+  --toc-row: 2.75rem;     // h2 row height, and therefore the wave's period
+  --toc-row-sub: 2.1rem;  // h3 rows run shorter, so the wave tightens over them
+  --toc-row-min: 1.5rem;  // floor the rows compress to on a long outline
+  --toc-label-w: 13rem;   // plaque ceiling
+}
+
+.page-toc-wrap {
+  display: grid;
+  gap: 0 var(--space-10);
+  align-items: start;
+
+  // ── Service / mission variant: wide prose, matches .page-body centering ──
+  // Article, sections, service and PSA pages nest .page-body inside this, and
+  // the reset below strips the inner one's inline padding — so THIS element is
+  // what sets page geometry on those layouts, and it has to resolve to the same
+  // measure .page-body does on the layouts that go without a wrapper (any
+  // `layout: default` landing page, e.g. /resources/). It was 1600px/5vw
+  // against .page-body's 1600px/2.5rem, which is two answers to one question.
+  &--svc {
+    @include page-band(var(--measure-page));
+
+    grid-template-columns: 1fr;
+
+    // Wrapper now owns the horizontal geometry; undo the inner .page-body's
+    // page-band entirely. The width reset is load-bearing: page-band widens by
+    // --rail-total to escape body's padding, and doing that twice would push
+    // the inner box a rail's width past the wrapper.
+    .page-body {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      max-width: none;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+  // ── Essay variant: narrow 680px reading column ──
+  &--essay {
+    // Tracks the collapsed strip, not the open panel. The TOC is position:
+    // fixed, so this column is pure spacing — it exists to stop the prose
+    // running under the strip, and the strip is all that is ever there.
+    grid-template-columns: minmax(0, 1fr) var(--toc-w);
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 0 10vw;
+
+    // Wrapper now owns horizontal spacing; strip _essay.scss's 10vw padding
+    > .post-body {
+      max-width: 680px;
+      margin: 0;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+// ── Sidebar panel ─────────────────────────────────────────────────────────────
+// Fixed to the right viewport edge, same vertical span as the left .rail — it
+// does not travel with the page scroll. right:0 means the width transition
+// grows leftward, over the page, on its own.
+.page-toc {
+  // Spine geometry — see _spine.scss. Declared on the panel root, which is also
+  // the [data-spine] host, so the ⬡ in .toc-label sits on the same axis as the
+  // ticks and the thread is measured against the panel's full height. cx is the
+  // thread's inset from the viewport edge: at 20px the wave sits roughly centred
+  // in the reserved strip. Moving it further inboard means widening --toc-w and
+  // the reservations that track it (see the note above).
+  --spine-cx: 10px;
+  --spine-amp: 6px;
+  --spine-dir: left; // right-edge panel, so crests point inward = leftward
+  --spine-crest: calc(var(--spine-cx) + var(--spine-amp));
+
+  position: fixed;
+  top: var(--rail-top);
+  right: 0;
+  bottom: 0;
+  z-index: 90;
+  // Column flex only so the auto block margins on .toc-label / .toc-nav below
+  // can centre the pair. Auto margins are the centring mechanism rather than
+  // justify-content: center because they collapse to zero once the outline is
+  // taller than the panel, where centring would push the first entries above
+  // the scroll origin and make them unreachable.
+  display: flex;
+  flex-direction: column;
+  width: var(--toc-w);
+  padding: var(--space-6) 0 var(--space-8);
+  // Visible, and this is the one real constraint the right side has that the
+  // left does not. The panel used to be overflow-y: auto so a long outline
+  // could scroll; `overflow-y: auto` forces the x axis to auto as well, which
+  // would clip every plaque off at the strip's edge. So the scroll goes, and
+  // the rows compress instead (see .toc-item) — a mechanism the thread already
+  // supports, because spine.js measures real row geometry rather than assuming
+  // --toc-row. See the note there for where that runs out.
+  overflow: visible;
+  // There is no panel, ever: the thread and its ticks float directly on the
+  // page in the page's own palette. Any surface belongs to the individual
+  // plaque, which is the only part of this that carries text.
+  background: transparent;
+
+  // The thread hugs the panel's outer (right) edge and spans its full height.
+  // spine.js deliberately runs the path past the top and bottom edges so the
+  // thread reads as continuous, and the panel's overflow used to cut it off;
+  // now that the panel is overflow: visible, the SVG clips itself.
+  > .spine {
+    right: 0;
+    overflow: hidden;
+  }
+
+  // The thread lights when the cursor is anywhere on the strip. Changes no
+  // geometry, so it cannot push the prose around. :focus-within keeps it true
+  // for keyboard users, who can reach the links but never hover the strip.
+  &:hover,
+  &:focus-within {
+    @include spine-lit;
+  }
+}
+
+// ── "Contents" label ──────────────────────────────────────────────────────────
+// Only the ⬡ ever shows in the strip, parked directly above the tick column so
+// it reads as the head of the thread rather than a stray glyph. The word itself
+// is a plaque like every other label, revealed by hovering the ⬡.
+.toc-label {
+  @include label-caps(var(--fs-1), 0.24em);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  height: 1.75rem;
+  // margin-top: auto pairs with margin-bottom: auto on .toc-nav to centre the
+  // label + list block in the panel. See the note on .page-toc.
+  margin: auto 0 var(--space-5);
+  padding-right: calc(var(--spine-crest) + var(--space-5));
+  color: var(--ink-1);
+  white-space: nowrap;
+
+  &::after {
+    content: '⬡';
+    position: absolute;
+    top: 50%;
+    right: var(--spine-crest);
+    transform: translate(50%, -50%);
+    color: var(--mark);
+    font-size: var(--fs-1);
+    letter-spacing: normal;
+    text-transform: none;
+    opacity: 0.55;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.toc-label-tx {
+  @include spine-plaque(left);
+}
+
+.toc-label:hover .toc-label-tx {
+  @include spine-plaque-open;
+}
+
+// ── Navigation list ───────────────────────────────────────────────────────────
+// Each row carries [data-spine-node]; spine.js reads their centres off the
+// panel and crests the thread through each one.
+// A flex column whose rows are allowed to compress. This is what replaced the
+// panel's overflow-y: auto — see the note on .page-toc. Rows shrink from their
+// natural --toc-row toward --toc-row-min as the outline gets long, and the
+// thread follows, because spine.js reads each row's real offsetTop/offsetHeight
+// rather than trusting the token. It tightens where the entries are dense,
+// which is the behaviour _spine.scss describes anyway.
+//
+// The floor is a real one: at --toc-row-min an outline of roughly 29 entries
+// fills a laptop-height panel, and past that the list runs off the bottom with
+// no way to reach it. The site's longest outline today is 22 (/faq/). If a page
+// ever exceeds that, the fix is a shorter outline or an h2-only outline — not a
+// lower floor, which just makes the rows unreadable before it makes them fit.
+.toc-nav {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 auto;
+}
+
+.toc-item {
+  position: relative;
+  flex: 0 1 var(--toc-row);
+  min-height: var(--toc-row-min);
+
+  // Sits on the crest. translate(50%) puts the lozenge's centre on the crest
+  // rather than its trailing edge, so it reads as a bead on the thread.
+  .spine-tick {
+    right: var(--spine-crest);
+    transform: translate(50%, -50%) rotate(45deg);
+  }
+
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    padding-right: calc(var(--spine-crest) + var(--space-4));
+    padding-left: var(--space-4);
+    font-family: $font-sans;
+    font-size: var(--fs-1);
+    line-height: 1.35;
+    text-align: right;
+    color: var(--ink-1);
+    text-decoration: none;
+    transition: color 0.18s ease;
+
+    &:hover {
+      color: var(--ink-3);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--mark);
+      outline-offset: -2px;
+    }
+  }
+
+  &:hover .spine-tick {
+    opacity: 1;
+  }
+
+  // h3 items — shorter row, dimmer ink, hollow tick. The indent that a
+  // left-aligned TOC would use is unavailable here (the text is flush to the
+  // spine by design), so depth is carried by weight, not by position.
+  &.toc-h3 {
+    flex-basis: var(--toc-row-sub);
+
+    > a {
+      color: var(--ink-1);
+      opacity: 0.82;
+    }
+
+    // Hollow bead: the thread passes through it rather than knotting on it.
+    .spine-tick {
+      width: 0.3rem;
+      height: 0.3rem;
+      background: transparent;
+      box-shadow: inset 0 0 0 1px var(--mark);
+    }
+  }
+
+  // Must follow .toc-h3: the two blocks tie on specificity, so source order
+  // decides, and the active state has to win for subheadings too.
+  &.is-active {
+    > a {
+      color: var(--mark);
+      opacity: 1;
+    }
+
+    .spine-tick {
+      width: 0.55rem;
+      height: 0.55rem;
+      background: var(--mark);
+      box-shadow: 0 0 0 3px var(--mark-ghost);
+      opacity: 1;
+    }
+  }
+}
+
+// ── The label plaque ─────────────────────────────────────────────────────────
+// Mirror of .rail-tx: hinged on the strip's inner (left) edge, travelling left
+// over the prose. Mechanics live on the mixin in _spine.scss.
+//
+// Unlike the rail's one-word labels, a heading can be long, so this one wraps
+// inside --toc-label-w and clamps at three lines. It has to clamp: the plaque is
+// vertically centred on a row that may have compressed to --toc-row-min, and an
+// unbounded one would grow past its neighbours in both directions.
+.toc-tx {
+  @include spine-plaque(left);
+
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  width: max-content;
+  max-width: var(--toc-label-w);
+  font-size: var(--fs-1);
+  line-height: 1.35;
+  text-align: right;
+}
+
+.toc-item:hover .toc-tx,
+.toc-item > a:focus-visible .toc-tx {
+  @include spine-plaque-open;
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+@media (max-width: 1100px) {
+  .page-toc-wrap--svc {
+    grid-template-columns: 1fr;
+  }
+
+  .page-toc {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  // --svc deliberately has no phone override any more. It took `padding: 0 6vw`
+  // here, and that shorthand beat the page-band mixin's padding-inline, so the
+  // one container that sets page geometry on four layouts went back to an
+  // ad hoc gutter on phones while the homepage's bands used --gutter. --gutter
+  // carries its own 6vw step (see _base.scss), so there is nothing to restate.
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-toc,
+  .toc-tx,
+  .toc-label-tx,
+  .toc-item > a {
+    transition: none;
+  }
+}

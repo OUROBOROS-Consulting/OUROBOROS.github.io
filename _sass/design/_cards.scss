@@ -1,0 +1,454 @@
+@use "typography" as *;
+@use "chamfer" as *;
+@use "base" as *;
+
+// ── Cards grid ───────────────────────────────────────────────────────────────
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem);
+  background: var(--line-3);
+}
+
+// ── Card component ───────────────────────────────────────────────────────────
+.card {
+  background-color: var(--surface-2);
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  transition: background-color 0.3s;
+  @include snakeskin;
+
+  &:hover {
+    background-color: var(--surface-3);
+  }
+
+  // Values and testimonials cards use bg2 as base, so invert hover
+  #audience &,
+  #values &,
+  #testimonials & {
+    background-color: var(--surface-2);
+
+    &:hover {
+      background-color: var(--surface-3);
+    }
+  }
+}
+
+// ── Formula / Key callout box ─────────────────────────────────────────────────
+// Angular chamfered corners (replicates tcolorbox arc is angular, arc=3mm).
+// Two-layer technique: outer div = gold fill (the "border"), inner div = bg fill.
+// clip-path does not support stroke, so the border is painted as a background
+// layer and the interior sits on top with a matching but slightly smaller clip.
+
+.card--formula {
+  // Outer shell — gold fill acts as the visible border
+  background: var(--mark-border);
+  padding: $chamfer-border;
+  position: relative;
+  @include chamfer($chamfer-arc);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  // Title bar — sits flush on the top edge, sharp corners per boxed title style
+  &__title {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 1.4rem;
+    transform: translateY(-100%);
+    background: var(--surface-3);
+    border: $chamfer-border solid var(--mark);
+    border-bottom: none;
+    color: var(--mark);
+    font-weight: 700;
+    font-size: var(--fs-2);
+    font-family: $font-sans;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.15rem var(--space-3);
+    // sharp corners — intentionally no border-radius
+  }
+
+  // Interior — same chamfer minus the border width so the gold edge shows
+  &__interior {
+    background-color: var(--surface-2);
+    padding: var(--space-card);
+    @include chamfer($chamfer-inner);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    @include snakeskin;
+  }
+}
+
+.card-tag {
+  // --label-size, not the mixin's --fs-1 default. The size used to be applied
+  // from a trailing selector list in _cv.scss, which won on source order; that
+  // file was deleted 2026-08-08 and the value moved here where it belongs.
+  @include label-caps(var(--label-size), 0.2em);
+
+  // Strip margins from markdownify
+  p {
+    margin: 0;
+  }
+}
+
+.card-title {
+  font-family: $font-serif;
+  font-size: var(--fs-7);
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--ink-3);
+}
+
+.card-desc {
+  font-size: var(--fs-2);
+  color: var(--ink-2);
+  line-height: 1.85;
+  flex-grow: 1; // pushes card-link to bottom
+
+  // Strip margins from markdownify
+  p {
+    margin: 0;
+  }
+}
+
+.card-link {
+  display: inline-block;
+  margin-top: auto;
+  font-size: var(--fs-1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mark);
+  text-decoration: none;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+// Scoped to .card so it doesn't affect .post-body blockquote
+.card blockquote {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+
+  p {
+    margin: 0;
+  }
+
+  cite {
+    display: block;
+    margin-top: var(--space-5);
+    font-family: $font-sans;
+    font-size: var(--fs-1);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--mark);
+    font-style: normal;
+  }
+}
+
+// ── Related cards (essay & project footers) ───────────────────────────────────
+// Slightly narrower minmax and anchor-based, otherwise inherits .card
+.related-card {
+  @extend .card;
+  position: relative;
+  isolation: isolate;
+  padding: var(--space-8);
+  text-decoration: none;
+  display: block;
+  background: transparent;
+  transition: transform 0.2s;
+
+  // Gold border layer (full size, chamfered)
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--mark-border);
+    @include chamfer($chamfer-arc);
+    z-index: -1;
+    transition: background 0.2s;
+  }
+
+  // Fill layer (inset by border width, chamfered)
+  &::after {
+    content: '';
+    position: absolute;
+    inset: #{$chamfer-border};
+    background-color: var(--surface-2);
+    @include chamfer($chamfer-inner);
+    z-index: -1;
+    transition: background-color 0.2s;
+    @include snakeskin;
+  }
+
+  &:hover {
+    background: transparent;
+    transform: translateY(-2px);
+
+    &::before { background: var(--mark); }
+    &::after  { background-color: var(--surface-3); }
+  }
+
+  &--soon {
+    cursor: default;
+    opacity: 0.6;
+
+    &:hover {
+      transform: none;
+
+      &::before { background: var(--mark-border); }
+      &::after  { background-color: var(--surface-2); }
+    }
+  }
+
+  // Optional SVG/glyph icon in the card's top-right corner (reuses the service
+  // hero_svg, falling back to the Font Awesome glyph). Gold-toned, no glow.
+  // Lifted out of flow so it pins to the corner regardless of how much copy
+  // follows; .rc-tag and .rc-title reserve a gutter so they never run under it.
+  .rc-icon {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: clamp(51px, 19.8%, 75px);
+    color: var(--mark);
+
+    // Already absolute, so it is its own containing block.
+    @include light-glyph-plate;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    i {
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+  }
+
+  // Only cards that actually carry an icon reserve the corner gutter. Related
+  // cards in essay and project footers have none and stay full width.
+  &:has(.rc-icon) {
+    .rc-tag,
+    .rc-title {
+      padding-right: calc(75px + 1rem);
+    }
+
+    // Tag + title together must be at least as tall as the icon box, or
+    // .card-desc below them runs under the corner. Tag is ~1.5rem with its
+    // margin, so 3.25rem here clears the 75px icon.
+    .rc-title {
+      min-height: 3.25rem;
+    }
+  }
+
+  .rc-tag {
+    font-size: var(--fs-1);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mark);
+    margin-bottom: var(--space-4);
+  }
+
+  .rc-title {
+    font-family: $font-serif;
+    font-size: var(--fs-3);
+    font-weight: 400;
+    color: var(--ink-3);
+    line-height: 1.35;
+    margin-bottom: var(--space-3);
+  }
+
+  .rc-date {
+    font-size: var(--fs-1);
+    color: var(--ink-1);
+  }
+
+  .rc-tags {
+    margin-top: var(--space-4);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+  }
+
+  .rc-tag-chip {
+    font-size: var(--fs-1);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-1);
+    border: 1px solid var(--line-3);
+    border-radius: var(--radius-1);
+    padding: 0.15em 0.5em;
+  }
+}
+
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+  align-items: stretch;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.related-grid > .related-card,
+.cards > .card,
+.cards > .card--formula,
+.testimonials-grid > .bib-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  height: 100%;
+}
+
+.card--formula__interior {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+// ── Corner icon ───────────────────────────────────────────────────────────────
+// Cards carrying a .card-icon pin it to the top-right corner rather than
+// stacking it above the copy. The icon is a flex child of a column container,
+// so a float cannot work here; it is lifted out of flow and .card-body reserves
+// a gutter wide enough that no line ever runs under it. Guarded by :has() so
+// icon-less .card--formula instances (footer, values grid) stay full width.
+.card--formula:has(.card-icon) {
+  .card--formula__interior { position: relative; }
+
+  .card-icon {
+    position: absolute;
+    top: 1.4rem;   // matches the interior's padding
+    right: 1.4rem;
+    // Narrower than the stacked 30%: a corner mark, not a feature block.
+    width: clamp(44px, 17.6%, 66px);
+    margin-bottom: 0;
+    font-size: 2.4rem; // Font Awesome fallback, down from the stacked 5rem
+  }
+
+  // Only the title sits beside the icon, so only the title gives up width. The
+  // min-height matches the icon box, which guarantees .card-desc always starts
+  // below it and can stay full width.
+  .card-title {
+    padding-right: calc(66px + 1rem);
+    min-height: 66px;
+  }
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ── Reference cards (bibtex + data_source resource lists) ────────────────────
+// Two-layer chamfer via pseudo-elements (mirrors .card--formula technique):
+//   ::before — gold fill at full size, chamfer($chamfer-arc)   → the visible border
+//   ::after  — bg2 fill inset by $chamfer-border, chamfer($chamfer-inner) → the card surface
+// Both sit at z-index:-1 within an isolated stacking context so text floats above.
+.bib-card {
+  position: relative;
+  isolation: isolate; // scope pseudo-element z-indices inside the card
+  padding: var(--space-7) var(--space-8);
+  transition: box-shadow 0.25s, transform 0.25s;
+
+  // Gold outer border layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--mark-border);
+    @include chamfer($chamfer-arc);
+    z-index: -1;
+  }
+
+  // Background fill layer — inset to expose the gold edge
+  &::after {
+    content: '';
+    position: absolute;
+    inset: #{$chamfer-border};
+    background-color: var(--surface-2);
+    @include chamfer($chamfer-inner);
+    z-index: -1;
+    @include snakeskin;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+
+    &::before {
+      background: var(--mark);
+    }
+  }
+}
+
+.bib-title {
+  display: block;
+  font-family: $font-serif;
+  font-size: var(--fs-3);
+  font-weight: 400;
+  color: var(--ink-3);
+  line-height: 1.4;
+  margin-bottom: var(--space-3);
+}
+
+.bib-byline {
+  font-size: var(--fs-1);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--mark-dim);
+  margin-bottom: var(--space-2);
+}
+
+.bib-venue {
+  font-size: var(--fs-1);
+  color: var(--ink-1);
+  line-height: 1.5;
+  margin-bottom: var(--space-3);
+}
+
+.bib-link {
+  font-size: var(--fs-1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mark);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}

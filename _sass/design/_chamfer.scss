@@ -1,0 +1,14 @@
+$chamfer-arc:    11px; // 3mm ≈ 11px at 96 dpi — corner clip depth
+$chamfer-border: 2px;  // visible border thickness
+$chamfer-inner:  calc(#{$chamfer-arc} - #{$chamfer-border}); // interior clip depth
+
+@mixin chamfer($a) {
+  clip-path: polygon(#{$a} 0%,
+    calc(100% - #{$a}) 0%,
+    100% #{$a},
+    100% calc(100% - #{$a}),
+    calc(100% - #{$a}) 100%,
+    #{$a} 100%,
+    0% calc(100% - #{$a}),
+    0% #{$a});
+}

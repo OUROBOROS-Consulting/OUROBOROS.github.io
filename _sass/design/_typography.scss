@@ -1,0 +1,62 @@
+@use "type-levels" as *;
+
+// ── Font family choices (single source of truth) ─────────────────────────────
+$font-serif:     'Lora', Georgia, serif;
+$font-sans:      'Inter', 'DejaVu Sans', system-ui, sans-serif;
+$font-mono:      'JetBrains Mono', monospace;
+$font-cormorant: 'Cormorant SC', 'Cormorant Garamond', Georgia, serif;
+$font-garamond:  'EB Garamond', Georgia, serif;
+
+// ── label-caps mixin ──────────────────────────────────────────────────────────
+// The gold tracked cap. This is level 1 of the type scale wearing the name the
+// package already calls it by, and as of 2026-08-08 it is literally that: the
+// level supplies family, size, weight, leading, ink and the caps transform, and
+// the two arguments below override size and tracking for the call sites that
+// need a tighter or larger cut.
+//
+// Both arguments stay. Tracking on a cap is not a free choice — it has to open
+// as the cap shrinks and close as it grows — and 30-odd call sites had already
+// converged on 0.15em / 0.2em / 0.22em / 0.28em for real optical reasons. The
+// default is 0.22em rather than --ls-1 (0.14em) because 0.22em is what the label
+// above a band heading actually ships at.
+//
+// Use: @include label-caps;                        → 0.8rem / 0.22em
+// Use: @include label-caps(var(--fs-1), 0.28em);   → wider variant (CV / service)
+@mixin label-caps($size: var(--fs-1), $tracking: 0.22em) {
+  @include type-level-1;
+  font-size: $size;
+  letter-spacing: $tracking;
+}
+
+// .section-label and .about-heading lived here until 2026-08-08. They were only
+// ever the label and title of a section band header, so they moved to _band.scss
+// as .band-label and .band-heading--stacked, next to the strip they belong to.
+
+// ── Pull quote (standalone block component) ───────────────────────────────────
+// Used on mission/bio pages. Distinct from blockquote inside .post-body
+// (that lives in _essay.scss and is scoped to prose context).
+.pull-quote {
+  position: relative;
+  padding: var(--space-9);
+  border-left: 2px solid var(--mark);
+  background: var(--surface-4);
+
+  blockquote {
+    font-family: $font-serif;
+    font-size: var(--fs-7);
+    font-style: italic;
+    line-height: 1.6;
+    color: var(--ink-3);
+  }
+
+  cite {
+    display: block;
+    margin-top: var(--space-6);
+    font-size: var(--fs-1);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mark);
+    font-style: normal;
+  }
+}
+

@@ -1,0 +1,222 @@
+// ── Theme tokens ──────────────────────────────────────────────────────────────
+// Mixins ONLY. This partial emits no CSS of its own, which is the whole point:
+// a consumer can @use it to reach dark-tokens / light-tokens / light-mode /
+// dark-island without also pulling in the reset, the :root scales, and the body
+// rule that _base.scss emits. Three site stylesheets (dashboard, quiz, intake)
+// each hand-copied a 30-token dark set for exactly that reason, and the copies
+// had already drifted (--gold was #C9A84C in all three long after the package
+// moved it to #b39f7b). Those hand-copies are now @use "tokens" + @include
+// dark-island, so the drift cannot recur.
+//
+// _base.scss @forwards this partial, so `@use "base" as *` still reaches every
+// mixin here and no existing import needed to change.
+
+// ── Theme mixins — Ouroboros v5 + light mode ──────────────────────────────────
+// Two palettes (dark-tokens, light-tokens), a two-selector override pattern
+// (light-mode) for non-token effects, and a trivial wrapper (dark-island) for
+// marble/chrome surfaces that must render identically in both themes.
+//
+// Default is dark, unconditionally, on :root. Light applies in two cases:
+//   1. OS prefers light AND the visitor has not explicitly chosen dark
+//      (:root:not([data-theme="dark"]) inside a prefers-color-scheme: light
+//      media query).
+//   2. The visitor explicitly chose light (:root[data-theme="light"]),
+//      regardless of OS preference.
+// An explicit data-theme="dark" needs no extra rule — dark is already the
+// unconditional :root default, so choosing dark just means "no override
+// applies."
+@mixin dark-tokens {
+  // Surface ramp — ascending = further forward. surface-1 is the page floor.
+  // surface-1..4 are the former bg1/bg2/bg3/calloutbg at identical values, so
+  // every ratio the contrast floor asserts is unchanged by the rename.
+  --surface-1: #0c101a;
+  --surface-2: #1a1d26;
+  --surface-3: #22262f;
+  --surface-4: #252831;
+  // ⚠ INK-ONLY surface. The dark accent palette is at its contrast ceiling:
+  // --steel caps a 4.5:1 surface at luminance 0.02432 and --surface-4 already
+  // sits at 0.02133, so this step spends the remaining headroom. Ink clears
+  // 4.5:1 here; steel (4.26), amethyst (4.27) and teal (4.49) do not. Asserted
+  // as such in scripts/check-contrast.mjs.
+  --surface-5: #2b2f39; // new top step, above the former --calloutbg
+  --shadow: #06080d;
+
+  // Line ramp — ascending = stronger. line-3 is the former single --border, so
+  // all 80 inherited call sites render exactly as before. 1/2 are quieter rules
+  // (row separators, cell borders), 4 is the assertive frame.
+  --line-1: #22262f;
+  --line-2: #2b3038;
+  --line-3: #30343e;
+  --line-4: #3d424e;
+
+  // Ink ramp — ascending = higher emphasis. Mapped from the former named ink so
+  // ink-2 and ink-3 keep the AAA guarantee the light-theme work was built on.
+  --ink-1: #999999; // 5.2:1 (6.7 on surface-1) — AA, was --muted
+  --ink-2: #B0AAA0; // 6.4:1 (8.2) — AAA on the floor, was --subdued
+  --ink-3: #E8E4DC; // 11.6:1 (15.0) — body copy, was --text
+  --ink-4: #FFFFFF; // 14.7:1 (19.0) — was --bright
+
+  --mark: #b39f7b;
+  --mark-dim: rgba(201, 168, 76, 0.35);
+  --mark-ghost: rgba(201, 168, 76, 0.12);
+  --mark-border: #b39f7b;
+
+  --steel: #7F94A6;
+  --steel-dim: rgba(127, 148, 166, 0.55);
+  --steel-ghost: rgba(127, 148, 166, 0.12);
+
+  --amethyst: #A284CA;
+  --amethyst-dim: rgba(162, 132, 202, 0.35);
+  --amethyst-ghost: rgba(162, 132, 202, 0.12);
+
+  --sage: #6DA187;
+  --sage-dim: rgba(109, 161, 135, 0.35);
+  --sage-ghost: rgba(109, 161, 135, 0.12);
+
+  --teal: #5DA19C;
+  --teal-dim: rgba(93, 161, 156, 0.35);
+  --teal-ghost: rgba(93, 161, 156, 0.12);
+
+  --ruby: #ba6868; // pre-existing 3.70:1 on --calloutbg — zero call sites,
+  // out of scope for this feature, not asserted by the dark contrast floor.
+  --claude: #E8640A; // pre-existing 4.36:1 on --calloutbg — same as above.
+
+  // Numbered accent aliases. Ordered by the call-site prominence documented in
+  // README → Accent Semantics (gold 211, amethyst 12, sage 10, teal 9, steel 5).
+  //
+  // These exist so the numbered vocabulary is complete, NOT because the accents
+  // are a ramp. They are a categorical set: each one is bound to one meaning per
+  // context (announcement category, dashboard audience) and gold is the only
+  // accent allowed for decoration. A number implies interchangeability that this
+  // palette does not have, so the semantic names stay canonical — reach for
+  // --accent-N only when you genuinely mean "nth swatch in the palette", such as
+  // in the design-system specimen page. Everywhere else, name the meaning.
+  --accent-1: var(--mark);
+  --accent-2: var(--amethyst);
+  --accent-3: var(--sage);
+  --accent-4: var(--teal);
+  --accent-5: var(--steel);
+
+  // Legacy aliases, zero call sites, documented in README as deprecated. They
+  // point at custom properties rather than literals, so they re-resolve per
+  // theme on their own and need no entry in light-tokens. Kept because this is
+  // a published package: dropping a documented token is a breaking change for
+  // consumers we cannot see. Remove deliberately, not as refactor fallout.
+  --sapphire: var(--steel);
+  --emerald: var(--sage);
+
+  // ── Optical compensation ────────────────────────────────────────────────────
+  // The only two typographic tokens that are themed, and the reason the type
+  // levels exist as mixins rather than as a fixed block of declarations.
+  //
+  // Light-on-dark text irradiates: the lit glyph bleeds outward into the dark
+  // ground, so the same face at the same weight reads heavier here than it does
+  // in light mode, and its counters read smaller. Two corrections, applied once
+  // by the type levels instead of by hand at every heading.
+  //
+  // --ls-optical opens tracking by a hair so the bleed does not close the gaps
+  // between letters. It is added to --ls-1..5, never used alone.
+  //
+  // --fw-heading drops display and section heads one step, because 600 on a
+  // dark ground already carries the presence 700 carries on a light one. Both
+  // 600 and 700 are real cuts in Lora, so neither theme gets a synthesised face.
+  --ls-optical: 0.006em;
+  --fw-heading: var(--fw-4); // 600
+}
+
+// Light palette. Cool navy-tinted family (hue ~223°, same character as dark)
+// so the two themes read as one material, not two different systems. The
+// surface ramp keeps the SAME ORDER as dark — --bg1 is the page floor and the
+// darkest of the four, --calloutbg is the lightest — so "further forward" still
+// means "brighter" in both themes. That keeps three things working: the
+// elevation gradient in elevation-elevated (a --bg3 wash at the TOP of a card)
+// stays a lightening highlight rather than inverting into a dark band against
+// its paired rgba(255,255,255,0.04) inset; callouts keep a visible step off the
+// page floor; and hover-to---bg3 still reads as "lift", not "sink".
+// --bg1 (#E7EAF0) is therefore the worst-case backdrop for dark-on-light text —
+// the mirror of dark mode, where --calloutbg was the worst case for
+// light-on-dark. Every ratio below was computed by hand against WCAG 2.1
+// relative luminance (sRGB companding) using --bg1 as the worst-case surface,
+// and verified against `npm run check:contrast` in Step 6.
+@mixin light-tokens {
+  --surface-1: #E7EAF0;
+  --surface-2: #EFF1F5;
+  --surface-3: #F5F7FA;
+  --surface-4: #FCFDFE;
+  --surface-5: #FFFFFF; // new top step; the light ramp tops out at pure white
+
+  --shadow: rgba(28, 32, 41, 0.18);
+
+  --line-1: #E1E4EC;
+  --line-2: #D4D8E2;
+  --line-3: #C7CBD6; // the former single --border
+  --line-4: #B3B8C6;
+
+  --ink-1: #535971; // 5.74:1 on --surface-1
+  --ink-2: #3D4353; // 8.20:1 — AAA, matches the tighter light target
+  --ink-3: #34394A; // 9.52:1
+  --ink-4: #1C2029; // 13.53:1
+
+  --mark: #7A6028; // 4.93:1 on --surface-1
+  --mark-dim: rgba(122, 96, 40, 0.35);
+  --mark-ghost: rgba(122, 96, 40, 0.12);
+  --mark-border: #8A7550; // 3.68:1 on --surface-1 — non-text, 3:1 floor
+
+  --steel: #4A5A68; // 5.90:1 on --bg1
+  --steel-dim: rgba(74, 90, 104, 0.80);
+  --steel-ghost: rgba(74, 90, 104, 0.12);
+
+  --amethyst: #6B4F94; // 5.49:1 on --bg1
+  --amethyst-dim: rgba(107, 79, 148, 0.35);
+  --amethyst-ghost: rgba(107, 79, 148, 0.12);
+
+  --sage: #38624C; // 5.77:1 on --bg1
+  --sage-dim: rgba(56, 98, 76, 0.35);
+  --sage-ghost: rgba(56, 98, 76, 0.12);
+
+  --teal: #295F5A; // 6.05:1 on --bg1
+  --teal-dim: rgba(41, 95, 90, 0.35);
+  --teal-ghost: rgba(41, 95, 90, 0.12);
+
+  --ruby: #8A3E3E; // 6.14:1 on --bg1 — zero call sites, given a real passing
+  // value anyway for palette completeness.
+  --claude: #A34608; // 5.07:1 on --bg1 — zero call sites, same rationale.
+
+  // Dark-on-light does not irradiate, so both corrections switch off: no added
+  // tracking, and headings take their full weight. The zero carries a unit
+  // because it is consumed inside calc().
+  --ls-optical: 0em;
+  --fw-heading: var(--fw-5); // 700
+}
+
+// Wraps @content in both light-theme override selectors. Use for non-token
+// effects (textures, shadows, gradients) that can't be expressed as a single
+// custom property. `&` is whatever selector this is @include'd inside.
+@mixin light-mode {
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) & {
+      @content;
+    }
+  }
+
+  :root[data-theme="light"] & {
+    @content;
+  }
+}
+
+// Forces dark-tokens on a marble/chrome surface regardless of the active
+// theme. A trivial wrapper (not a hand-copied property list) so there is
+// structurally zero chance of drifting from dark-tokens as the palette
+// changes. Every island in this system (nav, footer, rail, page-toc, service
+// hero, marble bands, section headers) gets this include — see Task 4.
+@mixin dark-island {
+  @include dark-tokens;
+
+  // Redeclaring the tokens is not enough on its own. Descendants that never
+  // set `color` inherit it from `body`, which is `var(--ink-3)` resolved at
+  // :root — light ink under a light theme, painted onto a permanently dark
+  // surface. Dark mode hid this because the root and island values of --text
+  // are identical there, so the bug only appears once a light theme exists.
+  // Pinning color here re-anchors inheritance to the island's own --text.
+  color: var(--ink-3);
+}

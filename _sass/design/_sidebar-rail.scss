@@ -1,0 +1,252 @@
+@use "typography" as *;
+@use "base" as *;
+@use "spine" as *;
+
+// ── Left section rail ────────────────────────────────────────────────────────
+// An icon column pinned to the left edge, carrying the same golden thread as
+// the right-hand TOC (see _spine.scss): one crest, one tick, per rail group,
+// with the thread running the rail's full height and the three groups centred
+// vertically on it.
+//
+// THE PANEL NEVER OPENS. The rail is one fixed-width strip at every breakpoint
+// — thread, ticks, icons, nothing else. It used to widen to --rail-w-open on
+// hover, sliding a scrim and all three labels out over the page at once; that
+// treatment is gone. Hovering or focusing a SINGLE item now slides out THAT
+// item's label alone, as a plaque anchored off the strip's edge (see .rail-tx).
+// Do not reintroduce a width transition on .rail: --rail-w is what the
+// consuming site reserves in body's padding-left, and a rail that grows past it
+// is a panel, which is the thing this replaced.
+//
+// On touch there is no hover, so the labels stay unread by sighted users — the
+// icons carry title attributes for that case. It is deliberately not a
+// tap-to-open drawer: the rail holds three items, and a drawer would put a
+// dismissable overlay between a visitor and the contact link on the page where
+// they are most likely to need it.
+
+:root {
+  --rail-top: 6.5rem; // clears the fixed primary bar
+  --rail-x: 40px; // gap between the viewport edge and the strip
+  --rail-w: 3.5rem; // the icon column — the rail is always exactly this wide
+  --rail-label-w: 12rem; // plaque ceiling, sized to fit ANNOUNCEMENTS, the longest label
+
+  // The rail's true footprint, and the ONLY thing a consuming site should
+  // reserve. It was reserving --rail-w alone while the rail sat 40px inboard,
+  // which put the icons and the right two thirds of the thread on top of the
+  // prose. Reserve this instead, and pull full-bleed bands back by this.
+  --rail-total: calc(var(--rail-x) + var(--rail-w));
+}
+
+.rail {
+  // Spine geometry — see _spine.scss. The panel root is also the [data-spine]
+  // host, so the thread is measured against the rail's full height. cx sets the
+  // thread's inset: at 18px the wave sits roughly centred in the reserved strip
+  // rather than hugging the viewport edge. Pushing it further inboard means
+  // widening --rail-w too, or the thread crosses onto the prose.
+  --spine-cx: 5px;
+  --spine-amp: 5px;
+  --spine-dir: right; // left-edge rail, so crests point inward = rightward
+  --spine-crest: calc(var(--spine-cx) + var(--spine-amp));
+
+  position: fixed;
+  top: var(--rail-top);
+  left: 0;
+  bottom: 0;
+  z-index: 90;
+  // Column flex exists so .rail-nav's auto block margins can centre the group
+  // stack. See the matching note in _sidebar.scss for why auto margins rather
+  // than justify-content.
+  display: flex;
+  flex-direction: column;
+  width: var(--rail-w);
+  // Visible, not hidden. The label plaques are anchored at the strip's right
+  // edge and have to be able to cross it; a clip here would cut every one of
+  // them off at the icon. The two things that used to depend on this clip are
+  // handled where they belong now — the thread clips itself (below), and the
+  // labels hide themselves with clip-path rather than by being outside a box.
+  overflow: visible;
+  // There is no panel and never was one at rest: no slab, no border, no blur.
+  // The thread and the three icons float directly on the page, in the page's
+  // own palette. Any surface belongs to the individual label plaque, which is
+  // the only part of this that ever carries text.
+  background: transparent;
+
+  // The thread's own box starts at the rail's edge; --spine-cx above is what
+  // insets the wave inside it. spine.js deliberately runs the path past the
+  // panel's top and bottom edges so the thread reads as continuous, and the
+  // rail's own overflow used to be what cut it off. Now that the rail is
+  // overflow: visible, the SVG has to do its own clipping or the wave spills up
+  // over the primary bar.
+  >.spine {
+    left: 0;
+    overflow: hidden;
+  }
+
+  // The thread lights when the cursor is anywhere on the strip. This is the
+  // only whole-rail state left: it changes nothing's size or position, so it
+  // cannot push the page around. :focus-within keeps it true for keyboard.
+  &:hover,
+  &:focus-within {
+    @include spine-lit;
+  }
+}
+
+.rail-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  flex-shrink: 0;
+  margin: auto auto; // centres the group stack in the full-height rail
+  padding: var(--space-4) var(--space-4);
+  // This used to carry background/border/backdrop-filter resets, because the
+  // primary bar's chrome was written as a bare `nav {}` selector and landed
+  // here. It also carried a ::after marble strip that the resets missed, which
+  // painted a grey band under the last rail item. The chrome is scoped to
+  // .nav-menu now (see _nav-primary.scss), so there is nothing to undo. If a
+  // slab or a blur ever reappears behind the rail icons, look for a new bare
+  // element selector rather than adding resets back here.
+}
+
+.rail-group {
+  position: relative;
+
+  // Sits on the crest. translate(-50%) centres the lozenge on the crest rather
+  // than hanging it off the leading edge.
+  //
+  // The size is the rail's own, not the shared default. .spine-tick ships at
+  // 1.38rem, which is right beside the outline's text column but is 31px point
+  // to point once rotated — on a 3.5rem strip that put the diamond's right
+  // corner underneath the icon, and the two read as colliding sprites rather
+  // than a bead on a thread. Keep it under the icon's left edge; the active
+  // state below is what grows and lights it.
+  .spine-tick {
+    left: var(--spine-crest);
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
+
+// ── Top-level item (icon + label) ────────────────────────────────────────────
+// position: relative is load-bearing — .rail-tx is absolutely positioned off
+// this box's right edge, so the plaque tracks the row it belongs to.
+.rail-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: var(--rail-w);
+  // Clears the spine, then centres what is left of the strip.
+  padding: 0 0 0 calc(var(--spine-crest) + var(--space-3));
+  text-decoration: none;
+  color: var(--ink-2);
+  white-space: nowrap;
+  transition: color 0.18s ease;
+
+  // No background tint. On a strip with no slab behind it a filled row reads as
+  // a stray rectangle floating on the prose; the gold icon and the lit tick are
+  // the hover feedback.
+  &:hover {
+    color: var(--mark);
+  }
+
+  &:focus-visible {
+    outline-offset: -2px;
+  }
+}
+
+.rail-group:hover .spine-tick {
+  opacity: 1;
+}
+
+// ── Button variant (theme toggle) ────────────────────────────────────────────
+// .rail-item is normally an <a>. The toggle is a <button> (no navigation, no
+// href) so it needs its own reset: no native button chrome, full width to
+// match the anchor items, and a visible pointer cursor.
+.rail-item--button {
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  text-align: left;
+}
+
+.rail-ic {
+  flex-shrink: 0;
+  width: 1.35rem;
+  text-align: center;
+
+  i {
+    font-size: var(--fs-4);
+  }
+}
+
+// ── The label plaque ─────────────────────────────────────────────────────────
+// Hinged on the strip's right edge and out of flow, so it can be any width it
+// likes without touching the rail, the row, or the page — hovering an icon
+// moves nothing. Mechanics and the reason for clip-path live on the mixin in
+// _spine.scss; only the typography is the rail's own. Labels here are one word,
+// so they never wrap; --rail-label-w is a ceiling, not a wrapping width.
+.rail-tx {
+  @include spine-plaque(right);
+
+  max-width: var(--rail-label-w);
+  font-family: $font-garamond;
+  font-size: var(--fs-3);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+// The group, not the anchor, is the hover target: it carries the tick as well,
+// so the bead and its label light together. :focus-visible is the keyboard
+// path — a keyboard user reaches the link but can never hover the strip.
+.rail-group:hover .rail-tx,
+.rail-item:focus-visible .rail-tx {
+  @include spine-plaque-open;
+}
+
+// Active section. The tick carries the state now; the former inset gold bar at
+// x:0 sat three pixels off the spine's own axis and read as a second, competing
+// rule once the wave was there.
+.rail-group--active {
+  .rail-item {
+    color: var(--mark);
+  }
+
+  .spine-tick {
+    width: 0.55rem;
+    height: 0.55rem;
+    background: var(--mark);
+    box-shadow: 0 0 0 3px var(--mark-ghost);
+    opacity: 1;
+  }
+}
+
+
+// ── Mobile: same collapsed strip, repositioned for the shorter bar ───────────
+// The top offset clears --nav-h (3.5rem on mobile) instead of the taller
+// desktop --rail-top. The strip also loses its inboard gap: 40px + 56px is a
+// quarter of a phone screen taken out of the reading measure for whitespace.
+// --rail-x is redeclared on :root, not on .rail, because --rail-total is
+// derived from it and the site reserves that on <body>.
+@media (max-width: 768px) {
+  :root {
+    --rail-x: 0px;
+  }
+
+  .rail {
+    top: var(--nav-h);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rail,
+  .rail-tx,
+  .rail-item {
+    transition: none;
+  }
+}
+
+

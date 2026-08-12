@@ -1,0 +1,148 @@
+@use "typography" as *;
+@use "base" as *;
+
+// ── Band header ───────────────────────────────────────────────────────────────
+// The near-black strip that introduces a section: a tracked gold label, a serif
+// title, and an optional count / "View All" group pushed to the far end. It runs
+// full-bleed to the page gutter, so it reads as a stone lintel laid across the
+// page rather than a heading sitting on it.
+//
+// This is ONE component. It used to be six half-copies of itself — .work-header,
+// .testimonials-header, .about-header, .work-heading, .testimonials-heading,
+// .psa-section-header — with a single shared rule body and three names, which is
+// why every consuming selector in this package AND in the site repo had to list
+// all three. Renamed and consolidated 2026-08-08.
+//
+// Three geometries, one voice:
+//   (default)   opposed — label + title left, count + link right   #work #services
+//   --stacked   title under the label, nothing on the right        #audience #about #values
+//   --compact   inside a page body rather than opening one         PSA / tutorial / case-study groups
+//
+// ⚠ The horizontal geometry is NOT set here. The consuming site pulls the band
+// out to --gutter, because the gutter is what its parent section pads by and the
+// two must agree; the 10vw below is the standalone fallback. See the note in the
+// site's assets/css/main.scss.
+
+.band-header {
+  @include dark-island; // permanent near-black band in both themes
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #0D0D0D; // fallback under the black-marble raster (site main.scss)
+  margin: -6rem -10vw var(--space-10);
+  padding: 4.5rem 10vw var(--space-9);
+  border-top: 1px solid rgba(177, 147, 93, 0.22);
+  border-bottom: 1px solid rgba(177, 147, 93, 0.22);
+
+  &::after {
+    content: '';
+    display: block;
+    margin-top: var(--space-9);
+    @include accent-rule;
+  }
+}
+
+// Stacked bands carry only a label + title, so the pair goes vertical and
+// left-aligned rather than being split across the strip with nothing opposite
+// it. Matches the left column of the default variant.
+.band-header--stacked {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+// Compact bands group rows inside a page body — they divide content rather than
+// opening a section, so they lose the deep vertical padding, the negative top
+// margin that tucks the default band under the section above, and the accent
+// rule that closes it.
+.band-header--compact {
+  align-items: baseline;
+  margin-block: 0 var(--space-9);
+  padding-block: var(--space-8);
+
+  &::after {
+    content: none;
+  }
+}
+
+// ── The tracked cap above the title ───────────────────────────────────────────
+.band-label {
+  @include label-caps;
+  margin-bottom: var(--space-7);
+}
+
+// ── The serif title ───────────────────────────────────────────────────────────
+.band-heading {
+  font-family: $font-serif;
+  font-size: var(--fs-9);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-top: var(--space-3);
+}
+
+// Stacked bands put the title under the label instead of opposite a count, so
+// the space moves from above it to below it.
+.band-heading--stacked {
+  line-height: 1.0;
+  // Vertical only. The one-value shorthand also put --space-7 on the left,
+  // which pushed the title 24px inboard of the eyebrow label directly above it
+  // and broke the band's single left edge.
+  margin: var(--space-7) 0;
+}
+
+// Compact bands sit inside prose, so the title steps down one size and carries
+// no margin of its own — the strip's own padding is the rhythm.
+.band-heading--compact {
+  font-size: var(--fs-8);
+  margin-top: 0;
+}
+
+// ── Count ─────────────────────────────────────────────────────────────────────
+// "4 engagements". Introduced by the band, but the page heroes and the index
+// cards on /projects/ borrow it for the same reason — it is the one place a
+// bare quantity is set in gold caps, and a second class for it would be a
+// second answer to one question.
+.band-count {
+  @include label-caps(var(--fs-1), 0.2em);
+  padding-bottom: var(--space-2);
+}
+
+// ── Right-hand group ──────────────────────────────────────────────────────────
+.band-aside {
+  display: flex;
+  flex-direction: row; // count + link inline so the link lands at the strip's end
+  align-items: baseline;
+  gap: var(--space-6);
+}
+
+// ── "View All ↗" ──────────────────────────────────────────────────────────────
+.band-link {
+  @include label-caps(var(--fs-1), 0.15em);
+  color: var(--mark);
+  text-decoration: none;
+  padding-bottom: var(--space-2);
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.7;
+    text-decoration: underline;
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+// Phones stack every band, so the default variant adopts the stacked geometry
+// and the shorthands below re-flatten it. --compact has to restate its own
+// block values afterwards: the shorthand above resets all four sides.
+@media (max-width: 768px) {
+  .band-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+    margin: -4rem -6vw var(--space-9);
+    padding: var(--space-10) 6vw var(--space-8);
+  }
+
+  .band-header--compact {
+    margin-block: 0 var(--space-9);
+    padding-block: var(--space-8);
+  }
+}

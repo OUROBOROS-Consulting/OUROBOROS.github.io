@@ -1,0 +1,729 @@
+@use "typography" as *;
+@use "tokens" as *;
+@forward "tokens";
+
+// ── Reset ─────────────────────────────────────────────────────────────────────
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+// ── CSS custom properties — Ouroboros v5 ──────────────────────────────────────
+:root {
+  // Baseline is dark. `color-scheme: light dark` lets the UA render its own
+  // chrome (form controls, scrollbars, default link colour) for whichever
+  // theme is actually active; the two override blocks below set it to
+  // `light` explicitly when light-tokens is in effect.
+  color-scheme: dark;
+
+  --nav-h: 13rem; // desktop: primary (~96px)
+  --pad: var(--space-9);
+  --label-size: var(--fs-3);
+  --surface-hero: #1e213e; // dark navy — homepage + service hero. Unconditional
+  // in BOTH themes: the hero is a photographic/marble surface, not flat colour,
+  // so it does not participate in the light/dark flip. Outside the 1..5 ramp on
+  // purpose — it is a named surface, not an elevation step.
+
+  /* ── Type scale ─────────────────────────────────────────────────────────────
+     Ascending, 1..11. Steps 1..6 are the text range and 7..11 the display
+     range; the old names map straight across:
+       1 xs · 2 sm · 3 base · 4 md · 5 lg · 6 xl
+       7 display-xs · 8 display-sm · 9 display-md · 10 display-lg · 11 display-xl
+     Values are unchanged, so nothing reflows from the renumber alone. */
+  --fs-1: 0.8rem;
+  --fs-2: 0.9rem;
+  --fs-3: 1rem;
+  --fs-4: 1.2rem;
+  --fs-5: 1.4rem;
+  --fs-6: 1.6rem;
+  --fs-7: clamp(1.2rem, 2vw, 1.45rem);
+  --fs-8: clamp(1.5rem, 3vw, 2.1rem);
+  --fs-9: clamp(2rem, 4vw, 3rem);
+  --fs-10: clamp(2.4rem, 5vw, 4rem);
+  --fs-11: clamp(3.5rem, 10vw, 8rem);
+
+  /* ── Spacing scale ──────────────────────────────────────────────────────────
+     Thirteen steps, ascending. Derived from an audit of the 719 spacing
+     literals that preceded it, not from a generic 4px grid: the ten values the
+     system actually leaned on (0.25 / 0.5 / 0.75 / 1 / 1.25 / 1.5 / 2 / 2.5 /
+     3 / 4rem, 407 sites between them) are all present at their exact former
+     size, so most of the migration was a pure rename. The rest snapped, under
+     a rule of no more than 0.25rem and no more than 25% of movement — 16 sites
+     failed that test and were left as literals rather than silently resized. */
+  --space-1: 0.25rem;
+  --space-2: 0.375rem;
+  --space-3: 0.5rem;
+  --space-4: 0.75rem;
+  --space-5: 1rem;
+  --space-6: 1.25rem;
+  --space-7: 1.5rem;
+  --space-8: 2rem;
+  --space-9: 2.5rem;
+  --space-10: 3rem;
+  --space-11: 4rem;
+  --space-12: 6rem;
+  --space-13: 8rem;
+
+  /* Two component metrics the ramp deliberately excludes, because snapping
+     them would move real chrome: the card interior pad and the tall section
+     band. Named so they read as decisions rather than magic numbers. */
+  --space-card: 1.4rem;
+  --space-band-lg: 3.5rem;
+
+  /* ── Measure scale ──────────────────────────────────────────────────────────
+     The scale the system was missing. Type and spacing were tokenised; page
+     geometry never was, so ten containers each invented their own cap and
+     gutter (1600/2.5rem, 1600/5vw, 1060/10vw, 680/10vw, 1152/1.5rem, 1200/
+     2.5rem, 760/0 …) and drifted apart. .page-body ended up sitting 96px right
+     of the homepage's bands, which is what a reader actually sees when they go
+     from / to /resources/.
+
+     --gutter-min is the floor: the rail's own footprint plus a step, so no band
+     can ever put text under the golden thread. --gutter adds a proportional
+     term on top for content bands, so wide displays get real margin rather
+     than a 3000px line length. Chrome that is not a content band (the footer's
+     three-column grid, the disclaimer strip) takes --gutter-min directly.
+
+     --rail-total comes from _sidebar-rail.scss. Custom properties resolve at
+     computed-value time, so the forward reference is fine; the 0px fallback is
+     for a consumer that ships without the rail. */
+  --gutter-min: calc(var(--rail-total, 0px) + var(--space-10));
+  --gutter: max(10vw, var(--gutter-min));
+
+  /* Content caps, used with the page-band mixin below. These bound the TEXT,
+     not the element — the mixin keeps the gutter outside the cap. */
+  --measure-prose: 680px; // single-column reading
+  --measure-doc: 72rem; // documents and specs
+  --measure-page: 1600px; // wide index and grid pages
+
+  /* ── Radius scale ───────────────────────────────────────────────────────────
+     Ascending, in px on purpose: a corner radius is a fixed optical detail, not
+     rhythm, so it should not scale with the root font the way --space-* does.
+     Values come from an audit of the 65 border-radius literals that preceded
+     the scale — 2px, 3px and 4px alone account for 54 of them, which is why the
+     low end is spaced one pixel at a time. --radius-round is the 50% pill and
+     circle case, kept out of the ramp because it is a shape, not a size. */
+  --radius-1: 2px;
+  --radius-2: 3px;
+  --radius-3: 4px;
+  --radius-4: 8px;
+  --radius-5: 20px;
+  --radius-round: 50%;
+
+  /* ── Elevation scale ────────────────────────────────────────────────────────
+     Shadow carries elevation, per Material's rule that lightness does the work
+     in dark mode and shadow does it in light. --shadow is themed, so these
+     re-resolve per palette. Pair each with the matching --surface-N step; the
+     elevation-* mixins below do exactly that. */
+  --elev-0: none;
+  --elev-1: 0 1px 3px var(--shadow);
+  --elev-2: 0 2px 8px var(--shadow);
+  --elev-3: 0 2px 12px var(--shadow);
+  --elev-4: 0 4px 16px var(--shadow);
+  --elev-5: 0 24px 60px var(--shadow);
+
+  /* ── Line-height, weight, measure ───────────────────────────────────────────
+     Previously literals at every call site. lh-3 is body copy (was the bare
+     1.75 on body). */
+  --lh-1: 1;
+  --lh-2: 1.35;
+  --lh-3: 1.75;
+  --lh-4: 1.85;
+
+  /* Outside the ramp, on the same principle as --space-card and --space-band-lg:
+     a real metric the four steps cannot express. Display type wraps to two or
+     three lines and --lh-1 (1) would let them touch, while --lh-2 (1.35) is
+     visibly loose at 4rem. The ramp is under-specified at the tight end and
+     restructuring it moves text on every page, so this is named rather than
+     wedged in. */
+  --lh-display: 1.12;
+
+  /* Five steps. 600 was the missing one — 23 call sites wrote it as a literal
+     because the scale stopped at 500 and jumped to 700.
+     ⚠ Weight is a font capability, not a free numeric axis. Asking for a cut a
+     family does not ship gets a synthesised smear, not a lighter or heavier
+     face. Against the five self-hosted families in the consuming site:
+       --font-body  (Lora)  ships 400 500 600 700 — fw-1 (300) synthesises
+       --font-sans  (Inter) ships 300 400 500 600 — fw-5 (700) synthesises
+       --font-mono  (JetBrains Mono) ships 400 only
+     So a sans element must not reach past --fw-4, and a serif element must not
+     reach below --fw-2. The type levels below respect both bounds. */
+  --fw-1: 300;
+  --fw-2: 400;
+  --fw-3: 500;
+  --fw-4: 600;
+  --fw-5: 700;
+
+  /* ── Tracking ───────────────────────────────────────────────────────────────
+     Paired with the five type levels, not with --fs-*. Type set large has
+     proportionally more space between its letters than the same face set small,
+     so tracking has to tighten as size rises for the setting to look even.
+     Level 1 is the opposite case and the only positive value: it is the
+     uppercase eyebrow, and caps at 0.8rem close up without help.
+
+     These are base values. The type levels add --ls-optical on top, which is
+     themed — see _tokens.scss. Every step carries a unit, including the zero,
+     because calc() rejects `0 + 0.006em` as a type mismatch.
+
+     Defining these does not migrate the 126 letter-spacing literals still in
+     the stylesheets. Those are a census-and-snap pass of their own. */
+  --ls-1: 0.14em;
+  --ls-2: 0.01em;
+  --ls-3: 0em;
+  --ls-4: -0.015em;
+  --ls-5: -0.03em;
+
+  /* ── Stacking ───────────────────────────────────────────────────────────────
+     Five steps at 100 apart, widening, plus the two cases a ramp cannot say.
+     --z-under is the decorative pseudo-element that sits behind its own parent
+     (12 sites, all ::before textures and gradient washes). --z-escape is the
+     safety exit and the skip link: they must clear every other layer including
+     anything a third-party embed sets, so they sit far above the ramp rather
+     than one step up. Leaving a gap there is the point.
+
+     Defining these does not migrate the 28 z-index literals still in the
+     stylesheets. Same reason as tracking. */
+  --z-under: -1;
+  --z-1: 100;
+  --z-2: 200;
+  --z-3: 300;
+  --z-4: 500;
+  --z-5: 800;
+  --z-escape: 10000;
+
+  --measure: 68ch; // readable line length for prose columns
+
+  /* ── Font families ──────────────────────────────────────────────────────────
+     Custom-property mirrors of the SCSS variables in _typography.scss. The SCSS
+     vars stay for @use'ing partials; these exist so consuming markup and the
+     three hand-copied island stylesheets can reach the stack without importing
+     the package. --font-mono was previously a literal 'JetBrains Mono' repeated
+     at four call sites with no fallback chain. */
+  --font-body: #{$font-serif};
+  --font-sans: #{$font-sans};
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ── Modular scale ratios ───────────────────────────────────────────────────
+     Unitless. The ratio steps the type scale is built on, exposed so a demo or
+     a computed width can show the scale rather than restate it. */
+  --f-1: 1;
+  --f-2: 1.25;
+  --f-3: 1.563;
+  --f-4: 1.953;
+  --f-5: 2.441;
+
+  @include dark-tokens;
+}
+
+/* Phones drop the proportional term to 6vw and tighten the floor. --rail-x
+   goes to 0 down here (see _sidebar-rail.scss), so the floor is the strip
+   alone; 10vw on top of it would eat a quarter of a 390px reading measure. */
+@media (max-width: 768px) {
+  :root {
+    --gutter-min: calc(var(--rail-total, 0px) + var(--space-4));
+    --gutter: max(6vw, var(--gutter-min));
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    @include light-tokens;
+  }
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+  @include light-tokens;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-h: 3.5rem;
+  }
+
+  // mobile: secondary nav hidden, primary nav ~56px
+}
+
+// ── Base ──────────────────────────────────────────────────────────────────────
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+  // Clip full-bleed section bleeds (e.g. .band-header's -10vw margins) to the
+  // viewport so they never create a horizontal scrollbar in the tablet band.
+  // `clip` (not `hidden`) keeps overflow-y visible without making html a scroll
+  // container, so body remains the scroller and sticky/fixed elements are safe.
+  overflow-x: clip;
+}
+
+body {
+  // Page floor: subtle top-lit gradient, viewport-fixed so every screenful
+  // reads the same. The top stop is derived from the existing surface ramp with
+  // color-mix rather than a new token, so the three hand-copied dark-island
+  // token sets (dashboard.scss, quiz.scss, intake.scss) stay at 30 and need no
+  // sync. The ramp runs bg1 → bg3 lightest in both palettes, so mixing toward
+  // bg2 lifts the top edge in dark mode and in light mode alike.
+  background: var(--surface-1) fixed; // fallback where color-mix is unsupported
+  background: linear-gradient(90deg, var(--surface-1) 0%, var(--surface-2) 50%, var(--surface-1) 100%) fixed;
+  color: var(--ink-3);
+  font-family: $font-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  overflow-x: hidden;
+  // Reflow safety (WCAG 1.4.10): inherited, so long words / URLs / display
+  // headings break instead of overflowing and being clipped by overflow-x.
+  overflow-wrap: break-word;
+}
+
+// Anchors do not inherit `color` — the UA rule `a:-webkit-any-link` outranks
+// inheritance — so an <a> with no rule of its own renders #0000EE at ~1.4:1,
+// regardless of what its parent is coloured. This is the catch-all floor.
+// At 0,0,1 specificity it loses to every class-based anchor rule in the
+// system, so it only ever reaches anchors that had no colour at all.
+a {
+  color: var(--mark);
+}
+
+// ── Focus styles (keyboard navigation) ───────────────────────────────────────
+:focus-visible {
+  outline: 2px solid var(--mark);
+  outline-offset: 3px;
+}
+
+// ── Skip link (visually hidden until keyboard focus) ─────────────────────────
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 10000;
+  padding: var(--space-3) var(--space-5);
+  background: var(--surface-3);
+  border: 1px solid var(--mark-border);
+  color: var(--ink-3);
+  font-family: $font-sans;
+  font-size: var(--fs-1);
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  transform: translateY(-200%);
+
+  &:focus-visible {
+    transform: none;
+  }
+}
+
+// ── Reduced motion ────────────────────────────────────────────────────────────
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+// ── Scallop pattern mixins — v5 depth hierarchy ──────────────────────────────
+// Coarser = closer to viewer (elevated), finer = recedes (recessed). Each
+// texture is a function (returns the url()) plus two mixins: a "-dark"
+// variant (always the dark stroke, for islands) and a flipping default
+// variant (dark stroke normally, light stroke under light-mode, for content).
+@function scallop-recessed-url($accent, $op){
+@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M0 12 Q3 7.5 6 4.5 Q9 7.5 12 12' fill='none' stroke='%23#{$accent}' stroke-width='0.3' stroke-opacity='#{$op}'/%3E%3Cpath d='M-6 6 Q-3 1.5 0 -1.5 Q3 1.5 6 6' fill='none' stroke='%23#{$accent}' stroke-width='0.3' stroke-opacity='#{$op}'/%3E%3Cpath d='M6 6 Q9 1.5 12 -1.5 Q15 1.5 18 6' fill='none' stroke='%23#{$accent}' stroke-width='0.5' stroke-opacity='#{$op}'/%3E%3C/svg%3E");
+}
+
+@mixin scallop-recessed-dark($accent: 'C9A84C') {
+  background-image: scallop-recessed-url($accent, 0.076);
+  background-size: 10px 10px;
+}
+
+@mixin scallop-recessed($accent: 'C9A84C') {
+  @include scallop-recessed-dark($accent);
+
+  @include light-mode {
+    background-image: scallop-recessed-url('7A6028', 0.12);
+  }
+}
+
+@function scallop-standard-url($accent, $op){
+@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M0 16 Q4 10 8 6 Q12 10 16 16' fill='none' stroke='%23#{$accent}' stroke-width='0.4' stroke-opacity='#{$op}'/%3E%3Cpath d='M-8 8 Q-4 2 0 -2 Q4 2 8 8' fill='none' stroke='%23#{$accent}' stroke-width='0.4' stroke-opacity='#{$op}'/%3E%3Cpath d='M8 8 Q12 2 16 -2 Q20 2 24 8' fill='none' stroke='%23#{$accent}' stroke-width='0.4' stroke-opacity='#{$op}'/%3E%3C/svg%3E");
+}
+
+@mixin scallop-standard-dark($accent: 'C9A84C') {
+  background-image: scallop-standard-url($accent, 0.09);
+  background-size: 13px 13px;
+}
+
+@mixin scallop-standard($accent: 'C9A84C') {
+  @include scallop-standard-dark($accent);
+
+  @include light-mode {
+    background-image: scallop-standard-url('7A6028', 0.14);
+  }
+}
+
+@function scallop-elevated-url($accent, $op){
+@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Cpath d='M0 24 Q6 15 12 9 Q18 15 24 24' fill='none' stroke='%23#{$accent}' stroke-width='0.7' stroke-opacity='#{$op}'/%3E%3Cpath d='M-12 12 Q-6 3 0 -3 Q6 3 12 12' fill='none' stroke='%23#{$accent}' stroke-width='0.5' stroke-opacity='#{$op}'/%3E%3Cpath d='M12 12 Q18 3 24 -3 Q30 3 36 12' fill='none' stroke='%23#{$accent}' stroke-width='0.7' stroke-opacity='#{$op}'/%3E%3C/svg%3E");
+}
+
+@mixin scallop-elevated-dark($accent: 'C9A84C', $prefix: null) {
+  $-svg: scallop-elevated-url($accent, 0.10);
+
+  @if $prefix !=null {
+    background-image: $prefix, $-svg;
+    background-size: 100% 100%, 20px 20px;
+  }
+
+  @else {
+    background-image: $-svg;
+    background-size: 20px 20px;
+  }
+}
+
+@mixin scallop-elevated($accent: 'C9A84C', $prefix: null) {
+  @include scallop-elevated-dark($accent, $prefix);
+
+  @include light-mode {
+    $-svg-light: scallop-elevated-url('7A6028', 0.16);
+
+    @if $prefix !=null {
+      background-image: $prefix, $-svg-light;
+      background-size: 100% 100%, 20px 20px;
+    }
+
+    @else {
+      background-image: $-svg-light;
+      background-size: 20px 20px;
+    }
+  }
+}
+
+// ── Elevation mixins ─────────────────────────────────────────────────────────
+@mixin elevation-recessed-dark {
+  background-color: var(--surface-1);
+  color: var(--ink-2);
+  @include scallop-recessed-dark;
+}
+
+@mixin elevation-recessed {
+  background-color: var(--surface-1);
+  color: var(--ink-2);
+  @include scallop-recessed;
+}
+
+@mixin elevation-standard-dark {
+  background-color: var(--surface-2);
+  box-shadow: var(--elev-2);
+  @include scallop-standard-dark;
+}
+
+@mixin elevation-standard {
+  background-color: var(--surface-2);
+  box-shadow: var(--elev-2);
+  @include scallop-standard;
+}
+
+@mixin elevation-elevated-dark {
+  background-color: var(--surface-2);
+  @include scallop-elevated-dark($prefix: linear-gradient(180deg, var(--surface-3) 0%, transparent 40%));
+  box-shadow:
+    var(--elev-4),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+}
+
+@mixin elevation-elevated {
+  background-color: var(--surface-2);
+  @include scallop-elevated($prefix: linear-gradient(180deg, var(--surface-3) 0%, transparent 40%));
+  box-shadow:
+    var(--elev-4),
+    0 1px 0 rgba(255, 255, 255, 0.04) inset;
+
+  @include light-mode {
+    // The dark theme's inset is a thin light line simulating light hitting
+    // the top edge. On a light surface a light-on-light inset is invisible,
+    // so flip to a thin dark line at the BOTTOM inner edge instead — same
+    // "lit from above, shadow pools at the bottom" read, opposite polarity.
+    // rgb(28, 32, 41) is the light theme's own --bright ink color. Note the
+    // negative Y offset: an inset shadow with +1px sits on the TOP inner edge,
+    // which is where the dark theme wants its light line. Bottom needs -1px.
+    box-shadow:
+      var(--elev-4),
+      0 -1px 0 rgba(28, 32, 41, 0.14) inset;
+  }
+}
+
+// ── Page band ────────────────────────────────────────────────────────────────
+// The one way a top-level container should claim page width. Use it for
+// anything that spans the page: the homepage's section bands, .page-body, the
+// TOC wrapper. Do NOT use it for something nested inside one of those.
+//
+// Two things it does that a plain `max-width + margin: 0 auto` cannot:
+//
+//   1. It escapes body's rail reservation. The consuming site sets
+//      `body { padding-left: var(--rail-total) }` so flow content clears the
+//      golden thread. Any auto-margin container inside that is centred on
+//      body's content box, which is 96px narrower than the viewport and offset
+//      to the right — so it lands 96px right of anything that IS full-bleed.
+//      That was the whole .page-body vs. homepage discrepancy. Pull back out,
+//      then re-pad, and both are measured from the same origin.
+//
+//   2. It keeps the gutter OUTSIDE the cap. box-sizing is border-box globally,
+//      so `max-width: 1600px; padding: 0 10vw` is a 1600px BOX with a 1280px
+//      line inside it on a wide display — the gutter eats the measure instead
+//      of framing it. Here $cap bounds the content and the padding grows past
+//      --gutter to hold it, so the cap means what it says.
+//
+// The percentage inside that max() resolves against the CONTAINING BLOCK, which
+// is still body's content box, so --rail-total has to be added back in there.
+//
+// Vertical padding is deliberately not set — callers own their own rhythm.
+@mixin page-band($cap: none) {
+  width: calc(100% + var(--rail-total, 0px));
+  margin-left: calc(var(--rail-total, 0px) * -1);
+  margin-right: 0;
+
+  @if $cap == none {
+    padding-inline: var(--gutter);
+  } @else {
+    padding-inline: max(var(--gutter), calc((100% + var(--rail-total, 0px) - #{$cap}) / 2));
+  }
+}
+
+// ── Accent rule — luminous divider ───────────────────────────────────────────
+@mixin accent-rule {
+  height: 5px;
+  background: linear-gradient(90deg, transparent 0%, var(--mark) 30%, var(--mark) 70%, transparent 100%);
+}
+
+// ── Glyph plate — light-mode ground for the hand-drawn service marks ─────────
+// The four hero SVGs (advocacy, design, education, technology) fill their inner
+// glyph with literal `fill="white"`. That was drawn for a dark card and it is
+// correct there. In light mode the glyph lands on a pale surface and vanishes,
+// leaving a rope wreath around an empty hole.
+//
+// They are rendered with <img>, so no CSS can reach inside them and no filter
+// recolours only the glyph without also destroying the gold. The ground moves
+// instead: a near-black hexagon sits behind the mark in light mode only, which
+// gives the artwork the dark context it was drawn against and reads as a
+// deliberate medallion rather than a patch.
+//
+// Include inside the icon box. The caller owns `position` — .rc-icon and the
+// corner .card-icon are already absolute, and setting it here would unpin them.
+@mixin light-glyph-plate {
+  @include light-mode {
+    // Only the raster-style hand-drawn marks need it. Cards that fall back to a
+    // Font Awesome glyph draw it in --ink-4, which is already dark in light
+    // mode: a plate behind THAT would hide it.
+    &:has(img)::before {
+      content: '';
+      position: absolute;
+      // Slightly outside the artwork so the rope sits fully on the plate
+      // rather than straddling its edge.
+      inset: -7%;
+      // Fixed, not a token: this is a dark plate inside a light theme, so it
+      // must not follow the active surface ramp. Matches --surface-2 dark.
+      background-color: #1a1d26;
+      // No border. clip-path takes the border box with it, so a hex with an
+      // outline clips its own outline off.
+      clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    img {
+      position: relative; // above the plate
+    }
+  }
+}
+
+// ── Snakeskin scale texture — shared card fill ───────────────────────────────
+// Denser, subtler take on the scallop so every card fill carries the ouroboros
+// scale motif and reads as fine serpent skin. Sets only background-image +
+// -size; each card keeps its own background-color. Keep this include LAST in a
+// rule — a later `background:` shorthand would wipe the image (use
+// background-color for state changes instead).
+@function snakeskin-url($accent, $op){
+@return url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16'%3E%3Cpath d='M0 16 Q4 10 8 6 Q12 10 16 16' fill='none' stroke='%23#{$accent}' stroke-width='0.7' stroke-opacity='#{$op}'/%3E%3Cpath d='M-8 8 Q-4 2 0 -2 Q4 2 8 8' fill='none' stroke='%23#{$accent}' stroke-width='0.7' stroke-opacity='#{$op}'/%3E%3Cpath d='M8 8 Q12 2 16 -2 Q20 2 24 8' fill='none' stroke='%23#{$accent}' stroke-width='0.7' stroke-opacity='#{$op}'/%3E%3C/svg%3E");
+}
+
+@mixin snakeskin-dark($accent: 'C9A84C') {
+  background-image: snakeskin-url($accent, 0.10);
+  background-size: 9px 9px;
+}
+
+@mixin snakeskin($accent: 'C9A84C') {
+  @include snakeskin-dark($accent);
+
+  @include light-mode {
+    background-image: snakeskin-url('7A6028', 0.16);
+  }
+}
+
+// Body background — flat near-black. Scallop texture is reserved for nav,
+// cards, and footer; the page floor stays untextured so those surfaces read
+// as elevated against it.
+
+// ── Vignette + cursor spotlight — merged into single body::after ─────────────
+// Two background layers: vignette (edge darkening) + spotlight (cursor glow).
+// Spotlight gradient is anchored to --cx/--cy set by main.js on mousemove.
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%,
+      transparent 0%,
+      rgba(8, 8, 8, 0.35) 100%),
+    radial-gradient(600px circle at var(--cx, -9999px) var(--cy, -9999px),
+      rgba(201, 168, 76, 0.06) 0%,
+      rgba(201, 168, 76, 0.03) 35%,
+      transparent 100%);
+
+  @include light-mode {
+    // Cool navy edge (matches the light surface family) instead of a black
+    // vignette, and the spotlight uses the darkened light-mode gold at the
+    // same alphas as the dark version so it stays a subtle glow, not a smear.
+    background:
+      radial-gradient(ellipse 70% 60% at 50% 40%,
+        transparent 0%,
+        rgba(60, 72, 96, 0.10) 100%),
+      radial-gradient(600px circle at var(--cx, -9999px) var(--cy, -9999px),
+        rgba(122, 96, 40, 0.06) 0%,
+        rgba(122, 96, 40, 0.03) 35%,
+        transparent 100%);
+  }
+}
+
+// ── Reading progress bar ──────────────────────────────────────────────────────
+// Global element — rendered by the article, sections, service, announcement and psa layouts
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  background: var(--mark);
+  width: 0%;
+  z-index: 200;
+  transition: width 0.1s linear;
+}
+
+// ── Back link ─────────────────────────────────────────────────────────────────
+// Shared by essay and service pages — lives here, not in _essay.scss
+.post-back {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--fs-6);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mark);
+  text-decoration: none;
+  transition: color 0.3s;
+  margin-bottom: var(--space-3);
+
+  &::before {
+    content: '←';
+  }
+
+  &:hover {
+    color: var(--mark);
+  }
+}
+
+// ── 404 Error page ────────────────────────────────────────────────────────────
+.error-page {
+  min-height: 70vh;
+  padding: var(--nav-h) 10vw 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+  max-width: 860px;
+}
+
+.error-code {
+  font-family: $font-serif;
+  font-size: var(--fs-11);
+  font-weight: 400;
+  line-height: 1;
+  color: var(--mark);
+  opacity: 0.35;
+  letter-spacing: -0.02em;
+}
+
+.error-heading {
+  font-family: $font-serif;
+  font-size: var(--fs-9);
+  font-weight: 400;
+  line-height: 1.15;
+  color: var(--ink-3);
+  margin-top: -0.5rem;
+}
+
+.error-lede {
+  font-size: var(--fs-3);
+  color: var(--ink-2);
+  line-height: 1.85;
+  max-width: 560px;
+}
+
+.error-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.error-footnote {
+  font-size: var(--fs-1);
+  color: var(--ink-1);
+  margin-top: var(--space-7);
+  border-top: 1px solid var(--line-3);
+  padding-top: var(--space-7);
+
+  a {
+    color: var(--mark);
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+// ── Keyframes ─────────────────────────────────────────────────────────────────
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scrollPulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::after {
+    display: none;
+  }
+}

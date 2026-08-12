@@ -1,0 +1,160 @@
+@use "typography" as *;
+@use "chamfer" as *;
+
+// ── Team page ─────────────────────────────────────────────────────────────────
+// Data-driven roster (/team/). One .team-card per person from _data/team.yml.
+// Grid auto-fills: a single member sits centered; adding hires flows into
+// 2–3 columns with no markup change.
+
+.team-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--pad) var(--pad) calc(var(--pad) * 1.5);
+}
+
+.team-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 360px));
+  justify-content: center;
+  gap: var(--space-8);
+}
+
+// A roster of one is a bio page wearing a card, not one tile in a grid. The
+// 360px track is right for a face and two lines; it is wrong for several
+// paragraphs, which arrive ragged on both edges in a column that narrow.
+// Widen the track and left-align the prose. Portrait, name and credential
+// chips stay centered, because those are still card furniture.
+//
+// Guarded by :has(), so a browser without it renders exactly what this page
+// rendered before: one 360px card, centered.
+.team-grid:has(> :only-child) {
+  grid-template-columns: minmax(280px, 62ch);
+
+  .team-bio {
+    text-align: left;
+    align-self: stretch;
+  }
+}
+
+.team-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-9) var(--space-8) var(--space-8);
+
+  // Gold chamfered border
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--mark-border);
+    @include chamfer($chamfer-arc);
+    z-index: -1;
+  }
+
+  // Inset fill
+  &::after {
+    content: '';
+    position: absolute;
+    inset: #{$chamfer-border};
+    background: var(--surface-2);
+    @include chamfer($chamfer-inner);
+    z-index: -1;
+  }
+}
+
+// Reuse .hex-portrait geometry; just size it down for the card context.
+.team-portrait {
+  width: clamp(150px, 40vw, 190px);
+  margin-bottom: var(--space-7);
+}
+
+.team-role {
+  @include label-caps(var(--fs-1), 0.16em);
+  color: var(--mark);
+  margin: 0 0 var(--space-2);
+}
+
+.team-name {
+  font-family: $font-serif;
+  font-size: var(--fs-6);
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--ink-3);
+  margin: 0 0 var(--space-5);
+}
+
+.team-creds {
+  list-style: none;
+  margin: 0 0 var(--space-6);
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.team-cred {
+  font-family: $font-sans;
+  font-size: var(--fs-1);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  border: 1px solid var(--line-3);
+  border-radius: var(--radius-1);
+  padding: 0.2em 0.6em;
+}
+
+// A <div>, not a <p>: the bio is markdownified and runs to several paragraphs,
+// so the margins live on the children.
+.team-bio {
+  font-size: var(--fs-2);
+  line-height: 1.7;
+  color: var(--ink-2);
+  margin: 0 0 var(--space-7);
+
+  p {
+    margin: 0 0 var(--space-5);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.team-links {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: auto;
+}
+
+.team-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  color: var(--ink-1);
+  border: 1px solid var(--line-3);
+  border-radius: var(--radius-2);
+  font-size: var(--fs-3);
+  transition: color 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+
+  &:hover {
+    color: var(--mark);
+    border-color: var(--mark-border);
+    background: var(--mark-ghost);
+  }
+}
+
+@media (max-width: 768px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+}

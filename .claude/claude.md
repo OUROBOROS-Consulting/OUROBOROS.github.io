@@ -5,18 +5,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Build & Dev Commands
 
 ```bash
-npm install       # resolves file:../ouroboros-design dep
+npm install       # dev deps only; design system now lives in this repo
 npm run dev       # jekyll serve --livereload → http://localhost:4000
 npm run build     # jekyll build → _site/
 ```
 
-**`predev` auto-runs before `npm run dev`:** kills livereload port 35729, then rebuilds the design system. Manual rebuild is only needed when bypassing `npm run dev`.
-
-**After any SCSS edit in `ouroboros-design/` outside of `npm run dev`:**
-```bash
-cd ../ouroboros-design && npm run build
-cd ../OUROBOROS-Consulting.github.io && npm install && npm run dev
-```
+**`predev` auto-runs before `npm run dev`:** kills livereload port 35729. That's it — the design system compiles as part of the normal Jekyll build, no separate rebuild step.
 
 **Ruby:** rbenv with Ruby 3.3.x. Homebrew Ruby 4.x breaks Bundler/Jekyll — don't use it.
 
@@ -81,15 +75,15 @@ Pick one per section:
 
 Secondary nav is data-driven from `_data/nav.yml`. Each entry supports `active_paths` — a list of additional URL prefixes that mark the item active beyond its own `url`. Use this when a section spans multiple URL roots.
 
-## Styling lives in the other repo
+## Styling: design system lives in `_sass/design/`
 
-`../ouroboros-design/` owns every token, mixin, and component style. **Read its `README.md` before writing CSS here** — tokens, accent semantics, elevation, class naming, and accessibility invariants are all documented there.
+Moved in-repo from the standalone `ouroboros-design` package on 2026-08-11 — see [[project_design-consolidation-2026-08-11]]. `_sass/design/` owns every token, mixin, and component style; `assets/css/*.scss` files `@use "design/index"` (or `"design/tokens"` for the lighter entry points: `intake.scss`, `quiz.scss`, `dashboard.scss`). Jekyll's default `_sass` load path resolves these — no `node_modules`, no npm package, no second repo.
 
-**Never redeclare a design token in this repo.** A `@media (prefers-color-scheme: light)` block used to re-pin nine tokens on nav and footer; the values silently went stale and nearly excluded those elements from a palette change. Removed 2026-07-26, with a comment at `assets/css/main.scss:48` explaining why. Light mode is real and fully implemented — via a dual guard, `:root[data-theme="light"]` for the explicit toggle plus `@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) }` for OS preference — but both live in the design package. Tokens are still defined exactly once per theme, unconditionally, and never redeclared here.
+**Never redeclare a design token outside `_sass/design/`.** A `@media (prefers-color-scheme: light)` block used to re-pin nine tokens on nav and footer; the values silently went stale and nearly excluded those elements from a palette change. Removed 2026-07-26, with a comment at `assets/css/main.scss:48` explaining why. Light mode is real and fully implemented — via a dual guard, `:root[data-theme="light"]` for the explicit toggle plus `@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) }` for OS preference — but both live in `_sass/design/`. Tokens are still defined exactly once per theme, unconditionally, and never redeclared in `assets/css/`.
 
-**What this repo legitimately owns:** raster-backed textures (the `Marble.png` / `Abstract.png` / `Pattern-hero.jpg` rules), because the image assets live in `assets/images/` here, not in the package.
+**What `assets/css/` legitimately owns:** raster-backed textures (the `Marble.png` / `Abstract.png` / `Pattern-hero.jpg` rules), because the image assets live in `assets/images/` here, and page-geometry overrides specific to this site's layout.
 
-**Push order:** design repo first, then this one. CI checks out the design repo's default branch with no `ref:`, and pushing the design repo does not trigger this site's workflow.
+**The `ouroboros-design` GitHub repo still exists** — the `AI-B-Cs` project depends on it via `file:../ouroboros-design`. It is no longer this site's source of truth and no longer needs to be pushed before this repo. Don't copy changes back into it; `_sass/design/` and `ouroboros-design/scss/` are independent now and will drift.
 
 ## Class Prefixes
 

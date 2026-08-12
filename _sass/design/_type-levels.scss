@@ -1,0 +1,129 @@
+// ⚠ No @use. Every value below is a custom property, so this file needs nothing
+// from _base.scss at compile time — and it must not ask for anything, because
+// _typography.scss now builds label-caps on type-level-1 and _base.scss uses
+// _typography.scss. A @use "base" here would close that loop into a cycle.
+
+// ── Type levels ───────────────────────────────────────────────────────────────
+// Five levels. Each binds family, size, leading, weight, tracking and ink into
+// one decision, because those six are not independent: a leading that is right
+// at 0.8rem is wrong at 4rem, and tracking that is right for caps is wrong for
+// a serif paragraph.
+//
+// The tokens were already here. What was missing was anything holding them in
+// the correct combination, so every call site re-decided leading and tracking
+// on its own and they drifted. The 126 hand-written letter-spacing values in
+// this package and the consuming site are the evidence.
+//
+// ── Levels ────────────────────────────────────────────────────────────────────
+//   5  display        page title, hero headline
+//   4  section head   the head of a band or a major section
+//   3  subhead        card title, sub-section
+//   2  body           running prose
+//   1  eyebrow        the small tracked cap above a heading, and labels
+//
+// Levels ascend in prominence exactly as --surface-*, --ink-* and --elev-* do.
+// Level 1 is the quietest and level 5 the loudest, and the ink each level
+// reaches for climbs with it, so brightness accelerates up the hierarchy rather
+// than tracking size alone.
+//
+// ── Font-cut safety ───────────────────────────────────────────────────────────
+// Levels 2..5 are set in --font-body (Lora: 400 500 600 700) and never go below
+// 400. Level 1 is set in --font-sans (Inter: 300 400 500 600) and never goes
+// above 600. No level can request a cut its family does not ship, so nothing
+// here renders as a synthesised face. See the --fw-* note in _base.scss.
+//
+// ── Themes ────────────────────────────────────────────────────────────────────
+// Nothing below is duplicated per theme. --ink-* and --ls-optical and
+// --fw-heading are all themed at the token layer, so a level resolves correctly
+// in light, in dark, and on a dark island under a light page. That is the whole
+// reason these are mixins over custom properties rather than a static block.
+//
+// ── Usage ─────────────────────────────────────────────────────────────────────
+// Prefer the mixin inside a component, so the component keeps its own name:
+//
+//     .svc-card-title { @include type-level-3; }
+//
+// Reach for .type-N in markup only when an element genuinely has no better
+// name. No bare element selectors here on purpose: the site is multi-layout and
+// an h2 means something different in an essay, a service page and a dashboard.
+
+// ── Calibrated against the site as shipped, 2026-08-08 ────────────────────────
+// The ladder above was written from first principles and never bound to
+// anything, so three of its five levels described a site that did not exist:
+// level 4 asked for --fw-heading (600 dark / 700 light) where every section head
+// on the site is Lora 400; level 3 was sized --fs-6, which no heading anywhere
+// uses; level 1 was --ink-1 grey where every eyebrow is gold. Wiring those up
+// unchanged would have been a restyle wearing a refactor's clothes.
+//
+// So the levels were snapped to the values the call sites already agree on, and
+// only the genuine per-site drift moves: leading converges on --lh-display, the
+// tracking ramp finally applies, and the ink steps become the brightness ramp
+// they were always meant to be. Weight and colour are unchanged everywhere.
+
+@mixin type-level-5 {
+  font-family: var(--font-body);
+  font-size: var(--fs-10);
+  line-height: var(--lh-display);
+  font-weight: var(--fw-5); // 700 — a real Lora cut in both themes
+  letter-spacing: calc(var(--ls-5) + var(--ls-optical));
+  color: var(--ink-4);
+  text-wrap: balance;
+}
+
+@mixin type-level-4 {
+  font-family: var(--font-body);
+  font-size: var(--fs-9);
+  line-height: var(--lh-display);
+  // 400, not --fw-heading. Section heads on this site are set light and large;
+  // the weight step belongs to level 5, and the band's stone ground carries the
+  // prominence that a heavier cut would otherwise have to.
+  font-weight: var(--fw-2);
+  letter-spacing: calc(var(--ls-4) + var(--ls-optical));
+  color: var(--ink-4);
+  text-wrap: balance;
+}
+
+@mixin type-level-3 {
+  font-family: var(--font-body);
+  font-size: var(--fs-7); // the card-title step, which is what a subhead is here
+  line-height: var(--lh-2);
+  font-weight: var(--fw-2);
+  letter-spacing: calc(var(--ls-3) + var(--ls-optical));
+  color: var(--ink-3);
+  text-wrap: balance;
+}
+
+@mixin type-level-2 {
+  font-family: var(--font-body);
+  font-size: var(--fs-3);
+  line-height: var(--lh-4); // 1.85 — the leading every lede on the site already sets
+  font-weight: var(--fw-2);
+  letter-spacing: calc(var(--ls-2) + var(--ls-optical));
+  color: var(--ink-2);
+  text-wrap: pretty;
+}
+
+// The eyebrow. Sans on purpose: a serif at 0.8rem set in caps and tracked out
+// loses its serifs to the pixel grid, and on a dark ground the bloom fills what
+// is left. --ls-1 is the only positive step in the tracking ramp for that
+// reason, and it is doing structural work here, not decoration.
+//
+// Gold, not --ink-1. The eyebrow is the one place the accent is load-bearing
+// rather than decorative: it is how a reader tells a label from the first line
+// of copy at a glance. This is what label-caps in _typography.scss has always
+// done, and that mixin is now a wrapper over this one.
+@mixin type-level-1 {
+  font-family: var(--font-sans);
+  font-size: var(--fs-1);
+  line-height: var(--lh-2);
+  font-weight: var(--fw-2);
+  letter-spacing: calc(var(--ls-1) + var(--ls-optical));
+  color: var(--mark);
+  text-transform: uppercase;
+}
+
+.type-5 { @include type-level-5; }
+.type-4 { @include type-level-4; }
+.type-3 { @include type-level-3; }
+.type-2 { @include type-level-2; }
+.type-1 { @include type-level-1; }

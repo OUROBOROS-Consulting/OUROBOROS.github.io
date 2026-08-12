@@ -1,0 +1,59 @@
+@use "base" as *;
+@use "typography" as *;
+
+// ── Quick exit ────────────────────────────────────────────────────────────────
+// Fixed escape hatch for visitors who need to leave the site immediately.
+// The click handler lives in the consuming site's main.js (#safety-exit):
+// clears session/local storage and replaces the history entry with a neutral
+// page. Double-tap Escape triggers the same exit. Keep this visible on every
+// layout — do not hide it behind media queries.
+.safety-exit {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-5);
+  background: var(--surface-3);
+  border: 1px solid var(--mark-border);
+  color: var(--ink-3);
+  font-family: $font-sans;
+  font-size: var(--fs-1);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 2px 12px rgba(8, 8, 8, 0.55);
+  transition: background 0.2s, border-color 0.2s;
+
+  @include light-mode {
+    // The dark theme's near-opaque black shadow reads as far too heavy on a
+    // light page. Same offsets, lighter and more transparent.
+    box-shadow: 0 2px 12px rgba(28, 32, 41, 0.18);
+  }
+
+  &::before {
+    content: '✕';
+    color: var(--mark);
+    font-size: var(--fs-1);
+  }
+
+  &:hover {
+    background: var(--surface-4);
+    border-color: var(--mark);
+  }
+
+  // WCAG 2.5.5 Target Size (Enhanced). The label alone renders 33px tall, which
+  // clears the 24px minimum but not the 44px enhanced target. This is the
+  // safety control, so it takes the enhanced target wherever the pointer is a
+  // fingertip rather than a cursor.
+  @media (pointer: coarse) {
+    min-height: 44px;
+  }
+
+  @media print {
+    display: none;
+  }
+}

@@ -1,0 +1,71 @@
+@use "typography" as *;
+// ── Primary button ───────────────────────────────────────────────────────────
+.btn {
+  display: inline-block;
+  padding: var(--space-4) var(--space-8);
+  border: 1px solid var(--mark);
+  color: var(--mark);
+  text-decoration: none;
+  font-family: $font-sans;
+  font-size: var(--fs-2);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  background: transparent;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+
+  &:hover {
+    background: var(--mark);
+    color: var(--surface-1);
+    box-shadow: 0 0 10px var(--mark-ghost);
+  }
+}
+
+// ── Carousel prev/next button ─────────────────────────────────────────────────
+.carousel-btn {
+  background: transparent;
+  border: 1px solid var(--mark);
+  color: var(--mark);
+  width: 2.4rem;
+  height: 2.4rem;
+  cursor: pointer;
+  font-size: var(--fs-3);
+  line-height: 1;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+
+  &:hover {
+    background: var(--mark);
+    color: var(--surface-1);
+  }
+}
+
+// ── Ghost button variant ──────────────────────────────────────────────────────
+.btn--ghost {
+  background: transparent;
+  border: 1px solid var(--mark-border);
+  color: var(--mark);
+
+  &:hover,
+  &:focus {
+    background: var(--mark-ghost);
+    border-color: var(--mark);
+  }
+}
+
+// ── Chip (TikZ example selectors) ────────────────────────────────────────────
+.chip {
+  background: var(--surface-4);
+  border: 1px solid var(--line-3);
+  color: var(--ink-1);
+  font-family: $font-sans;
+  font-size: var(--fs-1);
+  padding: var(--space-1) var(--space-4);
+  cursor: pointer;
+  transition: border-color 0.3s, color 0.3s;
+
+  &:hover {
+    border-color: var(--mark-border);
+    color: var(--mark);
+  }
+}

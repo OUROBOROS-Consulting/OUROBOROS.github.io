@@ -1,0 +1,47 @@
+// @OUROBOROS-Consulting/agentic-design
+// Accessible, elegant design system for OUROBOROS Consulting
+
+// ── Naming convention ────────────────────────────────────────────────
+//  <prefix>-<element>          page-hero, nav-card, post-body
+//  <prefix>-<element>--mod     page-hero--single, nav-card--active
+//
+//  Prefix = page/layout namespace (svc, nav, hero, post, values, etc.)
+//  No new __ BEM elements. Existing card--formula__interior is legacy.
+//  Modifiers: --double-dash only.
+//  All classes: lowercase kebab. No camelCase, no underscores.
+// ────────────────────────────────────────────────────────────────────
+
+// Typography scale for prose
+@forward "typography";
+
+// Foundation: design tokens, reset, mixins, body texture
+@forward "base";
+
+// Type levels: the five size/leading/weight/tracking/ink bindings
+@forward "type-levels";
+
+// Component styles
+@forward "buttons";
+@forward "safety-exit";
+@forward "cards";
+// Section band headers. Must precede "home" and "service": both carry #cta and
+// .psa-section overrides that tie on specificity and win only on source order.
+@forward "band";
+@forward "nav-primary";
+@forward "footer";
+@forward "hours";
+
+// Layout & page-specific styles
+@forward "home";
+@forward "service";
+@forward "essay";
+@forward "feed";
+// Shared geometry for the two collapsible edge panels. Must precede both.
+@forward "spine";
+@forward "sidebar";
+@forward "framework";
+@forward "team";
+@forward "sidebar-rail";
+
+// Token specimen page — /design-system/
+@forward "design-system";

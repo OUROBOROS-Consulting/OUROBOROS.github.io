@@ -1,0 +1,750 @@
+@use "typography" as *;
+@use "base" as *;
+@use "chamfer" as *;
+
+// ── Hero ──────────────────────────────────────────────────────────────────────
+#hero {
+  @include dark-island;
+  min-height: 100vh;
+  padding: var(--nav-h) var(--space-10) var(--space-9);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-content: center;
+  gap: var(--space-5) 0;
+  position: relative;
+  z-index: 0;
+  // Sizing container for .hero-name. The wordmark used to scale off the
+  // viewport (--fs-11 is 10vw), which ignores the hero's own gutter — so every
+  // time the consuming site widened that gutter the identity row got closer to
+  // bursting, and past 1025px it burst. See the note on .hero-name. Safe here:
+  // the hero is an auto-width block in normal flow, so containing its inline
+  // size changes nothing, and it was already a stacking context and a
+  // containing block via position/z-index. It holds no fixed descendants.
+  container-type: inline-size;
+  background-color: #0C0E20; // matches page-hero deep-navy scrim end; homepage hero only
+  background-image:
+    radial-gradient(ellipse 80% 65% at 50% 50%, transparent 0%, rgba(8, 8, 8, 0.55) 100%),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='48'%3E%3Cpolygon points='28,2 52,15 52,41 28,54 4,41 4,15' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.066'/%3E%3Cpolygon points='0,15 0,41 -24,28' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.066'/%3E%3Cpolygon points='56,15 56,41 80,28' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.066'/%3E%3C/svg%3E");
+  background-size: 100% 100%, 50px 43px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.hero-identity {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.hero-eyebrow {
+  @include label-caps(var(--fs-1));
+}
+
+// "OUROBOROS" is a single unbreakable word, so its min-content width is the
+// whole wordmark and flex can never shrink it — if it does not fit beside the
+// emblem, it pushes the hero past the viewport instead of wrapping. Sized in
+// cqi (percent of #hero's CONTENT box) rather than --fs-11's 10vw, so the
+// wordmark tracks the room it actually has and stays in register with whatever
+// gutter the consuming site sets. 8cqi leaves the emblem and the 4rem gap clear
+// at every width from 1025px up, and still reaches the 8rem ceiling on a wide
+// display. The tablet band below stacks the row, so this only has to fit the
+// side-by-side case. Do not put --fs-11 back without re-checking that sum.
+.hero-name {
+  font-family: $font-serif;
+  font-size: clamp(2.5rem, 8cqi, 8rem);
+  font-weight: 500;
+  align-self: right;
+  line-height: 0.95;
+  letter-spacing: -0.01em;
+  color: var(--ink-3);
+}
+
+.hero-tagline {
+  font-size: var(--fs-3);
+  color: var(--ink-2);
+  line-height: 1.85;
+  max-width: 520px;
+
+  p {
+    margin: 0;
+  }
+
+  p:first-child {
+    font-size: var(--fs-7);
+    color: var(--ink-3);
+    line-height: 1.45;
+    font-style: italic;
+    margin-bottom: var(--space-4);
+  }
+}
+
+.hero-cta {
+  margin-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+  align-items: center;
+}
+
+// ── Hero Emblem (logo) ───────────────────────────────────────────────────────
+.hero-emblem {
+  align-self: center;
+  width: clamp(220px, 22vw, 374px);
+  filter: drop-shadow(0 0 12px rgba(201, 168, 76, 0.16));
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+// ──|| STATS ||─────────────────────────────────────────────────────────────
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line-3);
+  margin-top: var(--space-10);
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat {
+  background-color: var(--surface-1);
+  @include scallop-standard;
+  padding: var(--space-9) var(--space-8);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.stat-value {
+  font-family: $font-serif;
+  font-size: var(--fs-9);
+  font-weight: 400;
+  color: var(--mark);
+  line-height: 1;
+}
+
+// ── Values flip cards ─────────────────────────────────────────────────────────
+#values .values-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-8);
+  grid-auto-rows: 260px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.values-card {
+  perspective: 900px;
+  cursor: pointer;
+
+  &__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.55s cubic-bezier(0.4, 0.2, 0.2, 1);
+  }
+
+  // Hover is the extra affordance on pointer devices, not the mechanism.
+  @media (hover: hover) {
+    &:hover &__inner {
+      transform: rotateY(180deg);
+    }
+  }
+
+  // .is-flipped is what the click and Enter/Space handlers set, and it must be
+  // honoured at every breakpoint. Scoping it to (hover: none) meant a sighted
+  // keyboard user on a desktop pressed Enter, aria-expanded flipped for
+  // assistive tech, and nothing on screen moved.
+  &.is-flipped &__inner {
+    transform: rotateY(180deg);
+  }
+
+  // The flip is a 3D rotation across the full card. Under a reduced-motion
+  // preference the faces swap instantly rather than turning.
+  @media (prefers-reduced-motion: reduce) {
+    &__inner {
+      transition: none;
+    }
+  }
+
+  &__front,
+  &__back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background: var(--mark-border);
+    padding: $chamfer-border;
+    @include chamfer($chamfer-arc);
+  }
+
+  &__back {
+    transform: rotateY(180deg);
+  }
+
+  &__surface {
+    height: 100%;
+    box-sizing: border-box;
+    padding: var(--space-7) var(--space-7);
+    @include chamfer($chamfer-inner);
+    @include elevation-standard;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__front &__surface {
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-5);
+    text-align: center;
+  }
+
+  &__back &__surface {
+    justify-content: center;
+    overflow-y: auto;
+  }
+
+  &__icon {
+    font-size: var(--fs-10);
+    color: var(--ink-4);
+    opacity: 0.6;
+    line-height: 1;
+  }
+
+  &__name {
+    font-family: $font-serif;
+    font-size: var(--fs-9);
+    font-weight: 400;
+    color: var(--ink-3);
+    line-height: 1.2;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  &__desc {
+    font-family: $font-sans;
+    font-size: var(--fs-2);
+    line-height: 1.8;
+    color: var(--ink-2);
+    margin: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+.stat-label {
+  @include label-caps(var(--fs-1), 0.18em);
+}
+
+// ── Scroll hint ───────────────────────────────────────────────────────────────
+.scroll-hint {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-3);
+  align-self: end;
+
+  span {
+    @include label-caps(var(--fs-1), 0.25em);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+}
+
+.scroll-line {
+  background-image: url('../images/snake.svg');
+  width: 45px;
+  height: 75px;
+  //background-color: var(--mark);
+  opacity: 0.4;
+  animation: scrollPulse 2s ease-in-out infinite;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 10px 0;
+}
+
+@keyframes scrollPulse {
+
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(6px);
+  }
+}
+
+// The section band header lived here as .work-header / .testimonials-header /
+// .about-header until 2026-08-08. It is one component used on five layouts, so
+// it moved to _band.scss — see the note there.
+
+// ── Services cards: icon stacked above copy ──────────────────────────────────
+.card-icon {
+  position: relative; // containing block for the light-mode glyph plate
+  width: 30%;
+  margin-bottom: var(--space-6);
+  font-size: 5rem; // Font Awesome fallback glyph when no hero_svg
+  color: var(--ink-4);
+
+  @include light-glyph-plate;
+
+  // Hand-crafted service SVG reused from the hero fills the icon box.
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+// ── Section spacing ───────────────────────────────────────────────────────────
+#audience,
+#about,
+#values,
+#services,
+#work,
+#testimonials,
+#cta {
+  padding: var(--space-12) 10vw;
+  background: var(--surface-1);
+  border-top: 1px solid var(--line-3);
+}
+
+// ── Closing CTA ────────────────────────────────────────────────────────────────
+#cta {
+  text-align: center;
+
+  .band-header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    &::after {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 200px;
+    }
+  }
+
+  .hero-cta {
+    justify-content: center;
+    margin-top: var(--space-9);
+  }
+}
+
+// ── The YES / NO fork ─────────────────────────────────────────────────────────
+// Each card answers the section's "Ready to Start?" heading. These are visual
+// answers to a visible question: the markup marks them aria-hidden and the
+// card's <h3> carries the meaning instead.
+//
+// ⚠ Do not promote these to headings. Screen readers expose headings as a flat
+// list stripped of surrounding context, so "YES" and "NO" on their own would
+// answer nothing (WCAG 2.4.6). The <h3> is what has to read sensibly alone.
+#cta .rc-answer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  font-family: $font-serif;
+  font-size: var(--fs-8);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  color: var(--mark);
+  margin-bottom: var(--space-5);
+
+  // Hairline running off the answer, echoing .about-header::after. Gives the
+  // fork a horizon so the two cards read as one question, two directions.
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, var(--mark-dim), transparent);
+  }
+}
+
+// The decline is a real option, not a failure state. Steel keeps it legible
+// (5.36:1 on bg2) and one step down the brightness ramp from the gold YES.
+#cta .cta-newsletter .rc-answer {
+  color: var(--steel);
+
+  &::after {
+    background: linear-gradient(90deg, var(--steel-dim), transparent);
+  }
+}
+
+// ── Two-column CTA: primary action (left) + newsletter link-out (right) ────────
+#cta .cta-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: stretch;
+  text-align: left;
+}
+
+// Left column: matching card chassis, minus the .related-card hover lift
+#cta .cta-primary {
+  text-align: left;
+
+  &:hover {
+    transform: none;
+
+    &::before {
+      background: var(--mark-border);
+    }
+
+    &::after {
+      background: var(--surface-2);
+    }
+  }
+}
+
+// Left column drops the full-bleed banner treatment so it fits inside a column.
+// ⚠ This is a band header used as a plain copy block: everything the component
+// does — the bleed, the stone fill, the border — is undone right here. It keeps
+// the class only for the accent rule and the column stack. Worth its own class
+// eventually; left alone in the 2026-08-08 rename so the pass stayed a rename.
+#cta .cta-split .band-header {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: 0;
+
+  &::after {
+    margin-left: 0;
+    margin-right: auto;
+  }
+
+  // align-items: flex-start above shrink-wraps every child, which left the YES
+  // answer exactly as wide as the word and gave its trailing hairline no run to
+  // make. The NO card is not in a band-header, stretches by default, and drew
+  // its rule — so the fork rendered lopsided. Stretch the answer back out.
+  .rc-answer {
+    align-self: stretch;
+  }
+}
+
+// Two stacked buttons sized to their own labels are two different widths and
+// read as ragged. A single max-content column sizes both to the longer label.
+#cta .cta-split .hero-cta {
+  display: grid;
+  grid-template-columns: max-content;
+  justify-content: start;
+  gap: var(--space-4);
+  margin-top: 0; // TUNE: aligns the button with the embed's Subscribe row
+}
+
+// Right column: newsletter card copy stays left-aligned despite #cta centering
+#cta .cta-newsletter {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+
+  // Static embed card — suppress the .related-card hover lift
+  &:hover {
+    transform: none;
+
+    &::before {
+      background: var(--mark-border);
+    }
+
+    &::after {
+      background: var(--surface-2);
+    }
+  }
+
+  // Top-pin the copy + embed (override the design system's flex-grow) so the
+  // Subscribe row sits at a fixed offset that the left button is aligned to
+  .card-desc {
+    flex-grow: 0;
+    margin: var(--space-4) 0 0;
+  }
+}
+
+// Subscribe link. Replaced a cropped Substack iframe on 2026-07-26 — it was the
+// last third-party request on the site and it loaded on every page. The 2.4rem
+// offset is what aligns this button with the CTA button in the left column.
+#cta .cta-newsletter__action {
+  margin-top: var(--space-9);
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  #hero {
+    padding: var(--space-13) 6vw var(--space-11);
+    gap: var(--space-8) 0;
+  }
+
+  // Phone hero mirrors the tablet band: drop the wordmark text, show the logo
+  // emblem centered above the copy.
+  .hero-identity {
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-7);
+  }
+
+  .hero-emblem {
+    display: block;
+    order: -1;
+    align-self: center;
+    width: clamp(160px, 45vw, 220px);
+  }
+
+  .hero-name {
+    display: none;
+  }
+
+  #audience,
+  #about,
+  #values,
+  #services,
+  #work,
+  #testimonials,
+  #cta {
+    padding: var(--space-11) 6vw;
+  }
+
+  // Closing CTA stacks: primary block re-centers, newsletter card below
+  #cta .cta-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  #cta .cta-split .band-header {
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+
+    &::after {
+      margin-left: auto;
+    }
+  }
+
+  #cta .cta-split .hero-cta {
+    justify-content: center; // grid: centres the max-content column
+  }
+
+  // Stacked and centered, the answer shrink-wraps and the trailing hairline has
+  // no run left to make. Drop it rather than render a 4px stub.
+  #cta .rc-answer::after {
+    display: none;
+  }
+}
+
+// ── Tablet band (769–1024px) ──────────────────────────────────────────────────
+// The desktop identity row (name beside emblem) is wider than the 10vw-gutter
+// content column at these widths, stretching the hero grid column past the
+// viewport. Stack the identity into a column so it can't over-stretch: the logo
+// comes first (order:-1), centered horizontally, with the name below it. Keeps
+// the emblem visible on tablet; desktop (≥1025px) keeps the side-by-side row.
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero-identity {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-7);
+  }
+
+  .hero-emblem {
+    order: -1;
+    align-self: center;
+    width: clamp(180px, 26vw, 240px);
+  }
+}
+
+// ── Testimonials Carousel ─────────────────────────────────────────────────────
+#values .carousel,
+#testimonials .carousel {
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%; // explicit — prevents Safari shrink-wrap
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.carousel-slide {
+  flex: 0 0 100%; // don't grow, don't shrink, always exactly 1 slide wide
+  min-width: 0; // override browser default min-width: auto on flex items
+
+  // Give the chamfered card breathing room and constrain its width
+  .card--formula {
+    max-width: 860px;
+    margin: 0 auto;
+  }
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+
+.carousel-count {
+  @include label-caps(var(--fs-1), 0.12em);
+  min-width: 4ch;
+  text-align: center;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+  margin-top: var(--space-8);
+}
+
+.carousel-dot {
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-round);
+  background: var(--line-3);
+  border: 1px solid var(--mark-dim);
+  cursor: pointer;
+  padding: 0;
+  transition: background 0.25s;
+
+  &.active {
+    background: var(--mark);
+    border-color: var(--mark);
+  }
+}
+
+// ── Site Banner ──────────────────────────────────────────────────────────────
+
+.site-banner {
+  width: 100%;
+  background: linear-gradient(90deg, var(--steel-dim) 0%, var(--steel) 50%, var(--steel-dim) 100%);
+  // --steel is an ink accent, so its lightness flips between themes: light
+  // blue-grey on dark, dark slate on light. Using it as a surface means the
+  // text on it must flip too. --bg1 is the one token guaranteed to sit
+  // opposite --steel in both themes, because the contrast checker already
+  // asserts --steel clears its floor against --bg1. Same idiom the buttons
+  // use for `background: var(--mark); color: var(--surface-1)`.
+  // Was var(--ink-3): 2.48:1 on dark, 1.61:1 on light. Now 6.06:1 / 5.90:1.
+  color: var(--surface-1);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+  font-size: var(--fs-3);
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  padding: var(--space-2) var(--space-4);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 201;
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // announcement: icon + text + optional arrow
+  &--announcement {
+    gap: var(--space-3);
+
+    .site-banner__icon {
+      opacity: 0.85;
+      font-size: var(--fs-4);
+    }
+
+    .site-banner__arrow {
+      margin-left: var(--space-2);
+      opacity: 0.7;
+      font-size: var(--fs-4);
+    }
+  }
+
+  // tagline: centered italic, wider tracking
+  &--tagline {
+    font-style: italic;
+    letter-spacing: 0.07em;
+    font-size: var(--fs-5);
+    opacity: 0.9;
+  }
+
+  // brand: Cormorant SC wordmark treatment
+  &--brand {
+    font-family: 'Cormorant SC', serif;
+    font-size: var(--fs-2);
+    letter-spacing: 0.15em;
+    font-weight: 600;
+  }
+}
+
+body.has-banner .nav-menu {
+  top: 36px;
+}
+
+// ── Hero typography ────────────────────────────────────────────────────
+.hero-name {
+  font-family: "EB Garamond", Georgia, serif;
+}
+
+#hero .hero-name-sub {
+  display: block;
+  font-size: 0.5em;
+  letter-spacing: 0.25em;
+  font-weight: 400;
+  color: var(--ink-2);
+  text-transform: uppercase;
+}
+
+// .hero-text used to carry text-align: right, which put the eyebrow and the
+// tagline on a ragged-left edge inside a left-anchored box while the wordmark
+// above and every band below stayed left-aligned. Three alignments in the first
+// screen, none of them earning it. The hero now reads down one left edge.
+
+// ── Testimonials context label ────────────────────────────────────────────────
+.testimonials-context {
+  font-size: var(--fs-2);
+  color: var(--ink-2);
+  font-style: italic;
+  margin-top: var(--space-3);
+}
+
+// Audience section now shares the standard section chrome (see the
+// #audience,#about,… list above) and the .testimonials-grid + .card--formula
+// card pattern used by #services, so no bespoke rules are needed here.

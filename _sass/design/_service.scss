@@ -1,0 +1,815 @@
+@use "typography" as *;
+@use "base" as *;
+// ── Service Hero ──────────────────────────────────────────────────────────────
+.page-hero {
+  @include dark-island;
+  padding: var(--nav-h) 10vw 2.5rem;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid var(--line-3);
+  position: relative;
+  @include elevation-standard-dark;
+  background-color: var(--surface-hero);
+  background-image: none;
+  box-shadow: none;
+  background-size: 300px 300px;
+  background-position: 0 0;
+
+  // Corner hex gems — replicating the logo's vertex markers.
+  // Gold top-right / teal bottom-left creates the same diagonal axis
+  // as the logo's drop shadow offset.
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 23px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  &::before {
+    top: 1.6rem;
+    right: 2rem;
+    background: var(--mark);
+    opacity: 0.7;
+  }
+
+  &::after {
+    bottom: 1.6rem;
+    left: 2rem;
+    background: var(--teal);
+    opacity: 0.8;
+  }
+}
+
+.page-hero-inner {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-11);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+
+.page-hero-text {
+  flex: 1;
+  // min() not a bare 280px: at the narrowest phone widths the rail+gutter
+  // reservation leaves .page-hero-inner less than 280px wide, and a hard
+  // min-width doesn't shrink for a flex item even alone on its own wrapped
+  // row — it pushed this box (and the whole page) past the viewport. min()
+  // keeps 280px as the floor everywhere it fits and only yields when the
+  // container itself is narrower.
+  min-width: min(280px, 100%);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  padding: var(--space-9);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.10);
+}
+
+.page-hero-icon {
+  font-size: clamp(90px, 12vw, 170px);
+  color: var(--ink-4);
+  line-height: 1;
+}
+
+.page-hero-title {
+  font-family: $font-serif;
+  font-size: var(--fs-10);
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: var(--space-6);
+}
+
+.page-hero-lede {
+  font-size: var(--fs-3);
+  color: var(--ink-2);
+  line-height: 1.85;
+  max-width: 560px;
+  margin-bottom: var(--space-7);
+}
+
+.page-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.lp-tag {
+  display: inline-block;
+  font-family: $font-sans;
+  font-size: var(--fs-1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-1);
+  border: 1px solid var(--line-3);
+  padding: 0.2em 0.6em;
+  line-height: 1.5;
+}
+
+.page-hero-cta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+  margin-top: var(--space-7);
+}
+
+.page-hero-meta {
+  font-size: var(--fs-1);
+  color: var(--mark);
+  letter-spacing: 0.08em;
+}
+
+// ── Service Hero Art — hand-crafted SVG (falls back to a large FA glyph) ──────
+.page-hero-art {
+  flex-shrink: 0;
+  align-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(200px, 26vw, 380px);
+  filter: drop-shadow(0 0 26px rgba(201, 168, 76, 0.18));
+}
+
+.page-hero-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+// ── Glyph fallback: the hex plate ────────────────────────────────────────────
+// Four services ship a hand-drawn wreath SVG. Every other page falls through to
+// a bare Font Awesome glyph — a flat mid-grey compass, question mark, or
+// infinity sign floating on the marble with no frame, no gold, no depth. Beside
+// a wreath hero it read as a missing image, and a visitor moving from a service
+// page to the FAQ experienced it as the site degrading.
+//
+// The wreath is not reproducible in CSS, and faking rope would be worse than
+// not trying. So the fallback gets the site's OWN shape instead: the same
+// hexagon carried by the corner gems, .hex-portrait, and the logo's vertex
+// markers, as a gold-ringed plate with the glyph in gold on it. Deliberate
+// rather than derivative, and it costs no new asset.
+//
+// The gold ring is painted as a solid hex BEHIND the plate rather than as a
+// border, because clip-path takes the border box with it and a bordered hex
+// clips its own outline off.
+@mixin hero-hex-plate {
+  position: relative;
+  // 259 / 291, the aspect the four wreath SVGs already use, so the fallback
+  // occupies the same footprint in the hero as the real art does.
+  aspect-ratio: 259 / 291;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  }
+
+  &::before {
+    inset: 0;
+    background: var(--mark);
+    opacity: 0.55;
+  }
+
+  // The plate, inset by the ring's thickness so the gold survives as a
+  // hairline. --surface-2 keeps it a step forward of the hero marble at both
+  // palettes without redeclaring a colour.
+  &::after {
+    inset: 2px;
+    background: var(--surface-2);
+  }
+}
+
+// :has() is the switch on both selectors below. A page with a hero_svg renders
+// an <img> and matches neither, so the four wreath heroes are untouched.
+// Browsers without :has() fall back to exactly today's flat glyph — no
+// regression, just no plate.
+
+// article / sections / service layouts: `icon:` with no `hero_svg:`.
+.page-hero-art:has(.page-hero-icon) {
+  @include hero-hex-plate;
+
+  .page-hero-icon {
+    position: relative;
+    z-index: 1;
+    // Smaller than the unframed glyph: it now has a frame to sit inside, and at
+    // the old 170px ceiling it touched the hex's flats.
+    font-size: clamp(68px, 9vw, 132px);
+    color: var(--mark);
+  }
+}
+
+// Hand-written hub pages in pages/ and _about/, which use .page-hero-emblem
+// rather than the layouts' .page-hero-art. Same defect, same fix.
+//
+// Three things can sit inside an emblem: a Font Awesome <i>, an inline <svg>
+// drawn in currentColor, or an <img> of the logo. Only the first two are the
+// bare-glyph problem — the logo is already a wreath, so it keeps the ambient
+// treatment below and is deliberately not matched here.
+.page-hero-emblem:has(> i),
+.page-hero-emblem:has(> svg) {
+  @include hero-hex-plate;
+
+  // The emblem wrapper dims itself to 0.55 to stay ambient behind the logo it
+  // was built for. A gold-ringed plate at 0.55 is just a smudge, so the glyph
+  // variant carries its own weight and the hover lift goes with it — the plate
+  // is not a control and should not look like one.
+  opacity: 1;
+  color: var(--mark); // inline SVGs stroke in currentColor
+
+  &:hover {
+    opacity: 1;
+  }
+
+  > i,
+  > svg {
+    position: relative;
+    z-index: 1;
+  }
+
+  > i {
+    width: auto;
+    font-size: clamp(68px, 9vw, 132px);
+    color: var(--mark);
+  }
+
+  // The base rule stretches any child to width: 100%, which on a hex plate runs
+  // the line art out past the flats — the figure on /about/ had its shoulders
+  // cut off by the plate's lower edge. Hold it to the width of the hex's
+  // inscribed square instead.
+  > svg {
+    width: 55%;
+    height: auto;
+  }
+}
+
+// Scroll cue pinned to the bottom of the one-screen hero, centered.
+.page-hero .scroll-hint {
+  align-self: center;
+  padding-top: var(--space-7);
+}
+
+// ── Service Hero Portrait — hex-framed ───────────────────────────────────────
+// The ::before pseudo-element is inset: -4px (overflows parent by the border
+// thickness). Both the pseudo-element and the img share the same clip-path, but
+// because clip-path % are relative to each element's own box, the pseudo-element
+// hex is 8px larger — that exposed teal edge is the visible border ring.
+.hex-portrait {
+  align-self: center;
+  flex-shrink: 0;
+  position: relative;
+  width: clamp(180px, 16vw, 280px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    background: var(--teal);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    opacity: 0.85;
+    z-index: 0;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 5 / 6;
+    object-fit: cover;
+    object-position: center 15%;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// ── Service Body ──────────────────────────────────────────────────────────────
+// Was `max-width: 1600px; margin: 0 auto; padding: var(--pad)`, which is how
+// every /resources/-style landing page ended up 96px right of the homepage's
+// bands: --pad is a flat 2.5rem that predates the rail, and the auto margins
+// centred it on body's already-offset content box. See the page-band mixin.
+.page-body {
+  @include page-band(var(--measure-page));
+
+  padding-block: var(--pad);
+
+  // When foundation layout renders prose body ({{ content }}) via .post-body,
+  // the essay's 680px cap is too narrow — override it here.
+  .post-body {
+    max-width: none;
+    padding: var(--space-band-lg) var(--space-band-lg);
+  }
+
+  // Announcement layout also nests .post-header here — same 680px cap, same fix.
+  .post-header {
+    max-width: none;
+    padding: var(--nav-h) 3.5rem 3.5rem;
+  }
+}
+
+// ── Section rows (label + content) ────────────────────────────────────────────
+.page-section {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0 var(--space-10);
+  padding: var(--space-band-lg) 0;
+  border-bottom: 1px solid var(--line-3);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.page-section-label {
+  p {
+    @include label-caps(var(--fs-3), 0.15em);
+    position: sticky;
+    top: 6rem;
+
+    // Small hex gem sits on its own line above the label text.
+    // Resets inherited letter-spacing / text-transform from label-caps.
+    &::before {
+      content: '⬡';
+      display: block;
+      color: var(--teal);
+      font-size: var(--fs-3);
+      letter-spacing: normal;
+      text-transform: none;
+      margin-bottom: var(--space-3);
+      opacity: 0.85;
+    }
+  }
+}
+
+.page-section-content {
+
+  // Scoped to direct <p> children only — prevents bleeding onto named
+  // descendant classes (.svc-item-title, .svc-pricing-notes, etc.)
+  // which is what caused all the !important overrides in the old version.
+  > p {
+    font-size: var(--fs-2);
+    color: var(--ink-2);
+    line-height: 1.9;
+    margin-bottom: var(--space-5);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  // Paragraphs within card interiors (body_paragraphs in sections)
+  .card--formula__interior p {
+    font-size: var(--fs-2);
+    color: var(--ink-2);
+    line-height: 1.9;
+    margin-bottom: var(--space-7);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  strong {
+    color: var(--ink-3);
+    font-weight: 500;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+      font-size: var(--fs-2);
+      color: var(--ink-2);
+      line-height: 1.8;
+      padding-left: var(--space-5);
+      position: relative;
+      margin-bottom: var(--space-2);
+
+      &::before {
+        content: '–';
+        position: absolute;
+        left: 0;
+        color: var(--mark);
+      }
+    }
+  }
+}
+
+// ── What's included items ─────────────────────────────────────────────────────
+.svc-included {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.svc-item {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+}
+
+.svc-item-marker {
+  color: var(--mark);
+  font-size: var(--fs-1);
+  flex-shrink: 0;
+  margin-top: var(--space-1);
+}
+
+// No !important needed — .page-section-content > p no longer bleeds here
+.svc-item-title {
+  font-size: var(--fs-2);
+  color: var(--ink-3);
+  font-weight: 500;
+  margin-bottom: var(--space-1);
+}
+
+.svc-item-desc {
+  font-size: var(--fs-2);
+  color: var(--ink-2);
+  line-height: 1.75;
+  margin: 0;
+}
+
+// ── Rate principle — subsidy-model preamble above pricing tiers ───────────────
+.svc-rate-principle {
+  font-size: var(--fs-2);
+  color: var(--ink-2);
+  line-height: 1.8;
+  margin: 0 0 var(--space-7);
+  padding-left: var(--space-5);
+  border-left: 2px solid var(--mark-border);
+  max-width: 60ch;
+}
+
+// ── Pricing tiers ─────────────────────────────────────────────────────────────
+.svc-pricing-tier {
+  padding: var(--space-7);
+  border: 1px solid var(--line-3);
+  background: var(--surface-4);
+  margin-bottom: 1px;
+  transition: border-color 0.3s;
+
+  &:hover {
+    border-color: var(--mark-border);
+  }
+}
+
+.svc-pricing-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-2);
+}
+
+.svc-pricing-name {
+  font-size: var(--fs-2);
+  color: var(--ink-3);
+  font-weight: 500;
+}
+
+.svc-pricing-rate {
+  font-family: $font-serif;
+  font-size: var(--fs-4);
+  color: var(--mark);
+}
+
+.svc-pricing-notes {
+  font-size: var(--fs-1);
+  color: var(--ink-2);
+  line-height: 1.7;
+  margin: 0;
+}
+
+// ── Pull quote (foundation / case study pages) ───────────────────────────────
+.pull-quote {
+  padding: var(--space-band-lg) 0;
+  position: relative;
+
+  // Oversized watermark quotation mark — teal, partially transparent,
+  // sits behind the blockquote text.
+  &::before {
+    content: '\201C';
+    position: absolute;
+    top: 0.5rem;
+    left: 0;
+    font-family: $font-serif;
+    font-size: 9rem;
+    line-height: 1;
+    color: var(--teal);
+    opacity: 0.3;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  blockquote {
+    position: relative; // sits above the watermark
+    font-family: $font-serif;
+    font-size: var(--fs-7);
+    font-style: italic;
+    line-height: 1.9;
+    color: var(--ink-3);
+    max-width: 720px;
+    padding-left: var(--space-8);
+    border-left: 3px solid var(--teal);
+    margin: 0;
+
+    p {
+      margin: 0;
+    }
+  }
+}
+
+// ── Section modifier variants ─────────────────────────────────────────────────
+.page-section--cta {
+  text-align: center;
+  padding-top: var(--space-10);
+  padding-bottom: var(--space-10);
+}
+
+.page-section--stacked {
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+}
+
+// ── Banded section headers ────────────────────────────────────────────────────
+// Full-width black-marble header bands that bleed to the viewport edges, like
+// the homepage section headers. One caller:
+//   .page-body--banded .page-section-label → section headings in sections.html
+// It lives in .page-toc-wrap--svc col-1, so the bleed clears the wrap's
+// 5vw padding, the 3rem grid gap and the 200px TOC sidebar to reach the right
+// viewport edge. Below 1100px the sidebar is hidden and the grid is single-
+// column, so the right bleed collapses to -5vw. The marble raster is layered
+// over the #0D0D0D fallback in the consuming site's main.scss (asset lives there).
+@mixin marble-band {
+  @include dark-island;
+  background-color: #0D0D0D;
+  border-top: 1px solid rgba(177, 147, 93, 0.22);
+  border-bottom: 1px solid rgba(177, 147, 93, 0.22);
+  margin-left: -5vw;
+  margin-right: calc(-5vw - 3rem - 200px);
+  padding: var(--space-8) 5vw;
+
+  @media (max-width: 1100px) {
+    margin-right: -5vw;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: -6vw;
+    margin-right: -6vw;
+    padding: var(--space-8) 6vw;
+  }
+}
+
+// Mission/about: restructure the two-column page-section into a stacked layout so
+// the heading becomes a full-width band above its content. Scoped to
+// .page-body--banded so service/foundation keep their two-column grid.
+.page-body--banded {
+  .page-section {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0 0 var(--space-band-lg);
+  }
+
+  .page-section-label {
+    @include marble-band;
+    margin-bottom: var(--space-9);
+
+    p {
+      position: static;
+      top: auto;
+      font-family: $font-serif;
+      font-size: var(--fs-8);
+      font-weight: 400;
+      line-height: 1.2;
+      letter-spacing: normal;
+      text-transform: none;
+      color: var(--ink-3);
+
+      // Hex gem sits inline before the heading rather than on its own line.
+      &::before {
+        display: inline-block;
+        margin: 0 var(--space-3) 0 0;
+        font-size: var(--fs-2);
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+// ── Single-column hero (no headshot) ─────────────────────────────────────────
+// Applied when page.headshot is absent — removes space-between gap so the
+// text column and CTA column sit naturally without a large void between them.
+.page-hero-inner--single {
+  justify-content: flex-start;
+  gap: var(--space-12);
+}
+
+// ── Landing page emblem ───────────────────────────────────────────────────────
+// The logo SVG placed on the right side of collection landing pages.
+// Opacity and drop-shadow keep it ambient rather than dominant.
+.page-hero-emblem {
+  flex-shrink: 0;
+  align-self: center;
+  width: clamp(180px, 18vw, 270px);
+  opacity: 0.55;
+  filter: drop-shadow(0 0 18px rgba(165, 128, 82, 0.2));
+  transition: opacity 0.3s ease, filter 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img,
+  svg,
+  i {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  // Inline SVGs self-describe stroke/fill via presentation attributes.
+
+  i {
+    font-size: clamp(120px, 13vw, 210px);
+    line-height: 1;
+  }
+
+  &:hover {
+    opacity: 0.75;
+    filter: drop-shadow(0 0 22px rgba(165, 128, 82, 0.35));
+  }
+}
+
+// ── Responsive ────────────────────────────────────────────────────────────────
+@media (max-width: 768px) {
+  .page-hero {
+    padding: var(--space-12) 6vw var(--space-9);
+    min-height: auto;
+  }
+
+  .page-hero-art {
+    width: clamp(150px, 45vw, 240px);
+  }
+
+  // Block only. The inline padding is --gutter's job at every breakpoint, and
+  // it already steps down to 6vw here; a shorthand would beat the page-band
+  // mixin and put this page's measure back out of register with the homepage.
+  .page-body {
+    padding-block: 0 var(--space-12);
+  }
+
+  .page-section {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+    padding: var(--space-9) 0;
+  }
+
+  .page-section-label p {
+    position: static;
+  }
+
+  .page-hero-inner {
+    flex-direction: column;
+    gap: var(--space-8);
+  }
+
+  .hex-portrait,
+  .page-hero-emblem {
+    display: none;
+  }
+}
+
+
+// ── PSA listing sections ──────────────────────────────────────────────────────
+.psa-section {
+  padding-bottom: var(--space-11);
+  border-bottom: 1px solid var(--line-3);
+  margin-bottom: var(--space-11);
+
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
+
+// .psa-section-header / .psa-section-heading were a third copy of the homepage
+// section band, with a hand-guessed -5vw bleed that never matched the gutter its
+// parent .page-body actually pads by. Folded into _band.scss on 2026-08-08 as
+// .band-header--compact.
+
+// ── PSA PDF embed ─────────────────────────────────────────────────────────────
+.psa-embed-wrap {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 10vw var(--space-12);
+}
+
+.psa-embed {
+  display: block;
+  width: 100%;
+  height: 82vh;
+  min-height: 560px;
+  border: 1px solid var(--line-3);
+  background: var(--ink-4);
+}
+
+.psa-embed-fallback {
+  margin-top: var(--space-4);
+  font-size: var(--fs-1);
+  color: var(--ink-1);
+
+  a {
+    color: var(--mark);
+    text-decoration: none;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .psa-embed-wrap {
+    padding: 0 6vw var(--space-11);
+  }
+
+  .psa-embed {
+    height: 65vh;
+    min-height: 400px;
+  }
+}
+
+// ── Playlist Carousel ──────────────────────────────────────────────────────────
+.playlist-carousel {
+  width: 100%;
+  overflow: hidden; // clips off-screen slides
+}
+
+.playlist-carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.playlist-carousel-slide {
+  min-width: 100%;
+}
+
+// Card interior layout for playlist embeds
+.playlist-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-7);
+}
+
+.playlist-iframe {
+  width: 100%;
+  max-width: 660px;
+  display: block;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.playlist-meta {
+  max-width: 660px;
+}
+
+.playlist-title {
+  font-family: $font-serif;
+  font-size: var(--fs-4);
+  font-weight: 400;
+  color: var(--ink-3);
+  margin-bottom: var(--space-2);
+}
+
+.playlist-carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+}
+
+.playlist-carousel-count {
+  font-size: var(--fs-1);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-1);
+  min-width: 4ch;
+  text-align: center;
+}
+
+.playlist-carousel-dots {
+  display: flex;
+  justify-content: flex-start;
+  gap: var(--space-3);
+  margin-top: var(--space-5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playlist-carousel-track {
+    transition: none;
+  }
+}
+

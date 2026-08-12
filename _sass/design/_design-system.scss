@@ -1,0 +1,401 @@
+@use "base" as *;
+// ── Specimen page ─────────────────────────────────────────────────────────────
+// Styles the live token specimen at /design-system/. Every rule here reaches
+// for the same tokens the rest of the system does, on purpose: the page has to
+// be built out of the thing it documents, or it is a mockup rather than a
+// specimen.
+//
+// Everything is scoped under .spec. The site is multi-layout and this page uses
+// table, code and figure heavily; unscoped element selectors would land on
+// every article, PSA and dashboard on the site.
+
+.spec {
+  max-width: 72rem;
+  margin-inline: auto;
+  padding: var(--space-11) var(--space-7);
+
+  // ── Masthead ────────────────────────────────────────────────────────────────
+  .spec-masthead {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: var(--space-9);
+    align-items: center;
+    padding-bottom: var(--space-9);
+    border-bottom: 1px solid var(--line-3);
+    margin-bottom: var(--space-11);
+  }
+
+  .spec-eyebrow {
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-1);
+    margin: 0;
+  }
+
+  .spec-title {
+    font-size: var(--fs-11);
+    line-height: var(--lh-1);
+    color: var(--ink-4);
+    margin-block: var(--space-4);
+  }
+
+  .spec-lede {
+    max-width: var(--measure);
+    color: var(--ink-2);
+    font-size: var(--fs-4);
+    line-height: var(--lh-3);
+    margin: 0;
+  }
+
+  // The modular scale, rendered as the thing it is. Each tile's width tracks
+  // its own ratio, so the spine demonstrates itself rather than describing
+  // itself.
+  .spec-spine {
+    display: flex;
+    gap: var(--space-1);
+    margin-top: var(--space-7);
+  }
+
+  .spec-spine b {
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    font-weight: var(--fw-5);
+    color: var(--surface-1);
+    background: var(--mark);
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-2);
+    padding-inline: var(--space-1);
+    white-space: nowrap;
+  }
+
+  .spec-spine b:nth-child(1) { width: calc(var(--f-1) * 2.6rem); }
+  .spec-spine b:nth-child(2) { width: calc(var(--f-2) * 2.6rem); }
+  .spec-spine b:nth-child(3) { width: calc(var(--f-3) * 2.6rem); }
+  .spec-spine b:nth-child(4) { width: calc(var(--f-4) * 2.6rem); }
+  .spec-spine b:nth-child(5) { width: calc(var(--f-5) * 2.6rem); }
+
+  .spec-figure {
+    width: 100%;
+    max-width: 9rem;
+    height: auto;
+  }
+
+  .spec-figure rect {
+    fill: none;
+    stroke: var(--line-4);
+    stroke-width: 0.5;
+  }
+
+  .spec-figure rect:last-of-type { stroke: var(--mark-border); }
+
+  .spec-figure line {
+    stroke: var(--mark-dim);
+    stroke-width: 0.5;
+  }
+
+  .spec-figure text {
+    font-family: var(--font-mono);
+    font-size: 3.4px;
+    fill: var(--ink-1);
+  }
+
+  // ── Section frame ───────────────────────────────────────────────────────────
+  .spec-band {
+    margin-bottom: var(--space-12);
+    scroll-margin-top: var(--space-11);
+  }
+
+  .spec-band-head {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-5);
+    margin-bottom: var(--space-3);
+  }
+
+  .spec-band-head h2 {
+    font-size: var(--fs-8);
+    color: var(--ink-4);
+    margin: 0;
+  }
+
+  .spec-band-head::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--mark-dim);
+  }
+
+  .spec-formula {
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    color: var(--steel);
+    white-space: nowrap;
+  }
+
+  .spec-note {
+    max-width: var(--measure);
+    color: var(--ink-2);
+    line-height: var(--lh-3);
+    margin: 0 0 var(--space-8);
+  }
+
+  // ── Specimen rows ───────────────────────────────────────────────────────────
+  // Fixed metadata gutter, fluid demo cell. The gutter is mono so the numbers
+  // align vertically as a column.
+  .spec-row {
+    display: grid;
+    grid-template-columns: 13rem minmax(0, 1fr);
+    gap: var(--space-7);
+    align-items: baseline;
+    padding: var(--space-4) 0;
+    border-top: 1px solid var(--line-1);
+  }
+
+  .spec-row:first-of-type { border-top: none; }
+
+  .spec-meta {
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    line-height: var(--lh-2);
+    color: var(--ink-1);
+    margin: 0;
+  }
+
+  .spec-meta strong {
+    display: block;
+    color: var(--mark);
+    font-weight: var(--fw-3);
+  }
+
+  .spec-demo {
+    min-width: 0;
+    color: var(--ink-3);
+    margin: 0;
+  }
+
+  // Specimen text must not wrap. The point is the size, and a wrapped display
+  // line reads as a paragraph.
+  .spec-demo--type {
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+    line-height: var(--lh-1);
+    padding-block: var(--space-1);
+  }
+
+  // ── Spacing bars ────────────────────────────────────────────────────────────
+  .spec-bar {
+    height: var(--space-3);
+    background: linear-gradient(90deg, var(--steel), var(--sage));
+    border-radius: var(--radius-1);
+  }
+
+  // ── Swatch grids ────────────────────────────────────────────────────────────
+  .spec-swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: var(--space-5);
+  }
+
+  .spec-swatch {
+    border: 1px solid var(--line-3);
+    border-radius: var(--radius-4);
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .spec-chip {
+    height: 5rem;
+    display: grid;
+    place-items: center;
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    text-align: center;
+    padding: var(--space-3);
+  }
+
+  .spec-swatch figcaption {
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    line-height: var(--lh-2);
+    padding: var(--space-4);
+    background: var(--surface-2);
+    color: var(--ink-1);
+  }
+
+  .spec-swatch figcaption b {
+    display: block;
+    color: var(--ink-3);
+    font-weight: var(--fw-3);
+  }
+
+  // ── Elevation ───────────────────────────────────────────────────────────────
+  .spec-elevs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+    gap: var(--space-8);
+    padding: var(--space-7) 0;
+  }
+
+  .spec-elev {
+    display: grid;
+    place-items: center;
+    gap: var(--space-1);
+    min-height: 7rem;
+    border: 1px solid var(--line-2);
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    color: var(--ink-2);
+    text-align: center;
+    padding: var(--space-5);
+    border-radius: var(--radius-3);
+  }
+
+  .spec-elev--0 { background: var(--surface-1); box-shadow: var(--elev-0); }
+  .spec-elev--1 { background: var(--surface-2); box-shadow: var(--elev-1); }
+  .spec-elev--2 { background: var(--surface-2); box-shadow: var(--elev-2); }
+  .spec-elev--3 { background: var(--surface-3); box-shadow: var(--elev-3); }
+  .spec-elev--4 { background: var(--surface-4); box-shadow: var(--elev-4); }
+  .spec-elev--5 { background: var(--surface-5); box-shadow: var(--elev-5); }
+
+  // ── Radius ──────────────────────────────────────────────────────────────────
+  .spec-radii {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-8);
+  }
+
+  .spec-radius {
+    width: 5.5rem;
+    height: 5.5rem;
+    display: grid;
+    place-items: center;
+    background: var(--surface-3);
+    border: 1px solid var(--line-4);
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    color: var(--ink-2);
+    text-align: center;
+  }
+
+  // ── Contrast matrix ─────────────────────────────────────────────────────────
+  .spec-table-scroll {
+    overflow-x: auto;
+    border: 1px solid var(--line-3);
+    border-radius: var(--radius-4);
+  }
+
+  .spec-table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 34rem;
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+  }
+
+  .spec-table th,
+  .spec-table td {
+    padding: var(--space-3) var(--space-5);
+    text-align: right;
+    border-bottom: 1px solid var(--line-2);
+    white-space: nowrap;
+  }
+
+  .spec-table thead th {
+    background: var(--surface-3);
+    color: var(--mark);
+    font-weight: var(--fw-3);
+    position: sticky;
+    top: 0;
+  }
+
+  .spec-table tbody th {
+    text-align: left;
+    color: var(--ink-3);
+    font-weight: var(--fw-3);
+    background: var(--surface-2);
+  }
+
+  .spec-table tbody tr:last-child th,
+  .spec-table tbody tr:last-child td { border-bottom: none; }
+
+  .spec-table td { color: var(--ink-2); }
+
+  // Marks the cells that fall under the 4.5:1 floor. Deliberately NOT --ruby:
+  // that token sits at 3.70:1 in dark and putting it on a page about contrast
+  // would refute the page. --mark clears 5.89:1 on --surface-3, and the ✗ glyph
+  // carries the meaning independently of colour.
+  .spec-table td.is-fail {
+    color: var(--mark);
+    font-weight: var(--fw-5);
+  }
+
+  .spec-table caption {
+    caption-side: bottom;
+    padding: var(--space-5);
+    font-family: var(--font-body);
+    font-size: var(--fs-2);
+    line-height: var(--lh-3);
+    color: var(--ink-1);
+    text-align: left;
+  }
+
+  // ── Callout ─────────────────────────────────────────────────────────────────
+  .spec-callout {
+    max-width: var(--measure);
+    background: var(--surface-3);
+    border-left: 3px solid var(--mark-border);
+    border-radius: 0 var(--radius-3) var(--radius-3) 0;
+    box-shadow: var(--elev-2);
+    padding: var(--space-8);
+    margin-top: var(--space-8);
+    color: var(--ink-2);
+    line-height: var(--lh-3);
+  }
+
+  .spec-callout p { margin: 0; }
+  .spec-callout p + p { margin-top: var(--space-5); }
+  .spec-callout strong { color: var(--ink-4); }
+
+  .spec-measure-demo {
+    max-width: var(--measure);
+    border-left: 1px solid var(--mark-dim);
+    padding-left: var(--space-7);
+    color: var(--ink-2);
+    line-height: var(--lh-3);
+  }
+
+  .spec-measure-demo p { margin: 0; }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.9em;
+    color: var(--mark);
+    background: var(--surface-1);
+    padding: 0.1em 0.35em;
+    border-radius: var(--radius-1);
+  }
+
+  .spec-foot {
+    border-top: 1px solid var(--line-3);
+    padding-top: var(--space-8);
+    font-family: var(--font-mono);
+    font-size: var(--fs-1);
+    color: var(--ink-1);
+  }
+
+  .spec-foot p { margin: 0; }
+}
+
+@media (max-width: 46rem) {
+  .spec {
+    padding: var(--space-8) var(--space-5);
+
+    .spec-masthead { grid-template-columns: 1fr; }
+    .spec-row { grid-template-columns: 1fr; gap: var(--space-3); }
+    .spec-band-head { flex-wrap: wrap; }
+  }
+}
