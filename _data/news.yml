@@ -2,27 +2,47 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-11
+generated: 2026-08-12
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Experts are warning: our AI arms race is putting humanity at risk | Stuart Russell"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/11/openai-anthropic-google-deepmind-letter"
+      - title: "AI was supposed to destroy jobs. Where’s the carnage?"
+        url: "https://www.theguardian.com/technology/2026/aug/12/ai-job-destruction"
+        source: "The Guardian"
+        date: 2026-08-12
+        summary: "The AI jobs apocalypse never showed up. Still, jobs are changing and economists expect more to come. The prediction was stark: artificial intelligence advancements would wipe out jobs en masse. “Half” of all entry-level..."
+      - title: "If the markets reject OpenAI and Anthropic, the US should nationalize them | Bruce Schneier and Nathan E Sanders"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/12/openai-anthropic-ai-models"
+        source: "The Guardian"
+        date: 2026-08-12
+        summary: "From space to telecommunications, the US has a long history of fostering technology for the public good. These AI models could be aligned to democratic values, not corporate profits OpenAI, and then Anthropic, were each..."
+      - title: "Gemini becomes Google's fastest-growing product ever as it hits 1B users"
+        url: "https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/"
+        source: "Ars Technica"
+        date: 2026-08-11
+        summary: "But will Gemini's surge survive slowing model releases?"
+      - title: "The Guardian view on AI money in US politics: not the way to hold an urgent democratic debate | Editorial"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/11/the-guardian-view-on-ai-money-in-us-politics-not-the-way-to-hold-an-urgent-democratic-debate"
         source: "The Guardian"
         date: 2026-08-11
-        summary: "A recent letter signed by 1,367 researchers and engineers at frontier AI labs – mainly OpenAI, Anthropic and Google Deepmind – points to a dangerous moment It is fashionable in certain circles to dismiss the..."
-      - title: "AI ‘will do more to boost fossil fuel production than green energy’"
-        url: "https://www.theguardian.com/technology/2026/aug/11/ai-will-do-more-to-boost-fossil-fuel-production-than-green-energy"
+        summary: "Amid public concern over the impact of new technology, Silicon Valley’s use of its wealth to influence specific election races is an unwelcome development As the huge societal ramifications of artificial intelligence..."
+      - title: "‘Everything about me is good in his eyes’: the women in China choosing AI boyfriends over human men"
+        url: "https://www.theguardian.com/film/2026/aug/12/ai-boyfriend-dating-chinese-women-replica-miff-documentary"
         source: "The Guardian"
         date: 2026-08-11
-        summary: "Study finds technology could boost recoverable oil and gas reserves by 5% and cut cost of deepwater projects by 10% AI-driven productivity gains enable more planet-heating pollution from fossil fuels than they avoid..."
-      - title: "Zuckerberg pushes ‘superintelligent’ AI for all as Meta drops open-source model"
-        url: "https://www.theguardian.com/technology/2026/aug/10/mark-zuckerberg-superintelligent-ai-essay-meta"
+        summary: "In her new documentary Replica, film-maker Chouwa Liang taps into her own experience of finding love with artificial intelligence and makes contact with other women like her Sign up for a weekly email featuring our best..."
+      - title: "Spotify to distinguish AI artists from real people – and stop recommending them"
+        url: "https://www.theguardian.com/technology/2026/aug/11/spotify-label-ai-artists-block-them-from-some-playlists"
         source: "The Guardian"
-        date: 2026-08-10
-        summary: "Meta CEO presents utopian vision of AI in 6,000-word essay amid Silicon Valley debate over government regulation Mark Zuckerberg published a lengthy essay on Monday detailing his views on artificial intelligence and..."
+        date: 2026-08-11
+        summary: "Music streaming platform creates ‘AI persona’ label that will appear on profiles and track listings in crackdown on fake performers Spotify is to label AI artists and exclude them from algorithm recommendations as part..."
+      - title: "Meta faces expensive child safety reckoning"
+        url: "https://www.theguardian.com/technology/2026/aug/10/meta-child-safety-google-executives-ai-techscape"
+        source: "The Guardian"
+        date: 2026-08-11
+        summary: "Also: Google executives jump ship in race for AI dominance Hello, TechScape readers! Danielle Abril, editor of the Guardian’s Reworked series on AI and the future of work, filling in for Blake Montgomery this week..."
       - title: "With new open models, Meta pitches another reboot of its struggling AI strategy"
         url: "https://arstechnica.com/ai/2026/08/with-new-open-models-meta-pitches-another-reboot-of-its-struggling-ai-strategy/"
         source: "Ars Technica"
@@ -38,36 +58,16 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-10
         summary: "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Last week, I headed 30 miles south of San Francisco to a hotel in Mountain View..."
-      - title: "Bernie Sanders calls on Silicon Valley to ‘pause AI development’ in interest of humanity"
-        url: "https://www.theguardian.com/technology/2026/aug/10/bernie-sanders-ai-development-pause-letter"
-        source: "The Guardian"
-        date: 2026-08-10
-        summary: "Progressive US senator urges Meta, OpenAI and Anthropic to ‘stop building machines that humans cannot control’ Senator Bernie Sanders has called on Meta, OpenAI and Anthropic executives to halt their development of..."
-      - title: "What happens when medical students rely on AI – and never develop their own judgment? | Simar Bajaj and Joseph Sakran"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/10/ai-medical-students-judgment"
-        source: "The Guardian"
-        date: 2026-08-10
-        summary: "AI’s danger isn’t just in experts losing the ability to reason. It’s that trainees may never learn how to do so in the first place In healthcare, there’s growing concern over doctors becoming less clinically adept as..."
       - title: "Peer review is overwhelmed—can it survive in the AI era?"
         url: "https://arstechnica.com/science/2026/08/peer-review-is-overwhelmed-can-it-survive-in-the-ai-era/"
         source: "Ars Technica"
         date: 2026-08-10
         summary: "As research and AI-assisted papers surge, volunteer reviewers struggle to keep up."
-      - title: "Convince an AI it’s not alive in psychological horror game Prove You’re Human"
-        url: "https://www.theguardian.com/games/2026/aug/10/ai-psychological-horror-game-prove-youre-human-sunset-visitor-studio"
-        source: "The Guardian"
-        date: 2026-08-10
-        summary: "Sunset Visitor studio’s founder tells us about their new, unnerving Captcha-filled world which prompts players to ask what it means to have a ‘meat body’ Sunset Visitor is a studio that has long engaged with the idea..."
       - title: "These startups are chasing the next big thing in LLMs"
         url: "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/"
         source: "MIT Technology Review"
         date: 2026-08-10
         summary: "MIT Technology Review’s What’s Next series looks across industries, trends, and technologies to give you a first look at the future. You can read the rest of them here. Way back in the summer of 2017, AI researchers at..."
-      - title: "AI for science needs reasoning, not just data"
-        url: "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/"
-        source: "MIT Technology Review"
-        date: 2026-08-10
-        summary: "Every few decades, someone announces that science has reached its end. In 1903, the revered physicist Albert Michelson wrote that the “facts of physical science have all been discovered.” In the 1980s, Stephen Hawking..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "“They’re Putting Kids’ Lives at Risk”: How Abuse in a Tennessee Businessman’s Juvenile Prisons Remained Under Wraps"
+        url: "https://www.propublica.org/article/wayne-halfway-house-jason-crews-tennessee"
+        source: "ProPublica"
+        date: 2026-08-12
+        summary: "The post “They’re Putting Kids’ Lives at Risk”: How Abuse in a Tennessee Businessman’s Juvenile Prisons Remained Under Wraps appeared first on ProPublica ."
+      - title: "BMJ Group retracts paper on COVID-19 vaccines and mortality featured in Senate hearing"
+        url: "https://retractionwatch.com/2026/08/11/bmj-public-health-retraction-covid-19-vaccines-death-senate-hearing/"
+        source: "Retraction Watch"
+        date: 2026-08-11
+        summary: "BMJ Public Health has retracted a paper some — including a witness at a recent U.S. Senate subcommittee hearing — have used to link COVID-19 vaccines to deaths. The action comes more than two years after a researcher..."
       - title: "A college student had to retract her paper. The move was ‘the starting point for a better study’"
         url: "https://retractionwatch.com/2026/08/10/college-student-rishika-porandla-retract-own-paper-wiley-macromolecular-materials-engineering/"
         source: "Retraction Watch"
@@ -161,11 +171,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-06
         summary: "The U.S. Secretary for Health and Human Services is once again questioning a publisher on an editorial action regarding a paper on vaccination. Published in Sage Open Medicine in 2020, the article looks at health..."
-      - title: "A composer published a paper on theoretical physics. His lack of credentials drew criticism."
-        url: "https://retractionwatch.com/2026/08/05/a-composer-published-a-paper-on-theoretical-physics-his-lack-of-credentials-drew-criticism/"
-        source: "Retraction Watch"
-        date: 2026-08-05
-        summary: "Some people compose music or make YouTube videos for a hobby. That’s Brandon Yates’ job — so in his spare time, he tries his hand at theoretical physics. But his only published paper was questioned because of his lack..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
@@ -180,11 +185,21 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Judges Sides with EPIC and AG, Telling Google, TikTok, and Meta Their Addictive Social Media Features Are Not 1A Speech"
+        url: "https://epic.org/judges-sides-with-epic-and-ag-telling-google-tiktok-and-meta-their-addictive-social-media-features-are-not-1a-speech/"
+        source: "EPIC"
+        date: 2026-08-06
+        summary: "Big Tech’s overbroad arguments that their addictive social media features are protected speech were dealt a major blow in an order issued Thursday in the combined TikTok, Meta, and Google v. Bonta cases. These cases..."
       - title: "Canadian Man Pleads Guilty in Snowflake Extortions"
         url: "https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/"
         source: "Krebs on Security"
         date: 2026-08-06
         summary: "A 26-year-old Canadian man once described as one of the most consequential cybercrime threat actors of 2024 has pleaded guilty to computer fraud and conspiracy to hack and extort more than 165 organizations that used..."
+      - title: "Senate Commerce Committee Advances Youth AI Privacy Act"
+        url: "https://epic.org/senate-commerce-committee-advances-youth-ai-privacy-act/"
+        source: "EPIC"
+        date: 2026-08-05
+        summary: "On Wednesday, the Senate Commerce Committee voted to advance the Youth AI Privacy Act, a crucial piece of legislation that would establish federal privacy and safety protections for minors using AI chatbots."
       - title: "Mobile Ad Software Encourages Location Data Sharing, EFF Report Finds"
         url: "https://www.eff.org/press/releases/mobile-ad-software-encourages-location-data-sharing-eff-report-finds"
         source: "EFF Deeplinks"
@@ -210,21 +225,11 @@ sections:
         source: "EPIC"
         date: 2026-08-03
         summary: "Trump-Vance Administration Seeks to Allow Family Support Program to be Weaponized by Immigration Officials WASHINGTON, D.C. — A new legal challenge has been filed to the Trump-Vance administration’s effort to unlawfully..."
-      - title: "Illinois Governor Signs Age-Appropriate Design Code into Law"
-        url: "https://epic.org/illinois-governor-signs-age-appropriate-design-code-into-law/"
+      - title: "EPIC, Coalition Urge Congress to Reject Defense Department’s Attempt to Withhold Information from FOIA"
+        url: "https://epic.org/epic-coalition-urge-congress-to-reject-defense-departments-attempt-to-withhold-information-from-foia/"
         source: "EPIC"
-        date: 2026-07-31
-        summary: "On Friday, Governor JB Pritzker signed into law the Children’s Social Media Safety Act, a significant piece of legislation that regulates harmful platform design for minors, such as addictive feeds and overnight push..."
-      - title: "EPIC Urges FTC to Abandon Misleading Guidance Suggesting Consumer Protection Laws Preempt State AI Regulations"
-        url: "https://epic.org/epic-urges-ftc-to-abandon-misleading-guidance-suggesting-consumer-protection-laws-preempt-state-ai-regulations/"
-        source: "EPIC"
-        date: 2026-07-31
-        summary: "On Friday, EPIC submitted comments urging the FTC to rescind its recent policy statement on AI regulations, which falsely suggests that companies could violate federal consumer protection law by complying with state AI..."
-      - title: "PRESS RELEASE: Challenge to DOGE’s Unlawful Seizure of Payment System Data Advances"
-        url: "https://epic.org/press-release-challenge-to-doges-unlawful-seizure-of-payment-system-data-advances-2/"
-        source: "EPIC"
-        date: 2026-07-30
-        summary: "Court Rejects Government’s Request to Dismiss Case WASHINGTON, D.C. — In an order denying the Trump-Vance administration’s motion to dismiss in Electronic Privacy Information Center v. Office of Personnel Management..."
+        date: 2026-08-03
+        summary: "Last Friday, EPIC joined a broad coalition of transparency organizations, government watchdog groups, and press freedom advocates to oppose a proposal from the Department of Defense (DoD) to exempt controlled..."
       - title: "San Francisco: Don’t Fall for Industry Defense of Surveillance Pricing"
         url: "https://www.eff.org/deeplinks/2026/07/san-francisco-dont-fall-industry-defense-surveillance-pricing"
         source: "EFF Deeplinks"
