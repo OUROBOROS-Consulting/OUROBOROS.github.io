@@ -84,6 +84,16 @@
   }
 }
 
+.audience-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: var(--space-4);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.85;
+}
+
 .card-tag {
   // --label-size, not the mixin's --fs-1 default. The size used to be applied
   // from a trailing selector list in _cv.scss, which won on source order; that

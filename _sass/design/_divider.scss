@@ -1,0 +1,43 @@
+@use "base" as *;
+
+// ── Divider components ──────────────────────────────────────────────────────
+// Two components share the same gold motif family (assets/images/divider-
+// {snake,infinity,quill,lantern,compass}.svg) so they read as one system:
+//
+//   .divider-major — hairline + centered rotating glyph. service.html block
+//                     breaks (see _layouts/service.html for the Liquid that
+//                     picks which glyph and sets .divider-glyph's
+//                     background-image inline, per instance).
+//   tick divider    — three lozenges, no glyph, no rotation. Lives in
+//                     _essay.scss as a restyled `.post-body hr` — it isn't a
+//                     new component, article.html's Markdown '---' already
+//                     generates a plain <hr>, this partial doesn't touch it.
+//
+// Color is baked into each SVG file (stroke="#b39f7b") rather than driven by
+// --mark, matching how snake.svg/infinity.svg already work for .scroll-line
+// and [data-spine]::before — neither reacts to light mode today, so this
+// introduces no new inconsistency. The hairline gradient below uses the same
+// literal hex for the same reason: matching a baked-color glyph with a
+// --mark-driven line would visibly mismatch between themes.
+.divider-major {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--space-6) 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #b39f7b66, #b39f7b66, transparent);
+}
+
+.divider-glyph {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  opacity: 0.85;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
