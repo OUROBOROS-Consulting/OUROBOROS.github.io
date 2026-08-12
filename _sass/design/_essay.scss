@@ -118,18 +118,42 @@
     font-style: italic;
   }
 
-  // Ornamental section break
+  // Ornamental section break — three lozenges (tick divider), echoing
+  // .spine-tick's opacity language (_spine.scss). hr itself is the center,
+  // larger, brighter lozenge; ::before/::after are the two flanking, dimmer
+  // ones. clip-path (not transform: rotate) makes the diamond shape — a
+  // transform on hr would drag its absolutely-positioned pseudo-element
+  // children into hr's own rotated coordinate space and throw off their
+  // left/right offsets below.
   hr {
+    position: relative;
     border: none;
-    display: flex;
-    justify-content: center;
-    margin: var(--space-band-lg) 0;
+    width: 9px;
+    height: 9px;
+    margin: var(--space-band-lg) auto;
+    background: var(--mark);
+    opacity: 0.9;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 7px;
+      height: 7px;
+      background: var(--mark);
+      opacity: 0.55;
+      clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: -16px;
+    }
 
     &::after {
-      content: '◇  ◇  ◇';
-      color: var(--line-3);
-      font-size: var(--fs-1);
-      letter-spacing: 0.5em;
+      right: -16px;
     }
   }
 
