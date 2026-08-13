@@ -2,72 +2,72 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-12
+generated: 2026-08-13
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "AI was supposed to destroy jobs. Where’s the carnage?"
-        url: "https://www.theguardian.com/technology/2026/aug/12/ai-job-destruction"
+      - title: "Lost jobs, inequality, rogue agents: why are we accepting oligarchs’ AI agenda? | Robert Reich"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/13/lost-jobs-inequality-ai-oligarchs"
+        source: "The Guardian"
+        date: 2026-08-13
+        summary: "The dangers of AI become clearer every day. Why are we still acting as if we have no choice about our future? Rather than producing jobs, the US economy actually lost 23,000 jobs in July, according to Bureau of Labor..."
+      - title: "‘I feel like I’m at war’: are we losing the battle against machine-made music?"
+        url: "https://www.theguardian.com/music/ng-interactive/2026/aug/13/ai-music"
+        source: "The Guardian"
+        date: 2026-08-13
+        summary: "Despite outcry from musicians, AI slop is creeping into the charts as record labels scramble to adapt to a new normal where hits can be made at the click of a button This year, the battle for song of the summer has been..."
+      - title: "How kids feel about AI, in their own words"
+        url: "https://www.technologyreview.com/2026/08/13/1141410/how-kids-feel-about-ai-own-words/"
+        source: "MIT Technology Review"
+        date: 2026-08-13
+        summary: "When we set out to talk to kids about artificial intelligence, we thought we knew what we’d hear. We expected some to tell us they were using it to cheat a little, the way Millennials and Gen Xers opened up CliffsNotes..."
+      - title: "Taiwan says it was hit by ‘abnormal’ AI-assisted cyber-attack"
+        url: "https://www.theguardian.com/technology/2026/aug/13/taiwan-ai-assisted-cyber-attacks-overseas"
+        source: "The Guardian"
+        date: 2026-08-13
+        summary: "Taiwan’s statement comes a day after reports that suspected China-linked hackers had carried out a first-of-a-kind breach Taiwan says it detected AI-assisted cyber-attacks on government agencies that came from overseas..."
+      - title: "San Francisco-area estate sells for $70m in sign of AI-fueled wealth explosion"
+        url: "https://www.theguardian.com/us-news/2026/aug/12/san-francisco-70m-estate"
         source: "The Guardian"
         date: 2026-08-12
-        summary: "The AI jobs apocalypse never showed up. Still, jobs are changing and economists expect more to come. The prediction was stark: artificial intelligence advancements would wipe out jobs en masse. “Half” of all entry-level..."
-      - title: "If the markets reject OpenAI and Anthropic, the US should nationalize them | Bruce Schneier and Nathan E Sanders"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/12/openai-anthropic-ai-models"
+        summary: "New owner is said to be involved in AI industry, as new class of multimillionaires is entering the real estate race A luxury Lake Como-inspired estate in the San Francisco Bay Area has sold to a buyer “in the AI world”..."
+      - title: "The web’s newest weapon against AI scrapers is a font"
+        url: "https://arstechnica.com/ai/2026/08/new-font-turns-ordinary-webpages-into-nonsense-for-ai-scrapers/"
+        source: "Ars Technica"
+        date: 2026-08-12
+        summary: "“ShieldFont” aims to poison AI training data without making pages unreadable for people."
+      - title: "Terabytes of credentials leaked in massive supply-chain attack"
+        url: "https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/"
+        source: "Ars Technica"
+        date: 2026-08-12
+        summary: "The data was scraped and exfiltrated from 2,500 users of a compromised AI package."
+      - title: "Twitch content has trained Amazon AI for years, but users can opt out now"
+        url: "https://arstechnica.com/ai/2026/08/twitch-content-has-trained-amazon-ai-for-years-but-users-can-opt-out-now/"
+        source: "Ars Technica"
+        date: 2026-08-12
+        summary: "Streaming platform says user-generated content \"may be used for future Gen AI model improvements.\""
+      - title: "Scaling AI agents with trustworthy data"
+        url: "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/"
+        source: "MIT Technology Review"
+        date: 2026-08-12
+        summary: "Business and technology leaders need no convincing that the time of agentic AI is here. Organizations are rapidly adopting agents, and few executives doubt the technology’s potential to transform work. But many..."
+      - title: "Science funding and unnecessary fear | Letters"
+        url: "https://www.theguardian.com/science/2026/aug/12/science-funding-and-unnecessary-fear"
         source: "The Guardian"
         date: 2026-08-12
-        summary: "From space to telecommunications, the US has a long history of fostering technology for the public good. These AI models could be aligned to democratic values, not corporate profits OpenAI, and then Anthropic, were each..."
-      - title: "Gemini becomes Google's fastest-growing product ever as it hits 1B users"
-        url: "https://arstechnica.com/ai/2026/08/google-says-gemini-has-reached-1b-users-faster-than-any-other-google-product/"
+        summary: "Prof Stephen Blundell on the plight of the Rutherford Appleton Laboratory, and Peter Forbes on bacteriophages and AI Much of the commentary about the UK Research and Innovation science funding cuts has centred around..."
+      - title: "Booksellers suspect AI firms are buying and then destroying rare books"
+        url: "https://arstechnica.com/tech-policy/2026/08/heres-a-balm-if-the-idea-of-destroying-books-to-train-ai-breaks-your-heart/"
         source: "Ars Technica"
-        date: 2026-08-11
-        summary: "But will Gemini's surge survive slowing model releases?"
-      - title: "The Guardian view on AI money in US politics: not the way to hold an urgent democratic debate | Editorial"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/11/the-guardian-view-on-ai-money-in-us-politics-not-the-way-to-hold-an-urgent-democratic-debate"
+        date: 2026-08-12
+        summary: "AI firms quietly bulk buying rare books face resistance from booksellers."
+      - title: "AI agents aren’t legally responsible for any harm that they cause, experts say. So who is?"
+        url: "https://www.theguardian.com/technology/2026/aug/13/ai-agents-arent-legally-responsible-for-any-harm-that-they-cause-experts-say-so-who-is"
         source: "The Guardian"
-        date: 2026-08-11
-        summary: "Amid public concern over the impact of new technology, Silicon Valley’s use of its wealth to influence specific election races is an unwelcome development As the huge societal ramifications of artificial intelligence..."
-      - title: "‘Everything about me is good in his eyes’: the women in China choosing AI boyfriends over human men"
-        url: "https://www.theguardian.com/film/2026/aug/12/ai-boyfriend-dating-chinese-women-replica-miff-documentary"
-        source: "The Guardian"
-        date: 2026-08-11
-        summary: "In her new documentary Replica, film-maker Chouwa Liang taps into her own experience of finding love with artificial intelligence and makes contact with other women like her Sign up for a weekly email featuring our best..."
-      - title: "Spotify to distinguish AI artists from real people – and stop recommending them"
-        url: "https://www.theguardian.com/technology/2026/aug/11/spotify-label-ai-artists-block-them-from-some-playlists"
-        source: "The Guardian"
-        date: 2026-08-11
-        summary: "Music streaming platform creates ‘AI persona’ label that will appear on profiles and track listings in crackdown on fake performers Spotify is to label AI artists and exclude them from algorithm recommendations as part..."
-      - title: "Meta faces expensive child safety reckoning"
-        url: "https://www.theguardian.com/technology/2026/aug/10/meta-child-safety-google-executives-ai-techscape"
-        source: "The Guardian"
-        date: 2026-08-11
-        summary: "Also: Google executives jump ship in race for AI dominance Hello, TechScape readers! Danielle Abril, editor of the Guardian’s Reworked series on AI and the future of work, filling in for Blake Montgomery this week..."
-      - title: "With new open models, Meta pitches another reboot of its struggling AI strategy"
-        url: "https://arstechnica.com/ai/2026/08/with-new-open-models-meta-pitches-another-reboot-of-its-struggling-ai-strategy/"
-        source: "Ars Technica"
-        date: 2026-08-10
-        summary: "Meta has been trailing competitors. Zuckerberg thinks he's found a way forward."
-      - title: "Amazon backs power plant that may become top source of US climate pollution"
-        url: "https://arstechnica.com/tech-policy/2026/08/amazon-funds-biggest-gas-power-plant-in-us-despite-climate-pledge/"
-        source: "Ars Technica"
-        date: 2026-08-10
-        summary: "Amazon announces first off-the-grid data center in race to reap AI profits."
-      - title: "AI professors are negotiating the new realities of academic research"
-        url: "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/"
-        source: "MIT Technology Review"
-        date: 2026-08-10
-        summary: "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Last week, I headed 30 miles south of San Francisco to a hotel in Mountain View..."
-      - title: "Peer review is overwhelmed—can it survive in the AI era?"
-        url: "https://arstechnica.com/science/2026/08/peer-review-is-overwhelmed-can-it-survive-in-the-ai-era/"
-        source: "Ars Technica"
-        date: 2026-08-10
-        summary: "As research and AI-assisted papers surge, volunteer reviewers struggle to keep up."
-      - title: "These startups are chasing the next big thing in LLMs"
-        url: "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/"
-        source: "MIT Technology Review"
-        date: 2026-08-10
-        summary: "MIT Technology Review’s What’s Next series looks across industries, trends, and technologies to give you a first look at the future. You can read the rest of them here. Way back in the summer of 2017, AI researchers at..."
+        date: 2026-08-12
+        summary: "After Australia’s first reported automated hacking accident, experts warn deployers – and possibly developers – of AI agents could be held liable for the actions of their bots Follow our Australia news live blog for..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "This National Youth Sports Organization Is Failing to Protect Kids From Sexual Abuse"
+        url: "https://www.propublica.org/article/aau-youth-sports-sexual-abuse-failure-amateur-athletic-union"
+        source: "ProPublica"
+        date: 2026-08-13
+        summary: "The post This National Youth Sports Organization Is Failing to Protect Kids From Sexual Abuse appeared first on ProPublica ."
+      - title: "Biology journal pulls 100+ articles and counting from special issues for peer review manipulation"
+        url: "https://retractionwatch.com/2026/08/12/biology-journal-pulls-100-articles-and-counting-from-special-issues-for-peer-review-manipulation/"
+        source: "Retraction Watch"
+        date: 2026-08-12
+        summary: "Elsevier’s International Journal of Biological Macromolecules has issued more than 100 retractions and counting for manipulated peer review in guest-edited special issues. The publisher has said one more retraction is..."
       - title: "“They’re Putting Kids’ Lives at Risk”: How Abuse in a Tennessee Businessman’s Juvenile Prisons Remained Under Wraps"
         url: "https://www.propublica.org/article/wayne-halfway-house-jason-crews-tennessee"
         source: "ProPublica"
@@ -166,11 +176,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-06
         summary: "In April 2025, David Victorson, a psychologist at Northwestern University in Chicago, was polishing several manuscripts for submission when a colleague sent him a link to a press release from the U.S. Department of..."
-      - title: "RFK Jr. questions another publisher on expression of concern for a vaccine paper"
-        url: "https://retractionwatch.com/2026/08/06/rfk-jr-sage-miller-hooker-sage-open-medicine/"
-        source: "Retraction Watch"
-        date: 2026-08-06
-        summary: "The U.S. Secretary for Health and Human Services is once again questioning a publisher on an editorial action regarding a paper on vaccination. Published in Sage Open Medicine in 2020, the article looks at health..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
@@ -185,6 +190,16 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "EPIC, Advocates Celebrate As New Jersey Signs Nation-Leading Kids’ Online Safety Bills Into Law"
+        url: "https://epic.org/epic-advocates-celebrate-as-new-jersey-signs-nation-leading-kids-online-safety-bills-into-law-2/"
+        source: "EPIC"
+        date: 2026-08-11
+        summary: "JERSEY CITY, N.J. — EPIC and New Jersey Kids Code Coalition advocates celebrated as Governor Mikie Sherrill signed the landmark New Jersey Kids Code into law alongside bills to create social media mental health warning..."
+      - title: "EPIC, Advocates Celebrate As New Jersey Signs Nation-Leading Kids’ Online Safety Bills Into Law"
+        url: "https://epic.org/epic-advocates-celebrate-as-new-jersey-signs-nation-leading-kids-online-safety-bills-into-law/"
+        source: "EPIC"
+        date: 2026-08-11
+        summary: "JERSEY CITY, N.J. — EPIC and New Jersey Kids Code Coalition advocates celebrated as Governor Mikie Sherrill signed the landmark New Jersey Kids Code into law alongside bills to create social media mental health warning..."
       - title: "Judges Sides with EPIC and AG, Telling Google, TikTok, and Meta Their Addictive Social Media Features Are Not 1A Speech"
         url: "https://epic.org/judges-sides-with-epic-and-ag-telling-google-tiktok-and-meta-their-addictive-social-media-features-are-not-1a-speech/"
         source: "EPIC"
@@ -220,16 +235,6 @@ sections:
         source: "EPIC"
         date: 2026-08-03
         summary: "Trump-Vance Administration Seeks to Allow Family Support Program to be Weaponized by Immigration Officials WASHINGTON, D.C. — A new legal challenge has been filed to the Trump-Vance administration’s effort to unlawfully..."
-      - title: "PRESS RELEASE: Coalition Challenges Dramatic Data Privacy Changes to Federal Assistance Program"
-        url: "https://epic.org/press-release-coalition-challenges-dramatic-data-privacy-changes-to-federal-assistance-program/"
-        source: "EPIC"
-        date: 2026-08-03
-        summary: "Trump-Vance Administration Seeks to Allow Family Support Program to be Weaponized by Immigration Officials WASHINGTON, D.C. — A new legal challenge has been filed to the Trump-Vance administration’s effort to unlawfully..."
-      - title: "EPIC, Coalition Urge Congress to Reject Defense Department’s Attempt to Withhold Information from FOIA"
-        url: "https://epic.org/epic-coalition-urge-congress-to-reject-defense-departments-attempt-to-withhold-information-from-foia/"
-        source: "EPIC"
-        date: 2026-08-03
-        summary: "Last Friday, EPIC joined a broad coalition of transparency organizations, government watchdog groups, and press freedom advocates to oppose a proposal from the Department of Defense (DoD) to exempt controlled..."
       - title: "San Francisco: Don’t Fall for Industry Defense of Surveillance Pricing"
         url: "https://www.eff.org/deeplinks/2026/07/san-francisco-dont-fall-industry-defense-surveillance-pricing"
         source: "EFF Deeplinks"
