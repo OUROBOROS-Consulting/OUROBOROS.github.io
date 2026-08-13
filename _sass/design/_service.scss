@@ -267,7 +267,7 @@
     content: '';
     position: absolute;
     inset: -4px;
-    background: var(--teal);
+    background: var(--mark);
     clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
     opacity: 0.85;
     z-index: 0;
@@ -538,23 +538,20 @@
 // Full-width black-marble header bands that bleed to the viewport edges, like
 // the homepage section headers. One caller:
 //   .page-body--banded .page-section-label → section headings in sections.html
-// It lives in .page-toc-wrap--svc col-1, so the bleed clears the wrap's
-// 5vw padding, the 3rem grid gap and the 200px TOC sidebar to reach the right
-// viewport edge. Below 1100px the sidebar is hidden and the grid is single-
-// column, so the right bleed collapses to -5vw. The marble raster is layered
-// over the #0D0D0D fallback in the consuming site's main.scss (asset lives there).
+// It lives in .page-toc-wrap--svc col-1, so the bleed only has to clear the
+// wrap's own 5vw padding to reach the viewport edge — .page-toc-wrap--svc is a
+// single-column grid (the TOC panel is a position: fixed strip, not a grid
+// column; see _sidebar.scss), so there is no sidebar gutter to additionally
+// subtract. The marble raster is layered over the #0D0D0D fallback in the
+// consuming site's main.scss (asset lives there).
 @mixin marble-band {
   @include dark-island;
   background-color: #0D0D0D;
   border-top: 1px solid rgba(177, 147, 93, 0.22);
   border-bottom: 1px solid rgba(177, 147, 93, 0.22);
   margin-left: -5vw;
-  margin-right: calc(-5vw - 3rem - 200px);
+  margin-right: -5vw;
   padding: var(--space-8) 5vw;
-
-  @media (max-width: 1100px) {
-    margin-right: -5vw;
-  }
 
   @media (max-width: 768px) {
     margin-left: -6vw;

@@ -146,7 +146,11 @@
   grid-template-columns: repeat(2, 1fr);
   gap: var(--space-6);
   margin-top: var(--space-8);
-  grid-auto-rows: 260px;
+  // minmax, not a bare 260px: #values titles are single words and never
+  // need more, but #audience titles are multi-word phrases that wrap to
+  // 2-3 lines — a fixed height would clip them under the chamfer's
+  // clip-path. Rows still floor at 260px so #values is unaffected.
+  grid-auto-rows: minmax(260px, auto);
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -241,6 +245,11 @@
   &__icon--svg {
     width: calc(var(--fs-9) * 1.618);
     height: calc(var(--fs-9) * 1.618);
+    // Without this, the flex column (&__front &__surface) shrinks the icon
+    // to make room for #audience's long, wrapping titles — defeating the
+    // golden-ratio sizing above. flex-shrink: 0 forces &__name to wrap
+    // instead; grid-auto-rows: minmax(...) above gives it room to do so.
+    flex-shrink: 0;
     color: var(--mark);
     opacity: 1;
     background-color: currentColor;

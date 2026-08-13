@@ -63,7 +63,7 @@
     content: '';
     position: absolute;
     inset: #{$chamfer-border};
-    background: var(--surface-2);
+    background: var(--surface-1);
     @include chamfer($chamfer-inner);
     z-index: -1;
   }

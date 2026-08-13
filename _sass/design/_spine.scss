@@ -62,7 +62,15 @@
 // One static copy of the same illustration .scroll-line uses (see _home.scss),
 // same animation, centred on each panel. This is a starting point, not a
 // finished placement — deliberately unrefined per that same decision.
-[data-spine]::before {
+//
+// Ticks are real DOM children of [data-spine]; the snake is a generated
+// pseudo-element. At the default z-index (auto), paint order follows DOM/box
+// order — ::before generates as the FIRST child (paints underneath, so the
+// ticks paint after it, on top) and ::after generates as the LAST child
+// (paints on top, so the ticks paint before it, underneath). The rail wants
+// its ticks after the snake; the outline wants its ticks before the snake —
+// hence ::before on one host and ::after on the other, not a shared selector.
+%spine-snake {
   content: '';
   position: absolute;
   top: 50%;
@@ -70,13 +78,21 @@
   transform: translate(-50%, -50%);
   width: 45px;
   height: 75px;
-  background-image: url('../images/infinity.svg');
+  background-image: url('../images/snake.svg');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   opacity: 0.4;
   animation: scrollPulse 2s ease-in-out infinite;
   pointer-events: none;
+}
+
+.rail[data-spine]::before {
+  @extend %spine-snake;
+}
+
+.page-toc[data-spine]::after {
+  @extend %spine-snake;
 }
 
 // Cursor on the strip: the snake lights up.
