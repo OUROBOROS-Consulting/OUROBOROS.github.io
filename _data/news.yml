@@ -2,12 +2,57 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-13
+generated: 2026-08-14
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Unemployed young people to join AI boot camps to get job-ready"
+        url: "https://www.theguardian.com/society/2026/aug/14/unemployed-young-people-to-join-ai-boot-camps-to-get-job-ready"
+        source: "The Guardian"
+        date: 2026-08-13
+        summary: "Pilot scheme will provide three weeks of training as part of UK government’s latest attempt to address Neets crisis Young people out of work or at risk of unemployment in the UK are to join “AI boot camps” where they..."
+      - title: "Massachusetts teen accused of killing mother and brother used ChatGPT"
+        url: "https://www.theguardian.com/us-news/2026/aug/13/massachusetts-teen-killing-chatgpt"
+        source: "The Guardian"
+        date: 2026-08-13
+        summary: "District attorney says Arjun Aravind, 17, used internet and AI to search for fantasy stories regarding killing of his family A Massachusetts teenager accused of killing his mother and younger brother is being held..."
+      - title: "The new Instagram logo is the perfect embodiment of AI slop"
+        url: "https://arstechnica.com/ai/2026/08/the-new-instagram-logo-is-the-perfect-embodiment-of-ai-slop/"
+        source: "Ars Technica"
+        date: 2026-08-13
+        summary: "Opinion: Some remarks about the new wordmark accidentally being perfectly awful."
+      - title: "Google announces Gemini 3.7 Flash just three weeks after previous release"
+        url: "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-7-flash-just-three-weeks-after-previous-release/"
+        source: "Ars Technica"
+        date: 2026-08-13
+        summary: "Gemini 3.6 Flash debuted just 3 weeks ago, but Google says 3.7 has \"substantial improvements.\""
+      - title: "An AI agent for all? Try using your brain, Mark Zuckerberg | Brief letters"
+        url: "https://www.theguardian.com/technology/2026/aug/13/an-ai-agent-for-all-try-using-your-brain-mark-zuckerberg"
+        source: "The Guardian"
+        date: 2026-08-13
+        summary: "Meta AI | Future Guardian writers and Neets | Food for thought | Plants surviving the heat | Living and dying well Your article ( Zuckerberg pushes ‘superintelligent’ AI for all as Meta releases open-weight model, 10..."
+      - title: "Anthropic could be worth $2 trillion when it goes public"
+        url: "https://arstechnica.com/ai/2026/08/anthropic-could-be-worth-2-trillion-when-it-goes-public/"
+        source: "Ars Technica"
+        date: 2026-08-13
+        summary: "Rapid revenue growth fuels hope Claude maker's IPO is the biggest listing in history"
+      - title: "Flock is tightening its rules in response to a growing surveillance backlash"
+        url: "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/"
+        source: "MIT Technology Review"
+        date: 2026-08-13
+        summary: "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid..."
+      - title: "Mark Zuckerberg says the future of AI is for everyone. But who owns it? | Raffi Krikorian"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/13/mark-zuckerberg-future-of-ai"
+        source: "The Guardian"
+        date: 2026-08-13
+        summary: "It’s a nice sentiment, but all AI users should ask three questions about their preferred choice of AI platform On Monday, Mark Zuckerberg published a 6,500-word essay, The Future Is for Everyone. The essay came with..."
+      - title: "Claude's new Scarlet Letter watermark is invisible—for now"
+        url: "https://arstechnica.com/tech-policy/2026/08/claudes-new-scarlet-letter-watermark-is-invisible-for-now/"
+        source: "Ars Technica"
+        date: 2026-08-13
+        summary: "The mark flags anything Claude processed, even human writing it only edited."
       - title: "Lost jobs, inequality, rogue agents: why are we accepting oligarchs’ AI agenda? | Robert Reich"
         url: "https://www.theguardian.com/commentisfree/2026/aug/13/lost-jobs-inequality-ai-oligarchs"
         source: "The Guardian"
@@ -23,55 +68,15 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-13
         summary: "When we set out to talk to kids about artificial intelligence, we thought we knew what we’d hear. We expected some to tell us they were using it to cheat a little, the way Millennials and Gen Xers opened up CliffsNotes..."
-      - title: "Taiwan says it was hit by ‘abnormal’ AI-assisted cyber-attack"
-        url: "https://www.theguardian.com/technology/2026/aug/13/taiwan-ai-assisted-cyber-attacks-overseas"
-        source: "The Guardian"
-        date: 2026-08-13
-        summary: "Taiwan’s statement comes a day after reports that suspected China-linked hackers had carried out a first-of-a-kind breach Taiwan says it detected AI-assisted cyber-attacks on government agencies that came from overseas..."
-      - title: "San Francisco-area estate sells for $70m in sign of AI-fueled wealth explosion"
-        url: "https://www.theguardian.com/us-news/2026/aug/12/san-francisco-70m-estate"
-        source: "The Guardian"
-        date: 2026-08-12
-        summary: "New owner is said to be involved in AI industry, as new class of multimillionaires is entering the real estate race A luxury Lake Como-inspired estate in the San Francisco Bay Area has sold to a buyer “in the AI world”..."
-      - title: "The web’s newest weapon against AI scrapers is a font"
-        url: "https://arstechnica.com/ai/2026/08/new-font-turns-ordinary-webpages-into-nonsense-for-ai-scrapers/"
-        source: "Ars Technica"
-        date: 2026-08-12
-        summary: "“ShieldFont” aims to poison AI training data without making pages unreadable for people."
-      - title: "Terabytes of credentials leaked in massive supply-chain attack"
-        url: "https://arstechnica.com/security/2026/08/terabytes-of-credentials-leaked-in-massive-supply-chain-attack/"
-        source: "Ars Technica"
-        date: 2026-08-12
-        summary: "The data was scraped and exfiltrated from 2,500 users of a compromised AI package."
-      - title: "Twitch content has trained Amazon AI for years, but users can opt out now"
-        url: "https://arstechnica.com/ai/2026/08/twitch-content-has-trained-amazon-ai-for-years-but-users-can-opt-out-now/"
-        source: "Ars Technica"
-        date: 2026-08-12
-        summary: "Streaming platform says user-generated content \"may be used for future Gen AI model improvements.\""
-      - title: "Scaling AI agents with trustworthy data"
-        url: "https://www.technologyreview.com/2026/08/12/1141032/scaling-ai-agents-with-trustworthy-data/"
-        source: "MIT Technology Review"
-        date: 2026-08-12
-        summary: "Business and technology leaders need no convincing that the time of agentic AI is here. Organizations are rapidly adopting agents, and few executives doubt the technology’s potential to transform work. But many..."
-      - title: "Science funding and unnecessary fear | Letters"
-        url: "https://www.theguardian.com/science/2026/aug/12/science-funding-and-unnecessary-fear"
-        source: "The Guardian"
-        date: 2026-08-12
-        summary: "Prof Stephen Blundell on the plight of the Rutherford Appleton Laboratory, and Peter Forbes on bacteriophages and AI Much of the commentary about the UK Research and Innovation science funding cuts has centred around..."
-      - title: "Booksellers suspect AI firms are buying and then destroying rare books"
-        url: "https://arstechnica.com/tech-policy/2026/08/heres-a-balm-if-the-idea-of-destroying-books-to-train-ai-breaks-your-heart/"
-        source: "Ars Technica"
-        date: 2026-08-12
-        summary: "AI firms quietly bulk buying rare books face resistance from booksellers."
-      - title: "AI agents aren’t legally responsible for any harm that they cause, experts say. So who is?"
-        url: "https://www.theguardian.com/technology/2026/aug/13/ai-agents-arent-legally-responsible-for-any-harm-that-they-cause-experts-say-so-who-is"
-        source: "The Guardian"
-        date: 2026-08-12
-        summary: "After Australia’s first reported automated hacking accident, experts warn deployers – and possibly developers – of AI agents could be held liable for the actions of their bots Follow our Australia news live blog for..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘What’s happened to us? Where did we get lost?’ Zimbabwe reckons with the reality of violence against women"
+        url: "https://www.theguardian.com/global-development/2026/aug/14/whats-happened-to-us-where-did-we-get-lost-zimbabwe-reckons-with-the-reality-of-violence-against-women"
+        source: "The Guardian"
+        date: 2026-08-14
+        summary: "The deaths of a Bulawayo mother and her daughters spark calls for an urgent action on gender-based violence The three white coffins were draped in white lace and topped with small sprays of flowers. The mourners who..."
       - title: "Woman assaulted after Travelodge staff gave room key to her abuser"
         url: "https://www.theguardian.com/society/2026/aug/10/woman-assaulted-after-travelodge-staff-gave-room-key-to-her-abuser"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-04
         summary: "Miller calls women accusing him liars as Republican senator Bernie Moreno says former son-in-law unfit for Congress Max Miller, the beleaguered US Republican representative from Ohio, has vowed to defy a rising..."
-      - title: "The inability to deliver the changes Indigenous Australians need is no longer just a moral failure but a civilisational one | Noel Pearson"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/03/noel-pearson-garma-festival-2026-speech-indigenous-australians-ntwnfb"
-        source: "The Guardian"
-        date: 2026-08-03
-        summary: "After the rejection of the voice, the conversation about structural reform of the federal arrangements governing Aboriginal affairs must resume Indigenous leaders look to the future at Garma: ‘People are feeling strong..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -136,11 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
-      - title: "This National Youth Sports Organization Is Failing to Protect Kids From Sexual Abuse"
+      - title: "JAMA journal won’t retract oxycodone paper despite author request, citing no ‘falsification’"
+        url: "https://retractionwatch.com/2026/08/13/jama-archives-internal-medicine-oxycodone-osteoarthritis-pain/"
+        source: "Retraction Watch"
+        date: 2026-08-13
+        summary: "JAMA Internal Medicine has rejected a petition by a group of clinicians calling for the journal to retract an article on oxycodone therapy for osteoarthritis. The request — which initially included two of the paper’s..."
+      - title: "A Youth Sports Giant Promised Reforms to Protect Kids From Sexual Abuse. Most Never Happened."
         url: "https://www.propublica.org/article/aau-youth-sports-sexual-abuse-failure-amateur-athletic-union"
         source: "ProPublica"
         date: 2026-08-13
-        summary: "The post This National Youth Sports Organization Is Failing to Protect Kids From Sexual Abuse appeared first on ProPublica ."
+        summary: "The post A Youth Sports Giant Promised Reforms to Protect Kids From Sexual Abuse. Most Never Happened. appeared first on ProPublica ."
       - title: "Biology journal pulls 100+ articles and counting from special issues for peer review manipulation"
         url: "https://retractionwatch.com/2026/08/12/biology-journal-pulls-100-articles-and-counting-from-special-issues-for-peer-review-manipulation/"
         source: "Retraction Watch"
@@ -171,11 +176,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-07
         summary: "Clarivate has lifted its hold on Heliyon after the journal’s internal audit led to over 1,000 retractions, expressions of concern and corrections. As a result, the journal will receive an impact factor in the coming..."
-      - title: "Decade-long fraud by market survey firm a ‘gut punch’ for researchers"
-        url: "https://retractionwatch.com/2026/08/06/op4g-market-research-indictment-fake-data/"
-        source: "Retraction Watch"
-        date: 2026-08-06
-        summary: "In April 2025, David Victorson, a psychologist at Northwestern University in Chicago, was polishing several manuscripts for submission when a colleague sent him a link to a press release from the U.S. Department of..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
@@ -190,6 +190,11 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Too Little, Too Late: Flock Admits Their Technology Needs Reforms"
+        url: "https://www.eff.org/deeplinks/2026/08/too-little-too-late-flock-admits-their-technology-needs-reforms"
+        source: "EFF Deeplinks"
+        date: 2026-08-13
+        summary: "Flock Safety, the embattled vendor of mass surveillance technology, has rolled out a handful of new reforms intended to appease the justified nationwide anger that has seen scores of towns cancel or suspend their..."
       - title: "EPIC, Advocates Celebrate As New Jersey Signs Nation-Leading Kids’ Online Safety Bills Into Law"
         url: "https://epic.org/epic-advocates-celebrate-as-new-jersey-signs-nation-leading-kids-online-safety-bills-into-law-2/"
         source: "EPIC"
@@ -245,8 +250,3 @@ sections:
         source: "The Markup"
         date: 2026-07-28
         summary: "California is leading on kids’ data privacy in the U.S. but still lags internationally."
-      - title: "Hundreds of Drone-as-First-Responder Programs Could Soon Be Launched Across the Country"
-        url: "https://www.eff.org/deeplinks/2026/07/hundreds-drone-first-responder-programs-could-soon-be-launched-across-country"
-        source: "EFF Deeplinks"
-        date: 2026-07-23
-        summary: "Police departments across the country are lining up to launch drone-as-first-responder (DFR) programs, and hundreds have cleared a necessary hurdle toward making deployment a reality, expanding aerial surveillance and..."
