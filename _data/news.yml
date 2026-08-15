@@ -2,22 +2,52 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-14
+generated: 2026-08-15
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Secondhand booksellers in UK and Ireland suspect AI firms behind ‘strange’ bulk orders"
+        url: "https://www.theguardian.com/technology/2026/aug/15/uk-ireland-booksellers-suspect-ai-companies-bulk-orders-data-acquisition"
+        source: "The Guardian"
+        date: 2026-08-15
+        summary: "Development comes after Anthropic was found to have spent millions on books to scan for ‘data acquisition’ Secondhand booksellers in the UK and Ireland are reporting a flurry of bulk orders from mystery buyers, amid..."
+      - title: "Why does everything feel meh? We're in the era of joyless decadence – Stateside with Kai and Carter"
+        url: "https://www.theguardian.com/us-news/video/2026/aug/14/era-of-joyless-decadence-stateside-podcast"
+        source: "The Guardian"
+        date: 2026-08-14
+        summary: "We should, in theory, be happy. Thanks to our phones, we can do practically anything – listen to our favorite bands' entire discographies, have extravagant meals delivered to our door, travel the world through an..."
+      - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
+        url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
+        source: "Ars Technica"
+        date: 2026-08-14
+        summary: "Judge warns pro se litigants are using chatbots wrong and getting desperate."
+      - title: "Police Scotland warns ‘robust security’ needed to stop attacks on AI datacentres"
+        url: "https://www.theguardian.com/uk-news/2026/aug/14/scottish-police-expect-public-opposition-larbert-datacentre"
+        source: "The Guardian"
+        date: 2026-08-14
+        summary: "‘A great deal of public opposition is likely’ to a proposed datacentre near Edinburgh, the force says Police in Scotland have issued a stark warning about the need for “robust security measures” to stop proposed AI..."
+      - title: "A Queensland man enjoyed soaring profits from a crypto trading app. Then his money started disappearing"
+        url: "https://www.theguardian.com/australia-news/2026/aug/15/australia-crypto-money-investment-scam-ai-fraud-crime"
+        source: "The Guardian"
+        date: 2026-08-14
+        summary: "The administrative work required to run an effective investment scam has been drastically cut by using merging technology Get our breaking news email , free app or daily news podcast Within days of clicking on an online..."
+      - title: "OpenAI and Anthropic in price war as Chinese AI rivals gain ground"
+        url: "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/"
+        source: "Ars Technica"
+        date: 2026-08-14
+        summary: "US groups release cheaper models after new challenges to their trillion-dollar ambitions."
+      - title: "As online dating goes into ‘salvage mode’, can AI solve all its problems?"
+        url: "https://www.theguardian.com/lifeandstyle/2026/aug/14/online-dating-salvage-mode--ai-bumble-app"
+        source: "The Guardian"
+        date: 2026-08-14
+        summary: "Dating apps such as Bumble forced to adapt as ‘swipe fatigue’ grows Bumble was supposed to be different. When it launched in 2014, it offered women a simple proposition: if you matched with a man, you had to make the..."
       - title: "Unemployed young people to join AI boot camps to get job-ready"
         url: "https://www.theguardian.com/society/2026/aug/14/unemployed-young-people-to-join-ai-boot-camps-to-get-job-ready"
         source: "The Guardian"
         date: 2026-08-13
         summary: "Pilot scheme will provide three weeks of training as part of UK government’s latest attempt to address Neets crisis Young people out of work or at risk of unemployment in the UK are to join “AI boot camps” where they..."
-      - title: "Massachusetts teen accused of killing mother and brother used ChatGPT"
-        url: "https://www.theguardian.com/us-news/2026/aug/13/massachusetts-teen-killing-chatgpt"
-        source: "The Guardian"
-        date: 2026-08-13
-        summary: "District attorney says Arjun Aravind, 17, used internet and AI to search for fantasy stories regarding killing of his family A Massachusetts teenager accused of killing his mother and younger brother is being held..."
       - title: "The new Instagram logo is the perfect embodiment of AI slop"
         url: "https://arstechnica.com/ai/2026/08/the-new-instagram-logo-is-the-perfect-embodiment-of-ai-slop/"
         source: "Ars Technica"
@@ -28,11 +58,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-13
         summary: "Gemini 3.6 Flash debuted just 3 weeks ago, but Google says 3.7 has \"substantial improvements.\""
-      - title: "An AI agent for all? Try using your brain, Mark Zuckerberg | Brief letters"
-        url: "https://www.theguardian.com/technology/2026/aug/13/an-ai-agent-for-all-try-using-your-brain-mark-zuckerberg"
-        source: "The Guardian"
-        date: 2026-08-13
-        summary: "Meta AI | Future Guardian writers and Neets | Food for thought | Plants surviving the heat | Living and dying well Your article ( Zuckerberg pushes ‘superintelligent’ AI for all as Meta releases open-weight model, 10..."
       - title: "Anthropic could be worth $2 trillion when it goes public"
         url: "https://arstechnica.com/ai/2026/08/anthropic-could-be-worth-2-trillion-when-it-goes-public/"
         source: "Ars Technica"
@@ -43,31 +68,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-13
         summary: "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid..."
-      - title: "Mark Zuckerberg says the future of AI is for everyone. But who owns it? | Raffi Krikorian"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/13/mark-zuckerberg-future-of-ai"
-        source: "The Guardian"
-        date: 2026-08-13
-        summary: "It’s a nice sentiment, but all AI users should ask three questions about their preferred choice of AI platform On Monday, Mark Zuckerberg published a 6,500-word essay, The Future Is for Everyone. The essay came with..."
-      - title: "Claude's new Scarlet Letter watermark is invisible—for now"
-        url: "https://arstechnica.com/tech-policy/2026/08/claudes-new-scarlet-letter-watermark-is-invisible-for-now/"
-        source: "Ars Technica"
-        date: 2026-08-13
-        summary: "The mark flags anything Claude processed, even human writing it only edited."
-      - title: "Lost jobs, inequality, rogue agents: why are we accepting oligarchs’ AI agenda? | Robert Reich"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/13/lost-jobs-inequality-ai-oligarchs"
-        source: "The Guardian"
-        date: 2026-08-13
-        summary: "The dangers of AI become clearer every day. Why are we still acting as if we have no choice about our future? Rather than producing jobs, the US economy actually lost 23,000 jobs in July, according to Bureau of Labor..."
-      - title: "‘I feel like I’m at war’: are we losing the battle against machine-made music?"
-        url: "https://www.theguardian.com/music/ng-interactive/2026/aug/13/ai-music"
-        source: "The Guardian"
-        date: 2026-08-13
-        summary: "Despite outcry from musicians, AI slop is creeping into the charts as record labels scramble to adapt to a new normal where hits can be made at the click of a button This year, the battle for song of the summer has been..."
-      - title: "How kids feel about AI, in their own words"
-        url: "https://www.technologyreview.com/2026/08/13/1141410/how-kids-feel-about-ai-own-words/"
-        source: "MIT Technology Review"
-        date: 2026-08-13
-        summary: "When we set out to talk to kids about artificial intelligence, we thought we knew what we’d hear. We expected some to tell us they were using it to cheat a little, the way Millennials and Gen Xers opened up CliffsNotes..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Princeton student says she did not conduct the experiments described in her now-retracted paper"
+        url: "https://retractionwatch.com/2026/08/14/princeton-rishika-porandla-macromolecular-materials-engineering-experiments-retraction/"
+        source: "Retraction Watch"
+        date: 2026-08-14
+        summary: "Earlier this week, Retraction Watch reported on a Princeton student’s decision to retract her own paper from an engineering journal due to “significant methodological errors.” The student, Rishika Porandla, now tells us..."
       - title: "JAMA journal won’t retract oxycodone paper despite author request, citing no ‘falsification’"
         url: "https://retractionwatch.com/2026/08/13/jama-archives-internal-medicine-oxycodone-osteoarthritis-pain/"
         source: "Retraction Watch"
@@ -165,17 +170,12 @@ sections:
         url: "https://retractionwatch.com/2026/08/10/college-student-rishika-porandla-retract-own-paper-wiley-macromolecular-materials-engineering/"
         source: "Retraction Watch"
         date: 2026-08-10
-        summary: "As a sophomore at Princeton University, Rishika Porandla took a course called “The Curious Scientist,” where students practice disciplinary research skills and act as a “PI” on a project of their choosing. Porandla..."
+        summary: "Note, August 14, 2026: See an update to this story here. As a sophomore at Princeton University, Rishika Porandla took a course called “The Curious Scientist,” where students practice disciplinary research skills and..."
       - title: "Weekend reads: Second gene editing death in China reported; Jason Arday’s resignation from Cambridge; Retraction Watch’s sweet 16"
         url: "https://retractionwatch.com/2026/08/08/weekend-reads-second-gene-editing-death-in-china-reported-jason-ardays-resignation-from-cambridge-retraction-watchs-sweet-16/"
         source: "Retraction Watch"
         date: 2026-08-08
         summary: "If your week flew by — we know ours did — catch up here with what you might have missed. The week at Retraction Watch featured: In case you missed the news, the Hijacked Journal Checker now has more than 450 entries..."
-      - title: "Clarivate removes hold on mega-journal Heliyon after internal audit, 650+ retractions"
-        url: "https://retractionwatch.com/2026/08/07/clarivate-removes-hold-mega-journal-heliyon-after-internal-audit/"
-        source: "Retraction Watch"
-        date: 2026-08-07
-        summary: "Clarivate has lifted its hold on Heliyon after the journal’s internal audit led to over 1,000 retractions, expressions of concern and corrections. As a result, the journal will receive an impact factor in the coming..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
@@ -190,6 +190,11 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Who’s Tracking You? Use This New Service to Find Out"
+        url: "https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/"
+        source: "Krebs on Security"
+        date: 2026-08-14
+        summary: "It can be daunting to determine who's responsible for showing ads on the websites we visit, or who's harvesting data from the mobile apps we use every day. That information is already semi-public, but it is not easily..."
       - title: "Too Little, Too Late: Flock Admits Their Technology Needs Reforms"
         url: "https://www.eff.org/deeplinks/2026/08/too-little-too-late-flock-admits-their-technology-needs-reforms"
         source: "EFF Deeplinks"
@@ -245,8 +250,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-07-28
         summary: "The concept of “surveillance pricing” is just one part of a much larger problem and business model: corporations maximizing their profits by invading our privacy. The all-too-common business model is to systematically..."
-      - title: "Brazil gives parents social media controls for their kids. Should the US?"
-        url: "https://themarkup.org/privacy/2026/07/28/brazil-gives-parents-social-media-controls-for-their-kids-should-the-u-s"
-        source: "The Markup"
-        date: 2026-07-28
-        summary: "California is leading on kids’ data privacy in the U.S. but still lags internationally."
