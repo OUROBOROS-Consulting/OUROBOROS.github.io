@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-15
+generated: 2026-08-16
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "The first anti-AI protester to be jailed has a message for OpenAI, Anthropic and Meta: ‘Regain your humanity’"
+        url: "https://www.theguardian.com/us-news/2026/aug/16/california-openai-protester-wynd-kaufman"
+        source: "The Guardian"
+        date: 2026-08-16
+        summary: "Wynd Kaufman, 69, chained and locked the front doors of OpenAI’s headquarters last year with members of StopAI An activist who blocked the entrance to one of the world’s biggest AI companies is believed to have become..."
+      - title: "AI cheating, leaked papers and marking errors: how exam protests went global"
+        url: "https://www.theguardian.com/global-development/2026/aug/16/ai-cheating-leaked-papers-marking-errors-how-exam-protests-went-global"
+        source: "The Guardian"
+        date: 2026-08-16
+        summary: "Student unrest sweeps India, Portugal and Mexico as grievances and pressure for good grades in tough job market collide Families with teenagers in education know the private, hidden pain of exam season. But this year..."
+      - title: "‘We detected unusual activity’: the scam that uses AI to exploit your holiday photos"
+        url: "https://www.theguardian.com/money/2026/aug/16/scam-ai-holiday-photos-instagram-facebook"
+        source: "The Guardian"
+        date: 2026-08-16
+        summary: "Fraudsters use pictures posted on Instagram or Facebook to create emails seeking bank account details You are on a short break in Porto and post some pictures of your family on Instagram or Facebook. With a small..."
       - title: "Secondhand booksellers in UK and Ireland suspect AI firms behind ‘strange’ bulk orders"
         url: "https://www.theguardian.com/technology/2026/aug/15/uk-ireland-booksellers-suspect-ai-companies-bulk-orders-data-acquisition"
         source: "The Guardian"
@@ -28,26 +43,11 @@ sections:
         source: "The Guardian"
         date: 2026-08-14
         summary: "‘A great deal of public opposition is likely’ to a proposed datacentre near Edinburgh, the force says Police in Scotland have issued a stark warning about the need for “robust security measures” to stop proposed AI..."
-      - title: "A Queensland man enjoyed soaring profits from a crypto trading app. Then his money started disappearing"
-        url: "https://www.theguardian.com/australia-news/2026/aug/15/australia-crypto-money-investment-scam-ai-fraud-crime"
-        source: "The Guardian"
-        date: 2026-08-14
-        summary: "The administrative work required to run an effective investment scam has been drastically cut by using merging technology Get our breaking news email , free app or daily news podcast Within days of clicking on an online..."
       - title: "OpenAI and Anthropic in price war as Chinese AI rivals gain ground"
         url: "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/"
         source: "Ars Technica"
         date: 2026-08-14
         summary: "US groups release cheaper models after new challenges to their trillion-dollar ambitions."
-      - title: "As online dating goes into ‘salvage mode’, can AI solve all its problems?"
-        url: "https://www.theguardian.com/lifeandstyle/2026/aug/14/online-dating-salvage-mode--ai-bumble-app"
-        source: "The Guardian"
-        date: 2026-08-14
-        summary: "Dating apps such as Bumble forced to adapt as ‘swipe fatigue’ grows Bumble was supposed to be different. When it launched in 2014, it offered women a simple proposition: if you matched with a man, you had to make the..."
-      - title: "Unemployed young people to join AI boot camps to get job-ready"
-        url: "https://www.theguardian.com/society/2026/aug/14/unemployed-young-people-to-join-ai-boot-camps-to-get-job-ready"
-        source: "The Guardian"
-        date: 2026-08-13
-        summary: "Pilot scheme will provide three weeks of training as part of UK government’s latest attempt to address Neets crisis Young people out of work or at risk of unemployment in the UK are to join “AI boot camps” where they..."
       - title: "The new Instagram logo is the perfect embodiment of AI slop"
         url: "https://arstechnica.com/ai/2026/08/the-new-instagram-logo-is-the-perfect-embodiment-of-ai-slop/"
         source: "Ars Technica"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Weekend reads: Tragic news on former Cambridge prof; A ‘never AI’ research company was AI after all; OpenAI’s math breakthroughs don’t add up"
+        url: "https://retractionwatch.com/2026/08/15/weekend-reads-jason-arday-research-gold-ai-openai-math-breakthroughs/"
+        source: "Retraction Watch"
+        date: 2026-08-15
+        summary: "As we were assembling this week’s Weekend Reads, we learned the tragic news that former Cambridge professor Jason Arday had been found dead in his home. Arday has been the subject of several news stories in recent..."
       - title: "Princeton student says she did not conduct the experiments described in her now-retracted paper"
         url: "https://retractionwatch.com/2026/08/14/princeton-rishika-porandla-macromolecular-materials-engineering-experiments-retraction/"
         source: "Retraction Watch"
@@ -171,11 +176,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-10
         summary: "Note, August 14, 2026: See an update to this story here. As a sophomore at Princeton University, Rishika Porandla took a course called “The Curious Scientist,” where students practice disciplinary research skills and..."
-      - title: "Weekend reads: Second gene editing death in China reported; Jason Arday’s resignation from Cambridge; Retraction Watch’s sweet 16"
-        url: "https://retractionwatch.com/2026/08/08/weekend-reads-second-gene-editing-death-in-china-reported-jason-ardays-resignation-from-cambridge-retraction-watchs-sweet-16/"
-        source: "Retraction Watch"
-        date: 2026-08-08
-        summary: "If your week flew by — we know ours did — catch up here with what you might have missed. The week at Retraction Watch featured: In case you missed the news, the Hijacked Journal Checker now has more than 450 entries..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
@@ -200,16 +200,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-08-13
         summary: "Flock Safety, the embattled vendor of mass surveillance technology, has rolled out a handful of new reforms intended to appease the justified nationwide anger that has seen scores of towns cancel or suspend their..."
-      - title: "EPIC, Advocates Celebrate As New Jersey Signs Nation-Leading Kids’ Online Safety Bills Into Law"
-        url: "https://epic.org/epic-advocates-celebrate-as-new-jersey-signs-nation-leading-kids-online-safety-bills-into-law-2/"
-        source: "EPIC"
-        date: 2026-08-11
-        summary: "JERSEY CITY, N.J. — EPIC and New Jersey Kids Code Coalition advocates celebrated as Governor Mikie Sherrill signed the landmark New Jersey Kids Code into law alongside bills to create social media mental health warning..."
-      - title: "EPIC, Advocates Celebrate As New Jersey Signs Nation-Leading Kids’ Online Safety Bills Into Law"
-        url: "https://epic.org/epic-advocates-celebrate-as-new-jersey-signs-nation-leading-kids-online-safety-bills-into-law/"
-        source: "EPIC"
-        date: 2026-08-11
-        summary: "JERSEY CITY, N.J. — EPIC and New Jersey Kids Code Coalition advocates celebrated as Governor Mikie Sherrill signed the landmark New Jersey Kids Code into law alongside bills to create social media mental health warning..."
       - title: "Judges Sides with EPIC and AG, Telling Google, TikTok, and Meta Their Addictive Social Media Features Are Not 1A Speech"
         url: "https://epic.org/judges-sides-with-epic-and-ag-telling-google-tiktok-and-meta-their-addictive-social-media-features-are-not-1a-speech/"
         source: "EPIC"
@@ -245,6 +235,16 @@ sections:
         source: "EPIC"
         date: 2026-08-03
         summary: "Trump-Vance Administration Seeks to Allow Family Support Program to be Weaponized by Immigration Officials WASHINGTON, D.C. — A new legal challenge has been filed to the Trump-Vance administration’s effort to unlawfully..."
+      - title: "PRESS RELEASE: Coalition Challenges Dramatic Data Privacy Changes to Federal Assistance Program"
+        url: "https://epic.org/press-release-coalition-challenges-dramatic-data-privacy-changes-to-federal-assistance-program/"
+        source: "EPIC"
+        date: 2026-08-03
+        summary: "Trump-Vance Administration Seeks to Allow Family Support Program to be Weaponized by Immigration Officials WASHINGTON, D.C. — A new legal challenge has been filed to the Trump-Vance administration’s effort to unlawfully..."
+      - title: "EPIC, Coalition Urge Congress to Reject Defense Department’s Attempt to Withhold Information from FOIA"
+        url: "https://epic.org/epic-coalition-urge-congress-to-reject-defense-departments-attempt-to-withhold-information-from-foia/"
+        source: "EPIC"
+        date: 2026-08-03
+        summary: "Last Friday, EPIC joined a broad coalition of transparency organizations, government watchdog groups, and press freedom advocates to oppose a proposal from the Department of Defense (DoD) to exempt controlled..."
       - title: "San Francisco: Don’t Fall for Industry Defense of Surveillance Pricing"
         url: "https://www.eff.org/deeplinks/2026/07/san-francisco-dont-fall-industry-defense-surveillance-pricing"
         source: "EFF Deeplinks"
