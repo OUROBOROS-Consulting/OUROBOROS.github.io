@@ -272,8 +272,12 @@
   // Must follow .toc-h3: the two blocks tie on specificity, so source order
   // decides, and the active state has to win for subheadings too.
   &.is-active {
+    // --mark-strong, not --mark. Same reason as the rail's active icon: with no
+    // panel behind it the text is read against the page, and in light mode
+    // --mark (4.93:1) is dimmer than the --ink-1 rest state (5.74:1), so the
+    // current entry was the faintest one in the outline.
     > a {
-      color: var(--mark);
+      color: var(--mark-strong);
       opacity: 1;
     }
 

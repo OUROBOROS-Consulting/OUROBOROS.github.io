@@ -321,7 +321,11 @@
   width: 45px;
   height: 75px;
   //background-color: var(--mark);
-  opacity: 0.4;
+  // Themed for consistency with the other two snake.svg sites. Resolves to the
+  // dark pair in practice, because both hosts (#hero, .page-hero) are dark
+  // islands — but if either ever loses that include, this self-corrects.
+  opacity: var(--snake-opacity);
+  filter: var(--snake-filter);
   animation: scrollPulse 2s ease-in-out infinite;
   background-repeat: no-repeat;
   background-size: contain;

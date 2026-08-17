@@ -175,7 +175,11 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    opacity: 0.4;
+    // Themed, because .rail is the one snake that floats in the page's own
+    // palette and the asset's baked gradients cannot follow a token. See the
+    // --snake-filter comment in _tokens.scss.
+    opacity: var(--snake-opacity);
+    filter: var(--snake-filter);
     animation: scrollPulse 2s ease-in-out infinite;
     pointer-events: none;
   }
@@ -227,9 +231,12 @@
   opacity: 0;
 }
 
+// Themed value, not a literal and not a light-mode override — see
+// --tick-soft-opacity in _tokens.scss for why the specificity forbids the
+// latter.
 .rail:hover .spine-tick,
 .rail:focus-within .spine-tick {
-  opacity: 0.55;
+  opacity: var(--tick-soft-opacity);
 }
 
 .rail .rail-group:hover .spine-tick,
@@ -256,8 +263,13 @@
   // No background tint. On a strip with no slab behind it a filled row reads as
   // a stray rectangle floating on the prose; the gold icon and the lit tick are
   // the hover feedback.
+  //
+  // --mark-strong, not --mark: the rail has no slab, so the icon is read against
+  // the page itself. In light mode --mark is 4.93:1 where the --ink-2 rest state
+  // is 8.20:1, so hover was a step DOWN in weight. --mark-strong sits above
+  // --ink-2 in both themes, which makes hover mean the same thing in both.
   &:hover {
-    color: var(--mark);
+    color: var(--mark-strong);
   }
 
   &:focus-visible {
@@ -317,8 +329,10 @@
 // x:0 sat three pixels off the spine's own axis and read as a second, competing
 // rule once the wave was there.
 .rail-group--active {
+  // --mark-strong for the same reason as :hover above — the current page's icon
+  // must not be the faintest thing on the strip in light mode.
   .rail-item {
-    color: var(--mark);
+    color: var(--mark-strong);
   }
 
   // No opacity here. The current page's bead is lit in the consolidated

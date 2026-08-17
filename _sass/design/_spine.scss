@@ -89,7 +89,12 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  opacity: 0.4;
+  // Themed. .page-toc is deliberately not a dark island either (see the note in
+  // _sidebar.scss: "there is no panel, ever"), so this snake had the same
+  // light-mode invisibility as the rail's. Any host that IS a dark island gets
+  // the dark pair back for free. See --snake-filter in _tokens.scss.
+  opacity: var(--snake-opacity);
+  filter: var(--snake-filter);
   animation: scrollPulse 2s ease-in-out infinite;
   pointer-events: none;
 }
@@ -189,7 +194,10 @@
   width: 1.38rem;
   height: 1.38rem;
   background: var(--mark);
-  opacity: 0.55;
+  // The outline's rest state is the rail's strip-hover state — same "present but
+  // not singled out" weight, so same token. Themed because 0.55 of --mark is
+  // 2.19:1 on a light page.
+  opacity: var(--tick-soft-opacity);
   pointer-events: none;
   transition:
     opacity 1s ease,

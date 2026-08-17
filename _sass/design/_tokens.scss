@@ -60,6 +60,46 @@
   --mark-dim: rgba(201, 168, 76, 0.35);
   --mark-ghost: rgba(201, 168, 76, 0.12);
   --mark-border: #b39f7b;
+  // Gold for an ACTIVATED control — hover, focus, current page — on a surface
+  // in the page's own palette. --mark alone is enough here in dark mode, but in
+  // light mode it is 4.93:1 against --ink-2's 8.20:1 rest state, so hovering an
+  // icon made it FAINTER. This token exists so hover raises contrast in both
+  // themes rather than only in one. 9.41:1 (8.69 on --surface-5).
+  --mark-strong: #c9b48d;
+
+  // snake.svg is a light-on-dark asset with 128 baked linear gradients, every
+  // one running #777557 → #DDD8A2. Nothing in it responds to a token, so the
+  // theme has to act on the whole element instead. --snake-filter is therefore
+  // the load-bearing half of this pair, and it does the entire light-mode fix.
+  //
+  // Both live in the palette rather than at the use sites so that any surface
+  // with @include dark-island gets the dark pair back automatically. That is
+  // what leaves the hero's snake alone (#hero and .page-hero are islands) while
+  // fixing .rail and .page-toc, which deliberately are not — both float in the
+  // page's own palette, and both went invisible on a light page.
+  //
+  // ⚠ --snake-opacity only governs the REDUCED-MOTION rendering. All three
+  // snakes run scrollPulse, and the winning definition of those keyframes
+  // (_home.scss, which loads after the opacity-only one in _base.scss) animates
+  // opacity 0.3 → 1 → 0.3. A declared opacity loses to an animated one for the
+  // whole cycle, so the literal 0.4 that used to sit at these use sites had
+  // never applied either. Under prefers-reduced-motion the global reset cuts the
+  // animation to one 0.01ms iteration with the default fill-mode, after which
+  // the element falls back to this value and holds there. Do not raise it
+  // expecting the animated snake to change — reach for the filter instead.
+  --snake-opacity: 0.4;
+  --snake-filter: none;
+
+  // Bead opacity when the bead is present but not singled out — the left rail's
+  // strip-hover state and the right outline's rest state. One concept, two
+  // hosts. Themed for the same reason as the snake: --mark at 0.55 is 2.19:1 on
+  // a light page, under the 3:1 non-text floor.
+  //
+  // A custom property, NOT a light-mode override on the rules themselves: the
+  // rail's three bead states depend on 0,2,0 / 0,3,0 / 0,4,0 specificity, and
+  // light-mode's :root prefix would have outranked the 0,4,0 rule and pinned a
+  // singled-out bead at the softer value.
+  --tick-soft-opacity: 0.55;
 
   --steel: #7F94A6;
   --steel-dim: rgba(127, 148, 166, 0.55);
@@ -161,6 +201,26 @@
   --mark-dim: rgba(122, 96, 40, 0.35);
   --mark-ghost: rgba(122, 96, 40, 0.12);
   --mark-border: #8A7550; // 3.68:1 on --surface-1 — non-text, 3:1 floor
+  // 8.38:1 — deliberately just ABOVE --ink-2's 8.20:1, so an activated control
+  // gains weight on hover here exactly as it does in dark mode. Deep bronze
+  // rather than a lighter gold, because on a light page contrast IS presence.
+  --mark-strong: #523F15;
+
+  // brightness(0.45) takes the pale gradient stop #DDD8A2 to #636149 (5.22:1 on
+  // --surface-1 at full opacity, 3.60:1 at 0.8) and the dark stop #777557 to
+  // #363527 (10.28:1, 6.20:1 at 0.8). Untreated, the pale stop is 1.21:1 even at
+  // full opacity — so no opacity value could have rescued it, and that is why the
+  // filter exists. saturate keeps the result olive-bronze rather than grey.
+  //
+  // The gradient's read inverts between themes: the pale stop is the prominent
+  // half on a dark ground, the dark stop is the prominent half here. That is
+  // correct — distance from the page is what the eye picks up — and it keeps the
+  // artwork's dimensionality rather than flattening it to one tone.
+  --snake-opacity: 0.8;
+  --snake-filter: brightness(0.45) saturate(1.4);
+
+  // 3.71:1 at --mark, clearing the 3:1 non-text floor. 0.55 gave 2.19:1.
+  --tick-soft-opacity: 0.85;
 
   --steel: #4A5A68; // 5.90:1 on --bg1
   --steel-dim: rgba(74, 90, 104, 0.80);
