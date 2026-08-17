@@ -21,9 +21,17 @@
   // size changes nothing, and it was already a stacking context and a
   // containing block via position/z-index. It holds no fixed descendants.
   container-type: inline-size;
-  background-color: #0C0E20; // matches page-hero deep-navy scrim end; homepage hero only
+  // Bluer than the #0C0E20 it was until 2026-08-17, per direct user direction.
+  // It no longer matches the interior .page-hero's deep-navy scrim end exactly
+  // (that is still rgba(12, 14, 32, 0.88) in main.scss) — deliberate, since only
+  // the homepage hero was asked to move. If the two ever need to agree again,
+  // change the scrim there rather than walking this one back.
+  background-color: #0F1638; // homepage hero only
   background-image:
-    radial-gradient(ellipse 80% 65% at 50% 50%, transparent 0%, rgba(8, 8, 8, 0.55) 100%),
+    // Navy vignette, not the near-black rgba(8, 8, 8, 0.55) it was. A black
+    // vignette over a blue base greys the edges out and cancels the change above,
+    // so the darkening has to happen in the same hue as the ground.
+    radial-gradient(ellipse 80% 65% at 50% 50%, transparent 0%, rgba(6, 10, 38, 0.62) 100%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='48'%3E%3Cpolygon points='28,2 52,15 52,41 28,54 4,41 4,15' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.066'/%3E%3Cpolygon points='0,15 0,41 -24,28' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.066'/%3E%3Cpolygon points='56,15 56,41 80,28' fill='none' stroke='%23C9A84C' stroke-width='0.4' stroke-opacity='0.066'/%3E%3C/svg%3E");
   background-size: 100% 100%, 50px 43px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);

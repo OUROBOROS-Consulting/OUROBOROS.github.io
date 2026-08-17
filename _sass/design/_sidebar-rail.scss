@@ -25,23 +25,36 @@
 
 :root {
   --rail-top: 6.5rem; // clears the fixed primary bar
-  --rail-x: 40px; // gap between the viewport edge and the strip
+  --rail-x: 40px; // clear space from the viewport edge to the strip
   --rail-w: 3.5rem; // the icon column — the rail is always exactly this wide
   --rail-label-w: 12rem; // plaque ceiling, sized to fit ANNOUNCEMENTS, the longest label
 
-  // ── The three lanes inside those 3.5rem (56px) ──────────────────────────────
+  // ── The three lanes ─────────────────────────────────────────────────────────
   // Left to right: snake, then beads, then icons. Nothing overlaps, per the
   // 2026-08-17 direction that the ticks sit to the RIGHT of the snake.
   //
-  //   snake   0    → 16px   (--rail-snake-w)
+  //   snake  -40   → 16px   (--rail-snake-w, and see below)
   //   bead   17.5  → 28.9px (11.3px point to point, centred on --rail-tick-x)
   //   icon   31.2  → 52.8px (1.35rem glyph at --rail-icon-x)
   //
-  // That leaves ~3px of slack at the right edge, which is the whole budget.
-  // Widening any lane means widening --rail-w, and --rail-w feeds --rail-total,
-  // which body reserves as padding-left and every full-bleed band pulls back by
-  // (see _base.scss and main.scss). Changing it moves the entire site inward.
-  --rail-snake-w: 1rem;
+  // Measured from the strip's left edge, so only the bead and icon lanes spend
+  // the strip's 3.5rem (56px). That leaves ~3px of slack at its right edge,
+  // which is the whole budget. Widening either of those means widening --rail-w,
+  // and --rail-w feeds --rail-total, which body reserves as padding-left and
+  // every full-bleed band pulls back by (see _base.scss and main.scss).
+  // Changing it moves the entire site inward.
+  //
+  // The snake is the exception, because it grew on 2026-08-17 and did NOT cost
+  // the site any width. --rail-x is 40px of ALREADY-RESERVED emptiness between
+  // the viewport edge and the strip, so the snake spends that instead: it hangs
+  // out to -40px and still ends at +16px, clear of the bead's 17.5px leading
+  // edge. Hence the derivation rather than a literal 3.5rem — on phones --rail-x
+  // is 0 (see the media query at the foot of this file), there is no gutter to
+  // borrow, and the snake correctly falls back to its old 1rem lane. Both this
+  // and --rail-x are declared on :root, so the substitution re-resolves inside
+  // that media query; do NOT move either one onto .rail (see the matching
+  // warning about --spine-crest in _spine.scss).
+  --rail-snake-w: calc(var(--rail-x) + 1rem);
   --rail-tick-x: 1.45rem; // bead CENTRE, not its leading edge
   --rail-icon-x: 1.95rem; // where the icon glyph starts
 
@@ -125,30 +138,43 @@
   // stack hung outside the rail it belongs to.
   padding: var(--space-4) 0;
 
-  // The snake, stretched to the height of the bead run rather than drawn at its
-  // own scale. top/bottom: 0 is what makes "as long as the number of ticks"
-  // structural: add a fourth rail-group and the snake grows with it, no number
-  // to update. It spans the padding as well as the rows, so it runs a little
-  // past the first and last bead instead of stopping dead on them.
+  // The snake. top/bottom: 0 keeps "as long as the number of ticks" structural:
+  // add a fourth rail-group and the box grows with it, no number to update.
   //
-  // background-size: 100% 100% is a deliberate distortion. The illustration is
-  // natively 93×190; in a 1rem lane it is compressed about 6:1 laterally and
-  // reads as a thin sinuous thread, which is the treatment this rail was always
-  // reaching for. Approved 2026-08-17 in preference to widening the strip.
+  // ⚠ THIS BOX IS NOT THE SNAKE'S RENDERED SIZE, and assuming it was is what
+  // made the snake tiny until 2026-08-17. snake.svg carries a viewBox, and an
+  // SVG background with a viewBox honours preserveAspectRatio (default
+  // xMidYMid meet) INSIDE whatever box background-size gives it. So the old
+  // `background-size: 100% 100%` did not stretch anything — it handed the SVG a
+  // 16x168 viewport, into which the 93x190 artwork letterboxed at
+  // min(16/93, 168/190) = 16x33px. The comment here used to claim a deliberate
+  // 6:1 lateral compression; that compression was never possible without editing
+  // preserveAspectRatio in the asset itself.
   //
-  // No centring transform, so scrollPulse's own translate is free to animate
-  // without knocking the snake off its lane — the bug that still affects the
-  // right-hand outline (see _spine.scss).
+  // So WIDTH is the only lever on how big the snake reads, and `contain` states
+  // that honestly. In the widened lane the artwork now renders 56x114 — about 3.4x
+  // its old height, per the 2026-08-17 direction to make it substantially bigger.
+  // 56px is the hard ceiling: the box starts at the viewport edge and must end
+  // before the bead lane's 17.5px leading edge. Going taller than ~114px means
+  // either widening --rail-w (which moves the whole site inward, see the token
+  // block above) or setting preserveAspectRatio="none" in snake.svg and accepting
+  // a visibly stretched animal.
+  //
+  // No centring transform: scrollPulse animates transform, so any transform here
+  // is overridden for the whole cycle — the bug that still affects the right-hand
+  // outline (see _spine.scss). background-position does the centring instead,
+  // which costs nothing and cannot be clobbered.
   &::before {
     content: '';
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: calc(var(--rail-x) * -1);
     width: var(--rail-snake-w);
     background-image: url('../images/snake.svg');
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: contain;
+    background-position: center;
     opacity: 0.4;
     animation: scrollPulse 2s ease-in-out infinite;
     pointer-events: none;
