@@ -11,11 +11,11 @@ who: null
 about:
   heading: What the literature actually says
   body: >
-    The gap between what psychology and sociology know about coercive control and institutional betrayal
-    and what courts and institutions do about it is staggering.
+    Psychology and sociology understand coercive control and institutional betrayal well.
+    Courts and institutions act as though they do not.
     These references are the foundation of that knowledge.
-    They are cited in clinical training, legal scholarship, and policy documents
-    — and routinely ignored in practice.
+    They are cited in clinical training, legal scholarship, and policy documents,
+    then routinely ignored in practice.
 
 # ── Pull quote ─────────────────────────────────────────────────────────────
 pull_quote: >

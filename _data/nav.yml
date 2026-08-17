@@ -48,6 +48,9 @@
     - title: Case Studies
       url: /case-studies/
     - title: Mission
+      # No trailing slash on purpose. _about/mission.md inherits the collection
+      # permalink /:slug and builds to mission.html, not mission/index.html, so
+      # /mission/ would 404. See issue #97 before "fixing" this.
       url: /mission
     - title: FAQ
       url: /faq/

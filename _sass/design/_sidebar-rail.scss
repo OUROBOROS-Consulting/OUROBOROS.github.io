@@ -29,6 +29,22 @@
   --rail-w: 3.5rem; // the icon column — the rail is always exactly this wide
   --rail-label-w: 12rem; // plaque ceiling, sized to fit ANNOUNCEMENTS, the longest label
 
+  // ── The three lanes inside those 3.5rem (56px) ──────────────────────────────
+  // Left to right: snake, then beads, then icons. Nothing overlaps, per the
+  // 2026-08-17 direction that the ticks sit to the RIGHT of the snake.
+  //
+  //   snake   0    → 16px   (--rail-snake-w)
+  //   bead   17.5  → 28.9px (11.3px point to point, centred on --rail-tick-x)
+  //   icon   31.2  → 52.8px (1.35rem glyph at --rail-icon-x)
+  //
+  // That leaves ~3px of slack at the right edge, which is the whole budget.
+  // Widening any lane means widening --rail-w, and --rail-w feeds --rail-total,
+  // which body reserves as padding-left and every full-bleed band pulls back by
+  // (see _base.scss and main.scss). Changing it moves the entire site inward.
+  --rail-snake-w: 1rem;
+  --rail-tick-x: 1.45rem; // bead CENTRE, not its leading edge
+  --rail-icon-x: 1.95rem; // where the icon glyph starts
+
   // The rail's true footprint, and the ONLY thing a consuming site should
   // reserve. It was reserving --rail-w alone while the rail sat 40px inboard,
   // which put the icons and the right two thirds of the thread on top of the
@@ -49,7 +65,11 @@
 
   position: fixed;
   top: var(--rail-top);
-  left: 0;
+  // --rail-x, not 0. body reserves --rail-total (= --rail-x + --rail-w) as
+  // padding-left, so pinning the strip at 0 left a 40px band of reserved
+  // emptiness to its right and shoved the icons against the viewport edge.
+  // On phones --rail-x is redeclared to 0px, so this is flush there by design.
+  left: var(--rail-x);
   bottom: 0;
   z-index: 90;
   // Column flex exists so .rail-nav's auto block margins can centre the group
@@ -81,22 +101,58 @@
     overflow: hidden;
   }
 
-  // The thread lights when the cursor is anywhere on the strip. This is the
-  // only whole-rail state left: it changes nothing's size or position, so it
-  // cannot push the page around. :focus-within keeps it true for keyboard.
-  &:hover,
-  &:focus-within {
-    @include spine-lit;
-  }
+  // No @include spine-lit here any more. That mixin lights .spine-wave, which
+  // never paints on the rail, and set .spine-tick to a fixed 0.9 — which fought
+  // the reveal below at equal specificity. The rail owns all three of its tick
+  // states explicitly now; see the block under .rail-group. The outline still
+  // uses the mixin (_sidebar.scss), so it stays defined in _spine.scss.
 }
 
+// ── The icon stack, and the snake that measures it ───────────────────────────
+// position: relative is what makes this the snake's containing block. That is
+// the whole fix for the snake sitting at the viewport midpoint: the snake used
+// to hang off .rail, which is a full-height fixed strip, so "centred on its
+// host" meant centred on the window.
 .rail-nav {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   flex-shrink: 0;
   margin: auto auto; // centres the group stack in the full-height rail
-  padding: var(--space-4) var(--space-4);
+  // Vertical padding only. This was `var(--space-4) var(--space-4)`, which put
+  // a 56px .rail-item inside an 80px box inside a 56px strip — 24px of the
+  // stack hung outside the rail it belongs to.
+  padding: var(--space-4) 0;
+
+  // The snake, stretched to the height of the bead run rather than drawn at its
+  // own scale. top/bottom: 0 is what makes "as long as the number of ticks"
+  // structural: add a fourth rail-group and the snake grows with it, no number
+  // to update. It spans the padding as well as the rows, so it runs a little
+  // past the first and last bead instead of stopping dead on them.
+  //
+  // background-size: 100% 100% is a deliberate distortion. The illustration is
+  // natively 93×190; in a 1rem lane it is compressed about 6:1 laterally and
+  // reads as a thin sinuous thread, which is the treatment this rail was always
+  // reaching for. Approved 2026-08-17 in preference to widening the strip.
+  //
+  // No centring transform, so scrollPulse's own translate is free to animate
+  // without knocking the snake off its lane — the bug that still affects the
+  // right-hand outline (see _spine.scss).
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: var(--rail-snake-w);
+    background-image: url('../images/snake.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.4;
+    animation: scrollPulse 2s ease-in-out infinite;
+    pointer-events: none;
+  }
   // This used to carry background/border/backdrop-filter resets, because the
   // primary bar's chrome was written as a bare `nav {}` selector and landed
   // here. It also carried a ::after marble strip that the resets missed, which
@@ -119,11 +175,40 @@
   // than a bead on a thread. Keep it under the icon's left edge; the active
   // state below is what grows and lights it.
   .spine-tick {
-    left: var(--spine-crest);
+    // --rail-tick-x, not --spine-crest. The crest is where the retired
+    // procedural wave peaked (10px), which is now inside the snake's lane and
+    // would sit the beads on top of it. The beads belong to the RIGHT of the
+    // snake, so they get their own lane token.
+    left: var(--rail-tick-x);
     width: 0.5rem;
     height: 0.5rem;
     transform: translate(-50%, -50%) rotate(45deg);
   }
+}
+
+// ── Bead visibility, all three states in one place ───────────────────────────
+// Specificity is doing real work here, so the order and the selector shapes are
+// both load-bearing. Do not flatten these.
+//
+//   .rail .spine-tick                     0,2,0  rest
+//   .rail:hover .spine-tick               0,3,0  strip hovered
+//   .rail .rail-group:hover .spine-tick   0,4,0  one bead singled out
+//
+// Invisible at rest, per the 2026-08-17 direction: the beads do not exist until
+// the cursor finds the snake. The exception is the current page's bead, which
+// stays lit so the rail still answers "where am I" without being touched.
+.rail .spine-tick {
+  opacity: 0;
+}
+
+.rail:hover .spine-tick,
+.rail:focus-within .spine-tick {
+  opacity: 0.55;
+}
+
+.rail .rail-group:hover .spine-tick,
+.rail .rail-group--active .spine-tick {
+  opacity: 1;
 }
 
 // ── Top-level item (icon + label) ────────────────────────────────────────────
@@ -135,8 +220,8 @@
   align-items: center;
   height: 3rem;
   width: var(--rail-w);
-  // Clears the spine, then centres what is left of the strip.
-  padding: 0 0 0 calc(var(--spine-crest) + var(--space-3));
+  // Third lane: clears both the snake and the bead. See --rail-icon-x.
+  padding: 0 0 0 var(--rail-icon-x);
   text-decoration: none;
   color: var(--ink-2);
   white-space: nowrap;
@@ -152,10 +237,6 @@
   &:focus-visible {
     outline-offset: -2px;
   }
-}
-
-.rail-group:hover .spine-tick {
-  opacity: 1;
 }
 
 // ── Button variant (theme toggle) ────────────────────────────────────────────
@@ -214,12 +295,14 @@
     color: var(--mark);
   }
 
+  // No opacity here. The current page's bead is lit in the consolidated
+  // visibility block above, which has to own every opacity state or the rest
+  // and hover rules cancel each other out at equal specificity.
   .spine-tick {
     width: 0.55rem;
     height: 0.55rem;
     background: var(--mark);
     box-shadow: 0 0 0 3px var(--mark-ghost);
-    opacity: 1;
   }
 }
 

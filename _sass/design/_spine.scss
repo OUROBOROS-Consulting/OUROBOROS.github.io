@@ -60,16 +60,23 @@
 
 // ── Single snake ─────────────────────────────────────────────────────────────
 // One static copy of the same illustration .scroll-line uses (see _home.scss),
-// same animation, centred on each panel. This is a starting point, not a
-// finished placement — deliberately unrefined per that same decision.
+// same animation, centred on the panel.
 //
-// Ticks are real DOM children of [data-spine]; the snake is a generated
-// pseudo-element. At the default z-index (auto), paint order follows DOM/box
-// order — ::before generates as the FIRST child (paints underneath, so the
-// ticks paint after it, on top) and ::after generates as the LAST child
-// (paints on top, so the ticks paint before it, underneath). The rail wants
-// its ticks after the snake; the outline wants its ticks before the snake —
-// hence ::before on one host and ::after on the other, not a shared selector.
+// ⚠ ONLY the right-hand outline uses this now. The rail's snake was moved onto
+// .rail-nav and stretched to the height of the tick stack on 2026-08-17, so it
+// is as long as the run of beads and sits to their left; that version lives in
+// _sidebar-rail.scss and does not go through here. Centring on the panel root
+// is what put the rail's snake at the viewport midpoint on top of the theme
+// toggle, because the root is the full-height fixed strip, not the icon column.
+//
+// ⚠ scrollPulse animates `transform`, which overrides the translate below for
+// the whole cycle — the snake loses its own centring as it pulses. The rail no
+// longer relies on a centring transform, so this is harmless there; the outline
+// still does, and this is why it drifts. Not fixed here: the outline was not in
+// scope for the rail work.
+//
+// The outline wants its ticks to paint BEFORE the snake, so this is ::after
+// (generated as the last child, painting on top at the default z-index).
 %spine-snake {
   content: '';
   position: absolute;
@@ -85,10 +92,6 @@
   opacity: 0.4;
   animation: scrollPulse 2s ease-in-out infinite;
   pointer-events: none;
-}
-
-.rail[data-spine]::before {
-  @extend %spine-snake;
 }
 
 .page-toc[data-spine]::after {

@@ -37,8 +37,7 @@ layout: default
     <div>
       <p class="band-label">What Clients Say</p>
       <h2 class="band-heading">Testimonials</h2>
-      <p class="testimonials-context"
-        style="margin-top:0.5rem;font-size:0.8125rem;color:var(--ink-1);letter-spacing:0.01em;font-style:italic;">These
+      <p class="testimonials-context">These
         testimonials are from federal, corporate, and private engagements, quoted with permission. Survivor and
         advocacy work is confidential by design.
       </p>
@@ -107,9 +106,9 @@ layout: default
     </div>
     {% endif %}
 
-    {% if page.stats.clients_consulted %}
+    {% if page.stats.clients %}
     <div class="stat">
-      <span class="stat-value">{{ page.stats.clients_consulted }}</span>
+      <span class="stat-value">{{ page.stats.clients }}</span>
       <span class="stat-label">Consulting Engagements</span>
     </div>
     {% endif %}

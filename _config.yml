@@ -37,7 +37,14 @@ collections:
 # "scripts" is listed explicitly: fetch_news.py is a build-time tool, not site
 # content. The pre-existing "script" entry already excluded it by prefix match,
 # which is a coincidence, not an intention.
-exclude: ["script", "scripts", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "README.md", "CLAUDE.md", "package.json", "package-lock.json", "node_modules", "docs"]
+exclude: ["script", "scripts", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "README.md", "CLAUDE.md", "package.json", "package-lock.json", "node_modules", "docs",
+  # Three orphaned PDFs: nothing on the site links to them, but jekyll-sitemap
+  # indexes static .pdf files regardless of front matter, so they were crawlable.
+  # Excluding keeps them in the repo and off the live site. Reversible.
+  #   AS_Resume.pdf   — carries the 5+ years federal claim contradicted elsewhere
+  #   Stamenos_cv.pdf — 1-byte empty file
+  #   DSM.pdf         — its PSA (_psas/DSM.md) is published: false
+  "assets/files/AS_Resume.pdf", "assets/files/Stamenos_cv.pdf", "assets/files/PSA/PsychLiteracy/DSM.pdf"]
 markdown: kramdown
 
 plugins:

@@ -343,7 +343,12 @@
 .card-icon {
   position: relative; // containing block for the light-mode glyph plate
   width: 30%;
-  margin-bottom: var(--space-6);
+  // --space-8 (2rem), up from --space-6 (1.25rem) on 2026-08-17. The service
+  // SVGs are drawn tight to their own bounding box with no internal padding, so
+  // 20px measured correctly and still read as the title touching the artwork.
+  // This is the only separation between the two — .card-title has no margin-top
+  // of its own — so the whole gap is spent here.
+  margin-bottom: var(--space-8);
   font-size: 5rem; // Font Awesome fallback glyph when no hero_svg
   color: var(--ink-4);
 
@@ -664,7 +669,13 @@
 
 .carousel-count {
   @include label-caps(var(--fs-1), 0.12em);
-  min-width: 4ch;
+  // 6ch, not 4ch, and nowrap. The label is five glyphs ("3 / 4") and
+  // label-caps adds 0.12em of letter-spacing to every one of them, so 4ch was
+  // narrower than the text it had to hold and the count broke onto a second
+  // line between the arrows. nowrap is the actual guarantee; min-width just
+  // stops the arrows shuffling as the numbers change width.
+  min-width: 6ch;
+  white-space: nowrap;
   text-align: center;
 }
 

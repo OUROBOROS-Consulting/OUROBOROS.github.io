@@ -1,8 +1,19 @@
 <aside id="rail" class="rail" aria-label="Contact and announcements" data-spine>
-  <!-- data-spine on the panel root makes it the host for the golden thread, so
-       the thread spans the rail's full height rather than just the group stack;
-       spine.js crests it through the centre of each data-spine-node group. Each row reveals its
-       OWN label on hover; the rail itself never widens. -->
+  <!-- Three lanes, left to right: the snake, then the beads, then the icons.
+       The snake is a ::before on .rail-nav (NOT on this element) so it stretches
+       to the height of the bead run — add a fourth rail-group and it grows on
+       its own. See _sass/design/_sidebar-rail.scss for the lane budget; all
+       three lanes share 3.5rem and there is ~3px of slack.
+
+       Beads are invisible at rest and fade in when the cursor is anywhere on
+       the strip. The current page's bead stays lit regardless.
+
+       data-spine and data-spine-node are inert as far as CSS is concerned — the
+       procedural golden thread was retired 2026-08-11 and .spine is
+       display:none. They stay because assets/js/spine.js still reads them, and
+       because .spine-tick is a real child of each data-spine-node row.
+
+       Each row reveals its OWN label on hover; the rail itself never widens. -->
   <nav class="rail-nav">
     <div class="rail-group{% if page.url contains '/intake' %} rail-group--active{% endif %}" data-spine-node>
       <span class="spine-tick" aria-hidden="true"></span>
