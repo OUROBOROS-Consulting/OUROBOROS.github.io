@@ -11,7 +11,7 @@ lede: >
   advocacy and documentation support to move with clarity, build a credible record,
   and understand the process you are inside of.
 tags: [Institutional Navigation, Documentation Strategy, Coercive Control, Survivor Support, Public Records, FOIA]
-price: Sliding scale · Free consultations
+price: From $100/hr · Free consultations
 cta_label: Book a Free Consultation
 cta_body: First consultation is always free. Send a brief description of your situation — all inquiries are confidential. I respond within 72 hours.
 who: >
@@ -50,24 +50,23 @@ policies:
   - item: "I work only with your own records. I do not take work aimed at a third party, and I do not give legal advice"
   - item: "Travel surcharge: +$25/hr for in-person outside Minneapolis metro"
   - item: "Retainer discount: 10% off 20+ hours booked upfront"
-  - item: "Survivor sliding scale: $50/hr, available on request"
   - item: "Response time: Within 72 hours"
 rate_principle: >
-  This page mixes sliding-scale advocacy with paid documentation work. Advocacy sessions
-  are set by your circumstances, down to a $50/hr floor. The paid records and
-  chronology tiers fund that access. We set every figure together
-  before anything begins.
+  $100 an hour is the floor and it is what advocacy sessions and record review cost.
+  Nothing here goes below it. The records and chronology tiers cost more because they
+  take more hours and more precision, not because they subsidize anything. You get
+  every figure in writing before any work starts.
 pricing:
   - name: Initial Consultation
     rate: Free (45 min)
     notes: >
       A no-commitment conversation to understand your situation and determine whether I can be useful to you. No referral required.
   - name: Advocacy Sessions
-    rate: $50/hr
+    rate: $100/hr
     notes: >
-      For survivors, seniors, and veterans. Ask during the consultation.
+      Strategy, institutional navigation, and documentation planning. This is the floor rate and it applies to everyone.
   - name: Record & Document Review
-    rate: $50/hr
+    rate: $100/hr
     notes: >
       Structured review of existing correspondence, institutional records, or chronologies, with written notes returned to you.
   - name: Records Requests
@@ -108,4 +107,4 @@ This work is confidential. It is not therapy — though I can help you find that
 
 Hourly for advocacy sessions, records work, and strategy. Project-based for scoped deliverables like a chronology or a records campaign. Retained monthly for ongoing advisory or support work.
 
-For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.
+The first consultation is free and everything published on this site is free. Beyond that, $100 an hour is the floor. If that is out of reach, say so on the consultation and I will point you to the free resources and the advocates in your county who cost nothing.

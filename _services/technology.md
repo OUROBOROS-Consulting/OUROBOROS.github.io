@@ -32,7 +32,7 @@ policies:
   - item: "Discovery call: Free (20 min)"
   - item: "Travel surcharge: +$25/hr for in-person outside Minneapolis metro"
   - item: "Prepaid discount: 10% off for 10+ hours booked upfront"
-  - item: "Nonprofits, students & survivors: Reduced and sliding scale rates available — ask"
+  - item: "Nonprofits, students & survivors: reduced rates available on request, down to the $100/hr floor"
   - item: "AI projects include a post-delivery audit (no extra charge)"
   - item: "Response time: Within 72 hours"
 specializations:
@@ -103,4 +103,4 @@ AI compresses the timeline between vulnerability discovery and exploitation. If 
 
 Hourly for sessions, audits, and implementation work. Project-based for discrete deliverables with clear scope. Retained monthly for ongoing technical partnership.
 
-For survivors, advocates, and individuals in active institutional disputes: sliding scale rates and pro-bono capacity are available. Reach out directly.
+Nonprofits, students, and survivors can ask for a reduced rate on this work. It slides down toward $100 an hour and no further, because $100 is the floor across the whole practice. Ask directly and I will give you a number.

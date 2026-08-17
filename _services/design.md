@@ -36,7 +36,7 @@ policies:
   - item: "Discovery call: Free (20 min)"
   - item: "Sites built accessible by default — WCAG conformance is included, not an add-on"
   - item: "You own everything: source files, code, accounts, documentation"
-  - item: "Nonprofits, students & survivors: Reduced and sliding-scale rates available — ask"
+  - item: "Nonprofits, students & survivors: reduced rates available on request, down to the $100/hr floor"
   - item: "Response time: Within 72 hours"
   - item: "Revisions: one round included on Flash, two on Custom builds; additional rounds billed hourly"
   - item: "Deposit: 50% reserves the build window; timelines run from your content, not my calendar"

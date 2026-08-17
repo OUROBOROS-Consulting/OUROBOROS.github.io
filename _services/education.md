@@ -52,30 +52,29 @@ policies:
   - item: "Every session ends with a written summary you keep"
   - item: "I teach method. I do not run research on a third party for a client"
   - item: "No training delivered where the purpose is locating, monitoring, or pursuing another person — every engagement is screened for misuse"
-  - item: "Reduced rates are available. Ask. No documentation required and no explanation needed"
   - item: "Response time: Within 72 hours"
 rate_principle: >
-  Organizational training funds the reduced rates. A newsroom or a law firm paying
-  a workshop rate is what makes it possible to sit with a survivor at fifty dollars
-  an hour and walk her through taking her own address off the internet. We set every
-  figure together before anything begins.
+  Individual coaching is priced at $100 an hour, which is the floor across this
+  practice. Organizations pay a day rate because a room of eight people is a
+  different job than a table of one. Curriculum is fixed scope. You get every
+  figure in writing before any work starts.
 pricing:
   - name: Intro Call
     rate: Free (30 min)
     notes: >
       No commitment. We work out whether a course is the right fit, and if it is not, I say so.
   - name: First Session
-    rate: $150 · $75 reduced
+    rate: $150
     notes: >
-      Ninety minutes, in any track, including the written summary. The reduced rate works out to fifty dollars an hour, the same floor that holds everywhere else in this practice.
+      Ninety minutes, in any track, including the written summary. That works out to $100 an hour, the floor that holds everywhere else in this practice.
   - name: Follow-Up Session
-    rate: $125 · $60 reduced
+    rate: $125
     notes: >
       One hour. Most people want three to five sessions, paced to them, not a standing engagement.
   - name: Four Sessions, Prepaid
-    rate: $450 · $220 reduced
+    rate: $450
     notes: >
-      Booked together and used at your pace. Cheaper than four singles, and it is how most of the AI coaching actually runs.
+      A first session plus three follow-ups, booked together and used at your pace. Four and a half hours at the floor rate, which is cheaper than buying them one at a time.
   - name: Organizational Workshops
     rate: $1,200 half-day / $2,000 full day
     notes: >
@@ -126,4 +125,4 @@ Ten tutorials covering device security, encrypted communication, deepfake recogn
 
 ## Engagement Models
 
-Per session for individual coaching, in any track. Day rate for organizational workshops. Fixed scope for curriculum development. Reduced rates for anyone the first three would price out, asked for and given without paperwork.
+Per session for individual coaching, in any track. Day rate for organizational workshops. Fixed scope for curriculum development. Ten tutorials on this site cover the same ground at no cost, and most people who read those do not need to book anything.
