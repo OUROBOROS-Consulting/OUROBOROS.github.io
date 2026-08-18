@@ -2,12 +2,47 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-17
+generated: 2026-08-18
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Dickovers, baggravation and botiquette: 18 new words to describe our tech hellscape"
+        url: "https://www.theguardian.com/technology/2026/aug/18/dickovers-baggravation-botiquette-18-new-words-tech-hellscape"
+        source: "The Guardian"
+        date: 2026-08-18
+        summary: "There are many tech irritants that are a scourge of modern life, yet we have lacked the vocabulary to describe them ... until now The “dickover” is the scourge of the modern age. Coined in May by John Gruber, a tech..."
+      - title: "Former SpaceX engineers are building a robotic factory for making steel parts"
+        url: "https://arstechnica.com/ai/2026/08/former-spacex-engineers-are-building-a-robotic-factory-for-making-steel-parts/"
+        source: "Ars Technica"
+        date: 2026-08-17
+        summary: "“We're not necessarily building in a dogmatic fashion towards full autonomy.”"
+      - title: "What Flock’s defenders are missing"
+        url: "https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/"
+        source: "MIT Technology Review"
+        date: 2026-08-17
+        summary: "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic..."
+      - title: "Hidden Airtag reveals Amazon is trashing rare books to train AI"
+        url: "https://arstechnica.com/tech-policy/2026/08/hidden-airtag-reveals-amazon-is-trashing-rare-books-to-train-ai/"
+        source: "Ars Technica"
+        date: 2026-08-17
+        summary: "Amazon’s team uses a T. rex preparing to devour a book as its logo."
+      - title: "Claude to start watermarking AI-generated text – but will it make quality worse?"
+        url: "https://www.theguardian.com/technology/2026/aug/17/claude-watermark-ai-text-quality-worse"
+        source: "The Guardian"
+        date: 2026-08-17
+        summary: "Anthropic says it will change way chatbot makes small, random choices, to comply with EU regulation The world is familiar by now with the usual tropes of machine-generated text: overuse of the word “delve”, an excess of..."
+      - title: "Sainsbury’s store pauses AI scanning after false shoplifting accusation"
+        url: "https://www.theguardian.com/technology/2026/aug/17/humiliated-sainsburys-store-pauses-ai-scanning-after-false-shoplifting-accusation"
+        source: "The Guardian"
+        date: 2026-08-17
+        summary: "Supermarket chain says ‘human error’, not its Facewatch technology, to blame for ejecting a customer Sainsbury’s has paused the use of AI face scanning in one of its stores after a customer was wrongly identified as a..."
+      - title: "AI eyes in the sky: new satellites and artificial intelligence are transforming wildfire detection"
+        url: "https://www.theguardian.com/us-news/2026/aug/17/satellites-ai-wildfire-detection"
+        source: "The Guardian"
+        date: 2026-08-17
+        summary: "Hi-tech cameras orbiting Earth and on the ground, along with AI, help firefighters extinguish blazes before they spread The fires in Spokane, Washington , this summer are the latest reminder that when a wildfire is..."
       - title: "What happens when a kid’s robot best friend dies?"
         url: "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/"
         source: "MIT Technology Review"
@@ -23,26 +58,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-17
         summary: "Exclusive: Guardian analysis finds one section of report includes links to academic articles that do not exist, but authors deny the references were made up by AI Follow our Australia news live blog for latest updates..."
-      - title: "The Guardian view on the changed world of job interviews: missing the human factor | Editorial"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/16/the-guardian-view-on-the-changed-world-of-job-interviews-missing-the-human-factor"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "Andy Burnham’s doubts about Zoom interviews apply more widely to a hiring process being transformed by AI Almost half of UK jobseekers have found themselves pitching to an AI bot, according to recent research , leading..."
-      - title: "Deepfake Anthony Albanese used in celebrity scams duping Australians out of $7.4m, Asic warns"
-        url: "https://www.theguardian.com/australia-news/2026/aug/17/deepfake-anthony-albanese-used-in-celebrity-scams-duping-australians-out-of-74m-asic-warns"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "Australia’s corporate watchdog says PM is the figure most commonly used in deepfakes to promote phoney investment opportunities Follow our Australia news live blog for latest updates Get our breaking news email , free..."
-      - title: "‘I see the incredible promise’: on set of an AI film shoot as new studios embrace controversial tech"
-        url: "https://www.theguardian.com/film/2026/aug/16/directors-embracing-ai-film-making"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "Amid fears for jobs, some film-makers say AI could enable them to bypass studio giants and take more creative risks Near the collonaded entrance to Sony Pictures’ historic Culver City film studio, a tech-powered rival..."
-      - title: "The first anti-AI protester to be jailed has a message for OpenAI, Anthropic and Meta: ‘Regain your humanity’"
-        url: "https://www.theguardian.com/us-news/2026/aug/16/california-openai-protester-wynd-kaufman"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "Wynd Kaufmyn, 69, chained and locked the front doors of OpenAI’s headquarters last year with members of StopAI An activist who blocked the entrance to one of the world’s biggest AI companies is believed to have become..."
       - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
         url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
         source: "Ars Technica"
@@ -53,21 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-14
         summary: "US groups release cheaper models after new challenges to their trillion-dollar ambitions."
-      - title: "The new Instagram logo is the perfect embodiment of AI slop"
-        url: "https://arstechnica.com/ai/2026/08/the-new-instagram-logo-is-the-perfect-embodiment-of-ai-slop/"
-        source: "Ars Technica"
-        date: 2026-08-13
-        summary: "Opinion: Some remarks about the new wordmark accidentally being perfectly awful."
-      - title: "Google announces Gemini 3.7 Flash just three weeks after previous release"
-        url: "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-7-flash-just-three-weeks-after-previous-release/"
-        source: "Ars Technica"
-        date: 2026-08-13
-        summary: "Gemini 3.6 Flash debuted just 3 weeks ago, but Google says 3.7 has \"substantial improvements.\""
-      - title: "Anthropic could be worth $2 trillion when it goes public"
-        url: "https://arstechnica.com/ai/2026/08/anthropic-could-be-worth-2-trillion-when-it-goes-public/"
-        source: "Ars Technica"
-        date: 2026-08-13
-        summary: "Rapid revenue growth fuels hope Claude maker's IPO is the biggest listing in history"
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Sage issues dozens of retractions from two journals it acquired"
+        url: "https://retractionwatch.com/2026/08/17/sage-issues-dozens-of-retractions-from-two-journals-it-acquired/"
+        source: "Retraction Watch"
+        date: 2026-08-17
+        summary: "In recent weeks Sage has retracted batches of articles published in two journals it acquired from IOS Press in 2023. In each case, the retractions were for manipulation of, and concerns about, peer review. The first..."
       - title: "At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability."
         url: "https://www.propublica.org/article/private-schools-vouchers-wisconsin-atlas-preparatory"
         source: "ProPublica"
@@ -176,11 +181,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-11
         summary: "BMJ Public Health has retracted a paper some — including a witness at a recent U.S. Senate subcommittee hearing — have used to link COVID-19 vaccines to deaths. The action comes more than two years after a researcher..."
-      - title: "A college student had to retract her paper. The move was ‘the starting point for a better study’"
-        url: "https://retractionwatch.com/2026/08/10/college-student-rishika-porandla-retract-own-paper-wiley-macromolecular-materials-engineering/"
-        source: "Retraction Watch"
-        date: 2026-08-10
-        summary: "Note, August 14, 2026: See an update to this story here. As a sophomore at Princeton University, Rishika Porandla took a course called “The Curious Scientist,” where students practice disciplinary research skills and..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
