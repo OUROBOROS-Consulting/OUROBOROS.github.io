@@ -128,7 +128,7 @@ footer {
 @media (max-width: 768px) {
   footer {
     padding: var(--space-5) 5vw;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     justify-items: center;
   }
 

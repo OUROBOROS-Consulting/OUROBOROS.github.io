@@ -17,12 +17,14 @@ permalink: /about/
         <a href="{{ '/intake' | relative_url }}" class="btn">Book a Consultation</a>
       </div>
     </div>
-    <div class="page-hero-emblem page-hero-emblem--figure" aria-hidden="true">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-        stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <circle cx="50" cy="34" r="15" />
-        <path d="M22,82 C22,60 78,60 78,82" />
-      </svg>
+    <!-- Real headshot, not the generic figure glyph this carried until 2026-08-17.
+         .hex-portrait is the same wrapper _includes/page-hero.html emits for
+         page.headshot, so this hand-written hero inherits the hex frame, the 5:6
+         crop and the ≤768px hide for free. NOT aria-hidden: the placeholder was
+         decorative line art, a photograph of the founder on his own About page is
+         content. Same asset as _data/team.yml. -->
+    <div class="hex-portrait">
+      <img src="{{ '/assets/images/AS.jpg' | relative_url }}" alt="Apostolos Stamenos" />
     </div>
   </div>
 </header>

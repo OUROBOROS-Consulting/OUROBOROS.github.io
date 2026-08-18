@@ -93,6 +93,31 @@
   --gutter-min: calc(var(--rail-total, 0px) + var(--space-10));
   --gutter: max(10vw, var(--gutter-min));
 
+  /* The right gutter is normally the same number. It exists as its own token
+     only so the phone band can drop the rail term from it — the rail is on the
+     LEFT, so reserving its footprint on the right is 56px of nothing. See the
+     phone-band override. */
+  --gutter-r: var(--gutter);
+  --gutter-min-r: var(--gutter-min);
+
+  /* ── Convention: grid tracks are written minmax(0, 1fr), never a bare 1fr ──
+     A bare `1fr` means `minmax(auto, 1fr)`, and that `auto` minimum is the grid
+     ITEM's min-content width. So one unbreakable child — a tracked-caps tag, a
+     3.5rem numeral, a nowrap table, a max-content button column — silently
+     widens its track past the container, and the whole page with it.
+
+     This site never shows a horizontal scrollbar, because `html` is
+     `overflow-x: clip` further down this file. The excess is cut off invisibly
+     instead. That is why the same defect reached production six times before
+     the 2026-08-18 audit found it, and why phone-band single-column overrides
+     are where it bites hardest: the override is exactly the place a bare `1fr`
+     hands the content its floor back.
+
+     A 0 minimum costs nothing when the content fits and leaves an oversized
+     child to overflow its own box, where a local `overflow-x: auto` can catch
+     it (see `.post-body table` in _essay.scss). Every
+     `grid-template-columns` in this package carries the 0 minimum. Keep it. */
+
   /* Content caps, used with the page-band mixin below. These bound the TEXT,
      not the element — the mixin keeps the gutter outside the cap. */
   --measure-prose: 680px; // single-column reading
@@ -225,6 +250,16 @@
   :root {
     --gutter-min: calc(var(--rail-total, 0px) + var(--space-4));
     --gutter: max(6vw, var(--gutter-min));
+
+    /* Asymmetric below 769px, on purpose. --gutter folds in the full
+       --rail-total (56px down here) because the golden thread runs down the
+       left edge and no text may sit under it. Nothing runs down the right
+       edge, so the same 68px there was pure waste: at 320px it left a 184px
+       measure and pushed the content 28px left of the visible centre line
+       (the rail occupies 0–56, so the visible centre is 188, not 160).
+       Dropping the rail term gives 232px and a box centred within 4px. */
+    --gutter-r: var(--space-6);
+    --gutter-min-r: var(--space-6);
   }
 }
 
@@ -489,10 +524,16 @@ a {
   margin-left: calc(var(--rail-total, 0px) * -1);
   margin-right: 0;
 
+  // Longhands, not padding-inline: the right side takes --gutter-r, which is
+  // --gutter everywhere except the phone band. In the capped case the cap term
+  // dominates on wide viewports, so both sides still resolve to the same
+  // number there and capped content stays centred.
   @if $cap == none {
-    padding-inline: var(--gutter);
+    padding-left: var(--gutter);
+    padding-right: var(--gutter-r);
   } @else {
-    padding-inline: max(var(--gutter), calc((100% + var(--rail-total, 0px) - #{$cap}) / 2));
+    padding-left: max(var(--gutter), calc((100% + var(--rail-total, 0px) - #{$cap}) / 2));
+    padding-right: max(var(--gutter-r), calc((100% + var(--rail-total, 0px) - #{$cap}) / 2));
   }
 }
 
@@ -620,9 +661,18 @@ body::after {
   display: inline-flex;
   align-items: center;
   gap: var(--space-2);
-  font-size: var(--fs-6);
+  // Not var(--fs-6) flat. 1.6rem of uppercase at 0.12em tracking makes
+  // "ALL ANNOUNCEMENTS" a 312px word-pair, and the phone content box is 184px
+  // at 320px. Its min-content is a single unbreakable word, so wrapping cannot
+  // rescue it — only the size can. The clamp ceiling is the old 1.6rem, reached
+  // at 610px, so every tablet and desktop renders exactly what it did before.
+  font-size: clamp(1rem, 4.2vw, var(--fs-6));
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  // Arrow and label are two flex items; let the label drop below the arrow
+  // rather than push the box wide if a longer label ever lands here.
+  flex-wrap: wrap;
+  max-width: 100%;
   color: var(--mark);
   text-decoration: none;
   transition: color 0.3s;

@@ -132,7 +132,7 @@
   // Three columns cannot hold a day range, a time, and a sentence at tablet
   // width without the times wrapping under their own labels.
   .hours {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-6);
   }
 }

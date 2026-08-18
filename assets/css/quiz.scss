@@ -365,12 +365,12 @@
   }
 
   .quiz-wrap {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 0 var(--space-5) var(--space-10);
   }
 
   .quiz-wrap--open {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .quiz-map-area {

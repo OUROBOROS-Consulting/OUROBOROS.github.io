@@ -254,15 +254,20 @@
     font-weight: 300;
   }
 
+  /* Both of these restate minmax(0, …) rather than writing a bare 1fr. A bare
+     1fr is minmax(auto, 1fr), which puts back exactly the content-based floor
+     the base rule at the top of this block removed — and it did: the card ran
+     9px past the right edge at 320px. Any future override of this grid has to
+     carry the 0 minimum too. */
   @media (max-width: 768px) {
     .service-cards {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
   @media (max-width: 480px) {
     .service-cards {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
   }
 
@@ -601,7 +606,7 @@
     /* Masthead: stack title over meta instead of the cramped 1fr/auto row that
        let the two columns visually collide. */
     .intake-masthead {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       padding: var(--space-8) var(--space-card);
     }
 
@@ -623,7 +628,7 @@
     /* Two-up field pairs stack to one column so inputs get full width. */
     .field-row.col-2,
     .field-row.col-3 {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     /* Doc footer: stack the two confidentiality lines instead of colliding. */

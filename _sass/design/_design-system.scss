@@ -394,8 +394,8 @@
   .spec {
     padding: var(--space-8) var(--space-5);
 
-    .spec-masthead { grid-template-columns: 1fr; }
-    .spec-row { grid-template-columns: 1fr; gap: var(--space-3); }
+    .spec-masthead { grid-template-columns: minmax(0, 1fr); }
+    .spec-row { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
     .spec-band-head { flex-wrap: wrap; }
   }
 }

@@ -209,7 +209,7 @@
   gap: var(--space-5);
   margin-bottom: var(--space-9);
 
-  @media (max-width: 560px) { grid-template-columns: 1fr; }
+  @media (max-width: 560px) { grid-template-columns: minmax(0, 1fr); }
 }
 
 .gate-card {
@@ -339,7 +339,7 @@
     align-items: start;
 
     @media (max-width: 760px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       .sidebar { display: none; }
     }
   }
@@ -714,9 +714,21 @@
   border-radius: var(--radius-3);
   padding: var(--space-5) var(--space-6);
   display: grid;
-  grid-template-columns: 1fr auto;
+  /* minmax(0, …) on the prose column, and the contact column drops below it on
+     phones: an `auto` track holding a mono phone number and a nowrap badge has a
+     hard min-content floor, so the two tracks together could not fit a ~160px
+     content box and the contact column ran past the viewport edge. */
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: var(--space-3) var(--space-5);
   align-items: start;
+
+  @media (max-width: 560px) {
+    grid-template-columns: minmax(0, 1fr);
+
+    .resource-contact-col {
+      align-items: flex-start;
+    }
+  }
 }
 
 .resource-name-text {
@@ -1153,6 +1165,23 @@
   }
 }
 
+/* Two nowrap tracked-caps labels ("COERCIVE CONTROL", "RECORDING LAW") need
+   ~310px side by side, and the phone content box is narrower than that, so the
+   second button ran off the viewport. Stack them; the group's border-radius and
+   overflow: hidden still frame the pair, only the divider changes axis. */
+@media (max-width: 560px) {
+  .toggle-group { flex-direction: column; }
+
+  .toggle-btn {
+    white-space: normal;
+
+    & + & {
+      border-left: none;
+      border-top: 1px solid var(--line-3, #333);
+    }
+  }
+}
+
 .map-wrap {
   position: relative;
   width: 100%;
@@ -1265,7 +1294,7 @@
   gap: var(--space-4);
   margin-bottom: var(--space-5);
 
-  @media (max-width: 500px) { grid-template-columns: 1fr; }
+  @media (max-width: 500px) { grid-template-columns: minmax(0, 1fr); }
 }
 
 .detail-cell {
@@ -1388,7 +1417,7 @@
 
 .tree-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(220px, 100%), 1fr));
   gap: var(--space-4);
   margin-bottom: var(--space-7);
 }
@@ -1561,7 +1590,7 @@
 
 .state-result-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr));
   gap: var(--space-4);
 }
 
@@ -1619,9 +1648,14 @@
 /* RESOURCE GRID (advocate, institutional)                                     */
 /* ══════════════════════════════════════════════════════════════════════════ */
 
+/* min(260px, 100%), not a bare 260px: a minmax() floor is a hard floor, so on a
+   phone whose content box is ~160px the single auto-fill track stayed 260px wide
+   and ran off the viewport. min(…, 100%) keeps the 260px intent wherever there
+   is room and yields to the container when there is not. Same reasoning applies
+   to the 220px and 200px grids above. */
 .resource-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
   gap: var(--space-4);
 }
 
@@ -2057,7 +2091,7 @@
 
   .dashboard-wrap { padding: 0; }
 
-  .db-layout--sidebar { grid-template-columns: 1fr; }
+  .db-layout--sidebar { grid-template-columns: minmax(0, 1fr); }
 
   .data-table td,
   .data-table th { border-color: #ccc; color: #000; background: #fff; }

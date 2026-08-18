@@ -530,7 +530,7 @@
 }
 
 .page-section--stacked {
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--space-7);
 }
 
@@ -549,14 +549,22 @@
   background-color: #0D0D0D;
   border-top: 1px solid rgba(177, 147, 93, 0.22);
   border-bottom: 1px solid rgba(177, 147, 93, 0.22);
-  margin-left: -5vw;
-  margin-right: -5vw;
-  padding: var(--space-8) 5vw;
+  // The pull is capped at the gutter it is cancelling. --gutter-r drops the
+  // rail term below 769px (20px), while a bare -6vw pull is 46px at 768 — the
+  // band ran 26px past the right viewport edge on every sections-layout page
+  // (/mission, /resources/scholarly, /resources/survival, /work/cassandra,
+  // /survival-guide). min() keeps the 5vw / 6vw inset wherever the gutter is
+  // larger, which is everywhere except the phone band's right side, so nothing
+  // moves above 769px. Like .band-header, this band is allowed to bleed under
+  // the rail on the left; only its text has to clear it.
+  margin-left: calc(-1 * min(5vw, var(--gutter)));
+  margin-right: calc(-1 * min(5vw, var(--gutter-r)));
+  padding: var(--space-8) min(5vw, var(--gutter-r)) var(--space-8) min(5vw, var(--gutter));
 
   @media (max-width: 768px) {
-    margin-left: -6vw;
-    margin-right: -6vw;
-    padding: var(--space-8) 6vw;
+    margin-left: calc(-1 * min(6vw, var(--gutter)));
+    margin-right: calc(-1 * min(6vw, var(--gutter-r)));
+    padding: var(--space-8) min(6vw, var(--gutter-r)) var(--space-8) min(6vw, var(--gutter));
   }
 }
 
@@ -565,7 +573,7 @@
 // .page-body--banded so service/foundation keep their two-column grid.
 .page-body--banded {
   .page-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 0;
     padding: 0 0 var(--space-band-lg);
   }
@@ -657,8 +665,32 @@
     padding-block: 0 var(--space-12);
   }
 
+  // ── The 72px measure ────────────────────────────────────────────────────────
+  // `.page-body .post-body` above sets `padding: var(--space-band-lg)
+  // var(--space-band-lg)` — 56px a side. _essay.scss has a phone-band rule that
+  // steps that down to 6vw, but it is written as a bare `.post-body`
+  // (specificity 0,1,0) and a media query adds no specificity, so the 0,2,0
+  // descendant selector here beat it at every width. Nested inside the 68px
+  // --gutter, that left a 184 - 112 = 72px prose column at 320px: the framework
+  // page rendered "This firm operates" as "T his / fir / m oper- / ates".
+  // Every article, sections, service, announcement and PSA page had it.
+  //
+  // Zero, not a smaller value. --gutter is already holding 68px on each side at
+  // this width, which is the whole inset the page needs; a second one nested
+  // inside it is what caused this.
+  .page-body {
+    .post-body {
+      padding-inline: 0;
+    }
+
+    // Block padding stays — --nav-h clears the fixed nav. Inline goes.
+    .post-header {
+      padding-inline: 0;
+    }
+  }
+
   .page-section {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--space-5);
     padding: var(--space-9) 0;
   }
@@ -669,7 +701,61 @@
 
   .page-hero-inner {
     flex-direction: column;
+    // nowrap is the load-bearing line. The base rule wraps so the portrait can
+    // drop below the text on a narrow desktop; at this width the portrait is
+    // display: none, so wrapping has no job left — and a wrapping COLUMN flex
+    // container sizes each flex line to its content and lets the line overflow
+    // the container. The text panel was stretching to a 314px line inside a
+    // 180px container and hanging off a 320px screen, with `width: 314px`
+    // computed on a box that has no width declaration anywhere.
+    flex-wrap: nowrap;
+    // And stretch, not the base rule's center: `center` shrink-wraps in a
+    // column, which reintroduces the same content-driven width by a second
+    // route.
+    align-items: stretch;
     gap: var(--space-8);
+  }
+
+  // Two separate floors had to come off this box for it to fit a 320px screen.
+  //
+  // min-width: the 280px floor exists to stop the text panel collapsing beside
+  // the portrait on a wrapped desktop row. Here the portrait is display: none
+  // and the row is a column, so nothing is holding it open — and 280px is wider
+  // than the whole content column (the rail plus two 68px gutters leave 180px).
+  // The base rule's min(280px, 100%) was meant to yield here and does not: the
+  // percentage resolves against an indefinite cross-size, so 280px wins.
+  //
+  // Word breaking: with the panel now stretched to the column, a long word in
+  // the h1 or the eyebrow would overflow the panel instead of widening it.
+  // hyphens first so the break reads as typography; break-word only as the
+  // backstop for words the hyphenation dictionary won't split.
+  .page-hero-text {
+    min-width: 0;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    // --space-9 is 40px a side. Inside a 180px column (see the min-width note)
+    // that leaves a 98px measure, which is not a measure — it is a word list.
+    // The panel's inset is decorative at this width; the gutter outside it is
+    // already doing the real separating. Inline is cut to 12px rather than to 0:
+    // the panel carries a visible 1px border, and prose flush against it reads
+    // as a bug. 12px is the smallest inset that still looks deliberate.
+    padding: var(--space-6) var(--space-4);
+  }
+
+  // --fs-10 is clamp(2.4rem, 5vw, 4rem), and on a phone the 5vw term is 16px,
+  // so the 2.4rem FLOOR wins and the title renders at 38.4px in a ~138px
+  // measure. That shatters every multi-syllable service name into a vertical
+  // ladder. A vw-led clamp of its own gives the phone a title that scales with
+  // the screen instead of one pinned to a desktop floor.
+  .page-hero-title {
+    // 7vw, not 8: the longest word any service title carries is
+    // "Institutional" (13 characters). Chrome only hyphenates when a
+    // hyphenation dictionary is present, and headless with a cold profile has
+    // none, so overflow-wrap is the break that actually fires and it splits
+    // mid-syllable. Sizing the title so the longest word fits the measure
+    // outright means no break has to fire at all.
+    font-size: clamp(1.35rem, 7vw, 2.2rem);
+    line-height: 1.12;
   }
 
   .hex-portrait,

@@ -221,7 +221,7 @@ footer {
 #work,
 #testimonials {
   padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  padding-right: var(--gutter-r);
 }
 
 // The footer is a `1fr auto 1fr` grid, so its LEFT column — the social cards —
@@ -233,7 +233,7 @@ footer {
 footer,
 .disclaimer-bar {
   padding-left: var(--gutter-min);
-  padding-right: var(--gutter-min);
+  padding-right: var(--gutter-min-r);
 }
 
 // ── Section headers: black marble ─────────────────────────────────────────
@@ -302,9 +302,9 @@ footer,
 // at the identical scale. Border stays the bold 2px frame from the block above.
 .band-header {
   margin-left: calc(var(--gutter) * -1);
-  margin-right: calc(var(--gutter) * -1);
+  margin-right: calc(var(--gutter-r) * -1);
   padding-left: var(--gutter);
-  padding-right: var(--gutter);
+  padding-right: var(--gutter-r);
 }
 
 // ...except inside the closing CTA, where .band-header is reused as a plain

@@ -10,7 +10,7 @@
 
 - name: Apostolos Stamenos
   role: Founder & Principal
-  # PLACEHOLDER photo — swap for the new headshot when it arrives.
+  # Real headshot, same file /about and schema.html use.
   photo: /assets/images/AS.jpg
   photo_alt: Apostolos Stamenos
   credentials:

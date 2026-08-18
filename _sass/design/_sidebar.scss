@@ -42,7 +42,16 @@
   &--svc {
     @include page-band(var(--measure-page));
 
-    grid-template-columns: 1fr;
+    // minmax(0, …), not a bare 1fr. A bare 1fr is minmax(auto, 1fr), and that
+    // auto minimum is the grid ITEM's min-content width — so a single wide
+    // child anywhere in the prose (the nowrap comparison table on
+    // /llm-disclosure/, the spec strip on /design-system/) grew this track to
+    // 1164px inside a 320px viewport and took the whole page with it. Nothing
+    // showed a scrollbar, because html { overflow-x: clip } (see _base.scss)
+    // silently cut the excess off. A 0 minimum makes the track honour the
+    // viewport and leaves the wide child to scroll inside its own box, which is
+    // what .post-body table already does at this width (_essay.scss).
+    grid-template-columns: minmax(0, 1fr);
 
     // Wrapper now owns the horizontal geometry; undo the inner .page-body's
     // page-band entirely. The width reset is load-bearing: page-band widens by
@@ -321,7 +330,9 @@
 // ── Responsive ────────────────────────────────────────────────────────────────
 @media (max-width: 1100px) {
   .page-toc-wrap--svc {
-    grid-template-columns: 1fr;
+    // Carries the 0 minimum too — see the note on the base rule. Restating a
+    // bare 1fr here would put the content-driven floor straight back.
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .page-toc {

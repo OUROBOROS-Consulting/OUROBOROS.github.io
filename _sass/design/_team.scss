@@ -155,6 +155,15 @@
 
 @media (max-width: 768px) {
   .team-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  // Must be restated, not inherited from the rule above: .team-grid:has(> :only-child)
+  // carries the specificity of its argument, so it outweighs the plain
+  // .team-grid selector no matter which block comes last. Its 280px floor
+  // therefore survived into the phone band and hung the roster card 8px off the
+  // right edge at 320px, where the content column is only 272px.
+  .team-grid:has(> :only-child) {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
