@@ -8,6 +8,7 @@ sections:
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+<<<<<<< HEAD
       - title: "OpenAI launches ChatGPT for Teens with stronger safeguards"
         url: "https://www.theguardian.com/technology/2026/aug/18/openai-chatgpt-for-teens"
         source: "The Guardian"
@@ -15,6 +16,45 @@ sections:
         summary: "Teen version is intended for children aged 13 to 17 and includes content protections on self-harm and sexual chats OpenAI is launching a version of ChatGPT designed for teenagers – the first generation to grow up with..."
       - title: "AI’s recursive self-improvement might not come so quickly after all"
         url: "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/"
+=======
+      - title: "Dickovers, baggravation and botiquette: 18 new words to describe our tech hellscape"
+        url: "https://www.theguardian.com/technology/2026/aug/18/dickovers-baggravation-botiquette-18-new-words-tech-hellscape"
+        source: "The Guardian"
+        date: 2026-08-18
+        summary: "There are many tech irritants that are a scourge of modern life, yet we have lacked the vocabulary to describe them ... until now The “dickover” is the scourge of the modern age. Coined in May by John Gruber, a tech..."
+      - title: "Former SpaceX engineers are building a robotic factory for making steel parts"
+        url: "https://arstechnica.com/ai/2026/08/former-spacex-engineers-are-building-a-robotic-factory-for-making-steel-parts/"
+        source: "Ars Technica"
+        date: 2026-08-17
+        summary: "“We're not necessarily building in a dogmatic fashion towards full autonomy.”"
+      - title: "What Flock’s defenders are missing"
+        url: "https://www.technologyreview.com/2026/08/17/1142200/what-flocks-defenders-are-missing/"
+        source: "MIT Technology Review"
+        date: 2026-08-17
+        summary: "This story originally appeared in The Algorithm, our weekly newsletter on AI. To get stories like this in your inbox first, sign up here. Flock, the police-tech giant known for its network of some 120,000 automatic..."
+      - title: "Hidden Airtag reveals Amazon is trashing rare books to train AI"
+        url: "https://arstechnica.com/tech-policy/2026/08/hidden-airtag-reveals-amazon-is-trashing-rare-books-to-train-ai/"
+        source: "Ars Technica"
+        date: 2026-08-17
+        summary: "Amazon’s team uses a T. rex preparing to devour a book as its logo."
+      - title: "Claude to start watermarking AI-generated text – but will it make quality worse?"
+        url: "https://www.theguardian.com/technology/2026/aug/17/claude-watermark-ai-text-quality-worse"
+        source: "The Guardian"
+        date: 2026-08-17
+        summary: "Anthropic says it will change way chatbot makes small, random choices, to comply with EU regulation The world is familiar by now with the usual tropes of machine-generated text: overuse of the word “delve”, an excess of..."
+      - title: "Sainsbury’s store pauses AI scanning after false shoplifting accusation"
+        url: "https://www.theguardian.com/technology/2026/aug/17/humiliated-sainsburys-store-pauses-ai-scanning-after-false-shoplifting-accusation"
+        source: "The Guardian"
+        date: 2026-08-17
+        summary: "Supermarket chain says ‘human error’, not its Facewatch technology, to blame for ejecting a customer Sainsbury’s has paused the use of AI face scanning in one of its stores after a customer was wrongly identified as a..."
+      - title: "AI eyes in the sky: new satellites and artificial intelligence are transforming wildfire detection"
+        url: "https://www.theguardian.com/us-news/2026/aug/17/satellites-ai-wildfire-detection"
+        source: "The Guardian"
+        date: 2026-08-17
+        summary: "Hi-tech cameras orbiting Earth and on the ground, along with AI, help firefighters extinguish blazes before they spread The fires in Spokane, Washington , this summer are the latest reminder that when a wildfire is..."
+      - title: "What happens when a kid’s robot best friend dies?"
+        url: "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/"
+>>>>>>> 1b2ab0845b60be17921fce4cfdd7e6414d3ca1b5
         source: "MIT Technology Review"
         date: 2026-08-18
         summary: "The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight. LLMs can already write code, generate synthetic data for training, and optimize the computer..."
@@ -28,6 +68,7 @@ sections:
         source: "The Guardian"
         date: 2026-08-17
         summary: "Exclusive: Guardian analysis finds one section of report includes links to academic articles that do not exist, but authors deny the references were made up by AI Follow our Australia news live blog for latest updates..."
+<<<<<<< HEAD
       - title: "The Guardian view on the changed world of job interviews: missing the human factor | Editorial"
         url: "https://www.theguardian.com/commentisfree/2026/aug/16/the-guardian-view-on-the-changed-world-of-job-interviews-missing-the-human-factor"
         source: "The Guardian"
@@ -43,11 +84,14 @@ sections:
         source: "The Guardian"
         date: 2026-08-16
         summary: "Student unrest sweeps India, Portugal and Mexico as grievances and pressure for good grades in tough job market collide Families with teenagers in education know the private, hidden pain of exam season. But this year..."
+=======
+>>>>>>> 1b2ab0845b60be17921fce4cfdd7e6414d3ca1b5
       - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
         url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
         source: "Ars Technica"
         date: 2026-08-14
         summary: "Judge warns pro se litigants are using chatbots wrong and getting desperate."
+<<<<<<< HEAD
       - title: "Flock is tightening its rules in response to a growing surveillance backlash"
         url: "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/"
         source: "MIT Technology Review"
@@ -58,6 +102,13 @@ sections:
         source: "Ars Technica"
         date: 2026-08-07
         summary: "Clinicians and researchers say AI companies need to open up their safety data."
+=======
+      - title: "OpenAI and Anthropic in price war as Chinese AI rivals gain ground"
+        url: "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/"
+        source: "Ars Technica"
+        date: 2026-08-14
+        summary: "US groups release cheaper models after new challenges to their trillion-dollar ambitions."
+>>>>>>> 1b2ab0845b60be17921fce4cfdd7e6414d3ca1b5
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -161,6 +212,7 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-11
         summary: "BMJ Public Health has retracted a paper some — including a witness at a recent U.S. Senate subcommittee hearing — have used to link COVID-19 vaccines to deaths. The action comes more than two years after a researcher..."
+<<<<<<< HEAD
       - title: "Clarivate removes hold on mega-journal Heliyon after internal audit, 650+ retractions"
         url: "https://retractionwatch.com/2026/08/07/clarivate-removes-hold-mega-journal-heliyon-after-internal-audit/"
         source: "Retraction Watch"
@@ -171,6 +223,8 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-06
         summary: "In April 2025, David Victorson, a psychologist at Northwestern University in Chicago, was polishing several manuscripts for submission when a colleague sent him a link to a press release from the U.S. Department of..."
+=======
+>>>>>>> 1b2ab0845b60be17921fce4cfdd7e6414d3ca1b5
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
