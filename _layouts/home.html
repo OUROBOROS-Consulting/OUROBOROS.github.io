@@ -88,7 +88,7 @@ layout: default
     {% if page.stats.years_experience %}
     <div class="stat">
       <span class="stat-value">{{ page.stats.years_experience }}</span>
-      <span class="stat-label">Years of Founder Experience</span>
+      <span class="stat-label">{{ page.stats.years_experience_note | default: "Years of Professional Experience" }}</span>
     </div>
     {% endif %}
 

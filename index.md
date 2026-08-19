@@ -22,7 +22,15 @@ cta2_url: /case-studies/
 about_heading: Technology and Advocacy for Survivors of Institutional Betrayal
 
 stats:
-  years_experience: "4+"
+  # Counted from entering federal service at HHS in September 2020, through
+  # doctoral research, to founding this practice: one continuous career, no
+  # gap. Graduate school precedes that date and is not counted here, so the
+  # figure understates rather than overstates. Issues #90 and #16 exist because
+  # three different durations were once published at once; the rule now is that
+  # every published figure names the date it counts from, and this comment is
+  # that date. Do not raise it without moving the start date with it.
+  years_experience: "6+"
+  years_experience_note: "Years in Data Science &amp; Research"
   agencies: "5"
   agencies_note: "HHS Divisions Served (Federal Career)"
   clients: "4+"

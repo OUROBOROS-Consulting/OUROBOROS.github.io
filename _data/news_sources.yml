@@ -10,6 +10,8 @@
 #   match     optional. Broad general-interest feeds only appear on the page
 #             when a headline or dek contains one of these substrings
 #             (case-insensitive). Omit it for feeds that are already on-topic.
+#             A `categories` entry may declare its own `match:`, which every
+#             source in that category inherits unless it sets its own.
 #   max_age_days
 #             optional, default 60. Widen it for a source that posts a few
 #             times a year: the default window would silence it entirely.
@@ -24,6 +26,41 @@ categories:
     blurb: >-
       What the systems can actually do, who is deploying them, and what that
       costs the people on the receiving end.
+    # Inherited by every `category: ai` source that does not declare its own
+    # `match:`. The three AI feeds are general technology firehoses, and the
+    # blurb above promises deployment and consequence, not product news. Issue
+    # #102, option 3: narrow to institutional and policy coverage.
+    match:
+      - accountab
+      - audit
+      - benefits
+      - bias
+      - children
+      - congress
+      - court
+      - deepfake
+      - disab
+      - discriminat
+      - evidence
+      - fraud
+      - government
+      - harm
+      - hiring
+      - hospital
+      - lawsuit
+      - oversight
+      - policy
+      - privacy
+      - regulat
+      - safety
+      - scam
+      - school
+      - senate
+      - sued
+      - surveillance
+      - teen
+      - welfare
+      - worker
   - id: coercive-control
     title: Coercive control and technology-facilitated abuse
     blurb: >-
@@ -41,6 +78,9 @@ categories:
       them.
 
 sources:
+  # All three AI feeds carry heavy product and industry coverage: model
+  # launches, funding, benchmarks, reviews. None of them needs its own filter,
+  # because the `ai` category declares one and every source inherits it.
   - name: Ars Technica
     url: https://arstechnica.com/ai/feed/
     category: ai
@@ -127,3 +167,107 @@ sources:
       - surveillance
       - swat
       - tracking
+
+
+# ── Global reject lists ───────────────────────────────────────────────────────
+# Applied to every source, against the headline *and* the dek, because the page
+# renders both. Case-insensitive substring match. A hit drops the item.
+#
+# These exist because of issue #102. The page republishes other people's
+# headlines, and republishing a defamatory statement is generally treated as a
+# fresh publication by the republisher rather than a neutral pointer to someone
+# else's. The non-endorsement note at the top of /news/ sits next to a headline,
+# not inside it, so it does not change what the headline asserts. Private
+# individuals get the least protection from that arrangement and the lowest bar
+# to bringing a claim, so the whole class comes out.
+#
+# Tuning rule: these terms name *criminal process attached to a person*, not
+# violence as a subject. "raped", "murdered" and "killed her" were tried and
+# removed — they took down policy reporting on early prison release and on
+# femicide in Zimbabwe, which is exactly the coverage the page is for. If you
+# add a term, run `python3 scripts/fetch_news.py` and read the "rejected:" lines
+# before committing.
+
+reject_individual:
+  - accused of
+  - accuses
+  - acquitted of
+  - allegations against
+  - amid allegations
+  - arrested for
+  - arrested in connection
+  - arrested on
+  - charged with
+  - convicted of
+  - denied the allegations
+  - denies allegations
+  - extradited
+  - faces charges
+  - her accuser
+  - his accuser
+  - indicted
+  - mugshot
+  - on trial
+  - pleaded guilty
+  - pleads guilty
+  - pleads not guilty
+  - pled guilty
+  - sentenced for
+  - sentenced to
+  - should resign
+  - stands trial
+  - trial of
+
+# Market and product churn. Not a legal question, an on-message one: valuations
+# and price wars are not what any section here claims to cover. Product launches
+# are not reliably catchable by substring, which is why the AI feeds carry a
+# `match:` list instead.
+reject_offtopic:
+  - " ipo"
+  - funding round
+  - goes public
+  - price war
+  - raises $
+  - valuation
+  - valued at
+
+# Coverage where a single identifiable person is the subject, even when the
+# process is academic rather than criminal. Apostolos's call, 2026-08-18: no
+# naming on this page, just in case. Research-integrity reporting is on mission
+# when the subject is a journal, a publisher, or a peer-review system. It stops
+# being on mission the moment the subject is one researcher, because then the
+# page is carrying a claim about a person who never chose to be on it, and
+# republishing that claim is a fresh publication by this site.
+#
+# `weekend reads` is the whole point of this list. It is Retraction Watch's
+# weekly digest, and by format it is a list of stories about named individuals.
+# Rejecting the phrase drops every future week without needing a term per person.
+# Names themselves are deliberately absent here: a reject list of people's names
+# would grow forever and would put those names into this repo.
+#
+# The possessive-singular pairs (`her paper`, `retract his`) are the general
+# mechanism: they fire when an academic action is attached to one person rather
+# than to a journal or a publisher. Retraction Watch ran the same Princeton
+# student's story under four different headlines over four days, and only the
+# possessive form is common to all of them.
+#
+# Deliberately NOT in this list: `a college student`, `as a sophomore`, and the
+# other student-status phrases. They caught the same item, but the education
+# accountability coverage this page exists for is largely about students as a
+# class, and those terms would take it down. Same tuning rule as the list above:
+# reject the frame that names a person, never the subject matter.
+#
+# Verified 2026-08-18 against all 44 rendered items: these terms drop exactly the
+# three Retraction Watch items about named individuals and nothing else.
+reject_named:
+  - weekend reads
+  - found dead
+  - student says
+  - her now-retracted
+  - his now-retracted
+  - her own paper
+  - his own paper
+  - her paper
+  - his paper
+  - retract her
+  - retract his

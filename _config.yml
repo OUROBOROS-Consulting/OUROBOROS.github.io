@@ -38,13 +38,17 @@ collections:
 # content. The pre-existing "script" entry already excluded it by prefix match,
 # which is a coincidence, not an intention.
 exclude: ["script", "scripts", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "README.md", "CLAUDE.md", "package.json", "package-lock.json", "node_modules", "docs",
-  # Three orphaned PDFs: nothing on the site links to them, but jekyll-sitemap
-  # indexes static .pdf files regardless of front matter, so they were crawlable.
-  # Excluding keeps them in the repo and off the live site. Reversible.
-  #   AS_Resume.pdf   — carries the 5+ years federal claim contradicted elsewhere
-  #   Stamenos_cv.pdf — 1-byte empty file
-  #   DSM.pdf         — its PSA (_psas/DSM.md) is published: false
-  "assets/files/AS_Resume.pdf", "assets/files/Stamenos_cv.pdf", "assets/files/PSA/PsychLiteracy/DSM.pdf"]
+  # DSM.pdf is orphaned: nothing links to it, but jekyll-sitemap indexes static
+  # .pdf files regardless of front matter, so it was crawlable. Its PSA
+  # (_psas/DSM.md) is published: false, so the PDF stays off the live site too.
+  #
+  # AS_Resume.pdf and Stamenos_cv.pdf were listed here until 2026-08-18 and are
+  # now DELETED from the repo rather than excluded. The resume carried "5+ years
+  # of mission-critical federal experience", which is wrong: federal tenure
+  # starts September 2020 at HHS, and the career it was describing is longer than
+  # the federal part of it. See issue #16 — the replacement gets written from a
+  # source document, not patched here.
+  "assets/files/PSA/PsychLiteracy/DSM.pdf"]
 markdown: kramdown
 
 plugins:

@@ -1,5 +1,13 @@
-# TODO: Add 1-2 anonymized survivor/advocacy testimonials (with explicit consent).
-# Contact Apostolos to supply. Do not fabricate quotes or attributions.
+# Do not fabricate quotes or attributions. Every entry below traces to a real
+# source document.
+#
+# There is no consent gate on this file. A "get explicit consent" TODO sat here
+# until 2026-08-18; Apostolos removed it, and the reasoning is: the referees are
+# not survivors, they are professional references, and none of them is named. The
+# four entries stay as published. Do not reintroduce a consent gate.
+#
+# That is separate from the D.A.K. rules directly below, which are provenance
+# constraints on a specific quote, not a gate on the file.
 
 # D.A.K.: quoted with his permission (granted 2026-08-06). INITIALS ONLY.
 # Apostolos narrowed the attribution on 2026-08-06 after the full name shipped.
@@ -15,7 +23,6 @@
     I had become skeptical of AI for a multitude of reasons... Through conversations with Apostolos, I began to open my eyes, so to speak, and then my ears... I am now an avid user of Claude. I'm using it in ways I never would have thought possible...
     His sensitivity to people who ask basic questions is remarkable. He listens patiently all the way to the end, no matter how long, repetitive, or elementary the question might be, and he responds to every level of competency without ever making someone feel behind.
   reference: D.A.K., medical illustrator in his late seventies
-  link: "#"
 
 - title: Operational Continuity
   tag: Technology
@@ -24,7 +31,6 @@
     Over several months, he collaborated closely with departmental leadership and technical teams to ensure a seamless transfer of systems, data, and operational responsibilities.
     He developed automation scripts to maintain uninterrupted data flows and ensured help desk services remained fully functional, safeguarding continuity during a critical public health period.
   reference: Project Manager, HHS
-  link: "#"
 
 - title: Creative Tech Solutions
   tag: Technology
@@ -34,7 +40,6 @@
     His finest moment may have been a last-minute solution he engineered during the Vaccines.gov service desk transition to CDC, designing a custom flow that bridged a critical gap in service continuity while CDC finalized its technical setup.
     It was exactly the kind of creative, calm-under-pressure problem solving that defines exceptional technical talent.
   reference: VP, Federal Technology Contractor
-  link: "#"
 
 - title: Critical Health Data
   tag: Technology
@@ -43,14 +48,3 @@
     His recommendation of Salesforce was ultimately adopted, showcasing his foresight in technology solutions. Apostolos consistently demonstrated strong technical abilities, innovative problem-solving skills, and a keen understanding of data management and visualization.
     His contributions were invaluable to our team and the broader efforts in managing and communicating critical health data during challenging times.
   reference: Director of Data Platforms, HHS
-  link: "#"
-
-# - title: Working Principles
-  # tag: Commitment
-  # type: commitment
-  # description: >
-  #   What to expect in sensitive engagements: confidentiality by default, with the limits
-  #   stated in writing before you sign, plain-language reporting, no surprises, and zero
-  #   tolerance for institutional pressure.
-  # reference: OUROBOROS Consulting — Working Principles
-  # link: "#"

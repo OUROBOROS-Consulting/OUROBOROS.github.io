@@ -68,6 +68,12 @@ def read_sources(path: Path) -> tuple[list[dict], list[dict]]:
         if line == "sources:":
             bucket, entry, key = sources, None, None
             continue
+        if not line.startswith(" "):
+            # Any other top-level key closes the current list. Without this the
+            # reject lists at the bottom of the file were read as `sources`
+            # entries, because they are `- ` items at the same indent.
+            bucket, entry, key = None, None, None
+            continue
         if bucket is None:
             continue
 
@@ -100,6 +106,30 @@ def read_sources(path: Path) -> tuple[list[dict], list[dict]]:
 
     return categories, sources
 
+
+def read_reject(path: Path) -> list[str]:
+    """Collect the top-level reject lists into one lowercase substring list.
+
+    Deliberately a separate scan rather than another branch inside
+    read_sources(): that parser tracks nested dict entries and this is two flat
+    lists of scalars. Keeping them apart means a malformed reject list cannot
+    corrupt the source list.
+    """
+    terms: list[str] = []
+    inside = False
+    for raw in path.read_text(encoding="utf-8").splitlines():
+        line = raw.split(" #")[0].rstrip() if " #" in raw else raw.rstrip()
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        if line in ("reject_individual:", "reject_offtopic:", "reject_named:"):
+            inside = True
+            continue
+        if not line.startswith(" "):        # any other top-level key ends the run
+            inside = False
+            continue
+        if inside and line.lstrip().startswith("- "):
+            terms.append(line.lstrip()[2:].strip().strip("'\"").lower())
+    return terms
 
 # ── Feed parsing ──────────────────────────────────────────────────────────────
 
@@ -195,7 +225,8 @@ def entries(xml: bytes):
     return found
 
 
-def harvest(source: dict, now: datetime) -> list[dict]:
+def harvest(source: dict, inherited: list[str], reject: list[str],
+            now: datetime) -> list[dict]:
     print(f"- {source['name']}: {source['url']}", file=sys.stderr)
     xml = fetch(source["url"])
     if not xml:
@@ -207,8 +238,12 @@ def harvest(source: dict, now: datetime) -> list[dict]:
     window = int(source.get("max_age_days") or MAX_AGE_DAYS)
     cutoff = now - timedelta(days=window)
 
-    keywords = [k.lower() for k in source.get("match") or []]
+    # A category may declare a `match:` that its sources inherit. An explicit
+    # `match:` on the source wins outright rather than merging: merging would
+    # only ever widen the filter, and the point of a narrower one is to win.
+    keywords = [k.lower() for k in source.get("match") or inherited]
     out: list[dict] = []
+    dropped: list[str] = []
 
     for node in entries(xml):
         title = clean(text_of(node, "title", f"{ATOM}title"))
@@ -221,10 +256,21 @@ def harvest(source: dict, now: datetime) -> list[dict]:
             "{http://purl.org/rss/1.0/modules/content/}encoded",
         ), SUMMARY_CHARS)
 
+        hay = f"{title} {summary}".lower()
+
         if keywords:
-            hay = f"{title} {summary}".lower()
             if not any(k in hay for k in keywords):
                 continue
+
+        # Issue #102, option 3: the feed carries institutional and policy
+        # coverage, not individual-case reporting. Republishing an accusation
+        # is a fresh publication by the republisher, and the non-endorsement
+        # note above the list sits beside a headline rather than inside it, so
+        # it does not change what the headline asserts. Matched against the
+        # summary as well as the title because both are rendered.
+        if any(k in hay for k in reject):
+            dropped.append(title)
+            continue
 
         published = parse_date(text_of(
             node, "pubDate", "{http://purl.org/dc/elements/1.1/}date",
@@ -249,7 +295,10 @@ def harvest(source: dict, now: datetime) -> list[dict]:
 
     out.sort(key=lambda i: (i["sort"], i["title"]), reverse=True)
     kept = out[:PER_SOURCE]
-    print(f"  kept {len(kept)} of {len(out)}", file=sys.stderr)
+    print(f"  kept {len(kept)} of {len(out)}"
+          + (f", rejected {len(dropped)}" if dropped else ""), file=sys.stderr)
+    for title in dropped:
+        print(f"    rejected: {title}", file=sys.stderr)
     return kept
 
 
@@ -298,6 +347,7 @@ def render(categories: list[dict], items: list[dict], generated: datetime) -> st
 
 def main() -> int:
     categories, sources = read_sources(SOURCES)
+    reject = read_reject(SOURCES)
     valid = {c["id"] for c in categories}
     unknown = {s["category"] for s in sources} - valid
     if unknown:
@@ -305,16 +355,24 @@ def main() -> int:
               f"{', '.join(sorted(unknown))}", file=sys.stderr)
         return 1
 
+    inherited = {c["id"]: [k.lower() for k in c.get("match") or []]
+                 for c in categories}
+
     now = datetime.now(timezone.utc)
 
     collected: list[dict] = []
     seen: set[str] = set()
     for source in sources:
-        for item in harvest(source, now):
+        for item in harvest(source, inherited.get(source["category"], []),
+                            reject, now):
             # Two feeds can carry the same story. First one in wins.
-            if item["url"] in seen:
+            #
+            # Keyed on the title as well as the URL: EPIC publishes some items
+            # at two URLs, which put the same headline on the page twice.
+            keys = (item["url"], item["title"].lower())
+            if any(k in seen for k in keys):
                 continue
-            seen.add(item["url"])
+            seen.update(keys)
             collected.append(item)
 
     if not collected:

@@ -2,22 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-17
+generated: 2026-08-18
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "What happens when a kid’s robot best friend dies?"
-        url: "https://www.technologyreview.com/2026/08/17/1141568/moxie-when-kids-robot-best-friend-dies/"
+      - title: "OpenAI launches ChatGPT for Teens with stronger safeguards"
+        url: "https://www.theguardian.com/technology/2026/aug/18/openai-chatgpt-for-teens"
+        source: "The Guardian"
+        date: 2026-08-18
+        summary: "Teen version is intended for children aged 13 to 17 and includes content protections on self-harm and sexual chats OpenAI is launching a version of ChatGPT designed for teenagers – the first generation to grow up with..."
+      - title: "AI’s recursive self-improvement might not come so quickly after all"
+        url: "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/"
         source: "MIT Technology Review"
-        date: 2026-08-17
-        summary: "When Xander first met Moxie, she taught him that when he was anxious, he could calm down by exhaling through his lips so that he buzzed like a bee. They practiced breathing like dragons to manage feeling mad and..."
-      - title: "Are Microsoft’s AI plans being held back by a shortage of chips?"
-        url: "https://www.theguardian.com/technology/2026/aug/17/are-microsofts-ai-plans-being-held-back-by-a-shortage-of-chips"
+        date: 2026-08-18
+        summary: "The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight. LLMs can already write code, generate synthetic data for training, and optimize the computer..."
+      - title: "Claude to start watermarking AI-generated text – but will it make quality worse?"
+        url: "https://www.theguardian.com/technology/2026/aug/17/claude-watermark-ai-text-quality-worse"
         source: "The Guardian"
         date: 2026-08-17
-        summary: "Guardian investigation finds apparent discrepancy between what tech company has said about its AI capacity – and the number of advanced chips it has in operation The chips are quite small and some can be held in the..."
+        summary: "Anthropic says it will change way chatbot makes small, random choices, to comply with EU regulation The world is familiar by now with the usual tropes of machine-generated text: overuse of the word “delve”, an excess of..."
       - title: "Report supporting Australia’s teen social media ban appears to contain AI hallucinations, Senate hears"
         url: "https://www.theguardian.com/australia-news/2026/aug/17/australia-social-media-ban-report-ai-hallucinations-ntwnfb"
         source: "The Guardian"
@@ -33,41 +38,26 @@ sections:
         source: "The Guardian"
         date: 2026-08-16
         summary: "Australia’s corporate watchdog says PM is the figure most commonly used in deepfakes to promote phoney investment opportunities Follow our Australia news live blog for latest updates Get our breaking news email , free..."
-      - title: "‘I see the incredible promise’: on set of an AI film shoot as new studios embrace controversial tech"
-        url: "https://www.theguardian.com/film/2026/aug/16/directors-embracing-ai-film-making"
+      - title: "AI cheating, leaked papers and marking errors: how exam protests went global"
+        url: "https://www.theguardian.com/global-development/2026/aug/16/ai-cheating-leaked-papers-marking-errors-how-exam-protests-went-global"
         source: "The Guardian"
         date: 2026-08-16
-        summary: "Amid fears for jobs, some film-makers say AI could enable them to bypass studio giants and take more creative risks Near the collonaded entrance to Sony Pictures’ historic Culver City film studio, a tech-powered rival..."
-      - title: "The first anti-AI protester to be jailed has a message for OpenAI, Anthropic and Meta: ‘Regain your humanity’"
-        url: "https://www.theguardian.com/us-news/2026/aug/16/california-openai-protester-wynd-kaufman"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "Wynd Kaufmyn, 69, chained and locked the front doors of OpenAI’s headquarters last year with members of StopAI An activist who blocked the entrance to one of the world’s biggest AI companies is believed to have become..."
+        summary: "Student unrest sweeps India, Portugal and Mexico as grievances and pressure for good grades in tough job market collide Families with teenagers in education know the private, hidden pain of exam season. But this year..."
       - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
         url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
         source: "Ars Technica"
         date: 2026-08-14
         summary: "Judge warns pro se litigants are using chatbots wrong and getting desperate."
-      - title: "OpenAI and Anthropic in price war as Chinese AI rivals gain ground"
-        url: "https://arstechnica.com/ai/2026/08/openai-and-anthropic-in-price-war-as-chinese-ai-rivals-gain-ground/"
-        source: "Ars Technica"
-        date: 2026-08-14
-        summary: "US groups release cheaper models after new challenges to their trillion-dollar ambitions."
-      - title: "The new Instagram logo is the perfect embodiment of AI slop"
-        url: "https://arstechnica.com/ai/2026/08/the-new-instagram-logo-is-the-perfect-embodiment-of-ai-slop/"
-        source: "Ars Technica"
+      - title: "Flock is tightening its rules in response to a growing surveillance backlash"
+        url: "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/"
+        source: "MIT Technology Review"
         date: 2026-08-13
-        summary: "Opinion: Some remarks about the new wordmark accidentally being perfectly awful."
-      - title: "Google announces Gemini 3.7 Flash just three weeks after previous release"
-        url: "https://arstechnica.com/ai/2026/08/google-announces-gemini-3-7-flash-just-three-weeks-after-previous-release/"
+        summary: "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid..."
+      - title: "AI chatbots have failed people in crisis. Can that be fixed?"
+        url: "https://arstechnica.com/ai/2026/08/ai-chatbots-have-failed-people-in-crisis-can-that-be-fixed/"
         source: "Ars Technica"
-        date: 2026-08-13
-        summary: "Gemini 3.6 Flash debuted just 3 weeks ago, but Google says 3.7 has \"substantial improvements.\""
-      - title: "Anthropic could be worth $2 trillion when it goes public"
-        url: "https://arstechnica.com/ai/2026/08/anthropic-could-be-worth-2-trillion-when-it-goes-public/"
-        source: "Ars Technica"
-        date: 2026-08-13
-        summary: "Rapid revenue growth fuels hope Claude maker's IPO is the biggest listing in history"
+        date: 2026-08-07
+        summary: "Clinicians and researchers say AI companies need to open up their safety data."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -97,11 +87,11 @@ sections:
         source: "The Guardian"
         date: 2026-08-07
         summary: "Some of the victim-survivors who produced an official report for the state critical of police say their work has been buried and their members ignored When the Queensland minister, Amanda Camm, announced her hand-picked..."
-      - title: "‘He should resign’: unease in Republican Max Miller’s Ohio district amid domestic abuse allegations"
-        url: "https://www.theguardian.com/us-news/2026/aug/06/ohio-voters-reconsider-republican-max-miller"
+      - title: "What kind of society fast-tracks early release for domestic abusers? This is gambling with women’s lives | Joan Smith"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/05/release-domestic-abusers-gambling-womens-lives"
         source: "The Guardian"
-        date: 2026-08-06
-        summary: "Voters in the red district are concerned with congressman’s alleged behavior and political future ahead of the midterms David Griffith was a registered Republican for years. But on Sunday evening, he watched the Ohio..."
+        date: 2026-08-05
+        summary: "Andy Burnham inherited the crisis in our prison system – but the solution cannot be to further endanger the women and children who have survived violence It’s time to be blunt: the government is about to expose hundreds..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -136,21 +126,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Sage issues dozens of retractions from two journals it acquired"
+        url: "https://retractionwatch.com/2026/08/17/sage-issues-dozens-of-retractions-from-two-journals-it-acquired/"
+        source: "Retraction Watch"
+        date: 2026-08-17
+        summary: "In recent weeks Sage has retracted batches of articles published in two journals it acquired from IOS Press in 2023. In each case, the retractions were for manipulation of, and concerns about, peer review. The first..."
       - title: "At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability."
         url: "https://www.propublica.org/article/private-schools-vouchers-wisconsin-atlas-preparatory"
         source: "ProPublica"
         date: 2026-08-17
         summary: "The post At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability. appeared first on ProPublica ."
-      - title: "Weekend reads: Tragic news on former Cambridge prof; A ‘never AI’ research company was AI after all; OpenAI’s math breakthroughs don’t add up"
-        url: "https://retractionwatch.com/2026/08/15/weekend-reads-jason-arday-research-gold-ai-openai-math-breakthroughs/"
-        source: "Retraction Watch"
-        date: 2026-08-15
-        summary: "As we were assembling this week’s Weekend Reads, we learned the tragic news that former Cambridge professor Jason Arday had been found dead in his home. Arday has been the subject of several news stories in recent..."
-      - title: "Princeton student says she did not conduct the experiments described in her now-retracted paper"
-        url: "https://retractionwatch.com/2026/08/14/princeton-rishika-porandla-macromolecular-materials-engineering-experiments-retraction/"
-        source: "Retraction Watch"
-        date: 2026-08-14
-        summary: "Earlier this week, Retraction Watch reported on a Princeton student’s decision to retract her own paper from an engineering journal due to “significant methodological errors.” The student, Rishika Porandla, now tells us..."
       - title: "JAMA journal won’t retract oxycodone paper despite author request, citing no ‘falsification’"
         url: "https://retractionwatch.com/2026/08/13/jama-archives-internal-medicine-oxycodone-osteoarthritis-pain/"
         source: "Retraction Watch"
@@ -176,11 +161,16 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-11
         summary: "BMJ Public Health has retracted a paper some — including a witness at a recent U.S. Senate subcommittee hearing — have used to link COVID-19 vaccines to deaths. The action comes more than two years after a researcher..."
-      - title: "A college student had to retract her paper. The move was ‘the starting point for a better study’"
-        url: "https://retractionwatch.com/2026/08/10/college-student-rishika-porandla-retract-own-paper-wiley-macromolecular-materials-engineering/"
+      - title: "Clarivate removes hold on mega-journal Heliyon after internal audit, 650+ retractions"
+        url: "https://retractionwatch.com/2026/08/07/clarivate-removes-hold-mega-journal-heliyon-after-internal-audit/"
         source: "Retraction Watch"
-        date: 2026-08-10
-        summary: "Note, August 14, 2026: See an update to this story here. As a sophomore at Princeton University, Rishika Porandla took a course called “The Curious Scientist,” where students practice disciplinary research skills and..."
+        date: 2026-08-07
+        summary: "Clarivate has lifted its hold on Heliyon after the journal’s internal audit led to over 1,000 retractions, expressions of concern and corrections. As a result, the journal will receive an impact factor in the coming..."
+      - title: "Decade-long fraud by market survey firm a ‘gut punch’ for researchers"
+        url: "https://retractionwatch.com/2026/08/06/op4g-market-research-indictment-fake-data/"
+        source: "Retraction Watch"
+        date: 2026-08-06
+        summary: "In April 2025, David Victorson, a psychologist at Northwestern University in Chicago, was polishing several manuscripts for submission when a colleague sent him a link to a press release from the U.S. Department of..."
       - title: "For the Second Time, Lawmakers Failed to Fix California’s Warning System for Teacher Misconduct"
         url: "https://www.propublica.org/article/california-teacher-misconduct-database-bill-failed-al-muratsuchi"
         source: "ProPublica"
@@ -205,21 +195,11 @@ sections:
         source: "EPIC"
         date: 2026-08-11
         summary: "JERSEY CITY, N.J. — EPIC and New Jersey Kids Code Coalition advocates celebrated as Governor Mikie Sherrill signed the landmark New Jersey Kids Code into law alongside bills to create social media mental health warning..."
-      - title: "EPIC, Advocates Celebrate As New Jersey Signs Nation-Leading Kids’ Online Safety Bills Into Law"
-        url: "https://epic.org/epic-advocates-celebrate-as-new-jersey-signs-nation-leading-kids-online-safety-bills-into-law/"
-        source: "EPIC"
-        date: 2026-08-11
-        summary: "JERSEY CITY, N.J. — EPIC and New Jersey Kids Code Coalition advocates celebrated as Governor Mikie Sherrill signed the landmark New Jersey Kids Code into law alongside bills to create social media mental health warning..."
       - title: "Judges Sides with EPIC and AG, Telling Google, TikTok, and Meta Their Addictive Social Media Features Are Not 1A Speech"
         url: "https://epic.org/judges-sides-with-epic-and-ag-telling-google-tiktok-and-meta-their-addictive-social-media-features-are-not-1a-speech/"
         source: "EPIC"
         date: 2026-08-06
         summary: "Big Tech’s overbroad arguments that their addictive social media features are protected speech were dealt a major blow in an order issued Thursday in the combined TikTok, Meta, and Google v. Bonta cases. These cases..."
-      - title: "Canadian Man Pleads Guilty in Snowflake Extortions"
-        url: "https://krebsonsecurity.com/2026/08/canadian-man-pleads-guilty-in-snowflake-extortions/"
-        source: "Krebs on Security"
-        date: 2026-08-06
-        summary: "A 26-year-old Canadian man once described as one of the most consequential cybercrime threat actors of 2024 has pleaded guilty to computer fraud and conspiracy to hack and extort more than 165 organizations that used..."
       - title: "Senate Commerce Committee Advances Youth AI Privacy Act"
         url: "https://epic.org/senate-commerce-committee-advances-youth-ai-privacy-act/"
         source: "EPIC"
@@ -250,3 +230,13 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-07-28
         summary: "The concept of “surveillance pricing” is just one part of a much larger problem and business model: corporations maximizing their profits by invading our privacy. The all-too-common business model is to systematically..."
+      - title: "Brazil gives parents social media controls for their kids. Should the US?"
+        url: "https://themarkup.org/privacy/2026/07/28/brazil-gives-parents-social-media-controls-for-their-kids-should-the-u-s"
+        source: "The Markup"
+        date: 2026-07-28
+        summary: "California is leading on kids’ data privacy in the U.S. but still lags internationally."
+      - title: "Hundreds of Drone-as-First-Responder Programs Could Soon Be Launched Across the Country"
+        url: "https://www.eff.org/deeplinks/2026/07/hundreds-drone-first-responder-programs-could-soon-be-launched-across-country"
+        source: "EFF Deeplinks"
+        date: 2026-07-23
+        summary: "Police departments across the country are lining up to launch drone-as-first-responder (DFR) programs, and hundreds have cleared a necessary hurdle toward making deployment a reality, expanding aerial surveillance and..."

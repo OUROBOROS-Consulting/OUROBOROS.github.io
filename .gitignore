@@ -22,3 +22,6 @@ posts/
 *.swp
 *.swo
 .worktrees/
+
+# Python bytecode from scripts/fetch_news.py
+__pycache__/
