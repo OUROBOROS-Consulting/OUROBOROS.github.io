@@ -164,6 +164,43 @@ initCarousel('testimonials', true);  // auto-advances every 7s
   });
 })();
 
+// ── Nav search — makes the icon openable without a hover ─────────────────────
+// The input is width:0 until :hover or :focus-within fires. A touch screen has
+// neither before the first tap, and a zero-width input has no tap target, so
+// the submit button was the only reachable control: tapping it submitted an
+// empty query. This intercepts that submit, opens the input and focuses it.
+// Desktop hover still works on its own; .is-open just keeps it open once the
+// pointer leaves.
+(function initNavSearch() {
+  const wrap  = document.getElementById('nav-search-wrap');
+  if (!wrap) return;
+  const input = wrap.querySelector('.nav-search__input');
+
+  function open() {
+    wrap.classList.add('is-open');
+    input.focus();
+  }
+
+  wrap.addEventListener('submit', (e) => {
+    if (input.value.trim()) return;   // real query — let the form navigate
+    e.preventDefault();
+    open();
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      wrap.classList.remove('is-open');
+      input.blur();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!wrap.contains(e.target) && !input.value.trim()) {
+      wrap.classList.remove('is-open');
+    }
+  });
+})();
+
 // ── Mobile nav accordion — chevron toggles a dropdown's children in place ─────
 // Desktop reveals children on hover/focus-within (CSS only); this only fires
 // via the accordion button, which the design package hides above 768px.

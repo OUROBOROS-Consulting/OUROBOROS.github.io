@@ -359,10 +359,33 @@
 
   .nav-hamburger {
     display: flex; // show hamburger
-    // The nav centers each child; the octagon buttons are taller (card + label
-    // below), so a centered hamburger drops below the octagon icons. Pin its top
-    // to the content-box top so it lines up with the button cards.
-    align-self: flex-start;
+    // align-self: flex-start lived here until 2026-08-20. It dated from when
+    // .nav-buttons held Exit/News/Contact octagons, each a card with a label
+    // beneath it, which made those items taller than the hamburger. Those three
+    // moved to the fixed rail and .nav-buttons now holds the search form alone,
+    // so flex-start had nothing left to align to and simply sat the hamburger
+    // 7px above the search card. Centre both against the bar instead.
+    align-self: center;
+  }
+
+  // The closed bar is one row: logo | search | hamburger. What right-anchors the
+  // button group on desktop is `.nav-links { margin: auto }`, and .nav-links is
+  // display:none here until the hamburger opens it — so on phone and tablet
+  // nothing pushed the group right and the whole cluster bunched against the
+  // logo, about 110px from the left edge. The search input grows leftward from
+  // its icon (see .nav-search__input, position:absolute right:100%), so from
+  // there it opened straight off the left edge of the screen.
+  .nav-buttons {
+    margin-left: auto;
+    align-items: center;
+  }
+
+  // .nav-links is width:100%, so under flex-wrap it claims a whole line, and it
+  // precedes the button group in the DOM. That sent search and the hamburger to
+  // a THIRD line beneath the open drawer: tapping the hamburger moved it to the
+  // bottom of the screen. Ordering the drawer last keeps the bar row intact.
+  .nav-links {
+    order: 3;
   }
 
   .nav-links {
@@ -541,8 +564,14 @@
   }
 }
 
+// .is-open is set by initNavSearch() in main.js. Hover cannot open this on a
+// touch screen, and the closed input is width:0 so there is nothing to tap:
+// without the class the only reachable control was the submit button, which
+// submitted an empty query and landed on /search/ with "Enter a search term
+// above." That is the whole reason search appeared broken on phones.
 .nav-search-wrap:hover .nav-search__input,
-.nav-search-wrap:focus-within .nav-search__input {
+.nav-search-wrap:focus-within .nav-search__input,
+.nav-search-wrap.is-open .nav-search__input {
   width: 210px;
   opacity: 1;
 }
@@ -561,8 +590,14 @@
   }
 
   .nav-search-wrap:hover .nav-search__input,
-  .nav-search-wrap:focus-within .nav-search__input {
-    width: 130px;
+  .nav-search-wrap:focus-within .nav-search__input,
+  .nav-search-wrap.is-open .nav-search__input {
+    width: 210px;
+    // The cluster is right-anchored above, which leaves roughly 100vw - 105px
+    // of bar to the left of the icon. This cap keeps the input's left edge on
+    // screen at 320px, where a flat 210px would not fit. It was 130px before,
+    // which fit only because the icon sat near the left edge to begin with.
+    max-width: calc(100vw - 8rem);
   }
 }
 
