@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-19
+generated: 2026-08-20
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Meta ran ads for an app promising to nudify female politicians"
+        url: "https://arstechnica.com/ai/2026/08/meta-ran-ads-for-an-app-promising-to-nudify-female-politicians/"
+        source: "Ars Technica"
+        date: 2026-08-19
+        summary: "One ad featured a pornographic video with deepfake closely resembling a US politician."
+      - title: "Did someone wearing Meta Glasses film you today? Are you sure?"
+        url: "https://www.theguardian.com/technology/ng-interactive/2026/aug/19/meta-glasses-privacy-surveillance"
+        source: "The Guardian"
+        date: 2026-08-19
+        summary: "People say they’ve been secretly filmed in their own homes, at concerts and at work. Are the wildly popular smartglasses the final nail in the coffin of personal privacy? “I’ve had one person who told me that their..."
+      - title: "Will AI give you the job? Automated hiring tools spark discrimination and secrecy lawsuits"
+        url: "https://www.theguardian.com/technology/2026/aug/19/ai-hiring-tools-discrimination"
+        source: "The Guardian"
+        date: 2026-08-19
+        summary: "A rise in lawsuits over AI use in employment decisions is raising questions about how companies hire and fire For the last four years, Erin Kistler has applied for thousands of jobs at companies like Paypal , Microsoft..."
       - title: "OpenAI announces slowing pace of development after hack by rogue agent"
         url: "https://www.theguardian.com/technology/2026/aug/18/open-ai-pause-hack"
         source: "The Guardian"
@@ -33,16 +48,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-17
         summary: "Exclusive: Guardian analysis finds one section of report includes links to academic articles that do not exist, but authors deny the references were made up by AI Follow our Australia news live blog for latest updates..."
-      - title: "The Guardian view on the changed world of job interviews: missing the human factor | Editorial"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/16/the-guardian-view-on-the-changed-world-of-job-interviews-missing-the-human-factor"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "Andy Burnham’s doubts about Zoom interviews apply more widely to a hiring process being transformed by AI Almost half of UK jobseekers have found themselves pitching to an AI bot, according to recent research , leading..."
-      - title: "Deepfake Anthony Albanese used in celebrity scams duping Australians out of $7.4m, Asic warns"
-        url: "https://www.theguardian.com/australia-news/2026/aug/17/deepfake-anthony-albanese-used-in-celebrity-scams-duping-australians-out-of-74m-asic-warns"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "Australia’s corporate watchdog says PM is the figure most commonly used in deepfakes to promote phoney investment opportunities Follow our Australia news live blog for latest updates Get our breaking news email , free..."
       - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
         url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
         source: "Ars Technica"
@@ -53,15 +58,15 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-13
         summary: "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid..."
-      - title: "AI chatbots have failed people in crisis. Can that be fixed?"
-        url: "https://arstechnica.com/ai/2026/08/ai-chatbots-have-failed-people-in-crisis-can-that-be-fixed/"
-        source: "Ars Technica"
-        date: 2026-08-07
-        summary: "Clinicians and researchers say AI companies need to open up their safety data."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Travelodge boss quits amid fallout over hotel chain’s security failings"
+        url: "https://www.theguardian.com/business/2026/aug/20/travelodge-boss-quits-amid-fallout-over-hotel-chains-security-failings"
+        source: "The Guardian"
+        date: 2026-08-20
+        summary: "Joanna Boydell steps down after widespread criticism over company’s handling of guest safety issues The boss of Travelodge has resigned after widespread criticism of her handling of security failings at the hotel chain..."
       - title: "More women will die if domestic abusers leave prison early, victim’s parents warn"
         url: "https://www.theguardian.com/society/2026/aug/17/more-women-will-die-if-domestic-abusers-leave-prison-early-victims-parents-warn"
         source: "The Guardian"
@@ -87,11 +92,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-07
         summary: "Some of the victim-survivors who produced an official report for the state critical of police say their work has been buried and their members ignored When the Queensland minister, Amanda Camm, announced her hand-picked..."
-      - title: "What kind of society fast-tracks early release for domestic abusers? This is gambling with women’s lives | Joan Smith"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/05/release-domestic-abusers-gambling-womens-lives"
-        source: "The Guardian"
-        date: 2026-08-05
-        summary: "Andy Burnham inherited the crisis in our prison system – but the solution cannot be to further endanger the women and children who have survived violence It’s time to be blunt: the government is about to expose hundreds..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -126,6 +126,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "What Parents Need to Know About Sexual Abuse in Youth Sports"
+        url: "https://www.propublica.org/getinvolved/what-parents-should-know-sexual-abuse-youth-sports-aau-safesport"
+        source: "ProPublica"
+        date: 2026-08-20
+        summary: "The post What Parents Need to Know About Sexual Abuse in Youth Sports appeared first on ProPublica ."
+      - title: "A New Zealand journal deleted a paper for potential harm to Māori months after publishing it"
+        url: "https://retractionwatch.com/2026/08/19/new-zealand-journal-clinical-psychology-maori/"
+        source: "Retraction Watch"
+        date: 2026-08-19
+        summary: "When Arna Mitchell submitted her article critiquing a proposal for different standards of practice for Māori and non-Māori clients in clinical psychology, she thought it would be too controversial to publish because it..."
       - title: "Sage issues dozens of retractions from two journals it acquired"
         url: "https://retractionwatch.com/2026/08/17/sage-issues-dozens-of-retractions-from-two-journals-it-acquired/"
         source: "Retraction Watch"
@@ -166,15 +176,15 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-07
         summary: "Clarivate has lifted its hold on Heliyon after the journal’s internal audit led to over 1,000 retractions, expressions of concern and corrections. As a result, the journal will receive an impact factor in the coming..."
-      - title: "Decade-long fraud by market survey firm a ‘gut punch’ for researchers"
-        url: "https://retractionwatch.com/2026/08/06/op4g-market-research-indictment-fake-data/"
-        source: "Retraction Watch"
-        date: 2026-08-06
-        summary: "In April 2025, David Victorson, a psychologist at Northwestern University in Chicago, was polishing several manuscripts for submission when a colleague sent him a link to a press release from the U.S. Department of..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "📍 The Sneaky Code Tracking App Users | EFFector 38.15"
+        url: "https://www.eff.org/deeplinks/2026/08/sneaky-code-tracking-app-users-effector-3815"
+        source: "EFF Deeplinks"
+        date: 2026-08-19
+        summary: "Your location isn't just a pin on a map—it can expose some of the most intimate details about your life. The value of this information to advertisers and others has turned the location data business into a multi-billion..."
       - title: "Who’s Tracking You? Use This New Service to Find Out"
         url: "https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/"
         source: "Krebs on Security"
@@ -230,8 +240,3 @@ sections:
         source: "The Markup"
         date: 2026-07-28
         summary: "California is leading on kids’ data privacy in the U.S. but still lags internationally."
-      - title: "Hundreds of Drone-as-First-Responder Programs Could Soon Be Launched Across the Country"
-        url: "https://www.eff.org/deeplinks/2026/07/hundreds-drone-first-responder-programs-could-soon-be-launched-across-country"
-        source: "EFF Deeplinks"
-        date: 2026-07-23
-        summary: "Police departments across the country are lining up to launch drone-as-first-responder (DFR) programs, and hundreds have cleared a necessary hurdle toward making deployment a reality, expanding aerial surveillance and..."
