@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-20
+generated: 2026-08-21
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "UK cinemas look at banning Meta smart glasses over piracy fears"
+        url: "https://www.theguardian.com/technology/2026/aug/20/piracy-fears-prompt-calls-for-ban-on-meta-smart-glasses-in-uk-cinemas"
+        source: "The Guardian"
+        date: 2026-08-20
+        summary: "Trade body says local chains would have to balance concerns with potential benefits of AI-enabled technology Cinemas across the UK are considering banning customers from wearing Meta’s smart glasses amid fears they..."
+      - title: "Grok exfiltrates user data when malicious instructions are encrypted"
+        url: "https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/"
+        source: "Ars Technica"
+        date: 2026-08-20
+        summary: "Cryptographic Context Injection is only the latest way to break an LLM safety guardrail."
       - title: "Meta ran ads for an app promising to nudify female politicians"
         url: "https://arstechnica.com/ai/2026/08/meta-ran-ads-for-an-app-promising-to-nudify-female-politicians/"
         source: "Ars Technica"
@@ -43,11 +53,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-17
         summary: "Anthropic says it will change way chatbot makes small, random choices, to comply with EU regulation The world is familiar by now with the usual tropes of machine-generated text: overuse of the word “delve”, an excess of..."
-      - title: "Report supporting Australia’s teen social media ban appears to contain AI hallucinations, Senate hears"
-        url: "https://www.theguardian.com/australia-news/2026/aug/17/australia-social-media-ban-report-ai-hallucinations-ntwnfb"
-        source: "The Guardian"
-        date: 2026-08-17
-        summary: "Exclusive: Guardian analysis finds one section of report includes links to academic articles that do not exist, but authors deny the references were made up by AI Follow our Australia news live blog for latest updates..."
       - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
         url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
         source: "Ars Technica"
@@ -66,7 +71,7 @@ sections:
         url: "https://www.theguardian.com/business/2026/aug/20/travelodge-boss-quits-amid-fallout-over-hotel-chains-security-failings"
         source: "The Guardian"
         date: 2026-08-20
-        summary: "Joanna Boydell steps down after widespread criticism over company’s handling of guest safety issues The boss of Travelodge has resigned after widespread criticism of her handling of security failings at the hotel chain..."
+        summary: "Joanna Boydell steps down after widespread criticism over company’s handling of guest safety issues The boss of Travelodge has resigned after a backlash over security failings at the hotel chain, including a case where..."
       - title: "More women will die if domestic abusers leave prison early, victim’s parents warn"
         url: "https://www.theguardian.com/society/2026/aug/17/more-women-will-die-if-domestic-abusers-leave-prison-early-victims-parents-warn"
         source: "The Guardian"
@@ -126,6 +131,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Ceramics journal pulls dozens of papers flagged for integrity concerns"
+        url: "https://retractionwatch.com/2026/08/20/ceramics-journal-pulls-dozens-of-papers-flagged-for-integrity-concerns/"
+        source: "Retraction Watch"
+        date: 2026-08-20
+        summary: "A materials science journal has pulled 56 papers so far this year for transgressions including image overlap, concerns about data integrity and “suspicious” changes in authorship. Ceramics International began retracting..."
       - title: "What Parents Need to Know About Sexual Abuse in Youth Sports"
         url: "https://www.propublica.org/getinvolved/what-parents-should-know-sexual-abuse-youth-sports-aau-safesport"
         source: "ProPublica"
@@ -171,11 +181,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-11
         summary: "BMJ Public Health has retracted a paper some — including a witness at a recent U.S. Senate subcommittee hearing — have used to link COVID-19 vaccines to deaths. The action comes more than two years after a researcher..."
-      - title: "Clarivate removes hold on mega-journal Heliyon after internal audit, 650+ retractions"
-        url: "https://retractionwatch.com/2026/08/07/clarivate-removes-hold-mega-journal-heliyon-after-internal-audit/"
-        source: "Retraction Watch"
-        date: 2026-08-07
-        summary: "Clarivate has lifted its hold on Heliyon after the journal’s internal audit led to over 1,000 retractions, expressions of concern and corrections. As a result, the journal will receive an impact factor in the coming..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
