@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-21
+generated: 2026-08-22
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "As demand for Meta AI glasses explodes, it’s harder to avoid creepy recordings"
+        url: "https://arstechnica.com/tech-policy/2026/08/meta-ai-glasses-may-get-creepier-and-apps-that-detect-them-arent-perfect/"
+        source: "Ars Technica"
+        date: 2026-08-21
+        summary: "Ars looks at Zuckoff, the latest free app detecting Meta AI glasses amid privacy backlash."
+      - title: "I worked at OpenAI. Here are the guardrails we need now | Miles Brundage"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/21/openai-frontier-ai-speed"
+        source: "The Guardian"
+        date: 2026-08-21
+        summary: "I understand the pressure on AI companies to rush forward. But employees are right to be concerned Last month, more than a thousand employees at frontier AI companies signed a letter asking the US government to find a..."
       - title: "UK cinemas look at banning Meta smart glasses over piracy fears"
         url: "https://www.theguardian.com/technology/2026/aug/20/piracy-fears-prompt-calls-for-ban-on-meta-smart-glasses-in-uk-cinemas"
         source: "The Guardian"
@@ -48,11 +58,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-18
         summary: "The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight. LLMs can already write code, generate synthetic data for training, and optimize the computer..."
-      - title: "Claude to start watermarking AI-generated text – but will it make quality worse?"
-        url: "https://www.theguardian.com/technology/2026/aug/17/claude-watermark-ai-text-quality-worse"
-        source: "The Guardian"
-        date: 2026-08-17
-        summary: "Anthropic says it will change way chatbot makes small, random choices, to comply with EU regulation The world is familiar by now with the usual tropes of machine-generated text: overuse of the word “delve”, an excess of..."
       - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
         url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
         source: "Ars Technica"
@@ -131,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Defamation suit demanding Elsevier retract paper heads closer to trial"
+        url: "https://retractionwatch.com/2026/08/21/defamation-lawsuit-elsevier-retraction-gps-air/"
+        source: "Retraction Watch"
+        date: 2026-08-21
+        summary: "A trial date has been set in a $1 billion defamation case against Elsevier that alleges the company published what plaintiffs say was a manipulated study about an air purifying technology over objections from peer..."
       - title: "Ceramics journal pulls dozens of papers flagged for integrity concerns"
         url: "https://retractionwatch.com/2026/08/20/ceramics-journal-pulls-dozens-of-papers-flagged-for-integrity-concerns/"
         source: "Retraction Watch"
@@ -176,11 +186,6 @@ sections:
         source: "ProPublica"
         date: 2026-08-12
         summary: "The post “They’re Putting Kids’ Lives at Risk”: How Abuse in a Tennessee Businessman’s Juvenile Prisons Remained Under Wraps appeared first on ProPublica ."
-      - title: "BMJ Group retracts paper on COVID-19 vaccines and mortality featured in Senate hearing"
-        url: "https://retractionwatch.com/2026/08/11/bmj-public-health-retraction-covid-19-vaccines-death-senate-hearing/"
-        source: "Retraction Watch"
-        date: 2026-08-11
-        summary: "BMJ Public Health has retracted a paper some — including a witness at a recent U.S. Senate subcommittee hearing — have used to link COVID-19 vaccines to deaths. The action comes more than two years after a researcher..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
