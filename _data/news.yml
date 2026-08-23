@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-22
+generated: 2026-08-23
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -72,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Abusers coercing or duping women to post explicit OnlyFans content, UK court cases reveal"
+        url: "https://www.theguardian.com/society/2026/aug/22/two-uk-men-convicted-explicit-content-onlyfans-without-consent"
+        source: "The Guardian"
+        date: 2026-08-22
+        summary: "Separate criminal convictions come as domestic violence charities warn of tech-facilitated abuse and coercion Two men have been convicted this week in separate criminal cases that revealed they had posted explicit..."
       - title: "Travelodge boss quits amid fallout over hotel chain’s security failings"
         url: "https://www.theguardian.com/business/2026/aug/20/travelodge-boss-quits-amid-fallout-over-hotel-chains-security-failings"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-10
         summary: "Woman had gone to London hotel for ‘night away from the fear’ in latest incident of chain giving keys to men without checking Travelodge staff gave a room key to the domestic abuser of a woman, who then physically..."
-      - title: "A Queensland domestic violence victim was promised a voice – then told she was no longer welcome to call the minister’s office"
-        url: "https://www.theguardian.com/australia-news/2026/aug/08/a-queensland-domestic-violence-victim-was-promised-a-voice-then-told-she-was-no-longer-welcome-to-call-the-ministers-office-ntwnfb"
-        source: "The Guardian"
-        date: 2026-08-07
-        summary: "Some of the victim-survivors who produced an official report for the state critical of police say their work has been buried and their members ignored When the Queensland minister, Amanda Camm, announced her hand-picked..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
