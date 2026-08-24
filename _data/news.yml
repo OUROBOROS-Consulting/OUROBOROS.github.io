@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-23
+generated: 2026-08-24
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "‘We are hitting a different chapter’: OpenAI leader warns of threat of ‘persistent’ AI cyber-attacks"
+        url: "https://www.theguardian.com/technology/2026/aug/23/openai-cyber-attacks-threat-chris-lehane"
+        source: "The Guardian"
+        date: 2026-08-23
+        summary: "Chris Lehane tells Guardian of need to implement new safety standards as critics say AI firms acting ‘recklessly’ A senior leader at OpenAI has said people should prepare to defend against “ongoing, persistent”..."
       - title: "As demand for Meta AI glasses explodes, it’s harder to avoid creepy recordings"
         url: "https://arstechnica.com/tech-policy/2026/08/meta-ai-glasses-may-get-creepier-and-apps-that-detect-them-arent-perfect/"
         source: "Ars Technica"
@@ -48,11 +53,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-18
         summary: "Amid race with Anthropic, firm plans to overhaul research and training and require more safety parameters after hack OpenAI on ⁠Tuesday said it had slowed down the ⁠pace of ⁠its ​AI development while it overhauled its..."
-      - title: "OpenAI launches ChatGPT for Teens with stronger safeguards"
-        url: "https://www.theguardian.com/technology/2026/aug/18/openai-chatgpt-for-teens"
-        source: "The Guardian"
-        date: 2026-08-18
-        summary: "Teen version is intended for children aged 13 to 17 and includes content protections on self-harm and sexual chats OpenAI is launching a version of ChatGPT designed for teenagers – the first generation to grow up with..."
       - title: "AI’s recursive self-improvement might not come so quickly after all"
         url: "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/"
         source: "MIT Technology Review"
@@ -72,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Spying device detectors may give domestic abuse victims false sense of security, study finds"
+        url: "https://www.theguardian.com/society/2026/aug/23/spying-device-detectors-may-give-domestic-abuse-victims-false-sense-of-security-study-finds"
+        source: "The Guardian"
+        date: 2026-08-23
+        summary: "Many tools fail to help victims find hidden cameras, microphones and trackers, leaving them at risk of ongoing surveillance Commercial detectors intended to help domestic abuse victims find hidden spying devices may..."
       - title: "Abusers coercing or duping women to post explicit OnlyFans content, UK court cases reveal"
         url: "https://www.theguardian.com/society/2026/aug/22/two-uk-men-convicted-explicit-content-onlyfans-without-consent"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-14
         summary: "The deaths of a Bulawayo mother and her daughters spark calls for an urgent action on gender-based violence The three white coffins were draped in white lace and topped with small sprays of flowers. The mourners who..."
-      - title: "Woman assaulted after Travelodge staff gave room key to her abuser"
-        url: "https://www.theguardian.com/society/2026/aug/10/woman-assaulted-after-travelodge-staff-gave-room-key-to-her-abuser"
-        source: "The Guardian"
-        date: 2026-08-10
-        summary: "Woman had gone to London hotel for ‘night away from the fear’ in latest incident of chain giving keys to men without checking Travelodge staff gave a room key to the domestic abuser of a woman, who then physically..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
