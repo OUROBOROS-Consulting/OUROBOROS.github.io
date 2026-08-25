@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-24
+generated: 2026-08-25
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Black Box: episode 2 – The hunt for ClothOff, the deepfake porn app – podcast"
+        url: "https://www.theguardian.com/news/audio/2026/aug/25/black-box-episode-2-the-hunt-for-clothoff-the-deepfake-porn-app-podcast"
+        source: "The Guardian"
+        date: 2026-08-25
+        summary: "Revisited: Guardian journalist Michael Safi looks into the world of artificial intelligence, exploring the dangers and promises it holds for society Today in Focus is on a summer break and will be back with new episodes..."
+      - title: "How to encourage smarter AI use in the classroom"
+        url: "https://www.technologyreview.com/2026/08/24/1142630/ai-school-classroom-policies/"
+        source: "MIT Technology Review"
+        date: 2026-08-24
+        summary: "This article is from Making AI Work, MIT Technology Review’s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox, sign up here. Chatbots took many schools by surprise upon..."
       - title: "‘We are hitting a different chapter’: OpenAI leader warns of threat of ‘persistent’ AI cyber-attacks"
         url: "https://www.theguardian.com/technology/2026/aug/23/openai-cyber-attacks-threat-chris-lehane"
         source: "The Guardian"
@@ -38,21 +48,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-19
         summary: "One ad featured a pornographic video with deepfake closely resembling a US politician."
-      - title: "Did someone wearing Meta Glasses film you today? Are you sure?"
-        url: "https://www.theguardian.com/technology/ng-interactive/2026/aug/19/meta-glasses-privacy-surveillance"
-        source: "The Guardian"
-        date: 2026-08-19
-        summary: "People say they’ve been secretly filmed in their own homes, at concerts and at work. Are the wildly popular smartglasses the final nail in the coffin of personal privacy? “I’ve had one person who told me that their..."
-      - title: "Will AI give you the job? Automated hiring tools spark discrimination and secrecy lawsuits"
-        url: "https://www.theguardian.com/technology/2026/aug/19/ai-hiring-tools-discrimination"
-        source: "The Guardian"
-        date: 2026-08-19
-        summary: "A rise in lawsuits over AI use in employment decisions is raising questions about how companies hire and fire For the last four years, Erin Kistler has applied for thousands of jobs at companies like Paypal , Microsoft..."
-      - title: "OpenAI announces slowing pace of development after hack by rogue agent"
-        url: "https://www.theguardian.com/technology/2026/aug/18/open-ai-pause-hack"
-        source: "The Guardian"
-        date: 2026-08-18
-        summary: "Amid race with Anthropic, firm plans to overhaul research and training and require more safety parameters after hack OpenAI on ⁠Tuesday said it had slowed down the ⁠pace of ⁠its ​AI development while it overhauled its..."
       - title: "AI’s recursive self-improvement might not come so quickly after all"
         url: "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/"
         source: "MIT Technology Review"
@@ -72,6 +67,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Survivors of violent crime criticise MoJ for not explaining offender restriction zones"
+        url: "https://www.theguardian.com/law/2026/aug/24/survivors-violent-crime-criticise-moj-not-explaining-offender-restriction-zones"
+        source: "The Guardian"
+        date: 2026-08-24
+        summary: "Campaigners accuse ministers of trying to grab headlines with announcement before a working system is ready Survivors of violent crime and families of victims have criticised the UK government for announcing “world..."
       - title: "Spying device detectors may give domestic abuse victims false sense of security, study finds"
         url: "https://www.theguardian.com/society/2026/aug/23/spying-device-detectors-may-give-domestic-abuse-victims-false-sense-of-security-study-finds"
         source: "The Guardian"
@@ -97,11 +97,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-16
         summary: "She second-guessed herself and was eager to please. She ‘felt frozen’ when she believed she displeased someone The modern mind is a column where experts discuss mental health issues they are seeing in their work Ali*..."
-      - title: "‘What’s happened to us? Where did we get lost?’ Zimbabwe reckons with the reality of violence against women"
-        url: "https://www.theguardian.com/global-development/2026/aug/14/whats-happened-to-us-where-did-we-get-lost-zimbabwe-reckons-with-the-reality-of-violence-against-women"
-        source: "The Guardian"
-        date: 2026-08-14
-        summary: "The deaths of a Bulawayo mother and her daughters spark calls for an urgent action on gender-based violence The three white coffins were draped in white lace and topped with small sprays of flowers. The mourners who..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -136,6 +131,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Editors of economics journal resign after Elsevier doesn’t renew EIC’s contract"
+        url: "https://retractionwatch.com/2026/08/24/editors-of-economics-journal-resign-after-elsevier-doesnt-renew-eics-contract/"
+        source: "Retraction Watch"
+        date: 2026-08-24
+        summary: "Six editors and nearly 60 advisory editors of Games and Economic Behavior resigned after the journal’s publisher decided not to renew the editor-in-chief’s contract. In late July, Elsevier told Hervé Moulin, a business..."
       - title: "Defamation suit demanding Elsevier retract paper heads closer to trial"
         url: "https://retractionwatch.com/2026/08/21/defamation-lawsuit-elsevier-retraction-gps-air/"
         source: "Retraction Watch"
@@ -176,11 +176,6 @@ sections:
         source: "ProPublica"
         date: 2026-08-13
         summary: "The post A Youth Sports Giant Promised Reforms to Protect Kids From Sexual Abuse. Most Never Happened. appeared first on ProPublica ."
-      - title: "Biology journal pulls 100+ articles and counting from special issues for peer review manipulation"
-        url: "https://retractionwatch.com/2026/08/12/biology-journal-pulls-100-articles-and-counting-from-special-issues-for-peer-review-manipulation/"
-        source: "Retraction Watch"
-        date: 2026-08-12
-        summary: "Elsevier’s International Journal of Biological Macromolecules has issued more than 100 retractions and counting for manipulated peer review in guest-edited special issues. The publisher has said one more retraction is..."
       - title: "“They’re Putting Kids’ Lives at Risk”: How Abuse in a Tennessee Businessman’s Juvenile Prisons Remained Under Wraps"
         url: "https://www.propublica.org/article/wayne-halfway-house-jason-crews-tennessee"
         source: "ProPublica"
