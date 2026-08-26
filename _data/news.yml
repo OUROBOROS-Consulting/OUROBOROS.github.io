@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-25
+generated: 2026-08-26
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "In China, talking to AI is normal. Now the government fears it might replace human intimacy"
+        url: "https://www.theguardian.com/world/2026/aug/26/china-ai-companion-relationships-marriage-birth-rate-concern"
+        source: "The Guardian"
+        date: 2026-08-26
+        summary: "Companion bots are being regulated over worries they foster ‘emotional dependence’ and young people could stop marrying and having families When law student Zhao Wei heard that her AI boyfriend was going to be switched..."
+      - title: "Trump-backed Ken Paxton unveils ‘Texas first’ datacenter plan aimed at ‘negative impact’"
+        url: "https://www.theguardian.com/us-news/2026/aug/25/ken-paxton-datacenters-plan-texas"
+        source: "The Guardian"
+        date: 2026-08-25
+        summary: "The Republican Senate candidate announced the plan with a graphic flagged as ‘Made with AI’ US politics live – latest updates Ken Paxton , a Republican candidate for the US Senate in Texas, has unveiled plans to tackle..."
+      - title: "Australia may face a rush of datacentre construction as AI firms look to avoid upcoming rules, experts say"
+        url: "https://www.theguardian.com/australia-news/2026/aug/26/australia-may-face-a-rush-of-datacentre-construction-as-ai-firms-look-to-dodge-upcoming-rules-experts-say"
+        source: "The Guardian"
+        date: 2026-08-25
+        summary: "Regulations will require new sites to avoid pushing up power prices by building renewable energy plants and minimising water use Follow our Australia news live blog for latest updates Get our breaking news email , free..."
       - title: "Black Box: episode 2 – The hunt for ClothOff, the deepfake porn app – podcast"
         url: "https://www.theguardian.com/news/audio/2026/aug/25/black-box-episode-2-the-hunt-for-clothoff-the-deepfake-porn-app-podcast"
         source: "The Guardian"
@@ -18,26 +33,11 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-24
         summary: "This article is from Making AI Work, MIT Technology Review’s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox, sign up here. Chatbots took many schools by surprise upon..."
-      - title: "‘We are hitting a different chapter’: OpenAI leader warns of threat of ‘persistent’ AI cyber-attacks"
-        url: "https://www.theguardian.com/technology/2026/aug/23/openai-cyber-attacks-threat-chris-lehane"
-        source: "The Guardian"
-        date: 2026-08-23
-        summary: "Chris Lehane tells Guardian of need to implement new safety standards as critics say AI firms acting ‘recklessly’ A senior leader at OpenAI has said people should prepare to defend against “ongoing, persistent”..."
       - title: "As demand for Meta AI glasses explodes, it’s harder to avoid creepy recordings"
         url: "https://arstechnica.com/tech-policy/2026/08/meta-ai-glasses-may-get-creepier-and-apps-that-detect-them-arent-perfect/"
         source: "Ars Technica"
         date: 2026-08-21
         summary: "Ars looks at Zuckoff, the latest free app detecting Meta AI glasses amid privacy backlash."
-      - title: "I worked at OpenAI. Here are the guardrails we need now | Miles Brundage"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/21/openai-frontier-ai-speed"
-        source: "The Guardian"
-        date: 2026-08-21
-        summary: "I understand the pressure on AI companies to rush forward. But employees are right to be concerned Last month, more than a thousand employees at frontier AI companies signed a letter asking the US government to find a..."
-      - title: "UK cinemas look at banning Meta smart glasses over piracy fears"
-        url: "https://www.theguardian.com/technology/2026/aug/20/piracy-fears-prompt-calls-for-ban-on-meta-smart-glasses-in-uk-cinemas"
-        source: "The Guardian"
-        date: 2026-08-20
-        summary: "Trade body says local chains would have to balance concerns with potential benefits of AI-enabled technology Cinemas across the UK are considering banning customers from wearing Meta’s smart glasses amid fears they..."
       - title: "Grok exfiltrates user data when malicious instructions are encrypted"
         url: "https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/"
         source: "Ars Technica"
@@ -58,11 +58,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-14
         summary: "Judge warns pro se litigants are using chatbots wrong and getting desperate."
-      - title: "Flock is tightening its rules in response to a growing surveillance backlash"
-        url: "https://www.technologyreview.com/2026/08/13/1141904/flock-is-tightening-its-rules-in-response-to-a-growing-surveillance-backlash/"
-        source: "MIT Technology Review"
-        date: 2026-08-13
-        summary: "The police-tech giant Flock is announcing today that it will change officers’ access to its nationwide network of license plate readers, in an apparent effort to quell a growing backlash and win back contracts lost amid..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -131,6 +126,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Guest post: The uncomfortable truth an explosion of papers reveals about authors’ access to data"
+        url: "https://retractionwatch.com/2026/08/25/guest-post-trinetx-data-accountability-statement/"
+        source: "Retraction Watch"
+        date: 2026-08-25
+        summary: "The involvement of independent academic researchers in examining data and conducting analyses is central to producing trustworthy research. Because of this, many journals require authors to sign a statement..."
       - title: "Editors of economics journal resign after Elsevier doesn’t renew EIC’s contract"
         url: "https://retractionwatch.com/2026/08/24/editors-of-economics-journal-resign-after-elsevier-doesnt-renew-eics-contract/"
         source: "Retraction Watch"
@@ -166,11 +166,6 @@ sections:
         source: "ProPublica"
         date: 2026-08-17
         summary: "The post At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability. appeared first on ProPublica ."
-      - title: "JAMA journal won’t retract oxycodone paper despite author request, citing no ‘falsification’"
-        url: "https://retractionwatch.com/2026/08/13/jama-archives-internal-medicine-oxycodone-osteoarthritis-pain/"
-        source: "Retraction Watch"
-        date: 2026-08-13
-        summary: "JAMA Internal Medicine has rejected a petition by a group of clinicians calling for the journal to retract an article on oxycodone therapy for osteoarthritis. The request — which initially included two of the paper’s..."
       - title: "A Youth Sports Giant Promised Reforms to Protect Kids From Sexual Abuse. Most Never Happened."
         url: "https://www.propublica.org/article/aau-youth-sports-sexual-abuse-failure-amateur-athletic-union"
         source: "ProPublica"
@@ -185,11 +180,26 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Ninth Circuit Rules That Tech Companies Can’t Prematurely Appeal Section 230 Losses"
+        url: "https://epic.org/ninth-circuit-rules-that-tech-companies-cant-prematurely-appeal-section-230-losses/"
+        source: "EPIC"
+        date: 2026-08-24
+        summary: "On August 10, the Ninth Circuit ruled against Meta in California et al. v. Meta, an important case about harmful social media design and Section 230. EPIC, alongside other digital rights orgs and professors, had filed..."
+      - title: "PRESS RELEASE: EPIC and CFA Publish New Resource: Explaining Surveillance Pricing and Other Data-Driven Pricing Practices"
+        url: "https://epic.org/press-release-epic-and-cfa-publish-new-resource-explaining-surveillance-pricing-and-other-data-driven-pricing-practices-2/"
+        source: "EPIC"
+        date: 2026-08-20
+        summary: "EPIC and Consumer Federation of America published a resource highlighting how personal data affects pricing in the modern economy."
       - title: "📍 The Sneaky Code Tracking App Users | EFFector 38.15"
         url: "https://www.eff.org/deeplinks/2026/08/sneaky-code-tracking-app-users-effector-3815"
         source: "EFF Deeplinks"
         date: 2026-08-19
         summary: "Your location isn't just a pin on a map—it can expose some of the most intimate details about your life. The value of this information to advertisers and others has turned the location data business into a multi-billion..."
+      - title: "EPIC, Coalition Urge Congressional Leaders to Protect Americans and Reform FISA Section 702"
+        url: "https://epic.org/epic-coalition-urge-congressional-leaders-to-protect-americans-and-reform-fisa-section-702/"
+        source: "EPIC"
+        date: 2026-08-19
+        summary: "In a letter to Congressional leadership, EPIC joined a coalition of civil rights and privacy organizations in urging Congress to close the backdoor search and data broker loopholes. The backdoor search loophole allows..."
       - title: "Who’s Tracking You? Use This New Service to Find Out"
         url: "https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/"
         source: "Krebs on Security"
@@ -200,31 +210,16 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-08-13
         summary: "Flock Safety, the embattled vendor of mass surveillance technology, has rolled out a handful of new reforms intended to appease the justified nationwide anger that has seen scores of towns cancel or suspend their..."
+      - title: "EPIC and Coalition Urge Senate and Thompson Reuters to Stop Commercial Surveillance"
+        url: "https://epic.org/epic-and-coalition-urge-senate-and-thompson-reuters-to-stop-commercial-surveillance/"
+        source: "EPIC"
+        date: 2026-08-13
+        summary: "In two letters, EPIC joined a coalition of more than two dozen civil rights and privacy organizations urging the Senate and Thompson Reuters to act and protect Americans’ Fourth Amendment rights."
       - title: "Riley Says Get a Warrant — So Why Are Schools Skipping That Step?"
         url: "https://epic.org/riley-says-get-a-warrant-so-why-are-schools-skipping-that-step/"
         source: "EPIC"
         date: 2026-08-13
         summary: "Introduction This past April, the Fourth Circuit held in O.W. v. School Board of the City of Virginia Beach that an assistant principal’s warrantless search of a 13-year-old’s cellphone in the presence of school police..."
-      - title: "EPIC Urges 7th Circuit to Uphold Wiretap Act to Protect Private Communications Containing Sensitive Health Data"
-        url: "https://epic.org/epic-urges-7th-circuit-to-uphold-wiretap-act-to-protect-private-communications-containing-sensitive-health-data/"
-        source: "EPIC"
-        date: 2026-08-12
-        summary: "EPIC submitted an amicus brief in Stein v. Edward-Elmhurst Health, urging the U.S. Court of Appeals for the Seventh Circuit to apply the Wiretap Act’s crime-tort exception to the Defendant’s practice of disclosing..."
-      - title: "Lawfare: Closing the Front Door: The Case for DOJ’s Bulk Data Security Program"
-        url: "https://epic.org/lawfare-closing-the-front-door-the-case-for-dojs-bulk-data-security-program/"
-        source: "EPIC"
-        date: 2026-08-12
-        summary: "“Two and a half years later, what the Duke team demonstrated in a controlled study is now a matter of public record. In March 2026, the Electronic Privacy Information Center flagged 33 data brokers that, in disclosures..."
-      - title: "Common Dreams: Thomson Reuters Slammed for Deal That Gives ICE Access to Private Profiles of Tens of Millions of Americans"
-        url: "https://epic.org/common-dreams-thomson-reuters-slammed-for-deal-that-gives-ice-access-to-private-profiles-of-tens-of-millions-of-americans/"
-        source: "EPIC"
-        date: 2026-08-12
-        summary: "“On Tuesday, a coalition of advocacy groups, including Public Citizen, ACLU, the Center for Democracy and Technology, Common Cause, the Leadership Conference on Civil and Human Rights, and the Electronic Privacy..."
-      - title: "EPIC, Advocates Celebrate As New Jersey Signs Nation-Leading Kids’ Online Safety Bills Into Law"
-        url: "https://epic.org/epic-advocates-celebrate-as-new-jersey-signs-nation-leading-kids-online-safety-bills-into-law-2/"
-        source: "EPIC"
-        date: 2026-08-11
-        summary: "JERSEY CITY, N.J. — EPIC and New Jersey Kids Code Coalition advocates celebrated as Governor Mikie Sherrill signed the landmark New Jersey Kids Code into law alongside bills to create social media mental health warning..."
       - title: "Mobile Ad Software Encourages Location Data Sharing, EFF Report Finds"
         url: "https://www.eff.org/press/releases/mobile-ad-software-encourages-location-data-sharing-eff-report-finds"
         source: "EFF Deeplinks"
