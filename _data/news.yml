@@ -2,32 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-26
+generated: 2026-08-27
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "In China, talking to AI is normal. Now the government fears it might replace human intimacy"
-        url: "https://www.theguardian.com/world/2026/aug/26/china-ai-companion-relationships-marriage-birth-rate-concern"
+      - title: "Everyone hates datacentres. Do we really need them? - video"
+        url: "https://www.theguardian.com/science/video/2026/aug/27/everyone-hates-datacentres-do-we-really-need-them-video"
+        source: "The Guardian"
+        date: 2026-08-27
+        summary: "AI companies have promised us world-shifting technology. But there’s a cost: loud, unsightly datacentres that drain environmental resources. As the government pushes their rapid growth, can local communities do anything..."
+      - title: "AI-proof? Younger workers desert the digital world for traditional crafts"
+        url: "https://www.theguardian.com/money/2026/aug/27/ai-proof-jobs-traditional-crafts"
+        source: "The Guardian"
+        date: 2026-08-27
+        summary: "In a disrupted job market people are turning to heritage crafts such as bookbinding, metalwork and boatbuilding It’s a bleak moment for young people entering the workforce for the first time . For decades, a university..."
+      - title: "Everyone hates datacentres. Do we really need them? – podcast"
+        url: "https://www.theguardian.com/science/audio/2026/aug/27/everyone-hates-datacentres-do-we-really-need-them-podcast"
+        source: "The Guardian"
+        date: 2026-08-27
+        summary: "AI companies have promised us world-shifting technology. But there’s a cost: loud, unsightly datacentres that drain environmental resources. As the government pushes their rapid growth, can local communities do anything..."
+      - title: "AI agents meant to replace Meta workers made “large-scale, disruptive actions”"
+        url: "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
+        source: "Ars Technica"
+        date: 2026-08-26
+        summary: "Report shows Meta's challenges replacing people with AI agents."
+      - title: "Bill Gates calls for ‘human-reserved’ jobs in face of AI takeover"
+        url: "https://www.theguardian.com/technology/2026/aug/26/bill-gates-human-reserved-jobs-ai-takeover"
         source: "The Guardian"
         date: 2026-08-26
-        summary: "Companion bots are being regulated over worries they foster ‘emotional dependence’ and young people could stop marrying and having families When law student Zhao Wei heard that her AI boyfriend was going to be switched..."
-      - title: "Trump-backed Ken Paxton unveils ‘Texas first’ datacenter plan aimed at ‘negative impact’"
-        url: "https://www.theguardian.com/us-news/2026/aug/25/ken-paxton-datacenters-plan-texas"
-        source: "The Guardian"
-        date: 2026-08-25
-        summary: "The Republican Senate candidate announced the plan with a graphic flagged as ‘Made with AI’ US politics live – latest updates Ken Paxton , a Republican candidate for the US Senate in Texas, has unveiled plans to tackle..."
-      - title: "Australia may face a rush of datacentre construction as AI firms look to avoid upcoming rules, experts say"
-        url: "https://www.theguardian.com/australia-news/2026/aug/26/australia-may-face-a-rush-of-datacentre-construction-as-ai-firms-look-to-dodge-upcoming-rules-experts-say"
-        source: "The Guardian"
-        date: 2026-08-25
-        summary: "Regulations will require new sites to avoid pushing up power prices by building renewable energy plants and minimising water use Follow our Australia news live blog for latest updates Get our breaking news email , free..."
-      - title: "Black Box: episode 2 – The hunt for ClothOff, the deepfake porn app – podcast"
-        url: "https://www.theguardian.com/news/audio/2026/aug/25/black-box-episode-2-the-hunt-for-clothoff-the-deepfake-porn-app-podcast"
-        source: "The Guardian"
-        date: 2026-08-25
-        summary: "Revisited: Guardian journalist Michael Safi looks into the world of artificial intelligence, exploring the dangers and promises it holds for society Today in Focus is on a summer break and will be back with new episodes..."
+        summary: "In 6,000-word essay Microsoft co-founder also expresses concern governments not prepared for technology’s impact Business live – latest updates Bill Gates has called for “human-reserved” jobs in certain sectors to..."
       - title: "How to encourage smarter AI use in the classroom"
         url: "https://www.technologyreview.com/2026/08/24/1142630/ai-school-classroom-policies/"
         source: "MIT Technology Review"
@@ -48,11 +53,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-19
         summary: "One ad featured a pornographic video with deepfake closely resembling a US politician."
-      - title: "AI’s recursive self-improvement might not come so quickly after all"
-        url: "https://www.technologyreview.com/2026/08/18/1142188/ai-recursive-self-improvement/"
-        source: "MIT Technology Review"
-        date: 2026-08-18
-        summary: "The AI industry’s boldest promise right now is that AI will soon improve itself, with almost no need for human oversight. LLMs can already write code, generate synthetic data for training, and optimize the computer..."
       - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
         url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
         source: "Ars Technica"
@@ -126,6 +126,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Elsevier to ‘soon investigate’ two Macchiarini papers more than a year after retraction request"
+        url: "https://retractionwatch.com/2026/08/26/elsevier-to-soon-investigate-two-macchiarini-papers-more-than-a-year-after-retraction-request/"
+        source: "Retraction Watch"
+        date: 2026-08-26
+        summary: "Elsevier says it will begin investigating two papers coauthored by disgraced surgeon Paolo Macchiarini “soon,” more than a year after two critics of his work formally requested the publisher retract the articles — and..."
       - title: "Guest post: The uncomfortable truth an explosion of papers reveals about authors’ access to data"
         url: "https://retractionwatch.com/2026/08/25/guest-post-trinetx-data-accountability-statement/"
         source: "Retraction Watch"
@@ -156,11 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-19
         summary: "When Arna Mitchell submitted her article critiquing a proposal for different standards of practice for Māori and non-Māori clients in clinical psychology, she thought it would be too controversial to publish because it..."
-      - title: "Sage issues dozens of retractions from two journals it acquired"
-        url: "https://retractionwatch.com/2026/08/17/sage-issues-dozens-of-retractions-from-two-journals-it-acquired/"
-        source: "Retraction Watch"
-        date: 2026-08-17
-        summary: "In recent weeks Sage has retracted batches of articles published in two journals it acquired from IOS Press in 2023. In each case, the retractions were for manipulation of, and concerns about, peer review. The first..."
       - title: "At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability."
         url: "https://www.propublica.org/article/private-schools-vouchers-wisconsin-atlas-preparatory"
         source: "ProPublica"
@@ -171,15 +171,20 @@ sections:
         source: "ProPublica"
         date: 2026-08-13
         summary: "The post A Youth Sports Giant Promised Reforms to Protect Kids From Sexual Abuse. Most Never Happened. appeared first on ProPublica ."
-      - title: "“They’re Putting Kids’ Lives at Risk”: How Abuse in a Tennessee Businessman’s Juvenile Prisons Remained Under Wraps"
-        url: "https://www.propublica.org/article/wayne-halfway-house-jason-crews-tennessee"
-        source: "ProPublica"
-        date: 2026-08-12
-        summary: "The post “They’re Putting Kids’ Lives at Risk”: How Abuse in a Tennessee Businessman’s Juvenile Prisons Remained Under Wraps appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Two Alleged ‘TeamPCP’ Hackers Arrested in Australia"
+        url: "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
+        source: "Krebs on Security"
+        date: 2026-08-27
+        summary: "Authorities in Australia have arrested two men believed to be members of TeamPCP, a prolific cybercrime and data extortion group blamed for perpetrating the longest running spree of software supply chain attacks ever..."
+      - title: "EFF's Policy Position on ALPR Surveillance: Eliminate It and Reduce Its Harms"
+        url: "https://www.eff.org/deeplinks/2026/08/effs-policy-position-alpr-surveillance-eliminate-it-and-reduce-its-harms"
+        source: "EFF Deeplinks"
+        date: 2026-08-26
+        summary: "Automated license plate readers (ALPRs) build a searchable map of everywhere a driver goes, fed into databases that police, ICE, and private vendors can query after the fact. Networked across a city, ALPRs are..."
       - title: "Ninth Circuit Rules That Tech Companies Can’t Prematurely Appeal Section 230 Losses"
         url: "https://epic.org/ninth-circuit-rules-that-tech-companies-cant-prematurely-appeal-section-230-losses/"
         source: "EPIC"
@@ -230,13 +235,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-08-04
         summary: "Across mobile platforms, advertising companies provide developers with software development kits (SDKs) that make it easy to monetize their apps. But those same SDKs can automatically feed users’ location data into ad..."
-      - title: "San Francisco: Don’t Fall for Industry Defense of Surveillance Pricing"
-        url: "https://www.eff.org/deeplinks/2026/07/san-francisco-dont-fall-industry-defense-surveillance-pricing"
-        source: "EFF Deeplinks"
-        date: 2026-07-28
-        summary: "The concept of “surveillance pricing” is just one part of a much larger problem and business model: corporations maximizing their profits by invading our privacy. The all-too-common business model is to systematically..."
-      - title: "Brazil gives parents social media controls for their kids. Should the US?"
-        url: "https://themarkup.org/privacy/2026/07/28/brazil-gives-parents-social-media-controls-for-their-kids-should-the-u-s"
-        source: "The Markup"
-        date: 2026-07-28
-        summary: "California is leading on kids’ data privacy in the U.S. but still lags internationally."
