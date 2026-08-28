@@ -2,12 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-27
+generated: 2026-08-28
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Trump blacklisting of \"woke\" Anthropic deemed illegal by federal judge"
+        url: "https://arstechnica.com/tech-policy/2026/08/trump-blacklisting-of-woke-anthropic-deemed-illegal-by-federal-judge/"
+        source: "Ars Technica"
+        date: 2026-08-28
+        summary: "Anthropic refused to support lethal autonomous warfare and mass surveillance."
+      - title: "Meta makes AI glasses slightly less creepy with limit on nonconsensual recording"
+        url: "https://arstechnica.com/tech-policy/2026/08/meta-tweaks-ai-glasses-to-block-some-creepy-recordings-but-privacy-risks-remain/"
+        source: "Ars Technica"
+        date: 2026-08-28
+        summary: "Meta fixes AI glasses to stop recording any time users cover up the safety light."
+      - title: "Labour rejects Zack Polanski’s call to ‘slam brakes’ on building AI datacentres"
+        url: "https://www.theguardian.com/uk-news/2026/aug/28/labour-green-party-zack-polanski-ai-datacentres"
+        source: "The Guardian"
+        date: 2026-08-28
+        summary: "Government says Green leader’s proposed moratorium on ‘energy-guzzling’ AI projects would be disaster for economy Labour has rejected calls to pause construction of major AI infrastructure in Britain after the Green..."
+      - title: "The tussle over Australian datacentres is just beginning – and it’s been far from easy so far | Tom McIlroy"
+        url: "https://www.theguardian.com/australia-news/commentisfree/2026/aug/28/ai-datacentres-energy-planning-australia-anthony-albanese-chris-bowen"
+        source: "The Guardian"
+        date: 2026-08-28
+        summary: "As he negotiates Australia’s AI future, the prime minister is under pressure from leaders of conservative states and territories Australian Politics podcast: Who actually benefits from new datacentres in Australia? Get..."
+      - title: "Pentagon’s blacklisting of Anthropic was unlawful, US judge rules"
+        url: "https://www.theguardian.com/technology/2026/aug/28/us-court-rules-pentagon-anthropic-ban-illegal-trump-claude-ai"
+        source: "The Guardian"
+        date: 2026-08-28
+        summary: "Anthropic ​argued designation as ‘supply-chain risk’ could cost billions ‌in lost business ‌and reputational harm A US judge ruled on Thursday that the Trump administration broke the law when it designated Anthropic as..."
+      - title: "Who actually benefits from new datacentres in Australia? - podcast"
+        url: "https://www.theguardian.com/australia-news/audio/2026/aug/28/who-actually-benefits-from-new-datacentres-in-australia-australian-politics-podcast"
+        source: "The Guardian"
+        date: 2026-08-28
+        summary: "National cabinet met on Wednesday to discuss the federal government’s plan for new AI datacentre development. Queensland and the Northern Territory have won a carve-out so that theirs can be powered by coal and gas –..."
       - title: "Everyone hates datacentres. Do we really need them? - video"
         url: "https://www.theguardian.com/science/video/2026/aug/27/everyone-hates-datacentres-do-we-really-need-them-video"
         source: "The Guardian"
@@ -18,21 +48,11 @@ sections:
         source: "The Guardian"
         date: 2026-08-27
         summary: "In a disrupted job market people are turning to heritage crafts such as bookbinding, metalwork and boatbuilding It’s a bleak moment for young people entering the workforce for the first time . For decades, a university..."
-      - title: "Everyone hates datacentres. Do we really need them? – podcast"
-        url: "https://www.theguardian.com/science/audio/2026/aug/27/everyone-hates-datacentres-do-we-really-need-them-podcast"
-        source: "The Guardian"
-        date: 2026-08-27
-        summary: "AI companies have promised us world-shifting technology. But there’s a cost: loud, unsightly datacentres that drain environmental resources. As the government pushes their rapid growth, can local communities do anything..."
       - title: "AI agents meant to replace Meta workers made “large-scale, disruptive actions”"
         url: "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
         source: "Ars Technica"
         date: 2026-08-26
         summary: "Report shows Meta's challenges replacing people with AI agents."
-      - title: "Bill Gates calls for ‘human-reserved’ jobs in face of AI takeover"
-        url: "https://www.theguardian.com/technology/2026/aug/26/bill-gates-human-reserved-jobs-ai-takeover"
-        source: "The Guardian"
-        date: 2026-08-26
-        summary: "In 6,000-word essay Microsoft co-founder also expresses concern governments not prepared for technology’s impact Business live – latest updates Bill Gates has called for “human-reserved” jobs in certain sectors to..."
       - title: "How to encourage smarter AI use in the classroom"
         url: "https://www.technologyreview.com/2026/08/24/1142630/ai-school-classroom-policies/"
         source: "MIT Technology Review"
@@ -48,16 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-20
         summary: "Cryptographic Context Injection is only the latest way to break an LLM safety guardrail."
-      - title: "Meta ran ads for an app promising to nudify female politicians"
-        url: "https://arstechnica.com/ai/2026/08/meta-ran-ads-for-an-app-promising-to-nudify-female-politicians/"
-        source: "Ars Technica"
-        date: 2026-08-19
-        summary: "One ad featured a pornographic video with deepfake closely resembling a US politician."
-      - title: "Suspecting court of using AI, man injected prompts in filings to try to win case"
-        url: "https://arstechnica.com/tech-policy/2026/08/suspecting-court-of-using-ai-man-injected-prompts-in-filings-to-try-to-win-case/"
-        source: "Ars Technica"
-        date: 2026-08-14
-        summary: "Judge warns pro se litigants are using chatbots wrong and getting desperate."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -126,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Syracuse University Seeks to Prevent Campus Rape Victim From Obtaining Police Records"
+        url: "https://www.propublica.org/article/syracuse-sexual-assault-lawsuit-records"
+        source: "ProPublica"
+        date: 2026-08-28
+        summary: "The post Syracuse University Seeks to Prevent Campus Rape Victim From Obtaining Police Records appeared first on ProPublica ."
       - title: "Elsevier to ‘soon investigate’ two Macchiarini papers more than a year after retraction request"
         url: "https://retractionwatch.com/2026/08/26/elsevier-to-soon-investigate-two-macchiarini-papers-more-than-a-year-after-retraction-request/"
         source: "Retraction Watch"
@@ -166,15 +181,15 @@ sections:
         source: "ProPublica"
         date: 2026-08-17
         summary: "The post At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability. appeared first on ProPublica ."
-      - title: "A Youth Sports Giant Promised Reforms to Protect Kids From Sexual Abuse. Most Never Happened."
-        url: "https://www.propublica.org/article/aau-youth-sports-sexual-abuse-failure-amateur-athletic-union"
-        source: "ProPublica"
-        date: 2026-08-13
-        summary: "The post A Youth Sports Giant Promised Reforms to Protect Kids From Sexual Abuse. Most Never Happened. appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "EFF and Allies on Brazil's Elections: Privacy Protections are Crucial to Electoral Integrity"
+        url: "https://www.eff.org/deeplinks/2026/08/eff-and-allies-brazils-elections-privacy-protections-are-crucial-electoral"
+        source: "EFF Deeplinks"
+        date: 2026-08-28
+        summary: "EFF, Access Now, and Data Privacy Brasil are putting forward recommendations to strengthen robust privacy and data protection safeguards in the context of Brazil's elections. The recommendations stress the close..."
       - title: "Two Alleged ‘TeamPCP’ Hackers Arrested in Australia"
         url: "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
         source: "Krebs on Security"
@@ -230,8 +245,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-08-04
         summary: "Developers Must Beware of Ad Libraries that Betray Users’ Privacy SAN FRANCISCO – Some software development kits (SDKs) provided by advertising companies to help developers monetize their apps are automatically feeding..."
-      - title: "Developers: Beware of Ad Libraries that Betray Your Users’ Location Privacy"
-        url: "https://www.eff.org/deeplinks/2026/07/developers-beware-ad-libraries-betray-your-users-location-privacy"
-        source: "EFF Deeplinks"
-        date: 2026-08-04
-        summary: "Across mobile platforms, advertising companies provide developers with software development kits (SDKs) that make it easy to monetize their apps. But those same SDKs can automatically feed users’ location data into ad..."
