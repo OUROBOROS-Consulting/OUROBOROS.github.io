@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-28
+generated: 2026-08-29
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Sharp rise in incidents of AI escaping users’ control, research finds"
+        url: "https://www.theguardian.com/technology/2026/aug/29/sharp-rise-in-incidents-of-ai-escaping-users-control-research-finds"
+        source: "The Guardian"
+        date: 2026-08-29
+        summary: "Exclusive: Number of times AI lies, ignores instructions and pursues goals in harmful ways almost doubles in July Incidents of AIs escaping users’ control to lie, ignore instructions and pursue goals in harmful ways..."
       - title: "Trump blacklisting of \"woke\" Anthropic deemed illegal by federal judge"
         url: "https://arstechnica.com/tech-policy/2026/08/trump-blacklisting-of-woke-anthropic-deemed-illegal-by-federal-judge/"
         source: "Ars Technica"
@@ -43,11 +48,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-27
         summary: "AI companies have promised us world-shifting technology. But there’s a cost: loud, unsightly datacentres that drain environmental resources. As the government pushes their rapid growth, can local communities do anything..."
-      - title: "AI-proof? Younger workers desert the digital world for traditional crafts"
-        url: "https://www.theguardian.com/money/2026/aug/27/ai-proof-jobs-traditional-crafts"
-        source: "The Guardian"
-        date: 2026-08-27
-        summary: "In a disrupted job market people are turning to heritage crafts such as bookbinding, metalwork and boatbuilding It’s a bleak moment for young people entering the workforce for the first time . For decades, a university..."
       - title: "AI agents meant to replace Meta workers made “large-scale, disruptive actions”"
         url: "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
         source: "Ars Technica"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "University press removes book about intelligent design for misquoting ID proponent"
+        url: "https://retractionwatch.com/2026/08/28/university-press-removes-book-about-intelligent-design-for-misquoting-id-proponent/"
+        source: "Retraction Watch"
+        date: 2026-08-28
+        summary: "New York University Press is pulling all copies of a book about intelligent design after the author falsely quoted another scholar in the work. Designer Science: A History of Intelligent Design in America, by C.W..."
       - title: "Syracuse University Seeks to Prevent Campus Rape Victim From Obtaining Police Records"
         url: "https://www.propublica.org/article/syracuse-sexual-assault-lawsuit-records"
         source: "ProPublica"
@@ -171,11 +176,6 @@ sections:
         source: "ProPublica"
         date: 2026-08-20
         summary: "The post What Parents Need to Know About Sexual Abuse in Youth Sports appeared first on ProPublica ."
-      - title: "A New Zealand journal deleted a paper for potential harm to Māori months after publishing it"
-        url: "https://retractionwatch.com/2026/08/19/new-zealand-journal-clinical-psychology-maori/"
-        source: "Retraction Watch"
-        date: 2026-08-19
-        summary: "When Arna Mitchell submitted her article critiquing a proposal for different standards of practice for Māori and non-Māori clients in clinical psychology, she thought it would be too controversial to publish because it..."
       - title: "At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability."
         url: "https://www.propublica.org/article/private-schools-vouchers-wisconsin-atlas-preparatory"
         source: "ProPublica"
