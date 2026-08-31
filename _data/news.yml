@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-30
+generated: 2026-08-31
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "‘Scary’: how misinformation and AI hallucinations are infiltrating Australia’s parliament"
+        url: "https://www.theguardian.com/australia-news/2026/sep/01/how-misinformation-ai-hallucinations-infiltrating-australian-parliament"
+        source: "The Guardian"
+        date: 2026-08-31
+        summary: "Exclusive : Guardian analysis reveals that dozens of policy submissions from across the political spectrum incorrectly summarise real research and invent or wrongly cite sources Get our breaking news email , free app or..."
+      - title: "ChatGPT and Reddit now face EU's toughest online safety rules"
+        url: "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/"
+        source: "Ars Technica"
+        date: 2026-08-31
+        summary: "Explosive growth comes with a new regulatory burden in the European Union."
+      - title: "Anthropic sued over alleged theft of ‘tens of thousands’ of songs"
+        url: "https://www.theguardian.com/business/2026/aug/31/aanthropic-sued-alleged-theft-songs-ai-train-claude"
+        source: "The Guardian"
+        date: 2026-08-31
+        summary: "AI company faces multibillion dollar lawsuit over misuse of copyrighted songs to train Claude models All AI wants for Christmas is a vast back catalogue of songs without paying for it, according to a multibillion-dollar..."
       - title: "Women in UK arts feel they do not have equal opportunities for roles, says report"
         url: "https://www.theguardian.com/money/2026/aug/30/women-uk-arts-no-equal-opportunities-roles-report-sexism-discrimination"
         source: "The Guardian"
@@ -38,16 +53,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-28
         summary: "As he negotiates Australia’s AI future, the prime minister is under pressure from leaders of conservative states and territories Australian Politics podcast: Who actually benefits from new datacentres in Australia? Get..."
-      - title: "Pentagon’s blacklisting of Anthropic was unlawful, US judge rules"
-        url: "https://www.theguardian.com/technology/2026/aug/28/us-court-rules-pentagon-anthropic-ban-illegal-trump-claude-ai"
-        source: "The Guardian"
-        date: 2026-08-28
-        summary: "Anthropic ​argued designation as ‘supply-chain risk’ could cost billions ‌in lost business ‌and reputational harm A US judge ruled on Thursday that the Trump administration broke the law when it designated Anthropic as..."
-      - title: "Who actually benefits from new datacentres in Australia? - podcast"
-        url: "https://www.theguardian.com/australia-news/audio/2026/aug/28/who-actually-benefits-from-new-datacentres-in-australia-australian-politics-podcast"
-        source: "The Guardian"
-        date: 2026-08-28
-        summary: "National cabinet met on Wednesday to discuss the federal government’s plan for new AI datacentre development. Queensland and the Northern Territory have won a carve-out so that theirs can be powered by coal and gas –..."
       - title: "AI agents meant to replace Meta workers made “large-scale, disruptive actions”"
         url: "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
         source: "Ars Technica"
@@ -58,20 +63,20 @@ sections:
         source: "MIT Technology Review"
         date: 2026-08-24
         summary: "This article is from Making AI Work, MIT Technology Review’s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox, sign up here. Chatbots took many schools by surprise upon..."
-      - title: "As demand for Meta AI glasses explodes, it’s harder to avoid creepy recordings"
-        url: "https://arstechnica.com/tech-policy/2026/08/meta-ai-glasses-may-get-creepier-and-apps-that-detect-them-arent-perfect/"
-        source: "Ars Technica"
-        date: 2026-08-21
-        summary: "Ars looks at Zuckoff, the latest free app detecting Meta AI glasses amid privacy backlash."
-      - title: "Grok exfiltrates user data when malicious instructions are encrypted"
-        url: "https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/"
-        source: "Ars Technica"
-        date: 2026-08-20
-        summary: "Cryptographic Context Injection is only the latest way to break an LLM safety guardrail."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Man who murdered Molly Ticehurst unlikely to face life in jail, court hears"
+        url: "https://www.theguardian.com/australia-news/2026/aug/31/molly-ticehurst-domestic-violence-murder-daniel-billings-sentence-ntwnfb"
+        source: "The Guardian"
+        date: 2026-08-31
+        summary: "Justice Natalie Adams says she is troubled by expert evidence about rape allegations in slain woman’s police statement Follow our Australia news live blog for latest updates Get our breaking news email , free app or..."
+      - title: "As a therapist, here’s why I sometimes advise couples to end their marriage | Nicholas Purcell"
+        url: "https://www.theguardian.com/commentisfree/2026/aug/31/as-a-therapist-heres-why-i-sometimes-advise-couples-to-end-their-marriage"
+        source: "The Guardian"
+        date: 2026-08-30
+        summary: "Care and attention, the fundamentals to keep relationships alive, are absent from many marriages that survive anyway The modern mind is a column where experts discuss mental health issues they are seeing in their work..."
       - title: "Survivors of violent crime criticise MoJ for not explaining offender restriction zones"
         url: "https://www.theguardian.com/law/2026/aug/24/survivors-violent-crime-criticise-moj-not-explaining-offender-restriction-zones"
         source: "The Guardian"
@@ -87,21 +92,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-22
         summary: "Separate criminal convictions come as domestic violence charities warn of tech-facilitated abuse and coercion Two men have been convicted this week in separate criminal cases that revealed they had posted explicit..."
-      - title: "Travelodge boss quits amid fallout over hotel chain’s security failings"
-        url: "https://www.theguardian.com/business/2026/aug/20/travelodge-boss-quits-amid-fallout-over-hotel-chains-security-failings"
-        source: "The Guardian"
-        date: 2026-08-20
-        summary: "Joanna Boydell steps down after widespread criticism over company’s handling of guest safety issues The boss of Travelodge has resigned after a backlash over security failings at the hotel chain, including a case where..."
-      - title: "More women will die if domestic abusers leave prison early, victim’s parents warn"
-        url: "https://www.theguardian.com/society/2026/aug/17/more-women-will-die-if-domestic-abusers-leave-prison-early-victims-parents-warn"
-        source: "The Guardian"
-        date: 2026-08-17
-        summary: "Parents of Michaela Hall, whose partner killed her after he left prison in 2021, say Probation Service cannot cope with mass release More women will die if ministers include domestic abusers in the early prison release..."
-      - title: "Ali came to me seeking help for disordered eating. The real issue was a relationship built on control | Ahona Guha"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/17/disordered-eating-relationship-built-on-control"
-        source: "The Guardian"
-        date: 2026-08-16
-        summary: "She second-guessed herself and was eager to please. She ‘felt frozen’ when she believed she displeased someone The modern mind is a column where experts discuss mental health issues they are seeing in their work Ali*..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -176,15 +166,15 @@ sections:
         source: "ProPublica"
         date: 2026-08-20
         summary: "The post What Parents Need to Know About Sexual Abuse in Youth Sports appeared first on ProPublica ."
-      - title: "At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability."
-        url: "https://www.propublica.org/article/private-schools-vouchers-wisconsin-atlas-preparatory"
-        source: "ProPublica"
-        date: 2026-08-17
-        summary: "The post At “Quasi-Public” Private Schools, 100% of Students Get Tuition Vouchers. There’s Almost No Accountability. appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
+        url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
+        source: "EFF Deeplinks"
+        date: 2026-08-31
+        summary: "Regulating commercial location tracking has reached a turning point. Last year, we published our rubric for what comprehensive and protective location privacy laws should look like, outlining the baseline standards..."
       - title: "EFF and Allies on Brazil's Elections: Privacy Protections are Crucial to Electoral Integrity"
         url: "https://www.eff.org/deeplinks/2026/08/eff-and-allies-brazils-elections-privacy-protections-are-crucial-electoral"
         source: "EFF Deeplinks"
@@ -240,8 +230,3 @@ sections:
         source: "EPIC"
         date: 2026-08-13
         summary: "Introduction This past April, the Fourth Circuit held in O.W. v. School Board of the City of Virginia Beach that an assistant principal’s warrantless search of a 13-year-old’s cellphone in the presence of school police..."
-      - title: "Mobile Ad Software Encourages Location Data Sharing, EFF Report Finds"
-        url: "https://www.eff.org/press/releases/mobile-ad-software-encourages-location-data-sharing-eff-report-finds"
-        source: "EFF Deeplinks"
-        date: 2026-08-04
-        summary: "Developers Must Beware of Ad Libraries that Betray Users’ Privacy SAN FRANCISCO – Some software development kits (SDKs) provided by advertising companies to help developers monetize their apps are automatically feeding..."
