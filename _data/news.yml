@@ -2,17 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-08-31
+generated: 2026-09-01
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit"
+        url: "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/"
+        source: "Ars Technica"
+        date: 2026-08-31
+        summary: "Lawsuit: Anthropic’s torrenting totally screwed songwriters as AI songs top charts."
       - title: "‘Scary’: how misinformation and AI hallucinations are infiltrating Australia’s parliament"
         url: "https://www.theguardian.com/australia-news/2026/sep/01/how-misinformation-ai-hallucinations-infiltrating-australian-parliament"
         source: "The Guardian"
         date: 2026-08-31
-        summary: "Exclusive : Guardian analysis reveals that dozens of policy submissions from across the political spectrum incorrectly summarise real research and invent or wrongly cite sources Get our breaking news email , free app or..."
+        summary: "Exclusive : Guardian analysis reveals that dozens of policy submissions from across the political spectrum incorrectly summarise real research and invent or wrongly cite sources Follow our Australia news live blog for..."
       - title: "ChatGPT and Reddit now face EU's toughest online safety rules"
         url: "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/"
         source: "Ars Technica"
@@ -48,11 +53,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-28
         summary: "Government says Green leader’s proposed moratorium on ‘energy-guzzling’ AI projects would be disaster for economy Labour has rejected calls to pause construction of major AI infrastructure in Britain after the Green..."
-      - title: "The tussle over Australian datacentres is just beginning – and it’s been far from easy so far | Tom McIlroy"
-        url: "https://www.theguardian.com/australia-news/commentisfree/2026/aug/28/ai-datacentres-energy-planning-australia-anthony-albanese-chris-bowen"
-        source: "The Guardian"
-        date: 2026-08-28
-        summary: "As he negotiates Australia’s AI future, the prime minister is under pressure from leaders of conservative states and territories Australian Politics podcast: Who actually benefits from new datacentres in Australia? Get..."
       - title: "AI agents meant to replace Meta workers made “large-scale, disruptive actions”"
         url: "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
         source: "Ars Technica"
@@ -67,6 +67,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Tuesday briefing: Scotland has promised on violence against women – can it deliver?"
+        url: "https://www.theguardian.com/world/2026/sep/01/tuesday-briefing-scotland-has-promised-on-violence-against-women-now-it-needs-to-deliver"
+        source: "The Guardian"
+        date: 2026-09-01
+        summary: "In today’s newsletter: First minister John Swinney has pledged to put an end to violence against women and girls. But can he turn ambitious laws into real change? Good morning. Violence against women and girls, in all..."
       - title: "Man who murdered Molly Ticehurst unlikely to face life in jail, court hears"
         url: "https://www.theguardian.com/australia-news/2026/aug/31/molly-ticehurst-domestic-violence-murder-daniel-billings-sentence-ntwnfb"
         source: "The Guardian"
@@ -87,11 +92,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-23
         summary: "Many tools fail to help victims find hidden cameras, microphones and trackers, leaving them at risk of ongoing surveillance Commercial detectors intended to help domestic abuse victims find hidden spying devices may..."
-      - title: "Abusers coercing or duping women to post explicit OnlyFans content, UK court cases reveal"
-        url: "https://www.theguardian.com/society/2026/aug/22/two-uk-men-convicted-explicit-content-onlyfans-without-consent"
-        source: "The Guardian"
-        date: 2026-08-22
-        summary: "Separate criminal convictions come as domestic violence charities warn of tech-facilitated abuse and coercion Two men have been convicted this week in separate criminal cases that revealed they had posted explicit..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -126,6 +126,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Journal retracts paper claiming network of corridors inside the Great Pyramid of Giza"
+        url: "https://retractionwatch.com/2026/08/31/retraction-corridors-inside-great-pyramid-giza/"
+        source: "Retraction Watch"
+        date: 2026-08-31
+        summary: "A journal has retracted a paper by two Italian scientists who claimed to have found hidden structures inside of the oldest and largest of the Pyramids of Giza. The study, published in Remote Sensing in October 2022..."
+      - title: "California Lawmakers Pass Bill to Punish Administrators Who Fail to Vet Teachers for Misconduct"
+        url: "https://www.propublica.org/article/california-teacher-misconduct-bill-administrator-discipline-al-muratsuchi"
+        source: "ProPublica"
+        date: 2026-08-31
+        summary: "The post California Lawmakers Pass Bill to Punish Administrators Who Fail to Vet Teachers for Misconduct appeared first on ProPublica ."
       - title: "University press removes book about intelligent design for misquoting ID proponent"
         url: "https://retractionwatch.com/2026/08/28/university-press-removes-book-about-intelligent-design-for-misquoting-id-proponent/"
         source: "Retraction Watch"
@@ -156,11 +166,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-21
         summary: "A trial date has been set in a $1 billion defamation case against Elsevier that alleges the company published what plaintiffs say was a manipulated study about an air purifying technology over objections from peer..."
-      - title: "Ceramics journal pulls dozens of papers flagged for integrity concerns"
-        url: "https://retractionwatch.com/2026/08/20/ceramics-journal-pulls-dozens-of-papers-flagged-for-integrity-concerns/"
-        source: "Retraction Watch"
-        date: 2026-08-20
-        summary: "A materials science journal has pulled 56 papers so far this year for transgressions including image overlap, concerns about data integrity and “suspicious” changes in authorship. Ceramics International began retracting..."
       - title: "What Parents Need to Know About Sexual Abuse in Youth Sports"
         url: "https://www.propublica.org/getinvolved/what-parents-should-know-sexual-abuse-youth-sports-aau-safesport"
         source: "ProPublica"
