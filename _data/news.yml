@@ -2,12 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-01
+generated: 2026-09-02
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Tumbler Ridge mass shooting victims file 30 new lawsuits against OpenAI"
+        url: "https://www.theguardian.com/world/2026/sep/02/openai-lawsuits-tumbler-ridge-mass-shooting"
+        source: "The Guardian"
+        date: 2026-09-02
+        summary: "The company says it prioritizes safety, but suits allege its ChatGPT bot induced shooter to carry out attack in Canada OpenAI faces 30 new lawsuits filed on behalf of victims of the Tumbler Ridge mass shooting. The..."
+      - title: "Freelancers are getting buried with ‘soulless’ AI slop cleanup: ‘It’s a shame we need to do it’"
+        url: "https://www.theguardian.com/technology/2026/sep/02/ai-jobs-freelance-cleanup"
+        source: "The Guardian"
+        date: 2026-09-02
+        summary: "As more companies turn to AI, they’re hiring freelancers to cleanup its mistakes rather than create original work Lisa, a freelance graphic designer based in Spain, noticed a shift in her work after the release of..."
+      - title: "Architect of UK’s AI strategy joins Anthropic amid conflict of interest warning"
+        url: "https://www.theguardian.com/technology/2026/sep/02/architect-of-uks-ai-strategy-joins-anthropic"
+        source: "The Guardian"
+        date: 2026-09-02
+        summary: "Matt Clifford will stay as chair of government funding body for tech projects alongside his senior role at US firm The architect of the UK government’s AI strategy has joined the US startup Anthropic in a senior role a..."
+      - title: "Tech giants are trying to obliterate privacy. Australia has a rare chance to take back part of their power | Lizzie O'Shea"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/02/tech-giants-australia-privacy-act-legislation-laws"
+        source: "The Guardian"
+        date: 2026-09-02
+        summary: "‘Pervert glasses’ are selling out, tick-a-box consent is broken and the spectre of surveillance is invading all aspects of our lives Get our breaking news email , free app or daily news podcast A mere five years after..."
       - title: "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit"
         url: "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/"
         source: "Ars Technica"
@@ -28,16 +48,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-31
         summary: "AI company faces multibillion dollar lawsuit over misuse of copyrighted songs to train Claude models All AI wants for Christmas is a vast back catalogue of songs without paying for it, according to a multibillion-dollar..."
-      - title: "Women in UK arts feel they do not have equal opportunities for roles, says report"
-        url: "https://www.theguardian.com/money/2026/aug/30/women-uk-arts-no-equal-opportunities-roles-report-sexism-discrimination"
-        source: "The Guardian"
-        date: 2026-08-30
-        summary: "Exclusive: Research says sector is fixated with young talent, with most women experiencing unconscious bias or sexism Women working in the arts believe they do not have equal opportunities for roles, especially as they..."
-      - title: "Sharp rise in incidents of AI escaping users’ control, research finds"
-        url: "https://www.theguardian.com/technology/2026/aug/29/sharp-rise-in-incidents-of-ai-escaping-users-control-research-finds"
-        source: "The Guardian"
-        date: 2026-08-29
-        summary: "Exclusive: Number of times AI lies, ignores instructions and pursues goals in harmful ways almost doubles in July Incidents of AIs escaping users’ control to lie, ignore instructions and pursue goals in harmful ways..."
       - title: "Trump blacklisting of \"woke\" Anthropic deemed illegal by federal judge"
         url: "https://arstechnica.com/tech-policy/2026/08/trump-blacklisting-of-woke-anthropic-deemed-illegal-by-federal-judge/"
         source: "Ars Technica"
@@ -48,11 +58,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-28
         summary: "Meta fixes AI glasses to stop recording any time users cover up the safety light."
-      - title: "Labour rejects Zack Polanski’s call to ‘slam brakes’ on building AI datacentres"
-        url: "https://www.theguardian.com/uk-news/2026/aug/28/labour-green-party-zack-polanski-ai-datacentres"
-        source: "The Guardian"
-        date: 2026-08-28
-        summary: "Government says Green leader’s proposed moratorium on ‘energy-guzzling’ AI projects would be disaster for economy Labour has rejected calls to pause construction of major AI infrastructure in Britain after the Green..."
       - title: "AI agents meant to replace Meta workers made “large-scale, disruptive actions”"
         url: "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
         source: "Ars Technica"
@@ -166,72 +171,67 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-21
         summary: "A trial date has been set in a $1 billion defamation case against Elsevier that alleges the company published what plaintiffs say was a manipulated study about an air purifying technology over objections from peer..."
-      - title: "What Parents Need to Know About Sexual Abuse in Youth Sports"
-        url: "https://www.propublica.org/getinvolved/what-parents-should-know-sexual-abuse-youth-sports-aau-safesport"
-        source: "ProPublica"
-        date: 2026-08-20
-        summary: "The post What Parents Need to Know About Sexual Abuse in Youth Sports appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Defense tech has unleashed a new weapons boom in Southern California"
+        url: "https://themarkup.org/news/2026/09/02/defense-tech-has-unleashed-a-new-weapons-boom-in-southern-california"
+        source: "The Markup"
+        date: 2026-09-02
+        summary: "An analysis of defense contracts charts the rise of defense spending — often in heavily Democratic districts"
+      - title: "FBI Probes Service Selling 153M+ Drivers Licenses"
+        url: "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/"
+        source: "Krebs on Security"
+        date: 2026-09-01
+        summary: "A new identity theft service launched on the dark web this week is selling digital scans of more than 153 million drivers licenses from people in the United States and Canada. Based on interviews with individuals whose..."
+      - title: "EPIC Commends California Legislature for Regulating Addictive Social Media Design Instead of Banning Minors’ Access"
+        url: "https://epic.org/epic-commends-california-legislature-for-regulating-addictive-social-media-design-instead-of-banning-minors-access/"
+        source: "EPIC"
+        date: 2026-09-01
+        summary: "EPIC, in close partnership with youth online safety advocates, worked to encourage lawmakers to amend this bill from its original formulation as a complete ban on youth social media access to instead a regulation that..."
+      - title: "PRESS RELEASE: EPIC Sues To Block Illegal Trump Administration Plan To Build Master Database of U.S. Citizens That Threatens Privacy and Risks Chaos Ahead of Midterms"
+        url: "https://epic.org/press-release-epic-sues-to-block-illegal-trump-administration-plan-to-build-master-database-of-u-s-citizens-that-threatens-privacy-and-risks-chaos-ahead-of-midterms/"
+        source: "EPIC"
+        date: 2026-09-01
+        summary: "The unprecedented federal database violates the Constitution, the Privacy Act and the Social Security Act, exposing millions of Americans’ sensitive personal information."
       - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
         url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
         source: "EFF Deeplinks"
         date: 2026-08-31
         summary: "Regulating commercial location tracking has reached a turning point. Last year, we published our rubric for what comprehensive and protective location privacy laws should look like, outlining the baseline standards..."
+      - title: "EPIC Joins Coalition Asking FTC to Crack Down on Abusive Push Notifications in Wagering Apps"
+        url: "https://epic.org/gambling-application-push-notification-comment/"
+        source: "EPIC"
+        date: 2026-08-28
+        summary: "Gambling and prediction market apps are using manipulative push notifications to keep users betting, and EPIC is asking the FTC to require consent, opt-out, and disclosure. Yesterday, August 27, 2026, EPIC joined a..."
       - title: "EFF and Allies on Brazil's Elections: Privacy Protections are Crucial to Electoral Integrity"
         url: "https://www.eff.org/deeplinks/2026/08/eff-and-allies-brazils-elections-privacy-protections-are-crucial-electoral"
         source: "EFF Deeplinks"
         date: 2026-08-28
         summary: "EFF, Access Now, and Data Privacy Brasil are putting forward recommendations to strengthen robust privacy and data protection safeguards in the context of Brazil's elections. The recommendations stress the close..."
+      - title: "EPIC Urges First and Seventh Circuits to Protect Voter Privacy and Refuse DOJ’s Voter Roll Demand"
+        url: "https://epic.org/epic-urges-first-and-seventh-circuits-to-protect-voter-privacy-and-refuse-dojs-voter-roll-demand/"
+        source: "EPIC"
+        date: 2026-08-27
+        summary: "EPIC filed four amicus briefs this week urging the First and Seventh Circuit to rebuff the Department of Justice’s unlawful demand for voter rolls."
       - title: "Two Alleged ‘TeamPCP’ Hackers Arrested in Australia"
         url: "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
         source: "Krebs on Security"
         date: 2026-08-27
         summary: "Authorities in Australia have arrested two men believed to be members of TeamPCP, a prolific cybercrime and data extortion group blamed for perpetrating the longest running spree of software supply chain attacks ever..."
+      - title: "Meta Reaches $18 Billion Settlement with States over Youth Social Media Harms"
+        url: "https://epic.org/meta-reaches-18-billion-settlement-with-states-over-youth-social-media-harms/"
+        source: "EPIC"
+        date: 2026-08-26
+        summary: "Meta has agreed to pay approximately $18 billion and make certain platform design changes to resolve claims brought by a coalition of more than 40 state attorneys general alleging that Facebook and Instagram were..."
       - title: "EFF's Policy Position on ALPR Surveillance: Eliminate It and Reduce Its Harms"
         url: "https://www.eff.org/deeplinks/2026/08/effs-policy-position-alpr-surveillance-eliminate-it-and-reduce-its-harms"
         source: "EFF Deeplinks"
         date: 2026-08-26
         summary: "Automated license plate readers (ALPRs) build a searchable map of everywhere a driver goes, fed into databases that police, ICE, and private vendors can query after the fact. Networked across a city, ALPRs are..."
-      - title: "Ninth Circuit Rules That Tech Companies Can’t Prematurely Appeal Section 230 Losses"
-        url: "https://epic.org/ninth-circuit-rules-that-tech-companies-cant-prematurely-appeal-section-230-losses/"
+      - title: "In New Jersey, Fair Trials Demand Facial Recognition Disclosure. What About the Rest of Us?"
+        url: "https://epic.org/in-new-jersey-fair-trials-demand-facial-recognition-disclosure-what-about-the-rest-of-us/"
         source: "EPIC"
-        date: 2026-08-24
-        summary: "On August 10, the Ninth Circuit ruled against Meta in California et al. v. Meta, an important case about harmful social media design and Section 230. EPIC, alongside other digital rights orgs and professors, had filed..."
-      - title: "PRESS RELEASE: EPIC and CFA Publish New Resource: Explaining Surveillance Pricing and Other Data-Driven Pricing Practices"
-        url: "https://epic.org/press-release-epic-and-cfa-publish-new-resource-explaining-surveillance-pricing-and-other-data-driven-pricing-practices-2/"
-        source: "EPIC"
-        date: 2026-08-20
-        summary: "EPIC and Consumer Federation of America published a resource highlighting how personal data affects pricing in the modern economy."
-      - title: "📍 The Sneaky Code Tracking App Users | EFFector 38.15"
-        url: "https://www.eff.org/deeplinks/2026/08/sneaky-code-tracking-app-users-effector-3815"
-        source: "EFF Deeplinks"
-        date: 2026-08-19
-        summary: "Your location isn't just a pin on a map—it can expose some of the most intimate details about your life. The value of this information to advertisers and others has turned the location data business into a multi-billion..."
-      - title: "EPIC, Coalition Urge Congressional Leaders to Protect Americans and Reform FISA Section 702"
-        url: "https://epic.org/epic-coalition-urge-congressional-leaders-to-protect-americans-and-reform-fisa-section-702/"
-        source: "EPIC"
-        date: 2026-08-19
-        summary: "In a letter to Congressional leadership, EPIC joined a coalition of civil rights and privacy organizations in urging Congress to close the backdoor search and data broker loopholes. The backdoor search loophole allows..."
-      - title: "Who’s Tracking You? Use This New Service to Find Out"
-        url: "https://krebsonsecurity.com/2026/08/whos-tracking-you-use-this-new-service-to-find-out/"
-        source: "Krebs on Security"
-        date: 2026-08-14
-        summary: "It can be daunting to determine who's responsible for showing ads on the websites we visit, or who's harvesting data from the mobile apps we use every day. That information is already semi-public, but it is not easily..."
-      - title: "Too Little, Too Late: Flock Admits Their Technology Needs Reforms"
-        url: "https://www.eff.org/deeplinks/2026/08/too-little-too-late-flock-admits-their-technology-needs-reforms"
-        source: "EFF Deeplinks"
-        date: 2026-08-13
-        summary: "Flock Safety, the embattled vendor of mass surveillance technology, has rolled out a handful of new reforms intended to appease the justified nationwide anger that has seen scores of towns cancel or suspend their..."
-      - title: "EPIC and Coalition Urge Senate and Thompson Reuters to Stop Commercial Surveillance"
-        url: "https://epic.org/epic-and-coalition-urge-senate-and-thompson-reuters-to-stop-commercial-surveillance/"
-        source: "EPIC"
-        date: 2026-08-13
-        summary: "In two letters, EPIC joined a coalition of more than two dozen civil rights and privacy organizations urging the Senate and Thompson Reuters to act and protect Americans’ Fourth Amendment rights."
-      - title: "Riley Says Get a Warrant — So Why Are Schools Skipping That Step?"
-        url: "https://epic.org/riley-says-get-a-warrant-so-why-are-schools-skipping-that-step/"
-        source: "EPIC"
-        date: 2026-08-13
-        summary: "Introduction This past April, the Fourth Circuit held in O.W. v. School Board of the City of Virginia Beach that an assistant principal’s warrantless search of a 13-year-old’s cellphone in the presence of school police..."
+        date: 2026-08-26
+        summary: "This past June, the New Jersey Supreme Court announced in State v. Miles that the state must disclose any use of facial recognition in its investigation and provide information about how the technology was leveraged to..."
