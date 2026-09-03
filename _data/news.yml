@@ -2,52 +2,57 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-02
+generated: 2026-09-03
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Tumbler Ridge mass shooting victims file 30 new lawsuits against OpenAI"
-        url: "https://www.theguardian.com/world/2026/sep/02/openai-lawsuits-tumbler-ridge-mass-shooting"
+      - title: "Child sexual abuse survivor alleges Elon Musk’s AI chatbot used photos of her to generate new illegal images"
+        url: "https://www.theguardian.com/technology/2026/sep/03/elon-musk-ai-grok-child-porn-lawsuit"
+        source: "The Guardian"
+        date: 2026-09-03
+        summary: "Musk denied he was aware Grok ever produced ‘any naked underage images’ A survivor of child sexual abuse has sued Elon Musk ’s artificial intelligence company, alleging that its chatbot used pictures of her abuse to..."
+      - title: "Trump administration sides with OpenAI in lawsuit against New York Times"
+        url: "https://www.theguardian.com/technology/2026/sep/02/trump-new-york-times-lawsuit-ai"
         source: "The Guardian"
         date: 2026-09-02
-        summary: "The company says it prioritizes safety, but suits allege its ChatGPT bot induced shooter to carry out attack in Canada OpenAI faces 30 new lawsuits filed on behalf of victims of the Tumbler Ridge mass shooting. The..."
-      - title: "Freelancers are getting buried with ‘soulless’ AI slop cleanup: ‘It’s a shame we need to do it’"
-        url: "https://www.theguardian.com/technology/2026/sep/02/ai-jobs-freelance-cleanup"
+        summary: "The Times and many companies are accusing OpenAI of misusing their material to train AI systems without compensation The Trump administration is supporting OpenAI in ⁠a lawsuit against the New York Times, arguing in..."
+      - title: "Trump may be forced to reveal secret rules feds use for AI safety testing"
+        url: "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
+        source: "Ars Technica"
+        date: 2026-09-02
+        summary: "Trump’s secret reviews of frontier AI models may hide corruption, lawsuit says."
+      - title: "Uber drivers launch European class action over ‘soulless’ and ‘scary’ AI algorithm"
+        url: "https://www.theguardian.com/technology/2026/sep/02/uber-drivers-europe-legal-action-ai-algorithm"
         source: "The Guardian"
         date: 2026-09-02
-        summary: "As more companies turn to AI, they’re hiring freelancers to cleanup its mistakes rather than create original work Lisa, a freelance graphic designer based in Spain, noticed a shift in her work after the release of..."
+        summary: "Landmark lawsuit claims tech company’s pay-setting system has breached privacy laws and pushed down earnings Uber drivers have launched a landmark legal action against the ride-hailing company claiming they live in..."
+      - title: "New York City to ban student AI use in public schools until high school"
+        url: "https://www.theguardian.com/technology/2026/sep/02/new-york-city-school-ai-ban"
+        source: "The Guardian"
+        date: 2026-09-02
+        summary: "Teachers and parents have warned against AI use in schools over concerns of ‘cognitive surrender’ New York City will ban students’ use of artificial intelligence in public schools through eighth grade, typically age 13..."
       - title: "Architect of UK’s AI strategy joins Anthropic amid conflict of interest warning"
         url: "https://www.theguardian.com/technology/2026/sep/02/architect-of-uks-ai-strategy-joins-anthropic"
         source: "The Guardian"
         date: 2026-09-02
         summary: "Matt Clifford will stay as chair of government funding body for tech projects alongside his senior role at US firm The architect of the UK government’s AI strategy has joined the US startup Anthropic in a senior role a..."
-      - title: "Tech giants are trying to obliterate privacy. Australia has a rare chance to take back part of their power | Lizzie O'Shea"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/02/tech-giants-australia-privacy-act-legislation-laws"
+      - title: "UK government does not know what datacentres are being used for, FoI request shows"
+        url: "https://www.theguardian.com/uk-news/2026/sep/02/uk-datacentres-ai-boom-foi-environment"
         source: "The Guardian"
         date: 2026-09-02
-        summary: "‘Pervert glasses’ are selling out, tick-a-box consent is broken and the spectre of surveillance is invading all aspects of our lives Get our breaking news email , free app or daily news podcast A mere five years after..."
+        summary: "Lack of information raises fears over environmental impact of the AI boom The UK government does not know what the country’s datacentres are being used for despite fears over the growing environmental impact of the AI..."
       - title: "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit"
         url: "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/"
         source: "Ars Technica"
         date: 2026-08-31
         summary: "Lawsuit: Anthropic’s torrenting totally screwed songwriters as AI songs top charts."
-      - title: "‘Scary’: how misinformation and AI hallucinations are infiltrating Australia’s parliament"
-        url: "https://www.theguardian.com/australia-news/2026/sep/01/how-misinformation-ai-hallucinations-infiltrating-australian-parliament"
-        source: "The Guardian"
-        date: 2026-08-31
-        summary: "Exclusive : Guardian analysis reveals that dozens of policy submissions from across the political spectrum incorrectly summarise real research and invent or wrongly cite sources Follow our Australia news live blog for..."
       - title: "ChatGPT and Reddit now face EU's toughest online safety rules"
         url: "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/"
         source: "Ars Technica"
         date: 2026-08-31
         summary: "Explosive growth comes with a new regulatory burden in the European Union."
-      - title: "Anthropic sued over alleged theft of ‘tens of thousands’ of songs"
-        url: "https://www.theguardian.com/business/2026/aug/31/aanthropic-sued-alleged-theft-songs-ai-train-claude"
-        source: "The Guardian"
-        date: 2026-08-31
-        summary: "AI company faces multibillion dollar lawsuit over misuse of copyrighted songs to train Claude models All AI wants for Christmas is a vast back catalogue of songs without paying for it, according to a multibillion-dollar..."
       - title: "Trump blacklisting of \"woke\" Anthropic deemed illegal by federal judge"
         url: "https://arstechnica.com/tech-policy/2026/08/trump-blacklisting-of-woke-anthropic-deemed-illegal-by-federal-judge/"
         source: "Ars Technica"
@@ -63,20 +68,30 @@ sections:
         source: "Ars Technica"
         date: 2026-08-26
         summary: "Report shows Meta's challenges replacing people with AI agents."
-      - title: "How to encourage smarter AI use in the classroom"
-        url: "https://www.technologyreview.com/2026/08/24/1142630/ai-school-classroom-policies/"
-        source: "MIT Technology Review"
-        date: 2026-08-24
-        summary: "This article is from Making AI Work, MIT Technology Review’s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox, sign up here. Chatbots took many schools by surprise upon..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Australian science prize awarded to researcher studying memory accuracy of domestic violence survivors"
+        url: "https://www.theguardian.com/science/2026/sep/03/eureka-prize-2026-helen-paterson-jane-tiller-australian-science-prizes"
+        source: "The Guardian"
+        date: 2026-09-03
+        summary: "Helen Paterson’s work on advancing how police and courts understand memory is recognised in prestigious Eureka prizes Get our breaking news email , free app or daily news podcast Memory is an imperfect thing: research..."
+      - title: "Chilling footage shows Molly Ticehurst’s murderer saying ‘I can’t believe I just did that’, court hears"
+        url: "https://www.theguardian.com/australia-news/2026/sep/03/molly-ticehurst-father-tells-killer-daniel-billings-hopes-daughter-screams-haunt-him-forever-ntwnfb"
+        source: "The Guardian"
+        date: 2026-09-03
+        summary: "Victim’s father Tony Ticehurst confronts Daniel Billings during sentence hearing in regional NSW, saying ‘I hope that every night Molly’s screams keep you awake’ Follow our Australia news live blog for latest updates..."
       - title: "Tuesday briefing: Scotland has promised on violence against women – can it deliver?"
         url: "https://www.theguardian.com/world/2026/sep/01/tuesday-briefing-scotland-has-promised-on-violence-against-women-now-it-needs-to-deliver"
         source: "The Guardian"
         date: 2026-09-01
         summary: "In today’s newsletter: First minister John Swinney has pledged to put an end to violence against women and girls. But can he turn ambitious laws into real change? Good morning. Violence against women and girls, in all..."
+      - title: "‘Scary’: how misinformation and AI hallucinations are infiltrating Australia’s parliament"
+        url: "https://www.theguardian.com/australia-news/2026/sep/01/how-misinformation-ai-hallucinations-infiltrating-australian-parliament"
+        source: "The Guardian"
+        date: 2026-08-31
+        summary: "Exclusive : Guardian analysis reveals that dozens of policy submissions from across the political spectrum incorrectly summarise real research and invent or wrongly cite sources Follow our Australia news live blog for..."
       - title: "Man who murdered Molly Ticehurst unlikely to face life in jail, court hears"
         url: "https://www.theguardian.com/australia-news/2026/aug/31/molly-ticehurst-domestic-violence-murder-daniel-billings-sentence-ntwnfb"
         source: "The Guardian"
@@ -87,16 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-30
         summary: "Care and attention, the fundamentals to keep relationships alive, are absent from many marriages that survive anyway The modern mind is a column where experts discuss mental health issues they are seeing in their work..."
-      - title: "Survivors of violent crime criticise MoJ for not explaining offender restriction zones"
-        url: "https://www.theguardian.com/law/2026/aug/24/survivors-violent-crime-criticise-moj-not-explaining-offender-restriction-zones"
-        source: "The Guardian"
-        date: 2026-08-24
-        summary: "Campaigners accuse ministers of trying to grab headlines with announcement before a working system is ready Survivors of violent crime and families of victims have criticised the UK government for announcing “world..."
-      - title: "Spying device detectors may give domestic abuse victims false sense of security, study finds"
-        url: "https://www.theguardian.com/society/2026/aug/23/spying-device-detectors-may-give-domestic-abuse-victims-false-sense-of-security-study-finds"
-        source: "The Guardian"
-        date: 2026-08-23
-        summary: "Many tools fail to help victims find hidden cameras, microphones and trackers, leaving them at risk of ongoing surveillance Commercial detectors intended to help domestic abuse victims find hidden spying devices may..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -131,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Oxford researchers retract Nature paper on ‘atmospheric thirst’ for calculation errors"
+        url: "https://retractionwatch.com/2026/09/02/oxford-researchers-retract-nature-paper-on-atmospheric-thirst-for-calculation-errors/"
+        source: "Retraction Watch"
+        date: 2026-09-02
+        summary: "Nature has retracted a paper on the atmosphere’s role in the severity of droughts around the world after the authors discovered they made a coding error that skewed their measurements. The authors say they’ve already..."
       - title: "Journal retracts paper claiming network of corridors inside the Great Pyramid of Giza"
         url: "https://retractionwatch.com/2026/08/31/retraction-corridors-inside-great-pyramid-giza/"
         source: "Retraction Watch"
@@ -166,15 +176,15 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-24
         summary: "Six editors and nearly 60 advisory editors of Games and Economic Behavior resigned after the journal’s publisher decided not to renew the editor-in-chief’s contract. In late July, Elsevier told Hervé Moulin, a business..."
-      - title: "Defamation suit demanding Elsevier retract paper heads closer to trial"
-        url: "https://retractionwatch.com/2026/08/21/defamation-lawsuit-elsevier-retraction-gps-air/"
-        source: "Retraction Watch"
-        date: 2026-08-21
-        summary: "A trial date has been set in a $1 billion defamation case against Elsevier that alleges the company published what plaintiffs say was a manipulated study about an air purifying technology over objections from peer..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Texas and Florida Step Back from ALPRs"
+        url: "https://www.eff.org/deeplinks/2026/09/texas-and-florida-step-back-alprs"
+        source: "EFF Deeplinks"
+        date: 2026-09-02
+        summary: "Within the last few days, two important state actions have dealt a big blow to automated license plate reader (ALPR) networks. This is just the latest proof of the growing tide of public opposition to mass surveillance..."
       - title: "Defense tech has unleashed a new weapons boom in Southern California"
         url: "https://themarkup.org/news/2026/09/02/defense-tech-has-unleashed-a-new-weapons-boom-in-southern-california"
         source: "The Markup"
@@ -230,8 +240,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-08-26
         summary: "Automated license plate readers (ALPRs) build a searchable map of everywhere a driver goes, fed into databases that police, ICE, and private vendors can query after the fact. Networked across a city, ALPRs are..."
-      - title: "In New Jersey, Fair Trials Demand Facial Recognition Disclosure. What About the Rest of Us?"
-        url: "https://epic.org/in-new-jersey-fair-trials-demand-facial-recognition-disclosure-what-about-the-rest-of-us/"
-        source: "EPIC"
-        date: 2026-08-26
-        summary: "This past June, the New Jersey Supreme Court announced in State v. Miles that the state must disclose any use of facial recognition in its investigation and provide information about how the technology was leveraged to..."
