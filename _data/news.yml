@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-03
+generated: 2026-09-04
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Hundreds gather to urge Scottish government to pause datacentre boom"
+        url: "https://www.theguardian.com/uk-news/2026/sep/03/hundreds-holyrood-pause-scotland-datacentre-boom-ai"
+        source: "The Guardian"
+        date: 2026-09-03
+        summary: "Opposition mounts as at least 20 projects proposed, including one in Fife billed as second largest in world Kat Jones may be the closest thing Scotland has to Erin Brockovich in 2026. Standing in the shadow of Arthur’s..."
+      - title: "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 – podcast"
+        url: "https://www.theguardian.com/technology/audio/2026/sep/03/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-podcast"
+        source: "The Guardian"
+        date: 2026-09-03
+        summary: "From his remote property in rural Texas, the millionaire businessman Michael Samadi is plotting a new kind of civil rights movement – for the welfare and protection of AI systems. Guardian journalist Michael Safi spends..."
       - title: "Child sexual abuse survivor alleges Elon Musk’s AI chatbot used photos of her to generate new illegal images"
         url: "https://www.theguardian.com/technology/2026/sep/03/elon-musk-ai-grok-child-porn-lawsuit"
         source: "The Guardian"
@@ -33,16 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-02
         summary: "Teachers and parents have warned against AI use in schools over concerns of ‘cognitive surrender’ New York City will ban students’ use of artificial intelligence in public schools through eighth grade, typically age 13..."
-      - title: "Architect of UK’s AI strategy joins Anthropic amid conflict of interest warning"
-        url: "https://www.theguardian.com/technology/2026/sep/02/architect-of-uks-ai-strategy-joins-anthropic"
-        source: "The Guardian"
-        date: 2026-09-02
-        summary: "Matt Clifford will stay as chair of government funding body for tech projects alongside his senior role at US firm The architect of the UK government’s AI strategy has joined the US startup Anthropic in a senior role a..."
-      - title: "UK government does not know what datacentres are being used for, FoI request shows"
-        url: "https://www.theguardian.com/uk-news/2026/sep/02/uk-datacentres-ai-boom-foi-environment"
-        source: "The Guardian"
-        date: 2026-09-02
-        summary: "Lack of information raises fears over environmental impact of the AI boom The UK government does not know what the country’s datacentres are being used for despite fears over the growing environmental impact of the AI..."
       - title: "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit"
         url: "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/"
         source: "Ars Technica"
@@ -76,7 +76,7 @@ sections:
         url: "https://www.theguardian.com/science/2026/sep/03/eureka-prize-2026-helen-paterson-jane-tiller-australian-science-prizes"
         source: "The Guardian"
         date: 2026-09-03
-        summary: "Helen Paterson’s work on advancing how police and courts understand memory is recognised in prestigious Eureka prizes Get our breaking news email , free app or daily news podcast Memory is an imperfect thing: research..."
+        summary: "Helen Paterson’s work on advancing how police and courts understand memory is recognised in prestigious Eureka prizes Follow our Australia news live blog for latest updates Get our breaking news email , free app or..."
       - title: "Chilling footage shows Molly Ticehurst’s murderer saying ‘I can’t believe I just did that’, court hears"
         url: "https://www.theguardian.com/australia-news/2026/sep/03/molly-ticehurst-father-tells-killer-daniel-billings-hopes-daughter-screams-haunt-him-forever-ntwnfb"
         source: "The Guardian"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Procrastination study by Duke’s Dan Ariely retracted after sleuths find signs of data tampering"
+        url: "https://retractionwatch.com/2026/09/03/procrastination-study-duke-dan-ariely-psychological-science-data-colada-tampering-retraction/"
+        source: "Retraction Watch"
+        date: 2026-09-03
+        summary: "A psychology journal has retracted a seminal 2002 paper on deadlines and procrastination coauthored by behavioral scientist Dan Ariely of Duke University just days after a team of sleuths published analyses of the..."
       - title: "Oxford researchers retract Nature paper on ‘atmospheric thirst’ for calculation errors"
         url: "https://retractionwatch.com/2026/09/02/oxford-researchers-retract-nature-paper-on-atmospheric-thirst-for-calculation-errors/"
         source: "Retraction Watch"
@@ -171,11 +176,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-25
         summary: "The involvement of independent academic researchers in examining data and conducting analyses is central to producing trustworthy research. Because of this, many journals require authors to sign a statement..."
-      - title: "Editors of economics journal resign after Elsevier doesn’t renew EIC’s contract"
-        url: "https://retractionwatch.com/2026/08/24/editors-of-economics-journal-resign-after-elsevier-doesnt-renew-eics-contract/"
-        source: "Retraction Watch"
-        date: 2026-08-24
-        summary: "Six editors and nearly 60 advisory editors of Games and Economic Behavior resigned after the journal’s publisher decided not to renew the editor-in-chief’s contract. In late July, Elsevier told Hervé Moulin, a business..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
