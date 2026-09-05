@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-04
+generated: 2026-09-05
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "‘We’re plausibly close to crossing the line’: are warnings of uncontrollable AI coming true?"
+        url: "https://www.theguardian.com/technology/2026/sep/05/uncontrollable-ai-artificial-general-intelligence-warnings"
+        source: "The Guardian"
+        date: 2026-09-05
+        summary: "A spate of serious safety incidents have increased fears about the power and impenetrability of the most advanced models Picture humanity in a boat being swept down a raging river, praying there is no Niagara Falls..."
+      - title: "Food delivery riders call on platforms to open up AI ‘black box’ they say has cut pay"
+        url: "https://www.theguardian.com/business/2026/sep/05/food-delivery-riders-platforms-open-ai-black-box-cut-pay"
+        source: "The Guardian"
+        date: 2026-09-05
+        summary: "Workers who blame algorithms for lowering their earnings are getting help from academics to find out how the system works Gig economy workers are urging delivery platforms to open up the “black box” of computer-driven..."
       - title: "Hundreds gather to urge Scottish government to pause datacentre boom"
         url: "https://www.theguardian.com/uk-news/2026/sep/03/hundreds-holyrood-pause-scotland-datacentre-boom-ai"
         source: "The Guardian"
@@ -33,16 +43,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-02
         summary: "Trump’s secret reviews of frontier AI models may hide corruption, lawsuit says."
-      - title: "Uber drivers launch European class action over ‘soulless’ and ‘scary’ AI algorithm"
-        url: "https://www.theguardian.com/technology/2026/sep/02/uber-drivers-europe-legal-action-ai-algorithm"
-        source: "The Guardian"
-        date: 2026-09-02
-        summary: "Landmark lawsuit claims tech company’s pay-setting system has breached privacy laws and pushed down earnings Uber drivers have launched a landmark legal action against the ride-hailing company claiming they live in..."
-      - title: "New York City to ban student AI use in public schools until high school"
-        url: "https://www.theguardian.com/technology/2026/sep/02/new-york-city-school-ai-ban"
-        source: "The Guardian"
-        date: 2026-09-02
-        summary: "Teachers and parents have warned against AI use in schools over concerns of ‘cognitive surrender’ New York City will ban students’ use of artificial intelligence in public schools through eighth grade, typically age 13..."
       - title: "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit"
         url: "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/"
         source: "Ars Technica"
@@ -63,11 +63,11 @@ sections:
         source: "Ars Technica"
         date: 2026-08-28
         summary: "Meta fixes AI glasses to stop recording any time users cover up the safety light."
-      - title: "AI agents meant to replace Meta workers made “large-scale, disruptive actions”"
-        url: "https://arstechnica.com/ai/2026/08/metas-scrapped-plans-to-go-ai-native-included-slashing-teams-by-60-percent/"
-        source: "Ars Technica"
-        date: 2026-08-26
-        summary: "Report shows Meta's challenges replacing people with AI agents."
+      - title: "How to encourage smarter AI use in the classroom"
+        url: "https://www.technologyreview.com/2026/08/24/1142630/ai-school-classroom-policies/"
+        source: "MIT Technology Review"
+        date: 2026-08-24
+        summary: "This article is from Making AI Work, MIT Technology Review’s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox, sign up here. Chatbots took many schools by surprise upon..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
