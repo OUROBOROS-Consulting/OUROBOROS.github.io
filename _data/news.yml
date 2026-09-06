@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-05
+generated: 2026-09-06
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "I’m a father of three who studies the impact of artificial intelligence: this is what parents need to know about AI"
+        url: "https://www.theguardian.com/technology/2026/sep/06/daniel-susskind-father-studies-ai-artificial-intelligence-what-parents-need-know"
+        source: "The Guardian"
+        date: 2026-09-06
+        summary: "A Dr Seuss-style story written in seconds alerted me to the power – and perils – of the technology. But how can children embrace it without forgetting core skills? When I was growing up, my dad and I often talked about..."
+      - title: "An algorithm off switch isn’t enough. Big tech needs a duty of care over addictive designs | Zoe Daniel"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/06/digital-duty-of-care-can-hold-big-tech-to-account-meta-tiktok-addictive-social-media-ban"
+        source: "The Guardian"
+        date: 2026-09-05
+        summary: "As AI advances minute by minute and governments grapple with new developments they don’t know how to manage, holding big tech accountable becomes even more urgent A digital duty of care is about a lot more than opting..."
       - title: "‘We’re plausibly close to crossing the line’: are warnings of uncontrollable AI coming true?"
         url: "https://www.theguardian.com/technology/2026/sep/05/uncontrollable-ai-artificial-general-intelligence-warnings"
         source: "The Guardian"
@@ -28,16 +38,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-03
         summary: "From his remote property in rural Texas, the millionaire businessman Michael Samadi is plotting a new kind of civil rights movement – for the welfare and protection of AI systems. Guardian journalist Michael Safi spends..."
-      - title: "Child sexual abuse survivor alleges Elon Musk’s AI chatbot used photos of her to generate new illegal images"
-        url: "https://www.theguardian.com/technology/2026/sep/03/elon-musk-ai-grok-child-porn-lawsuit"
-        source: "The Guardian"
-        date: 2026-09-03
-        summary: "Musk denied he was aware Grok ever produced ‘any naked underage images’ A survivor of child sexual abuse has sued Elon Musk ’s artificial intelligence company, alleging that its chatbot used pictures of her abuse to..."
-      - title: "Trump administration sides with OpenAI in lawsuit against New York Times"
-        url: "https://www.theguardian.com/technology/2026/sep/02/trump-new-york-times-lawsuit-ai"
-        source: "The Guardian"
-        date: 2026-09-02
-        summary: "The Times and many companies are accusing OpenAI of misusing their material to train AI systems without compensation The Trump administration is supporting OpenAI in ⁠a lawsuit against the New York Times, arguing in..."
       - title: "Trump may be forced to reveal secret rules feds use for AI safety testing"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
         source: "Ars Technica"
