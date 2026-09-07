@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-06
+generated: 2026-09-07
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Architect of UK’s AI policy quits after Anthropic conflict of interest concerns"
+        url: "https://www.theguardian.com/technology/2026/sep/07/architect-uk-ai-policy-quits-anthropic-conflict-of-interest-concerns"
+        source: "The Guardian"
+        date: 2026-09-07
+        summary: "Matt Clifford forced to stand down amid disquiet from senior MPs over his new full-time job at AI company The chair of the UK government’s “moonshot” science and technology research unit has been forced to stand down..."
       - title: "I’m a father of three who studies the impact of artificial intelligence: this is what parents need to know about AI"
         url: "https://www.theguardian.com/technology/2026/sep/06/daniel-susskind-father-studies-ai-artificial-intelligence-what-parents-need-know"
         source: "The Guardian"
@@ -33,11 +38,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-03
         summary: "Opposition mounts as at least 20 projects proposed, including one in Fife billed as second largest in world Kat Jones may be the closest thing Scotland has to Erin Brockovich in 2026. Standing in the shadow of Arthur’s..."
-      - title: "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 – podcast"
-        url: "https://www.theguardian.com/technology/audio/2026/sep/03/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-podcast"
-        source: "The Guardian"
-        date: 2026-09-03
-        summary: "From his remote property in rural Texas, the millionaire businessman Michael Samadi is plotting a new kind of civil rights movement – for the welfare and protection of AI systems. Guardian journalist Michael Safi spends..."
       - title: "Trump may be forced to reveal secret rules feds use for AI safety testing"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
         source: "Ars Technica"
@@ -195,16 +195,6 @@ sections:
         source: "Krebs on Security"
         date: 2026-09-01
         summary: "A new identity theft service launched on the dark web this week is selling digital scans of more than 153 million drivers licenses from people in the United States and Canada. Based on interviews with individuals whose..."
-      - title: "EPIC Commends California Legislature for Regulating Addictive Social Media Design Instead of Banning Minors’ Access"
-        url: "https://epic.org/epic-commends-california-legislature-for-regulating-addictive-social-media-design-instead-of-banning-minors-access/"
-        source: "EPIC"
-        date: 2026-09-01
-        summary: "EPIC, in close partnership with youth online safety advocates, worked to encourage lawmakers to amend this bill from its original formulation as a complete ban on youth social media access to instead a regulation that..."
-      - title: "PRESS RELEASE: EPIC Sues To Block Illegal Trump Administration Plan To Build Master Database of U.S. Citizens That Threatens Privacy and Risks Chaos Ahead of Midterms"
-        url: "https://epic.org/press-release-epic-sues-to-block-illegal-trump-administration-plan-to-build-master-database-of-u-s-citizens-that-threatens-privacy-and-risks-chaos-ahead-of-midterms/"
-        source: "EPIC"
-        date: 2026-09-01
-        summary: "The unprecedented federal database violates the Constitution, the Privacy Act and the Social Security Act, exposing millions of Americans’ sensitive personal information."
       - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
         url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
         source: "EFF Deeplinks"
@@ -240,3 +230,13 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-08-26
         summary: "Automated license plate readers (ALPRs) build a searchable map of everywhere a driver goes, fed into databases that police, ICE, and private vendors can query after the fact. Networked across a city, ALPRs are..."
+      - title: "In New Jersey, Fair Trials Demand Facial Recognition Disclosure. What About the Rest of Us?"
+        url: "https://epic.org/in-new-jersey-fair-trials-demand-facial-recognition-disclosure-what-about-the-rest-of-us/"
+        source: "EPIC"
+        date: 2026-08-26
+        summary: "This past June, the New Jersey Supreme Court announced in State v. Miles that the state must disclose any use of facial recognition in its investigation and provide information about how the technology was leveraged to..."
+      - title: "Ninth Circuit Rules That Tech Companies Can’t Prematurely Appeal Section 230 Losses"
+        url: "https://epic.org/ninth-circuit-rules-that-tech-companies-cant-prematurely-appeal-section-230-losses/"
+        source: "EPIC"
+        date: 2026-08-24
+        summary: "On August 10, the Ninth Circuit ruled against Meta in California et al. v. Meta, an important case about harmful social media design and Section 230. EPIC, alongside other digital rights orgs and professors, had filed..."
