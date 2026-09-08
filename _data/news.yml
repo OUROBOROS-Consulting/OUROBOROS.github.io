@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-07
+generated: 2026-09-08
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -63,11 +63,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-28
         summary: "Meta fixes AI glasses to stop recording any time users cover up the safety light."
-      - title: "How to encourage smarter AI use in the classroom"
-        url: "https://www.technologyreview.com/2026/08/24/1142630/ai-school-classroom-policies/"
-        source: "MIT Technology Review"
-        date: 2026-08-24
-        summary: "This article is from Making AI Work, MIT Technology Review’s limited-run newsletter examining how to apply LLMs across industries. To receive it in your inbox, sign up here. Chatbots took many schools by surprise upon..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +131,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Editors of higher education journal coauthor editorial with fake references"
+        url: "https://retractionwatch.com/2026/09/08/editors-of-higher-education-journal-coauthor-editorial-with-fake-references/"
+        source: "Retraction Watch"
+        date: 2026-09-08
+        summary: "Taylor & Francis is investigating an article in one of its journals after the editors published an editorial about academic freedom that contains multiple fake references and citation errors. In May, Anastasia Christou..."
       - title: "Procrastination study by Duke’s Dan Ariely retracted after sleuths find signs of data tampering"
         url: "https://retractionwatch.com/2026/09/03/procrastination-study-duke-dan-ariely-psychological-science-data-colada-tampering-retraction/"
         source: "Retraction Watch"
@@ -171,15 +171,25 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-26
         summary: "Elsevier says it will begin investigating two papers coauthored by disgraced surgeon Paolo Macchiarini “soon,” more than a year after two critics of his work formally requested the publisher retract the articles — and..."
-      - title: "Guest post: The uncomfortable truth an explosion of papers reveals about authors’ access to data"
-        url: "https://retractionwatch.com/2026/08/25/guest-post-trinetx-data-accountability-statement/"
-        source: "Retraction Watch"
-        date: 2026-08-25
-        summary: "The involvement of independent academic researchers in examining data and conducting analyses is central to producing trustworthy research. Because of this, many journals require authors to sign a statement..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "PRESS RELEASE: Appeals court rejects Trump administration effort to reinstate SAVE voter purge database"
+        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database/"
+        source: "EPIC"
+        date: 2026-09-05
+        summary: "A federal appeals court has rejected the Trump administration’s request to pause a lower court ruling blocking its illegal expansion of the Systematic Alien Verification Entitlements (SAVE) database, and the government..."
+      - title: "Protecting Privacy Through Stronger Procurement Policy: How Maine Could Pioneer a Better Approach to Technology Procurement"
+        url: "https://epic.org/protecting-privacy-through-stronger-procurement-policy-how-maine-could-pioneer-a-better-approach-to-technology-procurement/"
+        source: "EPIC"
+        date: 2026-09-03
+        summary: "The state’s aging population combined with its privacy-minded yet technology-forward philosophy makes it uniquely situated to address procurement oversight."
+      - title: "PRESS RELEASE: EPIC Commends Delaware for Strengthening Privacy Law, Strictly Protecting Sensitive Data"
+        url: "https://epic.org/press-release-epic-commends-delaware-for-strengthening-privacy-law-strictly-protecting-sensitive-data-2/"
+        source: "EPIC"
+        date: 2026-09-02
+        summary: "Today, Delaware Governor Matt Meyer signed a law to strengthen the state’s privacy law and provide more robust protections for Delawareans’ personal data."
       - title: "Texas and Florida Step Back from ALPRs"
         url: "https://www.eff.org/deeplinks/2026/09/texas-and-florida-step-back-alprs"
         source: "EFF Deeplinks"
@@ -195,48 +205,33 @@ sections:
         source: "Krebs on Security"
         date: 2026-09-01
         summary: "A new identity theft service launched on the dark web this week is selling digital scans of more than 153 million drivers licenses from people in the United States and Canada. Based on interviews with individuals whose..."
+      - title: "EPIC Commends California Legislature for Regulating Addictive Social Media Design Instead of Banning Minors’ Access"
+        url: "https://epic.org/epic-commends-california-legislature-for-regulating-addictive-social-media-design-instead-of-banning-minors-access/"
+        source: "EPIC"
+        date: 2026-09-01
+        summary: "EPIC, in close partnership with youth online safety advocates, worked to encourage lawmakers to amend this bill from its original formulation as a complete ban on youth social media access to instead a regulation that..."
+      - title: "PRESS RELEASE: EPIC Sues To Block Illegal Trump Administration Plan To Build Master Database of U.S. Citizens That Threatens Privacy and Risks Chaos Ahead of Midterms"
+        url: "https://epic.org/press-release-epic-sues-to-block-illegal-trump-administration-plan-to-build-master-database-of-u-s-citizens-that-threatens-privacy-and-risks-chaos-ahead-of-midterms/"
+        source: "EPIC"
+        date: 2026-09-01
+        summary: "The unprecedented federal database violates the Constitution, the Privacy Act and the Social Security Act, exposing millions of Americans’ sensitive personal information."
       - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
         url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
         source: "EFF Deeplinks"
         date: 2026-08-31
         summary: "Regulating commercial location tracking has reached a turning point. Last year, we published our rubric for what comprehensive and protective location privacy laws should look like, outlining the baseline standards..."
-      - title: "EPIC Joins Coalition Asking FTC to Crack Down on Abusive Push Notifications in Wagering Apps"
-        url: "https://epic.org/gambling-application-push-notification-comment/"
-        source: "EPIC"
-        date: 2026-08-28
-        summary: "Gambling and prediction market apps are using manipulative push notifications to keep users betting, and EPIC is asking the FTC to require consent, opt-out, and disclosure. Yesterday, August 27, 2026, EPIC joined a..."
       - title: "EFF and Allies on Brazil's Elections: Privacy Protections are Crucial to Electoral Integrity"
         url: "https://www.eff.org/deeplinks/2026/08/eff-and-allies-brazils-elections-privacy-protections-are-crucial-electoral"
         source: "EFF Deeplinks"
         date: 2026-08-28
         summary: "EFF, Access Now, and Data Privacy Brasil are putting forward recommendations to strengthen robust privacy and data protection safeguards in the context of Brazil's elections. The recommendations stress the close..."
-      - title: "EPIC Urges First and Seventh Circuits to Protect Voter Privacy and Refuse DOJ’s Voter Roll Demand"
-        url: "https://epic.org/epic-urges-first-and-seventh-circuits-to-protect-voter-privacy-and-refuse-dojs-voter-roll-demand/"
-        source: "EPIC"
-        date: 2026-08-27
-        summary: "EPIC filed four amicus briefs this week urging the First and Seventh Circuit to rebuff the Department of Justice’s unlawful demand for voter rolls."
       - title: "Two Alleged ‘TeamPCP’ Hackers Arrested in Australia"
         url: "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
         source: "Krebs on Security"
         date: 2026-08-27
         summary: "Authorities in Australia have arrested two men believed to be members of TeamPCP, a prolific cybercrime and data extortion group blamed for perpetrating the longest running spree of software supply chain attacks ever..."
-      - title: "Meta Reaches $18 Billion Settlement with States over Youth Social Media Harms"
-        url: "https://epic.org/meta-reaches-18-billion-settlement-with-states-over-youth-social-media-harms/"
-        source: "EPIC"
-        date: 2026-08-26
-        summary: "Meta has agreed to pay approximately $18 billion and make certain platform design changes to resolve claims brought by a coalition of more than 40 state attorneys general alleging that Facebook and Instagram were..."
       - title: "EFF's Policy Position on ALPR Surveillance: Eliminate It and Reduce Its Harms"
         url: "https://www.eff.org/deeplinks/2026/08/effs-policy-position-alpr-surveillance-eliminate-it-and-reduce-its-harms"
         source: "EFF Deeplinks"
         date: 2026-08-26
         summary: "Automated license plate readers (ALPRs) build a searchable map of everywhere a driver goes, fed into databases that police, ICE, and private vendors can query after the fact. Networked across a city, ALPRs are..."
-      - title: "In New Jersey, Fair Trials Demand Facial Recognition Disclosure. What About the Rest of Us?"
-        url: "https://epic.org/in-new-jersey-fair-trials-demand-facial-recognition-disclosure-what-about-the-rest-of-us/"
-        source: "EPIC"
-        date: 2026-08-26
-        summary: "This past June, the New Jersey Supreme Court announced in State v. Miles that the state must disclose any use of facial recognition in its investigation and provide information about how the technology was leveraged to..."
-      - title: "Ninth Circuit Rules That Tech Companies Can’t Prematurely Appeal Section 230 Losses"
-        url: "https://epic.org/ninth-circuit-rules-that-tech-companies-cant-prematurely-appeal-section-230-losses/"
-        source: "EPIC"
-        date: 2026-08-24
-        summary: "On August 10, the Ninth Circuit ruled against Meta in California et al. v. Meta, an important case about harmful social media design and Section 230. EPIC, alongside other digital rights orgs and professors, had filed..."
