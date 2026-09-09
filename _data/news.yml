@@ -2,12 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-08
+generated: 2026-09-09
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus."
+        url: "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
+        source: "Ars Technica"
+        date: 2026-09-09
+        summary: "Man with bipolar disorder sued OpenAI after surviving ChatGPT-linked suicide attempt."
+      - title: "What Should My Children Do? by Daniel Susskind review – the case for embracing tech in the classroom"
+        url: "https://www.theguardian.com/books/2026/sep/09/what-should-my-children-do-by-daniel-susskind-review-the-case-for-embracing-tech-in-the-classroom"
+        source: "The Guardian"
+        date: 2026-09-09
+        summary: "A refreshingly optimistic book that asks us to grasp the educational opportunities of AI, rather than shrink from them In 1979, the government asked Wilfred Cockcroft, a now largely forgotten maths lecturer from the..."
+      - title: "UK datacentres will create just 25% of jobs predicted by tech sector, analysis finds"
+        url: "https://www.theguardian.com/uk-news/2026/sep/09/uk-datacentres-will-create-just-25-of-jobs-predicted-by-tech-sector-analysis-finds"
+        source: "The Guardian"
+        date: 2026-09-09
+        summary: "Facilities likely to employ 10,400 workers, compared with 40,000 in industry estimates, thinktank says Datacentres in the UK will create just a quarter of the jobs predicted by the tech sector, while consuming vast..."
+      - title: "“This is the AI men actually use”: Meta ads pushed apps nudifying real teens"
+        url: "https://arstechnica.com/tech-policy/2026/09/real-photos-of-young-girls-were-in-nudify-app-ads-on-facebook-instagram/"
+        source: "Ars Technica"
+        date: 2026-09-08
+        summary: "Meta dragged its feet removing ads that nudify young girls' Instagram pics."
+      - title: "Update to Google’s AI weather model improves forecast accuracy"
+        url: "https://arstechnica.com/science/2026/09/googles-ai-weather-model-now-uses-more-raw-satellite-data/"
+        source: "Ars Technica"
+        date: 2026-09-08
+        summary: "Like traditional weather models, it benefits from an expanded set of inputs."
       - title: "Architect of UK’s AI policy quits after Anthropic conflict of interest concerns"
         url: "https://www.theguardian.com/technology/2026/sep/07/architect-uk-ai-policy-quits-anthropic-conflict-of-interest-concerns"
         source: "The Guardian"
@@ -28,16 +53,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-05
         summary: "A spate of serious safety incidents have increased fears about the power and impenetrability of the most advanced models Picture humanity in a boat being swept down a raging river, praying there is no Niagara Falls..."
-      - title: "Food delivery riders call on platforms to open up AI ‘black box’ they say has cut pay"
-        url: "https://www.theguardian.com/business/2026/sep/05/food-delivery-riders-platforms-open-ai-black-box-cut-pay"
-        source: "The Guardian"
-        date: 2026-09-05
-        summary: "Workers who blame algorithms for lowering their earnings are getting help from academics to find out how the system works Gig economy workers are urging delivery platforms to open up the “black box” of computer-driven..."
-      - title: "Hundreds gather to urge Scottish government to pause datacentre boom"
-        url: "https://www.theguardian.com/uk-news/2026/sep/03/hundreds-holyrood-pause-scotland-datacentre-boom-ai"
-        source: "The Guardian"
-        date: 2026-09-03
-        summary: "Opposition mounts as at least 20 projects proposed, including one in Fife billed as second largest in world Kat Jones may be the closest thing Scotland has to Erin Brockovich in 2026. Standing in the shadow of Arthur’s..."
       - title: "Trump may be forced to reveal secret rules feds use for AI safety testing"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
         source: "Ars Technica"
@@ -53,20 +68,15 @@ sections:
         source: "Ars Technica"
         date: 2026-08-31
         summary: "Explosive growth comes with a new regulatory burden in the European Union."
-      - title: "Trump blacklisting of \"woke\" Anthropic deemed illegal by federal judge"
-        url: "https://arstechnica.com/tech-policy/2026/08/trump-blacklisting-of-woke-anthropic-deemed-illegal-by-federal-judge/"
-        source: "Ars Technica"
-        date: 2026-08-28
-        summary: "Anthropic refused to support lethal autonomous warfare and mass surveillance."
-      - title: "Meta makes AI glasses slightly less creepy with limit on nonconsensual recording"
-        url: "https://arstechnica.com/tech-policy/2026/08/meta-tweaks-ai-glasses-to-block-some-creepy-recordings-but-privacy-risks-remain/"
-        source: "Ars Technica"
-        date: 2026-08-28
-        summary: "Meta fixes AI glasses to stop recording any time users cover up the safety light."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Plibersek on a mother's fears after release of domestic, family and sexual violence report – video"
+        url: "https://www.theguardian.com/australia-news/video/2026/sep/09/tanya-plibersek-mothers-fears-domestic-family-sexual-violence-report-video-ntwnfb"
+        source: "The Guardian"
+        date: 2026-09-09
+        summary: "Social services minister Tanya Plibersek speaks of a letter she received from a mother of three as she responds to the sobering results of Australia's latest domestic, family and sexual violence report. Plibersek says..."
       - title: "Australian science prize awarded to researcher studying memory accuracy of domestic violence survivors"
         url: "https://www.theguardian.com/science/2026/sep/03/eureka-prize-2026-helen-paterson-jane-tiller-australian-science-prizes"
         source: "The Guardian"
@@ -92,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-31
         summary: "Justice Natalie Adams says she is troubled by expert evidence about rape allegations in slain woman’s police statement Follow our Australia news live blog for latest updates Get our breaking news email , free app or..."
-      - title: "As a therapist, here’s why I sometimes advise couples to end their marriage | Nicholas Purcell"
-        url: "https://www.theguardian.com/commentisfree/2026/aug/31/as-a-therapist-heres-why-i-sometimes-advise-couples-to-end-their-marriage"
-        source: "The Guardian"
-        date: 2026-08-30
-        summary: "Care and attention, the fundamentals to keep relationships alive, are absent from many marriages that survive anyway The modern mind is a column where experts discuss mental health issues they are seeing in their work..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -131,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Researchers appeal misconduct finding over studies of trans youth"
+        url: "https://retractionwatch.com/2026/09/09/norway-national-center-gender-incongruence-appeal-misconduct-finding-trans-youth/"
+        source: "Retraction Watch"
+        date: 2026-09-09
+        summary: "Five researchers at Norway’s national gender incongruence clinic are appealing a university committee’s finding they committed “gross negligence” and scientific misconduct after the group published several studies using..."
       - title: "Editors of higher education journal coauthor editorial with fake references"
         url: "https://retractionwatch.com/2026/09/08/editors-of-higher-education-journal-coauthor-editorial-with-fake-references/"
         source: "Retraction Watch"
@@ -166,11 +176,6 @@ sections:
         source: "ProPublica"
         date: 2026-08-28
         summary: "The post Syracuse University Seeks to Prevent Campus Rape Victim From Obtaining Police Records appeared first on ProPublica ."
-      - title: "Elsevier to ‘soon investigate’ two Macchiarini papers more than a year after retraction request"
-        url: "https://retractionwatch.com/2026/08/26/elsevier-to-soon-investigate-two-macchiarini-papers-more-than-a-year-after-retraction-request/"
-        source: "Retraction Watch"
-        date: 2026-08-26
-        summary: "Elsevier says it will begin investigating two papers coauthored by disgraced surgeon Paolo Macchiarini “soon,” more than a year after two critics of his work formally requested the publisher retract the articles — and..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
