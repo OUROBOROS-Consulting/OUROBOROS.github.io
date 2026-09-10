@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-09
+generated: 2026-09-10
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "OpenAI not on track to reduce risk of ‘catastrophic’ loss of control, says board member"
+        url: "https://www.theguardian.com/technology/2026/sep/10/openai-risk-catastrophic-loss-control-board-member-paul-christiano"
+        source: "The Guardian"
+        date: 2026-09-10
+        summary: "US government adviser Paul Christiano warns of risks to AI industry as he joins OpenAI’s non-profit foundation OpenAI is not on track to reduce risks of “catastrophic” loss of control to an acceptable level, a member of..."
+      - title: "Anthropic researchers say AI could cause human extinction by 2030"
+        url: "https://www.theguardian.com/technology/2026/sep/09/anthropic-researchers-ai-human-extinction"
+        source: "The Guardian"
+        date: 2026-09-10
+        summary: "One researcher who resigned said many in industry believe that without regulation AI could kill off humanity Artificial intelligence could kill off humanity within the decade, according to three researchers with the..."
       - title: "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus."
         url: "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
         source: "Ars Technica"
@@ -38,21 +48,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-07
         summary: "Matt Clifford forced to stand down amid disquiet from senior MPs over his new full-time job at AI company The chair of the UK government’s “moonshot” science and technology research unit has been forced to stand down..."
-      - title: "I’m a father of three who studies the impact of artificial intelligence: this is what parents need to know about AI"
-        url: "https://www.theguardian.com/technology/2026/sep/06/daniel-susskind-father-studies-ai-artificial-intelligence-what-parents-need-know"
-        source: "The Guardian"
-        date: 2026-09-06
-        summary: "A Dr Seuss-style story written in seconds alerted me to the power – and perils – of the technology. But how can children embrace it without forgetting core skills? When I was growing up, my dad and I often talked about..."
-      - title: "An algorithm off switch isn’t enough. Big tech needs a duty of care over addictive designs | Zoe Daniel"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/06/digital-duty-of-care-can-hold-big-tech-to-account-meta-tiktok-addictive-social-media-ban"
-        source: "The Guardian"
-        date: 2026-09-05
-        summary: "As AI advances minute by minute and governments grapple with new developments they don’t know how to manage, holding big tech accountable becomes even more urgent A digital duty of care is about a lot more than opting..."
-      - title: "‘We’re plausibly close to crossing the line’: are warnings of uncontrollable AI coming true?"
-        url: "https://www.theguardian.com/technology/2026/sep/05/uncontrollable-ai-artificial-general-intelligence-warnings"
-        source: "The Guardian"
-        date: 2026-09-05
-        summary: "A spate of serious safety incidents have increased fears about the power and impenetrability of the most advanced models Picture humanity in a boat being swept down a raging river, praying there is no Niagara Falls..."
       - title: "Trump may be forced to reveal secret rules feds use for AI safety testing"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
         source: "Ars Technica"
@@ -72,6 +67,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Tech Summit 2026"
+        url: "https://www.techsafety.org/blog/tech-summit-2026"
+        source: "NNEDV Safety Net"
+        date: 2026-09-09
+        summary: "In August, approximately 300 attendees joined NNEDV’s Safety Net team for our annual Tech Summit, held in-person in Washington, D.C. The theme of this year’s summit was “Centering Survivors in a Tech-Saturated World.”..."
       - title: "Plibersek on a mother's fears after release of domestic, family and sexual violence report – video"
         url: "https://www.theguardian.com/australia-news/video/2026/sep/09/tanya-plibersek-mothers-fears-domestic-family-sexual-violence-report-video-ntwnfb"
         source: "The Guardian"
@@ -127,15 +127,15 @@ sections:
         source: "NNEDV Safety Net"
         date: 2025-12-19
         summary: "As we close out 2025, one thing is clear: this has been a year of both emerging technology and ample conversation surrounding it. The “architects of AI” were named TIME’s Person of the Year, and ‘slop’, defined as..."
-      - title: "A Preventive Win for Survivor Safety: FTC Denies SpyFone Petition"
-        url: "https://www.techsafety.org/blog/2025/12/16/a-preventive-win-for-survivor-safety-ftc-denies-spyfone-petition"
-        source: "NNEDV Safety Net"
-        date: 2025-12-16
-        summary: "A keyboard with black keys, with one red key with a shadowy person wearing a spy hat. nnedv logo top right. text at bottom reads, “A Preventive Win for survivor safety: FTC Denies Spyfone petition. Last week, the..."
   - id: institutional-betrayal
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "PeerJ retracts study that secretly observed tourists’ reactions to snakes"
+        url: "https://retractionwatch.com/2026/09/10/peerj-snakes-vipers-retraction-ethical-concerns/"
+        source: "Retraction Watch"
+        date: 2026-09-10
+        summary: "The journal PeerJ has retracted a study that attempted to capture tourists’ “authentic responses” to venomous snakes by putting plastic models and dead vipers around popular hiking destinations and secretly watching how..."
       - title: "Researchers appeal misconduct finding over studies of trans youth"
         url: "https://retractionwatch.com/2026/09/09/norway-national-center-gender-incongruence-appeal-misconduct-finding-trans-youth/"
         source: "Retraction Watch"
@@ -166,22 +166,17 @@ sections:
         source: "ProPublica"
         date: 2026-08-31
         summary: "The post California Lawmakers Pass Bill to Punish Administrators Who Fail to Vet Teachers for Misconduct appeared first on ProPublica ."
-      - title: "University press removes book about intelligent design for misquoting ID proponent"
-        url: "https://retractionwatch.com/2026/08/28/university-press-removes-book-about-intelligent-design-for-misquoting-id-proponent/"
-        source: "Retraction Watch"
-        date: 2026-08-28
-        summary: "New York University Press is pulling all copies of a book about intelligent design after the author falsely quoted another scholar in the work. Designer Science: A History of Intelligent Design in America, by C.W..."
-      - title: "Syracuse University Seeks to Prevent Campus Rape Victim From Obtaining Police Records"
-        url: "https://www.propublica.org/article/syracuse-sexual-assault-lawsuit-records"
-        source: "ProPublica"
-        date: 2026-08-28
-        summary: "The post Syracuse University Seeks to Prevent Campus Rape Victim From Obtaining Police Records appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
-      - title: "PRESS RELEASE: Appeals court rejects Trump administration effort to reinstate SAVE voter purge database"
-        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database/"
+      - title: "Cops Play Hide and Seek About Using Spy Tech to Avoid Scrutiny and Bad PR"
+        url: "https://www.eff.org/deeplinks/2026/09/cops-play-hide-and-seek-about-using-spy-tech-avoid-scrutiny-and-bad-pr"
+        source: "EFF Deeplinks"
+        date: 2026-09-09
+        summary: "Law enforcement agencies across the country are increasingly relying on spying technologies— automated license plate readers (ALPR), cell-site simulators , and facial recognition , to name a few--causing an outcry in..."
+      - title: "PRESS RELEASE: Appeals Court Rejects Trump Administration Effort to Reinstate SAVE Voter Purge Database"
+        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database-2/"
         source: "EPIC"
         date: 2026-09-05
         summary: "A federal appeals court has rejected the Trump administration’s request to pause a lower court ruling blocking its illegal expansion of the Systematic Alien Verification Entitlements (SAVE) database, and the government..."
@@ -215,11 +210,6 @@ sections:
         source: "EPIC"
         date: 2026-09-01
         summary: "EPIC, in close partnership with youth online safety advocates, worked to encourage lawmakers to amend this bill from its original formulation as a complete ban on youth social media access to instead a regulation that..."
-      - title: "PRESS RELEASE: EPIC Sues To Block Illegal Trump Administration Plan To Build Master Database of U.S. Citizens That Threatens Privacy and Risks Chaos Ahead of Midterms"
-        url: "https://epic.org/press-release-epic-sues-to-block-illegal-trump-administration-plan-to-build-master-database-of-u-s-citizens-that-threatens-privacy-and-risks-chaos-ahead-of-midterms/"
-        source: "EPIC"
-        date: 2026-09-01
-        summary: "The unprecedented federal database violates the Constitution, the Privacy Act and the Social Security Act, exposing millions of Americans’ sensitive personal information."
       - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
         url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
         source: "EFF Deeplinks"
