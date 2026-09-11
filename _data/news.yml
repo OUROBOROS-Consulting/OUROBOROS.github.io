@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-10
+generated: 2026-09-11
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -12,7 +12,7 @@ sections:
         url: "https://www.theguardian.com/technology/2026/sep/10/openai-risk-catastrophic-loss-control-board-member-paul-christiano"
         source: "The Guardian"
         date: 2026-09-10
-        summary: "US government adviser Paul Christiano warns of risks to AI industry as he joins OpenAI’s non-profit foundation OpenAI is not on track to reduce risks of “catastrophic” loss of control to an acceptable level, a member of..."
+        summary: "US government adviser Paul Christiano warns of risks to AI industry as he joins OpenAI’s non-profit foundation OpenAI is not on track to reduce the risk of “catastrophic” loss of control to an acceptable level, a member..."
       - title: "Anthropic researchers say AI could cause human extinction by 2030"
         url: "https://www.theguardian.com/technology/2026/sep/09/anthropic-researchers-ai-human-extinction"
         source: "The Guardian"
@@ -43,11 +43,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-08
         summary: "Like traditional weather models, it benefits from an expanded set of inputs."
-      - title: "Architect of UK’s AI policy quits after Anthropic conflict of interest concerns"
-        url: "https://www.theguardian.com/technology/2026/sep/07/architect-uk-ai-policy-quits-anthropic-conflict-of-interest-concerns"
-        source: "The Guardian"
-        date: 2026-09-07
-        summary: "Matt Clifford forced to stand down amid disquiet from senior MPs over his new full-time job at AI company The chair of the UK government’s “moonshot” science and technology research unit has been forced to stand down..."
       - title: "Trump may be forced to reveal secret rules feds use for AI safety testing"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
         source: "Ars Technica"
@@ -161,11 +156,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-08-31
         summary: "A journal has retracted a paper by two Italian scientists who claimed to have found hidden structures inside of the oldest and largest of the Pyramids of Giza. The study, published in Remote Sensing in October 2022..."
-      - title: "California Lawmakers Pass Bill to Punish Administrators Who Fail to Vet Teachers for Misconduct"
-        url: "https://www.propublica.org/article/california-teacher-misconduct-bill-administrator-discipline-al-muratsuchi"
-        source: "ProPublica"
-        date: 2026-08-31
-        summary: "The post California Lawmakers Pass Bill to Punish Administrators Who Fail to Vet Teachers for Misconduct appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
