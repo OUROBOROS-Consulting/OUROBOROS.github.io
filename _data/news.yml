@@ -2,37 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-11
+generated: 2026-09-12
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Deepfakes are wrecking influencers’ credibility, one fake ad at a time"
+        url: "https://www.theguardian.com/technology/2026/sep/12/deepfakes-wrecking-influencers-credibility"
+        source: "The Guardian"
+        date: 2026-09-12
+        summary: "Influencers aren’t just battling competitors for brand deals. They’re now battling AI versions of themselves Earlier this year, Emily Schuman, the creator of the lifestyle blog Cupcakes and Cashmere, saw a photo of..."
+      - title: "Ukraine war briefing: Russian developers used AI to build ‘kamikaze’ attack drone software, Anthropic says"
+        url: "https://www.theguardian.com/world/2026/sep/12/ukraine-war-briefing-russian-developers-used-ai-to-build-kamikaze-attack-drone-software-anthropic-says"
+        source: "The Guardian"
+        date: 2026-09-12
+        summary: "Anthropic also found that hackers used AI in attacks against targets in Ukrainian government, military and diplomatic sectors. What we know on day 1,662 Continue reading..."
+      - title: "Children need interaction, not AI | Letters"
+        url: "https://www.theguardian.com/technology/2026/sep/11/children-need-interaction-not-ai"
+        source: "The Guardian"
+        date: 2026-09-11
+        summary: "Pil and Galia Kollectiv and Jane Roland Martin respond to an article by Daniel Susskind about how parents can embrace the technology The most telling sentence in Daniel Susskind’s article ( I’m a father of three who..."
+      - title: "The Guardian view on controlling AI: humanity cannot outsource its survival | Editorial"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/11/the-guardian-view-on-controlling-ai-humanity-cannot-outsource-its-survival"
+        source: "The Guardian"
+        date: 2026-09-11
+        summary: "Keeping people in charge means little if supercomputers determine the evidence, choices and time on which their decisions depend If there were a 10% chance that AI could wipe out humanity, no responsible government..."
       - title: "OpenAI not on track to reduce risk of ‘catastrophic’ loss of control, says board member"
         url: "https://www.theguardian.com/technology/2026/sep/10/openai-risk-catastrophic-loss-control-board-member-paul-christiano"
         source: "The Guardian"
         date: 2026-09-10
         summary: "US government adviser Paul Christiano warns of risks to AI industry as he joins OpenAI’s non-profit foundation OpenAI is not on track to reduce the risk of “catastrophic” loss of control to an acceptable level, a member..."
-      - title: "Anthropic researchers say AI could cause human extinction by 2030"
-        url: "https://www.theguardian.com/technology/2026/sep/09/anthropic-researchers-ai-human-extinction"
-        source: "The Guardian"
-        date: 2026-09-10
-        summary: "One researcher who resigned said many in industry believe that without regulation AI could kill off humanity Artificial intelligence could kill off humanity within the decade, according to three researchers with the..."
       - title: "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus."
         url: "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
         source: "Ars Technica"
         date: 2026-09-09
         summary: "Man with bipolar disorder sued OpenAI after surviving ChatGPT-linked suicide attempt."
-      - title: "What Should My Children Do? by Daniel Susskind review – the case for embracing tech in the classroom"
-        url: "https://www.theguardian.com/books/2026/sep/09/what-should-my-children-do-by-daniel-susskind-review-the-case-for-embracing-tech-in-the-classroom"
-        source: "The Guardian"
-        date: 2026-09-09
-        summary: "A refreshingly optimistic book that asks us to grasp the educational opportunities of AI, rather than shrink from them In 1979, the government asked Wilfred Cockcroft, a now largely forgotten maths lecturer from the..."
-      - title: "UK datacentres will create just 25% of jobs predicted by tech sector, analysis finds"
-        url: "https://www.theguardian.com/uk-news/2026/sep/09/uk-datacentres-will-create-just-25-of-jobs-predicted-by-tech-sector-analysis-finds"
-        source: "The Guardian"
-        date: 2026-09-09
-        summary: "Facilities likely to employ 10,400 workers, compared with 40,000 in industry estimates, thinktank says Datacentres in the UK will create just a quarter of the jobs predicted by the tech sector, while consuming vast..."
       - title: "“This is the AI men actually use”: Meta ads pushed apps nudifying real teens"
         url: "https://arstechnica.com/tech-policy/2026/09/real-photos-of-young-girls-were-in-nudify-app-ads-on-facebook-instagram/"
         source: "Ars Technica"
@@ -53,11 +58,6 @@ sections:
         source: "Ars Technica"
         date: 2026-08-31
         summary: "Lawsuit: Anthropic’s torrenting totally screwed songwriters as AI songs top charts."
-      - title: "ChatGPT and Reddit now face EU's toughest online safety rules"
-        url: "https://arstechnica.com/tech-policy/2026/08/chatgtp-and-reddit-now-face-eus-toughest-online-safety-rules/"
-        source: "Ars Technica"
-        date: 2026-08-31
-        summary: "Explosive growth comes with a new regulatory burden in the European Union."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -126,6 +126,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Editors of French journal on corporate responsibility resign after ownership transfer"
+        url: "https://retractionwatch.com/2026/09/11/editors-of-french-journal-on-corporate-responsibility-resign-after-ownership-transfer/"
+        source: "Retraction Watch"
+        date: 2026-09-11
+        summary: "All 15 editors at a French journal have resigned after it was acquired by an editing service and publisher based in China. Revue de l’Organisation Responsable, or Responsible Organization Review (ROR), publishes..."
       - title: "PeerJ retracts study that secretly observed tourists’ reactions to snakes"
         url: "https://retractionwatch.com/2026/09/10/peerj-snakes-vipers-retraction-ethical-concerns/"
         source: "Retraction Watch"
@@ -151,11 +156,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-02
         summary: "Nature has retracted a paper on the atmosphere’s role in the severity of droughts around the world after the authors discovered they made a coding error that skewed their measurements. The authors say they’ve already..."
-      - title: "Journal retracts paper claiming network of corridors inside the Great Pyramid of Giza"
-        url: "https://retractionwatch.com/2026/08/31/retraction-corridors-inside-great-pyramid-giza/"
-        source: "Retraction Watch"
-        date: 2026-08-31
-        summary: "A journal has retracted a paper by two Italian scientists who claimed to have found hidden structures inside of the oldest and largest of the Pyramids of Giza. The study, published in Remote Sensing in October 2022..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
