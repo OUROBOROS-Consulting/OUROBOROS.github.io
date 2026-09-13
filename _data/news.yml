@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-12
+generated: 2026-09-13
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "‘Really helpful’: the AI bootcamps aimed at addressing UK youth unemployment"
+        url: "https://www.theguardian.com/technology/2026/sep/13/ai-bootcamps-uk-youth-unemployment-neets-preston"
+        source: "The Guardian"
+        date: 2026-09-13
+        summary: "Pilot project in Preston comes with apprenticeship offer for Neets at end of three-week course In a youth centre opposite Preston bus station , the UK government is trying to address two of the greatest challenges..."
       - title: "Deepfakes are wrecking influencers’ credibility, one fake ad at a time"
         url: "https://www.theguardian.com/technology/2026/sep/12/deepfakes-wrecking-influencers-credibility"
         source: "The Guardian"
@@ -28,11 +33,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-11
         summary: "Keeping people in charge means little if supercomputers determine the evidence, choices and time on which their decisions depend If there were a 10% chance that AI could wipe out humanity, no responsible government..."
-      - title: "OpenAI not on track to reduce risk of ‘catastrophic’ loss of control, says board member"
-        url: "https://www.theguardian.com/technology/2026/sep/10/openai-risk-catastrophic-loss-control-board-member-paul-christiano"
-        source: "The Guardian"
-        date: 2026-09-10
-        summary: "US government adviser Paul Christiano warns of risks to AI industry as he joins OpenAI’s non-profit foundation OpenAI is not on track to reduce the risk of “catastrophic” loss of control to an acceptable level, a member..."
       - title: "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus."
         url: "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
         source: "Ars Technica"
