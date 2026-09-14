@@ -2,37 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-13
+generated: 2026-09-14
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "‘Really helpful’: the AI bootcamps aimed at addressing UK youth unemployment"
-        url: "https://www.theguardian.com/technology/2026/sep/13/ai-bootcamps-uk-youth-unemployment-neets-preston"
+      - title: "UK government moves to acquire Speciality Steel UK – business live"
+        url: "https://www.theguardian.com/business/live/2026/sep/14/ai-stocks-fall-development-slowdown-anthropic-openai-investors-latest-news-updates"
+        source: "The Guardian"
+        date: 2026-09-14
+        summary: "Rolling coverage of the latest economic and financial news AI-linked stocks fall after tech bosses call for slowdown in ‘reckless’ development AI CEOs say they need to slow the pace of development. But will they? The..."
+      - title: "OpenAI urges UK lawmakers to rein in technology amid growing safety fears"
+        url: "https://www.theguardian.com/technology/2026/sep/14/ai-regulation-anthropic-uk-human-rights-committee-mps-lords"
+        source: "The Guardian"
+        date: 2026-09-14
+        summary: "Warning follows series of safety incidents, with parliamentary committee saying threats include public face-scanning and deepfakes UK politics live – latest updates OpenAI has urged British lawmakers to capitalise on..."
+      - title: "Labor unions must unite against AI datacenters | Tyler Turner"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/14/labor-unions-ai-datacenters"
+        source: "The Guardian"
+        date: 2026-09-14
+        summary: "Workers should start with a moratorium against building until our livelihoods and communities are protected For the surging number of Americans who now live alongside constantly humming computer-filled mega-warehouses..."
+      - title: "Jack Thorne warns some fellow scriptwriters are using AI ‘to cheat’"
+        url: "https://www.theguardian.com/stage/2026/sep/14/jack-thorne-scriptwriters-ai-artificial-intelligence"
+        source: "The Guardian"
+        date: 2026-09-14
+        summary: "Adolescence co-writer criticises government inaction and calls for laws banning secret use of AI to generate scripts Jack Thorne, one of Britain’s most successful screen and stage writers, has warned that some people in..."
+      - title: "US schools and police warn about viral ‘Cat in the Hat’ trend after teens’ arrests"
+        url: "https://www.theguardian.com/us-news/2026/sep/13/cat-in-the-hat-social-media-trend-arrests-school-warnings"
         source: "The Guardian"
         date: 2026-09-13
-        summary: "Pilot project in Preston comes with apprenticeship offer for Neets at end of three-week course In a youth centre opposite Preston bus station , the UK government is trying to address two of the greatest challenges..."
-      - title: "Deepfakes are wrecking influencers’ credibility, one fake ad at a time"
-        url: "https://www.theguardian.com/technology/2026/sep/12/deepfakes-wrecking-influencers-credibility"
+        summary: "Disturbing and AI-generated versions of Dr Seuss character have been used to threaten schools and communities Schools and law enforcement authorities in the US are issuing warnings against a viral “Cat in the Hat”..."
+      - title: "‘Too little, too late’: critics perplexed and suspicious of AI leaders’ call for a slowdown"
+        url: "https://www.theguardian.com/technology/2026/sep/13/too-little-too-late-critics-perplexed-and-suspicious-of-ai-leaders-call-for-a-slowdown"
         source: "The Guardian"
-        date: 2026-09-12
-        summary: "Influencers aren’t just battling competitors for brand deals. They’re now battling AI versions of themselves Earlier this year, Emily Schuman, the creator of the lifestyle blog Cupcakes and Cashmere, saw a photo of..."
-      - title: "Ukraine war briefing: Russian developers used AI to build ‘kamikaze’ attack drone software, Anthropic says"
-        url: "https://www.theguardian.com/world/2026/sep/12/ukraine-war-briefing-russian-developers-used-ai-to-build-kamikaze-attack-drone-software-anthropic-says"
-        source: "The Guardian"
-        date: 2026-09-12
-        summary: "Anthropic also found that hackers used AI in attacks against targets in Ukrainian government, military and diplomatic sectors. What we know on day 1,662 Continue reading..."
-      - title: "Children need interaction, not AI | Letters"
-        url: "https://www.theguardian.com/technology/2026/sep/11/children-need-interaction-not-ai"
-        source: "The Guardian"
-        date: 2026-09-11
-        summary: "Pil and Galia Kollectiv and Jane Roland Martin respond to an article by Daniel Susskind about how parents can embrace the technology The most telling sentence in Daniel Susskind’s article ( I’m a father of three who..."
-      - title: "The Guardian view on controlling AI: humanity cannot outsource its survival | Editorial"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/11/the-guardian-view-on-controlling-ai-humanity-cannot-outsource-its-survival"
-        source: "The Guardian"
-        date: 2026-09-11
-        summary: "Keeping people in charge means little if supercomputers determine the evidence, choices and time on which their decisions depend If there were a 10% chance that AI could wipe out humanity, no responsible government..."
+        date: 2026-09-13
+        summary: "From the Trump administration to AI experts, plans by the Anthropic boss to boost safety have spawned a largely negative response OpenAI boss and Elon Musk back slowdown on ‘reckless’ AI development Editorial..."
       - title: "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus."
         url: "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
         source: "Ars Technica"
@@ -160,13 +165,23 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "The High Crime of “LMAO”: How Cops Are Treating Mass Surveillance As a Joke"
+        url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
+        source: "EFF Deeplinks"
+        date: 2026-09-14
+        summary: "Here's a riddle: Why did a Goshen Police Department officer search 6,474 automated license plate reader (ALPR) networks, representing data from 82,413 cameras, on May 7, 2025? If your answer is \"I don't know,\" it turns..."
+      - title: "How TikTok and Google ended up with information about doctors’ appointments around the world"
+        url: "https://themarkup.org/pixel-hunt/2026/09/14/how-tiktok-and-google-ended-up-with-information-about-doctors-appointments-around-the-world"
+        source: "The Markup"
+        date: 2026-09-14
+        summary: "Doctoralia sent information about specialists and appointment dates to social media companies."
       - title: "Cops Play Hide and Seek About Using Spy Tech to Avoid Scrutiny and Bad PR"
         url: "https://www.eff.org/deeplinks/2026/09/cops-play-hide-and-seek-about-using-spy-tech-avoid-scrutiny-and-bad-pr"
         source: "EFF Deeplinks"
         date: 2026-09-09
         summary: "Law enforcement agencies across the country are increasingly relying on spying technologies— automated license plate readers (ALPR), cell-site simulators , and facial recognition , to name a few--causing an outcry in..."
-      - title: "PRESS RELEASE: Appeals Court Rejects Trump Administration Effort to Reinstate SAVE Voter Purge Database"
-        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database-2/"
+      - title: "PRESS RELEASE: Appeals court rejects Trump administration effort to reinstate SAVE voter purge database"
+        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database/"
         source: "EPIC"
         date: 2026-09-05
         summary: "A federal appeals court has rejected the Trump administration’s request to pause a lower court ruling blocking its illegal expansion of the Systematic Alien Verification Entitlements (SAVE) database, and the government..."
@@ -200,23 +215,13 @@ sections:
         source: "EPIC"
         date: 2026-09-01
         summary: "EPIC, in close partnership with youth online safety advocates, worked to encourage lawmakers to amend this bill from its original formulation as a complete ban on youth social media access to instead a regulation that..."
+      - title: "PRESS RELEASE: EPIC Sues To Block Illegal Trump Administration Plan To Build Master Database of U.S. Citizens That Threatens Privacy and Risks Chaos Ahead of Midterms"
+        url: "https://epic.org/press-release-epic-sues-to-block-illegal-trump-administration-plan-to-build-master-database-of-u-s-citizens-that-threatens-privacy-and-risks-chaos-ahead-of-midterms/"
+        source: "EPIC"
+        date: 2026-09-01
+        summary: "The unprecedented federal database violates the Constitution, the Privacy Act and the Social Security Act, exposing millions of Americans’ sensitive personal information."
       - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
         url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
         source: "EFF Deeplinks"
         date: 2026-08-31
         summary: "Regulating commercial location tracking has reached a turning point. Last year, we published our rubric for what comprehensive and protective location privacy laws should look like, outlining the baseline standards..."
-      - title: "EFF and Allies on Brazil's Elections: Privacy Protections are Crucial to Electoral Integrity"
-        url: "https://www.eff.org/deeplinks/2026/08/eff-and-allies-brazils-elections-privacy-protections-are-crucial-electoral"
-        source: "EFF Deeplinks"
-        date: 2026-08-28
-        summary: "EFF, Access Now, and Data Privacy Brasil are putting forward recommendations to strengthen robust privacy and data protection safeguards in the context of Brazil's elections. The recommendations stress the close..."
-      - title: "Two Alleged ‘TeamPCP’ Hackers Arrested in Australia"
-        url: "https://krebsonsecurity.com/2026/08/two-alleged-teampcp-hackers-arrested-in-australia/"
-        source: "Krebs on Security"
-        date: 2026-08-27
-        summary: "Authorities in Australia have arrested two men believed to be members of TeamPCP, a prolific cybercrime and data extortion group blamed for perpetrating the longest running spree of software supply chain attacks ever..."
-      - title: "EFF's Policy Position on ALPR Surveillance: Eliminate It and Reduce Its Harms"
-        url: "https://www.eff.org/deeplinks/2026/08/effs-policy-position-alpr-surveillance-eliminate-it-and-reduce-its-harms"
-        source: "EFF Deeplinks"
-        date: 2026-08-26
-        summary: "Automated license plate readers (ALPRs) build a searchable map of everywhere a driver goes, fed into databases that police, ICE, and private vendors can query after the fact. Networked across a city, ALPRs are..."
