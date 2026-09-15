@@ -2,42 +2,52 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-14
+generated: 2026-09-15
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "UK government moves to acquire Speciality Steel UK – business live"
-        url: "https://www.theguardian.com/business/live/2026/sep/14/ai-stocks-fall-development-slowdown-anthropic-openai-investors-latest-news-updates"
+      - title: "Democrats say supreme court rejection of Trump mail ballot plans will ensure ‘safe, secure and accurate elections’ – live"
+        url: "https://www.theguardian.com/us-news/live/2026/sep/15/supreme-court-mail-ballot-restrictions-midterm-elections-trump-ai-politics-latest-news-updates"
+        source: "The Guardian"
+        date: 2026-09-15
+        summary: "Comments come after court on Monday allowed states to send ballots under process followed for years in blow to Trump’s attempts to limit voter access Supreme court rejects Trump’s mail ballot restrictions for midterm..."
+      - title: "What’s at stake in AI’s trillion-dollar gamble"
+        url: "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/"
+        source: "MIT Technology Review"
+        date: 2026-09-15
+        summary: "When Jessica Wachter, a finance professor at the University of Pennsylvania’s Wharton School, wanted to assess AI’s impact on the economy over the next few years, she faced a long list of business and technical..."
+      - title: "Louise Haigh: UK must heed warnings from AI experts"
+        url: "https://www.theguardian.com/technology/2026/sep/15/uk-must-heed-warnings-from-ai-experts-minister-louise-haigh"
+        source: "The Guardian"
+        date: 2026-09-15
+        summary: "First secretary to set out benefits of AI to union conference while vowing government will take safety seriously UK politics live – latest updates Ministers must “heed the warnings” from industry leaders about the..."
+      - title: "AI safety requires more than just slowing our pace | Stuart Russell"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/15/ai-safety-requirements"
+        source: "The Guardian"
+        date: 2026-09-15
+        summary: "Safety requirements are non-negotiable. They depend on meeting concrete goals, not just adjusting a timeline It has been a week of high drama in AI, precipitated by the resignation of the AI safety researcher Jacob..."
+      - title: "Trump facing AI backlash in Congress as push for guardrails intensifies"
+        url: "https://www.theguardian.com/technology/2026/sep/15/trump-ai-guardrails-democrats-republicans"
+        source: "The Guardian"
+        date: 2026-09-15
+        summary: "President has dismissed anxieties over AI’s dangerous potential even as Democrats and some Republicans acknowledge risks Analysis: Why a decade of doomsday warnings failed to slow AI race Donald Trump is facing a rare..."
+      - title: "Voting rights advocates welcome supreme court decision to stop Trump administration from restricting mail ballots – as it happened"
+        url: "https://www.theguardian.com/us-news/live/2026/sep/14/donald-trump-mail-in-voting-supreme-court-blocked-ukraine-oil-diplomat-latest-news-updates"
+        source: "The Guardian"
+        date: 2026-09-15
+        summary: "This live blog is now closed. Supreme court rejects Trump’s mail ballot restrictions for midterm elections Sign up for the Breaking News US email Donald Trump has claimed there is a “SICK conspiracy” against artificial..."
+      - title: "Texas governor threatens to penalize datacenters not obeying water laws"
+        url: "https://www.theguardian.com/us-news/2026/sep/14/greg-abbott-texas-datacenter-water-laws"
         source: "The Guardian"
         date: 2026-09-14
-        summary: "Rolling coverage of the latest economic and financial news AI-linked stocks fall after tech bosses call for slowdown in ‘reckless’ development AI CEOs say they need to slow the pace of development. But will they? The..."
-      - title: "OpenAI urges UK lawmakers to rein in technology amid growing safety fears"
-        url: "https://www.theguardian.com/technology/2026/sep/14/ai-regulation-anthropic-uk-human-rights-committee-mps-lords"
-        source: "The Guardian"
+        summary: "Republican Greg Abbott says datacenters must help ‘protect’ drought-prone state and disclose water use Greg Abbott , the Texas governor, has directed state regulators to penalize datacenters that fail to comply with..."
+      - title: "AI leaders want to hit the brakes after years of reckless speed"
+        url: "https://arstechnica.com/ai/2026/09/ai-leaders-want-to-hit-the-brakes-after-years-of-reckless-speed/"
+        source: "Ars Technica"
         date: 2026-09-14
-        summary: "Warning follows series of safety incidents, with parliamentary committee saying threats include public face-scanning and deepfakes UK politics live – latest updates OpenAI has urged British lawmakers to capitalise on..."
-      - title: "Labor unions must unite against AI datacenters | Tyler Turner"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/14/labor-unions-ai-datacenters"
-        source: "The Guardian"
-        date: 2026-09-14
-        summary: "Workers should start with a moratorium against building until our livelihoods and communities are protected For the surging number of Americans who now live alongside constantly humming computer-filled mega-warehouses..."
-      - title: "Jack Thorne warns some fellow scriptwriters are using AI ‘to cheat’"
-        url: "https://www.theguardian.com/stage/2026/sep/14/jack-thorne-scriptwriters-ai-artificial-intelligence"
-        source: "The Guardian"
-        date: 2026-09-14
-        summary: "Adolescence co-writer criticises government inaction and calls for laws banning secret use of AI to generate scripts Jack Thorne, one of Britain’s most successful screen and stage writers, has warned that some people in..."
-      - title: "US schools and police warn about viral ‘Cat in the Hat’ trend after teens’ arrests"
-        url: "https://www.theguardian.com/us-news/2026/sep/13/cat-in-the-hat-social-media-trend-arrests-school-warnings"
-        source: "The Guardian"
-        date: 2026-09-13
-        summary: "Disturbing and AI-generated versions of Dr Seuss character have been used to threaten schools and communities Schools and law enforcement authorities in the US are issuing warnings against a viral “Cat in the Hat”..."
-      - title: "‘Too little, too late’: critics perplexed and suspicious of AI leaders’ call for a slowdown"
-        url: "https://www.theguardian.com/technology/2026/sep/13/too-little-too-late-critics-perplexed-and-suspicious-of-ai-leaders-call-for-a-slowdown"
-        source: "The Guardian"
-        date: 2026-09-13
-        summary: "From the Trump administration to AI experts, plans by the Anthropic boss to boost safety have spawned a largely negative response OpenAI boss and Elon Musk back slowdown on ‘reckless’ AI development Editorial..."
+        summary: "Safety is the watchword, but there could be ulterior benefits for the industry."
       - title: "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus."
         url: "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
         source: "Ars Technica"
@@ -53,16 +63,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-08
         summary: "Like traditional weather models, it benefits from an expanded set of inputs."
-      - title: "Trump may be forced to reveal secret rules feds use for AI safety testing"
-        url: "https://arstechnica.com/tech-policy/2026/09/trump-may-be-forced-to-reveal-secret-rules-feds-use-for-ai-safety-testing/"
-        source: "Ars Technica"
-        date: 2026-09-02
-        summary: "Trump’s secret reviews of frontier AI models may hide corruption, lawsuit says."
-      - title: "“Zlibrary my beloved”: Anthropic staff chats extolling piracy cited in Sony suit"
-        url: "https://arstechnica.com/tech-policy/2026/08/zlibrary-my-beloved-anthropic-staff-chats-extolling-piracy-cited-in-sony-suit/"
-        source: "Ars Technica"
-        date: 2026-08-31
-        summary: "Lawsuit: Anthropic’s torrenting totally screwed songwriters as AI songs top charts."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -131,6 +131,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Diabetes association turmoil roils journal as group tries to thwart boycott"
+        url: "https://retractionwatch.com/2026/09/14/american-diabetes-association-boycott-diabetes-care-protest/"
+        source: "Retraction Watch"
+        date: 2026-09-14
+        summary: "Tensions between the American Diabetes Association and several editors of its flagship journal — who have boycotted the group over its handling of a protest at the association’s June conference — have again boiled over..."
+      - title: "CEO of AI company loses paper on cognitive impact of generative AI"
+        url: "https://retractionwatch.com/2026/09/14/american-psychological-association-technology-mind-behavior-sarah-baldeo-id-quotient/"
+        source: "Retraction Watch"
+        date: 2026-09-14
+        summary: "A psychology journal has retracted a paper on how using generative AI can affect confidence in work tasks after its sole author refused to share data with the editors. The April paper, published in Technology, Mind, and..."
       - title: "Editors of French journal on corporate responsibility resign after ownership transfer"
         url: "https://retractionwatch.com/2026/09/11/editors-of-french-journal-on-corporate-responsibility-resign-after-ownership-transfer/"
         source: "Retraction Watch"
@@ -151,16 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-08
         summary: "Taylor & Francis is investigating an article in one of its journals after the editors published an editorial about academic freedom that contains multiple fake references and citation errors. In May, Anastasia Christou..."
-      - title: "Procrastination study by Duke’s Dan Ariely retracted after sleuths find signs of data tampering"
-        url: "https://retractionwatch.com/2026/09/03/procrastination-study-duke-dan-ariely-psychological-science-data-colada-tampering-retraction/"
-        source: "Retraction Watch"
-        date: 2026-09-03
-        summary: "A psychology journal has retracted a seminal 2002 paper on deadlines and procrastination coauthored by behavioral scientist Dan Ariely of Duke University just days after a team of sleuths published analyses of the..."
-      - title: "Oxford researchers retract Nature paper on ‘atmospheric thirst’ for calculation errors"
-        url: "https://retractionwatch.com/2026/09/02/oxford-researchers-retract-nature-paper-on-atmospheric-thirst-for-calculation-errors/"
-        source: "Retraction Watch"
-        date: 2026-09-02
-        summary: "Nature has retracted a paper on the atmosphere’s role in the severity of droughts around the world after the authors discovered they made a coding error that skewed their measurements. The authors say they’ve already..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -180,8 +180,8 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-09
         summary: "Law enforcement agencies across the country are increasingly relying on spying technologies— automated license plate readers (ALPR), cell-site simulators , and facial recognition , to name a few--causing an outcry in..."
-      - title: "PRESS RELEASE: Appeals court rejects Trump administration effort to reinstate SAVE voter purge database"
-        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database/"
+      - title: "PRESS RELEASE: Appeals Court Rejects Trump Administration Effort to Reinstate SAVE Voter Purge Database"
+        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database-2/"
         source: "EPIC"
         date: 2026-09-05
         summary: "A federal appeals court has rejected the Trump administration’s request to pause a lower court ruling blocking its illegal expansion of the Systematic Alien Verification Entitlements (SAVE) database, and the government..."
@@ -215,13 +215,13 @@ sections:
         source: "EPIC"
         date: 2026-09-01
         summary: "EPIC, in close partnership with youth online safety advocates, worked to encourage lawmakers to amend this bill from its original formulation as a complete ban on youth social media access to instead a regulation that..."
-      - title: "PRESS RELEASE: EPIC Sues To Block Illegal Trump Administration Plan To Build Master Database of U.S. Citizens That Threatens Privacy and Risks Chaos Ahead of Midterms"
-        url: "https://epic.org/press-release-epic-sues-to-block-illegal-trump-administration-plan-to-build-master-database-of-u-s-citizens-that-threatens-privacy-and-risks-chaos-ahead-of-midterms/"
-        source: "EPIC"
-        date: 2026-09-01
-        summary: "The unprecedented federal database violates the Constitution, the Privacy Act and the Social Security Act, exposing millions of Americans’ sensitive personal information."
       - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
         url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
         source: "EFF Deeplinks"
         date: 2026-08-31
         summary: "Regulating commercial location tracking has reached a turning point. Last year, we published our rubric for what comprehensive and protective location privacy laws should look like, outlining the baseline standards..."
+      - title: "EFF and Allies on Brazil's Elections: Privacy Protections are Crucial to Electoral Integrity"
+        url: "https://www.eff.org/deeplinks/2026/08/eff-and-allies-brazils-elections-privacy-protections-are-crucial-electoral"
+        source: "EFF Deeplinks"
+        date: 2026-08-28
+        summary: "EFF, Access Now, and Data Privacy Brasil are putting forward recommendations to strengthen robust privacy and data protection safeguards in the context of Brazil's elections. The recommendations stress the close..."
