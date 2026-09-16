@@ -2,47 +2,52 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-15
+generated: 2026-09-16
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Democrats say supreme court rejection of Trump mail ballot plans will ensure ‘safe, secure and accurate elections’ – live"
-        url: "https://www.theguardian.com/us-news/live/2026/sep/15/supreme-court-mail-ballot-restrictions-midterm-elections-trump-ai-politics-latest-news-updates"
+      - title: "Scotland imposes mandatory environmental assessments on new datacentres"
+        url: "https://www.theguardian.com/uk-news/2026/sep/16/datacentres-scotland-environmental-assessments-ai-boom"
         source: "The Guardian"
+        date: 2026-09-16
+        summary: "Government announces before vote on moratorium that any projects above 50MW must submit assessments in planning process Large-scale datacentres will face mandatory environmental assessments before they can go ahead, the..."
+      - title: "‘If you’re building Frankenstein, stop’: JD Vance dismisses calls for AI regulation"
+        url: "https://www.theguardian.com/technology/2026/sep/16/building-frankenstein-jd-vance-dismisses-ai-regulation"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "US vice-president’s comments come as former Anthropic researcher revisits recent claim AI could destroy humanity The US vice-president has dismissed calls for global regulation of AI safety risks, telling companies..."
+      - title: "The US government is failing Americans on AI | Shakeel Hashim"
+        url: "https://www.theguardian.com/technology/2026/sep/16/us-government-failing-americans-ai"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "Trump and Republicans want companies to regulate themselves. It’s a dereliction of duty that will make AI less safe It is hard to get Sam Altman, Elon Musk and Dario Amodei to agree on much. But over the weekend, all..."
+      - title: "Decoding America: Why won't Donald Trump regulate AI? - podcast"
+        url: "https://www.theguardian.com/australia-news/audio/2026/sep/16/why-wont-donald-trump-regulate-ai-decoding-america-podcast"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "In this episode of Guardian Australia’s weekly US politics podcast, co-hosts Jonathan Yerushalmy and Reged Ahmad look at whether there is any appetite across the political spectrum to put guardrails on artificial..."
+      - title: "Wednesday briefing: Why tech companies might be only too happy for us to believe AI will ‘kill us all’"
+        url: "https://www.theguardian.com/world/2026/sep/16/wednesday-briefing-why-tech-companies-might-be-only-too-happy-for-us-to-believe-ai-will-kill-us-all"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "In today’s newsletter: It is hard to tell fact from fiction when it comes to AI. What is really going on – and what should the government do about it? Good morning. As a general rule, it pays to be suspicious of any..."
+      - title: "Your photos, your words and your work: why is Labor making it easier for AI companies to take them for free? | Holly Rankin"
+        url: "https://www.theguardian.com/australia-news/commentisfree/2026/sep/16/labor-ai-big-tech-australia-rights-consent-copyright-law-opt-out"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "Every family photo you ever posted would be fair game for AI companies unless you choose to opt out Leaked documents from a government proposal show that the Albanese government is considering reversing the fundamental..."
+      - title: "Agility’s new humanoid robot will stop, squat to avoid harming human coworkers"
+        url: "https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/"
+        source: "Ars Technica"
         date: 2026-09-15
-        summary: "Comments come after court on Monday allowed states to send ballots under process followed for years in blow to Trump’s attempts to limit voter access Supreme court rejects Trump’s mail ballot restrictions for midterm..."
+        summary: "Robots can start working outside physical cages and without safety barriers."
       - title: "What’s at stake in AI’s trillion-dollar gamble"
         url: "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/"
         source: "MIT Technology Review"
         date: 2026-09-15
         summary: "When Jessica Wachter, a finance professor at the University of Pennsylvania’s Wharton School, wanted to assess AI’s impact on the economy over the next few years, she faced a long list of business and technical..."
-      - title: "Louise Haigh: UK must heed warnings from AI experts"
-        url: "https://www.theguardian.com/technology/2026/sep/15/uk-must-heed-warnings-from-ai-experts-minister-louise-haigh"
-        source: "The Guardian"
-        date: 2026-09-15
-        summary: "First secretary to set out benefits of AI to union conference while vowing government will take safety seriously UK politics live – latest updates Ministers must “heed the warnings” from industry leaders about the..."
-      - title: "AI safety requires more than just slowing our pace | Stuart Russell"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/15/ai-safety-requirements"
-        source: "The Guardian"
-        date: 2026-09-15
-        summary: "Safety requirements are non-negotiable. They depend on meeting concrete goals, not just adjusting a timeline It has been a week of high drama in AI, precipitated by the resignation of the AI safety researcher Jacob..."
-      - title: "Trump facing AI backlash in Congress as push for guardrails intensifies"
-        url: "https://www.theguardian.com/technology/2026/sep/15/trump-ai-guardrails-democrats-republicans"
-        source: "The Guardian"
-        date: 2026-09-15
-        summary: "President has dismissed anxieties over AI’s dangerous potential even as Democrats and some Republicans acknowledge risks Analysis: Why a decade of doomsday warnings failed to slow AI race Donald Trump is facing a rare..."
-      - title: "Voting rights advocates welcome supreme court decision to stop Trump administration from restricting mail ballots – as it happened"
-        url: "https://www.theguardian.com/us-news/live/2026/sep/14/donald-trump-mail-in-voting-supreme-court-blocked-ukraine-oil-diplomat-latest-news-updates"
-        source: "The Guardian"
-        date: 2026-09-15
-        summary: "This live blog is now closed. Supreme court rejects Trump’s mail ballot restrictions for midterm elections Sign up for the Breaking News US email Donald Trump has claimed there is a “SICK conspiracy” against artificial..."
-      - title: "Texas governor threatens to penalize datacenters not obeying water laws"
-        url: "https://www.theguardian.com/us-news/2026/sep/14/greg-abbott-texas-datacenter-water-laws"
-        source: "The Guardian"
-        date: 2026-09-14
-        summary: "Republican Greg Abbott says datacenters must help ‘protect’ drought-prone state and disclose water use Greg Abbott , the Texas governor, has directed state regulators to penalize datacenters that fail to comply with..."
       - title: "AI leaders want to hit the brakes after years of reckless speed"
         url: "https://arstechnica.com/ai/2026/09/ai-leaders-want-to-hit-the-brakes-after-years-of-reckless-speed/"
         source: "Ars Technica"
@@ -67,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "New report reveals prevalence of physical and sexual violence in US"
+        url: "https://www.theguardian.com/us-news/2026/sep/16/physical-sexual-violence-study-us"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "Study finds more than half of US adults have experienced physical violence and nearly half sexual violence In their lifetime, more than half of US adults have experienced physical violence – and nearly half have..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -97,11 +107,6 @@ sections:
         source: "The Guardian"
         date: 2026-08-31
         summary: "Exclusive : Guardian analysis reveals that dozens of policy submissions from across the political spectrum incorrectly summarise real research and invent or wrongly cite sources Follow our Australia news live blog for..."
-      - title: "Man who murdered Molly Ticehurst unlikely to face life in jail, court hears"
-        url: "https://www.theguardian.com/australia-news/2026/aug/31/molly-ticehurst-domestic-violence-murder-daniel-billings-sentence-ntwnfb"
-        source: "The Guardian"
-        date: 2026-08-31
-        summary: "Justice Natalie Adams says she is troubled by expert evidence about rape allegations in slain woman’s police statement Follow our Australia news live blog for latest updates Get our breaking news email , free app or..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -131,6 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Top Oversight Dem Opens Investigation of Donald Trump Jr.’s Russian Oligarch-Funded Wedding"
+        url: "https://www.propublica.org/article/donald-trump-jr-wedding-umar-kremlev-payments-investigation"
+        source: "ProPublica"
+        date: 2026-09-15
+        summary: "The post Top Oversight Dem Opens Investigation of Donald Trump Jr.’s Russian Oligarch-Funded Wedding appeared first on ProPublica ."
+      - title: "Lawsuit over retraction of abortion pill papers heads toward arbitration decision"
+        url: "https://retractionwatch.com/2026/09/15/lawsuit-over-retraction-of-abortion-pill-papers-heads-toward-arbitration-decision/"
+        source: "Retraction Watch"
+        date: 2026-09-15
+        summary: "A legal challenge by authors over three retracted articles about mifepristone is set for an arbitration conference this month as nationwide debate over the abortion pill heats up at the appellate level. Ten researchers..."
       - title: "Diabetes association turmoil roils journal as group tries to thwart boycott"
         url: "https://retractionwatch.com/2026/09/14/american-diabetes-association-boycott-diabetes-care-protest/"
         source: "Retraction Watch"
@@ -156,15 +171,20 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-09
         summary: "Five researchers at Norway’s national gender incongruence clinic are appealing a university committee’s finding they committed “gross negligence” and scientific misconduct after the group published several studies using..."
-      - title: "Editors of higher education journal coauthor editorial with fake references"
-        url: "https://retractionwatch.com/2026/09/08/editors-of-higher-education-journal-coauthor-editorial-with-fake-references/"
-        source: "Retraction Watch"
-        date: 2026-09-08
-        summary: "Taylor & Francis is investigating an article in one of its journals after the editors published an editorial about academic freedom that contains multiple fake references and citation errors. In May, Anastasia Christou..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get"
+        url: "https://themarkup.org/privacy/2026/09/16/whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get"
+        source: "The Markup"
+        date: 2026-09-16
+        summary: "Consumers asked a major data broker for their files. What they got back shows interest in how fat they are, how much they drink, and how likely they are to get a mammogram, among many other characteristics."
+      - title: "Data brokers have detailed files on you. Here’s what’s in them — and how it impacts you"
+        url: "https://themarkup.org/privacy/2026/09/16/data-brokers-have-detailed-files-on-you-heres-whats-in-them-and-how-it-impacts-you"
+        source: "The Markup"
+        date: 2026-09-16
+        summary: "Data brokers collect thousands of details about your finances, health and habits. See what’s in your profile, who buys it and how companies use it."
       - title: "The High Crime of “LMAO”: How Cops Are Treating Mass Surveillance As a Joke"
         url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
         source: "EFF Deeplinks"
@@ -175,53 +195,43 @@ sections:
         source: "The Markup"
         date: 2026-09-14
         summary: "Doctoralia sent information about specialists and appointment dates to social media companies."
+      - title: "Consumer Groups File Comments in Support of Robocall Mitigation Rule"
+        url: "https://epic.org/consumer-groups-file-comments-in-support-of-robocall-mitigation-rule/"
+        source: "EPIC"
+        date: 2026-09-10
+        summary: "On September 8, EPIC joined the National Consumer Law Center and other consumer rights organizations in comments supporting the Federal Communications Commission (FCC)’s proposal to strengthen rules aimed at addressing..."
+      - title: "PRESS RELEASE: EPIC Applauds Gov. Newsom For Signing Prohibition on Addictive Features, Changes to California’s Age-Appropriate Design Code"
+        url: "https://epic.org/press-release-epic-applauds-gov-newsom-for-signing-prohibition-on-addictive-features-changes-to-californias-age-appropriate-design-code/"
+        source: "EPIC"
+        date: 2026-09-10
+        summary: "SAN FRANCISCO, CA – EPIC applauds Governor Newsom for signing into law California’s A.B. 1709, which prohibits social media platforms from making addictive design features available to users under 16 years old. “This is..."
+      - title: "EPIC, Restore the Fourth File Amicus Brief in Chatrie v. United States Urging the Fourth Circuit to Rule Geofence Warrant Unconstitutional"
+        url: "https://epic.org/epic-restore-the-fourth-file-amicus-brief-in-chatrie-v-united-states-urging-the-fourth-circuit-to-rule-geofence-warrant-unconstitutional/"
+        source: "EPIC"
+        date: 2026-09-10
+        summary: "This week, EPIC and Restore the Fourth filed an amicus brief in the Fourth Circuit case Chatrie v. United States explaining why the Court should rule that the geofence search in the case was an unconstitutional general..."
       - title: "Cops Play Hide and Seek About Using Spy Tech to Avoid Scrutiny and Bad PR"
         url: "https://www.eff.org/deeplinks/2026/09/cops-play-hide-and-seek-about-using-spy-tech-avoid-scrutiny-and-bad-pr"
         source: "EFF Deeplinks"
         date: 2026-09-09
         summary: "Law enforcement agencies across the country are increasingly relying on spying technologies— automated license plate readers (ALPR), cell-site simulators , and facial recognition , to name a few--causing an outcry in..."
-      - title: "PRESS RELEASE: Appeals Court Rejects Trump Administration Effort to Reinstate SAVE Voter Purge Database"
-        url: "https://epic.org/press-release-appeals-court-rejects-trump-administration-effort-to-reinstate-save-voter-purge-database-2/"
+      - title: "Law & Crime: Trump DOJ tells Chief Justice Roberts that a judge’s ‘indefensible order’ is what actually ‘threatens the integrity of upcoming elections’"
+        url: "https://epic.org/law-crime-trump-doj-tells-chief-justice-roberts-that-a-judges-indefensible-order-is-what-actually-threatens-the-integrity-of-upcoming-elections/"
         source: "EPIC"
-        date: 2026-09-05
-        summary: "A federal appeals court has rejected the Trump administration’s request to pause a lower court ruling blocking its illegal expansion of the Systematic Alien Verification Entitlements (SAVE) database, and the government..."
-      - title: "Protecting Privacy Through Stronger Procurement Policy: How Maine Could Pioneer a Better Approach to Technology Procurement"
-        url: "https://epic.org/protecting-privacy-through-stronger-procurement-policy-how-maine-could-pioneer-a-better-approach-to-technology-procurement/"
+        date: 2026-09-08
+        summary: "“The DOJ’s stay application on Tuesday, once again seeking swift interim relief from the conservative majority, comes days after the U.S. Court of Appeals for the District of Columbia Circuit issued a 2-1 decision..."
+      - title: "Democracy Docket: DOJ asks Supreme Court to let DHS use immigration database to purge state voter rolls"
+        url: "https://epic.org/democracy-docket-doj-asks-supreme-court-to-let-dhs-use-immigration-database-to-purge-state-voter-rolls/"
         source: "EPIC"
-        date: 2026-09-03
-        summary: "The state’s aging population combined with its privacy-minded yet technology-forward philosophy makes it uniquely situated to address procurement oversight."
-      - title: "PRESS RELEASE: EPIC Commends Delaware for Strengthening Privacy Law, Strictly Protecting Sensitive Data"
-        url: "https://epic.org/press-release-epic-commends-delaware-for-strengthening-privacy-law-strictly-protecting-sensitive-data-2/"
+        date: 2026-09-08
+        summary: "“DHS’s overhaul of the SAVE database is just one prong in its effort to shape state voter rolls and influence who can vote.” “Following the playbook outlined in Trump’s March 2026 executive order, DHS is also..."
+      - title: "Courthouse News: Feds demand revival of national citizenship database ahead of midterms"
+        url: "https://epic.org/courthouse-news-feds-demand-revival-of-national-citizenship-database-ahead-of-midterms/"
         source: "EPIC"
-        date: 2026-09-02
-        summary: "Today, Delaware Governor Matt Meyer signed a law to strengthen the state’s privacy law and provide more robust protections for Delawareans’ personal data."
+        date: 2026-09-08
+        summary: "“The Trump administration on Tuesday called on the Supreme Court to greenlight the creation of a national citizenship database using Social Security information for voter verification during the midterm election.” “The..."
       - title: "Texas and Florida Step Back from ALPRs"
         url: "https://www.eff.org/deeplinks/2026/09/texas-and-florida-step-back-alprs"
         source: "EFF Deeplinks"
         date: 2026-09-02
         summary: "Within the last few days, two important state actions have dealt a big blow to automated license plate reader (ALPR) networks. This is just the latest proof of the growing tide of public opposition to mass surveillance..."
-      - title: "Defense tech has unleashed a new weapons boom in Southern California"
-        url: "https://themarkup.org/news/2026/09/02/defense-tech-has-unleashed-a-new-weapons-boom-in-southern-california"
-        source: "The Markup"
-        date: 2026-09-02
-        summary: "An analysis of defense contracts charts the rise of defense spending — often in heavily Democratic districts"
-      - title: "FBI Probes Service Selling 153M+ Drivers Licenses"
-        url: "https://krebsonsecurity.com/2026/09/fbi-probes-service-selling-153m-drivers-licenses/"
-        source: "Krebs on Security"
-        date: 2026-09-01
-        summary: "A new identity theft service launched on the dark web this week is selling digital scans of more than 153 million drivers licenses from people in the United States and Canada. Based on interviews with individuals whose..."
-      - title: "EPIC Commends California Legislature for Regulating Addictive Social Media Design Instead of Banning Minors’ Access"
-        url: "https://epic.org/epic-commends-california-legislature-for-regulating-addictive-social-media-design-instead-of-banning-minors-access/"
-        source: "EPIC"
-        date: 2026-09-01
-        summary: "EPIC, in close partnership with youth online safety advocates, worked to encourage lawmakers to amend this bill from its original formulation as a complete ban on youth social media access to instead a regulation that..."
-      - title: "Privacy on the Map (Part 2): Progress, Pitfalls, and the Fight for Enforceable Location Data Protections"
-        url: "https://www.eff.org/deeplinks/2026/08/privacy-map-part-2-progress-pitfalls-and-fight-enforceable-location-data"
-        source: "EFF Deeplinks"
-        date: 2026-08-31
-        summary: "Regulating commercial location tracking has reached a turning point. Last year, we published our rubric for what comprehensive and protective location privacy laws should look like, outlining the baseline standards..."
-      - title: "EFF and Allies on Brazil's Elections: Privacy Protections are Crucial to Electoral Integrity"
-        url: "https://www.eff.org/deeplinks/2026/08/eff-and-allies-brazils-elections-privacy-protections-are-crucial-electoral"
-        source: "EFF Deeplinks"
-        date: 2026-08-28
-        summary: "EFF, Access Now, and Data Privacy Brasil are putting forward recommendations to strengthen robust privacy and data protection safeguards in the context of Brazil's elections. The recommendations stress the close..."
