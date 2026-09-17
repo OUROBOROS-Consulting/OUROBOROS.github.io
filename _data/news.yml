@@ -2,17 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-16
+generated: 2026-09-17
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Scotland imposes mandatory environmental assessments on new datacentres"
-        url: "https://www.theguardian.com/uk-news/2026/sep/16/datacentres-scotland-environmental-assessments-ai-boom"
+      - title: "House speaker calls early recess before midterms amid AI regulation frenzy"
+        url: "https://www.theguardian.com/us-news/2026/sep/16/mike-johnson-cancels-house-vote-hegseth"
         source: "The Guardian"
         date: 2026-09-16
-        summary: "Government announces before vote on moratorium that any projects above 50MW must submit assessments in planning process Large-scale datacentres will face mandatory environmental assessments before they can go ahead, the..."
+        summary: "Mike Johnson cancels votes on Thursday, meaning House members will avoid voting on impeaching Pete Hegseth The Republican speaker of the House, Mike Johnson , announced on Wednesday that he would again cancel votes..."
+      - title: "‘Godfather of AI’ says tech regulation is nearing Covid-style pivot moment"
+        url: "https://www.theguardian.com/technology/2026/sep/16/ai-tech-regulation-government-action-yoshua-bengio"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "Safety crisis makes it more likely that governments will be spurred into action, says Yoshua Bengio Concerns over AI safety are reaching a point where governments realise they must act to protect the public, similarly..."
+      - title: "Everything Australians put online could be scraped for AI under proposed new rules. How will you be affected?"
+        url: "https://www.theguardian.com/australia-news/2026/sep/17/everything-australians-put-online-could-be-scraped-for-ai-under-proposed-new-rules-how-will-you-be-affected"
+        source: "The Guardian"
+        date: 2026-09-16
+        summary: "The Albanese government is considering reforms that give US big tech unrestricted access to Australian content Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news..."
       - title: "‘If you’re building Frankenstein, stop’: JD Vance dismisses calls for AI regulation"
         url: "https://www.theguardian.com/technology/2026/sep/16/building-frankenstein-jd-vance-dismisses-ai-regulation"
         source: "The Guardian"
@@ -28,16 +38,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-16
         summary: "In this episode of Guardian Australia’s weekly US politics podcast, co-hosts Jonathan Yerushalmy and Reged Ahmad look at whether there is any appetite across the political spectrum to put guardrails on artificial..."
-      - title: "Wednesday briefing: Why tech companies might be only too happy for us to believe AI will ‘kill us all’"
-        url: "https://www.theguardian.com/world/2026/sep/16/wednesday-briefing-why-tech-companies-might-be-only-too-happy-for-us-to-believe-ai-will-kill-us-all"
-        source: "The Guardian"
-        date: 2026-09-16
-        summary: "In today’s newsletter: It is hard to tell fact from fiction when it comes to AI. What is really going on – and what should the government do about it? Good morning. As a general rule, it pays to be suspicious of any..."
-      - title: "Your photos, your words and your work: why is Labor making it easier for AI companies to take them for free? | Holly Rankin"
-        url: "https://www.theguardian.com/australia-news/commentisfree/2026/sep/16/labor-ai-big-tech-australia-rights-consent-copyright-law-opt-out"
-        source: "The Guardian"
-        date: 2026-09-16
-        summary: "Every family photo you ever posted would be fair game for AI companies unless you choose to opt out Leaked documents from a government proposal show that the Albanese government is considering reversing the fundamental..."
       - title: "Agility’s new humanoid robot will stop, squat to avoid harming human coworkers"
         url: "https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/"
         source: "Ars Technica"
@@ -136,6 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Oregon Lawmakers Seek to Open Up Affordable Housing Records Following ProPublica’s Reporting"
+        url: "https://www.propublica.org/article/oregon-lawmakers-seek-to-open-housing-records"
+        source: "ProPublica"
+        date: 2026-09-17
+        summary: "The post Oregon Lawmakers Seek to Open Up Affordable Housing Records Following ProPublica’s Reporting appeared first on ProPublica ."
+      - title: "Lancet union declares first-ever strike over staff wages"
+        url: "https://retractionwatch.com/2026/09/16/lancet-journals-national-union-journalists-strike-over-staff-wages/"
+        source: "Retraction Watch"
+        date: 2026-09-16
+        summary: "Union members at The Lancet and its affiliated journals will go on strike Sept. 22 for one day with further action planned for the following week, after pay negotiations with parent publisher Elsevier fell apart, The..."
       - title: "Top Oversight Dem Opens Investigation of Donald Trump Jr.’s Russian Oligarch-Funded Wedding"
         url: "https://www.propublica.org/article/donald-trump-jr-wedding-umar-kremlev-payments-investigation"
         source: "ProPublica"
@@ -166,15 +176,20 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-10
         summary: "The journal PeerJ has retracted a study that attempted to capture tourists’ “authentic responses” to venomous snakes by putting plastic models and dead vipers around popular hiking destinations and secretly watching how..."
-      - title: "Researchers appeal misconduct finding over studies of trans youth"
-        url: "https://retractionwatch.com/2026/09/09/norway-national-center-gender-incongruence-appeal-misconduct-finding-trans-youth/"
-        source: "Retraction Watch"
-        date: 2026-09-09
-        summary: "Five researchers at Norway’s national gender incongruence clinic are appealing a university committee’s finding they committed “gross negligence” and scientific misconduct after the group published several studies using..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Data Broker Radaris Loses Domains in Privacy Fight"
+        url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
+        source: "Krebs on Security"
+        date: 2026-09-16
+        summary: "The consumer data broker Radaris.com has long had a reputation for ignoring requests to remove personal information from its vast empire of people-search services online. That reputation caught up with the company..."
+      - title: "👮 Flock Searches for the LOLs | EFFector 38.16"
+        url: "https://www.eff.org/deeplinks/2026/09/flock-searches-lols-effector-3816"
+        source: "EFF Deeplinks"
+        date: 2026-09-16
+        summary: "Mass surveillance isn't a joke. But police are treating it like one when using automated license plate reader (ALPR) networks. In our latest EFFector newsletter , we're covering a new EFF report on how officers across..."
       - title: "Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get"
         url: "https://themarkup.org/privacy/2026/09/16/whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get"
         source: "The Markup"
@@ -195,6 +210,21 @@ sections:
         source: "The Markup"
         date: 2026-09-14
         summary: "Doctoralia sent information about specialists and appointment dates to social media companies."
+      - title: "Morristown Green: Cameras catch alleged camera vandal in Morristown SafetyStick pilot"
+        url: "https://epic.org/morristown-green-cameras-catch-alleged-camera-vandal-in-morristown-safetystick-pilot/"
+        source: "EPIC"
+        date: 2026-09-11
+        summary: "“‘Before any such surveillance technologies are introduced to a community, even on a pilot basis, the community should be informed and have an opportunity to ask questions and raise concerns prior to any deployment,’..."
+      - title: "Communications Daily: State AGs Clash With Industry on FCC’s Proposed Know-Your-Upstream-Provider Rules"
+        url: "https://epic.org/communications-daily-state-ags-clash-with-industry-on-fccs-proposed-know-your-upstream-provider-rules/"
+        source: "EPIC"
+        date: 2026-09-11
+        summary: "“A coalition of other consumer groups said rules like the KYUP proposals are ‘more vital than ever’ to fight fraud. ‘Many providers profit from transmitting illegal calls, either directly by originating calls for..."
+      - title: "The Atlantic: Rules Designed to Create Chaos"
+        url: "https://epic.org/the-atlantic-rules-designed-to-create-chaos/"
+        source: "EPIC"
+        date: 2026-09-11
+        summary: "“(Another section of the executive order directed the Department of Homeland Security to produce a mechanism by which states can review ‘citizenship lists’ of potential voters. DHS has yet to provide these lists, and..."
       - title: "Consumer Groups File Comments in Support of Robocall Mitigation Rule"
         url: "https://epic.org/consumer-groups-file-comments-in-support-of-robocall-mitigation-rule/"
         source: "EPIC"
@@ -210,28 +240,3 @@ sections:
         source: "EPIC"
         date: 2026-09-10
         summary: "This week, EPIC and Restore the Fourth filed an amicus brief in the Fourth Circuit case Chatrie v. United States explaining why the Court should rule that the geofence search in the case was an unconstitutional general..."
-      - title: "Cops Play Hide and Seek About Using Spy Tech to Avoid Scrutiny and Bad PR"
-        url: "https://www.eff.org/deeplinks/2026/09/cops-play-hide-and-seek-about-using-spy-tech-avoid-scrutiny-and-bad-pr"
-        source: "EFF Deeplinks"
-        date: 2026-09-09
-        summary: "Law enforcement agencies across the country are increasingly relying on spying technologies— automated license plate readers (ALPR), cell-site simulators , and facial recognition , to name a few--causing an outcry in..."
-      - title: "Law & Crime: Trump DOJ tells Chief Justice Roberts that a judge’s ‘indefensible order’ is what actually ‘threatens the integrity of upcoming elections’"
-        url: "https://epic.org/law-crime-trump-doj-tells-chief-justice-roberts-that-a-judges-indefensible-order-is-what-actually-threatens-the-integrity-of-upcoming-elections/"
-        source: "EPIC"
-        date: 2026-09-08
-        summary: "“The DOJ’s stay application on Tuesday, once again seeking swift interim relief from the conservative majority, comes days after the U.S. Court of Appeals for the District of Columbia Circuit issued a 2-1 decision..."
-      - title: "Democracy Docket: DOJ asks Supreme Court to let DHS use immigration database to purge state voter rolls"
-        url: "https://epic.org/democracy-docket-doj-asks-supreme-court-to-let-dhs-use-immigration-database-to-purge-state-voter-rolls/"
-        source: "EPIC"
-        date: 2026-09-08
-        summary: "“DHS’s overhaul of the SAVE database is just one prong in its effort to shape state voter rolls and influence who can vote.” “Following the playbook outlined in Trump’s March 2026 executive order, DHS is also..."
-      - title: "Courthouse News: Feds demand revival of national citizenship database ahead of midterms"
-        url: "https://epic.org/courthouse-news-feds-demand-revival-of-national-citizenship-database-ahead-of-midterms/"
-        source: "EPIC"
-        date: 2026-09-08
-        summary: "“The Trump administration on Tuesday called on the Supreme Court to greenlight the creation of a national citizenship database using Social Security information for voter verification during the midterm election.” “The..."
-      - title: "Texas and Florida Step Back from ALPRs"
-        url: "https://www.eff.org/deeplinks/2026/09/texas-and-florida-step-back-alprs"
-        source: "EFF Deeplinks"
-        date: 2026-09-02
-        summary: "Within the last few days, two important state actions have dealt a big blow to automated license plate reader (ALPR) networks. This is just the latest proof of the growing tide of public opposition to mass surveillance..."
