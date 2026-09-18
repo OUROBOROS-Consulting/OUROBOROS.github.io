@@ -2,42 +2,47 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-17
+generated: 2026-09-18
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Is Trump’s AI obsession walking the world into disaster? | Politics Weekly America"
+        url: "https://www.theguardian.com/politics/video/2026/sep/18/is-trumps-ai-obsession-walking-the-world-into-disaster-politics-weekly-america"
+        source: "The Guardian"
+        date: 2026-09-18
+        summary: "Tech bosses have called for a slowdown in artificial intelligence and formal guardrails to be introduced by the US government. But President Trump is not moved by the doomsday predictions, calling them a ‘hoax'. What is..."
+      - title: "Is Trump’s AI obsession walking the world into disaster? – podcast"
+        url: "https://www.theguardian.com/politics/audio/2026/sep/18/is-trumps-ai-obsession-walking-the-world-into-disaster-podcast"
+        source: "The Guardian"
+        date: 2026-09-18
+        summary: "Tech bosses have called for a slowdown in artificial intelligence and the creation of formal guardrails from the US government. But why is President Trump unmoved by the doomsday predictions, dismissing them as a..."
+      - title: "LLMs respond differently to harmful prompts when AI watermarking is used"
+        url: "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/"
+        source: "Ars Technica"
+        date: 2026-09-17
+        summary: "SynthID can cause models to follow harmful instructions they would otherwise refuse."
+      - title: "Meta ordered to remove UK deepfakes as oversight board criticises ‘inadequate’ safeguards"
+        url: "https://www.theguardian.com/technology/2026/sep/17/meta-ordered-remove-deepfakes-oversight-board-inadequate-safeguards"
+        source: "The Guardian"
+        date: 2026-09-17
+        summary: "Facebook told it was wrong in leaving up AI-generated videos of a Labour councillor and Muslim campaigner, amid calls to curb fakes Meta’s “supreme court” has ordered the tech company to take down deepfake videos of a..."
+      - title: "Tax the middle earners! Will the PM do it? – podcast"
+        url: "https://www.theguardian.com/politics/audio/2026/sep/17/tax-the-middle-earners-will-the-pm-do-it-podcast"
+        source: "The Guardian"
+        date: 2026-09-17
+        summary: "Former Bank of England economist Andy Haldane said the markets regarded this government as ‘a pretty traditional tax and spend socialist government with better TikTok videos’. Harsh criticism or truth? As pressure..."
       - title: "House speaker calls early recess before midterms amid AI regulation frenzy"
         url: "https://www.theguardian.com/us-news/2026/sep/16/mike-johnson-cancels-house-vote-hegseth"
         source: "The Guardian"
         date: 2026-09-16
         summary: "Mike Johnson cancels votes on Thursday, meaning House members will avoid voting on impeaching Pete Hegseth The Republican speaker of the House, Mike Johnson , announced on Wednesday that he would again cancel votes..."
-      - title: "‘Godfather of AI’ says tech regulation is nearing Covid-style pivot moment"
-        url: "https://www.theguardian.com/technology/2026/sep/16/ai-tech-regulation-government-action-yoshua-bengio"
-        source: "The Guardian"
-        date: 2026-09-16
-        summary: "Safety crisis makes it more likely that governments will be spurred into action, says Yoshua Bengio Concerns over AI safety are reaching a point where governments realise they must act to protect the public, similarly..."
       - title: "Everything Australians put online could be scraped for AI under proposed new rules. How will you be affected?"
         url: "https://www.theguardian.com/australia-news/2026/sep/17/everything-australians-put-online-could-be-scraped-for-ai-under-proposed-new-rules-how-will-you-be-affected"
         source: "The Guardian"
         date: 2026-09-16
         summary: "The Albanese government is considering reforms that give US big tech unrestricted access to Australian content Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily news..."
-      - title: "‘If you’re building Frankenstein, stop’: JD Vance dismisses calls for AI regulation"
-        url: "https://www.theguardian.com/technology/2026/sep/16/building-frankenstein-jd-vance-dismisses-ai-regulation"
-        source: "The Guardian"
-        date: 2026-09-16
-        summary: "US vice-president’s comments come as former Anthropic researcher revisits recent claim AI could destroy humanity The US vice-president has dismissed calls for global regulation of AI safety risks, telling companies..."
-      - title: "The US government is failing Americans on AI | Shakeel Hashim"
-        url: "https://www.theguardian.com/technology/2026/sep/16/us-government-failing-americans-ai"
-        source: "The Guardian"
-        date: 2026-09-16
-        summary: "Trump and Republicans want companies to regulate themselves. It’s a dereliction of duty that will make AI less safe It is hard to get Sam Altman, Elon Musk and Dario Amodei to agree on much. But over the weekend, all..."
-      - title: "Decoding America: Why won't Donald Trump regulate AI? - podcast"
-        url: "https://www.theguardian.com/australia-news/audio/2026/sep/16/why-wont-donald-trump-regulate-ai-decoding-america-podcast"
-        source: "The Guardian"
-        date: 2026-09-16
-        summary: "In this episode of Guardian Australia’s weekly US politics podcast, co-hosts Jonathan Yerushalmy and Reged Ahmad look at whether there is any appetite across the political spectrum to put guardrails on artificial..."
       - title: "Agility’s new humanoid robot will stop, squat to avoid harming human coworkers"
         url: "https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/"
         source: "Ars Technica"
@@ -53,21 +58,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-14
         summary: "Safety is the watchword, but there could be ulterior benefits for the industry."
-      - title: "Man told ChatGPT he was feeling delusional. ChatGPT insisted he was Jesus."
-        url: "https://arstechnica.com/tech-policy/2026/09/man-told-chatgpt-he-was-feeling-delusional-chatgpt-insisted-he-was-jesus/"
-        source: "Ars Technica"
-        date: 2026-09-09
-        summary: "Man with bipolar disorder sued OpenAI after surviving ChatGPT-linked suicide attempt."
-      - title: "“This is the AI men actually use”: Meta ads pushed apps nudifying real teens"
-        url: "https://arstechnica.com/tech-policy/2026/09/real-photos-of-young-girls-were-in-nudify-app-ads-on-facebook-instagram/"
-        source: "Ars Technica"
-        date: 2026-09-08
-        summary: "Meta dragged its feet removing ads that nudify young girls' Instagram pics."
-      - title: "Update to Google’s AI weather model improves forecast accuracy"
-        url: "https://arstechnica.com/science/2026/09/googles-ai-weather-model-now-uses-more-raw-satellite-data/"
-        source: "Ars Technica"
-        date: 2026-09-08
-        summary: "Like traditional weather models, it benefits from an expanded set of inputs."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +126,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Paper mill studies get cited by clinical guidelines, policy docs and more, analysis finds"
+        url: "https://retractionwatch.com/2026/09/17/paper-mill-studies-get-cited-by-clinical-guidelines-policy-docs-and-more-analysis-finds/"
+        source: "Retraction Watch"
+        date: 2026-09-17
+        summary: "Studies produced by a suspected paper mill are frequently cited in patents, clinical guidelines and policy documents, according to a new analysis. The work, posted on arXiv on August 31, examined the fate of nearly..."
       - title: "Oregon Lawmakers Seek to Open Up Affordable Housing Records Following ProPublica’s Reporting"
         url: "https://www.propublica.org/article/oregon-lawmakers-seek-to-open-housing-records"
         source: "ProPublica"
@@ -171,15 +166,25 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-11
         summary: "All 15 editors at a French journal have resigned after it was acquired by an editing service and publisher based in China. Revue de l’Organisation Responsable, or Responsible Organization Review (ROR), publishes..."
-      - title: "PeerJ retracts study that secretly observed tourists’ reactions to snakes"
-        url: "https://retractionwatch.com/2026/09/10/peerj-snakes-vipers-retraction-ethical-concerns/"
-        source: "Retraction Watch"
-        date: 2026-09-10
-        summary: "The journal PeerJ has retracted a study that attempted to capture tourists’ “authentic responses” to venomous snakes by putting plastic models and dead vipers around popular hiking destinations and secretly watching how..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Cronkite News: Supreme Court ruling clears way for mail ballots, used by 75% of Arizona voters, to proceed as usual"
+        url: "https://epic.org/cronkite-news-supreme-court-ruling-clears-way-for-mail-ballots-used-by-75-of-arizona-voters-to-proceed-as-usual/"
+        source: "EPIC"
+        date: 2026-09-16
+        summary: "“On Tuesday, the League of Women Voters and the Electronic Privacy Information Center argued that the expanded system would give DHS ‘unlimited power to vacuum up millions of Americans’ sensitive information’ from the..."
+      - title: "CalMatters: Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get"
+        url: "https://epic.org/calmatters-whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get/"
+        source: "EPIC"
+        date: 2026-09-16
+        summary: "“To build their databases, data brokers broadly rely on three types of data, according to Justin Sherman, a scholar-in-residence at the Electronic Privacy Information Center who formerly ran a research program on data..."
+      - title: "Consumer Reports: Companies Make It Hard to Access Your Personal Data Under State Privacy Laws, CR Finds"
+        url: "https://epic.org/consumer-reports-companies-make-it-hard-to-access-your-personal-data-under-state-privacy-laws-cr-finds/"
+        source: "EPIC"
+        date: 2026-09-16
+        summary: "“Small fines and warning letters, however, may have limited effect on some of the largest companies in the data economy, says Caroline Kraczon, counsel at the nonprofit Electronic Privacy Information Center and who..."
       - title: "Data Broker Radaris Loses Domains in Privacy Fight"
         url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
         source: "Krebs on Security"
@@ -200,6 +205,21 @@ sections:
         source: "The Markup"
         date: 2026-09-16
         summary: "Data brokers collect thousands of details about your finances, health and habits. See what’s in your profile, who buys it and how companies use it."
+      - title: "Law360: Justices Told DHS Voter Citizenship Database ‘Unprecedented’"
+        url: "https://epic.org/law360-justices-told-dhs-voter-citizenship-database-unprecedented/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“The League of Women Voters, along with privacy watchdog the Electronic Privacy Information Center, urged the high court in a response brief to deny the administration’s emergency request to stay a Washington, D.C..."
+      - title: "Washington Post: Health Brief: Three key issues for the No. 2 at HHS"
+        url: "https://epic.org/washington-post-health-brief-three-key-issues-for-the-no-2-at-hhs/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“‘It is an absolutely worthwhile goal to have people more fully participate in their health services, and to have technology that serves us and improves our health,’ said Sara Geoghegan, senior counsel at the nonprofit..."
+      - title: "Democracy Docket: DOJ partially confirms DHS whistleblower allegations in new notice to federal court"
+        url: "https://epic.org/democracy-docket-doj-partially-confirms-dhs-whistleblower-allegations-in-new-notice-to-federal-court/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“LWV and the other plaintiff in the case, the Electronic Privacy Information Center (EPIC), challenged DHS’s attempt to expand SAVE as a violation of the U.S. Constitution and federal privacy laws. They warned that SAVE..."
       - title: "The High Crime of “LMAO”: How Cops Are Treating Mass Surveillance As a Joke"
         url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
         source: "EFF Deeplinks"
@@ -210,33 +230,3 @@ sections:
         source: "The Markup"
         date: 2026-09-14
         summary: "Doctoralia sent information about specialists and appointment dates to social media companies."
-      - title: "Morristown Green: Cameras catch alleged camera vandal in Morristown SafetyStick pilot"
-        url: "https://epic.org/morristown-green-cameras-catch-alleged-camera-vandal-in-morristown-safetystick-pilot/"
-        source: "EPIC"
-        date: 2026-09-11
-        summary: "“‘Before any such surveillance technologies are introduced to a community, even on a pilot basis, the community should be informed and have an opportunity to ask questions and raise concerns prior to any deployment,’..."
-      - title: "Communications Daily: State AGs Clash With Industry on FCC’s Proposed Know-Your-Upstream-Provider Rules"
-        url: "https://epic.org/communications-daily-state-ags-clash-with-industry-on-fccs-proposed-know-your-upstream-provider-rules/"
-        source: "EPIC"
-        date: 2026-09-11
-        summary: "“A coalition of other consumer groups said rules like the KYUP proposals are ‘more vital than ever’ to fight fraud. ‘Many providers profit from transmitting illegal calls, either directly by originating calls for..."
-      - title: "The Atlantic: Rules Designed to Create Chaos"
-        url: "https://epic.org/the-atlantic-rules-designed-to-create-chaos/"
-        source: "EPIC"
-        date: 2026-09-11
-        summary: "“(Another section of the executive order directed the Department of Homeland Security to produce a mechanism by which states can review ‘citizenship lists’ of potential voters. DHS has yet to provide these lists, and..."
-      - title: "Consumer Groups File Comments in Support of Robocall Mitigation Rule"
-        url: "https://epic.org/consumer-groups-file-comments-in-support-of-robocall-mitigation-rule/"
-        source: "EPIC"
-        date: 2026-09-10
-        summary: "On September 8, EPIC joined the National Consumer Law Center and other consumer rights organizations in comments supporting the Federal Communications Commission (FCC)’s proposal to strengthen rules aimed at addressing..."
-      - title: "PRESS RELEASE: EPIC Applauds Gov. Newsom For Signing Prohibition on Addictive Features, Changes to California’s Age-Appropriate Design Code"
-        url: "https://epic.org/press-release-epic-applauds-gov-newsom-for-signing-prohibition-on-addictive-features-changes-to-californias-age-appropriate-design-code/"
-        source: "EPIC"
-        date: 2026-09-10
-        summary: "SAN FRANCISCO, CA – EPIC applauds Governor Newsom for signing into law California’s A.B. 1709, which prohibits social media platforms from making addictive design features available to users under 16 years old. “This is..."
-      - title: "EPIC, Restore the Fourth File Amicus Brief in Chatrie v. United States Urging the Fourth Circuit to Rule Geofence Warrant Unconstitutional"
-        url: "https://epic.org/epic-restore-the-fourth-file-amicus-brief-in-chatrie-v-united-states-urging-the-fourth-circuit-to-rule-geofence-warrant-unconstitutional/"
-        source: "EPIC"
-        date: 2026-09-10
-        summary: "This week, EPIC and Restore the Fourth filed an amicus brief in the Fourth Circuit case Chatrie v. United States explaining why the Court should rule that the geofence search in the case was an unconstitutional general..."
