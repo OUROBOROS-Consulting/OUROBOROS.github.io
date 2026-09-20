@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-19
+generated: 2026-09-20
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Trump’s ‘biggest miscalculation’? How one adviser steered the great AI freakout"
+        url: "https://www.theguardian.com/us-news/2026/sep/20/david-sacks-trump-ai-czar"
+        source: "The Guardian"
+        date: 2026-09-20
+        summary: "David Sacks convinced Trump against any restrictions on AI – putting the White House out of step with its own party As lawmakers from both sides of the aisle in the US have joined together calling for the regulation of..."
+      - title: "As White House shields the AI gold rush, Trump family and other allies strike it rich – with few guardrails"
+        url: "https://www.theguardian.com/us-news/2026/sep/20/trump-ai-policy-financial-interest"
+        source: "The Guardian"
+        date: 2026-09-20
+        summary: "It’s not clear that financial interests are driving White House policy, but they run parallel even as resistance mounts Donald Trump ’s sons, through a series of AI -linked defense and technology ventures, have picked..."
+      - title: "Why China is pushing back on US warnings over rapid AI development"
+        url: "https://www.theguardian.com/world/2026/sep/20/why-china-is-pushing-back-on-us-warnings-over-rapid-ai-development"
+        source: "The Guardian"
+        date: 2026-09-20
+        summary: "Beijing believes slowdown calls aim to lock in US advantage, and is pursuing a different balance between safety and pace China bogeyman looms large over American firms’ AI doomsday scenario About two years ago..."
       - title: "Why Europe has been absent from the great AI safety debate"
         url: "https://www.theguardian.com/technology/2026/sep/18/europe-ai-safety-debate"
         source: "The Guardian"
@@ -28,26 +43,11 @@ sections:
         source: "The Guardian"
         date: 2026-09-18
         summary: "Andy Burnham’s focus on immediate domestic problems leads some to fear issue has dropped off government’s radar Towards the end of Keir Starmer’s time in office, his senior ministers, alarmed by the latest developments..."
-      - title: "Is Trump’s AI obsession walking the world into disaster? | Politics Weekly America"
-        url: "https://www.theguardian.com/politics/video/2026/sep/18/is-trumps-ai-obsession-walking-the-world-into-disaster-politics-weekly-america"
-        source: "The Guardian"
-        date: 2026-09-18
-        summary: "Tech bosses have called for a slowdown in artificial intelligence and formal guardrails to be introduced by the US government. But President Trump is not moved by the doomsday predictions, calling them a ‘hoax'. What is..."
-      - title: "Is Trump’s AI obsession walking the world into disaster? – podcast"
-        url: "https://www.theguardian.com/politics/audio/2026/sep/18/is-trumps-ai-obsession-walking-the-world-into-disaster-podcast"
-        source: "The Guardian"
-        date: 2026-09-18
-        summary: "Tech bosses have called for a slowdown in artificial intelligence and the creation of formal guardrails from the US government. But why is President Trump unmoved by the doomsday predictions, dismissing them as a..."
       - title: "LLMs respond differently to harmful prompts when AI watermarking is used"
         url: "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/"
         source: "Ars Technica"
         date: 2026-09-17
         summary: "SynthID can cause models to follow harmful instructions they would otherwise refuse."
-      - title: "Meta ordered to remove UK deepfakes as oversight board criticises ‘inadequate’ safeguards"
-        url: "https://www.theguardian.com/technology/2026/sep/17/meta-ordered-remove-deepfakes-oversight-board-inadequate-safeguards"
-        source: "The Guardian"
-        date: 2026-09-17
-        summary: "Facebook told it was wrong in leaving up AI-generated videos of a Labour councillor and Muslim campaigner, amid calls to curb fakes Meta’s “supreme court” has ordered the tech company to take down deepfake videos of a..."
       - title: "Agility’s new humanoid robot will stop, squat to avoid harming human coworkers"
         url: "https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/"
         source: "Ars Technica"
@@ -67,6 +67,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Thousands of pregnant women in England are reporting domestic abuse. Midwives are struggling to cope"
+        url: "https://www.theguardian.com/society/2026/sep/20/thousands-of-pregnant-women-in-england-are-reporting-domestic-abuse-midwives-are-struggling-to-cope"
+        source: "The Guardian"
+        date: 2026-09-20
+        summary: "Exclusive: Analysis ‘lays bare’ something midwives already know from their day-to-day work About 20,000 disclosures of domestic abuse are estimated to be made to maternity services in England every year, analysis has..."
       - title: "New report reveals prevalence of physical and sexual violence in US"
         url: "https://www.theguardian.com/us-news/2026/sep/16/physical-sexual-violence-study-us"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-01
         summary: "In today’s newsletter: First minister John Swinney has pledged to put an end to violence against women and girls. But can he turn ambitious laws into real change? Good morning. Violence against women and girls, in all..."
-      - title: "‘Scary’: how misinformation and AI hallucinations are infiltrating Australia’s parliament"
-        url: "https://www.theguardian.com/australia-news/2026/sep/01/how-misinformation-ai-hallucinations-infiltrating-australian-parliament"
-        source: "The Guardian"
-        date: 2026-08-31
-        summary: "Exclusive : Guardian analysis reveals that dozens of policy submissions from across the political spectrum incorrectly summarise real research and invent or wrongly cite sources Follow our Australia news live blog for..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
