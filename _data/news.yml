@@ -2,13 +2,38 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-20
+generated: 2026-09-21
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Trump’s ‘biggest miscalculation’? How one adviser steered the great AI freakout"
+      - title: "What an AI deal could mean for Australian culture – podcast"
+        url: "https://www.theguardian.com/australia-news/audio/2026/sep/22/what-an-ai-deal-could-mean-for-australian-culture-podcast"
+        source: "The Guardian"
+        date: 2026-09-21
+        summary: "The Albanese government is considering giving AI companies unrestricted access to Australian content. The sweeping copyright reforms could give AI companies – like Anthropic and Open AI - permission to train on the open..."
+      - title: "The US spent billions on border surveillance. Why can’t it catch people before they die?"
+        url: "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
+        source: "MIT Technology Review"
+        date: 2026-09-21
+        summary: "When José Morales Bernal crossed the border into the United States on April 8, 2024, the day before his 32nd birthday, it should have triggered a chain of technological alerts and human responses. As he walked through..."
+      - title: "She died at the San Diego border. A surveillance camera was in plain sight"
+        url: "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/"
+        source: "MIT Technology Review"
+        date: 2026-09-21
+        summary: "She had only walked for a couple of hours, and already she was lost. It was early afternoon on Sept. 14, 2025, when 30-year-old Graciela Gómez Hernández crossed the border from the eastern edge of Tijuana into Southern..."
+      - title: "How we made the first comprehensive map of deaths along the US border’s “virtual wall”"
+        url: "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/"
+        source: "MIT Technology Review"
+        date: 2026-09-21
+        summary: "Our 15-month investigation into death and surveillance along the US-Mexico border began with a simple question: Why did so many people die near government surveillance towers meant to help track and apprehend them? This..."
+      - title: "4 ways to address the failures we found along the US border’s “virtual wall”"
+        url: "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/"
+        source: "MIT Technology Review"
+        date: 2026-09-21
+        summary: "MIT Technology Review today published our investigation into how many people have died near the “virtual wall” of surveillance towers that the US government has installed along the US-Mexico border. We found cases of..."
+      - title: "‘An out-of-touch Silicon Valley radical’: meet Trump’s AI whisperer pushing for limited regulation"
         url: "https://www.theguardian.com/us-news/2026/sep/20/david-sacks-trump-ai-czar"
         source: "The Guardian"
         date: 2026-09-20
@@ -23,26 +48,11 @@ sections:
         source: "The Guardian"
         date: 2026-09-20
         summary: "Beijing believes slowdown calls aim to lock in US advantage, and is pursuing a different balance between safety and pace China bogeyman looms large over American firms’ AI doomsday scenario About two years ago..."
-      - title: "Why Europe has been absent from the great AI safety debate"
-        url: "https://www.theguardian.com/technology/2026/sep/18/europe-ai-safety-debate"
-        source: "The Guardian"
-        date: 2026-09-18
-        summary: "Though Europe has measures that address how consumers might encounter AI, technology will impact them if the worst scenarios bear Europe’s dilemma over AI was rendered in stark terms this week. The head of the..."
       - title: "US government website used Chinese model the FBI called \"malicious\""
         url: "https://arstechnica.com/tech-policy/2026/09/us-government-website-used-chinese-model-the-fbi-called-malicious/"
         source: "Ars Technica"
         date: 2026-09-18
         summary: "The Federal Register website briefly used an open source Chinese AI search tool."
-      - title: "The Guardian view on NAZA’s persecuted directors: journalism is not treason | Editorial"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/18/the-guardian-view-on-nazas-persecuted-directors-journalism-is-not-treason"
-        source: "The Guardian"
-        date: 2026-09-18
-        summary: "Politicians who threaten filmmakers rather than investigate alleged military crimes expose not strength but a leadership frightened of the evidence Across Israel, politicians, military leaders and much of the media are..."
-      - title: "‘A critical moment’: concern UK is not up to speed in acting on AI risks"
-        url: "https://www.theguardian.com/technology/2026/sep/18/a-critical-moment-concern-uk-is-not-up-to-speed-in-acting-on-ai-risks"
-        source: "The Guardian"
-        date: 2026-09-18
-        summary: "Andy Burnham’s focus on immediate domestic problems leads some to fear issue has dropped off government’s radar Towards the end of Keir Starmer’s time in office, his senior ministers, alarmed by the latest developments..."
       - title: "LLMs respond differently to harmful prompts when AI watermarking is used"
         url: "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/"
         source: "Ars Technica"
@@ -58,20 +68,15 @@ sections:
         source: "MIT Technology Review"
         date: 2026-09-15
         summary: "When Jessica Wachter, a finance professor at the University of Pennsylvania’s Wharton School, wanted to assess AI’s impact on the economy over the next few years, she faced a long list of business and technical..."
-      - title: "AI leaders want to hit the brakes after years of reckless speed"
-        url: "https://arstechnica.com/ai/2026/09/ai-leaders-want-to-hit-the-brakes-after-years-of-reckless-speed/"
-        source: "Ars Technica"
-        date: 2026-09-14
-        summary: "Safety is the watchword, but there could be ulterior benefits for the industry."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
-      - title: "Thousands of pregnant women in England are reporting domestic abuse. Midwives are struggling to cope"
+      - title: "About 20,000 women a year tell midwives they are domestic violence victims"
         url: "https://www.theguardian.com/society/2026/sep/20/thousands-of-pregnant-women-in-england-are-reporting-domestic-abuse-midwives-are-struggling-to-cope"
         source: "The Guardian"
         date: 2026-09-20
-        summary: "Exclusive: Analysis ‘lays bare’ something midwives already know from their day-to-day work About 20,000 disclosures of domestic abuse are estimated to be made to maternity services in England every year, analysis has..."
+        summary: "Exclusive: Midwifery leaders call for more support and training as analysis reveals scale of disclosures About 20,000 disclosures of domestic abuse are estimated to be made to maternity services in England every year..."
       - title: "New report reveals prevalence of physical and sexual violence in US"
         url: "https://www.theguardian.com/us-news/2026/sep/16/physical-sexual-violence-study-us"
         source: "The Guardian"
@@ -131,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Watch: The New Supreme Court"
+        url: "https://www.propublica.org/article/supreme-court-shadow-docket-explainer"
+        source: "ProPublica"
+        date: 2026-09-21
+        summary: "The post Watch: The New Supreme Court appeared first on ProPublica ."
       - title: "Judge Denies Efforts to End Oversight of Maricopa County Sheriff’s Office as Racial Profiling of Latinos Persists"
         url: "https://www.propublica.org/article/maricopa-county-sheriff-oversight-judge-ruling"
         source: "ProPublica"
@@ -180,6 +190,21 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Cronkite News: Supreme Court ruling clears way for mail ballots, used by 75% of Arizona voters, to proceed as usual"
+        url: "https://epic.org/cronkite-news-supreme-court-ruling-clears-way-for-mail-ballots-used-by-75-of-arizona-voters-to-proceed-as-usual/"
+        source: "EPIC"
+        date: 2026-09-16
+        summary: "“On Tuesday, the League of Women Voters and the Electronic Privacy Information Center argued that the expanded system would give DHS ‘unlimited power to vacuum up millions of Americans’ sensitive information’ from the..."
+      - title: "CalMatters: Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get"
+        url: "https://epic.org/calmatters-whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get/"
+        source: "EPIC"
+        date: 2026-09-16
+        summary: "“To build their databases, data brokers broadly rely on three types of data, according to Justin Sherman, a scholar-in-residence at the Electronic Privacy Information Center who formerly ran a research program on data..."
+      - title: "Consumer Reports: Companies Make It Hard to Access Your Personal Data Under State Privacy Laws, CR Finds"
+        url: "https://epic.org/consumer-reports-companies-make-it-hard-to-access-your-personal-data-under-state-privacy-laws-cr-finds/"
+        source: "EPIC"
+        date: 2026-09-16
+        summary: "“Small fines and warning letters, however, may have limited effect on some of the largest companies in the data economy, says Caroline Kraczon, counsel at the nonprofit Electronic Privacy Information Center and who..."
       - title: "Data Broker Radaris Loses Domains in Privacy Fight"
         url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
         source: "Krebs on Security"
@@ -200,6 +225,21 @@ sections:
         source: "The Markup"
         date: 2026-09-16
         summary: "Data brokers collect thousands of details about your finances, health and habits. See what’s in your profile, who buys it and how companies use it."
+      - title: "Law360: Justices Told DHS Voter Citizenship Database ‘Unprecedented’"
+        url: "https://epic.org/law360-justices-told-dhs-voter-citizenship-database-unprecedented/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“The League of Women Voters, along with privacy watchdog the Electronic Privacy Information Center, urged the high court in a response brief to deny the administration’s emergency request to stay a Washington, D.C..."
+      - title: "Washington Post: Health Brief: Three key issues for the No. 2 at HHS"
+        url: "https://epic.org/washington-post-health-brief-three-key-issues-for-the-no-2-at-hhs/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“‘It is an absolutely worthwhile goal to have people more fully participate in their health services, and to have technology that serves us and improves our health,’ said Sara Geoghegan, senior counsel at the nonprofit..."
+      - title: "Democracy Docket: DOJ partially confirms DHS whistleblower allegations in new notice to federal court"
+        url: "https://epic.org/democracy-docket-doj-partially-confirms-dhs-whistleblower-allegations-in-new-notice-to-federal-court/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“LWV and the other plaintiff in the case, the Electronic Privacy Information Center (EPIC), challenged DHS’s attempt to expand SAVE as a violation of the U.S. Constitution and federal privacy laws. They warned that SAVE..."
       - title: "The High Crime of “LMAO”: How Cops Are Treating Flock's Mass Surveillance As a Joke"
         url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
         source: "EFF Deeplinks"
@@ -210,33 +250,3 @@ sections:
         source: "The Markup"
         date: 2026-09-14
         summary: "Doctoralia sent information about specialists and appointment dates to social media companies."
-      - title: "Morristown Green: Cameras catch alleged camera vandal in Morristown SafetyStick pilot"
-        url: "https://epic.org/morristown-green-cameras-catch-alleged-camera-vandal-in-morristown-safetystick-pilot/"
-        source: "EPIC"
-        date: 2026-09-11
-        summary: "“‘Before any such surveillance technologies are introduced to a community, even on a pilot basis, the community should be informed and have an opportunity to ask questions and raise concerns prior to any deployment,’..."
-      - title: "Communications Daily: State AGs Clash With Industry on FCC’s Proposed Know-Your-Upstream-Provider Rules"
-        url: "https://epic.org/communications-daily-state-ags-clash-with-industry-on-fccs-proposed-know-your-upstream-provider-rules/"
-        source: "EPIC"
-        date: 2026-09-11
-        summary: "“A coalition of other consumer groups said rules like the KYUP proposals are ‘more vital than ever’ to fight fraud. ‘Many providers profit from transmitting illegal calls, either directly by originating calls for..."
-      - title: "The Atlantic: Rules Designed to Create Chaos"
-        url: "https://epic.org/the-atlantic-rules-designed-to-create-chaos/"
-        source: "EPIC"
-        date: 2026-09-11
-        summary: "“(Another section of the executive order directed the Department of Homeland Security to produce a mechanism by which states can review ‘citizenship lists’ of potential voters. DHS has yet to provide these lists, and..."
-      - title: "Consumer Groups File Comments in Support of Robocall Mitigation Rule"
-        url: "https://epic.org/consumer-groups-file-comments-in-support-of-robocall-mitigation-rule/"
-        source: "EPIC"
-        date: 2026-09-10
-        summary: "On September 8, EPIC joined the National Consumer Law Center and other consumer rights organizations in comments supporting the Federal Communications Commission (FCC)’s proposal to strengthen rules aimed at addressing..."
-      - title: "PRESS RELEASE: EPIC Applauds Gov. Newsom For Signing Prohibition on Addictive Features, Changes to California’s Age-Appropriate Design Code"
-        url: "https://epic.org/press-release-epic-applauds-gov-newsom-for-signing-prohibition-on-addictive-features-changes-to-californias-age-appropriate-design-code/"
-        source: "EPIC"
-        date: 2026-09-10
-        summary: "SAN FRANCISCO, CA – EPIC applauds Governor Newsom for signing into law California’s A.B. 1709, which prohibits social media platforms from making addictive design features available to users under 16 years old. “This is..."
-      - title: "EPIC, Restore the Fourth File Amicus Brief in Chatrie v. United States Urging the Fourth Circuit to Rule Geofence Warrant Unconstitutional"
-        url: "https://epic.org/epic-restore-the-fourth-file-amicus-brief-in-chatrie-v-united-states-urging-the-fourth-circuit-to-rule-geofence-warrant-unconstitutional/"
-        source: "EPIC"
-        date: 2026-09-10
-        summary: "This week, EPIC and Restore the Fourth filed an amicus brief in the Fourth Circuit case Chatrie v. United States explaining why the Court should rule that the geofence search in the case was an unconstitutional general..."
