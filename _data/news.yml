@@ -2,17 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-21
+generated: 2026-09-22
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
+        url: "https://www.technologyreview.com/2026/09/22/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
+        source: "MIT Technology Review"
+        date: 2026-09-22
+        summary: "The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border crossers and save lives. But a..."
+      - title: "The world freaked out about AI doomsday. Now what?"
+        url: "https://www.theguardian.com/technology/2026/sep/22/ai-doomsday-trump-xi"
+        source: "The Guardian"
+        date: 2026-09-22
+        summary: "Donald Trump and Xi Jinping will meet each other next week, but it’s unlikely they’ll agree to AI regulation Hello, and welcome to TechScape. I’m your host, Blake Montgomery, US tech editor at the Guardian, writing to..."
+      - title: "AI is generating a new wave of US populism. It could be a tipping point | Robert Reich"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/22/ai-economic-populism-tipping-point"
+        source: "The Guardian"
+        date: 2026-09-22
+        summary: "It’s becoming obvious to many Americans that corporations have been raking it in while workers take it on the chin Last week, the unlikely duo of Bernie Sanders and Steve Bannon both spoke before a Washington group..."
+      - title: "British Columbia sues OpenAI and Sam Altman over Tumbler Ridge mass school shooting"
+        url: "https://www.theguardian.com/technology/2026/sep/22/british-columbia-sues-openai-sam-altman-tumbler-ridge-school-shooting"
+        source: "The Guardian"
+        date: 2026-09-22
+        summary: "Canadian province alleges deadly attack could have been prevented if company had warned police of shooter’s ChatGPT use British Columbia has sued OpenAI in California, saying a mass shooting at a school in the province..."
       - title: "What an AI deal could mean for Australian culture – podcast"
         url: "https://www.theguardian.com/australia-news/audio/2026/sep/22/what-an-ai-deal-could-mean-for-australian-culture-podcast"
         source: "The Guardian"
         date: 2026-09-21
-        summary: "The Albanese government is considering giving AI companies unrestricted access to Australian content. The sweeping copyright reforms could give AI companies – like Anthropic and Open AI - permission to train on the open..."
+        summary: "The Albanese government is considering giving AI companies unrestricted access to Australian content. The sweeping copyright reforms could give AI companies – such as Anthropic and Open AI – permission to train on the..."
       - title: "The US spent billions on border surveillance. Why can’t it catch people before they die?"
         url: "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
         source: "MIT Technology Review"
@@ -38,16 +58,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-20
         summary: "David Sacks convinced Trump against any restrictions on AI – putting the White House out of step with its own party As lawmakers from both sides of the aisle in the US have joined together calling for the regulation of..."
-      - title: "As White House shields the AI gold rush, Trump family and other allies strike it rich – with few guardrails"
-        url: "https://www.theguardian.com/us-news/2026/sep/20/trump-ai-policy-financial-interest"
-        source: "The Guardian"
-        date: 2026-09-20
-        summary: "It’s not clear that financial interests are driving White House policy, but they run parallel even as resistance mounts Donald Trump ’s sons, through a series of AI -linked defense and technology ventures, have picked..."
-      - title: "Why China is pushing back on US warnings over rapid AI development"
-        url: "https://www.theguardian.com/world/2026/sep/20/why-china-is-pushing-back-on-us-warnings-over-rapid-ai-development"
-        source: "The Guardian"
-        date: 2026-09-20
-        summary: "Beijing believes slowdown calls aim to lock in US advantage, and is pursuing a different balance between safety and pace China bogeyman looms large over American firms’ AI doomsday scenario About two years ago..."
       - title: "US government website used Chinese model the FBI called \"malicious\""
         url: "https://arstechnica.com/tech-policy/2026/09/us-government-website-used-chinese-model-the-fbi-called-malicious/"
         source: "Ars Technica"
@@ -58,16 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-17
         summary: "SynthID can cause models to follow harmful instructions they would otherwise refuse."
-      - title: "Agility’s new humanoid robot will stop, squat to avoid harming human coworkers"
-        url: "https://arstechnica.com/ai/2026/09/agilitys-new-humanoid-robot-will-stop-squat-to-avoid-harming-human-coworkers/"
-        source: "Ars Technica"
-        date: 2026-09-15
-        summary: "Robots can start working outside physical cages and without safety barriers."
-      - title: "What’s at stake in AI’s trillion-dollar gamble"
-        url: "https://www.technologyreview.com/2026/09/15/1144028/ai-infrastructure-boom-investment-bubble-risk/"
-        source: "MIT Technology Review"
-        date: 2026-09-15
-        summary: "When Jessica Wachter, a finance professor at the University of Pennsylvania’s Wharton School, wanted to assess AI’s impact on the economy over the next few years, she faced a long list of business and technical..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Misconduct case dropped against AI expert after claims of AI use in recent book"
+        url: "https://retractionwatch.com/2026/09/21/misconduct-case-dropped-against-ai-expert-after-claims-of-ai-use-in-recent-book/"
+        source: "Retraction Watch"
+        date: 2026-09-21
+        summary: "Sweden’s national committee on research misconduct has dismissed a case against an expert in the social ramifications of artificial intelligence following allegations her recent book contained hallucinated references..."
       - title: "Watch: The New Supreme Court"
         url: "https://www.propublica.org/article/supreme-court-shadow-docket-explainer"
         source: "ProPublica"
@@ -181,11 +186,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-14
         summary: "A psychology journal has retracted a paper on how using generative AI can affect confidence in work tasks after its sole author refused to share data with the editors. The April paper, published in Technology, Mind, and..."
-      - title: "Editors of French journal on corporate responsibility resign after ownership transfer"
-        url: "https://retractionwatch.com/2026/09/11/editors-of-french-journal-on-corporate-responsibility-resign-after-ownership-transfer/"
-        source: "Retraction Watch"
-        date: 2026-09-11
-        summary: "All 15 editors at a French journal have resigned after it was acquired by an editing service and publisher based in China. Revue de l’Organisation Responsable, or Responsible Organization Review (ROR), publishes..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
