@@ -2,12 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-22
+generated: 2026-09-23
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "US justice department defends Trump banning journalists from White House ahead of court hearing – live"
+        url: "https://www.theguardian.com/us-news/live/2026/sep/23/donald-trump-xi-jinping-ai-china-us-politics-latest-news-updates"
+        source: "The Guardian"
+        date: 2026-09-23
+        summary: "Trump’s DoJ says White House access is ‘a privilege, not a right’; CNN, Politico and MS Now to present case in court after president banned outlets from White House grounds Sign up for US Breaking News emails Donald..."
+      - title: "New UK agency to fight ‘information warfare’ from likes of Russia, Burnham tells UN"
+        url: "https://www.theguardian.com/technology/2026/sep/23/andy-burnham-national-centre-russian-disinformation-deepfakes"
+        source: "The Guardian"
+        date: 2026-09-23
+        summary: "PM aims to ‘stem poisonous tide’ of disinformation and deepfakes with National Centre for Information Defence Security chiefs will set up a new national centre to tackle disinformation and deepfakes from hostile states..."
+      - title: "Lawsuit demands OpenAI pay for new school after ChatGPT used in shooting"
+        url: "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/"
+        source: "Ars Technica"
+        date: 2026-09-22
+        summary: "British Columbia sues OpenAI, demands Tumbler Ridge shooter’s ChatGPT logs."
+      - title: "Toyota orders workers to train humanoid robots but says humans won't be replaced"
+        url: "https://arstechnica.com/ai/2026/09/toyota-claims-plan-for-400000-factory-robots-wont-replace-human-workers/"
+        source: "Ars Technica"
+        date: 2026-09-22
+        summary: "Toyota's push comes as automakers race to develop and deploy humanoid robots."
       - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
         url: "https://www.technologyreview.com/2026/09/22/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
         source: "MIT Technology Review"
@@ -22,12 +42,12 @@ sections:
         url: "https://www.theguardian.com/commentisfree/2026/sep/22/ai-economic-populism-tipping-point"
         source: "The Guardian"
         date: 2026-09-22
-        summary: "It’s becoming obvious to many Americans that corporations have been raking it in while workers take it on the chin Last week, the unlikely duo of Bernie Sanders and Steve Bannon both spoke before a Washington group..."
+        summary: "It’s becoming obvious to many Americans that corporations have been raking it in while workers take it on the chin Last week, the unlikely duo of Bernie Sanders and Steve Bannon spoke before a Washington group demanding..."
       - title: "British Columbia sues OpenAI and Sam Altman over Tumbler Ridge mass school shooting"
         url: "https://www.theguardian.com/technology/2026/sep/22/british-columbia-sues-openai-sam-altman-tumbler-ridge-school-shooting"
         source: "The Guardian"
         date: 2026-09-22
-        summary: "Canadian province alleges deadly attack could have been prevented if company had warned police of shooter’s ChatGPT use British Columbia has sued OpenAI in California, saying a mass shooting at a school in the province..."
+        summary: "Canadian province alleges deadly attack could have been prevented if company had warned police of shooter’s ChatGPT use British Columbia has sued OpenAI , saying a mass shooting at a school in the Canadian province..."
       - title: "What an AI deal could mean for Australian culture – podcast"
         url: "https://www.theguardian.com/australia-news/audio/2026/sep/22/what-an-ai-deal-could-mean-for-australian-culture-podcast"
         source: "The Guardian"
@@ -48,30 +68,15 @@ sections:
         source: "MIT Technology Review"
         date: 2026-09-21
         summary: "Our 15-month investigation into death and surveillance along the US-Mexico border began with a simple question: Why did so many people die near government surveillance towers meant to help track and apprehend them? This..."
-      - title: "4 ways to address the failures we found along the US border’s “virtual wall”"
-        url: "https://www.technologyreview.com/2026/09/21/1144164/border-towers-surveillance-policy-recommendations/"
-        source: "MIT Technology Review"
-        date: 2026-09-21
-        summary: "MIT Technology Review today published our investigation into how many people have died near the “virtual wall” of surveillance towers that the US government has installed along the US-Mexico border. We found cases of..."
-      - title: "‘An out-of-touch Silicon Valley radical’: meet Trump’s AI whisperer pushing for limited regulation"
-        url: "https://www.theguardian.com/us-news/2026/sep/20/david-sacks-trump-ai-czar"
-        source: "The Guardian"
-        date: 2026-09-20
-        summary: "David Sacks convinced Trump against any restrictions on AI – putting the White House out of step with its own party As lawmakers from both sides of the aisle in the US have joined together calling for the regulation of..."
-      - title: "US government website used Chinese model the FBI called \"malicious\""
-        url: "https://arstechnica.com/tech-policy/2026/09/us-government-website-used-chinese-model-the-fbi-called-malicious/"
-        source: "Ars Technica"
-        date: 2026-09-18
-        summary: "The Federal Register website briefly used an open source Chinese AI search tool."
-      - title: "LLMs respond differently to harmful prompts when AI watermarking is used"
-        url: "https://arstechnica.com/security/2026/09/ai-text-watermarking-can-make-models-more-vulnerable-to-adversarial-prompts/"
-        source: "Ars Technica"
-        date: 2026-09-17
-        summary: "SynthID can cause models to follow harmful instructions they would otherwise refuse."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Review urged after blood-spattered shirt ads ran alongside domestic violence news in Australia"
+        url: "https://www.theguardian.com/media/2026/sep/23/domestic-violence-news-articles-advertising-error-bloodstained-shirt-halloween-costume-ads-ntwnfb"
+        source: "The Guardian"
+        date: 2026-09-23
+        summary: "Gruesome ads embedded in articles about family violence ‘make light’ of violence and could distress victim-survivors, expert warns Follow our Australia news live blog for latest updates WARNING: this story contains an..."
       - title: "About 20,000 women a year tell midwives they are domestic violence victims"
         url: "https://www.theguardian.com/society/2026/sep/20/thousands-of-pregnant-women-in-england-are-reporting-domestic-abuse-midwives-are-struggling-to-cope"
         source: "The Guardian"
@@ -102,11 +107,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-03
         summary: "Victim’s father Tony Ticehurst confronts Daniel Billings during sentence hearing in regional NSW, saying ‘I hope that every night Molly’s screams keep you awake’ Follow our Australia news live blog for latest updates..."
-      - title: "Tuesday briefing: Scotland has promised on violence against women – can it deliver?"
-        url: "https://www.theguardian.com/world/2026/sep/01/tuesday-briefing-scotland-has-promised-on-violence-against-women-now-it-needs-to-deliver"
-        source: "The Guardian"
-        date: 2026-09-01
-        summary: "In today’s newsletter: First minister John Swinney has pledged to put an end to violence against women and girls. But can he turn ambitious laws into real change? Good morning. Violence against women and girls, in all..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Elsevier journal retracts 100+ papers for authorship issues, editor conflicts of interest"
+        url: "https://retractionwatch.com/2026/09/22/elsevier-journal-retracts-100-papers-for-authorship-issues-editor-conflicts-of-interest/"
+        source: "Retraction Watch"
+        date: 2026-09-22
+        summary: "Science of the Total Environment (STOTEN) has retracted 165 papers this year, most for “suspicious” changes in authorship or editorial conflicts of interest. The retractions have come after STOTEN was delisted from..."
       - title: "Misconduct case dropped against AI expert after claims of AI use in recent book"
         url: "https://retractionwatch.com/2026/09/21/misconduct-case-dropped-against-ai-expert-after-claims-of-ai-use-in-recent-book/"
         source: "Retraction Watch"
@@ -181,15 +186,20 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-14
         summary: "Tensions between the American Diabetes Association and several editors of its flagship journal — who have boycotted the group over its handling of a protest at the association’s June conference — have again boiled over..."
-      - title: "CEO of AI company loses paper on cognitive impact of generative AI"
-        url: "https://retractionwatch.com/2026/09/14/american-psychological-association-technology-mind-behavior-sarah-baldeo-id-quotient/"
-        source: "Retraction Watch"
-        date: 2026-09-14
-        summary: "A psychology journal has retracted a paper on how using generative AI can affect confidence in work tasks after its sole author refused to share data with the editors. The April paper, published in Technology, Mind, and..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "SCOTUS to Resolve Circuit Split on VPPA “Consumer” Definition in Salazar V. Paramount Global"
+        url: "https://epic.org/scotus-to-resolve-circuit-split-on-vppa-consumer-definition-in-salazar-v-paramount-global/"
+        source: "EPIC"
+        date: 2026-09-21
+        summary: "Introduction: Origins of the VPPA and its role in the Salazar v. Paramount Global case In the upcoming October 2026 term, the Supreme Court will resolve the circuit split on who qualifies as a consumer under the Video..."
+      - title: "PRESS RELEASE: EPIC Says Trump Administration Can’t Use Its Own Delays to Evade Review of Voter Citizenship Lists"
+        url: "https://epic.org/press-release-epic-says-trump-administration-cant-use-its-own-delays-to-evade-review-of-voter-citizenship-lists/"
+        source: "EPIC"
+        date: 2026-09-18
+        summary: "The Electronic Privacy Information Center (EPIC) today urged a federal court to swiftly rule on the Trump administration’s plan to create and distribute “State Citizenship Lists.”"
       - title: "Cronkite News: Supreme Court ruling clears way for mail ballots, used by 75% of Arizona voters, to proceed as usual"
         url: "https://epic.org/cronkite-news-supreme-court-ruling-clears-way-for-mail-ballots-used-by-75-of-arizona-voters-to-proceed-as-usual/"
         source: "EPIC"
@@ -230,16 +240,6 @@ sections:
         source: "EPIC"
         date: 2026-09-15
         summary: "“The League of Women Voters, along with privacy watchdog the Electronic Privacy Information Center, urged the high court in a response brief to deny the administration’s emergency request to stay a Washington, D.C..."
-      - title: "Washington Post: Health Brief: Three key issues for the No. 2 at HHS"
-        url: "https://epic.org/washington-post-health-brief-three-key-issues-for-the-no-2-at-hhs/"
-        source: "EPIC"
-        date: 2026-09-15
-        summary: "“‘It is an absolutely worthwhile goal to have people more fully participate in their health services, and to have technology that serves us and improves our health,’ said Sara Geoghegan, senior counsel at the nonprofit..."
-      - title: "Democracy Docket: DOJ partially confirms DHS whistleblower allegations in new notice to federal court"
-        url: "https://epic.org/democracy-docket-doj-partially-confirms-dhs-whistleblower-allegations-in-new-notice-to-federal-court/"
-        source: "EPIC"
-        date: 2026-09-15
-        summary: "“LWV and the other plaintiff in the case, the Electronic Privacy Information Center (EPIC), challenged DHS’s attempt to expand SAVE as a violation of the U.S. Constitution and federal privacy laws. They warned that SAVE..."
       - title: "The High Crime of “LMAO”: How Cops Are Treating Flock's Mass Surveillance As a Joke"
         url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
         source: "EFF Deeplinks"
