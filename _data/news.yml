@@ -2,17 +2,47 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-23
+generated: 2026-09-24
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "US justice department defends Trump banning journalists from White House ahead of court hearing – live"
-        url: "https://www.theguardian.com/us-news/live/2026/sep/23/donald-trump-xi-jinping-ai-china-us-politics-latest-news-updates"
+      - title: "Meta puts its AI assistant on a keychain"
+        url: "https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/"
+        source: "Ars Technica"
+        date: 2026-09-24
+        summary: "Meta says the keychain-sized Muse Charm will ship in December."
+      - title: "Global bond sell-off piles new pressure on UK borrowing costs before budget"
+        url: "https://www.theguardian.com/business/2026/sep/24/global-bond-sell-off-pressures-uk-borrowing-costs-budget"
+        source: "The Guardian"
+        date: 2026-09-24
+        summary: "Rising cost of 10-year gilt to near 19-year high hikes upfront cost of government investment and limits chancellor’s room for manoeuvre Business live – latest updates International bodies warn of rising debt and..."
+      - title: "‘This gap opens up of doubt and scepticism about everything’: Jess and Morgs confront the politics of deepfakes"
+        url: "https://www.theguardian.com/stage/2026/sep/24/jess-and-morgs-deepfake-dance"
+        source: "The Guardian"
+        date: 2026-09-24
+        summary: "In the choreographers’ new work, virtuosic movement and some green-screen magic unfurl the theatricality of high-stakes television interviews It appears the interviewer has got him on the ropes. “For the record, I did..."
+      - title: "Meta debuts no-camera smart glasses and virtual reality spectacles"
+        url: "https://www.theguardian.com/technology/2026/sep/23/meta-smart-vr-glasses"
+        source: "The Guardian"
+        date: 2026-09-24
+        summary: "The new wearables come at a time of uncertainty for smart glasses, which are facing backlash over privacy concerns Meta announced an advanced new set of virtual reality glasses and a collection of new smart glasses..."
+      - title: "OpenAI’s Altman and Anthropic’s Amodei address UN security council"
+        url: "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei"
         source: "The Guardian"
         date: 2026-09-23
-        summary: "Trump’s DoJ says White House access is ‘a privilege, not a right’; CNN, Politico and MS Now to present case in court after president banned outlets from White House grounds Sign up for US Breaking News emails Donald..."
+        summary: "Heads of two of the world’s largest artificial intelligence companies give separate briefings on AI safety Sam Altman of OpenAI and Dario Amodei of Anthropic, heads of two of the world’s largest artificial intelligence..."
+      - title: "Trump’s China rivalry and “AI race” delusion may endanger US, experts say"
+        url: "https://arstechnica.com/tech-policy/2026/09/china-silent-as-us-touts-plan-for-ai-safety-alerts-that-omits-tech-experts/"
+        source: "Ars Technica"
+        date: 2026-09-23
+        summary: "Trump focus on winning “AI race” may deter China from sharing safety intel."
+      - title: "How the ‘poisonous tide’ of disinformation spreads division and despair"
+        url: "https://www.theguardian.com/world/2026/sep/23/how-the-poisonous-tide-of-disinformation-stokes-division-and-sows-despair"
+        source: "The Guardian"
+        date: 2026-09-23
+        summary: "Whether produced by Russia, China or far-right influencers, deepfakes and disinfo are pushing multiple false narratives Russian disinformation campaigns are varied in their falsehoods and strategies. The narratives..."
       - title: "New UK agency to fight ‘information warfare’ from likes of Russia, Burnham tells UN"
         url: "https://www.theguardian.com/technology/2026/sep/23/andy-burnham-national-centre-russian-disinformation-deepfakes"
         source: "The Guardian"
@@ -33,41 +63,11 @@ sections:
         source: "MIT Technology Review"
         date: 2026-09-22
         summary: "The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border crossers and save lives. But a..."
-      - title: "The world freaked out about AI doomsday. Now what?"
-        url: "https://www.theguardian.com/technology/2026/sep/22/ai-doomsday-trump-xi"
-        source: "The Guardian"
-        date: 2026-09-22
-        summary: "Donald Trump and Xi Jinping will meet each other next week, but it’s unlikely they’ll agree to AI regulation Hello, and welcome to TechScape. I’m your host, Blake Montgomery, US tech editor at the Guardian, writing to..."
-      - title: "AI is generating a new wave of US populism. It could be a tipping point | Robert Reich"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/22/ai-economic-populism-tipping-point"
-        source: "The Guardian"
-        date: 2026-09-22
-        summary: "It’s becoming obvious to many Americans that corporations have been raking it in while workers take it on the chin Last week, the unlikely duo of Bernie Sanders and Steve Bannon spoke before a Washington group demanding..."
-      - title: "British Columbia sues OpenAI and Sam Altman over Tumbler Ridge mass school shooting"
-        url: "https://www.theguardian.com/technology/2026/sep/22/british-columbia-sues-openai-sam-altman-tumbler-ridge-school-shooting"
-        source: "The Guardian"
-        date: 2026-09-22
-        summary: "Canadian province alleges deadly attack could have been prevented if company had warned police of shooter’s ChatGPT use British Columbia has sued OpenAI , saying a mass shooting at a school in the Canadian province..."
-      - title: "What an AI deal could mean for Australian culture – podcast"
-        url: "https://www.theguardian.com/australia-news/audio/2026/sep/22/what-an-ai-deal-could-mean-for-australian-culture-podcast"
-        source: "The Guardian"
-        date: 2026-09-21
-        summary: "The Albanese government is considering giving AI companies unrestricted access to Australian content. The sweeping copyright reforms could give AI companies – such as Anthropic and Open AI – permission to train on the..."
       - title: "The US spent billions on border surveillance. Why can’t it catch people before they die?"
         url: "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
         source: "MIT Technology Review"
         date: 2026-09-21
         summary: "When José Morales Bernal crossed the border into the United States on April 8, 2024, the day before his 32nd birthday, it should have triggered a chain of technological alerts and human responses. As he walked through..."
-      - title: "She died at the San Diego border. A surveillance camera was in plain sight"
-        url: "https://www.technologyreview.com/2026/09/21/1144170/border-towers-surveillance-feature/"
-        source: "MIT Technology Review"
-        date: 2026-09-21
-        summary: "She had only walked for a couple of hours, and already she was lost. It was early afternoon on Sept. 14, 2025, when 30-year-old Graciela Gómez Hernández crossed the border from the eastern edge of Tijuana into Southern..."
-      - title: "How we made the first comprehensive map of deaths along the US border’s “virtual wall”"
-        url: "https://www.technologyreview.com/2026/09/21/1144161/border-towers-surveillance-methodology/"
-        source: "MIT Technology Review"
-        date: 2026-09-21
-        summary: "Our 15-month investigation into death and surveillance along the US-Mexico border began with a simple question: Why did so many people die near government surveillance towers meant to help track and apprehend them? This..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Tennessee researcher heads to court amid claims of theft, forgery and revenge"
+        url: "https://retractionwatch.com/2026/09/24/tennessee-researcher-heads-to-court-amid-claims-of-theft-forgery-and-revenge/"
+        source: "Retraction Watch"
+        date: 2026-09-24
+        summary: "In May 2025, Tennessee authorities were preparing to arrest a university math professor for allegedly soliciting university donations from his students and pocketing the money. Investigative records paint the picture of..."
+      - title: "Wiley investigating book chapter on biodiversity for fake references"
+        url: "https://retractionwatch.com/2026/09/23/wiley-investigating-book-chapter-on-biodiversity-for-fake-references/"
+        source: "Retraction Watch"
+        date: 2026-09-23
+        summary: "While reading a chapter from a 2024 book on restoring biodiversity in post-industrial land earlier this month, an ecologist came across a reference to a study on rewilding she wanted to look up. But the ecologist, who..."
       - title: "Elsevier journal retracts 100+ papers for authorship issues, editor conflicts of interest"
         url: "https://retractionwatch.com/2026/09/22/elsevier-journal-retracts-100-papers-for-authorship-issues-editor-conflicts-of-interest/"
         source: "Retraction Watch"
@@ -176,30 +186,10 @@ sections:
         source: "ProPublica"
         date: 2026-09-15
         summary: "The post Top Oversight Dem Opens Investigation of Donald Trump Jr.’s Russian Oligarch-Funded Wedding appeared first on ProPublica ."
-      - title: "Lawsuit over retraction of abortion pill papers heads toward arbitration decision"
-        url: "https://retractionwatch.com/2026/09/15/lawsuit-over-retraction-of-abortion-pill-papers-heads-toward-arbitration-decision/"
-        source: "Retraction Watch"
-        date: 2026-09-15
-        summary: "A legal challenge by authors over three retracted articles about mifepristone is set for an arbitration conference this month as nationwide debate over the abortion pill heats up at the appellate level. Ten researchers..."
-      - title: "Diabetes association turmoil roils journal as group tries to thwart boycott"
-        url: "https://retractionwatch.com/2026/09/14/american-diabetes-association-boycott-diabetes-care-protest/"
-        source: "Retraction Watch"
-        date: 2026-09-14
-        summary: "Tensions between the American Diabetes Association and several editors of its flagship journal — who have boycotted the group over its handling of a protest at the association’s June conference — have again boiled over..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
-      - title: "SCOTUS to Resolve Circuit Split on VPPA “Consumer” Definition in Salazar V. Paramount Global"
-        url: "https://epic.org/scotus-to-resolve-circuit-split-on-vppa-consumer-definition-in-salazar-v-paramount-global/"
-        source: "EPIC"
-        date: 2026-09-21
-        summary: "Introduction: Origins of the VPPA and its role in the Salazar v. Paramount Global case In the upcoming October 2026 term, the Supreme Court will resolve the circuit split on who qualifies as a consumer under the Video..."
-      - title: "PRESS RELEASE: EPIC Says Trump Administration Can’t Use Its Own Delays to Evade Review of Voter Citizenship Lists"
-        url: "https://epic.org/press-release-epic-says-trump-administration-cant-use-its-own-delays-to-evade-review-of-voter-citizenship-lists/"
-        source: "EPIC"
-        date: 2026-09-18
-        summary: "The Electronic Privacy Information Center (EPIC) today urged a federal court to swiftly rule on the Trump administration’s plan to create and distribute “State Citizenship Lists.”"
       - title: "Cronkite News: Supreme Court ruling clears way for mail ballots, used by 75% of Arizona voters, to proceed as usual"
         url: "https://epic.org/cronkite-news-supreme-court-ruling-clears-way-for-mail-ballots-used-by-75-of-arizona-voters-to-proceed-as-usual/"
         source: "EPIC"
@@ -240,6 +230,16 @@ sections:
         source: "EPIC"
         date: 2026-09-15
         summary: "“The League of Women Voters, along with privacy watchdog the Electronic Privacy Information Center, urged the high court in a response brief to deny the administration’s emergency request to stay a Washington, D.C..."
+      - title: "Washington Post: Health Brief: Three key issues for the No. 2 at HHS"
+        url: "https://epic.org/washington-post-health-brief-three-key-issues-for-the-no-2-at-hhs/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“‘It is an absolutely worthwhile goal to have people more fully participate in their health services, and to have technology that serves us and improves our health,’ said Sara Geoghegan, senior counsel at the nonprofit..."
+      - title: "Democracy Docket: DOJ partially confirms DHS whistleblower allegations in new notice to federal court"
+        url: "https://epic.org/democracy-docket-doj-partially-confirms-dhs-whistleblower-allegations-in-new-notice-to-federal-court/"
+        source: "EPIC"
+        date: 2026-09-15
+        summary: "“LWV and the other plaintiff in the case, the Electronic Privacy Information Center (EPIC), challenged DHS’s attempt to expand SAVE as a violation of the U.S. Constitution and federal privacy laws. They warned that SAVE..."
       - title: "The High Crime of “LMAO”: How Cops Are Treating Flock's Mass Surveillance As a Joke"
         url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
         source: "EFF Deeplinks"
