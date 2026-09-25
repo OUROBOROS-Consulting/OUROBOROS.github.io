@@ -2,52 +2,62 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-24
+generated: 2026-09-25
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "It’s not hypothetical: the dangers of AI are already here | Granate Kim and Mohamed Hussein"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/25/ai-israel-gaza-iran-police-surveillance"
+        source: "The Guardian"
+        date: 2026-09-25
+        summary: "Israel and the US have used AI to kill in Gaza and Iran, while law enforcement uses it in surveillance and arrests. The future is here In recent weeks, concerns about AI have forged unlikely alliances in the tech and..."
+      - title: "Rogue AI hacks government system for first time – The Latest"
+        url: "https://www.theguardian.com/news/audio/2026/sep/24/rogue-ai-hacks-government-system-for-first-time-the-latest"
+        source: "The Guardian"
+        date: 2026-09-25
+        summary: "A government database has been hacked for the first time by a rogue OpenAI agent, which infiltrated part of the Australian healthcare scheme in June. OpenAI became aware of the hack in August, but only informed the..."
+      - title: "The Pentagon wants $30 million to build an AI-powered lie detector"
+        url: "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+        source: "MIT Technology Review"
+        date: 2026-09-25
+        summary: "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will..."
+      - title: "Pocock calls for AI safety act after Medicare breach – as it happened"
+        url: "https://www.theguardian.com/australia-news/live/2026/sep/25/anthony-albanese-open-ai-hack-united-nations-angus-taylor-coalition-ntwnfb"
+        source: "The Guardian"
+        date: 2026-09-25
+        summary: "This blog is now closed Get our breaking news email , free app or daily news podcast AI hack of Medicare exposes Australia’s vulnerabilities Technology experts have warned revelations an artificial intelligence agent..."
+      - title: "‘We can’t ignore AI or prevent it,’ Anthony Albanese tells UN general assembly – video"
+        url: "https://www.theguardian.com/world/video/2026/sep/25/we-cant-ignore-ai-or-prevent-it-anthony-albanese-tells-un-general-assembly-video"
+        source: "The Guardian"
+        date: 2026-09-25
+        summary: "During his speech to the UN in New York City, the Australian prime minister addresses the AI hack of Medicare, saying the episode reflects the need for greater regulation of artificial intelligence. ‘We can’t ignore AI..."
+      - title: "Rogue AI hacks government system in world first – podcast"
+        url: "https://www.theguardian.com/technology/audio/2026/sep/25/rogue-ai-hacks-government-system-in-world-first-full-story-podcast"
+        source: "The Guardian"
+        date: 2026-09-25
+        summary: "A government database has been hacked for the first time by a rogue OpenAI agent, which infiltrated part of the Australian healthcare scheme in June. OpenAI became aware of the hack in August, but only informed the..."
+      - title: "Launch of UK’s ‘largest AI supercomputer’ delayed by power supply problems"
+        url: "https://www.theguardian.com/technology/2026/sep/24/construction-largest-supercomputer-delayed"
+        source: "The Guardian"
+        date: 2026-09-24
+        summary: "Datacentre hailed by government was supposed to start operating next year but may be held back into mid-2030s A huge datacentre project hailed by the UK government will miss its launch date next year and could be..."
+      - title: "OpenAI agent “didn’t accept no for an answer” in Australian government breach"
+        url: "https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/"
+        source: "Ars Technica"
+        date: 2026-09-24
+        summary: "\"There will obviously be legal consequences,\" prime minister promises."
       - title: "Meta puts its AI assistant on a keychain"
         url: "https://arstechnica.com/ai/2026/09/meta-puts-its-ai-assistant-on-a-keychain/"
         source: "Ars Technica"
         date: 2026-09-24
         summary: "Meta says the keychain-sized Muse Charm will ship in December."
-      - title: "Global bond sell-off piles new pressure on UK borrowing costs before budget"
-        url: "https://www.theguardian.com/business/2026/sep/24/global-bond-sell-off-pressures-uk-borrowing-costs-budget"
-        source: "The Guardian"
-        date: 2026-09-24
-        summary: "Rising cost of 10-year gilt to near 19-year high hikes upfront cost of government investment and limits chancellor’s room for manoeuvre Business live – latest updates International bodies warn of rising debt and..."
-      - title: "‘This gap opens up of doubt and scepticism about everything’: Jess and Morgs confront the politics of deepfakes"
-        url: "https://www.theguardian.com/stage/2026/sep/24/jess-and-morgs-deepfake-dance"
-        source: "The Guardian"
-        date: 2026-09-24
-        summary: "In the choreographers’ new work, virtuosic movement and some green-screen magic unfurl the theatricality of high-stakes television interviews It appears the interviewer has got him on the ropes. “For the record, I did..."
-      - title: "Meta debuts no-camera smart glasses and virtual reality spectacles"
-        url: "https://www.theguardian.com/technology/2026/sep/23/meta-smart-vr-glasses"
-        source: "The Guardian"
-        date: 2026-09-24
-        summary: "The new wearables come at a time of uncertainty for smart glasses, which are facing backlash over privacy concerns Meta announced an advanced new set of virtual reality glasses and a collection of new smart glasses..."
-      - title: "OpenAI’s Altman and Anthropic’s Amodei address UN security council"
-        url: "https://www.theguardian.com/world/2026/sep/23/unga-sam-altman-dario-amodei"
-        source: "The Guardian"
-        date: 2026-09-23
-        summary: "Heads of two of the world’s largest artificial intelligence companies give separate briefings on AI safety Sam Altman of OpenAI and Dario Amodei of Anthropic, heads of two of the world’s largest artificial intelligence..."
       - title: "Trump’s China rivalry and “AI race” delusion may endanger US, experts say"
         url: "https://arstechnica.com/tech-policy/2026/09/china-silent-as-us-touts-plan-for-ai-safety-alerts-that-omits-tech-experts/"
         source: "Ars Technica"
         date: 2026-09-23
         summary: "Trump focus on winning “AI race” may deter China from sharing safety intel."
-      - title: "How the ‘poisonous tide’ of disinformation spreads division and despair"
-        url: "https://www.theguardian.com/world/2026/sep/23/how-the-poisonous-tide-of-disinformation-stokes-division-and-sows-despair"
-        source: "The Guardian"
-        date: 2026-09-23
-        summary: "Whether produced by Russia, China or far-right influencers, deepfakes and disinfo are pushing multiple false narratives Russian disinformation campaigns are varied in their falsehoods and strategies. The narratives..."
-      - title: "New UK agency to fight ‘information warfare’ from likes of Russia, Burnham tells UN"
-        url: "https://www.theguardian.com/technology/2026/sep/23/andy-burnham-national-centre-russian-disinformation-deepfakes"
-        source: "The Guardian"
-        date: 2026-09-23
-        summary: "PM aims to ‘stem poisonous tide’ of disinformation and deepfakes with National Centre for Information Defence Security chiefs will set up a new national centre to tackle disinformation and deepfakes from hostile states..."
       - title: "Lawsuit demands OpenAI pay for new school after ChatGPT used in shooting"
         url: "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-pay-for-new-school-after-chatgpt-used-in-shooting/"
         source: "Ars Technica"
@@ -58,16 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-22
         summary: "Toyota's push comes as automakers race to develop and deploy humanoid robots."
-      - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
-        url: "https://www.technologyreview.com/2026/09/22/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
-        source: "MIT Technology Review"
-        date: 2026-09-22
-        summary: "The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border crossers and save lives. But a..."
-      - title: "The US spent billions on border surveillance. Why can’t it catch people before they die?"
-        url: "https://www.technologyreview.com/2026/09/21/1144166/border-towers-surveillance-investigation/"
-        source: "MIT Technology Review"
-        date: 2026-09-21
-        summary: "When José Morales Bernal crossed the border into the United States on April 8, 2024, the day before his 32nd birthday, it should have triggered a chain of technological alerts and human responses. As he walked through..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -190,21 +190,36 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
-      - title: "Cronkite News: Supreme Court ruling clears way for mail ballots, used by 75% of Arizona voters, to proceed as usual"
-        url: "https://epic.org/cronkite-news-supreme-court-ruling-clears-way-for-mail-ballots-used-by-75-of-arizona-voters-to-proceed-as-usual/"
+      - title: "Congressional Hearing Adds Fuel to Flock Fire"
+        url: "https://epic.org/congressional-hearing-adds-fuel-to-flock-fire/"
         source: "EPIC"
-        date: 2026-09-16
-        summary: "“On Tuesday, the League of Women Voters and the Electronic Privacy Information Center argued that the expanded system would give DHS ‘unlimited power to vacuum up millions of Americans’ sensitive information’ from the..."
-      - title: "CalMatters: Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get"
-        url: "https://epic.org/calmatters-whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get/"
+        date: 2026-09-24
+        summary: "On Wednesday, the Senate Judiciary Committee’s Subcommittee on Crime and Counterterrorism held a hearing on Flock’s Nationwide AI Surveillance Network. Flock Safety’s automated license plate readers (ALPR) take still..."
+      - title: "MediaPost:Paramount Urges SCOTUS To Reject Video Privacy Claim"
+        url: "https://epic.org/mediapostparamount-urges-scotus-to-reject-video-privacy-claim/"
         source: "EPIC"
-        date: 2026-09-16
-        summary: "“To build their databases, data brokers broadly rely on three types of data, according to Justin Sherman, a scholar-in-residence at the Electronic Privacy Information Center who formerly ran a research program on data..."
-      - title: "Consumer Reports: Companies Make It Hard to Access Your Personal Data Under State Privacy Laws, CR Finds"
-        url: "https://epic.org/consumer-reports-companies-make-it-hard-to-access-your-personal-data-under-state-privacy-laws-cr-finds/"
+        date: 2026-09-23
+        summary: "“The dispute has drawn attention from outside groups, including the privacy watchdog Electronic Privacy Information Center, which is siding with Salazar.” “The privacy advocates argued in a friend-of-the-court brief..."
+      - title: "Democracy Docket: DOJ delay tactics aim to advance Trump’s voter suppression schemes"
+        url: "https://epic.org/democracy-docket-doj-delay-tactics-aim-to-advance-trumps-voter-suppression-schemes/"
         source: "EPIC"
-        date: 2026-09-16
-        summary: "“Small fines and warning letters, however, may have limited effect on some of the largest companies in the data economy, says Caroline Kraczon, counsel at the nonprofit Electronic Privacy Information Center and who..."
+        date: 2026-09-23
+        summary: "“The hearing, set for Friday, concerns the Electronic Privacy Information Center’s (EPIC) request for U.S. District Judge Paula Xinis to declare DHS’s actions unlawful.” Read more here."
+      - title: "The New Republic: The Supreme Court Digital-Privacy Case That Could Go Either Way"
+        url: "https://epic.org/the-new-republic-the-supreme-court-digital-privacy-case-that-could-go-either-way/"
+        source: "EPIC"
+        date: 2026-09-23
+        summary: "“The Electronic Privacy Information Center, on the other hand, told the justices that Paramount (and other online-video companies) is ‘not under any obligation to use these [targeted] systems, and it can adopt more..."
+      - title: "WBUR: Is your driver’s license on the dark web?"
+        url: "https://epic.org/wbur-is-your-drivers-license-on-the-dark-web/"
+        source: "EPIC"
+        date: 2026-09-22
+        summary: "“BUTLER: I agree. I think that the breach of the images and like forensic-level detail of identity documents is a fundamentally different thing than most of the breaches that most of us hear about every day.” “BUTLER: I..."
+      - title: "Syracuse: New York is poised to ban price changes based on income, age and even race. Would it work?"
+        url: "https://epic.org/syracuse-new-york-is-poised-to-ban-price-changes-based-on-income-age-and-even-race-would-it-work/"
+        source: "EPIC"
+        date: 2026-09-22
+        summary: "“Shoppers may not understand how much information they provide by joining, said Kara Williams, counsel at the Electronic Privacy Information Center.” Read more here."
       - title: "Data Broker Radaris Loses Domains in Privacy Fight"
         url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
         source: "Krebs on Security"
@@ -225,21 +240,6 @@ sections:
         source: "The Markup"
         date: 2026-09-16
         summary: "Data brokers collect thousands of details about your finances, health and habits. See what’s in your profile, who buys it and how companies use it."
-      - title: "Law360: Justices Told DHS Voter Citizenship Database ‘Unprecedented’"
-        url: "https://epic.org/law360-justices-told-dhs-voter-citizenship-database-unprecedented/"
-        source: "EPIC"
-        date: 2026-09-15
-        summary: "“The League of Women Voters, along with privacy watchdog the Electronic Privacy Information Center, urged the high court in a response brief to deny the administration’s emergency request to stay a Washington, D.C..."
-      - title: "Washington Post: Health Brief: Three key issues for the No. 2 at HHS"
-        url: "https://epic.org/washington-post-health-brief-three-key-issues-for-the-no-2-at-hhs/"
-        source: "EPIC"
-        date: 2026-09-15
-        summary: "“‘It is an absolutely worthwhile goal to have people more fully participate in their health services, and to have technology that serves us and improves our health,’ said Sara Geoghegan, senior counsel at the nonprofit..."
-      - title: "Democracy Docket: DOJ partially confirms DHS whistleblower allegations in new notice to federal court"
-        url: "https://epic.org/democracy-docket-doj-partially-confirms-dhs-whistleblower-allegations-in-new-notice-to-federal-court/"
-        source: "EPIC"
-        date: 2026-09-15
-        summary: "“LWV and the other plaintiff in the case, the Electronic Privacy Information Center (EPIC), challenged DHS’s attempt to expand SAVE as a violation of the U.S. Constitution and federal privacy laws. They warned that SAVE..."
       - title: "The High Crime of “LMAO”: How Cops Are Treating Flock's Mass Surveillance As a Joke"
         url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
         source: "EFF Deeplinks"
