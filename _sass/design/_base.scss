@@ -27,6 +27,16 @@
   // so it does not participate in the light/dark flip. Outside the 1..5 ramp on
   // purpose — it is a named surface, not an elevation step.
 
+  /* ── Typography tokens — User requested refactor ──────────────────────────── */
+  --fs-button: 8px;
+  --fs-body: 16px;
+  --fs-h1: 56px;
+  --fs-h2: 48px;
+  --fs-h3: 40px;
+  --fs-h4: 32px;
+  --fs-h5: 24px;
+  --fs-h6: 20px;
+
   /* ── Type scale ─────────────────────────────────────────────────────────────
      Ascending, 1..11. Steps 1..6 are the text range and 7..11 the display
      range; the old names map straight across:
@@ -306,6 +316,7 @@ body {
   color: var(--ink-3);
   font-family: $font-serif;
   font-weight: 400;
+  font-size: var(--fs-body);
   line-height: 1.75;
   overflow-x: hidden;
   // Reflow safety (WCAG 1.4.10): inherited, so long words / URLs / display

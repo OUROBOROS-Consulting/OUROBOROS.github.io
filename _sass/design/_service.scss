@@ -75,10 +75,7 @@
 }
 
 .page-hero-title {
-  font-family: var(--font-body);
-  font-size: var(--fs-10);
-  font-weight: 700;
-  line-height: 1.05;
+  @include type-level-5;
   margin-bottom: var(--space-6);
 }
 
@@ -754,8 +751,8 @@
     // none, so overflow-wrap is the break that actually fires and it splits
     // mid-syllable. Sizing the title so the longest word fits the measure
     // outright means no break has to fire at all.
-    font-size: clamp(1.35rem, 7vw, 2.2rem);
-    line-height: 1.12;
+    font-size: clamp(1.5rem, 7vw, 2rem);
+    line-height: var(--lh-display);
   }
 
   .hex-portrait,

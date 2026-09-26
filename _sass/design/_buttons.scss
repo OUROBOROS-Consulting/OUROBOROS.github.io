@@ -7,7 +7,7 @@
   color: var(--mark);
   text-decoration: none;
   font-family: var(--font-sans);
-  font-size: var(--fs-2);
+  font-size: var(--fs-button);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   cursor: pointer;
@@ -59,7 +59,7 @@
   border: 1px solid var(--line-3);
   color: var(--ink-1);
   font-family: var(--font-sans);
-  font-size: var(--fs-1);
+  font-size: var(--fs-button);
   padding: var(--space-1) var(--space-4);
   cursor: pointer;
   transition: border-color 0.3s, color 0.3s;

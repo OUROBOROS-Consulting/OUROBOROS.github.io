@@ -46,7 +46,6 @@ The folder names never appear in a URL — every one of these files carries an e
 | `/design-system/` | `pages/design-system.html` |
 | `/intake/` | `legal/intake.html` |
 | `/projects/` | `pages/projects.html` |
-| `/quiz/` | `quiz.html` |
 | `/resources/` | `pages/resources.html` |
 | `/resources/psas/` | `pages/psas.html` |
 | `/resources/tutorials/` | `pages/tutorials.html` |
