@@ -65,7 +65,7 @@
     color: var(--mark);
     font-weight: 700;
     font-size: var(--fs-2);
-    font-family: $font-sans;
+    font-family: var(--font-sans);
     letter-spacing: 0.08em;
     text-transform: uppercase;
     padding: 0.15rem var(--space-3);
@@ -107,7 +107,7 @@
 }
 
 .card-title {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-7);
   font-weight: 400;
   line-height: 1.3;
@@ -155,7 +155,7 @@
   cite {
     display: block;
     margin-top: var(--space-5);
-    font-family: $font-sans;
+    font-family: var(--font-sans);
     font-size: var(--fs-1);
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -270,7 +270,7 @@
   }
 
   .rc-title {
-    font-family: $font-serif;
+    font-family: var(--font-body);
     font-size: var(--fs-3);
     font-weight: 400;
     color: var(--ink-3);
@@ -421,7 +421,7 @@
 
 .bib-title {
   display: block;
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-3);
   font-weight: 400;
   color: var(--ink-3);

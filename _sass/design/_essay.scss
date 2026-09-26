@@ -13,7 +13,7 @@
 }
 
 .post-title {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-9);
   font-weight: 600;
   line-height: 1.1;
@@ -73,7 +73,7 @@
     line-height: 1.95;
 
     &::first-letter {
-      font-family: $font-serif;
+      font-family: var(--font-body);
       font-size: 3.8rem;
       font-weight: 700;
       float: left;
@@ -84,7 +84,7 @@
   }
 
   h2 {
-    font-family: $font-serif;
+    font-family: var(--font-body);
     font-size: var(--fs-8);
     font-weight: 400;
     color: var(--ink-3);
@@ -150,7 +150,7 @@
     background: var(--surface-4);
 
     p {
-      font-family: $font-serif;
+      font-family: var(--font-body);
       font-size: var(--fs-4);
       font-style: italic;
       color: var(--ink-3);
@@ -166,7 +166,7 @@
     cite {
       display: block;
       margin-top: var(--space-4);
-      font-family: $font-sans;
+      font-family: var(--font-sans);
       font-size: var(--fs-1);
       letter-spacing: 0.15em;
       text-transform: uppercase;
@@ -208,7 +208,7 @@
   }
 
   code {
-    font-family: $font-mono;
+    font-family: var(--font-mono);
     font-size: var(--fs-1);
     background: var(--surface-4);
     border: 1px solid var(--line-3);
@@ -303,7 +303,7 @@ sup {
     > summary h3 {
       flex: 1;
       margin: 0;
-      font-family: $font-serif;
+      font-family: var(--font-body);
       font-size: var(--fs-3);
       font-weight: 400;
       letter-spacing: 0;

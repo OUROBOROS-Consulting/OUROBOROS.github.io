@@ -236,7 +236,7 @@
     height: 100%;
     padding-right: calc(var(--spine-crest) + var(--space-4));
     padding-left: var(--space-4);
-    font-family: $font-sans;
+    font-family: var(--font-sans);
     font-size: var(--fs-1);
     line-height: 1.35;
     text-align: right;

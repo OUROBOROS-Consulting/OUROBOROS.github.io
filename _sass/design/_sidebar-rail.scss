@@ -309,7 +309,7 @@
   @include spine-plaque(right);
 
   max-width: var(--rail-label-w);
-  font-family: $font-garamond;
+  font-family: var(--font-body);
   font-size: var(--fs-3);
   font-weight: 500;
   letter-spacing: 0.12em;

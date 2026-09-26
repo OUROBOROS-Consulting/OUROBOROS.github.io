@@ -82,7 +82,7 @@
 }
 
 .team-name {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-6);
   font-weight: 500;
   line-height: 1.15;
@@ -101,7 +101,7 @@
 }
 
 .team-cred {
-  font-family: $font-sans;
+  font-family: var(--font-sans);
   font-size: var(--fs-1);
   letter-spacing: 0.08em;
   text-transform: uppercase;

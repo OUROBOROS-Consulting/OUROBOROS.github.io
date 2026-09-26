@@ -60,7 +60,7 @@
   // Section standfirst. Serif italic keeps it clearly editorial voice, so it
   // does not get mistaken for one of the headlines below it.
   .feed-blurb {
-    font-family: $font-serif;
+    font-family: var(--font-body);
     font-size: var(--fs-2);
     font-style: italic;
     line-height: 1.8;
@@ -100,7 +100,7 @@
     position: relative;
     margin: 0;
     padding-top: 0.28em;
-    font-family: $font-mono;
+    font-family: var(--font-mono);
     font-size: var(--fs-1);
     line-height: 1.6;
     letter-spacing: 0.04em;
@@ -135,7 +135,7 @@
   // forty-five links stacked in a column.
   .feed-title {
     display: block;
-    font-family: $font-serif;
+    font-family: var(--font-body);
     font-size: var(--fs-4);
     line-height: 1.4;
     color: var(--ink-3);
@@ -184,7 +184,7 @@
     li {
       padding: var(--space-2) var(--space-4);
       border: 1px solid var(--line-3);
-      font-family: $font-sans;
+      font-family: var(--font-sans);
       font-size: var(--fs-1);
       line-height: 1.5;
       color: var(--ink-2);

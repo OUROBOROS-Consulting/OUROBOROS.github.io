@@ -1,14 +1,14 @@
-- title: Survivors of coercive control
-  icon: /assets/images/audience/survivor.svg
+- title: Small businesses & startups
+  icon: /assets/images/audience/startup.svg
   description: >
-    You need to document what happened in a way that institutions will actually take seriously — and protect
-    yourself from digital surveillance while you do it.
+    You are running lean and the tooling is not keeping up. You need someone who picks the right stack, builds
+    it, hands you the keys, and tells you when AI is the wrong answer.
 
-- title: Whistleblowers & federal employees
-  icon: /assets/images/audience/whistleblower.svg
+- title: Solo practitioners & small firms
+  icon: /assets/images/audience/practitioner.svg
   description: >
-    You're pushing back against agency misconduct and need technical, statistical, or records-management support
-    from someone who has worked inside the system.
+    You are an attorney, therapist, tutor, or consultant working alone. You need a site, a records system, and
+    automation that hold up under scrutiny without hiring anyone.
 
 - title: Advocates & nonprofits
   icon: /assets/images/audience/advocate.svg
@@ -22,14 +22,14 @@
     You study institutional betrayal, personality pathology, or public-health harm and need a collaborator fluent
     in both statistics and the human stakes.
 
-- title: Small businesses & startups
-  icon: /assets/images/audience/startup.svg
+- title: Whistleblowers & federal employees
+  icon: /assets/images/audience/whistleblower.svg
   description: >
-    You are running lean and the tooling is not keeping up. You need someone who picks the right stack, builds
-    it, hands you the keys, and tells you when AI is the wrong answer.
+    You're pushing back against agency misconduct and need technical, statistical, or records-management support
+    from someone who has worked inside the system.
 
-- title: Solo practitioners & small firms
-  icon: /assets/images/audience/practitioner.svg
+- title: Survivors of coercive control
+  icon: /assets/images/audience/survivor.svg
   description: >
-    You are an attorney, therapist, tutor, or consultant working alone. You need a site, a records system, and
-    automation that hold up under scrutiny without hiring anyone.
+    You need to document what happened in a way that institutions will actually take seriously — and protect
+    yourself from digital surveillance while you do it.

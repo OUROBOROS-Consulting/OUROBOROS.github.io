@@ -2,7 +2,7 @@
 layout: home
 show_banner: true
 title: null
-description: "Twin Cities tech consulting for survivors of institutional betrayal, nonprofits, small businesses, and startups. AI, automation, research, and advocacy."
+description: "Twin Cities tech consulting for startups, solopreneurs, nonprofits, small businesses, and survivors of institutional betrayal. AI, automation, research, and advocacy."
 
 # Hero
 name_line1: ouroborOS

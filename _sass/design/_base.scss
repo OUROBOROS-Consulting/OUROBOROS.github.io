@@ -683,7 +683,8 @@ body::after {
   }
 
   &:hover {
-    color: var(--mark);
+    // Fixed: Use the high-contrast token to provide meaningful visual feedback
+    color: var(--mark-strong);
   }
 }
 
@@ -740,9 +741,13 @@ body::after {
   a {
     color: var(--mark);
     text-decoration: none;
+    // Added transition for a smooth, premium feel consistent with the site's motion language
+    transition: color 0.3s;
 
     &:hover {
-      opacity: 0.7;
+      // Fixed: Replaced opacity shift with the high-contrast token to improve accessibility 
+      // and maintain consistency across the design system.
+      color: var(--mark-strong);
     }
   }
 }

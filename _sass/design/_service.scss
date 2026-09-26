@@ -75,7 +75,7 @@
 }
 
 .page-hero-title {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-10);
   font-weight: 700;
   line-height: 1.05;
@@ -98,7 +98,7 @@
 
 .lp-tag {
   display: inline-block;
-  font-family: $font-sans;
+  font-family: var(--font-sans);
   font-size: var(--fs-1);
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -471,7 +471,7 @@
 }
 
 .svc-pricing-rate {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-4);
   color: var(--mark);
 }
@@ -495,7 +495,7 @@
     position: absolute;
     top: 0.5rem;
     left: 0;
-    font-family: $font-serif;
+    font-family: var(--font-body);
     font-size: 9rem;
     line-height: 1;
     color: var(--teal);
@@ -506,7 +506,7 @@
 
   blockquote {
     position: relative; // sits above the watermark
-    font-family: $font-serif;
+    font-family: var(--font-body);
     font-size: var(--fs-7);
     font-style: italic;
     line-height: 1.9;
@@ -585,7 +585,7 @@
     p {
       position: static;
       top: auto;
-      font-family: $font-serif;
+      font-family: var(--font-body);
       font-size: var(--fs-8);
       font-weight: 400;
       line-height: 1.2;
@@ -860,7 +860,7 @@
 }
 
 .playlist-title {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-4);
   font-weight: 400;
   color: var(--ink-3);

@@ -83,7 +83,7 @@
 // display. The tablet band below stacks the row, so this only has to fit the
 // side-by-side case. Do not put --fs-11 back without re-checking that sum.
 .hero-name {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   // 1.5x the original clamp(2.5rem, 8cqi, 8rem), per direct user direction
   // 2026-08-17. It was tried at 2x first and overflowed the hero VERTICALLY —
   // #hero is min-height: 100vh with rows auto/1fr/auto, so an oversized identity
@@ -171,7 +171,7 @@
 }
 
 .stat-value {
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-9);
   font-weight: 400;
   color: var(--mark);
@@ -305,7 +305,7 @@
   }
 
   &__name {
-    font-family: $font-serif;
+    font-family: var(--font-body);
     font-size: var(--fs-9);
     font-weight: 400;
     color: var(--ink-3);
@@ -317,7 +317,7 @@
   }
 
   &__desc {
-    font-family: $font-sans;
+    font-family: var(--font-sans);
     font-size: var(--fs-2);
     line-height: 1.8;
     color: var(--ink-2);
@@ -461,7 +461,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-5);
-  font-family: $font-serif;
+  font-family: var(--font-body);
   font-size: var(--fs-8);
   font-weight: 400;
   line-height: 1;
