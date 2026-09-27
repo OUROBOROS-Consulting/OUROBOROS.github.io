@@ -2,32 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-26
+generated: 2026-09-27
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Bill Gates says unchecked AI could ‘cause a billion deaths’ in call for regulation"
+        url: "https://www.theguardian.com/us-news/2026/sep/27/bill-gates-artificial-intelligence-kristen-welker"
+        source: "The Guardian"
+        date: 2026-09-27
+        summary: "Microsoft co-founder and philanthropist speaks with NBC’s Kristen Welker in interview airing on Sunday Bill Gates has called on the US’s federal legislators and law enforcers to regulate the development of artificial..."
+      - title: "OpenAI halts training of latest models as reports mount of AI agents going rogue"
+        url: "https://www.theguardian.com/technology/2026/sep/27/openai-halts-training-of-latest-models-as-reports-mount-of-ai-agents-going-rogue"
+        source: "The Guardian"
+        date: 2026-09-27
+        summary: "Decision follows disclosures that OpenAI agents searching government websites had acted in unexpected ways OpenAI said it has paused training of its latest artificial intelligence models as reports of AI agents going..."
+      - title: "Australian backlash to datacentres is faux import from US, officials say: ‘We are not the United States’"
+        url: "https://www.theguardian.com/australia-news/2026/sep/26/australia-datacentre-backlash"
+        source: "The Guardian"
+        date: 2026-09-26
+        summary: "Pro-datacentre officials argue scale of Australia’s buildout is smaller, more regulated and less damaging than in US Australian politicians and business leaders are arguing that their populace’s growing resentment of AI..."
+      - title: "‘Charming and disarming’ … how Meta’s technology-packed Muse harnesses the power of cuteness"
+        url: "https://www.theguardian.com/fashion/2026/sep/26/charming-and-disarming-how-metas-technology-packed-muse-harnesses-the-power-of-cuteness"
+        source: "The Guardian"
+        date: 2026-09-26
+        summary: "The tech giant has launched a cute ‘little guy’ that can answer emails, book travel or do your weekly food shop After the recent backlash against Meta’s so-called “pervert” smart glasses, this week Mark Zuckerberg..."
+      - title: "Heads of OpenAI and Anthropic called to face Senate inquiry after rogue agent incidents"
+        url: "https://www.theguardian.com/australia-news/2026/sep/27/sam-altman-openai-dario-amodei-anthropic-senate-inquiry-medicare-hack-rogue-ai-agent-leak"
+        source: "The Guardian"
+        date: 2026-09-26
+        summary: "Sam Altman and Dario Amodei have been invited to appear before the Greens-led inquiry into AI and datacentres Follow our Australia news live blog for latest updates Get our new political email , free app or daily news..."
       - title: "Broken promises, confiscated land: the hyperscale AI datacentre being built in a tiny Indian village"
         url: "https://www.theguardian.com/world/2026/sep/26/ai-datacentre-hyperscale-india-andhra-pradesh-village-google-confiscated-land"
         source: "The Guardian"
         date: 2026-09-26
         summary: "Locals say Google’s $15bn project in Andhra Pradesh has resulted in smallholdings being taken back off them by the government When the government officials arrived in Tarluvada last year, they came with abundant..."
-      - title: "The AI debate is already shaping the 2028 election. Here’s where Democratic hopefuls stand"
-        url: "https://www.theguardian.com/us-news/2026/sep/26/potential-2028-democratic-presidential-candidates-ai"
-        source: "The Guardian"
-        date: 2026-09-26
-        summary: "Debates over AI development, regulation and datacenters have become buzzy topics for US presidential candidates The debate over artificial intelligence development, how to regulate it and the construction of datacenters..."
-      - title: "US supreme court rejects Republican-drawn midterm map in Missouri for third time – as it happened"
-        url: "https://www.theguardian.com/us-news/live/2026/sep/25/trump-xi-summit-national-archives-media-politics-live"
-        source: "The Guardian"
-        date: 2026-09-26
-        summary: "Long-running fight over Trump-backed maps takes another turn as absentee voting is already under way in Missouri. This blog is now closed. Sign up for US Breaking News emails Xi Jinping and his wife are back at the..."
-      - title: "OpenAI says agents leaked 53 images from ChatGPT users in latest example of rogue activity"
-        url: "https://www.theguardian.com/technology/2026/sep/25/openai-agents-leaked-53-images-chatgpt"
-        source: "The Guardian"
-        date: 2026-09-26
-        summary: "Disclosure reveals ⁠new area of privacy risk for the company and illustrates ​how difficult it is to inventory unauthorized activity tied to its agents Two ⁠months after OpenAI disclosed the accidental hacking of..."
       - title: "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features"
         url: "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/"
         source: "Ars Technica"
@@ -43,16 +53,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-25
         summary: "\"There is no evidence of any significant, widespread displacement or reduction in hiring.”"
-      - title: "OpenAI hack on Australian government reveals anxiety at heart of global artificial intelligence dilemma"
-        url: "https://www.theguardian.com/technology/2026/sep/26/openai-hack-australian-government-anxiety-global-dilemma-artificial-intelligence"
-        source: "The Guardian"
-        date: 2026-09-25
-        summary: "As the UN warns traditional safeguards are ‘unravelling’, Donald Trump says he will encourage, not restrain, the AI race When the Australian prime minister, Anthony Albanese, sat down for an interview in the heart of..."
-      - title: "NSW crackdown on ‘AI-doctored’ real estate listings hits mural-covered wall"
-        url: "https://www.theguardian.com/australia-news/2026/sep/26/nsw-crackdown-on-ai-doctored-real-estate-listings-hits-mural-covered-wall"
-        source: "The Guardian"
-        date: 2026-09-25
-        summary: "Apartment with strange view singled out in government’s fight against deceptive ads – but real estate agent says photo is no fake Get our new political email , free app or daily news podcast The New South Wales..."
       - title: "The Pentagon wants $30 million to build an AI-powered lie detector"
         url: "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
         source: "MIT Technology Review"
