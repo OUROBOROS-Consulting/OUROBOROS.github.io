@@ -2,12 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-28
+generated: 2026-09-29
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Trump touts new AI tool he claims will streamline government information access – US politics live"
+        url: "https://www.theguardian.com/us-news/live/2026/sep/29/donald-trump-iran-ai-jack-smith-media-white-house-latest-news-updates"
+        source: "The Guardian"
+        date: 2026-09-29
+        summary: "President says he will ‘never stifle’ AI development while unveiling sweeping tool to access federal government sites Sign up to the US Breaking News email For some context, it’s worth remembering that Smith had a..."
+      - title: "UK government pays highest interest rate on 10-year debt since 1999 at bond auction – as it happened"
+        url: "https://www.theguardian.com/business/live/2026/sep/29/anthropic-ipo-warning-existential-risks-to-humanity-from-ai-astrazeneca-2bn-cancer-drug-tie-up-diesel-stock-market-live-news-updates"
+        source: "The Guardian"
+        date: 2026-09-29
+        summary: "Rolling coverage of the latest economic and financial news Newsflash: the number of mortgages approved by UK lenders has fallen to its lowest level since the end of 2023. Just 54,918 new home loans were approved in..."
+      - title: "OpenAI scraps release of new model over safety concerns in internal testing"
+        url: "https://www.theguardian.com/technology/2026/sep/28/openai-new-model-astra-release-scrapped"
+        source: "The Guardian"
+        date: 2026-09-29
+        summary: "GPT-6.1 Astra showed deceptive behaviour and tried to use external tools despite knowing it would be unsafe As AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should you..."
+      - title: "As AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should you | Chris Stokel-Walker"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/29/ai-models-security-risk-agents-openai-independent-security"
+        source: "The Guardian"
+        date: 2026-09-29
+        summary: "The need for independent regulation grows more obvious by the day. We must keep this tech in check before it’s too late OpenAI scraps release of new model over safety concerns in internal testing Fool me once, shame on..."
+      - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
+        url: "https://www.technologyreview.com/2026/09/28/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
+        source: "MIT Technology Review"
+        date: 2026-09-28
+        summary: "Listen to the session or watch below The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border..."
       - title: "OpenAI halts frontier-model training amid string of agent misalignment incidents"
         url: "https://arstechnica.com/ai/2026/09/openai-halts-frontier-model-training-amid-string-of-agent-misalignment-incidents/"
         source: "Ars Technica"
@@ -18,31 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-28
         summary: "Company behind Claude chatbot expected to attend separate Australian government hearing on AI next week Get our new political email , free app or daily news podcast The chief executive of Anthropic will turn down an..."
-      - title: "Bill Gates says unchecked AI could ‘cause a billion deaths’ in call for regulation"
-        url: "https://www.theguardian.com/us-news/2026/sep/27/bill-gates-artificial-intelligence-kristen-welker"
-        source: "The Guardian"
-        date: 2026-09-27
-        summary: "Microsoft co-founder and philanthropist speaks with NBC’s Kristen Welker in interview airing on Sunday Bill Gates has called on the US’s federal legislators and law enforcers to regulate the development of artificial..."
-      - title: "OpenAI halts training of latest models as reports mount of AI agents going rogue"
-        url: "https://www.theguardian.com/technology/2026/sep/27/openai-halts-training-of-latest-models-as-reports-mount-of-ai-agents-going-rogue"
-        source: "The Guardian"
-        date: 2026-09-27
-        summary: "Decision follows disclosures that OpenAI agents searching government websites had acted in unexpected ways OpenAI said it has paused training of its latest artificial intelligence models as reports of AI agents going..."
-      - title: "Australian backlash to datacentres is faux import from US, officials say: ‘We are not the United States’"
-        url: "https://www.theguardian.com/australia-news/2026/sep/26/australia-datacentre-backlash"
-        source: "The Guardian"
-        date: 2026-09-26
-        summary: "Pro-datacentre officials argue scale of Australia’s buildout is smaller, more regulated and less damaging than in US Australian politicians and business leaders are arguing that their populace’s growing resentment of AI..."
-      - title: "‘Charming and disarming’ … how Meta’s technology-packed Muse harnesses the power of cuteness"
-        url: "https://www.theguardian.com/fashion/2026/sep/26/charming-and-disarming-how-metas-technology-packed-muse-harnesses-the-power-of-cuteness"
-        source: "The Guardian"
-        date: 2026-09-26
-        summary: "The tech giant has launched a cute ‘little guy’ that can answer emails, book travel or do your weekly food shop After the recent backlash against Meta’s so-called “pervert” smart glasses, this week Mark Zuckerberg..."
-      - title: "Heads of OpenAI and Anthropic called to face Senate inquiry after rogue agent incidents"
-        url: "https://www.theguardian.com/australia-news/2026/sep/27/sam-altman-openai-dario-amodei-anthropic-senate-inquiry-medicare-hack-rogue-ai-agent-leak"
-        source: "The Guardian"
-        date: 2026-09-26
-        summary: "Sam Altman and Dario Amodei have been invited to appear before the Greens-led inquiry into AI and datacentres Follow our Australia news live blog for latest updates Get our new political email , free app or daily news..."
       - title: "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features"
         url: "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/"
         source: "Ars Technica"
@@ -72,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘Just like that, I lost my girls’: the mother who feels betrayed by the family courts"
+        url: "https://www.theguardian.com/society/2026/sep/29/mother-feels-betrayed-family-courts-parental-alienation-england-wales"
+        source: "The Guardian"
+        date: 2026-09-29
+        summary: "The theory of parental alienation is a ‘harmful pseudo-science’, according to recent official guidance in England and Wales. Yet it led to Sarah’s two daughters being taken away six years ago – and never returned On the..."
       - title: "Extra 1,000 prison beds announced in NSW as union warns against arresting ‘our way out of domestic violence’"
         url: "https://www.theguardian.com/australia-news/2026/sep/28/extra-1000-prison-beds-announced-in-nsw-as-union-warns-against-arresting-our-way-out-of-domestic-violence-ntwnfb"
         source: "The Guardian"
@@ -102,11 +107,6 @@ sections:
         source: "NNEDV Safety Net"
         date: 2026-09-09
         summary: "In August, approximately 300 attendees joined NNEDV’s Safety Net team for our annual Tech Summit, held in-person in Washington, D.C. The theme of this year’s summit was “Centering Survivors in a Tech-Saturated World.”..."
-      - title: "Plibersek on a mother's fears after release of domestic, family and sexual violence report – video"
-        url: "https://www.theguardian.com/australia-news/video/2026/sep/09/tanya-plibersek-mothers-fears-domestic-family-sexual-violence-report-video-ntwnfb"
-        source: "The Guardian"
-        date: 2026-09-09
-        summary: "Social services minister Tanya Plibersek speaks of a letter she received from a mother of three as she responds to the sobering results of Australia's latest domestic, family and sexual violence report. Plibersek says..."
       - title: "The Rollback of Instagram Encryption, and What It Means for Survivor Safety"
         url: "https://www.techsafety.org/blog/2026/5/11/the-rollback-of-instagram-encryption-and-what-it-means-for-survivor-safety"
         source: "NNEDV Safety Net"
@@ -185,36 +185,51 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Privacy’s Defenders Podcast: Cowboys, Cypherpunks and Visionaries"
+        url: "https://www.eff.org/deeplinks/2026/09/privacys-defenders-podcast-cowboys-cypherpunks-and-visionaries"
+        source: "EFF Deeplinks"
+        date: 2026-09-29
+        summary: "People are increasingly concerned about the ways in which mass surveillance is tracking our every move: from Flock license plate readers to face recognition to creepy ads that – based on what we see and do online – seem..."
+      - title: "EFF to San Francisco Police: Drones are Powerful Surveillance Tools That Require a Robust Policy"
+        url: "https://www.eff.org/deeplinks/2026/09/eff-san-francisco-police-drones-are-powerful-surveillance-tools-require-robust"
+        source: "EFF Deeplinks"
+        date: 2026-09-28
+        summary: "The San Francisco Police Department (SFPD) began regularly deploying drones two years ago and has since expanded their use in a way that has outpaced its documented policy and evaded existing local and state oversight..."
       - title: "Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation"
         url: "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/"
         source: "Krebs on Security"
         date: 2026-09-28
         summary: "Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the..."
-      - title: "SCOTUS to Resolve Circuit Split on VPPA “Consumer” Definition in Salazar V. Paramount Global"
-        url: "https://epic.org/scotus-to-resolve-circuit-split-on-vppa-consumer-definition-in-salazar-v-paramount-global/"
+      - title: "Congressional Hearing Adds Fuel to Flock Fire"
+        url: "https://epic.org/congressional-hearing-adds-fuel-to-flock-fire/"
         source: "EPIC"
-        date: 2026-09-21
-        summary: "Introduction: Origins of the VPPA and its role in the Salazar v. Paramount Global case In the upcoming October 2026 term, the Supreme Court will resolve the circuit split on who qualifies as a consumer under the Video..."
-      - title: "PRESS RELEASE: EPIC Says Trump Administration Can’t Use Its Own Delays to Evade Review of Voter Citizenship Lists"
-        url: "https://epic.org/press-release-epic-says-trump-administration-cant-use-its-own-delays-to-evade-review-of-voter-citizenship-lists/"
+        date: 2026-09-24
+        summary: "On Wednesday, the Senate Judiciary Committee’s Subcommittee on Crime and Counterterrorism held a hearing on Flock’s Nationwide AI Surveillance Network. Flock Safety’s automated license plate readers (ALPR) take still..."
+      - title: "MediaPost:Paramount Urges SCOTUS To Reject Video Privacy Claim"
+        url: "https://epic.org/mediapostparamount-urges-scotus-to-reject-video-privacy-claim/"
         source: "EPIC"
-        date: 2026-09-18
-        summary: "The Electronic Privacy Information Center (EPIC) today urged a federal court to swiftly rule on the Trump administration’s plan to create and distribute “State Citizenship Lists.”"
-      - title: "Cronkite News: Supreme Court ruling clears way for mail ballots, used by 75% of Arizona voters, to proceed as usual"
-        url: "https://epic.org/cronkite-news-supreme-court-ruling-clears-way-for-mail-ballots-used-by-75-of-arizona-voters-to-proceed-as-usual/"
+        date: 2026-09-23
+        summary: "“The dispute has drawn attention from outside groups, including the privacy watchdog Electronic Privacy Information Center, which is siding with Salazar.” “The privacy advocates argued in a friend-of-the-court brief..."
+      - title: "Democracy Docket: DOJ delay tactics aim to advance Trump’s voter suppression schemes"
+        url: "https://epic.org/democracy-docket-doj-delay-tactics-aim-to-advance-trumps-voter-suppression-schemes/"
         source: "EPIC"
-        date: 2026-09-16
-        summary: "“On Tuesday, the League of Women Voters and the Electronic Privacy Information Center argued that the expanded system would give DHS ‘unlimited power to vacuum up millions of Americans’ sensitive information’ from the..."
-      - title: "CalMatters: Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get"
-        url: "https://epic.org/calmatters-whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get/"
+        date: 2026-09-23
+        summary: "“The hearing, set for Friday, concerns the Electronic Privacy Information Center’s (EPIC) request for U.S. District Judge Paula Xinis to declare DHS’s actions unlawful.” Read more here."
+      - title: "The New Republic: The Supreme Court Digital-Privacy Case That Could Go Either Way"
+        url: "https://epic.org/the-new-republic-the-supreme-court-digital-privacy-case-that-could-go-either-way/"
         source: "EPIC"
-        date: 2026-09-16
-        summary: "“To build their databases, data brokers broadly rely on three types of data, according to Justin Sherman, a scholar-in-residence at the Electronic Privacy Information Center who formerly ran a research program on data..."
-      - title: "Consumer Reports: Companies Make It Hard to Access Your Personal Data Under State Privacy Laws, CR Finds"
-        url: "https://epic.org/consumer-reports-companies-make-it-hard-to-access-your-personal-data-under-state-privacy-laws-cr-finds/"
+        date: 2026-09-23
+        summary: "“The Electronic Privacy Information Center, on the other hand, told the justices that Paramount (and other online-video companies) is ‘not under any obligation to use these [targeted] systems, and it can adopt more..."
+      - title: "WBUR: Is your driver’s license on the dark web?"
+        url: "https://epic.org/wbur-is-your-drivers-license-on-the-dark-web/"
         source: "EPIC"
-        date: 2026-09-16
-        summary: "“Small fines and warning letters, however, may have limited effect on some of the largest companies in the data economy, says Caroline Kraczon, counsel at the nonprofit Electronic Privacy Information Center and who..."
+        date: 2026-09-22
+        summary: "“BUTLER: I agree. I think that the breach of the images and like forensic-level detail of identity documents is a fundamentally different thing than most of the breaches that most of us hear about every day.” “BUTLER: I..."
+      - title: "Syracuse: New York is poised to ban price changes based on income, age and even race. Would it work?"
+        url: "https://epic.org/syracuse-new-york-is-poised-to-ban-price-changes-based-on-income-age-and-even-race-would-it-work/"
+        source: "EPIC"
+        date: 2026-09-22
+        summary: "“Shoppers may not understand how much information they provide by joining, said Kara Williams, counsel at the Electronic Privacy Information Center.” Read more here."
       - title: "Data Broker Radaris Loses Domains in Privacy Fight"
         url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
         source: "Krebs on Security"
@@ -230,18 +245,3 @@ sections:
         source: "The Markup"
         date: 2026-09-16
         summary: "Consumers asked a major data broker for their files. What they got back shows interest in how fat they are, how much they drink, and how likely they are to get a mammogram, among many other characteristics."
-      - title: "Data brokers have detailed files on you. Here’s what’s in them — and how it impacts you"
-        url: "https://themarkup.org/privacy/2026/09/16/data-brokers-have-detailed-files-on-you-heres-whats-in-them-and-how-it-impacts-you"
-        source: "The Markup"
-        date: 2026-09-16
-        summary: "Data brokers collect thousands of details about your finances, health and habits. See what’s in your profile, who buys it and how companies use it."
-      - title: "Law360: Justices Told DHS Voter Citizenship Database ‘Unprecedented’"
-        url: "https://epic.org/law360-justices-told-dhs-voter-citizenship-database-unprecedented/"
-        source: "EPIC"
-        date: 2026-09-15
-        summary: "“The League of Women Voters, along with privacy watchdog the Electronic Privacy Information Center, urged the high court in a response brief to deny the administration’s emergency request to stay a Washington, D.C..."
-      - title: "The High Crime of “LMAO”: How Cops Are Treating Flock's Mass Surveillance As a Joke"
-        url: "https://www.eff.org/deeplinks/2026/09/high-crime-lmao-how-cops-are-treating-mass-surveillance-joke"
-        source: "EFF Deeplinks"
-        date: 2026-09-14
-        summary: "Here's a riddle: Why did a Goshen Police Department officer search 6,474 automated license plate reader (ALPR) networks, representing data from 82,413 cameras, on May 7, 2025? If your answer is \"I don't know,\" it turns..."
