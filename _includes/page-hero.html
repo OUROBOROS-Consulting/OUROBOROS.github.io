@@ -79,7 +79,7 @@
       </div>
       {% elsif page.icon %}
       <div class="page-hero-art">
-        <i class="fa-solid {{ page.icon }} page-hero-icon" aria-hidden="true"></i>
+        <i class="{{ page.icon }} page-hero-icon" aria-hidden="true"></i>
       </div>
       {% endif %}
     {% elsif include.art == 'headshot,icon' %}
@@ -89,7 +89,7 @@
       </div>
       {% elsif page.icon %}
       <div class="page-hero-art">
-        <i class="fa-solid {{ page.icon }} page-hero-icon" aria-hidden="true"></i>
+        <i class="{{ page.icon }} page-hero-icon" aria-hidden="true"></i>
       </div>
       {% endif %}
     {% elsif include.art == 'hero_svg,icon' %}
@@ -97,7 +97,7 @@
         {% if page.hero_svg %}
         <img src="{{ page.hero_svg | relative_url }}" alt="" class="page-hero-svg" aria-hidden="true" />
         {% elsif page.icon %}
-        <i class="fa-solid {{ page.icon }} page-hero-icon" aria-hidden="true"></i>
+        <i class="{{ page.icon }} page-hero-icon" aria-hidden="true"></i>
         {% endif %}
       </div>
     {% endif %}

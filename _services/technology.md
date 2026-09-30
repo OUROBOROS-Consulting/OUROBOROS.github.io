@@ -1,8 +1,8 @@
 ---
 layout: service
 title: Technology & AI Consulting
-icon: fa-terminal
-hero_svg: /assets/images/hero-technology.svg
+icon: ph ph-fill ph-terminal
+
 description: "Bespoke technology and AI solutions — precision-applied tools, agentic workflows, and systems that give you control without requiring a full team."
 category: Services
 order: 3

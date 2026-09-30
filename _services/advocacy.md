@@ -1,8 +1,8 @@
 ---
 layout: service
 title: Advocacy & Institutional Navigation
-icon: fa-gavel
-hero_svg: /assets/images/hero-advocacy.svg
+icon: ph ph-fill ph-gavel
+
 description: "Precision navigation through hostile institutions — documentation strategy, your own records, FOIA, and a knowledgeable advocate in your corner."
 category: Services
 order: 1
