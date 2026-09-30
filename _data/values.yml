@@ -1,6 +1,6 @@
 - title: Innovation
   tag: Technology
-  icon: fa-solid fa-microscope
+  icon: ph-fill ph-microscope
   description: >
     The best solutions aren't found in manuals. They are designed and tailored to the problems at hand.
     Whether bridging service continuity during a federal system migration or prototyping
@@ -10,7 +10,7 @@
 
 - title: Reason
   tag: Science
-  icon: fa-solid fa-scale-balanced
+  icon: ph-fill ph-scales
   description: >
     Emotions are data, but they aren't evidence. I trained in biostatistics because I believe
     rigorous thinking is one of the most compassionate things you can offer someone in crisis —
@@ -21,7 +21,7 @@
 
 - title: Efficiency
   tag: Technology
-  icon: fa-solid fa-fire-flame-curved
+  icon: ph-fill ph-ruler
   description: >
     Wasted effort compounds. I automate what can be automated, document what needs to persist,
     and focus human attention where it belongs.
@@ -31,7 +31,7 @@
 
 - title: Autonomy
   tag: Personal
-  icon: fa-solid fa-hand-fist
+  icon: ph-fill ph-hand-fist
   description: >
     I believe people have the right to make informed decisions about their own lives —
     especially when institutions make that difficult.
@@ -40,20 +40,9 @@
   reference:
   link: "#"
 
-# - title: Authenticity
-#   tag: Personal
-#   icon: fa-solid fa-fingerprint
-#   description: >
-#     I don't perform expertise I don't have, and I don't minimize experiences that are real.
-#     Being authentic isn't always comfortable — sometimes it means saying the thing that's true
-#     rather than the thing that's easy.
-#     I've found it's the only way to build anything that lasts.
-#   reference:
-#   link: "#"
-
 - title: Integrity
   tag: Ethics
-  icon: fa-solid fa-shield-heart
+  icon: ph-fill ph-fingerprint
   description: >
     Integrity is what you do when no one is watching — and what you're willing to put on
     record when they are.
@@ -64,7 +53,7 @@
 
 - title: Transparency
   tag: Ethics
-  icon: fa-solid fa-eye
+  icon: ph-fill ph-eye
   description: >
     Opacity protects bad systems. Transparency is how individuals protect themselves —
     and how communities hold institutions accountable.
@@ -75,7 +64,7 @@
 
 - title: Security
   tag: Technology
-  icon: fa-solid fa-key
+  icon: ph-fill ph-key
   description: >
     Security means different things in different contexts: FedRAMP compliance, data privacy,
     personal safety. But the underlying principle is the same — people deserve to be protected,
@@ -85,7 +74,7 @@
 
 - title: Kindness
   tag: Personal
-  icon: fa-solid fa-hand-holding-heart
+  icon: ph-fill ph-heart
   description: >
     Kindness is not weakness — it requires discipline, especially when trust has been broken.
     In work with survivors, kindness means meeting people where they are and honoring what they've endured.

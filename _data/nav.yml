@@ -1,19 +1,19 @@
 - title: Services
   url: /services/
-  icon: fa-briefcase
+  icon: ph-briefcase
   children:
-    - title: Advocacy & Institutional Navigation
-      url: /services/advocacy/
-    - title: Education & Training
-      url: /services/education/
-    - title: Technology & AI
-      url: /services/technology/
     - title: Brand & Digital Studio
       url: /services/design/
+    - title: Technology & AI
+      url: /services/technology/
+    - title: Education & Training
+      url: /services/education/
+    - title: Advocacy
+      url: /services/advocacy/
 
 - title: Resources
   url: /resources/
-  icon: fa-book-open
+  icon: ph-book-open
   active_paths:
     - /psas
     - /glossary
@@ -34,7 +34,7 @@
 
 - title: About
   url: /about/
-  icon: fa-circle-info
+  icon: ph-info
   active_paths:
     - /mission
     - /framework

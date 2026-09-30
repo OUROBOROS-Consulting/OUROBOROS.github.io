@@ -1,35 +1,19 @@
-- title: Small businesses & startups
-  icon: /assets/images/audience/startup.svg
+- title: Small Businesses & Solo Professionals
+  icon: /assets/images/audience-briefcase.svg
   description: >
-    You are running lean and the tooling is not keeping up. You need someone who picks the right stack, builds
-    it, hands you the keys, and tells you when AI is the wrong answer.
+    You are running a lean operation—whether it's a startup or a solo practice—and need reliable tooling, automation, and systems that hold up under scrutiny without the overhead of a large team.
 
-- title: Solo practitioners & small firms
-  icon: /assets/images/audience/practitioner.svg
+- title: Advocates & Nonprofits
+  icon: /assets/images/audience-flag.svg
   description: >
-    You are an attorney, therapist, tutor, or consultant working alone. You need a site, a records system, and
-    automation that hold up under scrutiny without hiring anyone.
+    You serve people navigating broken institutions and want AI-literate tooling, or research skills your own staff can carry, for work with sensitive cases.
 
-- title: Advocates & nonprofits
-  icon: /assets/images/audience/advocate.svg
+- title: Researchers & Clinicians
+  icon: /assets/images/audience-microscope.svg
   description: >
-    You serve people navigating broken institutions and want AI-literate tooling, or research skills your own
-    staff can carry, for work with sensitive cases.
+    You study institutional betrayal, personality pathology, or public-health harm and need a collaborator fluent in both statistics and the human stakes.
 
-- title: Researchers & clinicians
-  icon: /assets/images/audience/researcher.svg
+- title: Whistleblowers & Survivors
+  icon: /assets/images/audience-shield.svg
   description: >
-    You study institutional betrayal, personality pathology, or public-health harm and need a collaborator fluent
-    in both statistics and the human stakes.
-
-- title: Whistleblowers & federal employees
-  icon: /assets/images/audience/whistleblower.svg
-  description: >
-    You're pushing back against agency misconduct and need technical, statistical, or records-management support
-    from someone who has worked inside the system.
-
-- title: Survivors of coercive control
-  icon: /assets/images/audience/survivor.svg
-  description: >
-    You need to document what happened in a way that institutions will actually take seriously — and protect
-    yourself from digital surveillance while you do it.
+    You are navigating high-stakes situations involving institutional betrayal or coercive control. You need technical, statistical, or records-management support to document what happened and protect yourself from surveillance.
