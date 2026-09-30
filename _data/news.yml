@@ -2,32 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-29
+generated: 2026-09-30
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Trump touts new AI tool he claims will streamline government information access – US politics live"
+      - title: "AI tool that copied actor’s ‘lustrous’ voice violated his rights, Tokyo court rules"
+        url: "https://www.theguardian.com/technology/2026/sep/30/ai-tool-copied-actor-kenjiro-tsuda-tokyo-court"
+        source: "The Guardian"
+        date: 2026-09-30
+        summary: "Kenjiro Tsuda wins case against TikTok account in landmark Japanese verdict to protect publicity rights A court in Japan has ruled that the human voice has legal protection after a landmark case involving a well-known..."
+      - title: "Things are changing behind the scenes, so you must decide: do you want human civil servants or AI bots? | The civil servant"
+        url: "https://www.theguardian.com/commentisfree/2026/sep/30/humans-or-ai-bots-uk-civil-service"
+        source: "The Guardian"
+        date: 2026-09-30
+        summary: "Rapidly expanding AI use within the government is numbing departments to its profound threats. And try arguing with a faceless digital bureaucrat Another day, another apocalyptic warning about the likelihood that..."
+      - title: "A fake image of a Georgia mayor kissing a person went viral. Can US voters trust everything they see?"
+        url: "https://www.theguardian.com/technology/2026/sep/30/ai-deepfakes-politicans"
+        source: "The Guardian"
+        date: 2026-09-30
+        summary: "Deepfakes and misinformation driven by artificial intelligence have become a point of deep concern for legislators, advocates and the public An image of Bianca Motley Broom, the mayor of College Park, Georgia, kissing a..."
+      - title: "Supreme court allows Trump to temporarily resume deporting people to third countries – as it happened"
         url: "https://www.theguardian.com/us-news/live/2026/sep/29/donald-trump-iran-ai-jack-smith-media-white-house-latest-news-updates"
         source: "The Guardian"
+        date: 2026-09-30
+        summary: "This live blog is now closed. US supreme court allows Trump officials to resume deportations to third countries Sign up to the US Breaking News email For some context, it’s worth remembering that Smith had a two-volume..."
+      - title: "OpenAI announces ‘dots’ agent after scrapping launch of new AI model over safety concerns"
+        url: "https://www.theguardian.com/technology/2026/sep/29/openai-announces-dots-agent-safety-concerns"
+        source: "The Guardian"
         date: 2026-09-29
-        summary: "President says he will ‘never stifle’ AI development while unveiling sweeping tool to access federal government sites Sign up to the US Breaking News email For some context, it’s worth remembering that Smith had a..."
+        summary: "Company’s product comes weeks after Meta introduced its own artificially intelligent agent Muse Less than 24 hours after OpenAI announced it would scrap the launch of an artificial intelligence model over safety..."
       - title: "UK government pays highest interest rate on 10-year debt since 1999 at bond auction – as it happened"
         url: "https://www.theguardian.com/business/live/2026/sep/29/anthropic-ipo-warning-existential-risks-to-humanity-from-ai-astrazeneca-2bn-cancer-drug-tie-up-diesel-stock-market-live-news-updates"
         source: "The Guardian"
         date: 2026-09-29
         summary: "Rolling coverage of the latest economic and financial news Newsflash: the number of mortgages approved by UK lenders has fallen to its lowest level since the end of 2023. Just 54,918 new home loans were approved in..."
-      - title: "OpenAI scraps release of new model over safety concerns in internal testing"
-        url: "https://www.theguardian.com/technology/2026/sep/28/openai-new-model-astra-release-scrapped"
-        source: "The Guardian"
-        date: 2026-09-29
-        summary: "GPT-6.1 Astra showed deceptive behaviour and tried to use external tools despite knowing it would be unsafe As AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should you..."
-      - title: "As AI models go rogue, do you still trust OpenAI and Anthropic to stop them? I don’t and neither should you | Chris Stokel-Walker"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/29/ai-models-security-risk-agents-openai-independent-security"
-        source: "The Guardian"
-        date: 2026-09-29
-        summary: "The need for independent regulation grows more obvious by the day. We must keep this tech in check before it’s too late OpenAI scraps release of new model over safety concerns in internal testing Fool me once, shame on..."
       - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
         url: "https://www.technologyreview.com/2026/09/28/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
         source: "MIT Technology Review"
@@ -38,11 +48,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-28
         summary: "US Government websites among \"dozens of third parties\" OpenAI has recently notified."
-      - title: "Anthropic will not appear at Senate inquiry into AI and datacentres amid fallout from OpenAI hack"
-        url: "https://www.theguardian.com/australia-news/2026/sep/28/anthropic-will-not-appear-at-senate-inquiry-into-ai-and-datacentres-amid-fallout-from-openai-hack-ntwnfb"
-        source: "The Guardian"
-        date: 2026-09-28
-        summary: "Company behind Claude chatbot expected to attend separate Australian government hearing on AI next week Get our new political email , free app or daily news podcast The chief executive of Anthropic will turn down an..."
       - title: "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features"
         url: "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/"
         source: "Ars Technica"
@@ -63,11 +68,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-09-25
         summary: "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will..."
-      - title: "OpenAI agent “didn’t accept no for an answer” in Australian government breach"
-        url: "https://arstechnica.com/ai/2026/09/openai-agent-didnt-accept-no-for-an-answer-in-australian-government-breach/"
-        source: "Ars Technica"
-        date: 2026-09-24
-        summary: "\"There will obviously be legal consequences,\" prime minister promises."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -185,6 +185,11 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
+        url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
+        source: "EFF Deeplinks"
+        date: 2026-09-29
+        summary: "San Francisco's decision to retain its use of Automated License Plate Reader (ALPR) surveillance cameras belies what we know about this spying technology tool: it endangers residents and threatens the privacy and civil..."
       - title: "Privacy’s Defenders Podcast: Cowboys, Cypherpunks and Visionaries"
         url: "https://www.eff.org/deeplinks/2026/09/privacys-defenders-podcast-cowboys-cypherpunks-and-visionaries"
         source: "EFF Deeplinks"
@@ -240,8 +245,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-16
         summary: "Mass surveillance isn't a joke. But police are treating it like one when using automated license plate reader (ALPR) networks. In our latest EFFector newsletter , we're covering a new EFF report on how officers across..."
-      - title: "Who’s buying your personal data: Disney, GM, your insurer and bank. Here’s what they get"
-        url: "https://themarkup.org/privacy/2026/09/16/whos-buying-your-personal-data-disney-gm-your-insurer-and-bank-heres-what-they-get"
-        source: "The Markup"
-        date: 2026-09-16
-        summary: "Consumers asked a major data broker for their files. What they got back shows interest in how fat they are, how much they drink, and how likely they are to get a mammogram, among many other characteristics."
