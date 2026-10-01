@@ -1,8 +1,8 @@
 ---
 layout: service
 title: Education & Training
-icon: fa-graduation-cap
-hero_svg: /assets/images/hero-education.svg
+icon: ph ph-fill ph-graduation-cap
+
 description: "Courses and one-to-one coaching. Claude and AI, public records research, digital self-defense, macOS fundamentals, and document literacy. I teach the skill. You keep it."
 category: Services
 order: 2

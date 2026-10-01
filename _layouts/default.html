@@ -79,8 +79,8 @@
     <link rel="stylesheet"
       href="{{ '/assets/css/' | append: page.extra_css | append: '.css' | relative_url }}" />{%
     endif %}
-    <link rel="stylesheet"
-      href="{{ '/assets/vendor/fontawesome/css/all.min.css' | relative_url }}" />
+    <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css" />
     <!-- Draws the golden thread in the rail and the TOC. Deferred from <head>
          so it executes ahead of the body's deferred scripts: toc.js calls
          OuroSpine.draw() as soon as it has built the outline, and that call is
@@ -107,6 +107,6 @@
     {% include footer.html %}
     <script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
-    </body>
+  </body>
 
 </html>
