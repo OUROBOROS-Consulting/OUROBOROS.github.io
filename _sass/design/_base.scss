@@ -237,9 +237,10 @@
      three hand-copied island stylesheets can reach the stack without importing
      the package. --font-mono was previously a literal 'JetBrains Mono' repeated
      at four call sites with no fallback chain. */
-  --font-body: #{$font-serif};
+  --font-body: #{$font-syne};
   --font-sans: #{$font-sans};
-  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-serif: #{$font-serif};
+  --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   /* ── Modular scale ratios ───────────────────────────────────────────────────
      Unitless. The ratio steps the type scale is built on, exposed so a demo or
@@ -314,10 +315,10 @@ body {
   background: var(--surface-1) fixed; // fallback where color-mix is unsupported
   background: linear-gradient(90deg, var(--surface-1) 0%, var(--surface-2) 50%, var(--surface-1) 100%) fixed;
   color: var(--ink-3);
-  font-family: $font-serif;
+  font-family: $font-syne;
   font-weight: 400;
   font-size: var(--fs-body);
-  line-height: 1.75;
+  line-height: var(--lh-3);
   overflow-x: hidden;
   // Reflow safety (WCAG 1.4.10): inherited, so long words / URLs / display
   // headings break instead of overflowing and being clipped by overflow-x.
