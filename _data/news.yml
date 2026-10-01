@@ -2,42 +2,52 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-09-30
+generated: 2026-10-01
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Anthropic pushes for opt-out model for Australian content as ABC warns of ‘cannibalisation’ of news"
+        url: "https://www.theguardian.com/technology/2026/oct/02/anthropic-ai-opt-out-australia-copyright-abc-cannibalisation-of-news"
+        source: "The Guardian"
+        date: 2026-10-01
+        summary: "Maker of Claude claims AI could transform economy but ABC and SBS say the technology should be subject to media regulations Get our new political email , free app or daily news podcast AI giant Anthropic has urged the..."
+      - title: "Steve Hilton, Xavier Becerra clash in testy California governor’s race debate"
+        url: "https://www.theguardian.com/us-news/2026/oct/01/steve-hilton-xavier-becerra-clash-california-governor-race-debate"
+        source: "The Guardian"
+        date: 2026-10-01
+        summary: "The candidates running to replace Gavin Newsom sparred over taxes, immigration and regulating AI Xavier Becerra and Steve Hilton , the candidates running to be California ’s next governor, clashed on Wednesday over..."
+      - title: "Gavin Newsom signs laws to protect California workers from AI threat"
+        url: "https://www.theguardian.com/us-news/2026/sep/30/gavin-newsom-california-ai-threat"
+        source: "The Guardian"
+        date: 2026-10-01
+        summary: "Democratic governor sharply critical of Donald Trump for not passing comprehensive federal AI regulations Governor Gavin Newsom signed laws on Wednesday aimed at protecting California workers from the threats of..."
+      - title: "Trump plan to combat AI risks hinges on Big Tech pals policing themselves"
+        url: "https://arstechnica.com/tech-policy/2026/09/trump-plan-to-combat-ai-risks-hinges-on-big-tech-pals-policing-themselves/"
+        source: "Ars Technica"
+        date: 2026-09-30
+        summary: "Trump gets dozens of AI firms to agree to voluntary safety tests."
+      - title: "US trade regulator opens investigation into AI giants including Anthropic and OpenAI"
+        url: "https://www.theguardian.com/us-news/2026/sep/30/ftc-investigation-anthropic-openai"
+        source: "The Guardian"
+        date: 2026-09-30
+        summary: "FTC move is first official US enforcement ⁠action on rogue AI agents, following surge in incidents first reported in July The US’s main trade regulator is conducting an industry-wide investigation ⁠into Anthropic..."
+      - title: "\"An AI did it\" is no defense, says nonprofit suing OpenAI over Hugging Face hack"
+        url: "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/"
+        source: "Ars Technica"
+        date: 2026-09-30
+        summary: "OpenAI makes others suffer \"the harms of its unsafe decision-making,\" nonprofit says."
+      - title: "Senate Democrats block datacenter energy bill, saying ‘toothless’ legislation ‘misses the mark’"
+        url: "https://www.theguardian.com/us-news/2026/sep/30/senate-datacenter-energy-bill"
+        source: "The Guardian"
+        date: 2026-09-30
+        summary: "Republicans supported legislation although Democrats said it wouldn’t effectively address energy consumption Senate Democrats on Wednesday blocked legislation intended to offset the impact of datacenters on consumer..."
       - title: "AI tool that copied actor’s ‘lustrous’ voice violated his rights, Tokyo court rules"
         url: "https://www.theguardian.com/technology/2026/sep/30/ai-tool-copied-actor-kenjiro-tsuda-tokyo-court"
         source: "The Guardian"
         date: 2026-09-30
         summary: "Kenjiro Tsuda wins case against TikTok account in landmark Japanese verdict to protect publicity rights A court in Japan has ruled that the human voice has legal protection after a landmark case involving a well-known..."
-      - title: "Things are changing behind the scenes, so you must decide: do you want human civil servants or AI bots? | The civil servant"
-        url: "https://www.theguardian.com/commentisfree/2026/sep/30/humans-or-ai-bots-uk-civil-service"
-        source: "The Guardian"
-        date: 2026-09-30
-        summary: "Rapidly expanding AI use within the government is numbing departments to its profound threats. And try arguing with a faceless digital bureaucrat Another day, another apocalyptic warning about the likelihood that..."
-      - title: "A fake image of a Georgia mayor kissing a person went viral. Can US voters trust everything they see?"
-        url: "https://www.theguardian.com/technology/2026/sep/30/ai-deepfakes-politicans"
-        source: "The Guardian"
-        date: 2026-09-30
-        summary: "Deepfakes and misinformation driven by artificial intelligence have become a point of deep concern for legislators, advocates and the public An image of Bianca Motley Broom, the mayor of College Park, Georgia, kissing a..."
-      - title: "Supreme court allows Trump to temporarily resume deporting people to third countries – as it happened"
-        url: "https://www.theguardian.com/us-news/live/2026/sep/29/donald-trump-iran-ai-jack-smith-media-white-house-latest-news-updates"
-        source: "The Guardian"
-        date: 2026-09-30
-        summary: "This live blog is now closed. US supreme court allows Trump officials to resume deportations to third countries Sign up to the US Breaking News email For some context, it’s worth remembering that Smith had a two-volume..."
-      - title: "OpenAI announces ‘dots’ agent after scrapping launch of new AI model over safety concerns"
-        url: "https://www.theguardian.com/technology/2026/sep/29/openai-announces-dots-agent-safety-concerns"
-        source: "The Guardian"
-        date: 2026-09-29
-        summary: "Company’s product comes weeks after Meta introduced its own artificially intelligent agent Muse Less than 24 hours after OpenAI announced it would scrap the launch of an artificial intelligence model over safety..."
-      - title: "UK government pays highest interest rate on 10-year debt since 1999 at bond auction – as it happened"
-        url: "https://www.theguardian.com/business/live/2026/sep/29/anthropic-ipo-warning-existential-risks-to-humanity-from-ai-astrazeneca-2bn-cancer-drug-tie-up-diesel-stock-market-live-news-updates"
-        source: "The Guardian"
-        date: 2026-09-29
-        summary: "Rolling coverage of the latest economic and financial news Newsflash: the number of mortgages approved by UK lenders has fallen to its lowest level since the end of 2023. Just 54,918 new home loans were approved in..."
       - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
         url: "https://www.technologyreview.com/2026/09/28/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
         source: "MIT Technology Review"
@@ -58,16 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-25
         summary: "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026."
-      - title: "AI was supposed to hit new grads hard. So far, unemployment data says otherwise."
-        url: "https://arstechnica.com/ai/2026/09/ai-was-supposed-to-hit-new-grads-hard-so-far-unemployment-data-says-otherwise/"
-        source: "Ars Technica"
-        date: 2026-09-25
-        summary: "\"There is no evidence of any significant, widespread displacement or reduction in hiring.”"
-      - title: "The Pentagon wants $30 million to build an AI-powered lie detector"
-        url: "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
-        source: "MIT Technology Review"
-        date: 2026-09-25
-        summary: "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Journal investigating paper on heart device with registration number for wrong trial"
+        url: "https://retractionwatch.com/2026/09/30/journal-investigating-paper-on-heart-device-with-registration-number-for-wrong-trial/"
+        source: "Retraction Watch"
+        date: 2026-09-30
+        summary: "The publisher of a European Heart Rhythm Association journal is investigating a paper that lists the incorrect registration number for a clinical study of a widely used but controversial heart implant. The paper..."
       - title: "Above and beyond: An editor wanted authors to know they’d been falsely cited"
         url: "https://retractionwatch.com/2026/09/25/above-and-beyond-an-editor-wanted-authors-to-know-theyd-been-falsely-cited/"
         source: "Retraction Watch"
@@ -171,20 +176,15 @@ sections:
         source: "ProPublica"
         date: 2026-09-18
         summary: "The post Judge Denies Efforts to End Oversight of Maricopa County Sheriff’s Office as Racial Profiling of Latinos Persists appeared first on ProPublica ."
-      - title: "Paper mill studies get cited by clinical guidelines, policy docs and more, analysis finds"
-        url: "https://retractionwatch.com/2026/09/17/paper-mill-studies-get-cited-by-clinical-guidelines-policy-docs-and-more-analysis-finds/"
-        source: "Retraction Watch"
-        date: 2026-09-17
-        summary: "Studies produced by a suspected paper mill are frequently cited in patents, clinical guidelines and policy documents, according to a new analysis. The work, posted on arXiv on August 31, examined the fate of nearly..."
-      - title: "Oregon Lawmakers Seek to Open Up Affordable Housing Records Following ProPublica’s Reporting"
-        url: "https://www.propublica.org/article/oregon-lawmakers-seek-to-open-housing-records"
-        source: "ProPublica"
-        date: 2026-09-17
-        summary: "The post Oregon Lawmakers Seek to Open Up Affordable Housing Records Following ProPublica’s Reporting appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Victory! California Appeals Court Refuses to Revive Surveillance Tech CEO’s Meritless Lawsuit Against Journalist"
+        url: "https://www.eff.org/deeplinks/2026/09/victory-california-appeals-court-refuses-revive-surveillance-tech-ceos-meritless"
+        source: "EFF Deeplinks"
+        date: 2026-09-30
+        summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
       - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
         url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
         source: "EFF Deeplinks"
@@ -205,12 +205,17 @@ sections:
         source: "Krebs on Security"
         date: 2026-09-28
         summary: "Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the..."
+      - title: "EPIC and Consumer Groups Urge FTC to Treat Surveillance Pricing as an Unfair Practice"
+        url: "https://epic.org/epic-and-consumer-groups-urge-ftc-to-treat-surveillance-pricing-as-an-unfair-practice/"
+        source: "EPIC"
+        date: 2026-09-28
+        summary: "On September 25, EPIC, along with the Center for Digital Democracy, the Consumer Federation of America, Demand Progress, and the National Consumers League, filed a comment urging the Federal Trade Commission (FTC) to go..."
       - title: "Congressional Hearing Adds Fuel to Flock Fire"
         url: "https://epic.org/congressional-hearing-adds-fuel-to-flock-fire/"
         source: "EPIC"
         date: 2026-09-24
         summary: "On Wednesday, the Senate Judiciary Committee’s Subcommittee on Crime and Counterterrorism held a hearing on Flock’s Nationwide AI Surveillance Network. Flock Safety’s automated license plate readers (ALPR) take still..."
-      - title: "MediaPost:Paramount Urges SCOTUS To Reject Video Privacy Claim"
+      - title: "MediaPost: Paramount Urges SCOTUS To Reject Video Privacy Claim"
         url: "https://epic.org/mediapostparamount-urges-scotus-to-reject-video-privacy-claim/"
         source: "EPIC"
         date: 2026-09-23
@@ -225,23 +230,13 @@ sections:
         source: "EPIC"
         date: 2026-09-23
         summary: "“The Electronic Privacy Information Center, on the other hand, told the justices that Paramount (and other online-video companies) is ‘not under any obligation to use these [targeted] systems, and it can adopt more..."
-      - title: "WBUR: Is your driver’s license on the dark web?"
-        url: "https://epic.org/wbur-is-your-drivers-license-on-the-dark-web/"
+      - title: "EPIC Urges Third Circuit to Uphold Pennsylvania’s Protections Against Posting Voter Data Online"
+        url: "https://epic.org/epic-urges-third-circuit-to-uphold-pennsylvanias-protections-against-posting-voter-data-online/"
         source: "EPIC"
-        date: 2026-09-22
-        summary: "“BUTLER: I agree. I think that the breach of the images and like forensic-level detail of identity documents is a fundamentally different thing than most of the breaches that most of us hear about every day.” “BUTLER: I..."
-      - title: "Syracuse: New York is poised to ban price changes based on income, age and even race. Would it work?"
-        url: "https://epic.org/syracuse-new-york-is-poised-to-ban-price-changes-based-on-income-age-and-even-race-would-it-work/"
-        source: "EPIC"
-        date: 2026-09-22
-        summary: "“Shoppers may not understand how much information they provide by joining, said Kara Williams, counsel at the Electronic Privacy Information Center.” Read more here."
+        date: 2026-09-23
+        summary: "Today, EPIC filed an amicus brief in the Third Circuit case Voter Reference Foundation v. Schmidt urging the Court to uphold Pennsylvania’s rule barring people who obtain the state’s voter registration lists from..."
       - title: "Data Broker Radaris Loses Domains in Privacy Fight"
         url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
         source: "Krebs on Security"
         date: 2026-09-16
         summary: "The consumer data broker Radaris.com has long had a reputation for ignoring requests to remove personal information from its vast empire of people-search services online. That reputation caught up with the company..."
-      - title: "👮 Flock Searches for the LOLs | EFFector 38.16"
-        url: "https://www.eff.org/deeplinks/2026/09/flock-searches-lols-effector-3816"
-        source: "EFF Deeplinks"
-        date: 2026-09-16
-        summary: "Mass surveillance isn't a joke. But police are treating it like one when using automated license plate reader (ALPR) networks. In our latest EFFector newsletter , we're covering a new EFF report on how officers across..."
