@@ -4,7 +4,9 @@
 // ── Font family choices (single source of truth) ─────────────────────────────
 $font-serif:     'Lora', Georgia, serif;
 $font-sans:      'Inter', 'DejaVu Sans', system-ui, sans-serif;
-$font-mono:      'JetBrains Mono', monospace;
+$font-syne:     'Syne', sans-serif;
+$font-heading:   'Manufacturing Consent', serif;
+$font-mono:      'IBM Plex Mono', monospace;
 
 // ── label-caps mixin ──────────────────────────────────────────────────────────
 // The gold tracked cap. This is level 1 of the type scale wearing the name the

@@ -19,14 +19,217 @@
   // `light` explicitly when light-tokens is in effect.
   color-scheme: dark;
 
-  @include layout-defaults-tokens;
-  @include color-tokens;
-  @include spacing-scale-tokens;
-  @include typography-scale-tokens;
-  @include radius-scale-tokens;
-  @include elevation-scale-tokens;
-  @include layout-tokens;
-  @include stacking-tokens;
+  --nav-h: 13rem; // desktop: primary (~96px)
+  --pad: var(--space-9);
+  --label-size: var(--fs-3);
+  --surface-hero: #1e213e; // dark navy — homepage + service hero. Unconditional
+  // in BOTH themes: the hero is a photographic/marble surface, not flat colour,
+  // so it does not participate in the light/dark flip. Outside the 1..5 ramp on
+  // purpose — it is a named surface, not an elevation step.
+
+  /* ── Typography tokens — User requested refactor ──────────────────────────── */
+  --fs-button: 8px;
+  --fs-body: 16px;
+  --fs-h1: 56px;
+  --fs-h2: 48px;
+  --fs-h3: 40px;
+  --fs-h4: 32px;
+  --fs-h5: 24px;
+  --fs-h6: 20px;
+
+  /* ── Type scale ─────────────────────────────────────────────────────────────
+     Ascending, 1..11. Steps 1..6 are the text range and 7..11 the display
+     range; the old names map straight across:
+       1 xs · 2 sm · 3 base · 4 md · 5 lg · 6 xl
+       7 display-xs · 8 display-sm · 9 display-md · 10 display-lg · 11 display-xl
+     Values are unchanged, so nothing reflows from the renumber alone. */
+  --fs-1: 0.8rem;
+  --fs-2: 0.9rem;
+  --fs-3: 1rem;
+  --fs-4: 1.2rem;
+  --fs-5: 1.4rem;
+  --fs-6: 1.6rem;
+  --fs-7: clamp(1.2rem, 2vw, 1.45rem);
+  --fs-8: clamp(1.5rem, 3vw, 2.1rem);
+  --fs-9: clamp(2rem, 4vw, 3rem);
+  --fs-10: clamp(2.4rem, 5vw, 4rem);
+  --fs-11: clamp(3.5rem, 10vw, 8rem);
+
+  /* ── Spacing scale ──────────────────────────────────────────────────────────
+     Thirteen steps, ascending. Derived from an audit of the 719 spacing
+     literals that preceded it, not from a generic 4px grid: the ten values the
+     system actually leaned on (0.25 / 0.5 / 0.75 / 1 / 1.25 / 1.5 / 2 / 2.5 /
+     3 / 4rem, 407 sites between them) are all present at their exact former
+     size, so most of the migration was a pure rename. The rest snapped, under
+     a rule of no more than 0.25rem and no more than 25% of movement — 16 sites
+     failed that test and were left as literals rather than silently resized. */
+  --space-1: 0.25rem;
+  --space-2: 0.375rem;
+  --space-3: 0.5rem;
+  --space-4: 0.75rem;
+  --space-5: 1rem;
+  --space-6: 1.25rem;
+  --space-7: 1.5rem;
+  --space-8: 2rem;
+  --space-9: 2.5rem;
+  --space-10: 3rem;
+  --space-11: 4rem;
+  --space-12: 6rem;
+  --space-13: 8rem;
+
+  /* Two component metrics the ramp deliberately excludes, because snapping
+     them would move real chrome: the card interior pad and the tall section
+     band. Named so they read as decisions rather than magic numbers. */
+  --space-card: 1.4rem;
+  --space-band-lg: 3.5rem;
+
+  /* ── Measure scale ──────────────────────────────────────────────────────────
+     The scale the system was missing. Type and spacing were tokenised; page
+     geometry never was, so ten containers each invented their own cap and
+     gutter (1600/2.5rem, 1600/5vw, 1060/10vw, 680/10vw, 1152/1.5rem, 1200/
+     2.5rem, 760/0 …) and drifted apart. .page-body ended up sitting 96px right
+     of the homepage's bands, which is what a reader actually sees when they go
+     from / to /resources/.
+
+     --gutter-min is the floor: the rail's own footprint plus a step, so no band
+     can ever put text under the golden thread. --gutter adds a proportional
+     term on top for content bands, so wide displays get real margin rather
+     than a 3000px line length. Chrome that is not a content band (the footer's
+     three-column grid, the disclaimer strip) takes --gutter-min directly.
+
+     --rail-total comes from _sidebar-rail.scss. Custom properties resolve at
+     computed-value time, so the forward reference is fine; the 0px fallback is
+     for a consumer that ships without the rail. */
+  --gutter-min: calc(var(--rail-total, 0px) + var(--space-10));
+  --gutter: max(10vw, var(--gutter-min));
+
+  /* The right gutter is normally the same number. It exists as its own token
+     only so the phone band can drop the rail term from it — the rail is on the
+     LEFT, so reserving its footprint on the right is 56px of nothing. See the
+     phone-band override. */
+  --gutter-r: var(--gutter);
+  --gutter-min-r: var(--gutter-min);
+
+  /* ── Convention: grid tracks are written minmax(0, 1fr), never a bare 1fr ──
+     A bare `1fr` means `minmax(auto, 1fr)`, and that `auto` minimum is the grid
+     ITEM's min-content width. So one unbreakable child — a tracked-caps tag, a
+     3.5rem numeral, a nowrap table, a max-content button column — silently
+     widens its track past the container, and the whole page with it.
+
+     This site never shows a horizontal scrollbar, because `html` is
+     `overflow-x: clip` further down this file. The excess is cut off invisibly
+     instead. That is why the same defect reached production six times before
+     the 2026-08-18 audit found it, and why phone-band single-column overrides
+     are where it bites hardest: the override is exactly the place a bare `1fr`
+     hands the content its floor back.
+
+     A 0 minimum costs nothing when the content fits and leaves an oversized
+     child to overflow its own box, where a local `overflow-x: auto` can catch
+     it (see `.post-body table` in _essay.scss). Every
+     `grid-template-columns` in this package carries the 0 minimum. Keep it. */
+
+  /* Content caps, used with the page-band mixin below. These bound the TEXT,
+     not the element — the mixin keeps the gutter outside the cap. */
+  --measure-prose: 680px; // single-column reading
+  --measure-doc: 72rem; // documents and specs
+  --measure-page: 1600px; // wide index and grid pages
+
+  /* ── Radius scale ───────────────────────────────────────────────────────────
+     Ascending, in px on purpose: a corner radius is a fixed optical detail, not
+     rhythm, so it should not scale with the root font the way --space-* does.
+     Values come from an audit of the 65 border-radius literals that preceded
+     the scale — 2px, 3px and 4px alone account for 54 of them, which is why the
+     low end is spaced one pixel at a time. --radius-round is the 50% pill and
+     circle case, kept out of the ramp because it is a shape, not a size. */
+  --radius-1: 2px;
+  --radius-2: 3px;
+  --radius-3: 4px;
+  --radius-4: 8px;
+  --radius-5: 20px;
+  --radius-round: 50%;
+
+  /* ── Elevation scale ────────────────────────────────────────────────────────
+     Shadow carries elevation, per Material's rule that lightness does the work
+     in dark mode and shadow does it in light. --shadow is themed, so these
+     re-resolve per palette. Pair each with the matching --surface-N step; the
+     elevation-* mixins below do exactly that. */
+  --elev-0: none;
+  --elev-1: 0 1px 3px var(--shadow);
+  --elev-2: 0 2px 8px var(--shadow);
+  --elev-3: 0 2px 12px var(--shadow);
+  --elev-4: 0 4px 16px var(--shadow);
+  --elev-5: 0 24px 60px var(--shadow);
+
+  /* ── Line-height, weight, measure ───────────────────────────────────────────
+     Previously literals at every call site. lh-3 is body copy (was the bare
+     1.75 on body). */
+  --lh-1: 1;
+  --lh-2: 1.35;
+  --lh-3: 1.75;
+  --lh-4: 1.85;
+
+  /* Outside the ramp, on the same principle as --space-card and --space-band-lg:
+     a real metric the four steps cannot express. Display type wraps to two or
+     three lines and --lh-1 (1) would let them touch, while --lh-2 (1.35) is
+     visibly loose at 4rem. The ramp is under-specified at the tight end and
+     restructuring it moves text on every page, so this is named rather than
+     wedged in. */
+  --lh-display: 1.12;
+
+  /* Five steps. 600 was the missing one — 23 call sites wrote it as a literal
+     because the scale stopped at 500 and jumped to 700.
+     ⚠ Weight is a font capability, not a free numeric axis. Asking for a cut a
+     family does not ship gets a synthesised smear, not a lighter or heavier
+     face. Against the five self-hosted families in the consuming site:
+       --font-body  (Lora)  ships 400 500 600 700 — fw-1 (300) synthesises
+       --font-sans  (Inter) ships 300 400 500 600 — fw-5 (700) synthesises
+       --font-mono  (JetBrains Mono) ships 400 only
+     So a sans element must not reach past --fw-4, and a serif element must not
+     reach below --fw-2. The type levels below respect both bounds. */
+  --fw-1: 300;
+  --fw-2: 400;
+  --fw-3: 500;
+  --fw-4: 600;
+  --fw-5: 700;
+
+  /* ── Tracking ───────────────────────────────────────────────────────────────
+     Paired with the five type levels, not with --fs-*. Type set large has
+     proportionally more space between its letters than the same face set small,
+     so tracking has to tighten as size rises for the setting to look even.
+     Level 1 is the opposite case and the only positive value: it is the
+     uppercase eyebrow, and caps at 0.8rem close up without help.
+
+     These are base values. The type levels add --ls-optical on top, which is
+     themed — see _tokens.scss. Every step carries a unit, including the zero,
+     because calc() rejects `0 + 0.006em` as a type mismatch.
+
+     Defining these does not migrate the 126 letter-spacing literals still in
+     the stylesheets. Those are a census-and-snap pass of their own. */
+  --ls-1: 0.14em;
+  --ls-2: 0.01em;
+  --ls-3: 0em;
+  --ls-4: -0.015em;
+  --ls-5: -0.03em;
+
+  /* ── Stacking ───────────────────────────────────────────────────────────────
+     Five steps at 100 apart, widening, plus the two cases a ramp cannot say.
+     --z-under is the decorative pseudo-element that sits behind its own parent
+     (12 sites, all ::before textures and gradient washes). --z-escape is the
+     safety exit and the skip link: they must clear every other layer including
+     anything a third-party embed sets, so they sit far above the ramp rather
+     than one step up. Leaving a gap there is the point.
+
+     Defining these does not migrate the 28 z-index literals still in the
+     stylesheets. Same reason as tracking. */
+  --z-under: -1;
+  --z-1: 100;
+  --z-2: 200;
+  --z-3: 300;
+  --z-4: 500;
+  --z-5: 800;
+  --z-escape: 10000;
+
+  --measure: 68ch; // readable line length for prose columns
 
   /* ── Font families ──────────────────────────────────────────────────────────
      Custom-property mirrors of the SCSS variables in _typography.scss. The SCSS
@@ -51,7 +254,6 @@
 
   @include dark-tokens;
 }
-
 
 /* Phones drop the proportional term to 6vw and tighten the floor. --rail-x
    goes to 0 down here (see _sidebar-rail.scss), so the floor is the strip
@@ -194,7 +396,7 @@ a {
   @include scallop-recessed-dark($accent);
 
   @include light-mode {
-    background-image: scallop-recessed-url('A5946F', 0.12);
+    background-image: scallop-recessed-url('7A6028', 0.12);
   }
 }
 
@@ -211,7 +413,7 @@ a {
   @include scallop-standard-dark($accent);
 
   @include light-mode {
-    background-image: scallop-standard-url('A5946F', 0.14);
+    background-image: scallop-standard-url('7A6028', 0.14);
   }
 }
 
@@ -237,7 +439,7 @@ a {
   @include scallop-elevated-dark($accent, $prefix);
 
   @include light-mode {
-    $-svg-light: scallop-elevated-url('A5946F', 0.16);
+    $-svg-light: scallop-elevated-url('7A6028', 0.16);
 
     @if $prefix !=null {
       background-image: $prefix, $-svg-light;
@@ -412,7 +614,7 @@ a {
   @include snakeskin-dark($accent);
 
   @include light-mode {
-    background-image: snakeskin-url('A5946F', 0.16);
+    background-image: snakeskin-url('7A6028', 0.16);
   }
 }
 

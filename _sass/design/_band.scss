@@ -28,7 +28,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: #0D0D0D; // fallback under the black-marble raster (site main.scss)
+  background-color: var(--surface-marble); // fallback under the black-marble raster (site main.scss)
   margin: -6rem -10vw var(--space-10);
   padding: 4.5rem 10vw var(--space-9);
   border-top: 1px solid rgba(177, 147, 93, 0.22);
