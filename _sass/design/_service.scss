@@ -543,7 +543,7 @@
 // consuming site's main.scss (asset lives there).
 @mixin marble-band {
   @include dark-island;
-  background-color: #0D0D0D;
+  background-color: var(--surface-marble);
   border-top: 1px solid rgba(177, 147, 93, 0.22);
   border-bottom: 1px solid rgba(177, 147, 93, 0.22);
   // The pull is capped at the gutter it is cancelling. --gutter-r drops the

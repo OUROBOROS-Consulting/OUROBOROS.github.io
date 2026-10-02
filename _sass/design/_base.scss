@@ -238,7 +238,8 @@
      the package. --font-mono was previously a literal 'JetBrains Mono' repeated
      at four call sites with no fallback chain. */
   --font-body: #{$font-syne};
-  --font-sans: #{$font-sans};
+  --font-sans: #{$font-syne};
+  --font-heading: #{$font-heading};
   --font-serif: #{$font-serif};
   --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
@@ -582,7 +583,7 @@ a {
       inset: -7%;
       // Fixed, not a token: this is a dark plate inside a light theme, so it
       // must not follow the active surface ramp. Matches --surface-2 dark.
-      background-color: #1a1d26;
+      @include dark-island;
       // No border. clip-path takes the border box with it, so a hex with an
       // outline clips its own outline off.
       clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);

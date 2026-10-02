@@ -33,6 +33,10 @@
   --surface-2: #1a1d26;
   --surface-3: #22262f;
   --surface-4: #252831;
+  // Hero surfaces — photographic/marble backdrops that don't flip with theme.
+  --surface-hero: #1e213e;
+  --surface-hero-deep: #0F1638; // Used for the homepage hero specifically
+  --surface-marble: #0D0D0D;    // Black marble raster fallback
   // ⚠ INK-ONLY surface. The dark accent palette is at its contrast ceiling:
   // --steel caps a 4.5:1 surface at luminance 0.02432 and --surface-4 already
   // sits at 0.02133, so this step spends the remaining headroom. Ink clears

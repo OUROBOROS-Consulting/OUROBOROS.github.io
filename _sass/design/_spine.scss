@@ -107,7 +107,7 @@
 @mixin spine-lit {
   .spine-wave {
     opacity: 1;
-    filter: drop-shadow(0 6px 14px rgba(201, 168, 76, 0.5));
+    filter: drop-shadow(0 6px 14px color-mix(in srgb, var(--mark), transparent 50%));
     transform: scale(1.05);
   }
 
@@ -159,7 +159,7 @@
   z-index: 1;
   padding: var(--space-3) var(--space-5);
   color: var(--mark);
-  background: rgba(20, 20, 20, 0.92);
+  background: color-mix(in srgb, var(--surface-1), transparent 8%);
   backdrop-filter: blur(12px);
   // One rule, on the edge nearest the thread. The plaque reads as something the
   // thread pushed out of the strip, not as a tooltip that arrived from

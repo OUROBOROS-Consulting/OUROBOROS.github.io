@@ -679,9 +679,9 @@
   padding: var(--space-8) 0;
 }
 
-// ── Nav links: Cormorant SC small caps ─────────────────────────────────
+// ── Nav links: Syne (Sans) ─────────────────────────────────────────────
 .nav-links a {
-  font-family: 'Cormorant SC', Georgia, serif;
+  font-family: var(--font-sans);
   letter-spacing: 0.08em;
 }
 
