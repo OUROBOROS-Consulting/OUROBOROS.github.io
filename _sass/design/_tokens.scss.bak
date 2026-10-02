@@ -1,0 +1,187 @@
+// ── Design System Tokens (Material-Inspired) ───────────────────────────────
+// This partial provides all fundamental design tokens as Sass mixins.
+// These mixins emit CSS Custom Properties that are consumed in :root via _base.scss.
+
+@mixin color-tokens {
+  // Dark Palette
+  --surface-1: #0c101a;
+  --surface-2: #1a1d26;
+  --surface-3: #22262f;
+  --surface-4: #252831;
+  --surface-5: #2b2f39;
+  --surface-hero: #1e213e;
+  --surface-hero-deep: #0F1638;
+  --surface-marble: #0D0D0D;
+
+  --line-1: #22262f;
+  --line-2: #2b3038;
+  --line-3: #30343e;
+  --line-4: #3d424e;
+
+  --ink-1: #999999;
+  --ink-2: #B0AAA0;
+  --ink-3: #E8E4DC;
+  --ink-4: #FFFFFF;
+
+  --mark: #b39f7b;
+  --mark-dim: rgba(201, 168, 76, 0.35);
+  --mark-ghost: rgba(201, 168, 76, 0.12);
+  --mark-border: #b39f7b;
+  --mark-strong: #c9b48d;
+
+  // Accents (Categorical)
+  --accent-1: var(--mark);
+  --accent-2: #A284CA; // Amethyst
+  --accent-3: #6DA187; // Sage
+  --accent-4: #5DA19C; // Teal
+  --accent-5: #7F94A6; // Steel
+
+  // Specialty items
+  --snake-opacity: 0.4;
+  --snake-filter: none;
+  --tick-soft-opacity: 0.55;
+  --shadow: #06080d;
+}
+
+@mixin light-tokens {
+  // Light Palette (Cool navy tint)
+  --surface-1: #E7EAF0;
+  --surface-2: #EFF1F5;
+  --surface-3: #F5F7FA;
+  --surface-4: #FCFDFE;
+  --surface-5: #FFFFFF;
+
+  --line-1: #E1E4EC;
+  --line-2: #D4D8E2;
+  --line-3: #C7CBD6;
+  --line-4: #B3B8C6;
+
+  --ink-1: #535971;
+  --ink-2: #3D4353;
+  --ink-3: #34394A;
+  --ink-4: #1C2029;
+
+  --mark: #7A6028;
+  --mark-dim: rgba(122, 96, 40, 0.35);
+  --mark-ghost: rgba(122, 96, 40, 0.12);
+  --mark-border: #8A7550;
+  --mark-strong: #523F15;
+
+  // Accent mappings for consistency in light mode
+  --accent-1: var(--mark);
+  --accent-2: #6B4F94; // Amethyst light
+  --accent-3: #38624C; // Sage light
+  --accent-4: #295F5A; // Teal light
+  --accent-5: #4A5A68; // Steel light
+
+  --snake-opacity: 0.8;
+  --snake-filter: brightness(0.45) saturate(1.4);
+  --tick-soft-opacity: 0.85;
+  --shadow: rgba(28, 32, 41, 0.18);
+}
+
+@mixin spacing-scale-tokens {
+  // ── Material Design 8dp Grid Scale ─────────────────────────────────────────
+  // Using a strictly mathematical progression for predictable rhythm.
+  --space-xs: 0.25rem; // 4px
+  --space-s:  0.5rem;  // 8px
+  --space-m:  1rem;    // 16px
+  --space-l:  1.5rem;  // 24px
+  --space-xl: 2rem;    // 32px
+  --space-xxl: 3rem;   // 48px
+  --space-xxxl: 4rem;  // 64px
+  --space-huge: 6rem;  // 96px
+  --space-massive: 8rem; // 128px
+
+  // Legacy aliases (to prevent breaking sites during migration)
+  --space-1: var(--space-xs);
+  --space-2: var(--space-s);
+  --space-3: var(--space-m);
+  --space-4: var(--space-l);
+  --space-5: var(--space-xl);
+  --space-6: var(--space-xxl);
+  --space-7: var(--space-xxxl);
+  --space-8: var(--space-huge);
+  --space-9: var(--space-massive);
+  --space-10: 4rem; 
+}
+
+@mixin typography-scale-tokens {
+  // ── Font Size Scale (Modular) ───────────────────────────────────────────────
+  --fs-xs: 0.75rem;
+  --fs-s:  0.875rem;
+  --fs-m:  1rem;
+  --fs-l:  1.25rem;
+  --fs-xl: 1.5rem;
+  --fs-xxl: 2rem;
+  --fs-xxxl: 3rem;
+
+  // Existing semantic names mapped to the new scale for compatibility
+  --fs-1: var(--fs-s);
+  --fs-2: var(--fs-m);
+  --fs-3: var(--fs-l);
+  --fs-4: var(--fs-xl);
+  --fs-5: var(--fs-xxl);
+  --fs-6: var(--fs-xxxl);
+
+  // Display scale (using clamp for responsiveness)
+  --fs-h1: clamp(2.5rem, 8vw, 3.5rem);
+  --fs-h2: clamp(2rem, 6vw, 2.75rem);
+  --fs-h3: clamp(1.75rem, 4vw, 2.25rem);
+  --fs-h4: 1.5rem;
+  --fs-h5: 1.25rem;
+  --fs-h6: 1rem;
+
+  // Line heights
+  --lh-tight: 1.1;
+  --lh-base: 1.5;
+  --lh-relaxed: 1.75;
+}
+
+@mixin layout-tokens {
+  // ── Grid & Container Tokens ────────────────────────────────────────────────
+  --gutter-min: 1.5rem; // Standardized minimum gutter
+  --gutter: max(8vw, var(--gutter-min));
+  --gutter-r: var(--gutter);
+
+  // Measure (Max Content Widths)
+  --measure-prose: 65ch;
+  --measure-page: 1440px;
+}
+
+@mixin radius-scale-tokens {
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 16px;
+  --radius-round: 50%;
+}
+
+@mixin elevation-scale-tokens {
+  --elev-0: none;
+  --elev-1: 0 2px 4px var(--shadow);
+  --elev-2: 0 4px 8px var(--shadow);
+  --elev-3: 0 8px 16px var(--shadow);
+  --elev-4: 0 16px 32px var(--shadow);
+}
+
+@mixin zindex-scale-tokens {
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-modal: 500;
+  --z-escape: 10000;
+}
+
+// Theme wrappers (Existing patterns preserved)
+@mixin dark-island {
+  @include color-tokens;
+  color: var(--ink-3);
+}
+
+@mixin light-mode {
+  @media (prefers-color-scheme: light) {
+    :root:not([data-theme="dark"]) & { @include light-tokens; }
+  }
+  :root[data-theme="light"] & { @include light-tokens; }
+}
