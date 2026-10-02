@@ -2,52 +2,57 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-01
+generated: 2026-10-02
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "OpenAI’s Medicare attack has exposed Australia’s ‘tech debt’. Fixing it could bring a big bill for taxpayers"
+        url: "https://www.theguardian.com/australia-news/2026/oct/03/openais-medicare-attack-has-exposed-australias-tech-debt-fixing-it-could-bring-a-big-bill-for-taxpayers"
+        source: "The Guardian"
+        date: 2026-10-02
+        summary: "Home affairs department orders all federal government agencies to conduct review of ‘legacy technology’ amid fallout from AI agent hacks Get our breaking news email , free app or daily news podcast The Australian..."
+      - title: "We don’t need to panic about AI. We need to hold its creators accountable when things go wrong | John Quiggin"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/02/we-dont-need-to-panic-about-ai-we-need-to-hold-its-creators-accountable"
+        source: "The Guardian"
+        date: 2026-10-02
+        summary: "If a chatbot prompt like ‘find Australian medicine statistics’ results in a website breach, the responsibility does not lie with a piece of code The recent panic about a breach of Medicare computer security by an “AI..."
+      - title: "Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search"
+        url: "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/"
+        source: "Ars Technica"
+        date: 2026-10-01
+        summary: "The court acknowledges AI search comes with consequences, but it's not an antitrust issue."
+      - title: "California issues investigative subpoena to OpenAI over rogue agents’ hacking"
+        url: "https://www.theguardian.com/us-news/2026/oct/01/california-opens-investigation-openai-hack"
+        source: "The Guardian"
+        date: 2026-10-01
+        summary: "State attorney general issues subpoena to OpenAI as ​part of broader inquiry into potential security vulnerabilities California’s attorney general has issued an investigative subpoena to OpenAI, starting an..."
+      - title: "Google rolls out new Gemini AI model but restricts access over safety concerns"
+        url: "https://www.theguardian.com/technology/2026/oct/01/google-releases-gemini-model-restrictions"
+        source: "The Guardian"
+        date: 2026-10-01
+        summary: "Tech company releases Gemini 4 Argon only to a vetted group of cybersecurity experts to avoid misuse by hackers Google on Wednesday said it would withhold its most powerful artificial intelligence model from the public..."
       - title: "Anthropic pushes for opt-out model for Australian content as ABC warns of ‘cannibalisation’ of news"
         url: "https://www.theguardian.com/technology/2026/oct/02/anthropic-ai-opt-out-australia-copyright-abc-cannibalisation-of-news"
         source: "The Guardian"
         date: 2026-10-01
-        summary: "Maker of Claude claims AI could transform economy but ABC and SBS say the technology should be subject to media regulations Get our new political email , free app or daily news podcast AI giant Anthropic has urged the..."
+        summary: "Maker of Claude claims AI could transform economy but ABC and SBS say the technology should be subject to media regulations Follow our Australia news live blog for latest updates Get our new political email , free app..."
       - title: "Steve Hilton, Xavier Becerra clash in testy California governor’s race debate"
         url: "https://www.theguardian.com/us-news/2026/oct/01/steve-hilton-xavier-becerra-clash-california-governor-race-debate"
         source: "The Guardian"
         date: 2026-10-01
         summary: "The candidates running to replace Gavin Newsom sparred over taxes, immigration and regulating AI Xavier Becerra and Steve Hilton , the candidates running to be California ’s next governor, clashed on Wednesday over..."
-      - title: "Gavin Newsom signs laws to protect California workers from AI threat"
-        url: "https://www.theguardian.com/us-news/2026/sep/30/gavin-newsom-california-ai-threat"
-        source: "The Guardian"
-        date: 2026-10-01
-        summary: "Democratic governor sharply critical of Donald Trump for not passing comprehensive federal AI regulations Governor Gavin Newsom signed laws on Wednesday aimed at protecting California workers from the threats of..."
       - title: "Trump plan to combat AI risks hinges on Big Tech pals policing themselves"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-plan-to-combat-ai-risks-hinges-on-big-tech-pals-policing-themselves/"
         source: "Ars Technica"
         date: 2026-09-30
         summary: "Trump gets dozens of AI firms to agree to voluntary safety tests."
-      - title: "US trade regulator opens investigation into AI giants including Anthropic and OpenAI"
-        url: "https://www.theguardian.com/us-news/2026/sep/30/ftc-investigation-anthropic-openai"
-        source: "The Guardian"
-        date: 2026-09-30
-        summary: "FTC move is first official US enforcement ⁠action on rogue AI agents, following surge in incidents first reported in July The US’s main trade regulator is conducting an industry-wide investigation ⁠into Anthropic..."
       - title: "\"An AI did it\" is no defense, says nonprofit suing OpenAI over Hugging Face hack"
         url: "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/"
         source: "Ars Technica"
         date: 2026-09-30
         summary: "OpenAI makes others suffer \"the harms of its unsafe decision-making,\" nonprofit says."
-      - title: "Senate Democrats block datacenter energy bill, saying ‘toothless’ legislation ‘misses the mark’"
-        url: "https://www.theguardian.com/us-news/2026/sep/30/senate-datacenter-energy-bill"
-        source: "The Guardian"
-        date: 2026-09-30
-        summary: "Republicans supported legislation although Democrats said it wouldn’t effectively address energy consumption Senate Democrats on Wednesday blocked legislation intended to offset the impact of datacenters on consumer..."
-      - title: "AI tool that copied actor’s ‘lustrous’ voice violated his rights, Tokyo court rules"
-        url: "https://www.theguardian.com/technology/2026/sep/30/ai-tool-copied-actor-kenjiro-tsuda-tokyo-court"
-        source: "The Guardian"
-        date: 2026-09-30
-        summary: "Kenjiro Tsuda wins case against TikTok account in landmark Japanese verdict to protect publicity rights A court in Japan has ruled that the human voice has legal protection after a landmark case involving a well-known..."
       - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
         url: "https://www.technologyreview.com/2026/09/28/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
         source: "MIT Technology Review"
@@ -58,20 +63,20 @@ sections:
         source: "Ars Technica"
         date: 2026-09-28
         summary: "US Government websites among \"dozens of third parties\" OpenAI has recently notified."
-      - title: "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features"
-        url: "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/"
-        source: "Ars Technica"
+      - title: "The Pentagon wants $30 million to build an AI-powered lie detector"
+        url: "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
+        source: "MIT Technology Review"
         date: 2026-09-25
-        summary: "\"Overly constrained AI models\" could cause military operations to fail, judges say."
-      - title: "Tesla workers balk at training Optimus humanoid robots as replacements"
-        url: "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/"
-        source: "Ars Technica"
-        date: 2026-09-25
-        summary: "Despite challenges, Tesla aims for 1,000 Optimus robots per week by end of 2026."
+        summary: "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Tesco is first supermarket to offer paid ‘safe leave’ for victims of domestic abuse"
+        url: "https://www.theguardian.com/business/2026/oct/02/tesco-supermarket-paid-safe-leave-domestic-abuse"
+        source: "The Guardian"
+        date: 2026-10-02
+        summary: "Exclusive: Britain’s largest private-sector employer has also trained managers to spot signs of domestic abuse Tesco has become the first supermarket to introduce paid “safe leave” for victims of domestic abuse, giving..."
       - title: "‘Just like that, I lost my girls’: the mother who feels betrayed by the family courts"
         url: "https://www.theguardian.com/society/2026/sep/29/mother-feels-betrayed-family-courts-parental-alienation-england-wales"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-20
         summary: "Exclusive: Midwifery leaders call for more support and training as analysis reveals scale of disclosures About 20,000 disclosures of domestic abuse are estimated to be made to maternity services in England every year..."
-      - title: "New report reveals prevalence of physical and sexual violence in US"
-        url: "https://www.theguardian.com/us-news/2026/sep/16/physical-sexual-violence-study-us"
-        source: "The Guardian"
-        date: 2026-09-16
-        summary: "Study finds more than half of US adults have experienced physical violence and nearly half sexual violence In their lifetime, more than half of US adults have experienced physical violence – and nearly half have..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "When open data are misused"
+        url: "https://retractionwatch.com/2026/10/01/openneuro-dataset-fmri-brain-data-misuse/"
+        source: "Retraction Watch"
+        date: 2026-10-01
+        summary: "When Dorothy Bishop was asked to review a paper for a small neuroscience journal in August, she could tell from the abstract the authors had used a dataset she had first published four years ago on the public repository..."
       - title: "Journal investigating paper on heart device with registration number for wrong trial"
         url: "https://retractionwatch.com/2026/09/30/journal-investigating-paper-on-heart-device-with-registration-number-for-wrong-trial/"
         source: "Retraction Watch"
@@ -161,21 +166,11 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-22
         summary: "Science of the Total Environment (STOTEN) has retracted 165 papers this year, most for “suspicious” changes in authorship or editorial conflicts of interest. The retractions have come after STOTEN was delisted from..."
-      - title: "Misconduct case dropped against AI expert after claims of AI use in recent book"
-        url: "https://retractionwatch.com/2026/09/21/misconduct-case-dropped-against-ai-expert-after-claims-of-ai-use-in-recent-book/"
-        source: "Retraction Watch"
-        date: 2026-09-21
-        summary: "Sweden’s national committee on research misconduct has dismissed a case against an expert in the social ramifications of artificial intelligence following allegations her recent book contained hallucinated references..."
       - title: "Watch: The New Supreme Court"
         url: "https://www.propublica.org/article/supreme-court-shadow-docket-explainer"
         source: "ProPublica"
         date: 2026-09-21
         summary: "The post Watch: The New Supreme Court appeared first on ProPublica ."
-      - title: "Judge Denies Efforts to End Oversight of Maricopa County Sheriff’s Office as Racial Profiling of Latinos Persists"
-        url: "https://www.propublica.org/article/maricopa-county-sheriff-oversight-judge-ruling"
-        source: "ProPublica"
-        date: 2026-09-18
-        summary: "The post Judge Denies Efforts to End Oversight of Maricopa County Sheriff’s Office as Racial Profiling of Latinos Persists appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -185,6 +180,11 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-30
         summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
+      - title: "Senator Markey Introduces Bill to Stop the Government’s Use of Face Surveillance and Other Biometric Surveillance Tech"
+        url: "https://epic.org/senator-markey-introduces-bill-to-stop-the-governments-use-of-face-surveillance-and-other-biometric-surveillance-tech/"
+        source: "EPIC"
+        date: 2026-09-30
+        summary: "Senators Markey and Merkley along with Reps. Jaypal, Pressley, and Tlaib introduced legislation to stop the government’s use of biometric surveillance, including facial recognition tools. The Facial Recognition and..."
       - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
         url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
         source: "EFF Deeplinks"
@@ -230,11 +230,6 @@ sections:
         source: "EPIC"
         date: 2026-09-23
         summary: "“The Electronic Privacy Information Center, on the other hand, told the justices that Paramount (and other online-video companies) is ‘not under any obligation to use these [targeted] systems, and it can adopt more..."
-      - title: "EPIC Urges Third Circuit to Uphold Pennsylvania’s Protections Against Posting Voter Data Online"
-        url: "https://epic.org/epic-urges-third-circuit-to-uphold-pennsylvanias-protections-against-posting-voter-data-online/"
-        source: "EPIC"
-        date: 2026-09-23
-        summary: "Today, EPIC filed an amicus brief in the Third Circuit case Voter Reference Foundation v. Schmidt urging the Court to uphold Pennsylvania’s rule barring people who obtain the state’s voter registration lists from..."
       - title: "Data Broker Radaris Loses Domains in Privacy Fight"
         url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
         source: "Krebs on Security"
