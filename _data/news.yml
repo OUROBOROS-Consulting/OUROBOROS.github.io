@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-02
+generated: 2026-10-03
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "California’s new laws target workers’ biggest fear of AI taking their jobs"
+        url: "https://www.theguardian.com/technology/2026/oct/03/california-ai-laws-worker-protection"
+        source: "The Guardian"
+        date: 2026-10-03
+        summary: "The state, which is home to many AI companies, is one of the first to roll out workplace regulations targeting the technology California’s laws aimed at protecting workers from the impacts of artificial intelligence..."
+      - title: "OpenAI says its review into hacks, including on Australian government sites, is costing $500,000 a day"
+        url: "https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day"
+        source: "The Guardian"
+        date: 2026-10-03
+        summary: "Company says it is reviewing 50 petabytes of data after its agents accessed websites including Medicare without authorisation Get our breaking news email , free app or daily news podcast OpenAI says its review in..."
       - title: "OpenAI’s Medicare attack has exposed Australia’s ‘tech debt’. Fixing it could bring a big bill for taxpayers"
         url: "https://www.theguardian.com/australia-news/2026/oct/03/openais-medicare-attack-has-exposed-australias-tech-debt-fixing-it-could-bring-a-big-bill-for-taxpayers"
         source: "The Guardian"
@@ -33,16 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-01
         summary: "Tech company releases Gemini 4 Argon only to a vetted group of cybersecurity experts to avoid misuse by hackers Google on Wednesday said it would withhold its most powerful artificial intelligence model from the public..."
-      - title: "Anthropic pushes for opt-out model for Australian content as ABC warns of ‘cannibalisation’ of news"
-        url: "https://www.theguardian.com/technology/2026/oct/02/anthropic-ai-opt-out-australia-copyright-abc-cannibalisation-of-news"
-        source: "The Guardian"
-        date: 2026-10-01
-        summary: "Maker of Claude claims AI could transform economy but ABC and SBS say the technology should be subject to media regulations Follow our Australia news live blog for latest updates Get our new political email , free app..."
-      - title: "Steve Hilton, Xavier Becerra clash in testy California governor’s race debate"
-        url: "https://www.theguardian.com/us-news/2026/oct/01/steve-hilton-xavier-becerra-clash-california-governor-race-debate"
-        source: "The Guardian"
-        date: 2026-10-01
-        summary: "The candidates running to replace Gavin Newsom sparred over taxes, immigration and regulating AI Xavier Becerra and Steve Hilton , the candidates running to be California ’s next governor, clashed on Wednesday over..."
       - title: "Trump plan to combat AI risks hinges on Big Tech pals policing themselves"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-plan-to-combat-ai-risks-hinges-on-big-tech-pals-policing-themselves/"
         source: "Ars Technica"
@@ -58,11 +58,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-09-28
         summary: "Listen to the session or watch below The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border..."
-      - title: "OpenAI halts frontier-model training amid string of agent misalignment incidents"
-        url: "https://arstechnica.com/ai/2026/09/openai-halts-frontier-model-training-amid-string-of-agent-misalignment-incidents/"
-        source: "Ars Technica"
-        date: 2026-09-28
-        summary: "US Government websites among \"dozens of third parties\" OpenAI has recently notified."
       - title: "The Pentagon wants $30 million to build an AI-powered lie detector"
         url: "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
         source: "MIT Technology Review"
@@ -136,6 +131,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "‘Hot mess’ paper questioning CO2 and climate change gets retracted"
+        url: "https://retractionwatch.com/2026/10/02/paper-questioning-co2-and-climate-change-retracted/"
+        source: "Retraction Watch"
+        date: 2026-10-02
+        summary: "A paper that called into question many central data linking carbon dioxide to the rapidly warming climate has been retracted for “significant concerns,” including “unsupported conclusions” and “inaccuracies” in the..."
       - title: "When open data are misused"
         url: "https://retractionwatch.com/2026/10/01/openneuro-dataset-fmri-brain-data-misuse/"
         source: "Retraction Watch"
@@ -161,11 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-23
         summary: "While reading a chapter from a 2024 book on restoring biodiversity in post-industrial land earlier this month, an ecologist came across a reference to a study on rewilding she wanted to look up. But the ecologist, who..."
-      - title: "Elsevier journal retracts 100+ papers for authorship issues, editor conflicts of interest"
-        url: "https://retractionwatch.com/2026/09/22/elsevier-journal-retracts-100-papers-for-authorship-issues-editor-conflicts-of-interest/"
-        source: "Retraction Watch"
-        date: 2026-09-22
-        summary: "Science of the Total Environment (STOTEN) has retracted 165 papers this year, most for “suspicious” changes in authorship or editorial conflicts of interest. The retractions have come after STOTEN was delisted from..."
       - title: "Watch: The New Supreme Court"
         url: "https://www.propublica.org/article/supreme-court-shadow-docket-explainer"
         source: "ProPublica"
@@ -175,6 +170,11 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Victory! Court Rejects Government Effort to Dismiss Social Media Surveillance Lawsuit"
+        url: "https://www.eff.org/press/releases/victory-court-rejects-government-effort-dismiss-social-media-surveillance-lawsuit"
+        source: "EFF Deeplinks"
+        date: 2026-10-02
+        summary: "Judge Allows Social Media Surveillance Lawsuit Against Trump Administration to Move Forward NEW YORK — A lawsuit filed by three labor unions against the Departments of State and Homeland Security for their..."
       - title: "Victory! California Appeals Court Refuses to Revive Surveillance Tech CEO’s Meritless Lawsuit Against Journalist"
         url: "https://www.eff.org/deeplinks/2026/09/victory-california-appeals-court-refuses-revive-surveillance-tech-ceos-meritless"
         source: "EFF Deeplinks"
@@ -230,8 +230,3 @@ sections:
         source: "EPIC"
         date: 2026-09-23
         summary: "“The Electronic Privacy Information Center, on the other hand, told the justices that Paramount (and other online-video companies) is ‘not under any obligation to use these [targeted] systems, and it can adopt more..."
-      - title: "Data Broker Radaris Loses Domains in Privacy Fight"
-        url: "https://krebsonsecurity.com/2026/09/data-broker-radaris-loses-domains-in-privacy-fight/"
-        source: "Krebs on Security"
-        date: 2026-09-16
-        summary: "The consumer data broker Radaris.com has long had a reputation for ignoring requests to remove personal information from its vast empire of people-search services online. That reputation caught up with the company..."
