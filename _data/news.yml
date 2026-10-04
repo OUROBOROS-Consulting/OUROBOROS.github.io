@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-03
+generated: 2026-10-04
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Trump names intelligence chief Jay Clayton as new White House AI czar"
+        url: "https://www.theguardian.com/us-news/2026/oct/04/trump-jay-clayton-white-house-ai-czar"
+        source: "The Guardian"
+        date: 2026-10-04
+        summary: "Calyton said AI was a ‘gamechanger’ but it also posed ‘a threat’ during his DNI Senate confirmation hearing Donald Trump on Sunday named Jay Clayton, the director of national intelligence , to serve also as the new..."
+      - title: "OpenAI safety leader quits, warning AI company’s culture is ‘broken’"
+        url: "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken"
+        source: "The Guardian"
+        date: 2026-10-04
+        summary: "David Robinson joins other insiders in urging industry to take more care over rapidly developing technology A safety leader at OpenAI has quit the company, warning that its culture was broken and that AI firms were not..."
       - title: "California’s new laws target workers’ biggest fear of AI taking their jobs"
         url: "https://www.theguardian.com/technology/2026/oct/03/california-ai-laws-worker-protection"
         source: "The Guardian"
@@ -33,16 +43,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-01
         summary: "The court acknowledges AI search comes with consequences, but it's not an antitrust issue."
-      - title: "California issues investigative subpoena to OpenAI over rogue agents’ hacking"
-        url: "https://www.theguardian.com/us-news/2026/oct/01/california-opens-investigation-openai-hack"
-        source: "The Guardian"
-        date: 2026-10-01
-        summary: "State attorney general issues subpoena to OpenAI as ​part of broader inquiry into potential security vulnerabilities California’s attorney general has issued an investigative subpoena to OpenAI, starting an..."
-      - title: "Google rolls out new Gemini AI model but restricts access over safety concerns"
-        url: "https://www.theguardian.com/technology/2026/oct/01/google-releases-gemini-model-restrictions"
-        source: "The Guardian"
-        date: 2026-10-01
-        summary: "Tech company releases Gemini 4 Argon only to a vetted group of cybersecurity experts to avoid misuse by hackers Google on Wednesday said it would withhold its most powerful artificial intelligence model from the public..."
       - title: "Trump plan to combat AI risks hinges on Big Tech pals policing themselves"
         url: "https://arstechnica.com/tech-policy/2026/09/trump-plan-to-combat-ai-risks-hinges-on-big-tech-pals-policing-themselves/"
         source: "Ars Technica"
@@ -180,11 +180,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-30
         summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
-      - title: "Senator Markey Introduces Bill to Stop the Government’s Use of Face Surveillance and Other Biometric Surveillance Tech"
-        url: "https://epic.org/senator-markey-introduces-bill-to-stop-the-governments-use-of-face-surveillance-and-other-biometric-surveillance-tech/"
-        source: "EPIC"
-        date: 2026-09-30
-        summary: "Senators Markey and Merkley along with Reps. Jaypal, Pressley, and Tlaib introduced legislation to stop the government’s use of biometric surveillance, including facial recognition tools. The Facial Recognition and..."
       - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
         url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
         source: "EFF Deeplinks"
@@ -230,3 +225,8 @@ sections:
         source: "EPIC"
         date: 2026-09-23
         summary: "“The Electronic Privacy Information Center, on the other hand, told the justices that Paramount (and other online-video companies) is ‘not under any obligation to use these [targeted] systems, and it can adopt more..."
+      - title: "EPIC Urges Third Circuit to Uphold Pennsylvania’s Protections Against Posting Voter Data Online"
+        url: "https://epic.org/epic-urges-third-circuit-to-uphold-pennsylvanias-protections-against-posting-voter-data-online/"
+        source: "EPIC"
+        date: 2026-09-23
+        summary: "Today, EPIC filed an amicus brief in the Third Circuit case Voter Reference Foundation v. Schmidt urging the Court to uphold Pennsylvania’s rule barring people who obtain the state’s voter registration lists from..."
