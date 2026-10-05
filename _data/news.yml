@@ -2,17 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-04
+generated: 2026-10-05
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Trump names intelligence chief Jay Clayton as new White House AI czar"
-        url: "https://www.theguardian.com/us-news/2026/oct/04/trump-jay-clayton-white-house-ai-czar"
+      - title: "The Guardian view on sexual abuse in schools: teachers cannot deal with this alone | Editorial"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/05/the-guardian-view-on-sexual-abuse-in-schools-teachers-cannot-deal-with-this-alone"
         source: "The Guardian"
-        date: 2026-10-04
-        summary: "Calyton said AI was a ‘gamechanger’ but it also posed ‘a threat’ during his DNI Senate confirmation hearing Donald Trump on Sunday named Jay Clayton, the director of national intelligence , to serve also as the new..."
+        date: 2026-10-05
+        summary: "Politicians must redouble their efforts to tackle a disturbing pattern of pupils assaulting classmates The Guardian’s findings about the extent of sexual abuse in schools require an urgent, calibrated response. Data..."
+      - title: "AI glasses face their first major government crackdown"
+        url: "https://arstechnica.com/ai/2026/10/ai-glasses-face-their-first-major-government-crackdown/"
+        source: "Ars Technica"
+        date: 2026-10-05
+        summary: "Norway wants time to write permanent rules for glasses that can record bystanders."
+      - title: "Accept ‘bad things’ in return for benefits of AI, says Sam Altman"
+        url: "https://www.theguardian.com/technology/2026/oct/05/sam-altman-open-ai-chatgpt-benefits-risks"
+        source: "The Guardian"
+        date: 2026-10-05
+        summary: "Boss of OpenAI calls for a regulatory light touch because of the ‘good stuff’ the technology can deliver Sam Altman says he believes the world should accept “bad things” happening with AI in exchange for the benefits of..."
+      - title: "﻿The UK’s G20 presidency will push Andy Burnham to the centre of the global stage. What will he use it for? | Michael Jacobs"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/05/uk-g20-presidency-andy-burnham-global-stage-technology-food-climate-economy"
+        source: "The Guardian"
+        date: 2026-10-05
+        summary: "This is a chance for the PM to advance his progressive agenda and tackle urgent issues such as AI regulation and climate action Among the many crucial decisions Andy Burnham has to make over the next few weeks, one has..."
       - title: "OpenAI safety leader quits, warning AI company’s culture is ‘broken’"
         url: "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken"
         source: "The Guardian"
@@ -28,16 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-03
         summary: "Company says it is reviewing 50 petabytes of data after its agents accessed websites including Medicare without authorisation Get our breaking news email , free app or daily news podcast OpenAI says its review in..."
-      - title: "OpenAI’s Medicare attack has exposed Australia’s ‘tech debt’. Fixing it could bring a big bill for taxpayers"
-        url: "https://www.theguardian.com/australia-news/2026/oct/03/openais-medicare-attack-has-exposed-australias-tech-debt-fixing-it-could-bring-a-big-bill-for-taxpayers"
-        source: "The Guardian"
-        date: 2026-10-02
-        summary: "Home affairs department orders all federal government agencies to conduct review of ‘legacy technology’ amid fallout from AI agent hacks Get our breaking news email , free app or daily news podcast The Australian..."
-      - title: "We don’t need to panic about AI. We need to hold its creators accountable when things go wrong | John Quiggin"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/02/we-dont-need-to-panic-about-ai-we-need-to-hold-its-creators-accountable"
-        source: "The Guardian"
-        date: 2026-10-02
-        summary: "If a chatbot prompt like ‘find Australian medicine statistics’ results in a website breach, the responsibility does not lie with a piece of code The recent panic about a breach of Medicare computer security by an “AI..."
       - title: "Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search"
         url: "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/"
         source: "Ars Technica"
@@ -58,15 +63,20 @@ sections:
         source: "MIT Technology Review"
         date: 2026-09-28
         summary: "Listen to the session or watch below The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border..."
-      - title: "The Pentagon wants $30 million to build an AI-powered lie detector"
-        url: "https://www.technologyreview.com/2026/09/25/1145144/pentagon-ai-lie-detector/"
-        source: "MIT Technology Review"
-        date: 2026-09-25
-        summary: "The US government wants to spend $30.3 million over the next five years on an improved form of lie detector, according to a Department of Defense budget request. The program, called Polygraph+ or Polygraph Next, will..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘Defend our men!’: fears for women’s rights in Latin America over plans to counter gender violence laws"
+        url: "https://www.theguardian.com/global-development/2026/oct/05/defend-our-men-fears-for-womens-rights-in-latin-america-over-plans-to-counter-gender-violence-laws"
+        source: "The Guardian"
+        date: 2026-10-05
+        summary: "Women ‘set back by 50 years’ as Bolivia, Chile, Argentina and Peru debate tougher penalties for false reports of sexual assaults, despite such cases being rare The Chilean senator Vanessa Kaiser is on a mission. In her..."
+      - title: "My sister Nicole married OJ Simpson. This is what I wish I had known"
+        url: "https://www.theguardian.com/lifeandstyle/2026/oct/05/denise-brown-sister-nicole-brown-simpson-murder-oj-simpson"
+        source: "The Guardian"
+        date: 2026-10-05
+        summary: "Since Nicole Brown Simpson’s murder in 1994, Denise Brown has devoted herself to ending domestic violence. She talks about her beloved sister, the trauma she witnessed in the couple’s marriage and how lives can be saved..."
       - title: "Tesco is first supermarket to offer paid ‘safe leave’ for victims of domestic abuse"
         url: "https://www.theguardian.com/business/2026/oct/02/tesco-supermarket-paid-safe-leave-domestic-abuse"
         source: "The Guardian"
@@ -87,16 +97,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-27
         summary: "Exclusive: Dedicated service to support sexual assault victim-survivors as they navigate legal system to open in NSW Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily..."
-      - title: "Review urged after blood-spattered shirt ads ran alongside domestic violence news in Australia"
-        url: "https://www.theguardian.com/media/2026/sep/23/domestic-violence-news-articles-advertising-error-bloodstained-shirt-halloween-costume-ads-ntwnfb"
-        source: "The Guardian"
-        date: 2026-09-23
-        summary: "Gruesome ads embedded in articles about family violence ‘make light’ of violence and could distress victim-survivors, expert warns Follow our Australia news live blog for latest updates WARNING: this story contains an..."
-      - title: "About 20,000 women a year tell midwives they are domestic violence victims"
-        url: "https://www.theguardian.com/society/2026/sep/20/thousands-of-pregnant-women-in-england-are-reporting-domestic-abuse-midwives-are-struggling-to-cope"
-        source: "The Guardian"
-        date: 2026-09-20
-        summary: "Exclusive: Midwifery leaders call for more support and training as analysis reveals scale of disclosures About 20,000 disclosures of domestic abuse are estimated to be made to maternity services in England every year..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -161,11 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-23
         summary: "While reading a chapter from a 2024 book on restoring biodiversity in post-industrial land earlier this month, an ecologist came across a reference to a study on rewilding she wanted to look up. But the ecologist, who..."
-      - title: "Watch: The New Supreme Court"
-        url: "https://www.propublica.org/article/supreme-court-shadow-docket-explainer"
-        source: "ProPublica"
-        date: 2026-09-21
-        summary: "The post Watch: The New Supreme Court appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
