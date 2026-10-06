@@ -2,12 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-05
+generated: 2026-10-06
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Is this the end of the British school photo?"
+        url: "https://www.theguardian.com/lifeandstyle/2026/oct/06/is-this-the-end-of-the-british-school-photo"
+        source: "The Guardian"
+        date: 2026-10-06
+        summary: "For generations, professional photographers have captured the country’s pupils in all their awkward glory. But an increasing number of parents are using AI to avoid paying them Name: School photos. Age: Around since..."
+      - title: "OpenAI agents tried to hack Wikipedia tools and flooded it with traffic"
+        url: "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic/"
+        source: "Ars Technica"
+        date: 2026-10-06
+        summary: "The reports of OpenAI agents harming 3rd party sites keep coming."
+      - title: "OpenAI delivers a mea culpa to the Australian government in person – but answers still elude"
+        url: "https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude"
+        source: "The Guardian"
+        date: 2026-10-06
+        summary: "Jason Kwon’s answers were provided in a helpful, quiet and calm manner. For a company under intense scrutiny, there were no missteps Open AI’s Jason Kwon flew 15 hours from San Francisco to Sydney to give the company’s..."
+      - title: "OpenAI admits misstep in handling AI agent interactions with Australian government sites – video"
+        url: "https://www.theguardian.com/australia-news/video/2026/oct/06/openai-australia-parliamentary-inquiry-jason-kwon-video"
+        source: "The Guardian"
+        date: 2026-10-06
+        summary: "In a parliamentary inquiry, OpenAI chief strategy officer Jason Kwon is questioned by independent senator David Pocock about the company's notification process after OpenAI agents accessed Australian government website..."
+      - title: "‘Pull the plug’: protesters resort to direct action against AI firms"
+        url: "https://www.theguardian.com/technology/2026/oct/06/pull-the-plug-protesters-resort-to-direct-action-against-ai-firms"
+        source: "The Guardian"
+        date: 2026-10-06
+        summary: "Campaign groups report surge in membership after a spate of AI safety alerts and apocalyptic warnings In a bar below Waterloo Bridge, a cell of a fast-growing anti-AI protest movement met last week to plot their latest..."
+      - title: "Anthropic says AI agents didn’t breach Australian government websites – video"
+        url: "https://www.theguardian.com/media/video/2026/oct/06/anthropic-ai-australia-parliament-inquiry-government-websites-breach-video"
+        source: "The Guardian"
+        date: 2026-10-06
+        summary: "During a joint parliamentary hearing on artificial intelligence, Anthropic’s head of safeguards, Dave Orr, says that investigations of hundreds of millions of transcripts reveal no unauthorised interactions with..."
       - title: "The Guardian view on sexual abuse in schools: teachers cannot deal with this alone | Editorial"
         url: "https://www.theguardian.com/commentisfree/2026/oct/05/the-guardian-view-on-sexual-abuse-in-schools-teachers-cannot-deal-with-this-alone"
         source: "The Guardian"
@@ -18,31 +48,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-05
         summary: "Norway wants time to write permanent rules for glasses that can record bystanders."
-      - title: "Accept ‘bad things’ in return for benefits of AI, says Sam Altman"
-        url: "https://www.theguardian.com/technology/2026/oct/05/sam-altman-open-ai-chatgpt-benefits-risks"
-        source: "The Guardian"
-        date: 2026-10-05
-        summary: "Boss of OpenAI calls for a regulatory light touch because of the ‘good stuff’ the technology can deliver Sam Altman says he believes the world should accept “bad things” happening with AI in exchange for the benefits of..."
-      - title: "﻿The UK’s G20 presidency will push Andy Burnham to the centre of the global stage. What will he use it for? | Michael Jacobs"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/05/uk-g20-presidency-andy-burnham-global-stage-technology-food-climate-economy"
-        source: "The Guardian"
-        date: 2026-10-05
-        summary: "This is a chance for the PM to advance his progressive agenda and tackle urgent issues such as AI regulation and climate action Among the many crucial decisions Andy Burnham has to make over the next few weeks, one has..."
-      - title: "OpenAI safety leader quits, warning AI company’s culture is ‘broken’"
-        url: "https://www.theguardian.com/technology/2026/oct/03/openai-safety-leader-quits-warning-ai-companys-culture-is-broken"
-        source: "The Guardian"
-        date: 2026-10-04
-        summary: "David Robinson joins other insiders in urging industry to take more care over rapidly developing technology A safety leader at OpenAI has quit the company, warning that its culture was broken and that AI firms were not..."
-      - title: "California’s new laws target workers’ biggest fear of AI taking their jobs"
-        url: "https://www.theguardian.com/technology/2026/oct/03/california-ai-laws-worker-protection"
-        source: "The Guardian"
-        date: 2026-10-03
-        summary: "The state, which is home to many AI companies, is one of the first to roll out workplace regulations targeting the technology California’s laws aimed at protecting workers from the impacts of artificial intelligence..."
-      - title: "OpenAI says its review into hacks, including on Australian government sites, is costing $500,000 a day"
-        url: "https://www.theguardian.com/technology/2026/oct/03/openai-review-hacks-australian-government-sites-costing-500000-a-day"
-        source: "The Guardian"
-        date: 2026-10-03
-        summary: "Company says it is reviewing 50 petabytes of data after its agents accessed websites including Medicare without authorisation Get our breaking news email , free app or daily news podcast OpenAI says its review in..."
       - title: "Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search"
         url: "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/"
         source: "Ars Technica"
@@ -67,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘Bully in every way’: domestic abuse survivors say ex-partners behind far-right UK street patrols"
+        url: "https://www.theguardian.com/society/2026/oct/06/uk-domestic-abuse-survivors-ex-partners-behind-far-right-street-patrols"
+        source: "The Guardian"
+        date: 2026-10-06
+        summary: "Seven women share their stories to make people aware of patterns of violence behind anti-immigration street patrol movement During their relationship, Lisa’s ex-partner was controlling. He kept her at home where he was..."
       - title: "‘Defend our men!’: fears for women’s rights in Latin America over plans to counter gender violence laws"
         url: "https://www.theguardian.com/global-development/2026/oct/05/defend-our-men-fears-for-womens-rights-in-latin-america-over-plans-to-counter-gender-violence-laws"
         source: "The Guardian"
@@ -92,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-09-28
         summary: "Minns government to spend $47.1m to recommission part of Silverwater jail while PSA says prison alone will not end violent behaviour Follow our Australia news live blog for latest updates Get our breaking news email ..."
-      - title: "Shannon felt a ‘sense of doom’ as she sought justice for sexual assault. A new NSW program hopes to alleviate that"
-        url: "https://www.theguardian.com/australia-news/2026/sep/28/sexual-assault-service-nsw-victim-survivor-opening-ntwnfb"
-        source: "The Guardian"
-        date: 2026-09-27
-        summary: "Exclusive: Dedicated service to support sexual assault victim-survivors as they navigate legal system to open in NSW Follow our Australia news live blog for latest updates Get our breaking news email , free app or daily..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
