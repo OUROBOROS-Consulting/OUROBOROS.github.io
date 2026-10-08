@@ -2,12 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-07
+generated: 2026-10-08
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots"
+        url: "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/"
+        source: "Ars Technica"
+        date: 2026-10-08
+        summary: "Full-stack safety solution for physical AI is being used by robotics companies."
+      - title: "‘Dystopian’: Co-op becomes latest firm to put staff under AI surveillance"
+        url: "https://www.theguardian.com/technology/2026/oct/08/co-op-legal-services-ai-customer-phone-call-surveillance"
+        source: "The Guardian"
+        date: 2026-10-08
+        summary: "Whistleblower says recording and analysis of all probate calls in Co-op Legal Services is oppressive The Co-op has become the latest employer to place workers under AI surveillance with an automated listening technology..."
+      - title: "‘Someone else will do it for less’: Refugees in Kenya are powering tech for dwindling pay"
+        url: "https://www.theguardian.com/technology/ng-interactive/2026/oct/08/ai-gig-work-refugees-kenya"
+        source: "The Guardian"
+        date: 2026-10-08
+        summary: "Refugee gig workers for tech companies don’t know how much they’ll be paid – if AI hasn’t already taken their jobs In a portable building in Kakuma, a refugee camp near Kenya ’s northern border with South Sudan , Grace..."
+      - title: "OpenAI used AI to help write email warning Australian government AI had hacked its websites"
+        url: "https://www.theguardian.com/australia-news/2026/oct/08/openai-used-ai-to-help-write-email-warning-australian-government-ai-had-hacked-its-websites"
+        source: "The Guardian"
+        date: 2026-10-08
+        summary: "Exclusive: Revelation comes after executive told parliamentary inquiry he did not believe AI had been used to write message, but was ‘happy to go and confirm’ Get our breaking news email , free app or daily news podcast..."
+      - title: "Fraudster jailed for using 10K bots and AI songs to outstream Taylor Swift"
+        url: "https://arstechnica.com/tech-policy/2026/10/outstreaming-taylor-swift-is-easy-with-10k-bots-and-ai-songs-fraudster-admits/"
+        source: "Ars Technica"
+        date: 2026-10-07
+        summary: "Man gets 18 months for AI scheme stealing $8M in music streaming royalties."
       - title: "McDonald’s sued for allegedly using AI tool to determine pricing for franchises"
         url: "https://www.theguardian.com/business/2026/oct/07/mcdonalds-ai-prices-lawsuit"
         source: "The Guardian"
@@ -17,32 +42,17 @@ sections:
         url: "https://www.theguardian.com/business/2026/oct/07/imf-chief-kristalina-georgieva-urges-governments-tighten-belts-global-debt-levels-soar"
         source: "The Guardian"
         date: 2026-10-07
-        summary: "Kristalina Georgieva says big economies will have to make ‘very touch choices’ as soaring bond yields hit budgets Business live – latest updates The head of the International Monetary Fund has called on governments..."
+        summary: "Kristalina Georgieva says big economies will have to make ‘very touch choices’ as soaring bond yields hit budgets The head of the International Monetary Fund has called on governments across big economies to tighten..."
       - title: "Privacy watchdog launches investigation into China-based company behind Kmart ‘pervert glasses’ app"
         url: "https://www.theguardian.com/technology/2026/oct/07/privacy-regulator-probe-kmart-anko-meta-smartglasses-australia"
         source: "The Guardian"
         date: 2026-10-07
         summary: "Commissioner says Shenzhen Qingcheng, the app maker behind the HeyCyan app in the smartglasses, failed to respond to her inquiries Get our breaking news email , free app or daily news podcast The Australian privacy..."
-      - title: "Is regulation enough to stop AI systems killing us all? | Letters"
-        url: "https://www.theguardian.com/technology/2026/oct/06/is-regulation-enough-to-stop-ai-systems-killing-us-all"
-        source: "The Guardian"
-        date: 2026-10-06
-        summary: "Martyn Thomas wonders how any rational person can argue that independent oversight and regulation will be sufficient Once again a frontier AI model has been withdrawn because it fails safety tests ( OpenAI scraps..."
-      - title: "Is this the end of the British school photo?"
-        url: "https://www.theguardian.com/lifeandstyle/2026/oct/06/is-this-the-end-of-the-british-school-photo"
-        source: "The Guardian"
-        date: 2026-10-06
-        summary: "For generations, professional photographers have captured the country’s pupils in all their awkward glory. But an increasing number of parents are using AI to avoid paying them Name: School photos. Age: Around since..."
       - title: "OpenAI agents tried to hack Wikipedia tools and flooded it with traffic"
         url: "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic/"
         source: "Ars Technica"
         date: 2026-10-06
         summary: "The reports of OpenAI agents harming third-party sites keep coming."
-      - title: "OpenAI’s Jason Kwon gave even-toned, reassuring answers to the Australian government. Did … ChatGPT write this?"
-        url: "https://www.theguardian.com/technology/2026/oct/06/openai-delivers-a-mea-culpa-to-the-australian-government-in-person-but-answers-still-elude"
-        source: "The Guardian"
-        date: 2026-10-06
-        summary: "Kwon’s answers were provided in a helpful, quiet and calm manner, but his mea culpa left the audience not much the wiser Open AI’s Jason Kwon flew 15 hours from San Francisco to Sydney to give the company’s first..."
       - title: "AI glasses face their first major government crackdown"
         url: "https://arstechnica.com/ai/2026/10/ai-glasses-face-their-first-major-government-crackdown/"
         source: "Ars Technica"
@@ -58,16 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-09-30
         summary: "Trump gets dozens of AI firms to agree to voluntary safety tests."
-      - title: "\"An AI did it\" is no defense, says nonprofit suing OpenAI over Hugging Face hack"
-        url: "https://arstechnica.com/tech-policy/2026/09/lawsuit-demands-openai-halt-unsafe-development-that-caused-hugging-face-hack/"
-        source: "Ars Technica"
-        date: 2026-09-30
-        summary: "OpenAI makes others suffer \"the harms of its unsafe decision-making,\" nonprofit says."
-      - title: "Roundtables: The Deadly Failures of The Virtual Border Wall"
-        url: "https://www.technologyreview.com/2026/09/28/1144890/roundtables-the-deadly-failures-of-the-virtual-border-wall/"
-        source: "MIT Technology Review"
-        date: 2026-09-28
-        summary: "Listen to the session or watch below The US has spent billions building a “virtual wall” of surveillance towers along its southern border over the past 25 years, promising they will help detect and apprehend border..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Wildlife journal issues corrections for missing ethics statements"
+        url: "https://retractionwatch.com/2026/10/07/wildlife-journal-issues-corrections-for-missing-ethics-statements/"
+        source: "Retraction Watch"
+        date: 2026-10-07
+        summary: "In what one sleuth called a “systemic failure,” a wildlife journal has issued corrections to a handful of papers not for an error in the articles but to include an item that wasn’t: ethics statements. The most recent..."
       - title: "Editor-in-chief resigns amid probes of alleged citation manipulation, data errors"
         url: "https://retractionwatch.com/2026/10/06/egyptian-rheumatologist-tamer-gheita-editor-in-chief-resigns-citation-manipulation-data-errors/"
         source: "Retraction Watch"
@@ -161,11 +166,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-09-25
         summary: "Like many college professors today, Sarah S. Richardson has seen AI-hallucinated citations in work submitted by her students. But she was surprised when an editor recently contacted her about a hallucinated citation..."
-      - title: "Tennessee researcher heads to court amid claims of theft, forgery and revenge"
-        url: "https://retractionwatch.com/2026/09/24/tennessee-researcher-heads-to-court-amid-claims-of-theft-forgery-and-revenge/"
-        source: "Retraction Watch"
-        date: 2026-09-24
-        summary: "In May 2025, Tennessee authorities were preparing to arrest a university math professor for allegedly soliciting university donations from his students and pocketing the money. Investigative records paint the picture of..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
