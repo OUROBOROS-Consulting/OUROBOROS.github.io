@@ -92,8 +92,8 @@ function initCarousel(sectionId, autoAdvance) {
 
       const syncToggle = () => {
         toggleBtn.innerHTML = userPaused
-          ? '<i class="fas fa-play" aria-hidden="true"></i>'
-          : '<i class="fas fa-pause" aria-hidden="true"></i>';
+          ? '<i class="ph ph-fill ph-play" aria-hidden="true"></i>'
+          : '<i class="ph ph-fill ph-pause" aria-hidden="true"></i>';
         toggleBtn.setAttribute('aria-label', userPaused ? 'Play testimonials' : 'Pause testimonials');
       };
       syncToggle();
@@ -254,7 +254,7 @@ initCarousel('testimonials', true);  // auto-advances every 7s
   if (!btn) return;
 
   const icon = btn.querySelector('i');
-  const label = btn.querySelector('.rail-tx');
+  const label = btn.querySelector('.nav-extra-text');
 
   function currentTheme() {
     const stored = document.documentElement.getAttribute('data-theme');
@@ -264,8 +264,8 @@ initCarousel('testimonials', true);  // auto-advances every 7s
 
   function applyIcon(theme) {
     if (icon) {
-      icon.classList.toggle('fa-moon', theme === 'dark');
-      icon.classList.toggle('fa-sun', theme === 'light');
+      icon.classList.toggle('ph-moon', theme === 'dark');
+      icon.classList.toggle('ph-sun', theme === 'light');
     }
     if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
     btn.setAttribute('aria-label', theme === 'dark'

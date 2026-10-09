@@ -168,6 +168,12 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+
+  i {
+    font-size: var(--fs-7);
+    color: var(--ink-4);
+    opacity: 0.6;
+  }
 }
 
 .stat-value {
@@ -279,29 +285,13 @@
 
   // SVG icon variant (#audience) — no glyph font metric to size against, so
   // width/height stand in for font-size, set at the golden ratio (1.618×)
-  // over &__name's font-size. mask-image (not background-image) keeps the
-  // icon theme-reactive: it paints in currentColor, so color/opacity are set
-  // here directly rather than inherited from the Font Awesome &__icon above
-  // — gold (--mark), not the neutral --ink-4 those glyphs use.
-  &__icon--svg {
-    width: calc(var(--fs-9) * 1.618);
-    height: calc(var(--fs-9) * 1.618);
-    // Without this, the flex column (&__front &__surface) shrinks the icon
-    // to make room for #audience's long, wrapping titles — defeating the
-    // golden-ratio sizing above. flex-shrink: 0 forces &__name to wrap
-    // instead; grid-auto-rows: minmax(...) above gives it room to do so.
-    flex-shrink: 0;
+  // over &__name's font-size. gold (--mark), not the neutral --ink-4 those 
+  // glyphs use. Phosphor Icons are used instead of masks.
+  &__icon--gold {
+    font-size: calc(var(--fs-9) * 2);
     color: var(--mark);
     opacity: 1;
-    background-color: currentColor;
-    mask-image: var(--icon-mask);
-    mask-repeat: no-repeat;
-    mask-position: center;
-    mask-size: contain;
-    -webkit-mask-image: var(--icon-mask);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    -webkit-mask-size: contain;
+    flex-shrink: 0;
   }
 
   &__name {

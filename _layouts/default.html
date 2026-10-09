@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% assign _title = "OUROBOROS Consulting — Technology, Research & Advocacy" %}
-    {% if page.title %}{% capture _title %}{{ page.title }} — OUROBOROS Consulting{% endcapture %}{%
+    {% assign _title = "ouroborOS Consulting — Technology, Research & Advocacy" %}
+    {% if page.title %}{% capture _title %}{{ page.title }} — ouroborOS Consulting{% endcapture %}{%
     endif %}
     <title>{{ _title }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
@@ -33,13 +33,13 @@
     {% else %}
     <meta property="og:type" content="website" />
     {% endif %}
-    <meta property="og:site_name" content="OUROBOROS Consulting" />
+    <meta property="og:site_name" content="ouroborOS Consulting" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:title" content="{{ _title }}" />
     <meta property="og:description" content="{{ _desc }}" />
     <meta property="og:image" content="{{ '/assets/images/Social-Preview.jpg' | absolute_url }}" />
-    <meta property="og:image:alt" content="OUROBOROS Consulting" />
+    <meta property="og:image:alt" content="ouroborOS Consulting" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ _title }}" />
     <meta name="twitter:description" content="{{ _desc }}" />
@@ -86,6 +86,8 @@
       href="{{ '/assets/css/' | append: page.extra_css | append: '.css' | relative_url }}" />{%
     endif %}
     <link rel="stylesheet" type="text/css"
+      href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css" />
     <!-- Draws the golden thread in the rail and the TOC. Deferred from <head>
          so it executes ahead of the body's deferred scripts: toc.js calls
@@ -104,7 +106,6 @@
     <div class="nav-shell">
       {% include nav.html %}
     </div>
-    {% include sidebar.html %}
     <main id="main">
       {{ content }}
     </main>

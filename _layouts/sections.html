@@ -162,14 +162,6 @@ layout: default
           {% endfor %}
         </div><!-- /playlist-carousel-track -->
 
-        <!-- Prev/Next buttons and dot indicators — only if more than 1 slide -->
-        {% if _playlists.size > 1 %}
-        <div class="playlist-carousel-controls">
-          <button class="carousel-btn playlist-btn--prev" aria-label="Previous playlist">&#8592;</button>
-          <span class="playlist-carousel-count">1 / {{ _playlists.size }}</span>
-          <button class="carousel-btn playlist-btn--next" aria-label="Next playlist">&#8594;</button>
-        </div>
-
         <!-- One dot per slide; JS adds/removes `.active` on navigation -->
         <div class="carousel-dots playlist-carousel-dots" role="tablist" aria-label="Playlist navigation">
           {% for pl in _playlists %}
@@ -177,8 +169,6 @@ layout: default
             aria-label="Playlist {{ forloop.index }}"></button>
           {% endfor %}
         </div>
-        {% endif %}
-
       </div><!-- /playlist-carousel -->
 
       {% elsif section.data_source %}

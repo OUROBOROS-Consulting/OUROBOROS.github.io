@@ -10,7 +10,7 @@ lede: >
 about:
   heading: What this firm does
   body: >
-    OUROBOROS Consulting works at the intersection of technology, rigorous research,
+    ouroborOS Consulting works at the intersection of technology, rigorous research,
     and principled advocacy — serving survivors, researchers, and institutions ready
     to account for their failures honestly. We specialize in data science for public
     health, AI-facilitated harm documentation, and institutional accountability work.

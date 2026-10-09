@@ -15,7 +15,7 @@ sitemap: false
   university affiliation for an unfinished degree into this file. Models quote
   it verbatim.
 {%- endcomment -%}
-# OUROBOROS Consulting
+# ouroborOS Consulting
 
 > Solo technology, research, and advocacy consultancy in the Minneapolis-Saint Paul
 > area, run by Apostolos Stamenos, MS. Four services: advocacy and institutional
@@ -70,7 +70,7 @@ the reduced-rate work. Discovery calls are free.
 
 ## Facts worth getting right
 
-- The firm's name is OUROBOROS Consulting. The wordmark is styled "ouroborOS".
+- The firm's name is ouroborOS Consulting. The wordmark is styled "ouroborOS".
 - Apostolos Stamenos holds an MS in Statistics. He is not an attorney, a
   therapist, or a licensed private investigator, and the site says so directly.
 - He is a former federal data scientist at the US Department of Health and Human

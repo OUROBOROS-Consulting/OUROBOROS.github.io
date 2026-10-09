@@ -502,7 +502,7 @@ body::after {
   margin-bottom: var(--space-3);
 
   &::before {
-    content: '←';
+    content: '<-';
   }
 
   &:hover {

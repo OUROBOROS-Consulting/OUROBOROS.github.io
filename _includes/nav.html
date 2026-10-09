@@ -2,7 +2,7 @@
   <nav class="nav-menu" aria-label="Primary">
     <!-- Logo -->
     <a class="nav-logo" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="OUROBOROS" class="nav-logo-mark">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="ouroborOS" class="nav-logo-mark">
     </a>
 
     <!-- Page links — reuses the .nav-links/.nav-dropdown dropdown CSS in the
@@ -51,6 +51,21 @@
               <i class="ph-fill ph-magnifying-glass" aria-hidden="true"></i>
             </button>
       </form>
+
+      <a href="{{ '/intake' | relative_url }}" class="nav-extra-item" title="Contact">
+        <i class="ph ph-fill ph-envelope" aria-hidden="true"></i>
+        <span class="nav-extra-text">Contact</span>
+      </a>
+
+      <a href="{{ '/announcements' | relative_url }}" class="nav-extra-item" title="Announcements">
+        <i class="ph ph-fill ph-megaphone" aria-hidden="true"></i>
+        <span class="nav-extra-text">News</span>
+      </a>
+
+      <button type="button" id="theme-toggle" class="nav-extra-item nav-extra-item--button" title="Toggle theme" aria-label="Toggle theme">
+        <i class="ph ph-fill ph-moon" aria-hidden="true"></i>
+        <span class="nav-extra-text">Dark</span>
+      </button>
     </div>
 
     <!-- Quick exit lives in the fixed red button (see default.html #safety-exit),
