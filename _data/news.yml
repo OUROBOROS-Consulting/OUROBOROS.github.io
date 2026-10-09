@@ -2,12 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-08
+generated: 2026-10-09
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "AI and the climate crisis pose existential risks. The law offers a way to reduce them | Robert Reich"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/09/ai-climate-change-liability-lawsuits"
+        source: "The Guardian"
+        date: 2026-10-09
+        summary: "Liability lawsuits have held tobacco, oil and pharma companies to account in the past. AI investors won’t ignore this threat The most basic function of government is to protect people from harm. Two growing phenomena –..."
+      - title: "Palantir’s Tom Watson says ‘mob rule’ must not dictate awarding of government contracts"
+        url: "https://www.theguardian.com/technology/2026/oct/09/palantir-tom-watson-mob-rule-government-contracts"
+        source: "The Guardian"
+        date: 2026-10-09
+        summary: "Former Labour deputy leader says tech firm would work with a Reform UK government on immigration crackdowns Tom Watson, the former Labour deputy leader who recently joined Palantir, has warned against “mob rule” when it..."
+      - title: "British households would be £5,000 richer if we were more innovative. Let’s unleash our talents | Gordon Brown"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/09/gordon-brown-british-households-5000-richer-innovation"
+        source: "The Guardian"
+        date: 2026-10-09
+        summary: "We have a deep reservoir of assets, but struggle to turn small companies into global success stories. Innovation needs to be at the heart of government policy Gordon Brown was UK prime minister from 2007 to 2010 The..."
+      - title: "A teen tried to navigate Canadian mountains with Claude. His trek ended in an emergency rescue"
+        url: "https://www.theguardian.com/world/2026/oct/08/teen-hike-claude-ai-directions-rescue-canada-mountain"
+        source: "The Guardian"
+        date: 2026-10-08
+        summary: "The incident is the latest to raise questions about the growing reliance on digital maps for wilderness navigation The route up the Widowmaker Arete, a 1,700-foot wall in British Columbia, is deceptively described as..."
       - title: "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots"
         url: "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/"
         source: "Ars Technica"
@@ -18,36 +38,16 @@ sections:
         source: "The Guardian"
         date: 2026-10-08
         summary: "Whistleblower says recording and analysis of all probate calls in Co-op Legal Services is oppressive The Co-op has become the latest employer to place workers under AI surveillance with an automated listening technology..."
-      - title: "‘Someone else will do it for less’: Refugees in Kenya are powering tech for dwindling pay"
+      - title: "‘Someone else will do it for less’: refugees in Kenya are powering tech for dwindling pay"
         url: "https://www.theguardian.com/technology/ng-interactive/2026/oct/08/ai-gig-work-refugees-kenya"
         source: "The Guardian"
         date: 2026-10-08
         summary: "Refugee gig workers for tech companies don’t know how much they’ll be paid – if AI hasn’t already taken their jobs In a portable building in Kakuma, a refugee camp near Kenya ’s northern border with South Sudan , Grace..."
-      - title: "OpenAI used AI to help write email warning Australian government AI had hacked its websites"
-        url: "https://www.theguardian.com/australia-news/2026/oct/08/openai-used-ai-to-help-write-email-warning-australian-government-ai-had-hacked-its-websites"
-        source: "The Guardian"
-        date: 2026-10-08
-        summary: "Exclusive: Revelation comes after executive told parliamentary inquiry he did not believe AI had been used to write message, but was ‘happy to go and confirm’ Get our breaking news email , free app or daily news podcast..."
       - title: "Fraudster jailed for using 10K bots and AI songs to outstream Taylor Swift"
         url: "https://arstechnica.com/tech-policy/2026/10/outstreaming-taylor-swift-is-easy-with-10k-bots-and-ai-songs-fraudster-admits/"
         source: "Ars Technica"
         date: 2026-10-07
         summary: "Man gets 18 months for AI scheme stealing $8M in music streaming royalties."
-      - title: "McDonald’s sued for allegedly using AI tool to determine pricing for franchises"
-        url: "https://www.theguardian.com/business/2026/oct/07/mcdonalds-ai-prices-lawsuit"
-        source: "The Guardian"
-        date: 2026-10-07
-        summary: "Suit says AI tool allows independently owned franchises to exchange nonpublic price and sales information McDonald’s is facing a lawsuit in federal court over its alleged use of an AI tool to determine pricing across..."
-      - title: "IMF chief urges governments to tighten belts as global debt levels soar"
-        url: "https://www.theguardian.com/business/2026/oct/07/imf-chief-kristalina-georgieva-urges-governments-tighten-belts-global-debt-levels-soar"
-        source: "The Guardian"
-        date: 2026-10-07
-        summary: "Kristalina Georgieva says big economies will have to make ‘very touch choices’ as soaring bond yields hit budgets The head of the International Monetary Fund has called on governments across big economies to tighten..."
-      - title: "Privacy watchdog launches investigation into China-based company behind Kmart ‘pervert glasses’ app"
-        url: "https://www.theguardian.com/technology/2026/oct/07/privacy-regulator-probe-kmart-anko-meta-smartglasses-australia"
-        source: "The Guardian"
-        date: 2026-10-07
-        summary: "Commissioner says Shenzhen Qingcheng, the app maker behind the HeyCyan app in the smartglasses, failed to respond to her inquiries Get our breaking news email , free app or daily news podcast The Australian privacy..."
       - title: "OpenAI agents tried to hack Wikipedia tools and flooded it with traffic"
         url: "https://arstechnica.com/security/2026/10/openai-agents-tried-to-hack-wikipedia-tools-and-flooded-it-with-traffic/"
         source: "Ars Technica"
@@ -136,6 +136,21 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "OpenAI withdraws three preprints a day after releasing 722 manuscripts on unsolved math problems"
+        url: "https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/"
+        source: "Retraction Watch"
+        date: 2026-10-08
+        summary: "Less than 24 hours after OpenAI posted over 700 preprints describing major math results by an internal AI model, the company has withdrawn three of the manuscripts for errors. On Oct. 6, OpenAI published 722 preprints..."
+      - title: "U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU"
+        url: "https://www.propublica.org/article/aau-child-sex-abuse-house-energy-commerce-committee-probe-amateur-athletic-union"
+        source: "ProPublica"
+        date: 2026-10-08
+        summary: "The post U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU appeared first on ProPublica ."
+      - title: "A paper suggested a paleontologist’s fossil was forged. He wants it retracted."
+        url: "https://retractionwatch.com/2026/10/08/mosasaur-xenodens-calminechari-fossil-forgery-authenticity-paleontology/"
+        source: "Retraction Watch"
+        date: 2026-10-08
+        summary: "Nicholas Longrich would like to set the record straight. The paleontologist at the University of Bath in England and his colleagues described what they believed to be a new species of marine reptile in 2021, based on a..."
       - title: "Wildlife journal issues corrections for missing ethics statements"
         url: "https://retractionwatch.com/2026/10/07/wildlife-journal-issues-corrections-for-missing-ethics-statements/"
         source: "Retraction Watch"
@@ -156,25 +171,45 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-01
         summary: "When Dorothy Bishop was asked to review a paper for a small neuroscience journal in August, she could tell from the abstract the authors had used a dataset she had first published four years ago on the public repository..."
-      - title: "Journal investigating paper on heart device with registration number for wrong trial"
-        url: "https://retractionwatch.com/2026/09/30/journal-investigating-paper-on-heart-device-with-registration-number-for-wrong-trial/"
-        source: "Retraction Watch"
-        date: 2026-09-30
-        summary: "The publisher of a European Heart Rhythm Association journal is investigating a paper that lists the incorrect registration number for a clinical study of a widely used but controversial heart implant. The paper..."
-      - title: "Above and beyond: An editor wanted authors to know they’d been falsely cited"
-        url: "https://retractionwatch.com/2026/09/25/above-and-beyond-an-editor-wanted-authors-to-know-theyd-been-falsely-cited/"
-        source: "Retraction Watch"
-        date: 2026-09-25
-        summary: "Like many college professors today, Sarah S. Richardson has seen AI-hallucinated citations in work submitted by her students. But she was surprised when an editor recently contacted her about a hallucinated citation..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "CBP’s Predictive Policing Units Have Financial Data, Won’t Say How They Got It"
+        url: "https://epic.org/cbps-predictive-policing-units-have-financial-data-wont-say-how-they-got-it/"
+        source: "EPIC"
+        date: 2026-10-08
+        summary: "A recent story by 404 Media revealed that Customs & Border Patrol’s (CBP) predictive policing units, or Predictive Intelligence Targeting Teams (PITT) have been using financial data to target individuals for anomalous..."
+      - title: "Sen. Gillibrand Introduces U.S. Data Protection Agency Bill"
+        url: "https://epic.org/sen-gillibrand-introduces-u-s-data-protection-agency-bill/"
+        source: "EPIC"
+        date: 2026-10-07
+        summary: "U.S. Senator Kirsten Gillibrand (D-NY) has reintroduced the Data Protection Act, which would create an independent Data Protection Agency in the United States to safeguard the personal data of Americans. EPIC, many..."
+      - title: "EPIC to NYC Council: Address the AI Harms Already Affecting New Yorkers"
+        url: "https://epic.org/epic-to-nyc-council-address-the-ai-harms-already-affecting-new-yorkers/"
+        source: "EPIC"
+        date: 2026-10-07
+        summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
       - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
         url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
         source: "Krebs on Security"
         date: 2026-10-07
         summary: "A teenager from Amman, Jordan suspected of leading the prolific data theft and extortion group ShinyHunters has been detained and is reportedly cooperating with the FBI to identify other members of the hacking gang..."
+      - title: "EPIC Offers Comments on Vermont Age-Appropriate Design Code Rulemaking"
+        url: "https://epic.org/epic-issues-comments-on-vermont-age-appropriate-design-code-rulemaking/"
+        source: "EPIC"
+        date: 2026-10-05
+        summary: "On October 2, EPIC provided comments on two proposed rules announced by the Vermont Attorney General implementing Vermont’s Age-Appropriate Design Code."
+      - title: "Looking Ahead: Pixel Tracking Litigation under ECPA and CIPA can Provide Useful Guidelines for the Supreme Court in Salazar v. Paramount Global"
+        url: "https://epic.org/looking-ahead-pixel-tracking-litigation-under-ecpa-and-cipa-can-provide-useful-guidelines-for-the-supreme-court-in-salazar-v-paramount-global/"
+        source: "EPIC"
+        date: 2026-10-05
+        summary: "Introduction As the Supreme Court prepares to hear the upcoming privacy case in Salazar v. Paramount Global under the VPPA, broader trends in pixel tracking litigation reveal concerted efforts to counteract harmful..."
+      - title: "EPIC Files Amicus Brief Challenging Spirit Airlines’ Bankruptcy Sale of Employee Data to Google"
+        url: "https://epic.org/epic-files-amicus-brief-challenging-spirit-airlines-bankruptcy-sale-of-employee-data-to-google/"
+        source: "EPIC"
+        date: 2026-10-02
+        summary: "On Thursday, EPIC, along with Professor Seema Patel, filed an amicus brief using privacy grounds to challenge the sale of sensitive employee data in Spirit Airlines’ bankruptcy proceedings to Google to be used for AI..."
       - title: "Victory! Court Rejects Government Effort to Dismiss Social Media Surveillance Lawsuit"
         url: "https://www.eff.org/press/releases/victory-court-rejects-government-effort-dismiss-social-media-surveillance-lawsuit"
         source: "EFF Deeplinks"
@@ -185,11 +220,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-30
         summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
-      - title: "Senator Markey Introduces Bill to Stop the Government’s Use of Face Surveillance and Other Biometric Surveillance Tech"
-        url: "https://epic.org/senator-markey-introduces-bill-to-stop-the-governments-use-of-face-surveillance-and-other-biometric-surveillance-tech/"
-        source: "EPIC"
-        date: 2026-09-30
-        summary: "Senators Markey and Merkley along with Reps. Jaypal, Pressley, and Tlaib introduced legislation to stop the government’s use of biometric surveillance, including facial recognition tools. The Facial Recognition and..."
       - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
         url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
         source: "EFF Deeplinks"
@@ -205,28 +235,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-28
         summary: "The San Francisco Police Department (SFPD) began regularly deploying drones two years ago and has since expanded their use in a way that has outpaced its documented policy and evaded existing local and state oversight..."
-      - title: "Dutch Police Arrest ‘Reformed’ Hacker in Shiny Hunters Investigation"
-        url: "https://krebsonsecurity.com/2026/09/dutch-police-arrest-reformed-hacker-in-shiny-hunters-investigation/"
-        source: "Krebs on Security"
-        date: 2026-09-28
-        summary: "Authorities in the Netherlands have arrested a 23-year-old convicted cybercriminal on suspicion of aiding in data thefts and extortions by the prolific hacker group ShinyHunters. In the days immediately following the..."
-      - title: "EPIC and Consumer Groups Urge FTC to Treat Surveillance Pricing as an Unfair Practice"
-        url: "https://epic.org/epic-and-consumer-groups-urge-ftc-to-treat-surveillance-pricing-as-an-unfair-practice/"
-        source: "EPIC"
-        date: 2026-09-28
-        summary: "On September 25, EPIC, along with the Center for Digital Democracy, the Consumer Federation of America, Demand Progress, and the National Consumers League, filed a comment urging the Federal Trade Commission (FTC) to go..."
-      - title: "Congressional Hearing Adds Fuel to Flock Fire"
-        url: "https://epic.org/congressional-hearing-adds-fuel-to-flock-fire/"
-        source: "EPIC"
-        date: 2026-09-24
-        summary: "On Wednesday, the Senate Judiciary Committee’s Subcommittee on Crime and Counterterrorism held a hearing on Flock’s Nationwide AI Surveillance Network. Flock Safety’s automated license plate readers (ALPR) take still..."
-      - title: "MediaPost: Paramount Urges SCOTUS To Reject Video Privacy Claim"
-        url: "https://epic.org/mediapostparamount-urges-scotus-to-reject-video-privacy-claim/"
-        source: "EPIC"
-        date: 2026-09-23
-        summary: "“The dispute has drawn attention from outside groups, including the privacy watchdog Electronic Privacy Information Center, which is siding with Salazar.” “The privacy advocates argued in a friend-of-the-court brief..."
-      - title: "Democracy Docket: DOJ delay tactics aim to advance Trump’s voter suppression schemes"
-        url: "https://epic.org/democracy-docket-doj-delay-tactics-aim-to-advance-trumps-voter-suppression-schemes/"
-        source: "EPIC"
-        date: 2026-09-23
-        summary: "“The hearing, set for Friday, concerns the Electronic Privacy Information Center’s (EPIC) request for U.S. District Judge Paula Xinis to declare DHS’s actions unlawful.” Read more here."
