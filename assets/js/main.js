@@ -1,9 +1,7 @@
 /* main.js */
 
 // ── Values card flip ──────────────────────────────────────────────────────────
-// Each card's front and back are separate absolutely-positioned faces inside
-// .values-card__inner, so a single nested <button> can't sit "on" both without
-// its own layout rules. .values-card itself already carries role="button",
+// Each card's front and back are separate absolutely-positioned faces inside .values-card__inner, so a single nested <button> can't sit "on" both without its own layout rules. .values-card itself already carries role="button",
 // tabindex="0" and aria-expanded (see _about/about.html) — this wires up
 // click plus Enter/Space, and keeps aria-expanded in sync with the flip state.
 document.querySelectorAll('.values-card').forEach(card => {
@@ -32,12 +30,12 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // ── Cursor spotlight ──────────────────────────────────────────────────────────
 // Sets --cx/--cy on :root; body::after in _base.scss renders the glow via CSS.
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.addEventListener('mousemove', (e) => {
-    document.documentElement.style.setProperty('--cx', e.clientX + 'px');
-    document.documentElement.style.setProperty('--cy', e.clientY + 'px');
-  }, { passive: true });
-}
+// if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+//   document.addEventListener('mousemove', (e) => {
+//     document.documentElement.style.setProperty('--cx', e.clientX + 'px');
+//     document.documentElement.style.setProperty('--cy', e.clientY + 'px');
+//   }, { passive: true });
+// }
 
 // ── Generic Carousel ──────────────────────────────────────────────────────────
 // autoAdvance: true = 7s auto-cycle with pause-on-hover (used for testimonials)
@@ -94,8 +92,8 @@ function initCarousel(sectionId, autoAdvance) {
 
       const syncToggle = () => {
         toggleBtn.innerHTML = userPaused
-          ? '<i class="fas fa-play" aria-hidden="true"></i>'
-          : '<i class="fas fa-pause" aria-hidden="true"></i>';
+          ? '<i class="ph ph-fill ph-play" aria-hidden="true"></i>'
+          : '<i class="ph ph-fill ph-pause" aria-hidden="true"></i>';
         toggleBtn.setAttribute('aria-label', userPaused ? 'Play testimonials' : 'Pause testimonials');
       };
       syncToggle();
@@ -256,7 +254,7 @@ initCarousel('testimonials', true);  // auto-advances every 7s
   if (!btn) return;
 
   const icon = btn.querySelector('i');
-  const label = btn.querySelector('.rail-tx');
+  const label = btn.querySelector('.nav-extra-text');
 
   function currentTheme() {
     const stored = document.documentElement.getAttribute('data-theme');
@@ -266,8 +264,8 @@ initCarousel('testimonials', true);  // auto-advances every 7s
 
   function applyIcon(theme) {
     if (icon) {
-      icon.classList.toggle('fa-moon', theme === 'dark');
-      icon.classList.toggle('fa-sun', theme === 'light');
+      icon.classList.toggle('ph-moon', theme === 'dark');
+      icon.classList.toggle('ph-sun', theme === 'light');
     }
     if (label) label.textContent = theme === 'dark' ? 'Dark' : 'Light';
     btn.setAttribute('aria-label', theme === 'dark'

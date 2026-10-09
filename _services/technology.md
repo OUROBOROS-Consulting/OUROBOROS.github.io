@@ -1,22 +1,21 @@
 ---
 layout: service
 title: Technology & AI Consulting
-icon: ph ph-fill ph-terminal
+icon: ph ph-fill ph-head-circuit
 
 description: "Bespoke technology and AI solutions — precision-applied tools, agentic workflows, and systems that give you control without requiring a full team."
 category: Services
 order: 3
 lede: >
   The right technology, precisely applied — with AI as a force multiplier when it helps, and honest advice when it doesn't.
-  I build bespoke solutions for real problems: from agentic Claude workflows to Apple ecosystem overhauls,
+  I build bespoke solutions for real problems: from agentic AI workflows to Apple ecosystem overhauls,
   from FedRAMP-grade automation to a folder structure you'll actually stick to.
-tags: [Apple Ecosystem, Agentic AI, Claude Integration, Automation, Smart Home, Records Management, Data Science, Statistics, R, Python, Workflow Design]
+tags: [Apple Ecosystem, Agentic AI, Claude Integration, Automation, Smart Home, Records Management, Data Science, Workflow Design]
 cta_label: Describe Your Problem
 cta_body: Reach out with a brief description of what you're working on. Discovery calls are always free — I'll follow up within 72 hours.
 who: >
   Individuals, small organizations, and startups that need robust technical solutions without the overhead of a full engineering team.
   I help you figure out what's actually slowing you down, then build the right solution — whether that's an AI workflow, a custom automation, a better records system, or just the right tool you didn't know existed.
-  Also: individuals and organizations facing institutional challenges — survivors, activists, whistleblowers — who need AI as a tool for documentation, strategic analysis, or institutional navigation.
 included:
   - title: Discovery & Assessment
     description: Free 20-minute call to understand your situation and goals, followed by a deeper assessment of your workflow and what technology could actually change.

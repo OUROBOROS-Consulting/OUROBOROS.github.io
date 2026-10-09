@@ -15,7 +15,7 @@ cta_body: Still have a question I did not answer?
 
 ## What this firm is
 
-### What does OUROBOROS Consulting actually do?
+### What does ouroborOS Consulting actually do?
 
 Four things, and they are less related than the word "consulting" makes them sound.
 

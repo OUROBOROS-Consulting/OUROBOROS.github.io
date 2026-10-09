@@ -11,7 +11,7 @@
   position: relative;
   @include elevation-standard-dark;
   background-color: var(--surface-hero);
-  background-image: none;
+  background-image: url('/assets/images/Abstract.jpg');
   box-shadow: none;
   background-size: 300px 300px;
   background-position: 0 0;
@@ -892,4 +892,3 @@
     transition: none;
   }
 }
-

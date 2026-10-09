@@ -455,15 +455,27 @@ body::after {
 
 // ── Reading progress bar ──────────────────────────────────────────────────────
 // Global element — rendered by the article, sections, service, announcement and psa layouts
-#progress-bar {
+.progress-bar {
   position: fixed;
+  height: 4px;
+  /* Adjust thickness here */
+  background-color: var(--mark);
+  /* Change color here */
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s ease-out;
+  pointer-events: none;
+  /* Ensures bars don't interfere with clicks */
+}
+
+#progress-bar-top {
   top: 0;
   left: 0;
-  height: 5px;
-  background: var(--mark);
-  width: 0%;
-  z-index: 200;
-  transition: width 0.1s linear;
+}
+
+#progress-bar-bottom {
+  bottom: 0;
+  right: 0;
 }
 
 // ── Back link ─────────────────────────────────────────────────────────────────
@@ -490,7 +502,7 @@ body::after {
   margin-bottom: var(--space-3);
 
   &::before {
-    content: '←';
+    content: '<-';
   }
 
   &:hover {
@@ -556,7 +568,7 @@ body::after {
     transition: color 0.3s;
 
     &:hover {
-      // Fixed: Replaced opacity shift with the high-contrast token to improve accessibility 
+      // Fixed: Replaced opacity shift with the high-contrast token to improve accessibility
       // and maintain consistency across the design system.
       color: var(--mark-strong);
     }

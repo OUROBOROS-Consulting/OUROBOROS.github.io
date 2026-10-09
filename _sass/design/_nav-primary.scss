@@ -7,7 +7,8 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 999;
+  border: 50px solid var(--ourob-color-accent-1);
   display: flex;
   flex-direction: column;
 }
@@ -22,7 +23,8 @@
 // nobody caught — a 16px marble band painting under the rail's last item, which
 // read as a clipped grey word fragment floating on the page. Keep it scoped.
 .nav-menu {
-  position: fixed;
+  /* Removed position: fixed; to allow .nav-shell (which is already fixed) 
+     to manage the layout of all nav rows correctly within its flex container. */
   width: 100%;
   padding: 0.5rem var(--pad);
   display: flex;
@@ -685,7 +687,53 @@
   letter-spacing: 0.08em;
 }
 
-// ── Nav icon buttons — gold border ─────────────────────────────────────
-nav.nav-menu .nav-dropdown.nav-button .nav-card {
-  border: 1px solid var(--mark) !important;
+// ── Nav extra buttons — compact icon + text ─────────────────────────────────
+.nav-extra-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--ink-4);
+  text-decoration: none;
+  font-size: var(--fs-1); // Smaller than nav links
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: color 0.2s ease;
+
+  i {
+    font-size: var(--fs-4); // Icon size
+    display: flex;
+    align-items: center;
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--mark);
+  }
+
+  &--button {
+    // If it's a button, ensure vertical alignment matches links/search
+    vertical-align: middle;
+  }
+}
+
+.nav-extra-text {
+  font-family: var(--font-sans);
+}
+
+@media (max-width: 768px) {
+  .nav-extra-item {
+    // On mobile, the nav-buttons are centered and items might be too wide.
+    font-size: var(--fs-2); // Slightly larger tap target text
+
+    .nav-extra-text {
+      display: none; // Hide text on mobile to save space in the bar
+    }
+    i {
+      font-size: var(--fs-4);
+    }
+  }
 }

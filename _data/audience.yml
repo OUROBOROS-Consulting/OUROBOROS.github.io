@@ -1,19 +1,19 @@
 - title: Small Businesses & Solo Professionals
-  icon: /assets/images/audience-briefcase.svg
+  icon:   ph-fill ph-briefcase
   description: >
     You are running a lean operation—whether it's a startup or a solo practice—and need reliable tooling, automation, and systems that hold up under scrutiny without the overhead of a large team.
 
 - title: Advocates & Nonprofits
-  icon: /assets/images/audience-flag.svg
+  icon:   ph-fill ph-hand-fist
   description: >
     You serve people navigating broken institutions and want AI-literate tooling, or research skills your own staff can carry, for work with sensitive cases.
 
+- title: Whistleblowers & Survivors
+  icon:   ph-fill ph-shield
+  description: >
+    You are navigating high-stakes situations involving institutional betrayal or coercive control. You need automation work or records-management support to document what happened and protect yourself from surveillance.
+
 - title: Researchers & Clinicians
-  icon: /assets/images/audience-microscope.svg
+  icon:   ph-fill ph-microscope
   description: >
     You study institutional betrayal, personality pathology, or public-health harm and need a collaborator fluent in both statistics and the human stakes.
-
-- title: Whistleblowers & Survivors
-  icon: /assets/images/audience-shield.svg
-  description: >
-    You are navigating high-stakes situations involving institutional betrayal or coercive control. You need technical, statistical, or records-management support to document what happened and protect yourself from surveillance.

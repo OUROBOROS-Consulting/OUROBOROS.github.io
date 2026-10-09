@@ -162,14 +162,6 @@ layout: default
           {% endfor %}
         </div><!-- /playlist-carousel-track -->
 
-        <!-- Prev/Next buttons and dot indicators — only if more than 1 slide -->
-        {% if _playlists.size > 1 %}
-        <div class="playlist-carousel-controls">
-          <button class="carousel-btn playlist-btn--prev" aria-label="Previous playlist">&#8592;</button>
-          <span class="playlist-carousel-count">1 / {{ _playlists.size }}</span>
-          <button class="carousel-btn playlist-btn--next" aria-label="Next playlist">&#8594;</button>
-        </div>
-
         <!-- One dot per slide; JS adds/removes `.active` on navigation -->
         <div class="carousel-dots playlist-carousel-dots" role="tablist" aria-label="Playlist navigation">
           {% for pl in _playlists %}
@@ -177,8 +169,6 @@ layout: default
             aria-label="Playlist {{ forloop.index }}"></button>
           {% endfor %}
         </div>
-        {% endif %}
-
       </div><!-- /playlist-carousel -->
 
       {% elsif section.data_source %}
@@ -329,11 +319,18 @@ layout: default
      innerHeight    = visible viewport height in pixels
      total          = maximum scrollable distance  (scrollHeight - innerHeight)
      ══════════════════════════════════════════════════════════════════════ -->
-<script>
-  const bar = document.getElementById('progress-bar');
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    const total = document.documentElement.scrollHeight - window.innerHeight;
-    bar.style.width = (scrolled / total * 100) + '%';
-  });
-</script>
+    <script>
+      (function () {
+        const topBar = document.getElementById('progress-bar-top');
+        const bottomBar = document.getElementById('progress-bar-bottom');
+
+        window.addEventListener('scroll', () => {
+          const scrolled = window.scrollY;
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = totalHeight > 0 ? (scrolled / totalHeight) * 100 : 0;
+
+          topBar.style.width = progress + '%';
+          bottomBar.style.width = progress + '%';
+        });
+      })();
+    </script>

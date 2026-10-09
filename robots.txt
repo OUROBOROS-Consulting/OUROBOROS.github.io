@@ -1,7 +1,7 @@
 ---
 permalink: /robots.txt
 ---
-# OUROBOROS Consulting
+# ouroborOS Consulting
 # Everything published here is meant to be read, quoted, and indexed. The
 # AI crawlers are named explicitly rather than left to the wildcard because
 # several of them (Google-Extended, Applebot-Extended) are opt-out tokens that

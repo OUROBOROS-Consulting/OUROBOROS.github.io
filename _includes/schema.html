@@ -33,7 +33,7 @@
     {
       "@type": ["Organization", "ProfessionalService"],
       "@id": {{ site.url | append: '/#org' | jsonify }},
-      "name": "OUROBOROS Consulting",
+      "name": "ouroborOS Consulting",
       "alternateName": "ouroborOS Consulting",
       "url": {{ site.url | append: '/' | jsonify }},
       "description": {{ _org_desc | jsonify }},
@@ -42,7 +42,7 @@
         "@id": {{ site.url | append: '/#logo' | jsonify }},
         "url": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
         "contentUrl": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
-        "caption": "OUROBOROS Consulting"
+        "caption": "ouroborOS Consulting"
       },
       "image": { "@id": {{ site.url | append: '/#logo' | jsonify }} },
       "founder": { "@id": {{ site.url | append: '/#person' | jsonify }} },
@@ -102,7 +102,7 @@
       "@type": "WebSite",
       "@id": {{ site.url | append: '/#website' | jsonify }},
       "url": {{ site.url | append: '/' | jsonify }},
-      "name": "OUROBOROS Consulting",
+      "name": "ouroborOS Consulting",
       "description": {{ _org_desc | jsonify }},
       "publisher": { "@id": {{ site.url | append: '/#org' | jsonify }} },
       "inLanguage": "en-US"
@@ -114,7 +114,7 @@
       "honorificSuffix": "MS",
       "jobTitle": "Founder & Principal",
       "url": {{ '/team/' | absolute_url | jsonify }},
-      "image": {{ '/assets/images/AS.jpg' | absolute_url | jsonify }},
+      "image": {{ '/assets/images/AS.png' | absolute_url | jsonify }},
       "worksFor": { "@id": {{ site.url | append: '/#org' | jsonify }} },
       "knowsAbout": [
         "statistics",

@@ -2,12 +2,11 @@ title: ouroborOS
 # Consumed by jekyll-feed and jekyll-sitemap. Not used by default.html, which
 # builds its own <meta name="description"> from page front matter.
 description: >-
-  Technology, research, and advocacy consulting for survivors of institutional
-  betrayal, senior citizens, veterans, nonprofits, legal aid organizations,
-  small businesses, and startups.
+  Technology, design, and research consulting for small businesses, startups, and other resource-constrained entities.
 author: Apostolos Stamenos
 contact_url: /intake
 tutoring_url: https://www.wyzant.com/refer/tutor/86925781/?utm_source=TREF&utm_campaign=iphone&utm_content=tutorapp&utm_medium=share
+instagram_url: https://www.instagram.com/astamenos5/
 github_url: https://github.com/OUROBOROS-Consulting
 linkedin_url: https://www.linkedin.com/in/apostolos-stamenos
 substack_url: https://ouroborosconsult.substack.com

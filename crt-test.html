@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRT Shader WebGPU Test</title>
+    <style>
+        body {
+            margin: 0;
+            background: #050505;
+            color: #eee;
+            font-family: monospace;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        canvas {
+            border: 2px solid #333;
+            box-shadow: 0 0 40px rgba(0,0,0,0.8);
+            max-width: 90vw;
+            max-height: 70vh;
+        }
+        .controls {
+            margin-top: 20px;
+            padding: 15px;
+            background: #1a1a1a;
+            border-radius: 8px;
+            font-size: 12px;
+            text-align: center;
+        }
+        .status { margin-bottom: 10px; color: #0f0; }
+        .error { color: #f44; }
+    </style>
+</head>
+<body>
+
+<div id="status" class="status">Initializing WebGPU...</div>
+<canvas id="gpuCanvas"></canvas>
+
+<div class="controls">
+    CRT EFFECT TEST PAGE <br>
+    [ Target: WebGPU ] [ Status: <span id="state">Running</span> ]
+</div>
+
+<script type="module">
+    // --- CONFIGURATION (The "Sliders" from Figma) ---
+    const params = {
+        mask: 30 / 100,
+        maskType: 0, 
+        maskPitch: 12,
+        curvature: 40 / 100, // Lowered for better visibility on test
+        clipToCurve: 1.0,
+        scanlines: 30 / 100,
+        scanlineSize: 8,
+        aberration: 50 / 100,
+        aberrationScheme: 0, 
+        flicker: 20 / 100,
+        noise: 15 / 100,
+        noiseSize: 1,
+        rollSpeed: 2.0,
+        jitter: 2 / 100,
+        vignette: 60 / 100,
+        brightness: 0,
+        speed: 1.0
+    };
+
+    // --- THE WGSL SHADER (Extracted from your CRT.js) ---
+    const shaderCode = `
+    struct Uniforms {
+      params0: vec4f, // curvature, scanline, mask amount, aberration pixels
+      params1: vec4f, // reserved, brightness gain, scanlineSize, time
+      params2: vec4f, // flicker, noise, rollSpeed, jitter
+      params3: vec4f, // reserved, noiseSize, clipToCurve, maskPitch
+      dims: vec4f,    // output width, output height, maskType, vignette amount
+      params4: vec4f, // aberrationScheme, padding,
+    }
+    @group(0) @binding(0) var<uniform> u: Uniforms;
+    @group(0) @binding(1) var samp: sampler;
+    @group(0) @binding(2) var inputTex: texture_2d<f32>;
+
+    struct VsIn { @location(0) pos: vec2f, @location(1) uv: vec2f };
+    struct VsOut { @builtin(position) position: vec4f, @location(0) uv: vec2f };
+
+    const TAU = 6.28318530718;
+    const PI = 3.14159265359;
+    const PHASE120 = 2.09439510239;
+
+    @vertex fn vs_main(in: VsIn) -> VsOut {
+      var out: VsOut;
+      out.position = vec4f(in.pos, 0.0, 1.0);
+      out.uv = in.uv;
+      return out;
+    }
+
+    fn coverage(p: vec2f, texel: vec2f) -> f32 {
+      let fx = smoothstep(0.0, texel.x, p.x) * (1.0 - smoothstep(1.0 - texel.x, 1.0, p.x));
+      let fy = smoothstep(0.0, texel.y, p.y) * (1.0 - smoothstep(1.0 - texel.y, 1.0, p.y));
+      return fx * fy;
+    }
+
+    fn sampleRaw(p: vec2f) -> vec4f {
+      return textureSampleLevel(inputTex, samp, clamp(p, vec2f(0.0), vec2f(1.0)), 0.0);
+    }
+
+    fn hash21(p: vec2f) -> f32 {
+      var h = fract(vec3f(p.x, p.y, p.x) * 0.1031);
+      h = h + dot(h, h.yzx + 33.33);
+      return fract((h.x + h.y) * h.z);
+    }
+
+    fn hash31(p: vec3f) -> f32 {
+      var h = fract(p * vec3f(0.1031, 0.1030, 0.0973));
+      h = h + vec3f(dot(h, h.yzx + 33.33));
+      return fract((h.x + h.y) * h.z);
+    }
+
+    fn barrel(uv: vec2f, aspect: vec2f, curvature: f32, scale: vec2f) -> vec2f {
+      var c = (uv * 2.0 - 1.0) * aspect;
+      let r2 = dot(c, c);
+      c = c * (1.0 + curvature * 0.35 * r2) * scale;
+      return (c / aspect) * 0.5 + 0.5;
+    }
+
+    fn aberrationOffset(screenUv: vec2f, aspect: vec2f, amount: f32, scheme: f32, texel: vec2f) -> vec2f {
+      let p = screenUv * 2.0 - 1.0;
+      let c = p * aspect;
+      let radius = length(c);
+      let normalizedRadial = c / max(radius, 0.000001);
+      let radialDirection = select(vec2f(1.0, 0.0), normalizedRadial, radius > 0.0001);
+      let radialLevel = clamp(radius / sqrt(2.0), 0.0, 1.0);
+      let radialPixels = radialDirection * (amount * (0.72 + 0.48 * radialLevel));
+      let horizontalPixels = vec2f(amount * 1.15, 0.0);
+      let convergenceBase = vec2f(0.95, -0.55);
+      let convergenceField = vec2f(p.x * 0.18, p.y * 0.22);
+      let convergencePixels = (convergenceBase + convergenceField) * amount;
+      var offsetPixels = radialPixels;
+      if (scheme > 0.5 && scheme < 1.5) { offsetPixels = horizontalPixels; } 
+      else if (scheme >= 1.5) { offsetPixels = convergencePixels; }
+      return offsetPixels * texel;
+    }
+
+    fn grilleProfile(theta: vec3f, pitch: f32) -> vec3f {
+      let fundamentalAA = smoothstep(2.0, 3.0, pitch);
+      let secondAA = smoothstep(2.0, 3.0, pitch * 0.5);
+      return vec3f(0.375) + 0.5 * fundamentalAA * cos(theta) + 0.125 * secondAA * cos(theta * 2.0);
+    }
+
+    fn softProfile(theta: f32, period: f32) -> f32 {
+      return 0.5 + 0.5 * smoothstep(2.0, 3.0, period) * cos(theta);
+    }
+
+    fn softProfile3(theta: vec3f, period: f32) -> vec3f {
+      return vec3f(0.5) + 0.5 * smoothstep(2.0, 3.0, period) * cos(theta);
+    }
+
+    @fragment fn fs_main(in: VsOut) -> @location(0) vec4f {
+      let curvature = u.params0.x;
+      let scanAmtRaw = u.params0.y;
+      let maskAmt = clamp(u.params0.z, 0.0, 1.0);
+      let aberr = u.params0.w;
+      let bright = u.params1.y;
+      let scanSize = max(u.params1.z, 1.0);
+      let t = u.params1.w;
+      let flickerAmt = u.params2.x;
+      let noiseAmt = u.params2.y;
+      let rollSpeed = u.params2.z;
+      let jitterAmt = u.params2.w;
+      let noiseSize = max(u.params3.y, 1.0);
+      let clipToCurve = u.params3.z > 0.5;
+      let maskPitch = clamp(u.params3.w, 2.0, 12.0);
+      let maskType = u.dims.z;
+      let vigAmt = clamp(u.dims.w, 0.0, 1.0);
+      let aberrationScheme = u.params4.x;
+
+      let inDims = max(vec2f(textureDimensions(inputTex, 0)), vec2f(1.0));
+      let inTexel = 1.0 / inDims;
+      let outDims = max(u.dims.xy, vec2f(1.0));
+
+      let aspectRaw = vec2f(outDims.x / outDims.y, 1.0);
+      let aspect = aspectRaw / (length(aspectRaw) / sqrt(2.0));
+
+      let edgeFit = vec2f(
+        1.0 / (1.0 + curvature * 0.35 * aspect.x * aspect.x),
+        1.0 / (1.0 + curvature * 0.35 * aspect.y * aspect.y),
+      );
+
+      let edgeAllowancePixels = 0.5;
+      let jitterReserveUv = clamp(jitterAmt, 0.0, 1.0) * 3.9 * inTexel.x;
+      let reserveUv = vec2f(jitterReserveUv + edgeAllowancePixels * inTexel.x, edgeAllowancePixels * inTexel.y);
+      let availableSpan = max(vec2f(1.0) - 2.0 * reserveUv, vec2f(0.05));
+      let clipFit = edgeFit / availableSpan;
+
+      let cornerFitValue = 1.0 / (1.0 + 0.7 * curvature);
+      let rectangularFit = vec2f(cornerFitValue);
+      let barrelScale = select(rectangularFit, clipFit, clipToCurve);
+
+      let scanAmt = scanAmtRaw * mix(0.6, 1.0, smoothstep(1.0, 2.5, scanSize));
+      let scanNorm = 1.0 / (1.0 - scanAmt * 0.5);
+
+      var warped = barrel(in.uv, aspect, curvature, barrelScale);
+
+      let lineId = floor(warped.y * outDims.y / scanSize);
+      let lineNoise = hash21(vec2f(lineId, floor(t * 24.0))) - 0.5;
+      let drift = sin(t * 1.7 + warped.y * 9.0) * 0.5;
+      let jitterX = jitterAmt * (lineNoise * 0.9 + drift * 0.4) * inTexel.x * 6.0;
+      warped = vec2f(warped.x + jitterX, warped.y);
+
+      let cov = select(1.0, coverage(warped, inTexel), clipToCurve);
+
+      let dir = aberrationOffset(in.uv, aspect, aberr, aberrationScheme, inTexel);
+      let sr = sampleRaw(warped + dir);
+      let sg = sampleRaw(warped);
+      let sb = sampleRaw(warped - dir);
+
+      let sharedAlpha = max(sr.a, max(sg.a, sb.a));
+      let separatedRgb = min(vec3f(sr.r, sg.g, sb.b), vec3f(sharedAlpha));
+      var colorSample = vec4f(separatedRgb, sharedAlpha) * cov;
+
+      let py = warped.y * outDims.y + t * 6.0;
+      let scan = (1.0 - scanAmt * 0.5 * (1.0 - cos(TAU * py / scanSize))) * scanNorm;
+      colorSample = vec4f(colorSample.rgb * scan, colorSample.a);
+
+      let rollPos = fract(warped.y + t * rollSpeed * 0.12);
+      let band = smoothstep(0.0, 0.06, rollPos) * (1.0 - smoothstep(0.06, 0.22, rollPos));
+      colorSample = vec4f(colorSample.rgb * (1.0 + band * 0.35 * step(0.001, rollSpeed)), colorSample.a);
+
+      var col = colorSample.rgb;
+      let alpha = colorSample.a;
+
+      let baseWarp = barrel(in.uv, aspect, curvature, barrelScale);
+      let px = in.uv.x * outDims.x;
+      let pyMask = in.uv.y * outDims.y;
+
+      var profile = vec3f(1.0);
+      var profileMean = 1.0;
+
+      if (maskType < 0.5) {
+        let th = px * (TAU / maskPitch);
+        profile = grilleProfile(vec3f(th, th - PHASE120, th + PHASE120), maskPitch);
+        profileMean = 0.375;
+      } else if (maskType < 1.5) {
+        let th = px * (TAU / maskPitch);
+        let hp = grilleProfile(vec3f(th, th - PHASE120, th + PHASE120), maskPitch);
+        let slotPeriod = maskPitch * 2.0;
+        let tie = softProfile(pyMask * (TAU / slotPeriod), slotPeriod);
+        profile = hp * (1.0 - 0.75 * tie);
+        profileMean = 0.234375;
+      } else {
+        let rowPeriod = maskPitch * 0.8660254;
+        let rowPos = pyMask / rowPeriod;
+        let rowIdx = floor(rowPos);
+        let odd = rowIdx - 2.0 * floor(rowIdx * 0.5);
+        let th = (px + odd * maskPitch * 0.5) * (TAU / maskPitch);
+        let hp = softProfile3(vec3f(th, th - PHASE120, th + PHASE120), maskPitch);
+        let vp = softProfile((rowPos - rowIdx) * TAU - PI, rowPeriod);
+        profile = hp * vp;
+        profileMean = 0.25;
+      }
+
+      let maskFloor = 0.03;
+      let maskSpan = 1.8;
+      let maskRaw = vec3f(maskFloor) + maskSpan * profile;
+      let maskGain = maskRaw / (maskFloor + maskSpan * profileMean);
+      col = col * mix(vec3f(1.0), maskGain, maskAmt);
+
+      let flick = 1.0 + flickerAmt * (sin(t * 37.0) * 0.5 + sin(t * 11.3) * 0.3) * 0.06;
+      col = col * flick;
+
+      let field = floor(t * 24.0);
+      let gp = floor(baseWarp * outDims / noiseSize);
+      let white = hash31(vec3f(gp, field));
+      let hiss = hash21(vec2f(floor(baseWarp.y * outDims.y / noiseSize), field * 1.7)) - 0.5;
+      let staticLvl = clamp(white + hiss * 0.35, 0.0, 1.0);
+      let nMix = clamp(noiseAmt, 0.0, 1.0) * 0.55 * alpha;
+      col = mix(col, vec3f(staticLvl) * alpha, nMix);
+      col = col * (1.0 + (white - 0.5) * noiseAmt * 0.25);
+
+      let cc_v = (baseWarp * 2.0 - 1.0) * aspect;
+      let r2_v = dot(cc_v, cc_v);
+      let vigStrength = 3.0 * vigAmt * vigAmt * (0.35 + 0.65 * vigAmt);
+      let vigSpread = clamp(vigAmt * vigAmt * (0.6 + 0.4 * clamp(curvature, 0.0, 1.0)), 0.0, 1.0);
+      let vigInner = mix(1.4, 0.0, vigSpread);
+      let v = 1.0 - vigStrength * smoothstep(vigInner, 2.0, r2_v);
+      col = col * max(v, 0.0) * bright;
+
+      let kneeStart = 0.8;
+      let knee = alpha * kneeStart;
+      let kneeRoom = max(alpha - knee, 0.000001);
+      let excess = max(col - vec3f(knee), vec3f(0.0));
+      let compressed = vec3f(knee) + vec3f(kneeRoom) * (vec3f(1.0) - exp(-excess / vec3f(kneeRoom)));
+      col = select(col, compressed, col > vec3f(knee));
+
+      return vec4f(clamp(col, vec3f(0.0), vec3f(alpha)), alpha);
+    }
+    `;
+
+    // --- WEBGL/WEBGPU ENGINE SETUP ---
+    async function init() {
+        const statusEl = document.getElementById('status');
+        
+        if (!navigator.gpu) { 
+            statusEl.textContent = "Error: WebGPU not supported in this browser."; 
+            statusEl.className = "error";
+            return; 
+        }
+
+        try {
+            const canvas = document.getElementById('gpuCanvas');
+            const adapter = await navigator.gpu.requestAdapter();
+            if (!adapter) throw new Error("No GPU adapter found.");
+            const device = await adapter.requestDevice();
+            const context = canvas.getContext('webgpu');
+
+            const format = navigator.gpu.getPreferredCanvasFormat();
+            canvas.width = 1280; 
+            canvas.height = 720;
+
+            context.configure({ device, format });
+
+            // Load an image to act as our "Input Texture" (A tech/grid pattern)
+            const img = new Image();
+            img.crossOrigin = "anonymous";
+            img.src = "https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1280&q=80"; 
+            await img.decode();
+
+            const imgBitmap = await createImageBitmap(img);
+            const texture = device.createTexture({
+                size: [imgBitmap.width, imgBitmap.height],
+                format: 'rgba8unorm',
+                usage: GPUTextureUsage.TEXTURE_BINDING | GPUTextureUsage.COPY_DST | GPUTextureUsage.RENDER_ATTACHMENT
+            });
+            device.queue.copyExternalImageToTexture({ source: imgBitmap }, { texture }, [imgBitmap.width, imgBitmap.height]);
+
+            // Uniform Buffer (96 bytes)
+            const uniformBuf = device.createBuffer({
+                size: 96,
+                usage: GPUBufferUsage.UNIFORM | GPUBufferUsage.COPY_DST,
+            });
+
+            const sampler = device.createSampler({ magFilter: 'linear', minFilter: 'linear' });
+
+            // Shader Module & Pipeline
+            const shaderModule = device.createShaderModule({ code: shaderCode });
+            const pipeline = device.createRenderPipeline({
+                layout: 'auto',
+                vertex: {
+                    module: shaderModule,
+                    entryPoint: "vs_main",
+                    buffers: [{
+                        arrayStride: 16,
+                        attributes: [
+                            { shaderLocation: 0, format: "float32x2", offset: 0 },
+                            { shaderLocation: 1, format: "float32x2", offset: 8 },
+                        ],
+                    }],
+                },
+                fragment: {
+                    module: shaderModule,
+                    entryPoint: "fs_main",
+                    targets: [{ format }],
+                },
+                primitive: { topology: "triangle-list" },
+            });
+
+            // Quad geometry (Full screen)
+            const quadBuf = device.createBuffer({
+                size: 6 * 16,
+                usage: GPUBufferUsage.VERTEX,
+                mappedAtCreation: true,
+            });
+            new Float32Array(quadBuf.getMappedRange()).set([
+                -1, -1, 0, 1,  1, -1, 1, 1,  -1, 1, 0, 0,
+                -1, 1, 0, 0,   1, -1, 1, 1,  1, 1, 1, 0,
+            ]);
+            quadBuf.unmap();
+
+            const bindGroup = device.createBindGroup({
+                layout: pipeline.getBindGroupLayout(0),
+                entries: [
+                    { binding: 0, resource: { buffer: uniformBuf } },
+                    { binding: 1, resource: sampler },
+                    { binding: 2, resource: texture.createView() },
+                ],
+            });
+
+            statusEl.textContent = "WebGPU Active - Rendering...";
+
+            function render(time) {
+                const seconds = time * 0.001;
+                const scaledTime = (seconds * params.speed) % 1024;
+
+                device.queue.writeBuffer(uniformBuf, 0, new Float32Array([
+                    params.curvature,               // params0.x
+                    params.scanlines,               // params0.y
+                    params.mask,                    // params0.z
+                    params.aberration * 12,         // params0.w
+                    0,                              // params1.x (reserved)
+                    Math.pow(2, params.brightness), // params1.y
+                    params.scanlineSize,            // params1.z
+                    scaledTime,                     // params1.w
+                    params.flicker,                 // params2.x
+                    params.noise,                   // params2.y
+                    params.rollSpeed,               // params2.z
+                    params.jitter,                  // params2.w
+                    0,                              // params3.x (reserved)
+                    params.noiseSize,               // params3.y
+                    params.clipToCurve ? 1 : 0,     // params3.z
+                    params.maskPitch,               // params3.w
+                    canvas.width,                   // dims.x
+                    canvas.height,                  // dims.y
+                    params.maskType,                // dims.z
+                    params.vignette,                // dims.w
+                    params.aberrationScheme,        // params4.x
+                    0, 0, 0                         // padding
+                ]));
+
+                const commandEncoder = device.createCommandEncoder();
+                const passEncoder = commandEncoder.beginRenderPass({
+                    colorAttachments: [{
+                        view: context.getCurrentTexture().createView(),
+                        loadOp: 'clear',
+                        clearValue: { r: 0, g: 0, b: 0, a: 1 },
+                        storeOp: 'store'
+                    }]
+                });
+
+                passEncoder.setPipeline(pipeline);
+                passEncoder.setBindGroup(0, bindGroup);
+                passEncoder.setVertexBuffer(0, quadBuf);
+                passEncoder.draw(6);
+                passEncoder.end();
+                device.queue.submit([commandEncoder.finish()]);
+
+                requestAnimationFrame(render);
+            }
+
+            requestAnimationFrame(render);
+        } catch (e) {
+            console.error(e);
+            statusEl.textContent = "Error: " + e.message;
+            statusEl.className = "error";
+        }
+    }
+
+    init();
+</script>
+</body>
+</html>

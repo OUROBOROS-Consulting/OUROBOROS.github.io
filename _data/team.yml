@@ -11,30 +11,24 @@
 - name: Apostolos Stamenos
   role: Founder & Principal
   # Real headshot, same file /about and schema.html use.
-  photo: /assets/images/AS.jpg
+  photo: /assets/images/AS.png
   photo_alt: Apostolos Stamenos
   credentials:
     - MS, Statistics
-    - Former federal data scientist
+    - Award-winning federal data scientist
     - Psychopathology research
   bio: |
-    Founder of OUROBOROS Consulting. Former federal data scientist at HHS, where
-    I led agency-wide transitions of public health infrastructure during the
-    COVID response and built FedRAMP-compliant machine learning and language
-    systems on Palantir Foundry.
+    Founder of ouroborOS Consulting. Former federal data scientist at HHS, where I led agency-wide transitions of public health infrastructure during the
+    COVID response and built FedRAMP-compliant machine learning and language systems on Palantir Foundry.
 
     My technical work spans Bayesian modeling, neuroimaging, high-throughput
     data pipelines, and anomaly detection in national health data systems. I
     build things that have to work: under deadline, under regulatory constraint,
     at scale.
 
-    I work with survivors, senior citizens, veterans, nonprofits, legal aid
-    organizations, and advocacy groups. I also work with small businesses,
-    startups, and solo practitioners who need technical capacity they cannot
-    afford to hire full-time. The job is the same either way. Find what is
-    slowing you down, then build the right fix. Sometimes that is an AI tool.
-    Sometimes it is a simple automation, a better workflow, or an app you have
-    not heard of.
+    I work with survivors, senior citizens, veterans, nonprofits, legal aid organizations, and advocacy groups. I also work with small businesses,
+    startups, and solo practitioners who need technical capacity they cannot afford to hire full-time. The job is the same either way. Find what is slowing you down, then build the right fix. Sometimes that is an AI tool.
+    Sometimes it is a simple automation, a better workflow, or an app you have not heard of.
   links:
     linkedin: https://www.linkedin.com/in/apostolos-stamenos
     contact: /intake

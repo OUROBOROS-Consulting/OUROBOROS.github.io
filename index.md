@@ -30,10 +30,14 @@ stats:
   # every published figure names the date it counts from, and this comment is
   # that date. Do not raise it without moving the start date with it.
   years_experience: "6+"
+  years_experience_icon: "ph ph-clock"
   years_experience_note: "Years in Data Science &amp; Research"
   agencies: "5"
+  agencies_icon: "ph ph-buildings"
   agencies_note: "HHS Divisions Served (Federal Career)"
   clients: "4+"
+  clients_icon: "ph ph-users"
+  clients_note: "Consulting Engagements"
 
 cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 72 hours.
 ---

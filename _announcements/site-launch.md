@@ -1,13 +1,13 @@
 ---
 layout: announcement
-title: "OUROBOROS Consulting — Site Launch"
+title: "ouroborOS Consulting — Site Launch"
 lede: "The practice website is now live, consolidating services, case studies, and public resources in one place."
 date: 2026-07-14
 category: Launch
 tags: [Practice, Web, Design]
 ---
 
-OUROBOROS Consulting is now online. This site serves as the central hub for the practice — covering active services, case study documentation, public-interest resources, and writing on technology, institutions, and systems thinking.
+ouroborOS Consulting is now online. This site serves as the central hub for the practice — covering active services, case study documentation, public-interest resources, and writing on technology, institutions, and systems thinking.
 
 ## What's here
 
