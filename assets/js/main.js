@@ -1,9 +1,7 @@
 /* main.js */
 
 // ── Values card flip ──────────────────────────────────────────────────────────
-// Each card's front and back are separate absolutely-positioned faces inside
-// .values-card__inner, so a single nested <button> can't sit "on" both without
-// its own layout rules. .values-card itself already carries role="button",
+// Each card's front and back are separate absolutely-positioned faces inside .values-card__inner, so a single nested <button> can't sit "on" both without its own layout rules. .values-card itself already carries role="button",
 // tabindex="0" and aria-expanded (see _about/about.html) — this wires up
 // click plus Enter/Space, and keeps aria-expanded in sync with the flip state.
 document.querySelectorAll('.values-card').forEach(card => {
@@ -32,12 +30,12 @@ document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
 // ── Cursor spotlight ──────────────────────────────────────────────────────────
 // Sets --cx/--cy on :root; body::after in _base.scss renders the glow via CSS.
-if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  document.addEventListener('mousemove', (e) => {
-    document.documentElement.style.setProperty('--cx', e.clientX + 'px');
-    document.documentElement.style.setProperty('--cy', e.clientY + 'px');
-  }, { passive: true });
-}
+// if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+//   document.addEventListener('mousemove', (e) => {
+//     document.documentElement.style.setProperty('--cx', e.clientX + 'px');
+//     document.documentElement.style.setProperty('--cy', e.clientY + 'px');
+//   }, { passive: true });
+// }
 
 // ── Generic Carousel ──────────────────────────────────────────────────────────
 // autoAdvance: true = 7s auto-cycle with pause-on-hover (used for testimonials)

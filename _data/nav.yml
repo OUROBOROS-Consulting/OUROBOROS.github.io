@@ -2,7 +2,7 @@
   url: /services/
   icon: ph-briefcase
   children:
-    - title: Brand & Digital Studio
+    - title: Brand & Design
       url: /services/design/
     - title: Technology & AI
       url: /services/technology/
@@ -13,7 +13,7 @@
 
 - title: Resources
   url: /resources/
-  icon: ph-book-open
+  icon: ph-books
   active_paths:
     - /psas
     - /glossary
@@ -21,16 +21,16 @@
     - /scholarly
     - /news
   children:
-    - title: PSAs
-      url: /resources/psas/
+    #- title: PSAs
+    #  url: /resources/psas/
     - title: Scholarly
       url: /resources/scholarly/
     - title: Tutorials
       url: /resources/tutorials/
     - title: Glossary
       url: /resources/glossary/
-    - title: What I'm Reading
-      url: /news/
+    #- title: What I'm Reading
+    #  url: /news/
 
 - title: About
   url: /about/

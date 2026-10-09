@@ -141,14 +141,14 @@ layout: default
   </div>
 
   <div class="testimonials-grid">
-    {% assign sorted_services = site.services | sort: "order" %}
-    {% for service in sorted_services limit: 4 %}
+    <!-- {% assign sorted_services = site.services | sort: "order" %} -->
+    {% for service in site.services limit: 4 %}
     <div class="card--formula">
       <div class="card--formula__interior">
         {% if service.hero_svg %}
         <div class="card-icon"><img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true"></div>
         {% elsif service.icon %}
-        <div class="card-icon"><i class="fa-solid {{ service.icon }}"></i></div>
+        <div class="card-icon"><i class="ph {{ service.icon }}"></i></div>
         {% endif %}
         <div class="card-body">
           <h3 class="card-title">{{ service.title }}</h3>

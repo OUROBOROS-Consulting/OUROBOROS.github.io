@@ -1,0 +1,125 @@
+// ── Ouroboros v5 New Token System (Namespaced) ───────────────────────────────
+// This file implements the new, namespaced design tokens for the site refactor.
+// Use these instead of the legacy --surface-1 style variables.
+
+@mixin new-color-tokens {
+  // Surfaces
+  --ourob-color-surface-1: #0c101a;
+  --ourob-color-surface-2: #1a1d26;
+  --ourob-color-surface-3: #22262f;
+  --ourob-color-surface-4: #252831;
+  --ourob-color-surface-5: #2b2f39;
+  --ourob-color-surface-hero: #1e213e;
+  --ourob-color-surface-hero-deep: #0F1638;
+  --ourob-color-surface-marble: #0D0D0D;
+
+  // Lines / Borders
+  --ourob-color-line-1: #22262f;
+  --ourob-color-line-2: #2b3038;
+  --ourob-color-line-3: #30343e;
+  --ourob-color-line-4: #3d424e;
+
+  // Ink / Text
+  --ourob-color-ink-1: #999999;
+  --ourob-color-ink-2: #B0AAA0;
+  --ourob-color-ink-3: #E8E4DC;
+  --ourob-color-ink-4: #FFFFFF;
+
+  // Mark / Gold (Brand)
+  --ourob-color-mark: #DDCBA3;
+  --ourob-color-mark-dim: rgba(201, 168, 76, 0.35);
+  --ourob-color-mark-ghost: rgba(201, 168, 76, 0.12);
+  --ourob-color-mark-border: #b39f7b;
+  --ourob-color-mark-strong: #c9b48d;
+
+  // Accents
+  --ourob-color-accent-1: var(--ourob-color-mark);
+  --ourob-color-accent-2: #A284CA;
+  --ourob-color-accent-3: #6DA187;
+  --ourob-color-accent-4: #5DA19C;
+  --ourob-color-accent-5: #7F94A6;
+
+  // Shadow / Depth
+  --ourob-color-shadow: #06080d;
+}
+
+@mixin new-spacing-tokens {
+  --ourob-space-1: 0.25rem;
+  --ourob-space-2: 0.375rem;
+  --ourob-space-3: 0.5rem;
+  --ourob-space-4: 0.75rem;
+  --ourob-space-5: 1rem;
+  --ourob-space-6: 1.25rem;
+  --ourob-space-7: 1.5rem;
+  --ourob-space-8: 2rem;
+  --ourob-space-9: 2.5rem;
+  --ourob-space-10: 3rem;
+  --ourob-space-11: 4rem;
+  --ourob-space-12: 6rem;
+  --ourob-space-13: 8rem;
+
+  --ourob-space-card: 1.4rem;
+  --ourob-space-band-lg: 3.5rem;
+}
+
+@mixin new-typography-tokens {
+  // Font Sizes
+  --ourob-type-size-1: 0.8rem;
+  --ourob-type-size-2: 0.9rem;
+  --ourob-type-size-3: 1rem;
+  --ourob-type-size-4: 1.2rem;
+  --ourob-type-size-5: 1.4rem;
+  --ourob-type-size-6: 1.6rem;
+  --ourob-type-size-7: clamp(1.2rem, 2vw, 1.45rem);
+  --ourob-type-size-8: clamp(1.5rem, 3vw, 2.1rem);
+  --ourob-type-size-9: clamp(2rem, 4vw, 3rem);
+  --ourob-type-size-10: clamp(2.4rem, 5vw, 4rem);
+  --ourob-type-size-11: clamp(3.5rem, 10vw, 8rem);
+
+  // Semantic Headings
+  --ourob-type-h1: 56px;
+  --ourob-type-h2: 48px;
+  --ourob-type-h3: 40px;
+  --ourob-type-h4: 32px;
+  --ourob-type-h5: 24px;
+  --ourob-type-h6: 20px;
+
+  // Line Heights
+  --ourob-type-lh-1: 1;
+  --ourob-type-lh-2: 1.35;
+  --ourob-type-lh-3: 1.75;
+  --ourob-type-lh-4: 1.85;
+  --ourob-type-lh-display: 1.12;
+
+  // Weights
+  --ourob-type-weight-light: 300;
+  --ourob-type-weight-regular: 400;
+  --ourob-type-weight-medium: 500;
+  --ourob-type-weight-semibold: 600;
+  --ourob-type-weight-bold: 700;
+
+  // Tracking
+  --ourob-type-ls-1: 0.14em;
+  --ourob-type-ls-2: 0.01em;
+  --ourob-type-ls-3: 0em;
+  --ourob-type-ls-4: -0.015em;
+  --ourob-type-ls-5: -0.03em;
+}
+
+@mixin new-radius-tokens {
+  --ourob-radius-1: 2px;
+  --ourob-radius-2: 3px;
+  --ourob-radius-3: 4px;
+  --ourob-radius-4: 8px;
+  --ourob-radius-5: 20px;
+  --ourob-radius-round: 50%;
+}
+
+@mixin new-elevation-tokens {
+  --ourob-elev-0: none;
+  --ourob-elev-1: 0 1px 3px var(--ourob-color-shadow);
+  --ourob-elev-2: 0 2px 8px var(--ourob-color-shadow);
+  --ourob-elev-3: 0 2px 12px var(--ourob-color-shadow);
+  --ourob-elev-4: 0 4px 16px var(--ourob-color-shadow);
+  --ourob-elev-5: 0 24px 60px var(--ourob-color-shadow);
+}
