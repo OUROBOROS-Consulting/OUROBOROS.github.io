@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-09
+generated: 2026-10-10
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "AI surveillance startup Flock to cut several hundred jobs amid backlash, sources say"
+        url: "https://www.theguardian.com/world/2026/oct/09/flock-job-cuts"
+        source: "The Guardian"
+        date: 2026-10-09
+        summary: "Company, which grown rapidly in recent years, has been under scrutiny as privacy concerns grow Flock Safety plans to shed about 18% of its employees, people with direct ⁠knowledge of the plans said on Thursday, as the..."
       - title: "AI and the climate crisis pose existential risks. The law offers a way to reduce them | Robert Reich"
         url: "https://www.theguardian.com/commentisfree/2026/oct/09/ai-climate-change-liability-lawsuits"
         source: "The Guardian"
@@ -27,7 +32,7 @@ sections:
         url: "https://www.theguardian.com/world/2026/oct/08/teen-hike-claude-ai-directions-rescue-canada-mountain"
         source: "The Guardian"
         date: 2026-10-08
-        summary: "The incident is the latest to raise questions about the growing reliance on digital maps for wilderness navigation The route up the Widowmaker Arete, a 1,700-foot wall in British Columbia, is deceptively described as..."
+        summary: "The incident is the latest to raise questions about the growing reliance on digital maps for wilderness navigation The route up the Widowmaker Arete, a 1,700ft wall in British Columbia, is deceptively described as..."
       - title: "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots"
         url: "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/"
         source: "Ars Technica"
@@ -38,11 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-08
         summary: "Whistleblower says recording and analysis of all probate calls in Co-op Legal Services is oppressive The Co-op has become the latest employer to place workers under AI surveillance with an automated listening technology..."
-      - title: "‘Someone else will do it for less’: refugees in Kenya are powering tech for dwindling pay"
-        url: "https://www.theguardian.com/technology/ng-interactive/2026/oct/08/ai-gig-work-refugees-kenya"
-        source: "The Guardian"
-        date: 2026-10-08
-        summary: "Refugee gig workers for tech companies don’t know how much they’ll be paid – if AI hasn’t already taken their jobs In a portable building in Kakuma, a refugee camp near Kenya ’s northern border with South Sudan , Grace..."
       - title: "Fraudster jailed for using 10K bots and AI songs to outstream Taylor Swift"
         url: "https://arstechnica.com/tech-policy/2026/10/outstreaming-taylor-swift-is-easy-with-10k-bots-and-ai-songs-fraudster-admits/"
         source: "Ars Technica"
@@ -63,11 +63,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-01
         summary: "The court acknowledges AI search comes with consequences, but it's not an antitrust issue."
-      - title: "Trump plan to combat AI risks hinges on Big Tech pals policing themselves"
-        url: "https://arstechnica.com/tech-policy/2026/09/trump-plan-to-combat-ai-risks-hinges-on-big-tech-pals-policing-themselves/"
-        source: "Ars Technica"
-        date: 2026-09-30
-        summary: "Trump gets dozens of AI firms to agree to voluntary safety tests."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +131,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "‘Cerebral torment’: IOP retracts nearly 100 conference papers for tortured phrases"
+        url: "https://retractionwatch.com/2026/10/09/iop-publishing-conference-proceedings-tortured-phrases/"
+        source: "Retraction Watch"
+        date: 2026-10-09
+        summary: "IOP Publishing has retracted nearly 100 papers from three of its conference proceedings after the articles were flagged for containing tortured phrases. Tortured phrases are rephrasings and synonyms — often awkward and..."
       - title: "OpenAI withdraws three preprints a day after releasing 722 manuscripts on unsolved math problems"
         url: "https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/"
         source: "Retraction Watch"
@@ -166,30 +166,15 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-02
         summary: "A paper that called into question many central data linking carbon dioxide to the rapidly warming climate has been retracted for “significant concerns,” including “unsupported conclusions” and “inaccuracies” in the..."
-      - title: "When open data are misused"
-        url: "https://retractionwatch.com/2026/10/01/openneuro-dataset-fmri-brain-data-misuse/"
-        source: "Retraction Watch"
-        date: 2026-10-01
-        summary: "When Dorothy Bishop was asked to review a paper for a small neuroscience journal in August, she could tell from the abstract the authors had used a dataset she had first published four years ago on the public repository..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
-      - title: "CBP’s Predictive Policing Units Have Financial Data, Won’t Say How They Got It"
-        url: "https://epic.org/cbps-predictive-policing-units-have-financial-data-wont-say-how-they-got-it/"
-        source: "EPIC"
-        date: 2026-10-08
-        summary: "A recent story by 404 Media revealed that Customs & Border Patrol’s (CBP) predictive policing units, or Predictive Intelligence Targeting Teams (PITT) have been using financial data to target individuals for anomalous..."
-      - title: "Sen. Gillibrand Introduces U.S. Data Protection Agency Bill"
-        url: "https://epic.org/sen-gillibrand-introduces-u-s-data-protection-agency-bill/"
-        source: "EPIC"
-        date: 2026-10-07
-        summary: "U.S. Senator Kirsten Gillibrand (D-NY) has reintroduced the Data Protection Act, which would create an independent Data Protection Agency in the United States to safeguard the personal data of Americans. EPIC, many..."
-      - title: "EPIC to NYC Council: Address the AI Harms Already Affecting New Yorkers"
-        url: "https://epic.org/epic-to-nyc-council-address-the-ai-harms-already-affecting-new-yorkers/"
-        source: "EPIC"
-        date: 2026-10-07
-        summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
+      - title: "What it takes for voters to be resilience against AI misinformation"
+        url: "https://themarkup.org/hello-world/2026/10/10/election-ai-resilience"
+        source: "The Markup"
+        date: 2026-10-10
+        summary: "A conversation with political scientist Thessalia Merivaki"
       - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
         url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
         source: "Krebs on Security"
@@ -210,6 +195,11 @@ sections:
         source: "EPIC"
         date: 2026-10-02
         summary: "On Thursday, EPIC, along with Professor Seema Patel, filed an amicus brief using privacy grounds to challenge the sale of sensitive employee data in Spirit Airlines’ bankruptcy proceedings to Google to be used for AI..."
+      - title: "Meta’s Mass Data Collection Is Not A-Muse-ing"
+        url: "https://epic.org/metas-mass-data-collection-is-not-a-muse-ing/"
+        source: "EPIC"
+        date: 2026-10-02
+        summary: "At the beginning of September, Meta launched Muse, a “personal AI agent” marketed to collect as much data as possible assist users with whatever tasks they request or enable. Suggested uses in the initial release..."
       - title: "Victory! Court Rejects Government Effort to Dismiss Social Media Surveillance Lawsuit"
         url: "https://www.eff.org/press/releases/victory-court-rejects-government-effort-dismiss-social-media-surveillance-lawsuit"
         source: "EFF Deeplinks"
@@ -220,6 +210,11 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-30
         summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
+      - title: "Senator Markey Introduces Bill to Stop the Government’s Use of Face Surveillance and Other Biometric Surveillance Tech"
+        url: "https://epic.org/senator-markey-introduces-bill-to-stop-the-governments-use-of-face-surveillance-and-other-biometric-surveillance-tech/"
+        source: "EPIC"
+        date: 2026-09-30
+        summary: "Senators Markey and Merkley along with Reps. Jaypal, Pressley, and Tlaib introduced legislation to stop the government’s use of biometric surveillance, including facial recognition tools. The Facial Recognition and..."
       - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
         url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
         source: "EFF Deeplinks"
