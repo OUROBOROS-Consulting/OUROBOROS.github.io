@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-10
+generated: 2026-10-11
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "US’s Reagan-era economic promises return as Trump’s AI-fueled growth fantasy"
+        url: "https://www.theguardian.com/business/2026/oct/11/trump-ai-economy-reagan"
+        source: "The Guardian"
+        date: 2026-10-11
+        summary: "‘Even if AI supercharged the economy, its impact on the government’s finances would be muted’ Back through political history to the age of Ronald Reagan , Republicans have repeatedly promised the US public that tax cuts..."
       - title: "AI surveillance startup Flock to cut several hundred jobs amid backlash, sources say"
         url: "https://www.theguardian.com/world/2026/oct/09/flock-job-cuts"
         source: "The Guardian"
@@ -38,11 +43,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-08
         summary: "Full-stack safety solution for physical AI is being used by robotics companies."
-      - title: "‘Dystopian’: Co-op becomes latest firm to put staff under AI surveillance"
-        url: "https://www.theguardian.com/technology/2026/oct/08/co-op-legal-services-ai-customer-phone-call-surveillance"
-        source: "The Guardian"
-        date: 2026-10-08
-        summary: "Whistleblower says recording and analysis of all probate calls in Co-op Legal Services is oppressive The Co-op has become the latest employer to place workers under AI surveillance with an automated listening technology..."
       - title: "Fraudster jailed for using 10K bots and AI songs to outstream Taylor Swift"
         url: "https://arstechnica.com/tech-policy/2026/10/outstreaming-taylor-swift-is-easy-with-10k-bots-and-ai-songs-fraudster-admits/"
         source: "Ars Technica"
@@ -67,6 +67,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Five people shot and killed in apparent murder-suicide, Georgia police say"
+        url: "https://www.theguardian.com/us-news/2026/oct/10/douglas-georgia-shooting-deaths"
+        source: "The Guardian"
+        date: 2026-10-11
+        summary: "Deceased were all members of the same family, officials say, and one of victims placed the initial emergency call Five people were shot and killed in an apparent murder-suicide at a residence in Georgia on Friday..."
       - title: "‘I thought the baby would change him’: the women whose pregnancies are blighted by domestic abuse"
         url: "https://www.theguardian.com/society/2026/oct/07/i-thought-the-baby-would-change-him-the-women-whose-pregnancies-are-blighted-by-domestic-abuse"
         source: "The Guardian"
@@ -92,11 +97,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-02
         summary: "Exclusive: Britain’s largest private-sector employer has also trained managers to spot signs of domestic abuse Tesco has become the first supermarket to introduce paid “safe leave” for victims of domestic abuse, giving..."
-      - title: "‘Just like that, I lost my girls’: the mother who feels betrayed by the family courts"
-        url: "https://www.theguardian.com/society/2026/sep/29/mother-feels-betrayed-family-courts-parental-alienation-england-wales"
-        source: "The Guardian"
-        date: 2026-09-29
-        summary: "The theory of parental alienation is a ‘harmful pseudo-science’, according to recent official guidance in England and Wales. Yet it led to Sarah’s two daughters being taken away six years ago – and never returned On the..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -175,6 +175,21 @@ sections:
         source: "The Markup"
         date: 2026-10-10
         summary: "A conversation with political scientist Thessalia Merivaki"
+      - title: "CBP’s Predictive Policing Units Have Financial Data, Won’t Say How They Got It"
+        url: "https://epic.org/cbps-predictive-policing-units-have-financial-data-wont-say-how-they-got-it/"
+        source: "EPIC"
+        date: 2026-10-08
+        summary: "A recent story by 404 Media revealed that Customs & Border Patrol’s (CBP) predictive policing units, or Predictive Intelligence Targeting Teams (PITT) have been using financial data to target individuals for anomalous..."
+      - title: "Sen. Gillibrand Introduces U.S. Data Protection Agency Bill"
+        url: "https://epic.org/sen-gillibrand-introduces-u-s-data-protection-agency-bill/"
+        source: "EPIC"
+        date: 2026-10-07
+        summary: "U.S. Senator Kirsten Gillibrand (D-NY) has reintroduced the Data Protection Act, which would create an independent Data Protection Agency in the United States to safeguard the personal data of Americans. EPIC, many..."
+      - title: "EPIC to NYC Council: Address the AI Harms Already Affecting New Yorkers"
+        url: "https://epic.org/epic-to-nyc-council-address-the-ai-harms-already-affecting-new-yorkers/"
+        source: "EPIC"
+        date: 2026-10-07
+        summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
       - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
         url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
         source: "Krebs on Security"
@@ -195,11 +210,6 @@ sections:
         source: "EPIC"
         date: 2026-10-02
         summary: "On Thursday, EPIC, along with Professor Seema Patel, filed an amicus brief using privacy grounds to challenge the sale of sensitive employee data in Spirit Airlines’ bankruptcy proceedings to Google to be used for AI..."
-      - title: "Meta’s Mass Data Collection Is Not A-Muse-ing"
-        url: "https://epic.org/metas-mass-data-collection-is-not-a-muse-ing/"
-        source: "EPIC"
-        date: 2026-10-02
-        summary: "At the beginning of September, Meta launched Muse, a “personal AI agent” marketed to collect as much data as possible assist users with whatever tasks they request or enable. Suggested uses in the initial release..."
       - title: "Victory! Court Rejects Government Effort to Dismiss Social Media Surveillance Lawsuit"
         url: "https://www.eff.org/press/releases/victory-court-rejects-government-effort-dismiss-social-media-surveillance-lawsuit"
         source: "EFF Deeplinks"
@@ -210,11 +220,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-30
         summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
-      - title: "Senator Markey Introduces Bill to Stop the Government’s Use of Face Surveillance and Other Biometric Surveillance Tech"
-        url: "https://epic.org/senator-markey-introduces-bill-to-stop-the-governments-use-of-face-surveillance-and-other-biometric-surveillance-tech/"
-        source: "EPIC"
-        date: 2026-09-30
-        summary: "Senators Markey and Merkley along with Reps. Jaypal, Pressley, and Tlaib introduced legislation to stop the government’s use of biometric surveillance, including facial recognition tools. The Facial Recognition and..."
       - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
         url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
         source: "EFF Deeplinks"
@@ -225,8 +230,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-29
         summary: "People are increasingly concerned about the ways in which mass surveillance is tracking our every move: from Flock license plate readers to face recognition to creepy ads that – based on what we see and do online – seem..."
-      - title: "EFF to San Francisco Police: Drones are Powerful Surveillance Tools That Require a Robust Policy"
-        url: "https://www.eff.org/deeplinks/2026/09/eff-san-francisco-police-drones-are-powerful-surveillance-tools-require-robust"
-        source: "EFF Deeplinks"
-        date: 2026-09-28
-        summary: "The San Francisco Police Department (SFPD) began regularly deploying drones two years ago and has since expanded their use in a way that has outpaced its documented policy and evaded existing local and state oversight..."
