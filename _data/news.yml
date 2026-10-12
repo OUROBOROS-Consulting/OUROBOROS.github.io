@@ -2,12 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-11
+generated: 2026-10-12
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "When AI is subject to less regulation than your fridge, something is startlingly wrong | Richard Hermer"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/12/ai-regulation-fridge-risk-humanity-public-debate-international-law"
+        source: "The Guardian"
+        date: 2026-10-12
+        summary: "Let’s be clear: the risk to humanity is unprecedented. Without an urgent public debate and robust use of international law, we will lose control of the future In my two years as attorney general, I spent more time..."
+      - title: "Amazon has over 1 million robot workers. What’s next for human employees?"
+        url: "https://arstechnica.com/ai/2026/10/inside-amazons-robotic-arms-race-and-what-it-means-for-the-future-of-human-work/"
+        source: "Ars Technica"
+        date: 2026-10-12
+        summary: "The second-largest corporate employer has bet big on robot workers to scale."
+      - title: "One essential ingredient for AI safety? Democracy | Matthew Botvinick"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/12/ai-safety-democracy"
+        source: "The Guardian"
+        date: 2026-10-12
+        summary: "The rise of AI makes the preservation of democracy even more urgent – especially as the technology threatens institutions AI safety is having a moment. After years as a topic for techies and futurists, the potential..."
+      - title: "AI less regulated than milk, Microsoft president says in warning over safety"
+        url: "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules"
+        source: "The Guardian"
+        date: 2026-10-12
+        summary: "Brad Smith adds to calls for tougher rules for AI, including ‘kill switches’ and legal obligation to victims of rogue agents Business live – latest updates Artificial intelligence is less regulated than milk and washing..."
+      - title: "UK to strengthen cyber defences as minister calls for AI firms to increase safety efforts"
+        url: "https://www.theguardian.com/technology/2026/oct/12/uk-strengthen-cyber-defences-minister-ai-firms-safety"
+        source: "The Guardian"
+        date: 2026-10-11
+        summary: "Kanishka Narayan to say Britain cannot rely entirely on tech companies amid rising global concern over AI dangers Companies building the most advanced AI systems must increase safety efforts, the UK’s AI minister will..."
       - title: "US’s Reagan-era economic promises return as Trump’s AI-fueled growth fantasy"
         url: "https://www.theguardian.com/business/2026/oct/11/trump-ai-economy-reagan"
         source: "The Guardian"
@@ -18,26 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-09
         summary: "Company, which grown rapidly in recent years, has been under scrutiny as privacy concerns grow Flock Safety plans to shed about 18% of its employees, people with direct ⁠knowledge of the plans said on Thursday, as the..."
-      - title: "AI and the climate crisis pose existential risks. The law offers a way to reduce them | Robert Reich"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/09/ai-climate-change-liability-lawsuits"
-        source: "The Guardian"
-        date: 2026-10-09
-        summary: "Liability lawsuits have held tobacco, oil and pharma companies to account in the past. AI investors won’t ignore this threat The most basic function of government is to protect people from harm. Two growing phenomena –..."
-      - title: "Palantir’s Tom Watson says ‘mob rule’ must not dictate awarding of government contracts"
-        url: "https://www.theguardian.com/technology/2026/oct/09/palantir-tom-watson-mob-rule-government-contracts"
-        source: "The Guardian"
-        date: 2026-10-09
-        summary: "Former Labour deputy leader says tech firm would work with a Reform UK government on immigration crackdowns Tom Watson, the former Labour deputy leader who recently joined Palantir, has warned against “mob rule” when it..."
-      - title: "British households would be £5,000 richer if we were more innovative. Let’s unleash our talents | Gordon Brown"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/09/gordon-brown-british-households-5000-richer-innovation"
-        source: "The Guardian"
-        date: 2026-10-09
-        summary: "We have a deep reservoir of assets, but struggle to turn small companies into global success stories. Innovation needs to be at the heart of government policy Gordon Brown was UK prime minister from 2007 to 2010 The..."
-      - title: "A teen tried to navigate Canadian mountains with Claude. His trek ended in an emergency rescue"
-        url: "https://www.theguardian.com/world/2026/oct/08/teen-hike-claude-ai-directions-rescue-canada-mountain"
-        source: "The Guardian"
-        date: 2026-10-08
-        summary: "The incident is the latest to raise questions about the growing reliance on digital maps for wilderness navigation The route up the Widowmaker Arete, a 1,700ft wall in British Columbia, is deceptively described as..."
       - title: "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots"
         url: "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/"
         source: "Ars Technica"
@@ -58,11 +63,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-05
         summary: "Norway wants time to write permanent rules for glasses that can record bystanders."
-      - title: "Judge dismisses Chegg and Penske antitrust lawsuits targeting Google AI search"
-        url: "https://arstechnica.com/google/2026/10/antitrust-lawsuits-targeting-google-ai-search-dismissed-by-federal-judge/"
-        source: "Ars Technica"
-        date: 2026-10-01
-        summary: "The court acknowledges AI search comes with consequences, but it's not an antitrust issue."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
