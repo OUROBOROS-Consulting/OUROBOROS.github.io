@@ -2,12 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-12
+generated: 2026-10-13
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Companies rushed in on AI. Now some are pulling back"
+        url: "https://www.theguardian.com/technology/2026/oct/13/ai-companies-rushed-workers-fallout"
+        source: "The Guardian"
+        date: 2026-10-13
+        summary: "Rapid AI adoption left workers cleaning up a flood of errors and low-quality work Employers around the globe are grappling with the fallout from rushing to adopt fast-changing artificial intelligence tools. Meta has..."
+      - title: "Employees all over the world find themselves monitored by AI at work"
+        url: "https://www.theguardian.com/technology/2026/oct/09/ai-monitoring-the-workplace"
+        source: "The Guardian"
+        date: 2026-10-13
+        summary: "The latest example of workers under surveillance comes from Co-op, a British consumer co-operative that runs thousands of businesses This was originally published in TechScape, a newsletter about how technology shapes..."
+      - title: "I’m a pediatrician. Loss of human connection is the biggest threat to kids, not AI | Megan Moreno"
+        url: "https://www.theguardian.com/technology/2026/oct/13/human-connection-threat-children-ai-technology"
+        source: "The Guardian"
+        date: 2026-10-13
+        summary: "Amid worries about children’s relationship to tech, the solution is often spending more time talking openly with each other We have become obsessed with the idea that screens are destroying human connection. The..."
+      - title: "Open models have real benefits. Do they outweigh the risks?"
+        url: "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
+        source: "MIT Technology Review"
+        date: 2026-10-13
+        summary: "MIT Technology Review Explains: Let our writers untangle the complex, messy world of science and technology to help you understand what’s coming next. You can read more from the series here. Late last month, Anthropic..."
+      - title: "David Pocock concerned senior Albanese adviser ‘vetted’ bipartisan AI letter that was sent to PM"
+        url: "https://www.theguardian.com/technology/2026/oct/13/senior-albanese-adviser-vetted-bipartisan-ai-letter-politics-ntwnfb"
+        source: "The Guardian"
+        date: 2026-10-13
+        summary: "Committee chair rejects criticism that letter was ‘pre-determined’ by the government Follow our Australia politics live blog for latest updates Get our new political email , free app or daily news podcast Anthony..."
       - title: "When AI is subject to less regulation than your fridge, something is startlingly wrong | Richard Hermer"
         url: "https://www.theguardian.com/commentisfree/2026/oct/12/ai-regulation-fridge-risk-humanity-public-debate-international-law"
         source: "The Guardian"
@@ -23,26 +48,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-12
         summary: "The rise of AI makes the preservation of democracy even more urgent – especially as the technology threatens institutions AI safety is having a moment. After years as a topic for techies and futurists, the potential..."
-      - title: "AI less regulated than milk, Microsoft president says in warning over safety"
-        url: "https://www.theguardian.com/technology/2026/oct/12/ai-less-regulated-than-milk-microsoft-president-calls-for-tougher-rules"
-        source: "The Guardian"
-        date: 2026-10-12
-        summary: "Brad Smith adds to calls for tougher rules for AI, including ‘kill switches’ and legal obligation to victims of rogue agents Business live – latest updates Artificial intelligence is less regulated than milk and washing..."
-      - title: "UK to strengthen cyber defences as minister calls for AI firms to increase safety efforts"
-        url: "https://www.theguardian.com/technology/2026/oct/12/uk-strengthen-cyber-defences-minister-ai-firms-safety"
-        source: "The Guardian"
-        date: 2026-10-11
-        summary: "Kanishka Narayan to say Britain cannot rely entirely on tech companies amid rising global concern over AI dangers Companies building the most advanced AI systems must increase safety efforts, the UK’s AI minister will..."
-      - title: "US’s Reagan-era economic promises return as Trump’s AI-fueled growth fantasy"
-        url: "https://www.theguardian.com/business/2026/oct/11/trump-ai-economy-reagan"
-        source: "The Guardian"
-        date: 2026-10-11
-        summary: "‘Even if AI supercharged the economy, its impact on the government’s finances would be muted’ Back through political history to the age of Ronald Reagan , Republicans have repeatedly promised the US public that tax cuts..."
-      - title: "AI surveillance startup Flock to cut several hundred jobs amid backlash, sources say"
-        url: "https://www.theguardian.com/world/2026/oct/09/flock-job-cuts"
-        source: "The Guardian"
-        date: 2026-10-09
-        summary: "Company, which grown rapidly in recent years, has been under scrutiny as privacy concerns grow Flock Safety plans to shed about 18% of its employees, people with direct ⁠knowledge of the plans said on Thursday, as the..."
       - title: "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots"
         url: "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/"
         source: "Ars Technica"
@@ -67,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Family and sexual violence rates against Australian children rise sharply as researchers warn of ‘manosphere’"
+        url: "https://www.theguardian.com/australia-news/2026/oct/14/family-and-sexual-violence-rates-against-australian-children-rise-sharply-as-researchers-warn-of-manosphere"
+        source: "The Guardian"
+        date: 2026-10-13
+        summary: "Study authors say increase cannot be attributed to any one factor and list income inequality and growing awareness as other likely reasons Get our breaking news email , free app or daily news podcast The sexual assault..."
       - title: "Five people shot and killed in apparent murder-suicide, Georgia police say"
         url: "https://www.theguardian.com/us-news/2026/oct/10/douglas-georgia-shooting-deaths"
         source: "The Guardian"
@@ -92,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-05
         summary: "Since Nicole Brown Simpson’s murder in 1994, Denise Brown has devoted herself to ending domestic violence. She talks about her beloved sister, the trauma she witnessed in the couple’s marriage and how lives can be saved..."
-      - title: "Tesco is first supermarket to offer paid ‘safe leave’ for victims of domestic abuse"
-        url: "https://www.theguardian.com/business/2026/oct/02/tesco-supermarket-paid-safe-leave-domestic-abuse"
-        source: "The Guardian"
-        date: 2026-10-02
-        summary: "Exclusive: Britain’s largest private-sector employer has also trained managers to spot signs of domestic abuse Tesco has become the first supermarket to introduce paid “safe leave” for victims of domestic abuse, giving..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -131,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "A company named Springer that isn’t the publisher is offering authorship for sale"
+        url: "https://retractionwatch.com/2026/10/12/springer-journals-online-authorship-for-sale/"
+        source: "Retraction Watch"
+        date: 2026-10-12
+        summary: "Computer scientist Richard Fateman got an email in August that was completely “out of the blue”: an offer of coauthorship in articles headed for publication in prestigious journals, in exchange for a fraction of the..."
       - title: "‘Cerebral torment’: IOP retracts nearly 100 conference papers for tortured phrases"
         url: "https://retractionwatch.com/2026/10/09/iop-publishing-conference-proceedings-tortured-phrases/"
         source: "Retraction Watch"
@@ -161,35 +171,15 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-06
         summary: "The editor-in-chief of The Egyptian Rheumatologist has resigned following claims of questionable citation practices and improper peer review at the journal. At least three publishers are also investigating alleged data..."
-      - title: "‘Hot mess’ paper questioning CO2 and climate change gets retracted"
-        url: "https://retractionwatch.com/2026/10/02/paper-questioning-co2-and-climate-change-retracted/"
-        source: "Retraction Watch"
-        date: 2026-10-02
-        summary: "A paper that called into question many central data linking carbon dioxide to the rapidly warming climate has been retracted for “significant concerns,” including “unsupported conclusions” and “inaccuracies” in the..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
-      - title: "What it takes for voters to be resilience against AI misinformation"
+      - title: "What it takes for voters to be resilient against AI misinformation"
         url: "https://themarkup.org/hello-world/2026/10/10/election-ai-resilience"
         source: "The Markup"
         date: 2026-10-10
         summary: "A conversation with political scientist Thessalia Merivaki"
-      - title: "CBP’s Predictive Policing Units Have Financial Data, Won’t Say How They Got It"
-        url: "https://epic.org/cbps-predictive-policing-units-have-financial-data-wont-say-how-they-got-it/"
-        source: "EPIC"
-        date: 2026-10-08
-        summary: "A recent story by 404 Media revealed that Customs & Border Patrol’s (CBP) predictive policing units, or Predictive Intelligence Targeting Teams (PITT) have been using financial data to target individuals for anomalous..."
-      - title: "Sen. Gillibrand Introduces U.S. Data Protection Agency Bill"
-        url: "https://epic.org/sen-gillibrand-introduces-u-s-data-protection-agency-bill/"
-        source: "EPIC"
-        date: 2026-10-07
-        summary: "U.S. Senator Kirsten Gillibrand (D-NY) has reintroduced the Data Protection Act, which would create an independent Data Protection Agency in the United States to safeguard the personal data of Americans. EPIC, many..."
-      - title: "EPIC to NYC Council: Address the AI Harms Already Affecting New Yorkers"
-        url: "https://epic.org/epic-to-nyc-council-address-the-ai-harms-already-affecting-new-yorkers/"
-        source: "EPIC"
-        date: 2026-10-07
-        summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
       - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
         url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
         source: "Krebs on Security"
@@ -210,6 +200,11 @@ sections:
         source: "EPIC"
         date: 2026-10-02
         summary: "On Thursday, EPIC, along with Professor Seema Patel, filed an amicus brief using privacy grounds to challenge the sale of sensitive employee data in Spirit Airlines’ bankruptcy proceedings to Google to be used for AI..."
+      - title: "Meta’s Mass Data Collection Is Not A-Muse-ing"
+        url: "https://epic.org/metas-mass-data-collection-is-not-a-muse-ing/"
+        source: "EPIC"
+        date: 2026-10-02
+        summary: "At the beginning of September, Meta launched Muse, a “personal AI agent” marketed to collect as much data as possible assist users with whatever tasks they request or enable. Suggested uses in the initial release..."
       - title: "Victory! Court Rejects Government Effort to Dismiss Social Media Surveillance Lawsuit"
         url: "https://www.eff.org/press/releases/victory-court-rejects-government-effort-dismiss-social-media-surveillance-lawsuit"
         source: "EFF Deeplinks"
@@ -220,6 +215,11 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-30
         summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
+      - title: "Senator Markey Introduces Bill to Stop the Government’s Use of Face Surveillance and Other Biometric Surveillance Tech"
+        url: "https://epic.org/senator-markey-introduces-bill-to-stop-the-governments-use-of-face-surveillance-and-other-biometric-surveillance-tech/"
+        source: "EPIC"
+        date: 2026-09-30
+        summary: "Senators Markey and Merkley along with Reps. Jaypal, Pressley, and Tlaib introduced legislation to stop the government’s use of biometric surveillance, including facial recognition tools. The Facial Recognition and..."
       - title: "While the Country Rejects ALPR Mass Surveillance, SF Settles for Weak Safeguards"
         url: "https://www.eff.org/deeplinks/2026/09/while-country-rejects-alpr-mass-surveillance-sf-settles-weak-safeguards"
         source: "EFF Deeplinks"
@@ -230,3 +230,8 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-09-29
         summary: "People are increasingly concerned about the ways in which mass surveillance is tracking our every move: from Flock license plate readers to face recognition to creepy ads that – based on what we see and do online – seem..."
+      - title: "EFF to San Francisco Police: Drones are Powerful Surveillance Tools That Require a Robust Policy"
+        url: "https://www.eff.org/deeplinks/2026/09/eff-san-francisco-police-drones-are-powerful-surveillance-tools-require-robust"
+        source: "EFF Deeplinks"
+        date: 2026-09-28
+        summary: "The San Francisco Police Department (SFPD) began regularly deploying drones two years ago and has since expanded their use in a way that has outpaced its documented policy and evaded existing local and state oversight..."
