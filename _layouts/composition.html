@@ -1,0 +1,191 @@
+---
+layout: base
+---
+
+{% include hero.html %}
+
+<!-- ── Who This Is For ────────────────────────────────────────────────────── -->
+<section id="audience">
+  <div class="band-header band-header--stacked">
+    <p class="band-label">Who This Is For</p>
+    <h2 class="band-heading band-heading--stacked">If any of this sounds like you, you're in the right place.</h2>
+  </div>
+  <div class="values-grid">
+    {% for aud in site.data.audience %}
+    <div class="values-card" role="button" tabindex="0" aria-expanded="false" aria-label="{{ aud.title }}">
+      <div class="values-card__inner">
+        <div class="values-card__front">
+          <div class="values-card__surface">
+            <i class="values-card__icon {{ aud.icon }} values-card__icon--gold" aria-hidden="true"></i>
+            <span class="values-card__name">{{ aud.title | markdownify }}</span>
+          </div>
+        </div>
+        <div class="values-card__back">
+          <div class="values-card__surface">
+            <p class="values-card__desc">{{ aud.description | markdownify }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── Testimonials ───────────────────────────────────────────────────────── -->
+<section id="testimonials">
+  <div class="band-header">
+    <div>
+      <p class="band-label">What Clients Say</p>
+      <h2 class="band-heading">Testimonials</h2>
+      <p class="testimonials-context">These
+        testimonials are from federal, corporate, and private engagements, quoted with permission. Survivor and
+        advocacy work is confidential by design.
+      </p>
+    </div>
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial"><i class="ph ph-fill ph-arrow-fat-line-left"></i></button>
+      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
+      <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial"><i class="ph ph-fill ph-arrow-fat-line-right"></i></button>
+    </div>
+  </div>
+
+  <div class="carousel" aria-live="polite" aria-label="Testimonials">
+    <div class="carousel-track">
+      {% for ref in site.data.testimonials %}
+      <div class="carousel-slide" role="group"
+        aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
+        <div class="card--framed card--callout">
+          <div class="card-tag">{{ ref.title }}</div>
+          <blockquote>
+            <div class="card-desc">{{ ref.description | markdownify }}</div>
+            <cite>— {{ ref.reference }}</cite>
+          </blockquote>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+    {% for ref in site.data.testimonials %}
+    <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+      aria-label="Testimonial {{ forloop.index }}"></button>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── About / Stats ──────────────────────────────────────────────────────── -->
+<section id="about">
+  <div class="band-header band-header--stacked">
+    <p class="band-label">By the Numbers</p>
+    <h2 class="band-heading band-heading--stacked">{{ page.about_heading }}</h2>
+  </div>
+  <div class="stats-grid">
+
+    {% if page.stats.years_experience %}
+    <div class="stat">
+      {% if page.stats.years_experience_icon %}
+      <card-icon><i class="{{ page.stats.years_experience_icon }}" aria-hidden="true"></i></card-icon>{% endif %}
+      <span class="stat-value">{{ page.stats.years_experience }}</span>
+      <span class="stat-label">{{ page.stats.years_experience_note | default: "Years of Professional Experience" }}</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.publications %}
+    <div class="stat">
+      {% if page.stats.publications_icon %}<card-icon><i class="{{ page.stats.publications_icon }}" aria-hidden="true"></i></card-icon>{% endif %}
+      <span class="stat-value">{{ page.stats.publications }}</span>
+      <span class="stat-label">Publications &amp; Papers</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.students_tutored %}
+    <div class="stat">
+      {% if page.stats.students_tutored_icon %}<card-icon><i class="{{ page.stats.students_tutored_icon }}" aria-hidden="true"></i></card-icon>{% endif %}
+      <span class="stat-value">{{ page.stats.students_tutored }}</span>
+      <span class="stat-label">Students Tutored</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.clients %}
+    <div class="stat">
+      {% if page.stats.clients_icon %}<card-icon><i class="{{ page.stats.clients_icon }}" aria-hidden="true"></i></card-icon>{% endif %}
+      <span class="stat-value">{{ page.stats.clients }}</span>
+      <span class="stat-label">{{ page.stats.clients_note | default: "Consulting Engagements" }}</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.agencies %}
+    <div class="stat">
+      {% if page.stats.agencies_icon %}<card-icon><i class="{{ page.stats.agencies_icon }}" aria-hidden="true"></i></card-icon>{% endif %}
+      <span class="stat-value">{{ page.stats.agencies }}</span>
+      <span class="stat-label">{{ page.stats.agencies_note | default: "Agencies &amp; Orgs" }}</span>
+    </div>
+    {% endif %}
+
+    {% if page.stats.phd_program %}
+    <div class="stat">
+      {% if page.stats.phd_program_icon %}<card-icon><i class="{{ page.stats.phd_program_icon }}" aria-hidden="true"></i></card-icon >{% endif %}
+      <span class="stat-value">{{ page.stats.phd_program }}</span>
+      <span class="stat-label">PhD Program</span>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- ── Services / Expertise ───────────────────────────────────────────────── -->
+<section id="services">
+  <div class="band-header">
+    <div>
+      <p class="band-label">What I Offer</p>
+      <h2 class="band-heading">Expertise</h2>
+    </div>
+    <a href="{{ '/services/' | relative_url }}" class="band-link">View All →</a>
+  </div>
+
+  <div class="testimonials-grid">
+    {% assign sorted_services = site.services | sort: "order" %}
+    {% for service in sorted_services limit: 4 %}
+    <div class="card--framed card--callout">
+      {% if service.hero_svg %}
+      <div class="card-icon"><img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true"></div>
+      {% elsif service.icon %}
+      <div class="card-icon"><i class="{{ service.icon }}"></i></div>
+      {% endif %}
+      <div class="card-body">
+        <h3 class="card-title">{{ service.title }}</h3>
+        <p class="card-desc">{{ service.description }}</p>
+        <a href="{{ service.url }}" class="card-link">{{ service.cta_label | default: 'Learn More' }} →</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- ── Work ───────────────────────────────────────────────────────────────── -->
+<section id="work">
+  <div class="band-header">
+    <div>
+      <p class="band-label">Selected Work</p>
+      <h2 class="band-heading">Case Studies</h2>
+    </div>
+    <div class="band-aside">
+      <span class="band-count">{{ site.case_studies.size }} pieces</span>
+      <a href="{{ '/case-studies/' | relative_url }}" class="band-link">View All →</a>
+    </div>
+  </div>
+
+  <div class="testimonials-grid">
+    {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
+    {% for case in sorted_cases limit: 4 %}
+    <div class="card--framed card--callout">
+      <p class="card-tag">{{ case.tag }}</p>
+      <h3 class="card-title">{{ case.title }}</h3>
+      <p class="card-desc">{{ case.description }}</p>
+      <a href="{{ case.url }}" class="card-link">Read More →</a>
+    </div>
+    {% endfor %}
+  </div>
+</section>

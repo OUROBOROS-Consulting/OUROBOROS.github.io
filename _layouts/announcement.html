@@ -30,7 +30,7 @@ layout: default
   <p class="post-related-label">More Announcements</p>
   <div class="related-grid">
     {% for item in other %}
-    <a href="{{ item.url | relative_url }}" class="related-card">
+    <a href="{{ item.url | relative_url }}" class="card--framed">
       {% if item.category %}<p class="rc-tag">{{ item.category }}</p>{% endif %}
       <p class="rc-title">{{ item.title }}</p>
       {% if item.date %}<p class="rc-date">{{ item.date | date: "%B %-d, %Y" }}</p>{% endif %}

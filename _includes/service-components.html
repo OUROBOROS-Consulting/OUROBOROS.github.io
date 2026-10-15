@@ -1,0 +1,96 @@
+<!-- ── Service Specialties ── -->
+{% if page.specializations %}
+<section class="page-section">
+  <div class="page-section-label">
+    <p>Specialties</p>
+  </div>
+  <div class="card--callout"> <!-- Migrated from card--formula -->
+    <div class="card--callout__interior">
+      <div class="page-section-content svc-included">
+        {% for item in page.specializations %}
+        <div class="svc-item">
+          <span class="svc-item-marker">◇</span>
+          <div>
+            <p class="svc-item-title">{{ item }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ── Service Policies ── -->
+{% if page.policies %}
+<section class="page-section">
+  <div class="page-section-label">
+    <p>Policies</p>
+  </div>
+  <div class="card--callout"> <!-- Migrated from card--formula -->
+    <div class="card--callout__interior">
+      <div class="page-section-content svc-included">
+        {% for item in page.policies %}
+        <div class="svc-item">
+          <span class="svc-item-marker">◇</span>
+          <div>
+            <p class="svc-item-title">{{ item.item }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ── What's Included ── -->
+{% if page.included %}
+<section class="page-section">
+  <div class="page-section-label">
+    <p>What's Included</p>
+  </div>
+  <div class="card--callout"> <!-- Migrated from card--formula -->
+    <div class="card--callout__interior">
+      <div class="page-section-content svc-included">
+        {% for item in page.included %}
+        <div class="svc-item">
+          <span class="svc-item-marker">◇</span>
+          <div>
+            <p class="svc-item-title">{{ item.title }}</p>
+            <p class="svc-item-desc">{{ item.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<!-- ── Pricing ── -->
+{% if page.pricing %}
+<section class="page-section">
+  <div class="page-section-label">
+    <p>Pricing</p>
+  </div>
+  <div class="page-section-content">
+    <p class="svc-rate-principle">{{ page.rate_principle | default: "Rates run on a subsidy model. Commercial engagements fund the sliding scale for survivors, seniors, and veterans. Ranges reflect the complexity and scope of the work, and we set the figure together before anything begins." }}</p>
+    {% for tier in page.pricing %}
+    <div class="svc-pricing-tier">
+      <div class="card--callout"> <!-- Migrated from card--formula -->
+        <div class="card--callout__interior">
+          <div class="svc-pricing-header">
+            <span class="svc-pricing-name">{{ tier.name }}</span>
+            <span class="svc-pricing-rate">{{ tier.rate }}</span>
+          </div>
+          {% if tier.notes %}
+          <p class="svc-pricing-notes">{{ tier.notes }}</p>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

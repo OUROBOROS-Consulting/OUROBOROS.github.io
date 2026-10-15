@@ -1,55 +1,60 @@
-<footer>
-  <div class="footer-links">
+<!-- ── Footer Organism ─────────────────────────────────────────────────────── -->
+<footer class="c-footer">
+  <div class="c-footer__links" aria-label="Social links">
     <a href="{{ site.instagram_url }}" target="_blank" rel="noopener noreferrer"
-      class="footer-social" aria-label="Instagram">
-      <i class="ph-fill ph-instagram-logo"></i>
+      class="c-footer__social-link" aria-label="Instagram">
+      <i class="ph-fill ph-instagram-logo" aria-hidden="true"></i>
     </a>
 
-    <a href="{{ site.github_url }}" target="_blank" rel="noopener noreferrer" class="footer-social"
-      aria-label="GitHub">
-      <i class="ph-fill ph-github-logo"></i>
+    <a href="{{ site.github_url }}" target="_blank" rel="noopener noreferrer" 
+      class="c-footer__social-link" aria-label="GitHub">
+      <i class="ph-fill ph-github-logo" aria-hidden="true"></i>
     </a>
 
     <a href="{{ site.linkedin_url }}" target="_blank" rel="noopener noreferrer"
-      class="footer-social" aria-label="LinkedIn">
-      <i class="ph-fill ph-linkedin-logo"></i>
+      class="c-footer__social-link" aria-label="LinkedIn">
+      <i class="ph-fill ph-linkedin-logo" aria-hidden="true"></i>
     </a>
 
     <a href="{{ site.substack_url }}" target="_blank" rel="noopener noreferrer"
-      class="footer-social" aria-label="Substack">
-      <i class="ph-fill ph-bookmark"></i>
+      class="c-footer__social-link" aria-label="Substack">
+      <i class="ph-fill ph-bookmark" aria-hidden="true"></i>
     </a>
 
-    <a href="{{ '/intake' | relative_url }}" class="footer-social" aria-label="Contact">
-      <i class="ph-fill ph-envelope"></i>
+    <a href="{{ '/intake' | relative_url }}" class="c-footer__social-link" aria-label="Contact">
+      <i class="ph-fill ph-envelope" aria-hidden="true"></i>
     </a>
   </div>
 
-  <a class="footer-logo" href="{{ '/' | relative_url }}">
+  <a class="c-footer__logo" href="{{ '/' | relative_url }}">
     <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="ouroborOS"
-      class="footer-logo-mark">
+      class="c-footer__logo-mark">
   </a>
 
-  <div class="footer-credits">
-    <p class="footer-copy">
+  <div class="c-footer__credits">
+    <p class="c-footer__copy">
       Site design and development by <a href="{{ site.github_url }}" target="_blank"
         rel="noopener noreferrer">{{ site.author }}</a>.
     </p>
 
-    <p class="footer-copy">
+    <p class="c-footer__copy">
       &copy; {{ 'now' | date: "%Y" }} {{ site.author }}. All rights reserved.
     </p>
   </div>
 </footer>
 
-<div class="disclaimer-bar">
+<!-- Disclaimer Bar Organism -->
+<div class="c-disclaimer-bar">
+  <p class="c-disclaimer-bar__text">
+    Not legal or mental-health advice. For professional advice, please consult a licensed attorney or mental-health professional.
+  </p>
 
-  Not legal or mental-health advice. For professional advice, please consult a licensed attorney or mental-health professional.
+  <img src="{{ '/assets/images/divider.svg' | relative_url }}" style="width: 30%" alt="" aria-hidden="true" />
 
-  <hr class="divider">
-
-  <a href="{{ '/disclaimer/' | relative_url }}">Disclaimer</a> &middot;
-  <a href="{{ '/privacy/' | relative_url }}">Privacy</a> &middot;
-  <a href="{{ '/accessibility/' | relative_url }}">Accessibility</a> &middot;
-  <a href="{{ '/llm-disclosure/' | relative_url }}">LLM Disclosure</a>
+  <nav class="c-disclaimer-bar__links" aria-label="Legal links">
+    <a href="{{ '/disclaimer/' | relative_url }}" class="c-disclaimer-bar__link">Disclaimer</a> &middot;
+    <a href="{{ '/privacy/' | relative_url }}" class="c-disclaimer-bar__link">Privacy</a> &middot;
+    <a href="{{ '/accessibility/' | relative_url }}" class="c-disclaimer-bar__link">Accessibility</a> &middot;
+    <a href="{{ '/llm-disclosure/' | relative_url }}" class="c-disclaimer-bar__link">LLM Disclosure</a>
+  </nav>
 </div>

@@ -2,14 +2,10 @@
   url: /services/
   icon: ph-briefcase
   children:
-    - title: Brand & Design
-      url: /services/design/
-    - title: Technology & AI
+    - title: Technology
       url: /services/technology/
-    - title: Education & Training
-      url: /services/education/
-    - title: Advocacy
-      url: /services/advocacy/
+    - title: Identity & Strategy
+      url: /services/identity/
 
 - title: Resources
   url: /resources/
@@ -21,16 +17,8 @@
     - /scholarly
     - /news
   children:
-    #- title: PSAs
-    #  url: /resources/psas/
-    - title: Scholarly
-      url: /resources/scholarly/
-    - title: Tutorials
-      url: /resources/tutorials/
-    - title: Glossary
-      url: /resources/glossary/
-    #- title: What I'm Reading
-    #  url: /news/
+    - title: PSAs
+      url: /resources/psas/
 
 - title: About
   url: /about/
@@ -47,10 +35,5 @@
       url: /framework/
     - title: Case Studies
       url: /case-studies/
-    - title: Mission
-      # No trailing slash on purpose. _about/mission.md inherits the collection
-      # permalink /:slug and builds to mission.html, not mission/index.html, so
-      # /mission/ would 404. See issue #97 before "fixing" this.
-      url: /mission
     - title: FAQ
       url: /faq/

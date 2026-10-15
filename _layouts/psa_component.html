@@ -1,0 +1,21 @@
+---
+layout: base
+---
+
+<!-- ── PDF Embed ─────────────────────────────────────────────────────────── -->
+<div class="psa-embed-wrap">
+  <iframe src="{{ page.pdf | relative_url }}" class="psa-embed" title="{{ page.title }}"
+    aria-label="{{ page.title }} — PDF document">
+  </iframe>
+  <p class="psa-embed-fallback">
+    PDF preview not available in your browser —
+    <a href="{{ page.pdf | relative_url }}" download>download it here</a>.
+  </p>
+</div>
+
+<!-- ── Optional prose body ───────────────────────────────────────────────── -->
+{% if content != "" %}
+<div class="page-body">
+  <div class="post-body">{{ content }}</div>
+</div>
+{% endif %}

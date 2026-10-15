@@ -28,94 +28,77 @@
   {% when 'headshot,icon' %}
     {% if page.headshot or page.icon %}{% assign has_art = true %}{% endif %}
 {% endcase %}
-<header class="page-hero">
-  <a class="post-back" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
 
-  <div class="page-hero-inner{% if include.art == 'headshot,hero_svg,icon' or include.art == 'headshot,icon' %}{% unless has_art %} page-hero-inner--single{% endunless %}{% endif %}">
-    <div class="page-hero-text">
-      <p class="post-category">{{ page.category | default: include.category_default }}</p>
-      <h1 class="page-hero-title">{{ page.title }}</h1>
+<header class="c-page-hero">
+  <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
 
-      {% if include.tagline == 'true' %}
-      <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
+  <div class="c-page-hero__inner{% if include.art == 'headshot,hero_svg,icon' or include.art == 'headshot,icon' %}{% unless has_art %} c-page-hero__inner--single{% endunless %}{% endif %}">
+    <div class="c-page-hero__text">
+      {% if page.category %}
+      <p class="label-large text-primary">{{ page.category | default: include.category_default }}</p>
       {% endif %}
 
-      {% if include.lede_optional == 'true' %}
-        {% if page.lede %}<p class="page-hero-lede">{{ page.lede }}</p>{% endif %}
-      {% else %}
-      <p class="page-hero-lede">{{ page.lede }}</p>
+      <h1 class="headline-large">{{ page.title }}</h1>
+
+      {% if include.tagline == 'true' and page.tagline %}
+      <p class="headline-medium">{{ page.tagline | markdownify }}</p>
       {% endif %}
 
-      <div class="page-hero-tags">
+      {% if page.lede %}
+      <p class="body-large">{{ page.lede }}</p>
+      {% endif %}
+
+      {% if page.tags %}
+      <div class="c-page-hero__tags">
         {% for tag in page.tags %}
-        {% if include.tag_style == 'anchor' %}
-        <div class="hero-cta"><a href="#{{ tag | slugify }}" class="btn">{{ tag }}</a></div>
-        {% else %}
-        <span class="lp-tag">{{ tag }}</span>
-        {% endif %}
+          {% if include.tag_style == 'anchor' %}
+          <a href="#{{ tag | slugify }}" class="btn btn-secondary btn--small">{{ tag }}</a>
+          {% else %}
+          <span class="label-medium">{{ tag }}</span>
+          {% endif %}
         {% endfor %}
       </div>
+      {% endif %}
 
       {% if include.cta_mode == 'service' %}
-      <div class="page-hero-cta">
-        <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn">
+      <div class="c-page-hero__actions">
+        <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn btn-primary">
           {{ page.cta_label | default: 'Get in Touch' }}
+          {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
         </a>
         {% if page.price %}
-        <p class="page-hero-meta">{{ page.price }}</p>
+        <p class="body-medium">{{ page.price }}</p>
         {% endif %}
       </div>
       {% endif %}
-    </div><!-- /page-hero-text -->
 
-    {% if include.art == 'headshot,hero_svg,icon' %}
-      {% if page.headshot %}
-      <div class="hex-portrait">
-        <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
+      {% if include.cta_mode == 'psa' %}
+      <div class="c-page-hero__actions">
+        <a href="{{ page.pdf | relative_url }}" download class="btn btn-primary">Download PDF</a>
+        {% if page.date %}
+        <p class="label-medium">{{ page.date | date: "%B %Y" }}</p>
+        {% endif %}
       </div>
+      {% endif %}
+    </div><!-- /c-page-hero__text -->
+
+    {% if has_art %}
+    <div class="c-page-hero__art">
+      {% if page.headshot %}
+      <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" class="c-page-hero__image--hex" />
       {% elsif page.hero_svg %}
-      <div class="page-hero-art">
-        <img src="{{ page.hero_svg | relative_url }}" alt="" class="page-hero-svg" aria-hidden="true" />
-      </div>
+      <img src="{{ page.hero_svg | relative_url }}" alt="" class="c-page-hero__image--svg" aria-hidden="true" />
       {% elsif page.icon %}
-      <div class="page-hero-art">
-        <i class="{{ page.icon }} page-hero-icon" aria-hidden="true"></i>
-      </div>
-      {% endif %}
-    {% elsif include.art == 'headshot,icon' %}
-      {% if page.headshot %}
-      <div class="hex-portrait">
-        <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" />
-      </div>
-      {% elsif page.icon %}
-      <div class="page-hero-art">
-        <i class="{{ page.icon }} page-hero-icon" aria-hidden="true"></i>
-      </div>
-      {% endif %}
-    {% elsif include.art == 'hero_svg,icon' %}
-      <div class="page-hero-art">
-        {% if page.hero_svg %}
-        <img src="{{ page.hero_svg | relative_url }}" alt="" class="page-hero-svg" aria-hidden="true" />
-        {% elsif page.icon %}
-        <i class="{{ page.icon }} page-hero-icon" aria-hidden="true"></i>
-        {% endif %}
-      </div>
-    {% endif %}
-
-    {% if include.cta_mode == 'psa' %}
-    <div class="page-hero-cta">
-      <a href="{{ page.pdf | relative_url }}" download class="btn">Download PDF</a>
-      {% if page.date %}
-      <p class="page-hero-meta">{{ page.date | date: "%B %Y" }}</p>
+      <i class="{{ page.icon }} c-page-hero__icon" aria-hidden="true"></i>
       {% endif %}
     </div>
     {% endif %}
-  </div><!-- /page-hero-inner -->
+  </div><!-- /c-page-hero__inner -->
 
   {% if include.scroll_hint == 'true' %}
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
+  <div class="c-page-hero__scroll-hint">
+    <div class="c-page-hero__scroll-line"></div>
+    <span class="label-small">Scroll</span>
   </div>
   {% endif %}
-</header><!-- /page-hero -->
+</header>

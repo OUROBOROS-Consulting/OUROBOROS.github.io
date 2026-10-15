@@ -1,27 +1,44 @@
-<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
-<section id="hero">
+<!-- ── Hero Organism ───────────────────────────────────────────────────────── -->
+<section id="hero" class="c-hero">
 
   <!-- Row 1: brand identity -->
-  <div class="hero-identity">
-    <h1 class="hero-name">{{ page.name_line1 }}<br/><span class="hero-name-sub">{{ page.name_line2 }}</span></h1>
-    <div class="hero-emblem" aria-hidden="true">
+  <div class="c-hero__identity">
+    <h1 class="headline-large">
+      {{ page.name_line1 }}<br/>
+      <span class="body-medium">{{ page.name_line2 }}</span>
+    </h1>
+    <div class="c-hero__emblem" aria-hidden="true">
       <img src="/assets/images/logo.svg" alt="">
     </div>
   </div>
 
   <!-- Row 2: copy + CTA -->
-  <div class="hero-text">
-    <p class="hero-eyebrow">{{ page.eyebrow }}</p>
-    <p class="hero-tagline">{{ page.tagline | markdownify }}</p>
-    <div class="hero-cta">
-      <a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn">{{ page.cta_label | default: 'View My Work' }}</a>
-      {% if page.cta2_label %}<a href="{{ page.cta2_url | relative_url }}" class="btn">{{ page.cta2_label }}</a>{% endif %}
+  <div class="c-hero__content">
+    {% if page.eyebrow %}
+    <p class="label-large text-primary">{{ page.eyebrow }}</p>
+    {% endif %}
+    
+    {% if page.tagline %}
+    <p class="headline-medium">{{ page.tagline | markdownify }}</p>
+    {% endif %}
+
+    <div class="c-hero__actions">
+      <a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn btn-primary">
+        {{ page.cta_label | default: 'View My Work' }}
+        {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
+      </a>
+      {% if page.cta2_label %}
+        <a href="{{ page.cta2_url | relative_url }}" class="btn btn-secondary">
+          {{ page.cta2_label }}
+          {% if page.cta2_icon %}<i class="{{ page.cta2_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
+        </a>
+      {% endif %}
     </div>
   </div>
 
-
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scroll</span>
+  <!-- Scroll Hint -->
+  <div class="c-hero__scroll-hint">
+    <div class="c-hero__scroll-line"></div>
+    <span class="label-small">Scroll</span>
   </div>
 </section>
