@@ -2,42 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-14
+generated: 2026-10-15
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Is your boss watching you? The rise of AI surveillance at work - video"
+        url: "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video"
+        source: "The Guardian"
+        date: 2026-10-15
+        summary: "Workers have always been monitored by their bosses, first through output targets, and then via computer software labelled ‘bossware’. But AI is transforming the capabilities of these systems, processing huge volumes of..."
+      - title: "Is your boss watching you? The rise of AI surveillance at work – podcast"
+        url: "https://www.theguardian.com/science/audio/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-podcast"
+        source: "The Guardian"
+        date: 2026-10-15
+        summary: "Workers have always been monitored by their bosses, first through output targets, and then via computer software labelled ‘bossware’. But AI is transforming the capabilities of these systems, processing huge volumes of..."
+      - title: "Eight states accuse OpenAI of coaching children to harm themselves in lawsuit"
+        url: "https://www.theguardian.com/technology/2026/oct/14/openai-child-self-harm-lawsuit"
+        source: "The Guardian"
+        date: 2026-10-14
+        summary: "US states sue ChatGPT maker and seek to force the company to change how its products work for young users Eight US states sued OpenAI Wednesday, alleging the ChatGPT maker is harming children en masse. Kansas, Arizona..."
+      - title: "To unlock Britain’s innovation potential, Labour needs to think outside the box | Letters"
+        url: "https://www.theguardian.com/education/2026/oct/14/to-unlock-britains-innovation-potential-labour-needs-to-think-outside-the-box"
+        source: "The Guardian"
+        date: 2026-10-14
+        summary: "Kate Fleming says the government must look beyond the models it rewards today, while Jenny Haigh says unlocking potential means recognising that creativity and science are partners Gordon Brown wants Britain to invent..."
       - title: "Nvidia, worth $5.5tn, donates $250m to UK for AI safety research"
         url: "https://www.theguardian.com/technology/2026/oct/14/nvidia-donates-to-uk-ai-safety-research"
         source: "The Guardian"
         date: 2026-10-14
-        summary: "Pledge spanning five years from world’s most valuable firm comes as concerns about AI agents have risen Business live – latest updates The $5.5tn (£4.1tn) US chipmaker Nvidia is donating $250m worth of computing power..."
+        summary: "Pledge spanning five years from world’s most valuable firm comes as concerns about AI agents have risen The $5.5tn (£4.1tn) US chipmaker Nvidia is donating $250m worth of computing power to the UK to support AI safety..."
       - title: "AI overlords say they want to democratise their technology. Here’s how | Richard Wilson and Clara Long"
         url: "https://www.theguardian.com/commentisfree/2026/oct/14/ai-overlords-democratise-technology"
         source: "The Guardian"
         date: 2026-10-14
         summary: "A fight over a datacentre in Utah has been a testing ground for citizens’ assemblies, paving the way to oversight What’s your “(p)doom” – the percentage chance that rogue AI will create an existential catastrophe?..."
-      - title: "Bank of England and IMF bosses warn of cyber threat to trust in financial system"
-        url: "https://www.theguardian.com/business/2026/oct/14/bank-of-england-imf-bosses-warning-cyber-threat-to-trust"
-        source: "The Guardian"
-        date: 2026-10-14
-        summary: "Kristalina Georgieva says online fraud could lead people to opt out of system and turn to ‘shoeboxes under their bed’ Business live – latest updates The heads of the Bank of England and the International Monetary Fund..."
-      - title: "Saudi OpenAI employee arrested after recording device found in headquarters"
-        url: "https://www.theguardian.com/technology/2026/oct/13/openai-employee-arrested-hidden-recording-device"
-        source: "The Guardian"
-        date: 2026-10-13
-        summary: "Discovery of ‘sophisticated’ gadget adds to company’s list of privacy concerns after hackings by rogue agents OpenAI said it has found a hidden recording device in one of its offices and has referred the matter to the..."
-      - title: "Companies rushed in on AI. Now some are pulling back"
-        url: "https://www.theguardian.com/technology/2026/oct/13/ai-companies-rushed-workers-fallout"
-        source: "The Guardian"
-        date: 2026-10-13
-        summary: "Rapid AI adoption left workers cleaning up a flood of errors and low-quality work Employers around the globe are grappling with the fallout from rushing to adopt fast-changing artificial intelligence tools. Meta has..."
-      - title: "Employees all over the world find themselves monitored by AI at work"
-        url: "https://www.theguardian.com/technology/2026/oct/09/ai-monitoring-the-workplace"
-        source: "The Guardian"
-        date: 2026-10-13
-        summary: "The latest example of workers under surveillance comes from Co-op, a British consumer cooperative that runs thousands of businesses This was originally published in TechScape, a newsletter about how technology shapes..."
       - title: "Open models have real benefits. Do they outweigh the risks?"
         url: "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
         source: "MIT Technology Review"
@@ -126,6 +126,21 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected"
+        url: "https://www.propublica.org/article/missouri-plan-judge-selection-republican-attacks"
+        source: "ProPublica"
+        date: 2026-10-15
+        summary: "The post Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected appeared first on ProPublica ."
+      - title: "Paper touted by MD Anderson gets expression of concern for data ‘concerns’"
+        url: "https://retractionwatch.com/2026/10/14/science-translational-medicine-md-anderson-expression-of-concern-data-concerns-china/"
+        source: "Retraction Watch"
+        date: 2026-10-14
+        summary: "Science Translational Medicine has issued an expression of concern over “a series” of data concerns in a paper lauded by MD Anderson Cancer Center last year for identifying “a new driver” of bone metastasis. The..."
+      - title: "Former Crick Ph.D. student loses COVID vaccine paper for fabrication"
+        url: "https://retractionwatch.com/2026/10/14/former-crick-ph-d-student-loses-covid-vaccine-paper-for-fabrication/"
+        source: "Retraction Watch"
+        date: 2026-10-14
+        summary: "Science Translational Medicine has retracted a paper on COVID-19 vaccines after an institutional investigation revealed a former Ph.D. student fabricated data and falsified images in the article. The retraction is the..."
       - title: "These Women Were Trying to Escape Domestic Abuse. ICE Detained Them Instead."
         url: "https://www.propublica.org/article/domestic-violence-immigrant-victims-ice-detention"
         source: "ProPublica"
@@ -156,20 +171,30 @@ sections:
         source: "ProPublica"
         date: 2026-10-08
         summary: "The post U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU appeared first on ProPublica ."
-      - title: "A paper suggested a paleontologist’s fossil was forged. He wants it retracted."
-        url: "https://retractionwatch.com/2026/10/08/mosasaur-xenodens-calminechari-fossil-forgery-authenticity-paleontology/"
-        source: "Retraction Watch"
-        date: 2026-10-08
-        summary: "Nicholas Longrich would like to set the record straight. The paleontologist at the University of Bath in England and his colleagues described what they believed to be a new species of marine reptile in 2021, based on a..."
-      - title: "Wildlife journal issues corrections for missing ethics statements"
-        url: "https://retractionwatch.com/2026/10/07/wildlife-journal-issues-corrections-for-missing-ethics-statements/"
-        source: "Retraction Watch"
-        date: 2026-10-07
-        summary: "In what one sleuth called a “systemic failure,” a wildlife journal has issued corrections to a handful of papers not for an error in the articles but to include an item that wasn’t: ethics statements. The most recent..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Patients: All my best tips on how to opt out of data sharing"
+        url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
+        source: "The Markup"
+        date: 2026-10-15
+        summary: "Even when patients are told they can opt out, medical providers often don’t give patients instructions on how. For patients who are interested in opting out, here are my best tips on how to start."
+      - title: "MyChart and a major hospital said I could opt out of sharing my health data. But they didn’t make it easy"
+        url: "https://themarkup.org/privacy/2026/10/15/mychart-health-data-opt-out-epic-notary-hipaa"
+        source: "The Markup"
+        date: 2026-10-15
+        summary: "My journey included a notary, a hospital that won’t honor its own policies and employees that gave me wrong information."
+      - title: "DHS Inspector General Finds That TSA is Not Properly Safeguarding Passenger Facial Recognition Data"
+        url: "https://www.eff.org/deeplinks/2026/10/dhs-inspector-general-finds-tsa-not-properly-safeguarding-passenger-facial"
+        source: "EFF Deeplinks"
+        date: 2026-10-14
+        summary: "EFF legal intern Gabrielle Ladun was the principal author of this post. The Department of Homeland Security Office of Inspector General (DHS OIG) has published a summary of findings from its audit of the Transportation..."
+      - title: "🗣 A Victory for Freedom of Speech Online | EFFector 38.18"
+        url: "https://www.eff.org/deeplinks/2026/10/victory-freedom-speech-online-effector-3818"
+        source: "EFF Deeplinks"
+        date: 2026-10-14
+        summary: "No one should have to think twice before criticizing the government online. But a mass surveillance program known as \"Catch and Revoke\" was created to make millions do just that. EFF and other defenders of free speech..."
       - title: "World’s largest health appointment platform dumps its web trackers after Markup investigation"
         url: "https://themarkup.org/privacy/2026/10/14/worlds-largest-health-appointment-platform-dumps-its-web-trackers-after-markup-investigation"
         source: "The Markup"
@@ -210,23 +235,3 @@ sections:
         source: "EPIC"
         date: 2026-10-05
         summary: "On October 2, EPIC provided comments on two proposed rules announced by the Vermont Attorney General implementing Vermont’s Age-Appropriate Design Code."
-      - title: "Looking Ahead: Pixel Tracking Litigation under ECPA and CIPA can Provide Useful Guidelines for the Supreme Court in Salazar v. Paramount Global"
-        url: "https://epic.org/looking-ahead-pixel-tracking-litigation-under-ecpa-and-cipa-can-provide-useful-guidelines-for-the-supreme-court-in-salazar-v-paramount-global/"
-        source: "EPIC"
-        date: 2026-10-05
-        summary: "Introduction As the Supreme Court prepares to hear the upcoming privacy case in Salazar v. Paramount Global under the VPPA, broader trends in pixel tracking litigation reveal concerted efforts to counteract harmful..."
-      - title: "EPIC Files Amicus Brief Challenging Spirit Airlines’ Bankruptcy Sale of Employee Data to Google"
-        url: "https://epic.org/epic-files-amicus-brief-challenging-spirit-airlines-bankruptcy-sale-of-employee-data-to-google/"
-        source: "EPIC"
-        date: 2026-10-02
-        summary: "On Thursday, EPIC, along with Professor Seema Patel, filed an amicus brief using privacy grounds to challenge the sale of sensitive employee data in Spirit Airlines’ bankruptcy proceedings to Google to be used for AI..."
-      - title: "Victory! Court Rejects Government Effort to Dismiss Social Media Surveillance Lawsuit"
-        url: "https://www.eff.org/press/releases/victory-court-rejects-government-effort-dismiss-social-media-surveillance-lawsuit"
-        source: "EFF Deeplinks"
-        date: 2026-10-02
-        summary: "Judge Allows Social Media Surveillance Lawsuit Against Trump Administration to Move Forward NEW YORK — A lawsuit filed by three labor unions against the Departments of State and Homeland Security for their..."
-      - title: "Victory! California Appeals Court Refuses to Revive Surveillance Tech CEO’s Meritless Lawsuit Against Journalist"
-        url: "https://www.eff.org/deeplinks/2026/09/victory-california-appeals-court-refuses-revive-surveillance-tech-ceos-meritless"
-        source: "EFF Deeplinks"
-        date: 2026-09-30
-        summary: "When the rich and powerful try to use the court to silence negative reporting about themselves, it’s worth calling out that behavior for what it is: an attack on free speech. This is why EFF is happy to stand up for..."
