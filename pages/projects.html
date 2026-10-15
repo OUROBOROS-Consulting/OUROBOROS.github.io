@@ -5,17 +5,16 @@ permalink: /projects/
 description: "Case studies, public service announcements, and essays — across technology, research, and advocacy."
 ---
 
-<header class="page-hero">
+<header class="page-hero authority">
   <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <p class="post-category">Projects</p>
+  <div class="page-hero-inner container">
+    <div class="page-hero-text stack">
+      <p class="post-category technical text-t">Projects</p>
       <h1 class="page-hero-title">Projects</h1>
-      <p class="page-hero-lede">Case studies, public service announcements, and essays — across technology, research, and
-        advocacy.</p>
+      <p class="page-hero-lede text-s">Case studies, public service announcements, and essays — across technology, research, and advocacy.</p>
     </div>
-    <div class="page-hero-cta">
-      <p class="band-count">{{ site.case_studies.size | plus: site.psas.size }} pieces</p>
+    <div class="page-hero-cta stack">
+      <p class="technical text-t">{{ site.case_studies.size | plus: site.psas.size }} pieces</p>
     </div>
     <div class="page-hero-emblem page-hero-emblem--briefcase" aria-hidden="true">
       <i class="ph ph-briefcase" aria-hidden="true"></i>
@@ -23,28 +22,22 @@ description: "Case studies, public service announcements, and essays — across 
   </div>
 </header>
 
-<div class="page-body">
-  <div class="related-grid">
+<div class="page-body container">
+  <div class="grid grid-2">
 
-    <a href="{{ '/case-studies/' | relative_url }}" class="related-card">
-      <p class="rc-tag">Client Work</p>
-      <h2 class="rc-title">Case Studies</h2>
-      <p class="card-desc">Selected engagements across technology consulting, research, and advocacy — from federal
-        COVID response to elder abuse intervention.</p>
-      <span class="band-count">{{ site.case_studies.size }} engagements</span>
-      <span class="card-link">View all →</span>
+    <a href="{{ '/case-studies/' | relative_url }}" class="card btn-secondary stack" style="text-decoration:none;">
+      <p class="technical text-t">Client Work</p>
+      <h2 class="authority" style="margin:0; font-size: 1.5rem;">Case Studies</h2>
+      <p class="text-s">Selected engagements across technology consulting, research, and advocacy — from federal COVID response to elder abuse intervention.</p>
+      <span class="technical text-t" style="margin-top:auto; border-top: 1px solid var(--md-sys-color-outline); padding-top:10px;">{{ site.case_studies.size }} engagements &rarr;</span>
     </a>
 
-    <a href="{{ '/resources/psas/' | relative_url }}" class="related-card">
-      <p class="rc-tag">Public Interest</p>
-      <h2 class="rc-title">PSAs</h2>
-      <p class="card-desc">Public service announcements on technology, psychopathology, coercive control, and related
-        topics — written for general audiences.</p>
-      <span class="band-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif
-        %}</span>
-      <span class="card-link">View all →</span>
+    <a href="{{ '/resources/psas/' | relative_url }}" class="card btn-secondary stack" style="text-decoration:none;">
+      <p class="technical text-t">Public Interest</p>
+      <h2 class="authority" style="margin:0; font-size: 1.5rem;">PSAs</h2>
+      <p class="text-s">Public service announcements on technology, psychopathology, coercive control, and related topics — written for general audiences.</p>
+      <span class="technical text-t" style="margin-top:auto; border-top: 1px solid var(--md-sys-color-outline); padding-top:10px;">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %} &rarr;</span>
     </a>
-
 
   </div>
 </div>
