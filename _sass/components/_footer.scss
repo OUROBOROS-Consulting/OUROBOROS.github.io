@@ -1,0 +1,90 @@
+// ── Footer Organism (M3 Semantic) ────────────────────────────────────────────
+// Responsibility: Layout and arrangement of social links, branding, and credits.
+
+.c-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--md-sys-spacing-lg);
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-md);
+  background-color: var(--md-sys-color-surface);
+  border-top: 1px solid var(--md-sys-color-outline);
+}
+
+.c-footer__links {
+  display: flex;
+  gap: var(--md-sys-spacing-md);
+  align-items: center;
+}
+
+.c-footer__social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--md-sys-shape-full);
+  color: var(--md-sys-color-on-surface-variant);
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface);
+  }
+}
+
+.c-footer__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.c-footer__logo-mark {
+  height: 40px;
+  width: auto;
+}
+
+.c-footer__credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  text-align: center;
+}
+
+.c-footer__copy {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+// Disclaimer Bar (The "Footer Sub-organism")
+.c-disclaimer-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: var(--md-sys-spacing-md);
+  padding: var(--md-sys-spacing-md) var(--md-sys-spacing-lg);
+  background-color: var(--md-sys-color-surface-variant);
+  border-top: 1px solid var(--md-sys-color-outline);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+.c-disclaimer-bar__text {
+  margin: 0;
+  max-width: 60ch;
+}
+
+.c-disclaimer-bar__links {
+  display: flex;
+  gap: var(--md-sys-spacing-sm);
+}
+
+.c-disclaimer-bar__link {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

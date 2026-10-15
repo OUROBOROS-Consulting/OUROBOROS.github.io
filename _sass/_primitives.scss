@@ -1,0 +1,123 @@
+// ── Design System Primitives ─────────────────────────────────────────────
+// This file contains the raw, agnostic values for the design system.
+// It is theme-unaware and uses the "--p-" prefix.
+
+:root {
+  /* --- Spacing Scale (Raw px/rem) --- */
+  --p-spacing-4: 0.25rem;   /* 4px */
+  --p-spacing-6: 0.375rem;  /* 6px */
+  --p-spacing-8: 0.5rem;    /* 8px */
+  --p-spacing-12: 0.75rem;  /* 12px */
+  --p-spacing-16: 1rem;     /* 16px */
+  --p-spacing-20: 1.25rem;  /* 20px */
+  --p-spacing-24: 1.5rem;   /* 24px */
+  --p-spacing-32: 2rem;     /* 32px */
+  --p-spacing-40: 2.5rem;   /* 40px */
+  --p-spacing-48: 3rem;     /* 48px */
+  --p-spacing-64: 4rem;     /* 64px */
+  --p-spacing-96: 6rem;     /* 96px */
+  --p-spacing-128: 8rem;    /* 128px */
+
+  /* --- Radius Scale (Raw) --- */
+  --p-radius-0: 0rem;
+  --p-radius-xs: 2px;
+  --p-radius-sm: 3px;
+  --p-radius-md: 4px;
+  --p-radius-lg: 8px;
+  --p-radius-xl: 20px;
+  --p-radius-full: 9999px;
+
+  /* --- Typography Weights & Sizes (Raw) --- */
+  --p-weight-light: 300;
+  --p-weight-regular: 400;
+  --p-weight-medium: 500;
+  --p-weight-semibold: 600;
+  --p-weight-bold: 700;
+
+  /* --- Typography Sizes (Raw) --- */
+  --p-font-display-large: 3.052rem;
+  --p-font-display-medium: 2.441rem;
+  --p-font-display-small: 1.875rem;
+  --p-font-headline-large: 1.5rem;
+  --p-font-headline-medium: 1.25rem;
+  --p-font-title-large: 1.125rem;
+  --p-font-body-large: 1rem;
+  --p-font-body-medium: 0.875rem;
+  --p-font-label-large: 0.875rem;
+  --p-font-label-small: 0.75rem;
+
+  /* --- Elevation Shadows (Raw) --- */
+  --p-shadow-level-1: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  --p-shadow-level-2: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --p-shadow-level-3: 0 10px 20px rgba(0,0,0,0.19), 0 6px 8px rgba(0,0,0,0.23);
+
+  /* --- Color Primitives (Hex/RGBA) --- */
+  /* Neutrals / Surfaces */
+  --p-color-white: #FFFFFF;
+  --p-color-black: #000000;
+  --p-color-void-black: #000000;
+  --p-color-charcoal: #121212;
+  --p-color-surface-dark-1: #0c101a;
+  --p-color-surface-dark-2: #1a1d26;
+  --p-color-surface-dark-3: #22262f;
+  --p-color-surface-dark-4: #252831;
+  --p-color-surface-dark-5: #2b2f39;
+  --p-color-surface-light-1: #FEF7FF;
+  --p-color-surface-light-2: #E6E1E5;
+  --p-color-surface-light-3: #F3F3F3;
+  --p-color-surface-light-4: #DFDFDF;
+  --p-color-surface-light-5: #FFFFFF;
+
+  /* Accents / Brand */
+  --p-color-accent-gold: #ddcba3;
+  --p-color-accent-amber: #ffbf00;
+  --p-color-accent-indigo: #0b1426;
+  --p-color-primary-light: #6750A4;
+  --p-color-primary-dark: #D0BCFF;
+  --p-color-secondary: #625B71;
+
+  /* Text / Ink */
+  --p-color-ink-light: #FFFFFF;
+  --p-color-ink-dark: #1D1B20;
+  --p-color-text-gray: #8e8e8e;
+
+  /* Error Colors (Extracted for Primitives) */
+  --p-color-error-light: #B3261E;
+  --p-color-error-dark: #F2B8B5;
+  --p-color-on-error-light: #FFFFFF;
+  --p-color-on-error-dark: #601410;
+}
+
+/* --- Problematic By Design Primitives --- */
+/* The Void (Black/Charcoal) */
+--p-void-900: #000000;
+--p-void-800: #0B1426;
+--p-void-700: #1A2538;
+--p-void-600: #2C3B52;
+--p-void-500: #3E4F69;
+--p-void-400: #516280;
+
+/* The Forensic (White/Grey) */
+--p-forensic-100: #F5F5F5;
+--p-forensic-200: #E0E0E0;
+--p-forensic-300: #BDBDBD;
+--p-forensic-400: #9E9E9E;
+--p-forensic-500: #757575;
+--p-forensic-600: #616161;
+
+/* The Ember (Gold/Amber) */
+/* Bright scale for Dark Mode (High Luminance) */
+--p-ember-gold-bright-900: #8C7B5E;
+--p-ember-gold-bright-800: #A69173;
+--p-ember-gold-bright-700: #C0A986;
+--p-ember-gold-bright-600: #DDCBA3;
+
+/* Deep scale for Light Mode (Low Luminance / High Contrast) */
+--p-ember-gold-deep-900: #5C4B38;
+--p-ember-gold-deep-800: #73614A;
+--p-ember-gold-deep-700: #8C7358;
+--p-ember-gold-deep-600: #A68E6B;
+
+/* Alert scale */
+--p-ember-amber-600: #FFBF00;
+--p-ember-amber-900: #8A6B00;

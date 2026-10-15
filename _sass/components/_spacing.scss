@@ -1,0 +1,54 @@
+// ── Spacing Component (M3 Semantic) ──────────────────────────────────────────
+// Responsibility: Managing consistent rhythm through vertical and horizontal spacing.
+
+/* Vertical Stacking (The 'Stack' Organism) */
+.c-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md); /* Default gap */
+}
+
+.c-stack--sm { gap: var(--md-sys-spacing-sm); }
+.c-stack--lg { gap: var(--md-sys-spacing-lg); }
+.c-stack--xl { gap: var(--md-sys-spacing-xl); }
+
+/* Horizontal Spacing (The 'Group' Organism) */
+.c-group {
+  display: flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
+}
+
+.c-group--md { gap: var(--md-sys-spacing-md); }
+.c-group--lg { gap: var(--md-sys-spacing-lg); }
+
+/* Section Rhythm (The 'Section' Organism) */
+.c-section {
+  padding: var(--md-sys-spacing-xl) 0;
+  border-bottom: 1px solid var(--md-sys-color-outline);
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+
+  &--compact {
+    padding: var(--md-sys-spacing-lg) 0;
+  }
+}
+
+/* Grid Utilities */
+.c-grid {
+  display: grid;
+  gap: var(--md-sys-spacing-lg);
+}
+
+.c-grid--2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.c-grid--3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+
+/* Container */
+.c-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--md-sys-spacing-lg);
+}

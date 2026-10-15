@@ -1,0 +1,103 @@
+// ── Navigation Component (M3 Semantic Organism) ────────────────────────────
+// Responsibility: Orchestrating brand identity, primary links, search, and utilities.
+
+.c-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  background-color: var(--md-sys-color-surface);
+  border-bottom: 1px solid var(--md-sys-color-outline);
+}
+
+.c-nav__logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.c-nav__logo-mark {
+  height: 48px; /* Standardized nav height */
+  width: auto;
+}
+
+/* Links and Dropdowns - The "Nav links" Organism logic */
+.c-nav__links {
+  display: flex;
+  gap: var(--md-sys-spacing-md);
+  align-items: center;
+}
+
+.c-nav__dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+// The dropdown menu itself - pure M3 component logic
+.c-nav__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--md-sys-color-surface);
+  border: 1px solid var(--md-sys-color-outline);
+  padding: var(--md-sys-spacing-sm);
+  min-width: 220px;
+  z-index: 10;
+  box-shadow: var(--md-elevation-level-2); // Using standard elevation
+}
+
+.c-nav__dropdown-link {
+  display: block;
+  padding: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+.c-nav__dropdown-link:hover {
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface);
+}
+
+/* Utility/Action Buttons (Search, Contact, News, Theme) */
+.c-nav__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-nav__search-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.c-nav__search-input {
+  background-color: var(--md-sys-color-surface-variant);
+  border: 1px solid var(--md-sys-color-outline);
+  color: var(--md-sys-color-on-surface);
+  padding: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
+  border-radius: var(--md-sys-shape-sm);
+}
+
+.c-nav__extra-item {
+  display: flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  color: var(--md-sys-color-on-surface);
+  text-decoration: none;
+}
+
+// Mobile Hamburger - Managed via JS on the .nav-hamburger class
+.c-nav__hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--md-sys-color-on-surface);
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .c-nav__hamburger { display: block; }
+  .c-nav__links, .c-nav__actions { display: none; }
+}

@@ -1,0 +1,68 @@
+// ── Hours Component (M3 Semantic Atom) ───────────────────────────────────────
+// Responsibility: Displaying availability/timezone information.
+
+/* Compact Variant (used in CTAs or footers) */
+.c-hours--compact {
+  display: flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+.c-hours--compact .c-hours__label {
+  font-weight: var(--md-ref-typeface-weight-medium);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+/* Standard Variant (used in Sidebars or dedicated sections) */
+.c-hours {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+  padding: var(--md-sys-spacing-md);
+  border-radius: var(--md-sys-shape-md);
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-hours__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid var(--md-sys-color-outline);
+  padding-bottom: var(--md-sys-spacing-xs);
+}
+
+.c-hours__label {
+  font-weight: var(--md-ref-typeface-weight-bold);
+  font-size: var(--md-sys-typescale-title-small-size);
+}
+
+.c-hours__timezone {
+  font-size: var(--md-sys-typescale-label-small-size);
+  opacity: 0.8;
+}
+
+.c-hours__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-xs);
+}
+
+.c-hours__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-hours__row--closed {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+.c-hours__footer {
+  margin-top: var(--md-sys-spacing-sm);
+  padding-top: var(--md-sys-spacing-sm);
+  border-top: 1px solid var(--md-sys-color-outline);
+  font-style: italic;
+  font-size: var(--md-sys-typescale-body-small-size);
+}

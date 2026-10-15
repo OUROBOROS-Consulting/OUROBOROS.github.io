@@ -1,0 +1,41 @@
+// ── Banner Organism (M3 Semantic) ────────────────────────────────────────────
+// Responsibility: Displaying high-level site announcements or brand taglines.
+
+.c-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
+  gap: var(--md-sys-spacing-sm);
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  // Mode: Announcement (Primary Role)
+  &--announcement {
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
+  }
+
+  // Mode: Tagline/Brand (Secondary or Tertiary Role)
+  &--brand {
+    background-color: var(--md-sys-color-secondary-container);
+    color: var(--md-sys-color-on-secondary-container);
+  }
+
+  &--tagline {
+    background-color: var(--md-sys-color-tertiary-container);
+    color: var(--md-sys-color-on-tertiary-container);
+  }
+}
+
+.c-banner__icon {
+  flex-shrink: 0;
+}
+
+.c-banner__text {
+  /* Inherits typography from the HTML (e.g., label-small or body-medium) */
+}
+
+.c-banner__arrow {
+  margin-left: var(--md-sys-spacing-xs);
+}

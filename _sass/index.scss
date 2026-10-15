@@ -1,6 +1,3 @@
-// @OUROBOROS-Consulting/agentic-design
-// Accessible, elegant design system for OUROBOROS Consulting
-
 // ── Naming convention ────────────────────────────────────────────────
 //  <prefix>-<element>          page-hero, nav-card, post-body
 //  <prefix>-<element>--mod     page-hero--single, nav-card--active
@@ -11,41 +8,46 @@
 //  All classes: lowercase kebab. No camelCase, no underscores.
 // ────────────────────────────────────────────────────────────────────
 
-// Typography scale for prose
-@forward "typography";
-
 // Foundation: design tokens, reset, mixins, body texture
-@forward "new-tokens";
-@forward "base";
+// @forward "design/md/palette";
+// @forward "design/md/colors";
+// @forward "design/md/typography";
+@forward "design/md/baseline";
 
 // Type levels: the five size/leading/weight/tracking/ink bindings
-@forward "type-levels";
+// @forward "type-levels";
 
 // Component styles
-@forward "buttons";
-@forward "safety-exit";
-@forward "cards";
+// @forward "buttons";
+// @forward "safety-exit";
+// @forward "cards";
 // Section band headers. Must precede "home" and "service": both carry #cta and
 // .psa-section overrides that tie on specificity and win only on source order.
-@forward "band";
-@forward "nav-primary";
-@forward "footer";
-@forward "hours";
-@forward "divider";
+// @forward "band";
+// @forward "design/includes/nav-primary";
 
-@forward "divider";
+@forward "components/banner";
+@forward "components/button";
+@forward "components/card";
+@forward "components/cta";
+@forward "components/footer";
+@forward "components/hero";
+@forward "components/layout";
+@forward "components/nav";
+@forward "components/hours";
+@forward "components/spacing";
 
 // Layout & page-specific styles
-@forward "home";
-@forward "service";
-@forward "essay";
-@forward "feed";
+// @forward "home";
+// @forward "service";
+// @forward "essay";
+// @forward "feed";
 // Shared geometry for the two collapsible edge panels. Must precede both.
-@forward "spine";
-@forward "sidebar";
-@forward "framework";
-@forward "team";
-@forward "sidebar-rail";
+// @forward "spine";
+// @forward "sidebar";
+// @forward "framework";
+// @forward "team";
+// @forward "sidebar-rail";
 
 // Token specimen page — /design-system/
-@forward "design-system";
+// @forward "design-system";
