@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-15
+generated: 2026-10-16
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -53,11 +53,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-08
         summary: "Full-stack safety solution for physical AI is being used by robotics companies."
-      - title: "Fraudster jailed for using 10K bots and AI songs to outstream Taylor Swift"
-        url: "https://arstechnica.com/tech-policy/2026/10/outstreaming-taylor-swift-is-easy-with-10k-bots-and-ai-songs-fraudster-admits/"
-        source: "Ars Technica"
-        date: 2026-10-07
-        summary: "Man gets 18 months for AI scheme stealing $8M in music streaming royalties."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -126,6 +121,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Journal retracts, republishes paper on Long COVID treatment trial"
+        url: "https://retractionwatch.com/2026/10/15/journal-retracts-republishes-paper-on-long-covid-treatment-trial/"
+        source: "Retraction Watch"
+        date: 2026-10-15
+        summary: "Annals of Internal Medicine has retracted a paper on treatments for Long COVID because the authors did not report dosing information for metformin, one of the drugs tested in the study. The editor-in-chief of the..."
       - title: "Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected"
         url: "https://www.propublica.org/article/missouri-plan-judge-selection-republican-attacks"
         source: "ProPublica"
@@ -161,11 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-09
         summary: "IOP Publishing has retracted nearly 100 papers from three of its conference proceedings after the articles were flagged for containing tortured phrases. Tortured phrases are rephrasings and synonyms — often awkward and..."
-      - title: "OpenAI withdraws three preprints a day after releasing 722 manuscripts on unsolved math problems"
-        url: "https://retractionwatch.com/2026/10/08/openai-withdraws-preprints-722-manuscripts-unsolved-math-problems/"
-        source: "Retraction Watch"
-        date: 2026-10-08
-        summary: "Less than 24 hours after OpenAI posted over 700 preprints describing major math results by an internal AI model, the company has withdrawn three of the manuscripts for errors. On Oct. 6, OpenAI published 722 preprints..."
       - title: "U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU"
         url: "https://www.propublica.org/article/aau-child-sex-abuse-house-energy-commerce-committee-probe-amateur-athletic-union"
         source: "ProPublica"
@@ -175,6 +170,16 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Our Lawsuit Against the Trump Administration’s Social Media Surveillance Moves Forward. Here’s What the Court Said."
+        url: "https://www.eff.org/deeplinks/2026/10/our-lawsuit-against-trump-administrations-social-media-surveillance-moves-forward"
+        source: "EFF Deeplinks"
+        date: 2026-10-15
+        summary: "No one should have to choose between speaking freely and protecting their immigration status. Yet that’s precisely the choice the Trump administration’s mass surveillance of online speech forces on noncitizens living in..."
+      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
+        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
+        source: "EPIC"
+        date: 2026-10-15
+        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
       - title: "Patients: All my best tips on how to opt out of data sharing"
         url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
         source: "The Markup"
@@ -225,13 +230,3 @@ sections:
         source: "EPIC"
         date: 2026-10-07
         summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
-      - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
-        url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
-        source: "Krebs on Security"
-        date: 2026-10-07
-        summary: "A teenager from Amman, Jordan suspected of leading the prolific data theft and extortion group ShinyHunters has been detained and is reportedly cooperating with the FBI to identify other members of the hacking gang..."
-      - title: "EPIC Offers Comments on Vermont Age-Appropriate Design Code Rulemaking"
-        url: "https://epic.org/epic-issues-comments-on-vermont-age-appropriate-design-code-rulemaking/"
-        source: "EPIC"
-        date: 2026-10-05
-        summary: "On October 2, EPIC provided comments on two proposed rules announced by the Vermont Attorney General implementing Vermont’s Age-Appropriate Design Code."
