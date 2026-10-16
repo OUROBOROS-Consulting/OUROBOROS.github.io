@@ -1,25 +1,26 @@
 <!-- ── Hero Organism ───────────────────────────────────────────────────────── -->
 <section id="hero" class="c-hero">
 
-  <!-- Row 1: brand identity -->
+  <!-- Brand identity -->
   <div class="c-hero__identity">
     <h1 class="headline-large">
-      {{ page.name_line1 }}<br/>
-      <span class="body-medium">{{ page.name_line2 }}</span>
+      {{ page.name_line1 }}
+      <span class="c-hero__title-detail">{{ page.name_line2 }}</span>
     </h1>
-    <div class="c-hero__emblem" aria-hidden="true">
-      <img src="/assets/images/logo.svg" alt="">
-    </div>
   </div>
 
-  <!-- Row 2: copy + CTA -->
+  <div class="c-hero__emblem" aria-hidden="true">
+    <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="">
+  </div>
+
+  <!-- Supporting copy and CTA -->
   <div class="c-hero__content">
     {% if page.eyebrow %}
     <p class="label-large text-primary">{{ page.eyebrow }}</p>
     {% endif %}
     
     {% if page.tagline %}
-    <p class="headline-medium">{{ page.tagline | markdownify }}</p>
+    <div class="c-hero__tagline body-large">{{ page.tagline | markdownify }}</div>
     {% endif %}
 
     <div class="c-hero__actions">
