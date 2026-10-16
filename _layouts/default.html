@@ -10,12 +10,6 @@
     <title>{{ _title }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
-    {%- comment -%}
-    `description` first, then `lede`. `description` is written to be a meta
-    description; `lede` is display prose that happens to sit near the top of
-    the page. The order was the other way round, so every page carrying both
-    published its long-form lede truncated mid-sentence at 160 characters.
-    {%- endcomment -%}
     {% assign _desc = page.description | default: page.lede | default: "Bespoke solutions where
     technology, rigorous
     research, and principled advocacy meet." %}
@@ -52,11 +46,11 @@
     <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}" />
     <!-- Self-hosted fonts — no third-party requests (see /assets/fonts/LICENSE.md) -->
     <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}" />
-    <!-- Google Fonts for Syne, Lora, and IBM Plex Mono -->
+    <!-- Google Fonts for Syne, Manufacturing Consent, Lora, and IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manufacturing+Consent&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap"
       rel="stylesheet">
     {% if page.noindex %}
     <meta name="robots" content="noindex,nofollow" />
@@ -98,10 +92,7 @@
 
   <body {% if page.show_banner %} class="has-banner" {% endif %}>
     <a class="skip-link" href="#main">Skip to main content</a>
-    <button id="safety-exit" class="safety-exit"
-      aria-label="Quick exit — leave this site immediately"
-      title="Leaves this site immediately and clears its stored data. Pressing Escape twice does the same.">Quick
-      exit</button>
+    {% include safety-exit.html %}
     {% if page.show_banner %}{% include banner.html %}{% endif %}
     <div class="nav-shell">
       {% include nav.html %}
