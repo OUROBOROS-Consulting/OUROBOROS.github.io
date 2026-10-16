@@ -1,5 +1,5 @@
 <!-- ══════════════════════════════════════════════════════════════════════
-     PAGE HERO — shared .page-hero markup for article / sections / service /
+     PAGE HERO — shared .c-page-hero markup for article / sections / service /
      psa layouts. Single source of truth; each layout calls this with params
      describing its own variant. Front-matter keys (category, title, tagline,
      lede, tags, headshot, icon, hero_svg, cta_url, price, pdf, date, ...)
@@ -28,34 +28,33 @@
   {% when 'headshot,icon' %}
     {% if page.headshot or page.icon %}{% assign has_art = true %}{% endif %}
 {% endcase %}
-
-<header class="c-page-hero">
+<header class="c-page-hero{{ include.extra_class }}">
   <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
 
   <div class="c-page-hero__inner{% if include.art == 'headshot,hero_svg,icon' or include.art == 'headshot,icon' %}{% unless has_art %} c-page-hero__inner--single{% endunless %}{% endif %}">
     <div class="c-page-hero__text">
-      {% if page.category %}
-      <p class="label-large text-primary">{{ page.category | default: include.category_default }}</p>
+      {% if include.category or page.category %}
+      <p class="label-large text-primary">{{ include.category | default: page.category | default: include.category_default }}</p>
       {% endif %}
 
-      <h1 class="headline-large">{{ page.title }}</h1>
+      <h1 class="headline-large">{{ include.title | default: page.title }}</h1>
 
-      {% if include.tagline == 'true' and page.tagline %}
-      <p class="headline-medium">{{ page.tagline | markdownify }}</p>
+      {% if include.tagline == 'true' or page.tagline %}
+      <p class="headline-medium">{{ include.tagline | default: page.tagline | markdownify }}</p>
       {% endif %}
 
-      {% if page.lede %}
-      <p class="body-large">{{ page.lede }}</p>
+      {% if include.lede or page.lede %}
+      <p class="body-large">{{ include.lede | default: page.lede }}</p>
       {% endif %}
 
       {% if page.tags %}
       <div class="c-page-hero__tags">
         {% for tag in page.tags %}
-          {% if include.tag_style == 'anchor' %}
-          <a href="#{{ tag | slugify }}" class="btn btn-secondary btn--small">{{ tag }}</a>
-          {% else %}
-          <span class="label-medium">{{ tag }}</span>
-          {% endif %}
+        {% if include.tag_style == 'anchor' %}
+        <a href="#{{ tag | slugify }}" class="btn btn-secondary btn--small">{{ tag }}</a>
+        {% else %}
+        <span class="label-medium">{{ tag }}</span>
+        {% endif %}
         {% endfor %}
       </div>
       {% endif %}
@@ -63,7 +62,7 @@
       {% if include.cta_mode == 'service' %}
       <div class="c-page-hero__actions">
         <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn btn-primary">
-          {{ page.cta_label | default: 'Get in Touch' }}
+          {{ include.cta_label | default: page.cta_label | default: 'Get in Touch' }}
           {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
         </a>
         {% if page.price %}
@@ -80,6 +79,13 @@
         {% endif %}
       </div>
       {% endif %}
+
+      {% assign cta_text = include.cta_text | default: page.cta_text %}
+      {% if cta_text %}
+      <div class="c-page-hero__actions">
+        <p class="body-medium">{{ cta_text }}</p>
+      </div>
+      {% endif %}
     </div><!-- /c-page-hero__text -->
 
     {% if has_art %}
@@ -93,12 +99,12 @@
       {% endif %}
     </div>
     {% endif %}
-  </div><!-- /c-page-hero__inner -->
 
-  {% if include.scroll_hint == 'true' %}
-  <div class="c-page-hero__scroll-hint">
-    <div class="c-page-hero__scroll-line"></div>
-    <span class="label-small">Scroll</span>
-  </div>
-  {% endif %}
-</header>
+    {% if include.scroll_hint == 'true' %}
+    <div class="c-page-hero__scroll-hint">
+      <div class="c-page-hero__scroll-line"></div>
+      <span class="label-small">Scroll</span>
+    </div>
+    {% endif %}
+  </div><!-- /c-page-hero__inner -->
+</header><!-- /c-page-hero -->

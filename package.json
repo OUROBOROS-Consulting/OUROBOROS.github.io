@@ -6,5 +6,13 @@
     "predev": "lsof -ti:35729 | xargs kill -9 2>/dev/null",
     "dev": "bundle exec jekyll serve --livereload",
     "build": "bundle exec jekyll build"
+  },
+  "dependencies": {
+    "@material/web": "^2.5.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "rollup": "^4.64.5"
+  },
+  "allowScripts": {
+    "fsevents@2.3.3": true
   }
 }

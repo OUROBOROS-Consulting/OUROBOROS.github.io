@@ -5,22 +5,16 @@ description: "Apostolos Stamenos, MS. Former federal data scientist at HHS, now 
 permalink: /about/
 ---
 
-<header class="page-hero">
-  <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <p class="post-category">About</p>
-      <h1 class="page-hero-title">Apostolos Stamenos</h1>
-      <p class="page-hero-lede">Technologist, designer,researcher, and advocate working at the intersection of data science, public health, and institutional accountability.</p>
-      <div class="page-hero-cta">
-        <a href="{{ '/intake' | relative_url }}" class="btn">Book a Consultation</a>
-      </div>
-    </div>
-    <div class="hex-portrait">
-      <img src="{{ '/assets/images/AS.png' | relative_url }}" alt="Apostolos Stamenos" />
-    </div>
-  </div>
-</header>
+{% include page-hero.html 
+  back_url="/" 
+  back_label="Home" 
+  category="About" 
+  title="Apostolos Stamenos" 
+  lede="Technologist, designer, researcher, and advocate working at the intersection of data science, public health, and institutional accountability." 
+  headshot="/assets/images/AS.png" 
+  cta_url="/intake" 
+  cta_label="Book a Consultation"
+%}
 
 <!-- ── Values ─────────────────────────────────────────────────────────────── -->
 <section id="values">

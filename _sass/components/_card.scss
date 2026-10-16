@@ -1,4 +1,4 @@
-// ── Card Component (M3 Semantic) ────────────────────────────────────────────
+// ── Card Component (M3 Semantic Atom) ────────────────────────────────────────────
 // Responsibility: Surface, Elevation, and Container Shape.
 
 .c-card {
@@ -9,29 +9,30 @@
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
   border: 1px solid var(--md-sys-color-outline);
-  transition: box-shadow 0.2s ease-in-out;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
 
+  /* Variants */
   &--elevated {
     background-color: var(--md-sys-color-surface-variant);
-    /* Note: If you have an elevation token, use it here. Otherwise, fallback to shadow */
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12); 
+    box-shadow: var(--p-shadow-level-1); 
   }
 
   &--subtle {
     background-color: var(--md-sys-color-surface-variant);
     border: none;
   }
-}
 
-.c-card__header {
-  margin-bottom: var(--md-sys-spacing-md);
-}
+  /* Sub-elements */
+  &__header {
+    margin-bottom: var(--md-sys-spacing-md);
+  }
 
-.c-card__body {
-  flex-grow: 1;
-}
+  &__body {
+    flex-grow: 1;
+  }
 
-.c-card__footer {
-  margin-top: auto;
-  padding-top: var(--md-sys-spacing-md);
+  &__footer {
+    margin-top: auto;
+    padding-top: var(--md-sys-spacing-md);
+  }
 }

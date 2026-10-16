@@ -1,0 +1,46 @@
+// ── Formula Card Component (M3 Semantic Atom) ─────────────────────────────────
+// Responsibility: Specialized container for technical lists and detailed data sets.
+
+.c-card-formula {
+  display: flex;
+  flex-direction: column;
+  padding: var(--md-sys-spacing-lg);
+  border-radius: var(--md-sys-shape-md);
+  background-color: var(--md-sys-color-surface-variant);
+  border: 1px solid var(--md-sys-color-outline);
+  overflow: hidden;
+
+  &__interior {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-sys-spacing-md);
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--md-sys-spacing-sm);
+  }
+
+  &__marker {
+    color: var(--md-sys-color-primary);
+    font-size: var(--md-sys-typescale-body-medium-size);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: var(--md-ref-typeface-weight-semibold);
+    color: var(--md-sys-color-on-surface);
+  }
+
+  &__desc {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-small-size);
+  }
+}

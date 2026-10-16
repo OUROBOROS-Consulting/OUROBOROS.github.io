@@ -14,19 +14,14 @@
  limitations under the License.
 */
 
-@import "palette";
-@import "typography";
-@import "colors";
-@import "shape";
-@import "motion";
-@import "state";
-@import "elevation";
-@import "identity";
+@forward "palette";
+@forward "typography";
+@forward "colors";
+@forward "shape";
+@forward "motion";
+@forward "state";
+@forward "elevation";
+@forward "identity";
 
-@media (prefers-color-scheme: light) {
-  @import "../../themes/light";
-}
-
-@media (prefers-color-scheme: dark) {
-  @import "../../themes/dark";
-}
+@forward "../../themes/light";
+@forward "../../themes/dark";

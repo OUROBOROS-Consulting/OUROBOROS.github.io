@@ -5,23 +5,22 @@ description: "Free printable public service announcements on technology, persona
 permalink: /resources/psas/
 ---
 
-<header class="page-hero">
-  <a class="post-back" href="{{ '/resources/' | relative_url }}">All Resources</a>
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <p class="post-category">Public Interest</p>
-      <h1 class="page-hero-title">PSAs</h1>
-      <p class="page-hero-lede">Public service announcements on technology, psychopathology, coercive control, and related
-        causes — written for general audiences.</p>
-    </div>
-    <div class="page-hero-cta">
-      <p class="band-count">{{ site.psas.size }} {% if site.psas.size == 1 %}document{% else %}documents{% endif %}</p>
-    </div>
-    <div class="page-hero-emblem page-hero-emblem--bullhorn" aria-hidden="true">
-      <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
-    </div>
-  </div>
-</header>
+{% assign cta_count = site.psas.size %}
+{% if cta_count == 1 %}
+  {% assign cta_text = cta_count | append: " document" %}
+{% else %}
+  {% assign cta_text = cta_count | append: " documents" %}
+{% endif %}
+
+{% include page-hero.html
+  back_url="/resources/"
+  back_label="All Resources"
+  category="Public Interest"
+  title="PSAs"
+  lede="Public service announcements on technology, psychopathology, coercive control, and related causes — written for general audiences."
+  icon="fa-solid fa-triangle-exclamation"
+  cta_text=cta_text
+%}
 
 <div class="page-body">
   {% if site.psas.size > 0 %}
@@ -35,8 +34,7 @@ permalink: /resources/psas/
   <section class="psa-section">
     <div class="band-header band-header--compact">
       <h2 class="band-heading band-heading--compact">{{ section_name }}</h2>
-      <span class="band-count">{{ section_psas.size }} {% if section_psas.size == 1 %}document{% else %}documents{%
-        endif %}</span>
+      <span class="band-count">{{ section_psas.size }} {% if section_psas.size == 1 %}document{% else %}documents{% endif %}</span>
     </div>
     <div class="related-grid">
       {% for psa in section_psas %}

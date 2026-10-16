@@ -1,0 +1,37 @@
+// ── Divider Component (M3 Semantic Atom) ───────────────────────────────────────
+// Responsibility: Visual separation between content blocks.
+
+.c-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md-sys-spacing-md);
+  margin: var(--md-sys-spacing-xl) 0;
+  opacity: 0.6;
+
+  &--major {
+    /* This handles the "glyph" rotation logic via CSS counters or classes if passed from Jekyll */
+    /* For now, we provide a standard semantic structure that the template can drive */
+    gap: var(--md-sys-spacing-lg);
+  }
+}
+
+.c-divider__line {
+  flex-grow: 1;
+  height: 1px;
+  background-color: var(--md-sys-color-outline);
+}
+
+.c-divider__glyph {
+  width: 24px;
+  height: 24px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.c-divider__text {
+  font-family: var(--md-sys-typescale-label-small-font);
+  font-size: var(--md-sys-typescale-label-small-size);
+  color: var(--md-sys-color-on-surface-variant);
+}

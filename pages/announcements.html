@@ -5,19 +5,14 @@ permalink: /announcements/
 description: "News and updates from ouroborOS Consulting."
 ---
 
-<header class="page-hero">
-  <a class="post-back" href="{{ '/' | relative_url }}"><i class="ph ph-fill ph-pause" aria-hidden="true"></i> Home</a>
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <p class="post-category">News</p>
-      <h1 class="page-hero-title">Announcements</h1>
-      <p class="page-hero-lede">Updates on new projects, partnerships, publications, and practice developments.</p>
-    </div>
-    <div class="page-hero-emblem" aria-hidden="true">
-      <i class="ph ph-megaphone"></i>
-    </div>
-  </div>
-</header>
+{% include page-hero.html 
+  back_url="/" 
+  back_label="Home" 
+  category="News" 
+  title="Announcements" 
+  lede="Updates on new projects, partnerships, publications, and practice developments." 
+  icon="ph ph-megaphone"
+%}
 
 <div class="page-body">
   {% assign sorted_announcements = site.announcements | sort: "date" | reverse %}

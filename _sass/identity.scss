@@ -21,12 +21,12 @@ h1, h2, .authority {
   font-family: var(--font-authority, serif);
   color: var(--md-sys-color-text-primary);
   line-height: 0.95;
-  margin-bottom: 0.5em;
+  margin-bottom: var(--md-sys-spacing-md);
 }
 
-h1 { font-size: clamp(3rem, 10vw, 5rem); }
-h2 { font-size: clamp(2rem, 6vw, 3rem); }
-h3 { font-size: 1.75rem; }
+h1 { font-size: var(--md-sys-typescale-headline-large-size); }
+h2 { font-size: var(--md-sys-typescale-headline-medium-size); }
+h3 { font-size: var(--md-sys-typescale-title-large-size); }
 
 // 2. Utility (Syne / Body & UI)
 p, li, div, span, .text-s {
@@ -43,7 +43,7 @@ p, li, div, span, .text-s {
 // 4. Technical (Space Mono / Notation & Code)
 code, kbd, samp, .technical, .notation {
   font-family: var(--font-technical, monospace);
-  font-size: 0.85rem;
+  font-size: var(--md-sys-typescale-body-small-size);
   color: var(--md-sys-color-text-tertiary);
 }
 
@@ -59,7 +59,7 @@ code, kbd, samp, .technical, .notation {
 // --- Action/Button Base (Linking to MD Primary) ---
 .btn-sovereign {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   font-family: var(--font-utility);

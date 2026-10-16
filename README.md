@@ -19,7 +19,6 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 ├── sections.html       front-matter-driven: hero → about → page.sections loop → links
 ├── service.html        service detail: hero → specializations → policies → included → pricing → CTA
 ├── announcement.html   single announcement
-├── dashboard.html      auto-loads dashboard.css
 └── psa.html            PDF embed via iframe
 ```
 
@@ -103,19 +102,6 @@ The folder names never appear in a URL — every one of these files carries an e
 | `/services/design/` | `_services/design.md` |
 | `/services/education/` | `_services/education.md` |
 | `/services/technology/` | `_services/technology.md` |
-
-</details>
-
-<details>
-<summary><strong>dashboard</strong> — 5 pages</summary>
-
-| URL | Source |
-|---|---|
-| `/del-cmd-ctrl/` | `del-cmd-ctrl/index.html` |
-| `/del-cmd-ctrl/advocate/` | `del-cmd-ctrl/advocate.html` |
-| `/del-cmd-ctrl/institutional/` | `del-cmd-ctrl/institutional.html` |
-| `/del-cmd-ctrl/policy/` | `del-cmd-ctrl/policy.html` |
-| `/del-cmd-ctrl/survivor/` | `del-cmd-ctrl/survivor.html` |
 
 </details>
 

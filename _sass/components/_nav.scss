@@ -44,7 +44,15 @@
   padding: var(--md-sys-spacing-sm);
   min-width: 220px;
   z-index: 10;
-  box-shadow: var(--md-elevation-level-2); // Using standard elevation
+  box-shadow: var(--md-elevation-level-2);
+
+  /* Fix: Ensure it is hidden by default and only shown on interaction */
+  display: none; 
+}
+
+.c-nav__dropdown:hover .c-nav__dropdown-menu,
+.c-nav__dropdown:focus-within .c-nav__dropdown-menu {
+  display: block;
 }
 
 .c-nav__dropdown-link {
@@ -52,11 +60,11 @@
   padding: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
   color: var(--md-sys-color-on-surface-variant);
   font-size: var(--md-sys-typescale-body-medium-size);
-}
 
-.c-nav__dropdown-link:hover {
-  background-color: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface);
+  &:hover {
+    background-color: var(--md-sys-color-surface-variant);
+    color: var(--md-sys-color-on-surface);
+  }
 }
 
 /* Utility/Action Buttons (Search, Contact, News, Theme) */

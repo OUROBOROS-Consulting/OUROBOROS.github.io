@@ -5,34 +5,16 @@ description: "Guides, printable PSAs, tutorials, and reading for survivors, advo
 permalink: /resources/
 ---
 
-<header class="page-hero">
-  <a class="post-back" href="{{ '/' | relative_url }}">Home</a>
-  <div class="page-hero-inner">
-    <div class="page-hero-text">
-      <p class="post-category">Resources</p>
-      <h1 class="page-hero-title">Reference Materials</h1>
-      <p class="page-hero-lede">Curated references drawn from clinical research, legal scholarship, and survivor advocacy.
-        Accurate information is its own form of protection.</p>
-      <div class="page-hero-cta">
-        <a href="{{ '/intake' | relative_url }}" class="btn">Book a Consultation</a>
-      </div>
-    </div>
-    <div class="page-hero-emblem page-hero-emblem--vault" aria-hidden="true">
-      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor"
-        stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
-        <rect x="14" y="16" width="72" height="68" rx="6" />
-        <circle cx="50" cy="50" r="15" />
-        <circle cx="50" cy="50" r="3.5" fill="currentColor" stroke="none" />
-        <line x1="50" y1="28" x2="50" y2="35" />
-        <line x1="50" y1="65" x2="50" y2="72" />
-        <line x1="28" y1="50" x2="35" y2="50" />
-        <line x1="65" y1="50" x2="72" y2="50" />
-        <line x1="26" y1="84" x2="26" y2="90" />
-        <line x1="74" y1="84" x2="74" y2="90" />
-      </svg>
-    </div>
-  </div>
-</header>
+{% include page-hero.html 
+  back_url="/" 
+  back_label="Home" 
+  category="Resources" 
+  title="Reference Materials" 
+  lede="Curated references drawn from clinical research, legal scholarship, and survivor advocacy. Accurate information is its own form of protection." 
+  icon="ph ph-lock-simple"
+  cta_url="/intake" 
+  cta_label="Book a Consultation"
+%}
 
 <div class="page-body">
   <div class="related-grid resources-grid">

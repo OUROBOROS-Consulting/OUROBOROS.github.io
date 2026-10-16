@@ -1,101 +1,58 @@
-// ── Page Hero Component (M3 Semantic Organism) ──────────────────────────────
-// Responsibility: Orchestrating layout and typography for high-impact page headers.
+// ── Hero Organism (M3 Semantic) ─────────────────────────────────────────────
+// Responsibility: Layout and arrangement of brand identity and primary copy.
 
-.c-page-hero {
+.c-hero {
   display: flex;
   flex-direction: column;
-  position: relative;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh; /* Optimized for standard hero impact */
   padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-md);
   gap: var(--md-sys-spacing-xl);
+  text-align: center;
+}
 
-  &__inner {
-    display: grid;
-    grid-template-columns: 1fr; // Mobile first
-    gap: var(--md-sys-spacing-xl);
-    align-items: center;
+.c-hero__identity {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
+}
 
-    @media (min-width: 768px) {
-      grid-template-columns: 1.2fr 0.8fr; // Content gets more weight
-    }
+.c-hero__emblem {
+  height: 20px; /* Controlled size to prevent overwhelming the text */
+  width: auto;
+}
 
-    &--single {
-      text-align: center;
-      
-      .c-page-hero__text {
-        justify-items: center;
-      }
+.c-hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--md-sys-spacing-md);
+  max-width: 65ch;
+}
 
-      .c-page-hero__art {
-        margin: 0 auto;
-      }
-    }
-  }
+.c-hero__actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--md-sys-spacing-sm);
+}
 
-  &__back {
-    position: absolute;
-    top: var(--md-sys-spacing-md);
-    left: var(--md-sys-spacing-md);
-    text-decoration: none;
-    color: var(--md-sys-color-on-surface-variant);
-    font-size: var(--md-sys-typescale-label-medium-size);
-  }
+.c-hero__scroll-hint {
+  position: absolute;
+  bottom: var(--md-sys-spacing-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+}
 
-  &__text {
-    display: flex;
-    flex-direction: column;
-    gap: var(--md-sys-spacing-sm);
-  }
-
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--md-sys-spacing-xs);
-    margin-top: var(--md-sys-spacing-sm);
-  }
-
-  &__actions {
-    display: flex;
-    align-items: center;
-    gap: var(--md-sys-spacing-md);
-    margin-top: var(--md-sys-spacing-md);
-  }
-
-  &__art {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &__image--hex, 
-  &__image--svg,
-  .hex-portrait img {
-    border-radius: var(--md-sys-shape-large); // Matches M3 hex/portrait style
-    box-shadow: var(--md-elevation-level-2);
-    max-width: 100%;
-    height: auto;
-  }
-
-  &__icon {
-    font-size: 4rem;
-    color: var(--md-sys-color-primary);
-  }
-
-  &__scroll-hint {
-    position: absolute;
-    bottom: var(--md-sys-spacing-lg);
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--md-sys-spacing-xs);
-  }
-
-  &__scroll-line {
-    width: 2px;
-    height: 48px;
-    background-color: var(--md-sys-color-outline);
-    border-radius: var(--md-sys-shape-full);
-    opacity: 0.5;
-  }
+.c-hero__scroll-line {
+  width: 2px;
+  height: 48px;
+  background-color: var(--md-sys-color-outline);
+  border-radius: var(--md-sys-shape-full);
+  opacity: 0.5;
 }
