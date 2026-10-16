@@ -38,7 +38,7 @@ permalink: /resources/psas/
     </div>
     <div class="related-grid">
       {% for psa in section_psas %}
-      <a href="{{ psa.url | relative_url }}" class="related-card">
+      <a href="{{ psa.url | relative_url }}" class="c-card c-card--related">
         <p class="rc-tag">{{ psa.category | default: 'PSA' }}</p>
         <h3 class="rc-title">{{ psa.title }}</h3>
         {% if psa.lede %}<p class="card-desc">{{ psa.lede }}</p>{% endif %}
@@ -52,8 +52,8 @@ permalink: /resources/psas/
   {% endfor %}
 
   {% else %}
-  <div class="card--formula">
-    <div class="card--formula__interior">
+  <div class="c-card--formula">
+    <div class="c-card-formula__interior">
       <p class="card-desc">PSAs coming soon.</p>
     </div>
   </div>

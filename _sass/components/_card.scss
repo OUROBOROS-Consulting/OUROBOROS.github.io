@@ -4,17 +4,19 @@
 .c-card {
   display: flex;
   flex-direction: column;
-  padding: var(--md-sys-spacing-md);
-  border-radius: var(--md-sys-shape-md);
+  padding: var(--site-card-padding-compact);
+  border-radius: var(--site-card-radius);
   background-color: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
-  border: 1px solid var(--md-sys-color-outline);
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  transition:
+    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
   /* Variants */
   &--elevated {
     background-color: var(--md-sys-color-surface-variant);
-    box-shadow: var(--p-shadow-level-1); 
+    box-shadow: var(--site-card-elevation);
   }
 
   &--subtle {
@@ -34,5 +36,401 @@
   &__footer {
     margin-top: auto;
     padding-top: var(--md-sys-spacing-md);
+  }
+}
+
+.c-card-title {
+  margin: 0;
+  font-size: var(--site-card-title-size);
+  line-height: var(--site-card-title-line-height);
+}
+
+.c-card-value {
+  font-size: var(--site-stat-value-size);
+}
+
+.c-card-action {
+  margin-top: auto;
+}
+
+.c-card--disabled {
+  opacity: var(--site-state-disabled-opacity);
+  cursor: not-allowed;
+}
+
+.testimonials-grid,
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--site-card-grid-min-width)), 1fr));
+  gap: var(--md-sys-spacing-lg);
+}
+
+.team-grid {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.c-card--citation,
+.c-card--team {
+  min-width: 0;
+}
+
+.c-card--citation {
+  gap: var(--md-sys-spacing-sm);
+}
+
+.c-card--team {
+  gap: var(--md-sys-spacing-md);
+}
+
+.bib-title {
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-title-medium-size);
+  font-weight: var(--md-ref-typeface-weight-semibold);
+}
+
+.bib-byline,
+.bib-venue,
+.team-bio {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.bib-byline,
+.bib-venue {
+  margin: 0;
+}
+
+.bib-link {
+  align-self: flex-start;
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+  color: var(--md-sys-color-primary);
+}
+
+.team-role {
+  margin: 0;
+  color: var(--md-sys-color-primary);
+  font-size: var(--md-sys-typescale-label-medium-size);
+}
+
+.team-name {
+  margin: 0;
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-authority);
+  font-size: var(--site-card-title-size);
+  line-height: var(--site-card-title-line-height);
+}
+
+.team-creds {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.team-bio p {
+  margin: 0;
+}
+
+.team-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md-sys-spacing-sm);
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+}
+
+.team-link {
+  color: var(--md-sys-color-primary);
+}
+
+.c-card:is(a[href], [role="button"]),
+.c-card--related:is(a[href], [role="button"]),
+.c-card--framed:is(a[href], [role="button"]),
+.card:is(a[href], [role="button"]),
+.related-card:is(a[href], [role="button"]),
+.card--framed:is(a[href], [role="button"]) {
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+}
+
+.c-card:is(a[href], [role="button"]):hover,
+.c-card--related:is(a[href], [role="button"]):hover,
+.c-card--framed:is(a[href], [role="button"]):hover,
+.card:is(a[href], [role="button"]):hover,
+.related-card:is(a[href], [role="button"]):hover,
+.card--framed:is(a[href], [role="button"]):hover {
+  transform: translateY(calc(-1 * var(--site-card-hover-distance)));
+  border-color: var(--md-sys-color-primary);
+}
+
+.c-card:is(a[href], [role="button"]):focus-visible,
+.c-card--related:is(a[href], [role="button"]):focus-visible,
+.c-card--framed:is(a[href], [role="button"]):focus-visible,
+.card:is(a[href], [role="button"]):focus-visible,
+.related-card:is(a[href], [role="button"]):focus-visible,
+.card--framed:is(a[href], [role="button"]):focus-visible,
+.values-card:focus-visible {
+  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline-offset: var(--site-focus-ring-offset);
+}
+
+.c-card--related,
+.c-card--framed,
+.c-card--callout,
+.c-card--formula,
+.c-card--disabled,
+.card,
+.card--framed,
+.card--callout,
+.card--formula,
+.c-card-formula,
+.related-card {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-card-radius);
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface);
+}
+
+.c-card--related,
+.c-card--framed,
+.c-card--callout,
+.c-card--formula,
+.c-card--disabled,
+.card,
+.card--framed,
+.card--callout,
+.card--formula,
+.c-card-formula,
+.related-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card,
+.c-card--formula {
+  padding: var(--site-card-padding-compact);
+}
+
+.c-card--framed,
+.c-card--related,
+.card--framed,
+.related-card {
+  padding: var(--site-card-padding-comfortable);
+}
+
+.c-card--callout,
+.card--callout {
+  padding: var(--site-card-padding-comfortable);
+}
+
+.c-card--formula,
+.card--formula,
+.c-card-formula {
+  padding: var(--site-card-padding-comfortable);
+}
+
+.c-card--callout .card-tag,
+.card--callout .card-tag {
+  color: var(--md-sys-color-primary);
+  font-weight: var(--md-ref-typeface-weight-semibold);
+}
+
+.c-card-callout__interior,
+.card--callout__interior {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-card--callout .card-icon,
+.card--callout .card-icon {
+  color: var(--md-sys-color-primary);
+  font-size: var(--site-card-icon-size);
+}
+
+.c-card--callout .card-icon img,
+.card--callout .card-icon img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.c-card--callout .card-title,
+.card--callout .card-title {
+  margin: var(--md-sys-spacing-sm) 0;
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-authority);
+}
+
+.c-card--callout .card-body,
+.c-card--callout .card-desc,
+.card--callout .card-body,
+.card--callout .card-desc {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.related-grid,
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--site-card-grid-min-width)), 1fr));
+  gap: var(--md-sys-spacing-lg);
+}
+
+.related-grid > *,
+.values-grid > * {
+  min-width: 0;
+}
+
+.related-card > *,
+.c-card--related > *,
+.card--framed > *,
+.c-card--framed > *,
+.card--callout > * {
+  max-width: 100%;
+}
+
+.c-card--related .rc-tag,
+.c-card--framed .rc-tag,
+.c-card--related .rc-date,
+.c-card--framed .rc-date,
+.related-card .rc-tag,
+.card--framed .rc-tag,
+.related-card .rc-date,
+.card--framed .rc-date {
+  margin: 0;
+  color: var(--md-sys-color-primary);
+}
+
+.c-card--related .rc-title,
+.c-card--framed .rc-title,
+.c-card--framed .card-title,
+.related-card .rc-title,
+.card--framed .rc-title,
+.card--framed .card-title {
+  margin: var(--md-sys-spacing-sm) 0;
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-authority);
+  font-size: var(--site-card-title-size);
+  line-height: var(--site-card-title-line-height);
+}
+
+.c-card--related .card-desc,
+.c-card--framed .card-desc,
+.c-card--callout .card-desc,
+.related-card .card-desc,
+.card--framed .card-desc,
+.card--callout .card-desc {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-card--related .card-link,
+.c-card--framed .card-link,
+.related-card .card-link,
+.card--framed .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+  color: var(--md-sys-color-primary);
+  font-weight: var(--md-ref-typeface-weight-semibold);
+}
+
+.resources-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--site-resource-card-grid-min-width)), 1fr));
+}
+
+.values-card {
+  min-width: 0;
+  height: var(--site-card-flip-height);
+  perspective: var(--site-card-flip-perspective);
+  cursor: pointer;
+}
+
+.values-card__inner {
+  position: relative;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform var(--site-card-flip-duration) var(--site-motion-easing-standard);
+}
+
+.values-card.is-flipped .values-card__inner {
+  transform: rotateY(180deg);
+}
+
+.values-card__surface {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--md-sys-spacing-md);
+  min-height: var(--site-card-flip-height);
+  height: 100%;
+  padding: var(--md-sys-spacing-lg);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-card-radius);
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface);
+  backface-visibility: hidden;
+}
+
+.values-card__front,
+.values-card__back {
+  position: absolute;
+  inset: 0;
+}
+
+.values-card__back {
+  transform: rotateY(180deg);
+}
+
+.values-card__icon {
+  font-size: var(--site-card-icon-size);
+}
+
+.values-card__icon--gold {
+  color: var(--md-sys-color-primary);
+}
+
+.values-card__name {
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-authority);
+  font-size: var(--site-card-title-size);
+}
+
+.values-card__desc {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-card,
+  .card,
+  .c-card--related,
+  .c-card--framed,
+  .c-card--callout,
+  .c-card--formula,
+  .related-card,
+  .card--framed,
+  .values-card__inner {
+    transition-duration: var(--site-motion-reduced-duration);
+  }
+
+  .c-card:is(a[href], [role="button"]):hover,
+  .c-card--related:is(a[href], [role="button"]):hover,
+  .c-card--framed:is(a[href], [role="button"]):hover,
+  .card:is(a[href], [role="button"]):hover,
+  .related-card:is(a[href], [role="button"]):hover,
+  .card--framed:is(a[href], [role="button"]):hover {
+    transform: none;
   }
 }

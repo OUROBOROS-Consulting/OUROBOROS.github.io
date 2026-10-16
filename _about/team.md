@@ -17,7 +17,7 @@ permalink: /team/
 <section class="team-section">
   <ul class="team-grid">
     {% for member in site.data.team %}
-    <li class="team-card">
+    <li class="c-card c-card--team">
       {% if member.photo %}
       <div class="hex-portrait team-portrait">
         <img src="{{ member.photo | relative_url }}" alt="{{ member.photo_alt | default: member.name }}" />

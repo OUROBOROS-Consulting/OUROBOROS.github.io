@@ -22,14 +22,14 @@ description: "Case studies, public service announcements, and essays — across 
 <div class="page-body c-container">
   <div class="c-grid c-grid--2">
 
-    <a href="{{ '/case-studies/' | relative_url }}" class="c-card c-stack" style="text-decoration:none;">
+    <a href="{{ '/case-studies/' | relative_url }}" class="c-card c-stack">
       <p class="technical text-t">Client Work</p>
       <h2 class="authority" style="margin:0; font-size: 1.5rem;">Case Studies</h2>
       <p class="text-s">Selected engagements across technology consulting, research, and advocacy — from federal COVID response to elder abuse intervention.</p>
       <span class="technical text-t" style="margin-top:auto; border-top: 1px solid var(--md-sys-color-outline); padding-top:10px;">{{ case_count }} engagements &rarr;</span>
     </a>
 
-    <a href="{{ '/resources/psas/' | relative_url }}" class="c-card c-stack" style="text-decoration:none;">
+    <a href="{{ '/resources/psas/' | relative_url }}" class="c-card c-stack">
       <p class="technical text-t">Public Interest</p>
       <h2 class="authority" style="margin:0; font-size: 1.5rem;">PSAs</h2>
       <p class="text-s">Public service announcements on technology, psychopathology, coercive control, and related topics — written for general audiences.</p>

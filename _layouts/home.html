@@ -16,10 +16,9 @@ layout: default
 
     <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
       {% for aud in site.data.audience %}
-      <div class="c-card c-stack" role="button" tabindex="0" aria-expanded="false"
-        aria-label="{{ aud.title }}">
+      <div class="c-card c-stack">
         <i class="{{ aud.icon }} technical text-t" aria-hidden="true"></i>
-        <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ aud.title | markdownify }}
+        <h3 class="authority c-card-title">{{ aud.title | markdownify }}
         </h3>
         <p class="text-s">{{ aud.description | markdownify }}</p>
       </div>
@@ -42,7 +41,17 @@ layout: default
       </header>
     </div>
 
-    <div class="carousel" aria-live="polite" aria-label="Testimonials">
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous testimonial">
+        <i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>
+      </button>
+      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
+      <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next testimonial">
+        <i class="ph ph-fill ph-arrow-fat-line-right" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="carousel carousel--testimonials" aria-live="polite" aria-label="Testimonials">
       <div class="carousel-track">
         {% for ref in site.data.testimonials %}
         <div class="carousel-slide" role="group"
@@ -84,7 +93,7 @@ layout: default
         {% if page.stats.years_experience_icon %}<i
           class="{{ page.stats.years_experience_icon }} technical text-t" aria-hidden="true"></i>{%
         endif %}
-        <span class="authority" style="font-size: 2rem;">{{ page.stats.years_experience }}</span>
+        <span class="authority c-card-value">{{ page.stats.years_experience }}</span>
         <span class="text-s">{{ page.stats.years_experience_note | default: "Years of Professional
           Experience" }}</span>
       </div>
@@ -96,7 +105,7 @@ layout: default
           class="{{ page.stats.publications_icon }} technical text-t" aria-hidden="true"></i>{%
         endif
         %}
-        <span class="authority" style="font-size: 2rem;">{{ page.stats.publications }}</span>
+        <span class="authority c-card-value">{{ page.stats.publications }}</span>
         <span class="text-s">Publications &amp; Papers</span>
       </div>
       {% endif %}
@@ -106,7 +115,7 @@ layout: default
         {% if page.stats.students_tutored_icon %}<i
           class="{{ page.stats.students_tutored_icon }} technical text-t" aria-hidden="true"></i>{%
         endif %}
-        <span class="authority" style="font-size: 2rem;">{{ page.stats.students_tutored }}</span>
+        <span class="authority c-card-value">{{ page.stats.students_tutored }}</span>
         <span class="text-s">Students Tutored</span>
       </div>
       {% endif %}
@@ -115,7 +124,7 @@ layout: default
       <div class="c-card c-stack">
         {% if page.stats.clients_icon %}<i class="{{ page.stats.clients_icon }} technical text-t"
           aria-hidden="true"></i>{% endif %}
-        <span class="authority" style="font-size: 2rem;">{{ page.stats.clients }}</span>
+        <span class="authority c-card-value">{{ page.stats.clients }}</span>
         <span class="text-s">{{ page.stats.clients_note | default: "Consulting Engagements"
           }}</span>
       </div>
@@ -125,7 +134,7 @@ layout: default
       <div class="c-card c-stack">
         {% if page.stats.agencies_icon %}<i class="{{ page.stats.agencies_icon }} technical text-t"
           aria-hidden="true"></i>{% endif %}
-        <span class="authority" style="font-size: 2rem;">{{ page.stats.agencies }}</span>
+        <span class="authority c-card-value">{{ page.stats.agencies }}</span>
         <span class="text-s">{{ page.stats.agencies_note | default: "Agencies &amp; Orgs" }}</span>
       </div>
       {% endif %}
@@ -135,7 +144,7 @@ layout: default
         {% if page.stats.phd_program_icon %}<i
           class="{{ page.stats.phd_program_icon }} technical text-t" aria-hidden="true"></i>{% endif
         %}
-        <span class="authority" style="font-size: 2rem;">{{ page.stats.phd_program }}</span>
+        <span class="authority c-card-value">{{ page.stats.phd_program }}</span>
         <span class="text-s">PhD Program</span>
       </div>
       {% endif %}
@@ -166,9 +175,9 @@ layout: default
         <div class="rc-icon"><i class="{{ service.icon }} technical text-t" aria-hidden="true"></i>
         </div>
         {% endif %}
-        <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ service.title }}</h3>
+        <h3 class="authority c-card-title">{{ service.title }}</h3>
         <p class="text-s">{{ service.description }}</p>
-        <a href="{{ service.url }}" class="technical text-t" style="margin-top: auto;">Learn More
+        <a href="{{ service.url }}" class="technical text-t c-card-action">Learn More
           &rarr;</a>
       </div>
       {% endfor %}
@@ -192,9 +201,9 @@ layout: default
       {% for case in sorted_cases limit: 4 %}
       <div class="c-card c-stack">
         <p class="technical text-t">{{ case.tag }}</p>
-        <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ case.title }}</h3>
+        <h3 class="authority c-card-title">{{ case.title }}</h3>
         <p class="text-s">{{ case.description }}</p>
-        <a href="{{ case.url }}" class="technical text-t" style="margin-top: auto;">Read More
+        <a href="{{ case.url }}" class="technical text-t c-card-action">Read More
           &rarr;</a>
       </div>
       {% endfor %}

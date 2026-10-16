@@ -1,0 +1,109 @@
+.carousel {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  transition: transform var(--md-sys-motion-duration-450) var(--site-motion-easing-standard);
+  will-change: transform;
+}
+
+.carousel-slide {
+  box-sizing: border-box;
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.carousel-slide > * {
+  height: 100%;
+}
+
+.carousel--testimonials .carousel-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.carousel--testimonials .carousel-slide > .c-card,
+.carousel--testimonials .carousel-slide > .card--framed {
+  box-sizing: border-box;
+  width: min(100%, var(--site-carousel-content-max-width));
+  height: auto;
+  aspect-ratio: var(--site-testimonial-card-ratio);
+}
+
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
+}
+
+.carousel-count {
+  color: var(--md-sys-color-on-surface-variant);
+  font-family: var(--font-technical, monospace);
+  font-size: var(--md-sys-typescale-label-small-size);
+  white-space: nowrap;
+}
+
+.carousel-btn,
+.carousel-dot {
+  display: inline-grid;
+  place-items: center;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface);
+  cursor: pointer;
+}
+
+.carousel-btn {
+  width: var(--site-carousel-control-size);
+  height: var(--site-carousel-control-size);
+  border-radius: var(--site-card-radius);
+}
+
+.carousel-btn:hover,
+.carousel-dot:hover {
+  border-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-primary);
+}
+
+.carousel-btn:focus-visible,
+.carousel-dot:focus-visible {
+  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline-offset: var(--site-focus-ring-offset);
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
+  margin-top: var(--md-sys-spacing-md);
+}
+
+.carousel-dot {
+  width: var(--site-carousel-dot-size);
+  height: var(--site-carousel-dot-size);
+  padding: 0;
+  border-radius: 50%;
+}
+
+.carousel-dot.active {
+  border-color: var(--md-sys-color-primary);
+  background: var(--md-sys-color-primary);
+}
+
+@media (max-width: 48rem) {
+  .carousel--testimonials .carousel-slide > .c-card,
+  .carousel--testimonials .carousel-slide > .card--framed {
+    aspect-ratio: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    transition-duration: var(--site-motion-reduced-duration);
+  }
+}

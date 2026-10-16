@@ -9,6 +9,7 @@
     </h1>
   </div>
 
+  <!-- Emblem -->
   <div class="c-hero__emblem" aria-hidden="true">
     <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="">
   </div>
@@ -18,21 +19,28 @@
     {% if page.eyebrow %}
     <p class="label-large text-primary">{{ page.eyebrow }}</p>
     {% endif %}
-    
-    {% if page.tagline %}
-    <div class="c-hero__tagline body-large">{{ page.tagline | markdownify }}</div>
+
+    {% if page.tagline_1 %}
+    <div class="c-hero__tagline body-large">
+      {{ page.tagline_1 | markdownify }}
+    </div>
+    <div class="c-hero__tagline body-large">
+      {{ page.tagline_2 | markdownify }}
+    </div>
     {% endif %}
 
     <div class="c-hero__actions">
       <a href="{{ page.cta_url | default: '#work' | relative_url }}" class="btn btn-primary">
         {{ page.cta_label | default: 'View My Work' }}
-        {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
+        {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else
+        %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
       </a>
       {% if page.cta2_label %}
-        <a href="{{ page.cta2_url | relative_url }}" class="btn btn-secondary">
-          {{ page.cta2_label }}
-          {% if page.cta2_icon %}<i class="{{ page.cta2_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
-        </a>
+      <a href="{{ page.cta2_url | relative_url }}" class="btn btn-secondary">
+        {{ page.cta2_label }}
+        {% if page.cta2_icon %}<i class="{{ page.cta2_icon }} ms-1" aria-hidden="true"></i>{% else
+        %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
+      </a>
       {% endif %}
     </div>
   </div>

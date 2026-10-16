@@ -32,7 +32,7 @@ permalink: /case-studies/
     </div>
     <div class="related-grid">
       {% for study in cat_studies %}
-      <a href="{{ study.url | relative_url }}" class="card--framed">
+      <a href="{{ study.url | relative_url }}" class="c-card c-card--framed">
         <p class="rc-tag">{{ study.category }}</p>
         <h3 class="rc-title">{{ study.title }}</h3>
         {% if study.lede %}<p class="card-desc">{{ study.lede }}</p>{% endif %}
@@ -51,7 +51,7 @@ permalink: /case-studies/
   {% endfor %}
 
   {% else %}
-  <div class="card">
+  <div class="c-card">
     <p class="card-desc">Case studies coming soon.</p>
   </div>
   {% endif %}

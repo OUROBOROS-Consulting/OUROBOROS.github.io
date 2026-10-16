@@ -5,11 +5,13 @@ title: null
 description: "Transforming complex systems through design, automation, and strategy."
 
 # Hero
-name_line1: Ouroboros
+name_line1: ouroborOS
 name_line2: Consulting
 eyebrow: Technology ⎈ Design ⎈ Strategy
-tagline: >
-  Where high-concept design meets award-winning technical architecture. In a landscape of predictable, AI-generated mediocrity, I build bespoke visual identities and robust systems that utilize intentional friction and sophisticated engineering to demand attention. I don't just design how your brand looks; I engineer it to stand the test of time.
+tagline_1: >
+  Where high-concept design meets award-winning technical architecture. In a sea of predictable, AI-generated sameness, differentiation is your competitive advantage.
+tagline_2: >
+  I build bespoke visual identities and robust systems that utilize intentional friction and sophisticated engineering to demand attention. I don't just design how your brand looks; I engineer it to stand the test of time.
 
 cta_label: Explore Services
 cta_icon: ph ph-fill ph-arrow-right

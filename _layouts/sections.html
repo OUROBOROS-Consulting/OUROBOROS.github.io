@@ -138,8 +138,8 @@ layout: default
           {% for pl in _playlists %}
           <div class="playlist-carousel-slide" role="group"
             aria-label="Playlist {{ forloop.index }} of {{ _playlists.size }}">
-            <div class="card--formula">
-              <div class="card--formula__interior playlist-card">
+            <div class="c-card c-card--formula">
+              <div class="c-card-formula__interior playlist-card">
 
                 <!-- data-src (not src) → lazy-loaded by playlist-carousel.js -->
                 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="{{ pl.height | default: 450 }}"
@@ -185,7 +185,7 @@ layout: default
       {% assign _items = site.data[section.data_source] %}
       <div class="testimonials-grid">
         {% for _item in _items %}
-        <div class="bib-card">
+        <div class="c-card c-card--citation">
           <span class="bib-title">{{ _item.title }}</span>
           {% if _item.author %}<p class="bib-byline">{{ _item.author }}</p>{% endif %}
           {% if _item.note %}<p class="bib-venue">{{ _item.note | markdownify }}</p>{% endif %}
@@ -227,8 +227,8 @@ layout: default
 
            body: "Single plain-text paragraph."  (simpler fallback)
       ─────────────────────────────────────────────────────────────────── -->
-      <div class="card--formula">
-        <div class="card--formula__interior">
+      <div class="c-card c-card--formula">
+        <div class="c-card-formula__interior">
           {% if section.body_paragraphs %}
           <!-- Each list item becomes its own Markdown-rendered block -->
           {% for paragraph in section.body_paragraphs %}

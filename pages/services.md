@@ -33,7 +33,7 @@ description: "Consulting in technology and AI, teaching, brand and web design, a
     <h2 class="authority">Focus Areas</h2>
     <div class="grid grid-3">
       {% for item in page.specializations %}
-      <div class="card stack">
+      <div class="c-card c-stack">
         <span class="technical text-t">◇</span>
         <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ item }}</h3>
       </div>
@@ -47,7 +47,7 @@ description: "Consulting in technology and AI, teaching, brand and web design, a
   <section id="policies" class="stack" style="margin-bottom: var(--md-sys-spacing-xl);">
     <p class="technical text-t">Operating Principles</p>
     <h2 class="authority">Policies</h2>
-    <div class="card stack">
+    <div class="c-card c-stack">
       {% for item in page.policies %}
       <div class="stack">
         <span class="technical text-t">◇</span>
@@ -65,7 +65,7 @@ description: "Consulting in technology and AI, teaching, brand and web design, a
     <h2 class="authority">What's Included</h2>
     <div class="grid grid-1">
       {% for item in page.included %}
-      <div class="card stack">
+      <div class="c-card c-stack">
         <div class="stack" style="flex-direction: row; align-items: flex-start; gap: 12px;">
             <span class="technical text-t">◇</span>
             <div>
@@ -88,7 +88,7 @@ description: "Consulting in technology and AI, teaching, brand and web design, a
       <p class="forensic text-s">{{ page.rate_principle | default: "Rates run on a subsidy model. Commercial engagements fund the sliding scale for survivors, seniors, and veterans. Ranges reflect the complexity and scope of the work, and we set the figure together before anything begins." }}</p>
       <div class="grid grid-1" style="margin-top: var(--md-sys-spacing-md);">
         {% for tier in page.pricing %}
-        <div class="card stack">
+        <div class="c-card c-stack">
           <div class="stack" style="flex-direction: row; justify-content: space-between; align-items: flex-end;">
               <span class="authority" style="font-size: 1.5rem;">{{ tier.name }}</span>
               <span class="technical text-t">{{ tier.rate }}</span>

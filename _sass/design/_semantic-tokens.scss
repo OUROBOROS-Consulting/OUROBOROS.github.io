@@ -1,0 +1,48 @@
+:root {
+  --md-sys-spacing-xs: 0.25rem;
+  --md-sys-spacing-sm: 0.5rem;
+  --md-sys-spacing-md: 1rem;
+  --md-sys-spacing-lg: 1.5rem;
+  --md-sys-spacing-xl: 2rem;
+  --md-sys-shape-full: 9999px;
+
+  --site-card-radius: var(--md-sys-shape-medium);
+  --site-border-width: 1px;
+  --site-border-width-emphasis: 0.125rem;
+  --site-card-padding-compact: var(--md-sys-spacing-md);
+  --site-card-padding-comfortable: var(--md-sys-spacing-lg);
+  --site-card-elevation: 0 0.125rem 0.5rem rgb(0 0 0 / 14%);
+  --site-surface-elevation-menu: var(--site-card-elevation);
+  --site-card-hover-distance: 0.1875rem;
+  --site-focus-ring-width: 0.1875rem;
+  --site-focus-ring-offset: 0.1875rem;
+  --site-card-icon-size: 2rem;
+  --site-card-grid-min-width: 17rem;
+  --site-resource-card-grid-min-width: 19rem;
+  --site-card-flip-height: 15rem;
+  --site-card-flip-perspective: 62.5rem;
+  --site-card-flip-duration: var(--md-sys-motion-duration-500);
+  --site-motion-interaction-duration: var(--md-sys-motion-duration-200);
+  --site-motion-reduced-duration: var(--md-sys-motion-duration-50);
+  --site-card-title-size: var(--md-sys-typescale-title-large-size);
+  --site-card-title-line-height: var(--md-sys-typescale-title-large-line-height);
+  --site-stat-value-size: var(--md-sys-typescale-display-small-size);
+  --site-service-card-icon-size: clamp(1.9375rem, 24.2%, 2.75rem);
+  --site-service-card-icon-inset: var(--md-sys-spacing-md);
+  --site-service-card-icon-opacity: 0.7;
+  --site-testimonial-card-ratio: 4 / 3;
+  --site-carousel-control-size: 2.5rem;
+  --site-carousel-dot-size: 0.75rem;
+  --site-carousel-content-max-width: 48rem;
+  --site-state-disabled-opacity: 0.38;
+  --site-button-press-scale: 0.97;
+  --site-safety-target-min-height: 2.75rem;
+  --site-skip-link-inset: 0.75rem;
+  --site-motion-easing-standard: cubic-bezier(
+    var(--md-sys-motion-easing-standard-x0),
+    var(--md-sys-motion-easing-standard-y0),
+    var(--md-sys-motion-easing-standard-x1),
+    var(--md-sys-motion-easing-standard-y1)
+  );
+  --md-elevation-level-2: var(--site-surface-elevation-menu);
+}

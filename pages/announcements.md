@@ -19,7 +19,7 @@ description: "News and updates from ouroborOS Consulting."
   {% if sorted_announcements.size > 0 %}
   <div class="related-grid">
     {% for item in sorted_announcements %}
-    <a href="{{ item.url | relative_url }}" class="related-card">
+    <a href="{{ item.url | relative_url }}" class="c-card c-card--related">
       {% if item.category %}<p class="rc-tag">{{ item.category }}</p>{% endif %}
       <h2 class="rc-title">{{ item.title }}</h2>
       {% if item.lede %}<p class="card-desc">{{ item.lede }}</p>{% endif %}

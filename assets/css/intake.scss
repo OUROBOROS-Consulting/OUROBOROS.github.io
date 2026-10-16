@@ -10,8 +10,7 @@
      padding on top of that — stacking the rail gap onto the left only. That
      was the whole "form has left margin" bug.
      Hand-inlined rather than `@include page-band` because this file only
-     imports the tokens partial, not base (same reason dark-island's values
-     are hand-copied below instead of pulled in via base — see that comment).
+     imports the tokens partial, not base.
      The custom properties themselves (--rail-total, --gutter, --measure-page)
      are plain runtime CSS vars main.css already sets at :root, so no Sass
      import is needed to reach them — only the mixin's math is reproduced.
@@ -36,12 +35,12 @@
     background-size: cover, 520px 520px;
     background-position: center, center;
     background-repeat: no-repeat, repeat;
-    border: 1px solid var(--ourob-color-line-3);
+    border: var(--site-border-width) solid var(--md-sys-color-outline);
     border-bottom: none;
     position: relative;
     overflow: hidden;
-    @include dark-island;
-    color: var(--ourob-color-ink-3);
+    background-color: var(--md-sys-color-inverse-surface);
+    color: var(--md-sys-color-on-inverse-surface);
   }
 
   .intake-masthead::after {
@@ -139,7 +138,7 @@
   .service-cards {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--ourob-space-4);
+    gap: var(--md-sys-spacing-md);
   }
 
   /* ⚠ .service-card IS a <label>, so the field-caption rule above it applies:
@@ -155,7 +154,7 @@
     display: block;
     text-transform: none;
     letter-spacing: normal;
-    font-weight: 400;
+    font-weight: var(--md-ref-typeface-weight-regular);
   }
 
   .service-card input[type="radio"] {
@@ -169,17 +168,19 @@
     /* One definition, two consumers: the icon's own box and the width the
        title has to give up for it. They were independent numbers and drifted
        apart — see the padding-right rule below. */
-    --card-icon-size: clamp(31px, 24.2%, 44px);
-    --card-icon-inset: 1.2rem;
+    --card-icon-size: var(--site-service-card-icon-size);
+    --card-icon-inset: var(--site-service-card-icon-inset);
 
-    border: 1px solid var(--ourob-color-line-3);
-    background: var(--ourob-color-surface-3);
-    padding: var(--ourob-space-card) var(--ourob-space-6);
-    transition: border-color 0.2s, background 0.2s;
+    border: var(--site-border-width) solid var(--md-sys-color-outline);
+    background: var(--md-sys-color-surface-variant);
+    padding: var(--site-card-padding-comfortable);
+    transition:
+      border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+      background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: var(--ourob-space-3);
+    gap: var(--md-sys-spacing-sm);
     // Flex items default to min-width: auto, which reasserts the same
     // content-based floor minmax(0, 1fr) above just removed on the grid
     // track. Belt and suspenders against the same overflow.
@@ -195,12 +196,12 @@
 
   .service-card-inner .card-icon {
     position: absolute;
-    top: 1.4rem;   /* matches .service-card-inner padding */
+    top: var(--site-card-padding-comfortable);
     right: var(--card-icon-inset);
     width: var(--card-icon-size);
     margin-bottom: 0;
-    font-size: 1.6rem;
-    color: var(--ourob-color-mark);
+    font-size: var(--site-card-icon-size);
+    color: var(--md-sys-color-primary);
   }
 
   /* Only the title sits beside the icon, so only the title gives up width. The
@@ -210,29 +211,34 @@
      counted the width alone, so on the two cards with a long title the last
      word ran under the glyph. */
   .service-card-inner:has(.card-icon) .service-card-title {
-    padding-right: calc(var(--card-icon-size) + var(--card-icon-inset) + 0.6rem);
+    padding-right: calc(var(--card-icon-size) + var(--card-icon-inset) + var(--md-sys-spacing-sm));
     min-height: var(--card-icon-size);
   }
 
   .service-card:hover .service-card-inner {
-    border-color: var(--ourob-color-mark-dim);
+    border-color: var(--md-sys-color-primary);
   }
 
   .service-card input:checked+.service-card-inner {
-    border-color: var(--ourob-color-mark);
-    background: rgba(201, 168, 76, 0.04);
+    border-color: var(--md-sys-color-primary);
+    background: var(--md-sys-color-primary-container);
+  }
+
+  .service-card input:checked+.service-card-inner .service-card-title,
+  .service-card input:checked+.service-card-inner .service-card-desc {
+    color: var(--md-sys-color-on-primary-container);
   }
 
   /* The radio itself is visually hidden — surface keyboard focus on the card */
   .service-card input:focus-visible+.service-card-inner {
-    outline: 2px solid var(--ourob-color-mark);
-    outline-offset: 2px;
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
   }
 
   .service-card-icon {
-    font-size: 1.3rem;
-    color: var(--ourob-color-mark);
-    opacity: 0.7;
+    font-size: var(--md-sys-typescale-title-large-size);
+    color: var(--md-sys-color-primary);
+    opacity: var(--site-service-card-icon-opacity);
   }
 
   .service-card input:checked+.service-card-inner .service-card-icon {
@@ -240,18 +246,18 @@
   }
 
   .service-card-title {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 0.95rem;
-    color: var(--ourob-color-ink-3);
-    line-height: 1.2;
+    font-family: var(--font-authority);
+    font-size: var(--md-sys-typescale-title-medium-size);
+    color: var(--md-sys-color-on-surface);
+    line-height: var(--md-sys-typescale-title-medium-line-height);
   }
 
   .service-card-desc {
-    font-size: 0.72rem;
-    color: var(--ourob-color-ink-1);
-    line-height: 1.6;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
+    font-size: var(--md-sys-typescale-body-small-size);
+    color: var(--md-sys-color-on-surface-variant);
+    line-height: var(--md-sys-typescale-body-small-line-height);
+    font-family: var(--font-utility);
+    font-weight: var(--md-ref-typeface-weight-regular);
   }
 
   /* Both of these restate minmax(0, …) rather than writing a bare 1fr. A bare

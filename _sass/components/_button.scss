@@ -15,7 +15,7 @@
   line-height: var(--md-sys-typescale-label-large-line-height);
   text-decoration: none;
   cursor: pointer;
-  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); /* M3 standard easing */
+  transition: all var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
   border: none;
   user-select: none;
 }
@@ -30,7 +30,7 @@
   }
 
   &:active {
-    transform: scale(0.97);
+    transform: scale(var(--site-button-press-scale));
   }
 }
 
@@ -57,7 +57,7 @@
 /* Outlined Variant */
 .c-btn--outline {
   background-color: transparent;
-  border: 1px solid var(--md-sys-color-outline);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
   color: var(--md-sys-color-primary);
 
   &:hover {
@@ -86,3 +86,26 @@
 .btn-tertiary  { @extend .c-btn--tertiary; }
 .btn-outline   { @extend .c-btn--outline; }
 .btn-text      { @extend .c-btn--text; }
+
+a[href],
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+summary,
+[role="button"] {
+  cursor: pointer;
+}
+
+:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-btn,
+  .c-btn:active {
+    transition-duration: var(--site-motion-reduced-duration);
+    transform: none;
+  }
+}

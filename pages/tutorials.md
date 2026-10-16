@@ -31,14 +31,14 @@ description: "Step-by-step privacy, security, and safety tutorials — from Appl
     <div class="grid grid-3">
       {% for tutorial in group.items %}
       {% if tutorial.link and tutorial.link != "#" %}
-      <a href="{{ tutorial.link }}" class="card btn-secondary stack" style="text-decoration:none;">
+      <a href="{{ tutorial.link }}" class="c-card btn-secondary c-stack">
         <p class="technical text-t">{{ tutorial.tag }}</p>
         <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ tutorial.title }}</h3>
         <p class="text-s">{{ tutorial.description }}</p>
         <span class="technical text-t" style="margin-top:auto; border-top: 1px solid var(--md-sys-color-outline); padding-top:10px;">Read Tutorial &rarr;</span>
       </a>
       {% else %}
-      <div class="card stack" style="opacity: 0.6;">
+      <div class="c-card c-card--disabled c-stack">
         <p class="technical text-t">{{ tutorial.tag }}</p>
         <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ tutorial.title }}</h3>
         <p class="text-s">{{ tutorial.description }}</p>
