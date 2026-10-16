@@ -4,6 +4,7 @@ description: "A visual guide to spotting machine-generated design flaws and tech
 layout: psa
 icon: "ph ph-fill ph-palette"
 category: "Design"
+hero_icon: ph-palette
 pdf: "/_psas/AI-Design.pdf"
 ---
 

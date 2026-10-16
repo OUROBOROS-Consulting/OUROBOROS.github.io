@@ -2,6 +2,7 @@
 layout: article
 title: LLM Disclosure
 category: About
+hero_icon: ph-robot
 hero_svg: /assets/images/logo.svg
 permalink: /llm-disclosure/
 back_url: /about/

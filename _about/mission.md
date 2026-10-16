@@ -2,6 +2,7 @@
 layout: sections
 title: Mission
 category: Technology · Research · Advocacy
+hero_icon: ph-compass
 lede: >
   Tools and arguments that push institutions from betrayal toward courage —
   answerable to the people they claim to serve.

@@ -4,6 +4,7 @@ title: Protecting Your Data with iCloud Advanced Data Protection
 description: How to enable end-to-end encryption for your iCloud data, set up a recovery method, audit trusted devices, and understand what is and isn't protected by default.
 permalink: /resources/tutorial-icloud-adp/
 category: Resources
+hero_icon: ph-cloud-check
 back_url: /resources/tutorials/
 lede: iCloud is not encrypted by default. Advanced Data Protection changes that — but it requires preparation before you enable it.
 cta_body: Need help securing your iCloud account? Let's talk through your situation.

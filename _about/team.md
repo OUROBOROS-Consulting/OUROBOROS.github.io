@@ -11,6 +11,7 @@ permalink: /team/
   category="About" 
   title="Our Team" 
   lede="The people behind the work. Built on rigorous research, principled advocacy, and a refusal to look away."
+  icon="ph ph-fill ph-users-three"
 %}
 
 <section class="team-section">

@@ -25,7 +25,7 @@
   grid-area: identity;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .c-hero__identity h1 {
@@ -33,6 +33,7 @@
   font-size: clamp(3.25rem, 7.5vw, 6.5rem);
   line-height: 0.92;
   letter-spacing: -0.035em;
+  text-align: right;
 }
 
 .c-hero__title-detail {

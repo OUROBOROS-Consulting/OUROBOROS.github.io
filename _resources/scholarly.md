@@ -2,6 +2,7 @@
 title: Scholarly Resources
 icon: fa-microscope
 description: Academic literature on coercive control, betrayal trauma, psychopathology, and institutional failure.
+hero_icon: ph-microscope
 layout: sections
 section_layout: stacked
 category: Resources

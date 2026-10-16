@@ -18,7 +18,7 @@ permalink: /resources/psas/
   category="Public Interest"
   title="PSAs"
   lede="Public service announcements on technology, psychopathology, coercive control, and related causes — written for general audiences."
-  icon="fa-solid fa-triangle-exclamation"
+  icon="ph ph-fill ph-warning"
   cta_text=cta_text
 %}
 

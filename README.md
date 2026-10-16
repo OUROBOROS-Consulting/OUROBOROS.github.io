@@ -39,18 +39,18 @@ The folder names never appear in a URL — every one of these files carries an e
 | URL | Source |
 |---|---|
 | `/404.html` | `legal/404.md` |
-| `/about/` | `_about/about.html` |
-| `/announcements/` | `pages/announcements.html` |
-| `/case-studies/` | `_about/case-studies.html` |
+| `/about/` | `_about/about.md` |
+| `/announcements/` | `pages/announcements.md` |
+| `/case-studies/` | `_about/case-studies.md` |
 | `/design-system/` | `pages/design-system.html` |
 | `/intake/` | `legal/intake.html` |
-| `/projects/` | `pages/projects.html` |
-| `/resources/` | `pages/resources.html` |
-| `/resources/psas/` | `pages/psas.html` |
-| `/resources/tutorials/` | `pages/tutorials.html` |
+| `/projects/` | `pages/projects.md` |
+| `/resources/` | `pages/resources.md` |
+| `/resources/psas/` | `pages/psas.md` |
+| `/resources/tutorials/` | `pages/tutorials.md` |
 | `/search/` | `legal/search.html` |
-| `/services/` | `pages/services.html` |
-| `/team/` | `_about/team.html` |
+| `/services/` | `pages/services.md` |
+| `/team/` | `_about/team.md` |
 
 </details>
 
@@ -62,7 +62,7 @@ The folder names never appear in a URL — every one of these files carries an e
 | `/accessibility/` | `legal/accessibility.md` |
 | `/disclaimer/` | `legal/disclaimer.md` |
 | `/framework/` | `_about/framework.md` |
-| `/news/` | `pages/news.html` |
+| `/news/` | `pages/news.md` |
 | `/privacy/` | `legal/privacy.md` |
 | `/resources/glossary/` | `_resources/glossary.md` |
 | `/resources/tutorial-ai-algorithmic-decisions/` | `_resources/tutorials/tutorial-ai-algorithmic-decisions.md` |
@@ -133,7 +133,9 @@ Declared in `_config.yml`. A collection sets the **URL**, never the layout.
 
 Layout is chosen by **content shape**, not by collection: `default` for hub/listing pages, `article` for linear prose, `sections` for block-assembled pages. `_about/` mixes all three. Do not assume one layout per collection.
 
-**Hub pages belong in `pages/`, not inside a collection.** `pages/resources.html`, `pages/psas.html`, and `pages/services.html` all loop over or link into collections; they are not items in one. Keeping them out avoids permalink overrides that fight the collection pattern. They sat at the repo root until 2026-08-08, when 17 loose files there made the root unreadable; the folder is organisational only, and the explicit permalinks mean it costs nothing.
+**Hub pages belong in `pages/`, not inside a collection.** `pages/resources.md`, `pages/psas.md`, and `pages/services.md` all loop over or link into collections; they are not items in one. Keeping them out avoids permalink overrides that fight the collection pattern. They sat at the repo root until 2026-08-08, when 17 loose files there made the root unreadable; the folder is organisational only, and the explicit permalinks mean it costs nothing.
+
+Authored content pages use Markdown (`.md`), including pages that combine prose with Liquid and raw HTML. Keep `.html` for reusable Jekyll layouts/includes and standalone interface or demo pages that are authored as complete HTML documents.
 
 ### Anomalies
 
@@ -254,7 +256,7 @@ bundle exec jekyll serve --drafts
 - **Progress bar**: `#progress-bar` (gold) tracks scroll depth on all `article.html` pages
 - **Social links**: `page.links:` front matter (github, linkedin, orcid, tutor, contact) → `.foundation-links` nav
 - **Narrow text gotcha**: `_essay.scss` sets `.post-body { max-width: 680px }` — override with `.page-body .post-body { max-width: none }` if needed
-- **PSA categories**: Front matter `section:` field (Technology, Psychopathology, etc.) groups PSAs in `pages/psas.html`
+- **PSA categories**: Front matter `section:` field (Technology, Psychopathology, etc.) groups PSAs in `pages/psas.md`
 
 </details>
 

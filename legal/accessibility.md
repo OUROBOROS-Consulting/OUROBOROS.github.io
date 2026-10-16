@@ -2,6 +2,7 @@
 layout: article
 title: Accessibility
 category: About
+hero_icon: ph-wheelchair
 hero_svg: /assets/images/logo.svg
 permalink: /accessibility/
 lede: >

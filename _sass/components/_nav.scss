@@ -21,15 +21,40 @@
   width: auto;
 }
 
+.c-nav__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--md-sys-spacing-md);
+  width: 100%;
+  min-width: 0;
+}
+
 /* Links and Dropdowns - The "Nav links" Organism logic */
 .c-nav__links {
   display: flex;
+  flex: 1 1 auto;
+  justify-content: center;
+  min-width: 0;
   gap: var(--md-sys-spacing-md);
   align-items: center;
 }
 
 .c-nav__dropdown {
   position: relative;
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+.c-nav__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  white-space: nowrap;
+}
+
+.c-nav__dropdown-row {
   display: flex;
   align-items: center;
 }
@@ -70,8 +95,16 @@
 /* Utility/Action Buttons (Search, Contact, News, Theme) */
 .c-nav__actions {
   display: flex;
+  flex: 0 0 auto;
   align-items: center;
   gap: var(--md-sys-spacing-md);
+}
+
+.c-nav__action-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  white-space: nowrap;
 }
 
 .c-nav__search-wrap {

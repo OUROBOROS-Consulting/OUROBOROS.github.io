@@ -2,6 +2,7 @@
 layout: article
 title: Privacy
 category: About
+hero_icon: ph-lock-key
 hero_svg: /assets/images/logo.svg
 permalink: /privacy/
 back_url: /about/

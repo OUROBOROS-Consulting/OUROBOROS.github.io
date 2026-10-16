@@ -4,6 +4,7 @@ title: Using Focus Modes to Compartmentalize Your Digital Life
 description: Configure Focus modes to enforce context boundaries, manage notification allowlists, disable Focus status sharing, and build a minimal-input recovery mode for high-stress periods.
 permalink: /resources/tutorial-focus-modes/
 category: Resources
+hero_icon: ph-bell-slash
 back_url: /resources/tutorials/
 lede: Focus modes enforce the context you're in — not by hiding information, but by controlling what reaches you.
 cta_body: Need help managing context and boundaries under pressure? Let's talk through your situation.

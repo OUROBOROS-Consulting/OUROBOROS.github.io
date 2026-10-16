@@ -5,14 +5,14 @@ description: "Guides, printable PSAs, tutorials, and reading for survivors, advo
 permalink: /resources/
 ---
 
-{% include page-hero.html 
-  back_url="/" 
-  back_label="Home" 
-  category="Resources" 
-  title="Reference Materials" 
-  lede="Curated references drawn from clinical research, legal scholarship, and survivor advocacy. Accurate information is its own form of protection." 
-  icon="ph ph-lock-simple"
-  cta_url="/intake" 
+{% include page-hero.html
+  back_url="/"
+  back_label="Home"
+  category="Resources"
+  title="Reference Materials"
+  lede="Curated references drawn from clinical research, legal scholarship, and survivor advocacy. Accurate information is its own form of protection."
+  icon="ph ph-fill ph-books"
+  cta_url="/intake"
   cta_label="Book a Consultation"
 %}
 

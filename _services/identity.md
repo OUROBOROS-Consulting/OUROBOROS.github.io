@@ -6,6 +6,7 @@ icon: ph ph-fill ph-pen-nib
 section_layout: stacked
 back_url: /
 category: Services
+hero_icon: ph-pen-nib
 lede: "Command your space. Establish authority through design, strategy, and mastery."
 about:
   heading: Differentiation in the Sea of Sameness

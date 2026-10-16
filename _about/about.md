@@ -11,7 +11,7 @@ permalink: /about/
   category="About" 
   title="Apostolos Stamenos" 
   lede="Technologist, designer, researcher, and advocate working at the intersection of data science, public health, and institutional accountability." 
-  headshot="/assets/images/AS.png" 
+  icon="ph ph-fill ph-user-circle"
   cta_url="/intake" 
   cta_label="Book a Consultation"
 %}

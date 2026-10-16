@@ -4,6 +4,7 @@ title: AI Surveillance and Reducing Your Exposure
 description: How AI-powered facial recognition, behavioral profiling, and data brokerage work — and practical steps to reduce your exposure.
 permalink: /resources/tutorial-ai-surveillance/
 category: Resources
+hero_icon: ph-eye
 back_url: /resources/tutorials/
 lede: Facial recognition doesn't need your cooperation. Most behavioral profiling happens before you open an app.
 cta_body: Concerned about surveillance or being tracked? Let's talk through your situation.

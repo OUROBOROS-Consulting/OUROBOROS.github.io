@@ -8,7 +8,7 @@ layout: default
   Used by pages that define `sections:` in their front matter (12 pages).
   Data flows top-to-bottom:
     1. Gold progress bar (fixed to top, animated by JS at the bottom)
-    2. Hero header   — page title, tagline, lede, optional headshot
+    2. Hero header   — page title, tagline, lede, category-matched Phosphor icon
     3. About blurb   — optional short intro paragraph (page.about)
     4. Pull quote    — optional styled blockquote (page.pull_quote)
     5. Sections loop — the main content, one <section> per front-matter item
@@ -26,7 +26,7 @@ layout: default
 
 <!-- ══════════════════════════════════════════════════════════════════════
      HERO
-     Full-width header with page metadata + optional hex-cropped headshot.
+     Shared title, metadata, and Phosphor icon hero.
      Markup lives in _includes/page-hero.html (shared with article / service /
      psa layouts) — see its header comment for the full front-matter key list.
      ══════════════════════════════════════════════════════════════════════ -->
@@ -34,7 +34,6 @@ layout: default
 {% include page-hero.html
   back_url=hero_back_url
   back_label="Back"
-  art="headshot,icon"
   tagline="true"
   tag_style="anchor"
   cta_mode="none"

@@ -5,6 +5,7 @@ layout: sections
 section_layout: stacked
 back_url: /case-studies/
 category: Startup Operations
+hero_icon: ph-chart-line-up
 lede: Entering the digital world for the first time as a practicing professional is harder than the industry admits. Cassandra did it without asking for help twice.
 date: 2026-02-01
 tags: [Technology, Startup, Female Entrepreneur]

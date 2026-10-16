@@ -1,17 +1,11 @@
 <!-- ══════════════════════════════════════════════════════════════════════
      PAGE HERO — shared .c-page-hero markup for article / sections / service /
-     psa layouts. Single source of truth; each layout calls this with params
-     describing its own variant. Front-matter keys (category, title, tagline,
-     lede, tags, headshot, icon, hero_svg, cta_url, price, pdf, date, ...)
-     are read straight off `page` — includes inherit it, no need to pass them.
+     psa layouts. Each page uses a large Phosphor icon, selected from its
+     front matter or category.
 
      Params:
        back_url         — Back-link target, raw path (this include applies relative_url)
        back_label       — Back-link text, e.g. "Back" / "All Services" / "All PSAs"
-       art              — art-column fallback chain:
-                           "headshot,hero_svg,icon" (article) |
-                           "headshot,icon" (sections) |
-                           "hero_svg,icon" (service) | "none" (psa)
        tagline          — "true" to render page.tagline (markdownified) above page.lede
        lede_optional    — "true" to omit the <p> entirely when page.lede is blank
        category_default — fallback text when page.category is unset (psa: "PSA")
@@ -21,26 +15,38 @@
                            optional page.date, its own grid column)
        scroll_hint      — "true" to render the .scroll-hint chevron
      ══════════════════════════════════════════════════════════════════════ -->
-{% assign has_art = false %}
-{% case include.art %}
-  {% when 'headshot,hero_svg,icon' %}
-    {% if page.headshot or page.hero_svg or page.icon %}{% assign has_art = true %}{% endif %}
-  {% when 'headshot,icon' %}
-    {% if page.headshot or page.icon %}{% assign has_art = true %}{% endif %}
-{% endcase %}
+{% assign hero_icon = page.hero_icon | default: include.hero_icon %}
+{% unless hero_icon %}
+  {% assign configured_icon = page.icon | default: include.icon %}
+  {% if configured_icon contains 'ph-' %}
+    {% assign hero_icon = configured_icon | split: ' ' | last %}
+  {% elsif configured_icon contains 'fa-book-open' %}
+    {% assign hero_icon = 'ph-book-open' %}
+  {% elsif configured_icon contains 'fa-microscope' %}
+    {% assign hero_icon = 'ph-microscope' %}
+  {% elsif configured_icon contains 'fa-circle-question' %}
+    {% assign hero_icon = 'ph-question' %}
+  {% elsif configured_icon contains 'fa-triangle-exclamation' %}
+    {% assign hero_icon = 'ph-warning' %}
+  {% else %}
+    {% assign hero_icon = 'ph-sparkle' %}
+  {% endif %}
+{% endunless %}
 <header class="c-page-hero{{ include.extra_class }}">
-  <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
+  <div class="c-page-hero__inner">
+    <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
 
-  <div class="c-page-hero__inner{% if include.art == 'headshot,hero_svg,icon' or include.art == 'headshot,icon' %}{% unless has_art %} c-page-hero__inner--single{% endunless %}{% endif %}">
-    <div class="c-page-hero__text">
+    <div class="c-page-hero__identity">
       {% if include.category or page.category %}
       <p class="label-large text-primary">{{ include.category | default: page.category | default: include.category_default }}</p>
       {% endif %}
 
       <h1 class="headline-large">{{ include.title | default: page.title }}</h1>
+    </div>
 
+    <div class="c-page-hero__content">
       {% if include.tagline == 'true' or page.tagline %}
-      <p class="headline-medium">{{ include.tagline | default: page.tagline | markdownify }}</p>
+      <div class="c-page-hero__tagline body-large">{{ include.tagline | default: page.tagline | markdownify }}</div>
       {% endif %}
 
       {% if include.lede or page.lede %}
@@ -86,19 +92,11 @@
         <p class="body-medium">{{ cta_text }}</p>
       </div>
       {% endif %}
-    </div><!-- /c-page-hero__text -->
+    </div><!-- /c-page-hero__content -->
 
-    {% if has_art %}
     <div class="c-page-hero__art">
-      {% if page.headshot %}
-      <img src="{{ page.headshot | relative_url }}" alt="{{ page.headshot_alt }}" class="c-page-hero__image--hex" />
-      {% elsif page.hero_svg %}
-      <img src="{{ page.hero_svg | relative_url }}" alt="" class="c-page-hero__image--svg" aria-hidden="true" />
-      {% elsif page.icon %}
-      <i class="{{ page.icon }} c-page-hero__icon" aria-hidden="true"></i>
-      {% endif %}
+      <i class="ph-fill {{ hero_icon }} c-page-hero__icon" aria-hidden="true"></i>
     </div>
-    {% endif %}
 
     {% if include.scroll_hint == 'true' %}
     <div class="c-page-hero__scroll-hint">

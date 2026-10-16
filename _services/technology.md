@@ -5,6 +5,7 @@ layout: sections
 section_layout: stacked
 back_url: /
 category: Services
+hero_icon: ph-cpu
 lede: "Stop gambling with your infrastructure. Build with intent."
 about:
   heading: Engineering for Accountability

@@ -2,6 +2,7 @@
 layout: article
 title: Intellectual Framework
 category: About
+hero_icon: ph-brain
 permalink: /framework/
 back_url: /about/
 lede: >

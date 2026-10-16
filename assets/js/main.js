@@ -2,7 +2,7 @@
 
 // ── Values card flip ──────────────────────────────────────────────────────────
 // Each card's front and back are separate absolutely-positioned faces inside .values-card__inner, so a single nested <button> can't sit "on" both without its own layout rules. .values-card itself already carries role="button",
-// tabindex="0" and aria-expanded (see _about/about.html) — this wires up
+// tabindex="0" and aria-expanded (see _about/about.md) — this wires up
 // click plus Enter/Space, and keeps aria-expanded in sync with the flip state.
 document.querySelectorAll('.values-card').forEach(card => {
   function toggleFlip() {

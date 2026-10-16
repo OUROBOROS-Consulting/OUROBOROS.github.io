@@ -5,6 +5,7 @@ layout: sections
 section_layout: stacked
 back_url: /case-studies/
 category: Survivor Security
+hero_icon: ph-shield-check
 lede: When institutions betrayed me and failed to keep me safe, I built my own.
 date: 2026-04-01
 tags: [Smart Home, Security, Privacy, Apple HomeKit]

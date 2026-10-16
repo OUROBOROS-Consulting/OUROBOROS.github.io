@@ -3,6 +3,7 @@ title: Survival Resources
 description: Resources to help you learn more about and survive antagonistic individuals, trauma, and the ensuing intitutional betrayal.
 layout: sections
 category: Resources
+hero_icon: ph-first-aid
 lede: Resources drawn from clinical research, legal scholarship, and survivor advocacy — because accurate information is its own form of protection.
 tags: [Antagonism, Trauma, Institutional Betrayal]
 who: null

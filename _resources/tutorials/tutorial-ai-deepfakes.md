@@ -4,6 +4,7 @@ title: Recognizing and Responding to Deepfakes and Voice Cloning
 description: How to identify AI-generated images, audio, and video — and what to do when synthetic media is used against you.
 permalink: /resources/tutorial-ai-deepfakes/
 category: Resources
+hero_icon: ph-waveform
 back_url: /resources/tutorials/
 lede: Synthetic media is now cheap, fast, and convincing. Knowing what to look for changes what you can prove.
 cta_body: Dealing with fabricated content being used against you? Let's talk through your situation.
