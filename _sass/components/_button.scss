@@ -1,0 +1,132 @@
+// ── Button Component (M3 Semantic Atom) ───────────────────────────────────────
+// Responsibility: Providing standardized, interactive touchpoints.
+
+/* Base Styles */
+.c-btn {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md-sys-spacing-xs);
+  min-height: var(--site-button-min-height);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  border-radius: var(--site-radius-full); /* M3 standard for pill buttons */
+  font-family: inherit;
+  font-weight: var(--md-ref-typeface-weight-medium);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+  border: none;
+  user-select: none;
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
+}
+
+.c-action-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
+}
+
+/* Primary Variant */
+.c-btn--primary {
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+
+  &:hover {
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
+  }
+
+  &:active {
+    transform: scale(var(--site-button-press-scale));
+  }
+}
+
+/* Secondary Variant */
+.c-btn--secondary {
+  background-color: var(--md-sys-color-secondary-container);
+  color: var(--md-sys-color-on-secondary-container);
+
+  &:hover {
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
+  }
+}
+
+/* Tertiary Variant */
+.c-btn--tertiary {
+  background-color: var(--md-sys-color-tertiary-container);
+  color: var(--md-sys-color-on-tertiary-container);
+
+  &:hover {
+    background-color: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
+  }
+}
+
+/* Outlined Variant */
+.c-btn--outline {
+  background-color: transparent;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  color: var(--md-sys-color-primary);
+
+  &:hover {
+    background-color: var(--md-sys-color-primary-container);
+  }
+}
+
+/* Text/Ghost Variant */
+.c-btn--text {
+  background-color: transparent;
+  color: var(--md-sys-color-primary);
+  padding: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
+
+  &:hover {
+    background-color: var(--md-sys-color-primary-container);
+  }
+}
+
+/* 
+  LEGACY BRIDGE
+  Allows existing .btn classes to work during refactor transition.
+*/
+.btn { @extend .c-btn; }
+.btn-primary   { @extend .c-btn--primary; }
+.btn-secondary { @extend .c-btn--secondary; }
+.btn-tertiary  { @extend .c-btn--tertiary; }
+.btn-outline   { @extend .c-btn--outline; }
+.btn-text      { @extend .c-btn--text; }
+
+a[href],
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+summary,
+[role="button"] {
+  cursor: pointer;
+}
+
+:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-btn,
+  .c-btn:active {
+    transition-duration: var(--site-motion-reduced-duration);
+    transform: none;
+  }
+}

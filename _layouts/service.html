@@ -6,7 +6,6 @@ layout: default
 {% include page-hero.html
   back_url="/services/"
   back_label="All Services"
-  art="hero_svg,icon"
   tagline="false"
   tag_style="pill"
   cta_mode="service"
@@ -57,8 +56,8 @@ layout: default
     <div class="page-section-label">
       <p>Specialties</p>
     </div>
-    <div class="card--formula">
-      <div class="card--formula__interior">
+    <div class="c-card c-card--formula">
+      <div class="c-card-formula__interior">
         <div class="page-section-content svc-included">
           {% for item in page.specializations %}
           <div class="svc-item">
@@ -90,8 +89,8 @@ layout: default
     <div class="page-section-label">
       <p>Policies</p>
     </div>
-    <div class="card--formula">
-      <div class="card--formula__interior">
+    <div class="c-card c-card--formula">
+      <div class="c-card-formula__interior">
         <div class="page-section-content svc-included">
           {% for item in page.policies %}
           <div class="svc-item">
@@ -123,8 +122,8 @@ layout: default
     <div class="page-section-label">
       <p>What's Included</p>
     </div>
-    <div class="card--formula">
-      <div class="card--formula__interior">
+    <div class="c-card c-card--formula">
+      <div class="c-card-formula__interior">
         <div class="page-section-content svc-included">
           {% for item in page.included %}
           <div class="svc-item">
@@ -161,8 +160,8 @@ layout: default
       <p class="svc-rate-principle">{{ page.rate_principle | default: "Rates run on a subsidy model. Commercial engagements fund the sliding scale for survivors, seniors, and veterans. Ranges reflect the complexity and scope of the work, and we set the figure together before anything begins." }}</p>
       {% for tier in page.pricing %}
       <div class="svc-pricing-tier">
-        <div class="card--formula">
-          <div class="card--formula__interior">
+        <div class="c-card c-card--formula">
+          <div class="c-card-formula__interior">
             <div class="svc-pricing-header">
               <span class="svc-pricing-name">{{ tier.name }}</span>
               <span class="svc-pricing-rate">{{ tier.rate }}</span>

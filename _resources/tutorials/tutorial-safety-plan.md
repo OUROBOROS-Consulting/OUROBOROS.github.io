@@ -4,6 +4,7 @@ title: Building a Personal Safety Plan
 description: Comprehensive framework for assessing threats, establishing support networks, and creating actionable emergency protocols.
 permalink: /resources/tutorial-safety-plan/
 category: Resources
+hero_icon: ph-shield-check
 back_url: /resources/tutorials/
 lede: A safety plan is a decision tree you build when calm, so you do not have to think clearly when you are not.
 cta_body: Working through a situation where your safety is at risk? Let's talk through what you need.

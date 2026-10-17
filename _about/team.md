@@ -1,0 +1,49 @@
+---
+layout: default
+title: Our Team
+description: "Who does the work at ouroborOS Consulting. One person, named, with the background and the limits stated plainly."
+permalink: /team/
+---
+
+{% include page-hero.html 
+  back_url="/about/" 
+  back_label="About" 
+  category="About" 
+  title="Our Team" 
+  lede="The people behind the work. Built on rigorous research, principled advocacy, and a refusal to look away."
+  icon="ph ph-fill ph-users-three"
+%}
+
+<section class="team-section">
+  <ul class="team-grid">
+    {% for member in site.data.team %}
+    <li class="c-card c-card--team">
+      {% if member.photo %}
+      <div class="hex-portrait team-portrait">
+        <img src="{{ member.photo | relative_url }}" alt="{{ member.photo_alt | default: member.name }}" />
+      </div>
+      {% endif %}
+      <p class="team-role">{{ member.role }}</p>
+      <h2 class="team-name">{{ member.name }}</h2>
+      {% if member.credentials %}
+      <ul class="team-creds">
+        {% for cred in member.credentials %}
+        <li class="team-cred">{{ cred }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+      <div class="team-bio">{{ member.bio | markdownify }}</div>
+      {% if member.links %}
+      <div class="team-links">
+        {% if member.links.linkedin %}<a href="{{ member.links.linkedin }}" class="team-link"
+          aria-label="{{ member.name }} on LinkedIn" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>{% endif %}
+        {% if member.links.orcid %}<a href="{{ member.links.orcid }}" class="team-link"
+          aria-label="{{ member.name }} ORCID" target="_blank" rel="noopener"><i class="fab fa-orcid"></i></a>{% endif %}
+        {% if member.links.contact %}<a href="{{ member.links.contact | relative_url }}" class="team-link"
+          aria-label="Contact {{ member.name }}"><i class="ph ph-fill ph-envelope"></i></a>{% endif %}
+      </div>
+      {% endif %}
+    </li>
+    {% endfor %}
+  </ul>
+</section>

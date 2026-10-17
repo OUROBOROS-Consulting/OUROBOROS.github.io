@@ -3,6 +3,7 @@ layout: article
 title: Frequently Asked Questions
 icon: fa-circle-question
 category: About
+hero_icon: ph-question
 permalink: /faq/
 back_url: /about/
 collapse_questions: true

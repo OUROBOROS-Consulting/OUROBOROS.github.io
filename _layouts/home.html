@@ -5,192 +5,218 @@ layout: default
 {% include hero.html %}
 
 <!-- ── Who This Is For ────────────────────────────────────────────────────── -->
-<section id="audience">
-  <div class="band-header band-header--stacked">
-    <p class="band-label">Who This Is For</p>
-    <h2 class="band-heading band-heading--stacked">If any of this sounds like you, you're in the right place.</h2>
-  </div>
-  <div class="values-grid">
-    {% for aud in site.data.audience %}
-    <div class="values-card" role="button" tabindex="0" aria-expanded="false" aria-label="{{ aud.title }}">
-      <div class="values-card__inner">
-        <div class="values-card__front">
-          <div class="values-card__surface">
-            <i class="values-card__icon {{ aud.icon }} values-card__icon--gold" aria-hidden="true"></i>
-            <span class="values-card__name">{{ aud.title | markdownify }}</span>
-          </div>
-        </div>
-        <div class="values-card__back">
-          <div class="values-card__surface">
-            <p class="values-card__desc">{{ aud.description | markdownify }}</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    {% endfor %}
-  </div>
-</section>
+<section id="audience" class="c-section c-section--marble">
+  <div class="c-container">
 
-<!-- ── Testimonials ───────────────────────────────────────────────────────── -->
-<section id="testimonials">
-  <div class="band-header">
-    <div>
-      <p class="band-label">What Clients Say</p>
-      <h2 class="band-heading">Testimonials</h2>
-      <p class="testimonials-context">These
-        testimonials are from federal, corporate, and private engagements, quoted with permission. Survivor and
-        advocacy work is confidential by design.
-      </p>
-    </div>
-    <div class="carousel-controls">
-      <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial"><i class="ph ph-fill ph-arrow-fat-line-left"></i></button>
-      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
-      <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial"><i class="ph ph-fill ph-arrow-fat-line-right"></i></button>
-    </div>
-  </div>
 
-  <div class="carousel" aria-live="polite" aria-label="Testimonials">
-    <div class="carousel-track">
-      {% for ref in site.data.testimonials %}
-      <div class="carousel-slide" role="group"
-        aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
-        <div class="card--formula">
-          <div class="card--formula__interior">
-            <p class="card-tag">{{ ref.title }}</p>
-            <blockquote>
-              <div class="card-desc">{{ ref.description | markdownify }}</div>
-              <cite>— {{ ref.reference }}</cite>
-            </blockquote>
+    <div class="c-stack">
+      <p class="technical text-t">Who This Is For</p>
+      <h2 class="authority">If any of this sounds like you, you're in the right place.</h2>
+    </div>
+
+    <div class="values-grid">
+      {% for aud in site.data.audience %}
+      <div class="values-card" role="button" tabindex="0" aria-expanded="false"
+        aria-label="{{ aud.title | escape }}">
+        <div class="values-card__inner">
+          <div class="values-card__front">
+            <div class="values-card__surface">
+              <i class="values-card__icon {{ aud.icon }} values-card__icon--gold" aria-hidden="true"></i>
+              <span class="values-card__name">{{ aud.title | escape }}</span>
+            </div>
+          </div>
+          <div class="values-card__back">
+            <div class="values-card__surface">
+              <div class="values-card__desc">{{ aud.description | markdownify }}</div>
+            </div>
           </div>
         </div>
       </div>
       {% endfor %}
     </div>
   </div>
+</section>
 
-  <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
-    {% for ref in site.data.testimonials %}
-    <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
-      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-      aria-label="Testimonial {{ forloop.index }}"></button>
-    {% endfor %}
+<!-- ── Testimonials ───────────────────────────────────────────────────────── -->
+<section id="testimonials" class="c-section c-section--marble">
+  <div class="c-container">
+
+    <div class="c-stack">
+      <header class="c-stack">
+        <p class="technical text-t">What Clients Say</p>
+        <h2 class="authority">Testimonials</h2>
+        <p class="forensic text-s">These testimonials are from federal, corporate, and private
+          engagements, quoted with permission. Survivor and advocacy work is confidential by design.
+        </p>
+      </header>
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous testimonial">
+        <i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>
+      </button>
+      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
+      <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next testimonial">
+        <i class="ph ph-fill ph-arrow-fat-line-right" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="carousel carousel--testimonials" aria-live="polite" aria-label="Testimonials">
+      <div class="carousel-track">
+        {% for ref in site.data.testimonials %}
+        <div class="carousel-slide" role="group"
+          aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
+          <div class="c-card c-stack">
+            <p class="technical text-t">{{ ref.title }}</p>
+            <blockquote class="forensic">
+              <p class="text-s" style="font-style: italic;">{{ ref.description | markdownify }}</p>
+              <cite class="technical text-t">— {{ ref.reference }}</cite>
+            </blockquote>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
+      {% for ref in site.data.testimonials %}
+      <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+        aria-label="Testimonial {{ forloop.index }}"></button>
+      {% endfor %}
+    </div>
   </div>
 </section>
 
 <!-- ── About / Stats ──────────────────────────────────────────────────────── -->
-<section id="about">
-  <div class="band-header band-header--stacked">
-    <p class="band-label">By the Numbers</p>
-    <h2 class="band-heading band-heading--stacked">{{ page.about_heading }}</h2>
-  </div>
-  <div class="stats-grid">
-
-    {% if page.stats.years_experience %}
-    <div class="stat">
-      {% if page.stats.years_experience_icon %}<i class="{{ page.stats.years_experience_icon }}" aria-hidden="true"></i>{% endif %}
-      <span class="stat-value">{{ page.stats.years_experience }}</span>
-      <span class="stat-label">{{ page.stats.years_experience_note | default: "Years of Professional Experience" }}</span>
+<section id="about" class="c-section c-section--marble">
+  <div class="c-container">
+    <div class="c-stack">
+      <p class="technical text-t">By the Numbers</p>
+      <h2 class="authority">{{ page.about_heading }}</h2>
     </div>
-    {% endif %}
 
-    {% if page.stats.publications %}
-    <div class="stat">
-      {% if page.stats.publications_icon %}<i class="{{ page.stats.publications_icon }}" aria-hidden="true"></i>{% endif %}
-      <span class="stat-value">{{ page.stats.publications }}</span>
-      <span class="stat-label">Publications &amp; Papers</span>
+    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+
+      {% if page.stats.years_experience %}
+      <div class="c-card c-stack">
+        {% if page.stats.years_experience_icon %}<i
+          class="{{ page.stats.years_experience_icon }} technical text-t" aria-hidden="true"></i>{%
+        endif %}
+        <span class="authority c-card-value">{{ page.stats.years_experience }}</span>
+        <span class="text-s">{{ page.stats.years_experience_note | default: "Years of Professional
+          Experience" }}</span>
+      </div>
+      {% endif %}
+
+      {% if page.stats.publications %}
+      <div class="c-card c-stack">
+        {% if page.stats.publications_icon %}<i
+          class="{{ page.stats.publications_icon }} technical text-t" aria-hidden="true"></i>{%
+        endif
+        %}
+        <span class="authority c-card-value">{{ page.stats.publications }}</span>
+        <span class="text-s">Publications &amp; Papers</span>
+      </div>
+      {% endif %}
+
+      {% if page.stats.students_tutored %}
+      <div class="c-card c-stack">
+        {% if page.stats.students_tutored_icon %}<i
+          class="{{ page.stats.students_tutored_icon }} technical text-t" aria-hidden="true"></i>{%
+        endif %}
+        <span class="authority c-card-value">{{ page.stats.students_tutored }}</span>
+        <span class="text-s">Students Tutored</span>
+      </div>
+      {% endif %}
+
+      {% if page.stats.clients %}
+      <div class="c-card c-stack">
+        {% if page.stats.clients_icon %}<i class="{{ page.stats.clients_icon }} technical text-t"
+          aria-hidden="true"></i>{% endif %}
+        <span class="authority c-card-value">{{ page.stats.clients }}</span>
+        <span class="text-s">{{ page.stats.clients_note | default: "Consulting Engagements"
+          }}</span>
+      </div>
+      {% endif %}
+
+      {% if page.stats.agencies %}
+      <div class="c-card c-stack">
+        {% if page.stats.agencies_icon %}<i class="{{ page.stats.agencies_icon }} technical text-t"
+          aria-hidden="true"></i>{% endif %}
+        <span class="authority c-card-value">{{ page.stats.agencies }}</span>
+        <span class="text-s">{{ page.stats.agencies_note | default: "Agencies &amp; Orgs" }}</span>
+      </div>
+      {% endif %}
+
+      {% if page.stats.phd_program %}
+      <div class="c-card c-stack">
+        {% if page.stats.phd_program_icon %}<i
+          class="{{ page.stats.phd_program_icon }} technical text-t" aria-hidden="true"></i>{% endif
+        %}
+        <span class="authority c-card-value">{{ page.stats.phd_program }}</span>
+        <span class="text-s">PhD Program</span>
+      </div>
+      {% endif %}
+
     </div>
-    {% endif %}
-
-    {% if page.stats.students_tutored %}
-    <div class="stat">
-      {% if page.stats.students_tutored_icon %}<i class="{{ page.stats.students_tutored_icon }}" aria-hidden="true"></i>{% endif %}
-      <span class="stat-value">{{ page.stats.students_tutored }}</span>
-      <span class="stat-label">Students Tutored</span>
-    </div>
-    {% endif %}
-
-    {% if page.stats.clients %}
-    <div class="stat">
-      {% if page.stats.clients_icon %}<i class="{{ page.stats.clients_icon }}" aria-hidden="true"></i>{% endif %}
-      <span class="stat-value">{{ page.stats.clients }}</span>
-      <span class="stat-label">{{ page.stats.clients_note | default: "Consulting Engagements" }}</span>
-    </div>
-    {% endif %}
-
-    {% if page.stats.agencies %}
-    <div class="stat">
-      {% if page.stats.agencies_icon %}<i class="{{ page.stats.agencies_icon }}" aria-hidden="true"></i>{% endif %}
-      <span class="stat-value">{{ page.stats.agencies }}</span>
-      <span class="stat-label">{{ page.stats.agencies_note | default: "Agencies &amp; Orgs" }}</span>
-    </div>
-    {% endif %}
-
-    {% if page.stats.phd_program %}
-    <div class="stat">
-      {% if page.stats.phd_program_icon %}<i class="{{ page.stats.phd_program_icon }}" aria-hidden="true"></i>{% endif %}
-      <span class="stat-value">{{ page.stats.phd_program }}</span>
-      <span class="stat-label">PhD Program</span>
-    </div>
-    {% endif %}
-
   </div>
 </section>
 
 <!-- ── Services / Expertise ───────────────────────────────────────────────── -->
-<section id="services">
-  <div class="band-header">
-    <div>
-      <p class="band-label">What I Offer</p>
-      <h2 class="band-heading">Expertise</h2>
+<section id="services" class="c-section c-section--marble">
+  <div class="c-container">
+    <div class="c-stack">
+      <header class="c-stack">
+        <p class="technical text-t">What I Offer</p>
+        <h2 class="authority">Expertise</h2>
+        <a href="{{ '/services/' | relative_url }}" class="text-s">View All →</a>
+      </header>
     </div>
-    <a href="{{ '/services/' | relative_url }}" class="band-link">View All →</a>
-  </div>
 
-  <div class="testimonials-grid">
-    <!-- {% assign sorted_services = site.services | sort: "order" %} -->
-    {% for service in site.services limit: 4 %}
-    <div class="card--formula">
-      <div class="card--formula__interior">
+    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+      {% assign sorted_services = site.services | sort: "order" %}
+      {% for service in sorted_services limit: 4 %}
+      <div class="c-card c-stack">
         {% if service.hero_svg %}
-        <div class="card-icon"><img src="{{ service.hero_svg | relative_url }}" alt="" aria-hidden="true"></div>
+        <div class="rc-icon"><img src="{{ service.hero_svg | relative_url }}" alt=""
+            aria-hidden="true"></div>
         {% elsif service.icon %}
-        <div class="card-icon"><i class="{{ service.icon }}"></i></div>
-        {% endif %}
-        <div class="card-body">
-          <h3 class="card-title">{{ service.title }}</h3>
-          <p class="card-desc">{{ service.description }}</p>
-          <a href="{{ service.url }}" class="card-link">{{ service.cta_label | default: 'Learn More' }} →</a>
+        <div class="rc-icon"><i class="{{ service.icon }} technical text-t" aria-hidden="true"></i>
         </div>
+        {% endif %}
+        <h3 class="authority c-card-title">{{ service.title }}</h3>
+        <p class="text-s">{{ service.description }}</p>
+        <a href="{{ service.url }}" class="technical text-t c-card-action">Learn More
+          &rarr;</a>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>
 
 <!-- ── Work ───────────────────────────────────────────────────────────────── -->
-<section id="work">
-  <div class="band-header">
-    <div>
-      <p class="band-label">Selected Work</p>
-      <h2 class="band-heading">Case Studies</h2>
+<section id="work" class="c-section c-section--marble">
+  <div class="c-container">
+    <div class="c-stack">
+      <header class="c-stack">
+        <p class="technical text-t">Selected Work</p>
+        <h2 class="authority">Case Studies</h2>
+        <a href="{{ '/case-studies/' | relative_url }}" class="text-s">View All →</a>
+      </header>
     </div>
-    <div class="band-aside">
-      <span class="band-count">{{ site.case_studies.size }} pieces</span>
-      <a href="{{ '/case-studies/' | relative_url }}" class="band-link">View All →</a>
-    </div>
-  </div>
 
-  <div class="testimonials-grid">
-    {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
-    {% for case in sorted_cases limit: 4 %}
-    <div class="card--formula">
-      <div class="card--formula__interior">
-        <p class="card-tag">{{ case.tag }}</p>
-        <h3 class="card-title">{{ case.title }}</h3>
-        <p class="card-desc">{{ case.description }}</p>
-        <a href="{{ case.url }}" class="card-link">Read More →</a>
+    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+      {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
+      {% for case in sorted_cases limit: 4 %}
+      <div class="c-card c-stack">
+        <p class="technical text-t">{{ case.tag }}</p>
+        <h3 class="authority c-card-title">{{ case.title }}</h3>
+        <p class="text-s">{{ case.description }}</p>
+        <a href="{{ case.url }}" class="technical text-t c-card-action">Read More
+          &rarr;</a>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
 </section>

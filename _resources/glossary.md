@@ -2,6 +2,7 @@
 layout: article
 title: Glossary
 icon: fa-book-open
+hero_icon: ph-book-open
 category: Resources
 description: Plain-language definitions of terms used across ouroborOS Consulting resources.
 permalink: /resources/glossary/

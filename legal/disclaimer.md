@@ -2,6 +2,7 @@
 layout: article
 title: Disclaimer
 category: About
+hero_icon: ph-scales
 hero_svg: /assets/images/logo.svg
 permalink: /disclaimer/
 back_url: /about/

@@ -4,6 +4,7 @@ title: Auditing Your Apple Device for Surveillance Risks
 description: Step-by-step audit of Find My, Family Sharing location access, Screen Time controls, Location Services, and trusted device settings — with practical steps to identify and remove unauthorized access.
 permalink: /resources/tutorial-apple-security-audit/
 category: Resources
+hero_icon: ph-device-mobile
 back_url: /resources/tutorials/
 lede: Your device knows where you are, who you've contacted, and what you've searched. Controlling that starts with knowing who else has access.
 cta_body: Concerned about surveillance on your device? Let's talk through your situation.

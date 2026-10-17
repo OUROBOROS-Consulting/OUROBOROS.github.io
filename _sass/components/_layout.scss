@@ -1,0 +1,59 @@
+// ── Layout & Container Components ────────────────────────────────────────────
+// Defines the spatial architecture of the site.
+
+/* --- Core Container --- */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Adjust based on desired reading width */
+  margin: 0 auto;
+  padding: 0 var(--md-sys-spacing-lg);
+}
+
+/* --- Sectioning --- */
+section {
+  padding: var(--md-sys-spacing-xl) 0;
+  border-bottom: 1px solid var(--md-sys-color-outline);
+}
+
+/* Avoid double borders on last section */
+section:last-of-type {
+  border-bottom: none;
+}
+
+/* --- Grid & Flex Utilities --- */
+.grid {
+  display: grid;
+  gap: var(--md-sys-spacing-lg);
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* --- Spacing Helpers --- */
+.stack > * + * {
+  margin-top: var(--md-sys-spacing-md);
+}
+
+.stack--lg > * + * {
+  margin-top: var(--md-sys-spacing-xl);
+}
+
+/* --- Decorative Elements (The Scar/Circuit) --- */
+.divider-horizontal {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, var(--md-sys-color-outline), transparent);
+  margin: var(--md-sys-spacing-xl) 0;
+}
+
+.rule-accent {
+  height: 4px;
+  width: 40px;
+  background: var(--md-sys-color-primary);
+  margin-bottom: var(--md-sys-spacing-sm);
+}

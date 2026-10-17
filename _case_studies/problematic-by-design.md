@@ -5,6 +5,7 @@ layout: sections
 section_layout: stacked
 back_url: /case-studies/
 category: Brand Strategy
+hero_icon: ph-palette
 lede: "In a digital landscape saturated with polished, AI-generated visuals, brands face a silent crisis: predictability is a metaphorical death sentence."
 date: 2026-10-08
 tags: [Design, Branding, Strategy]

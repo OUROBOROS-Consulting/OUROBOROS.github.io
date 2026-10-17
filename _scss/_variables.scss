@@ -1,0 +1,89 @@
+@import "../_sass/primitives";
+
+/* ── Semantic Tokens (Tier 2) ──────────────────────────────────────────── */
+/* These tokens are functional roles used in components and layouts.
+   They reference Primitives to allow for theme-switching logic. */
+
+:root {
+  /* --- Spacing Scale --- */
+  --md-sys-spacing-xs: var(--p-spacing-8);
+  --md-sys-spacing-sm: var(--p-spacing-12);
+  --md-sys-spacing-md: var(--p-spacing-16);
+  --md-sys-spacing-lg: var(--p-spacing-24);
+  --md-sys-spacing-xl: var(--p-spacing-32);
+  --md-sys-spacing-xxl: var(--p-spacing-64);
+
+  /* --- Shape Scale --- */
+  --md-sys-shape-none: var(--p-radius-0);
+  --md-sys-shape-xs: var(--p-radius-sm);
+  --md-sys-shape-sm: var(--p-radius-md);
+  --md-sys-shape-md: var(--p-radius-lg);
+  --md-sys-shape-lg: var(--p-radius-xl);
+  --md-sys-shape-full: var(--p-radius-full);
+
+  /* --- Typography Scale --- */
+  --md-sys-typescale-display-large: var(--p-font-display-large);
+  --md-sys-typescale-display-medium: var(--p-font-display-medium);
+  --md-sys-typescale-display-small: var(--p-font-display-small);
+  --md-sys-typescale-headline-large: var(--p-font-headline-large);
+  --md-sys-typescale-headline-medium: var(--p-font-headline-medium);
+  --md-sys-typescale-title-large: var(--p-font-title-large);
+  --md-sys-typescale-body-large: var(--p-font-body-large);
+  --md-sys-typescale-body-medium: var(--p-font-body-medium);
+  --md-sys-typescale-label-large: var(--p-font-label-large);
+  --md-sys-typescale-label-small: var(--p-font-label-small);
+
+  /* --- Elevation Scale --- */
+  --md-sys-elevation-level-0: none;
+  --md-sys-elevation-level-1: var(--p-shadow-level-1);
+  --md-sys-elevation-level-2: var(--p-shadow-level-2);
+  --md-sys-elevation-level-3: var(--p-shadow-level-3);
+
+  /* --- Color Tokens (Light Theme) --- */
+  --md-sys-color-primary: var(--p-color-primary-light);
+  --md-sys-color-on-primary: var(--p-color-white);
+  --md-sys-color-secondary: var(--p-color-secondary);
+  --md-sys-color-on-secondary: var(--p-color-white);
+
+  --md-sys-color-surface: var(--p-color-surface-light-1);
+  --md-sys-color-on-surface: var(--p-color-ink-dark);
+  --md-sys-color-outline: var(--p-color-text-gray);
+
+  --md-sys-color-error: var(--p-color-error-light);
+  --md-sys-color-on-error: var(--p-color-white);
+
+  /* --- Neutral Color Palette (Functional) --- */
+  --md-sys-color-neutral-100: var(--p-color-surface-light-5);
+  --md-sys-color-neutral-200: var(--p-color-surface-light-4);
+  --md-sys-color-neutral-300: var(--p-color-surface-light-3);
+  --md-sys-color-neutral-400: var(--p-color-surface-light-2);
+  --md-sys-color-neutral-500: var(--p-color-text-gray);
+  --md-sys-color-neutral-700: var(--p-color-ink-dark);
+  --md-sys-color-neutral-900: var(--p-color-charcoal);
+}
+
+/* --- Dark Theme Overrides --- */
+[data-theme="dark"] {
+  /* --- Color Tokens (Dark Theme) --- */
+  --md-sys-color-primary: var(--p-color-primary-dark);
+  --md-sys-color-on-primary: #381E72; /* We could add this to primitives, but for now it's specific dark mode ink on primary */
+
+  --md-sys-color-secondary: #CCC2DC; 
+  --md-sys-color-on-secondary: #332D41;
+
+  --md-sys-color-surface: var(--p-color-surface-dark-1);
+  --md-sys-color-on-surface: var(--p-color-surface-light-2);
+  --md-sys-color-outline: #938F99;
+
+  --md-sys-color-error: var(--p-color-error-dark);
+  --md-sys-color-on-error: var(--p-color-on-error-dark);
+
+  /* --- Neutral Color Palette (Functional - Dark) --- */
+  --md-sys-color-neutral-100: var(--p-color-surface-dark-5);
+  --md-sys-color-neutral-200: var(--p-color-surface-dark-4);
+  --md-sys-color-neutral-300: var(--p-color-surface-dark-3);
+  --md-sys-color-neutral-400: var(--p-color-surface-dark-2);
+  --md-sys-color-neutral-500: #938F99;
+  --md-sys-color-neutral-700: var(--p-color-surface-light-2);
+  --md-sys-color-neutral-900: var(--p-color-black);
+}

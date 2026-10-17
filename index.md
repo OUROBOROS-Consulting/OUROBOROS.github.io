@@ -2,42 +2,37 @@
 layout: home
 show_banner: true
 title: null
-description: "Twin Cities tech consulting for small businesses, solo professionals, advocates, researchers, and those navigating institutional betrayal. AI, automation, research, and advocacy."
+description: "Transforming complex systems through design, automation, and strategy."
 
 # Hero
 name_line1: ouroborOS
-name_line2: Consulting
-eyebrow: Technology ❖ AI Integration ❖ Research ❖ Systems Design
-tagline: >
-  Systems design and technology for people betrayed by the institutions meant to protect them.
+# name_line2: Consulting
+eyebrow: Technology ⎈ Design ⎈ Strategy
+tagline_1: >
+  Where high-concept design meets award-winning technical architecture. In a sea of predictable, AI-generated sameness, differentiation is your competitive advantage.
+tagline_2: >
+  I build bespoke visual identities and robust systems that utilize intentional friction and sophisticated engineering to demand attention. I don't just design how your brand looks; I engineer it to stand the test of time.
 
-  Institutional failures are design failures. Grounded in frameworks of **institutional betrayal** and coercive control, my work gives you the record, the case, and the tools to level the field.
-
-cta_label: Book a Free Consultation
-cta_url: /intake
-cta2_label: View My Work
-cta2_url: /case-studies/
+cta_label: Explore Services
+cta_icon: ph ph-fill ph-arrow-fat-line-right
+cta_url: /services/
+cta2_label: Work with me
+cta2_icon: ph ph-fill ph-envelope
+cta2_url: /intake/
 
 # About
-about_heading: Technology and Advocacy for Survivors of Institutional Betrayal
+about_heading: The Standard of Rigor
 
 stats:
-  # Counted from entering federal service at HHS in September 2020, through
-  # doctoral research, to founding this practice: one continuous career, no
-  # gap. Graduate school precedes that date and is not counted here, so the
-  # figure understates rather than overstates. Issues #90 and #16 exist because
-  # three different durations were once published at once; the rule now is that
-  # every published figure names the date it counts from, and this comment is
-  # that date. Do not raise it without moving the start date with it.
-  years_experience: "6+"
-  years_experience_icon: "ph ph-clock"
+  years_experience: "5+"
+  years_experience_icon: "ph ph-fill ph-clock"
   years_experience_note: "Years in Data Science &amp; Research"
   agencies: "5"
-  agencies_icon: "ph ph-buildings"
+  agencies_icon: "ph ph-fill ph-buildings"
   agencies_note: "HHS Divisions Served (Federal Career)"
   clients: "4+"
-  clients_icon: "ph ph-users"
+  clients_icon: "ph ph-fill ph-users"
   clients_note: "Consulting Engagements"
 
-cta_body: Reach out with a brief description of what you're working on and your availability. I'll follow up within 72 hours.
+cta_body: Reach out with a brief description of your technical requirements and availability. I'll follow up within 72 hours to discuss systems architecture and implementation.
 ---

@@ -1,0 +1,47 @@
+---
+layout: default
+title: Tutorials
+permalink: /resources/tutorials/
+description: "Step-by-step privacy, security, and safety tutorials — from Apple device hardening to documenting interactions and safety planning."
+---
+
+{% include page-hero.html
+  back_url="/resources/"
+  back_label="Resources"
+  category="Resources"
+  title="Mini-Tutorials"
+  lede="Practical guides on cybersecurity, data privacy, institutional navigation, and survival strategies — designed for real-world application."
+  icon="ph-compass-drafting"
+%}
+
+<div class="page-body c-container">
+  {% assign sections = site.data.tutorials | group_by: "section" %}
+  {% for group in sections %}
+  <section id="{{ group.name }}" class="stack" style="margin-bottom: var(--md-sys-spacing-xl);">
+    <div class="stack">
+      <p class="technical text-t">{{ group.name }}</p>
+      <h2 class="authority">{{ group.name | capitalize }}</h2>
+    </div>
+
+    <div class="grid grid-3">
+      {% for tutorial in group.items %}
+      {% if tutorial.link and tutorial.link != "#" %}
+      <a href="{{ tutorial.link }}" class="c-card btn-secondary c-stack">
+        <p class="technical text-t">{{ tutorial.tag }}</p>
+        <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ tutorial.title }}</h3>
+        <p class="text-s">{{ tutorial.description }}</p>
+        <span class="technical text-t" style="margin-top:auto; border-top: 1px solid var(--md-sys-color-outline); padding-top:10px;">Read Tutorial &rarr;</span>
+      </a>
+      {% else %}
+      <div class="c-card c-card--disabled c-stack">
+        <p class="technical text-t">{{ tutorial.tag }}</p>
+        <h3 class="authority" style="font-size: 1.2rem; margin:0;">{{ tutorial.title }}</h3>
+        <p class="text-s">{{ tutorial.description }}</p>
+        <span class="technical text-t" style="margin-top:auto;">Coming Soon</span>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </section>
+  {% endfor %}
+</div>

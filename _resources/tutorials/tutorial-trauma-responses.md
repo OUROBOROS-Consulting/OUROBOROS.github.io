@@ -4,6 +4,7 @@ title: Managing Trauma Responses in High-Stress Situations
 description: Techniques for recognizing and coping with trauma triggers, maintaining mental clarity, and accessing appropriate support resources.
 permalink: /resources/tutorial-trauma-responses/
 category: Resources
+hero_icon: ph-heart
 back_url: /resources/tutorials/
 lede: Trauma responses are the nervous system doing exactly what it evolved to do. Managing them means having a plan that does not require good judgment to execute.
 cta_body: Navigating a dispute or institutional process while managing trauma? Let's talk through your situation.

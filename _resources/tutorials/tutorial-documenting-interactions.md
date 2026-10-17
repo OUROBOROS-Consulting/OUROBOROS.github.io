@@ -4,6 +4,7 @@ title: Documenting Interactions with Authorities
 description: Best practices for recording conversations, preserving evidence, and maintaining records when dealing with government or institutional entities.
 permalink: /resources/tutorial-documenting-interactions/
 category: Resources
+hero_icon: ph-notebook
 back_url: /resources/tutorials/
 lede: What you record, and how you store it, determines whether patterns of conduct ever become visible.
 cta_body: Working through a dispute with an institution or authority figure? Let's talk through your situation.

@@ -1,0 +1,59 @@
+// ── Naming convention ────────────────────────────────────────────────
+//  <prefix>-<element>          page-hero, nav-card, post-body
+//  <prefix>-<element>--mod     page-hero--single, nav-card--active
+//
+//  Prefix = page/layout namespace (svc, nav, hero, post, values, etc.)
+//  No new __ BEM elements. Existing card--formula__interior is legacy.
+//  Modifiers: --double-dash only.
+//  All classes: lowercase kebab. No camelCase, no underscores.
+// ────────────────────────────────────────────────────────────────────
+
+// Foundation: design tokens, reset, mixins, body texture
+// @forward "design/md/palette";
+// @forward "design/md/colors";
+// @forward "design/md/typography";
+@forward "design/md/baseline";
+@forward "primitives";
+
+// Type levels: the five size/leading/weight/tracking/ink bindings
+// @forward "type-levels";
+
+// Component styles
+// @forward "buttons";
+// @forward "safety-exit";
+// @forward "cards";
+// Section band headers. Must precede "home" and "service": both carry #cta and
+// .psa-section overrides that tie on specificity and win only on source order.
+// @forward "band";
+// @forward "design/includes/nav-primary";
+@forward "components/safety-exit";
+
+@forward "components/banner";
+@forward "components/button";
+@forward "components/card";
+@forward "components/card-formula";
+@forward "components/carousel";
+@forward "components/cta";
+@forward "components/divider";
+@forward "components/footer";
+@forward "components/hero";
+@forward "components/page-hero";
+@forward "components/hours";
+@forward "components/layout";
+@forward "components/nav";
+@forward "components/spacing";
+
+// Layout & page-specific styles
+// @forward "home";
+// @forward "service";
+// @forward "essay";
+// @forward "feed";
+// Shared geometry for the two collapsible edge panels. Must precede both.
+// @forward "spine";
+// @forward "sidebar";
+// @forward "framework";
+// @forward "team";
+// @forward "sidebar-rail";
+
+// Token specimen page — /design-system/
+// @forward "design-system";

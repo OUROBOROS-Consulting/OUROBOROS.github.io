@@ -1,0 +1,50 @@
+---
+layout: base
+---
+
+<!-- ── Reading/Prose Layout ───────────────────────────────────────────────── -->
+
+<!-- The child layout is responsible for its own Hero (if any) to allow
+     customized parameters. This layout provides the container and TOC. -->
+
+<!-- Main Content Container -->
+<div class="page-toc-wrap {% if page.type == 'service' %}page-toc-wrap--svc{% endif %}">
+  <article class="page-body">
+    <div class="post-body">
+      {{ content }}
+    </div>
+
+    <!-- Modular Content Blocks (Service Data, PSA Embeds, etc.) -->
+    {% if page.type == 'service' %}
+      {% include service-components.html %}
+    {% elsif page.type == 'psa' %}
+      {% include psa-embed.html %}
+    {% endif %}
+  </article>
+
+  <!-- TOC is only for linear reading layouts -->
+  {% if page.show_toc != false %}
+    {% include toc.html %}
+  {% endif %}
+</div>
+
+<!-- Discovery/Related Content (for Announcements, etc.) -->
+{% if page.type == 'announcement' %}
+  {% include related-content.html %}
+{% endif %}
+
+<!-- Required Scripts for Reading Layouts -->
+{% if page.collapse_questions %}
+<script src="/assets/js/collapse.js" defer></script>
+{% endif %}
+<script src="/assets/js/toc.js" defer></script>
+<script>
+  const bar = document.getElementById('progress-bar');
+  if (bar) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      const total = document.documentElement.scrollHeight - window.innerHeight;
+      bar.style.width = (scrolled / total * 100) + '%';
+    });
+  }
+</script>

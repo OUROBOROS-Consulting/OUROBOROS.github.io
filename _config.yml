@@ -2,13 +2,13 @@ title: ouroborOS
 # Consumed by jekyll-feed and jekyll-sitemap. Not used by default.html, which
 # builds its own <meta name="description"> from page front matter.
 description: >-
-  Technology, design, and research consulting for small businesses, startups, and other resource-constrained entities.
+  Technology, design, and statistical research consulting for small businesses, startups, and other resource-constrained entities.
 author: Apostolos Stamenos
 contact_url: /intake
 tutoring_url: https://www.wyzant.com/refer/tutor/86925781/?utm_source=TREF&utm_campaign=iphone&utm_content=tutorapp&utm_medium=share
 instagram_url: https://www.instagram.com/astamenos5/
 github_url: https://github.com/OUROBOROS-Consulting
-linkedin_url: https://www.linkedin.com/in/apostolos-stamenos
+linkedin_url: https://www.linkedin.com/in/astamenos
 substack_url: https://ouroborosconsult.substack.com
 url: "https://ouroborosconsulting.org"
 
@@ -37,16 +37,6 @@ collections:
 # content. The pre-existing "script" entry already excluded it by prefix match,
 # which is a coincidence, not an intention.
 exclude: ["script", "scripts", "vendor", "bower.json", "Gemfile", "Gemfile.lock", "Rakefile", "readme.md", "README.md", "CLAUDE.md", "package.json", "package-lock.json", "node_modules", "docs",
-  # DSM.pdf is orphaned: nothing links to it, but jekyll-sitemap indexes static
-  # .pdf files regardless of front matter, so it was crawlable. Its PSA
-  # (_psas/DSM.md) is published: false, so the PDF stays off the live site too.
-  #
-  # AS_Resume.pdf and Stamenos_cv.pdf were listed here until 2026-08-18 and are
-  # now DELETED from the repo rather than excluded. The resume carried "5+ years
-  # of mission-critical federal experience", which is wrong: federal tenure
-  # starts September 2020 at HHS, and the career it was describing is longer than
-  # the federal part of it. See issue #16 — the replacement gets written from a
-  # source document, not patched here.
   "assets/files/PSA/PsychLiteracy/DSM.pdf"]
 markdown: kramdown
 

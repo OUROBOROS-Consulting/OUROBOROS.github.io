@@ -1,0 +1,60 @@
+// ── Formula Card Component (M3 Semantic Atom) ─────────────────────────────────
+// Responsibility: Specialized container for technical lists and detailed data sets.
+
+.c-card--formula,
+.c-card-formula,
+.card--formula {
+  display: flex;
+  flex-direction: column;
+  padding: var(--md-sys-spacing-lg);
+  border-radius: var(--site-card-radius);
+  background-color: var(--md-sys-color-surface-variant);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  overflow: hidden;
+}
+
+.c-card-formula__interior,
+.c-card--formula__interior,
+.card--formula__interior {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-card-formula__item,
+.c-card--formula__item,
+.card--formula__item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--md-sys-spacing-sm);
+}
+
+.c-card-formula__marker,
+.c-card--formula__marker,
+.card--formula__marker {
+  color: var(--md-sys-color-primary);
+  font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+.c-card-formula__content,
+.c-card--formula__content,
+.card--formula__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.c-card-formula__title,
+.c-card--formula__title,
+.card--formula__title {
+  margin: 0;
+  font-weight: var(--md-ref-typeface-weight-semibold);
+  color: var(--md-sys-color-on-surface);
+}
+
+.c-card-formula__desc,
+.c-card--formula__desc,
+.card--formula__desc {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-small-size);
+}

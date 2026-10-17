@@ -1,0 +1,77 @@
+// ── Problematic By Design: Identity Layer ───────────────────────────────
+// This file maps standard HTML elements and brand classes to our
+// semantic design tokens and typography families.
+
+:root {
+  --font-utility: 'Syne', sans-serif;
+  --font-authority: 'Manufacturing Consent', serif;
+  --md-ref-typeface-plain: var(--font-utility);
+  --md-ref-typeface-brand: var(--font-authority);
+}
+
+// --- Global Base ---
+body {
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-utility, sans-serif); // Default to Syne
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  background-color: var(--md-sys-color-surface);
+  min-height: 100vh;
+}
+
+// 1. Authority (Manufacturing Consent)
+h1, h2, .authority {
+  font-family: var(--font-authority, serif);
+  color: var(--md-sys-color-text-primary);
+  line-height: 0.95;
+  margin-bottom: var(--md-sys-spacing-md);
+}
+
+h1 { font-size: var(--md-sys-typescale-headline-xxl-size); }
+h2 { font-size: var(--md-sys-typescale-headline-large-size); }
+h3 { font-size: var(--md-sys-typescale-title-large-size); }
+
+// 2. Utility (Syne / Body & UI)
+p, li, div, span, .text-s {
+  font-family: var(--font-utility, sans-serif);
+  color: var(--md-sys-color-text-secondary);
+}
+
+// 3. Forensic (Spectral / Analytical/ Detail)
+.forensic, em, i, blockquote {
+  font-family: var(--font-forensic, serif);
+  color: var(--md-sys-color-text-tertiary);
+}
+
+// 4. Technical (Space Mono / Notation & Code)
+code, kbd, samp, .technical, .notation {
+  font-family: var(--font-technical, monospace);
+  font-size: var(--md-sys-typescale-body-small-size);
+  color: var(--md-sys-color-text-tertiary);
+}
+
+// --- Explicit Utility Classes ---
+
+.text-primary   { color: var(--md-sys-color-text-primary); }
+.text-secondary { color: var(--md-sys-color-text-secondary); }
+.text-tertiary  { color: var(--md-sys-color-text-tertiary); }
+
+.bg-void      { background-color: var(--md-sys-color-surface); }
+.bg-elevated  { background-color: var(--md-sys-color-surface-elevated, var(--md-sys-color-neutral-100)); }
+
+// --- Action/Button Base (Linking to MD Primary) ---
+.btn-sovereign {
+  display: inline-block;
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  font-family: var(--font-utility);
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

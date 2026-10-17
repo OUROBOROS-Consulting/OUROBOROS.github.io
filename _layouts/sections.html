@@ -8,7 +8,7 @@ layout: default
   Used by pages that define `sections:` in their front matter (12 pages).
   Data flows top-to-bottom:
     1. Gold progress bar (fixed to top, animated by JS at the bottom)
-    2. Hero header   — page title, tagline, lede, optional headshot
+    2. Hero header   — page title, tagline, lede, category-matched Phosphor icon
     3. About blurb   — optional short intro paragraph (page.about)
     4. Pull quote    — optional styled blockquote (page.pull_quote)
     5. Sections loop — the main content, one <section> per front-matter item
@@ -26,7 +26,7 @@ layout: default
 
 <!-- ══════════════════════════════════════════════════════════════════════
      HERO
-     Full-width header with page metadata + optional hex-cropped headshot.
+     Shared title, metadata, and Phosphor icon hero.
      Markup lives in _includes/page-hero.html (shared with article / service /
      psa layouts) — see its header comment for the full front-matter key list.
      ══════════════════════════════════════════════════════════════════════ -->
@@ -34,7 +34,6 @@ layout: default
 {% include page-hero.html
   back_url=hero_back_url
   back_label="Back"
-  art="headshot,icon"
   tagline="true"
   tag_style="anchor"
   cta_mode="none"
@@ -139,8 +138,8 @@ layout: default
           {% for pl in _playlists %}
           <div class="playlist-carousel-slide" role="group"
             aria-label="Playlist {{ forloop.index }} of {{ _playlists.size }}">
-            <div class="card--formula">
-              <div class="card--formula__interior playlist-card">
+            <div class="c-card c-card--formula">
+              <div class="c-card-formula__interior playlist-card">
 
                 <!-- data-src (not src) → lazy-loaded by playlist-carousel.js -->
                 <iframe allow="autoplay *; encrypted-media *;" frameborder="0" height="{{ pl.height | default: 450 }}"
@@ -186,7 +185,7 @@ layout: default
       {% assign _items = site.data[section.data_source] %}
       <div class="testimonials-grid">
         {% for _item in _items %}
-        <div class="bib-card">
+        <div class="c-card c-card--citation">
           <span class="bib-title">{{ _item.title }}</span>
           {% if _item.author %}<p class="bib-byline">{{ _item.author }}</p>{% endif %}
           {% if _item.note %}<p class="bib-venue">{{ _item.note | markdownify }}</p>{% endif %}
@@ -228,8 +227,8 @@ layout: default
 
            body: "Single plain-text paragraph."  (simpler fallback)
       ─────────────────────────────────────────────────────────────────── -->
-      <div class="card--formula">
-        <div class="card--formula__interior">
+      <div class="c-card c-card--formula">
+        <div class="c-card-formula__interior">
           {% if section.body_paragraphs %}
           <!-- Each list item becomes its own Markdown-rendered block -->
           {% for paragraph in section.body_paragraphs %}
@@ -311,26 +310,11 @@ layout: default
 <script src="/assets/js/toc.js" defer></script>
 
 <!-- ══════════════════════════════════════════════════════════════════════
-     PROGRESS BAR SCRIPT
-     Listens for scroll events and updates the width of #progress-bar
+     Progress bar behavior is shared from the default layout.
+     Scroll progress is handled by assets/js/progress-bar.js.
      (defined at the very top of this file) from 0% to 100%.
      scrollY        = how far the user has scrolled in pixels
      scrollHeight   = total page height in pixels
      innerHeight    = visible viewport height in pixels
      total          = maximum scrollable distance  (scrollHeight - innerHeight)
      ══════════════════════════════════════════════════════════════════════ -->
-    <script>
-      (function () {
-        const topBar = document.getElementById('progress-bar-top');
-        const bottomBar = document.getElementById('progress-bar-bottom');
-
-        window.addEventListener('scroll', () => {
-          const scrolled = window.scrollY;
-          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
-          const progress = totalHeight > 0 ? (scrolled / totalHeight) * 100 : 0;
-
-          topBar.style.width = progress + '%';
-          bottomBar.style.width = progress + '%';
-        });
-      })();
-    </script>

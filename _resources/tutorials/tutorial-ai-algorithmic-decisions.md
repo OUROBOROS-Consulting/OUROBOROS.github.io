@@ -4,6 +4,7 @@ title: Algorithmic Decision Systems — Detecting and Challenging Automated Deci
 description: How automated systems make consequential decisions about housing, credit, employment, and criminal justice — and the legal tools available to challenge them.
 permalink: /resources/tutorial-ai-algorithmic-decisions/
 category: Resources
+hero_icon: ph-scales
 back_url: /resources/tutorials/
 lede: A score you never saw determined an outcome that changed your life. You have more recourse than you think.
 cta_body: Dealing with a decision you believe was made by an algorithm? Let's talk through your options.

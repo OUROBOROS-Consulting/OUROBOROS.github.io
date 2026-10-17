@@ -1,0 +1,38 @@
+// ── CTA Component (M3 Semantic Organism) ─────────────────────────────────────
+// Responsibility: Layout and arrangement of CTA cards.
+
+.c-cta {
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-md);
+  
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr; // Mobile first
+    gap: var(--md-sys-spacing-lg);
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    > .c-btn {
+      width: 100%;
+    }
+
+    @media (min-width: 640px) {
+      flex-direction: row;
+
+      > .c-btn {
+        flex: 1 1 0;
+      }
+    }
+  }
+
+  .c-card__footer > .c-btn {
+    width: 100%;
+  }
+}

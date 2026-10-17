@@ -4,6 +4,7 @@ title: Setting Up Encrypted Communication on Apple Devices
 description: Verify iMessage E2EE status, configure iCloud Messages with Advanced Data Protection, set up Signal for cross-platform contacts, and audit which devices receive your messages.
 permalink: /resources/tutorial-encrypted-communication/
 category: Resources
+hero_icon: ph-lock-key
 back_url: /resources/tutorials/
 lede: Blue is encrypted. Green is not. That distinction matters more than most people realize.
 cta_body: Need help securing your communications? Let's talk through your situation.

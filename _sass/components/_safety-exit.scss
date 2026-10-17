@@ -1,0 +1,66 @@
+.skip-link {
+  position: absolute;
+  z-index: 1001;
+  top: var(--site-skip-link-inset);
+  left: var(--site-skip-link-inset);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
+  transform: translateY(calc(-100% - var(--md-sys-spacing-md)));
+  border: var(--site-border-width-emphasis) solid currentColor;
+  border-radius: var(--site-radius-sm);
+  background: var(--md-sys-color-surface);
+  color: var(--md-sys-color-on-surface);
+  font-weight: var(--md-ref-typeface-weight-bold);
+
+  &:focus {
+    transform: translateY(0);
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
+}
+
+.safety-exit {
+  position: fixed;
+  z-index: 1000;
+  right: calc(var(--md-sys-spacing-md) + env(safe-area-inset-right, 0px));
+  bottom: calc(var(--md-sys-spacing-md) + env(safe-area-inset-bottom, 0px));
+  min-height: var(--site-safety-target-min-height);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
+  border: var(--site-border-width-emphasis) solid var(--md-sys-color-error);
+  border-radius: var(--site-radius-sm);
+  background: var(--md-sys-color-error);
+  color: var(--md-sys-color-on-error);
+  font: inherit;
+  font-weight: var(--md-ref-typeface-weight-bold);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  cursor: pointer;
+
+  &:hover {
+    border-color: var(--md-sys-color-error-container);
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+  }
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
+
+  &:active {
+    background: var(--md-sys-color-error-container);
+    color: var(--md-sys-color-on-error-container);
+  }
+}
+
+@media (max-width: 30rem) {
+  .safety-exit {
+    right: calc(var(--md-sys-spacing-sm) + env(safe-area-inset-right, 0px));
+    bottom: calc(var(--md-sys-spacing-sm) + env(safe-area-inset-bottom, 0px));
+    padding: var(--md-sys-spacing-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skip-link {
+    transition: none;
+  }
+}
