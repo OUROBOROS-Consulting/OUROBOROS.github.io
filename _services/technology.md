@@ -11,12 +11,7 @@ about:
   heading: Engineering for Accountability
   body: >
     In an era of "vibe-coding" and probabilistic guesswork, the risk of accumulating massive technical and security debt has never been higher. At OUROBOROS, we bridge the gap between mere implementation and true architecture, building systems designed to be audited, maintained, and trusted.
----
-
-# Technology
-
-We build the technical bedrock that allows organizations to scale without accumulating unmanageable operational or security debt. We move beyond "making it work" toward creating high-integrity, deterministic systems.
-
+    We build the technical bedrock that allows organizations to scale without accumulating unmanageable operational or security debt. We move beyond "making it work" toward creating high-integrity, deterministic systems.
 sections:
   - id: engineering
     heading: "Systems & AI Engineering"
@@ -25,7 +20,7 @@ sections:
       - "**Deterministic Guardrails:** We design workflows where the outcome is predictable and verifiable, replacing the 'the prompt did it' excuse with rigorous logic."
       - "**Security-First Integration:** We treat every line of code as a potential attack surface. Our process includes manual audits to catch hardcoded credentials, deprecated libraries, and vulnerabilities categorized under the [Common Weakness Enumeration (CWE)](https://cwe.mitre.org/)."
       - "**Technical Accountability:** We build for reliability based on established [ISO 5055 / CISQ software quality standards](https://www.it-cisq.org/standards/code-quality-standards/), ensuring your code is modular, readable, and performant."
-  
+
   - id: automation
     heading: "Resilient Automation & Agentic AI"
     body_paragraphs:

@@ -1,9 +1,190 @@
 ---
 ---
 @use "index" as *;
-// @import "identity";
-// @import "components/nav";
-// @import "components/footer";
-// @import "components/layout";
-// @import "components/footer";
-// @import "components/layout";
+
+a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):where(:link, :visited) {
+  color: var(--md-sys-color-primary);
+}
+
+a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):where(:hover, :focus-visible) {
+  color: var(--md-sys-color-secondary);
+}
+
+body {
+  margin: 0;
+}
+
+.nav-shell {
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+  width: 100%;
+}
+
+.c-nav,
+.c-footer,
+.c-disclaimer-bar,
+.c-page-hero {
+  --md-sys-color-surface: var(--p-void-900);
+  --md-sys-color-on-surface: var(--p-color-white);
+  --md-sys-color-surface-variant: var(--p-forensic-700);
+  --md-sys-color-on-surface-variant: var(--p-color-white);
+  --md-sys-color-text-primary: var(--p-color-white);
+  --md-sys-color-text-secondary: var(--p-forensic-100);
+  --md-sys-color-text-tertiary: var(--p-ember-gold-bright-600);
+  --md-sys-color-outline: var(--p-forensic-500);
+  --md-sys-color-primary: var(--p-ember-gold-bright-600);
+  --md-sys-color-on-primary: var(--p-void-900);
+  --md-sys-color-primary-container: var(--p-ember-gold-bright-800);
+  --md-sys-color-on-primary-container: var(--p-void-900);
+  --md-sys-color-secondary: var(--p-ember-gold-bright-800);
+  --md-sys-color-on-secondary: var(--p-void-900);
+  --md-sys-color-secondary-container: var(--p-ember-gold-bright-800);
+  --md-sys-color-on-secondary-container: var(--p-void-900);
+  --md-sys-color-tertiary: var(--p-ember-amber-500);
+  --md-sys-color-on-tertiary: var(--p-void-900);
+  --md-sys-color-tertiary-container: var(--p-ember-amber-400);
+  --md-sys-color-on-tertiary-container: var(--p-void-900);
+  color: var(--p-color-white);
+  background-color: var(--p-void-900);
+}
+
+.c-nav {
+  box-sizing: border-box;
+  width: 100%;
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--md-sys-color-surface), transparent 40%),
+      color-mix(in srgb, var(--md-sys-color-surface), transparent 77%)
+    ),
+    url("../images/Marble.png");
+  background-size: cover, 380px 380px;
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+  border: var(--site-border-width) solid var(--md-sys-color-primary);
+}
+
+.c-nav a:link,
+.c-nav a:visited {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+}
+
+.c-nav a:hover {
+  color: var(--md-sys-color-secondary);
+}
+
+.c-footer a,
+.c-disclaimer-bar a {
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+}
+
+.c-footer a:hover,
+.c-disclaimer-bar a:hover {
+  color: var(--md-sys-color-secondary);
+}
+
+.c-page-hero {
+  background-image:
+    linear-gradient(var(--site-hero-home-overlay), var(--site-hero-home-overlay)),
+    url("../images/Abstract.jpg");
+  background-size: cover, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.c-page-hero {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  border: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+}
+
+.band-header,
+.c-footer,
+.c-disclaimer-bar {
+  background-color: var(--md-sys-color-surface);
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--md-sys-color-surface), transparent 20%),
+      color-mix(in srgb, var(--md-sys-color-surface), transparent 10%)
+    ),
+    url("../images/Marble.png");
+  background-size: cover, 720px 720px;
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+}
+
+.band-header,
+.c-footer {
+  border: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+}
+
+.band-header {
+  padding: var(--md-sys-spacing-lg);
+}
+
+.page-body--banded .page-section-label {
+  --md-sys-color-surface: var(--p-void-900);
+  --md-sys-color-on-surface: var(--p-color-white);
+  box-sizing: border-box;
+  width: 100vw;
+  max-width: none;
+  margin-left: calc(50% - 50vw);
+  padding: var(--md-sys-spacing-lg);
+  border: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-surface);
+  background-color: var(--md-sys-color-surface);
+  background-image:
+    linear-gradient(var(--site-marble-overlay-strong), var(--site-marble-overlay-strong)),
+    url("../images/Marble.png");
+  background-size: cover, 720px 720px;
+  background-position: center, center;
+  background-repeat: no-repeat, repeat;
+}
+
+.c-disclaimer-bar {
+  border: 0;
+  border-top: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+}
+
+#cta {
+  background-color: var(--md-sys-color-surface);
+  background-image:
+    linear-gradient(
+      color-mix(in srgb, var(--md-sys-color-surface), transparent 20%),
+      color-mix(in srgb, var(--md-sys-color-surface), transparent 10%)
+    ),
+    url("../images/Abstract.jpg");
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat;
+  border: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+}
+
+.progress-bar {
+  position: fixed;
+  left: 0;
+  z-index: 1002;
+  width: 0;
+  height: var(--site-border-width-emphasis);
+  background-color: var(--p-ember-gold-bright-600);
+  pointer-events: none;
+  transition: width var(--site-motion-reduced-duration) linear;
+}
+
+#progress-bar-top {
+  top: 0;
+}
+
+#progress-bar-bottom {
+  bottom: 0;
+  right: 0;
+  left: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progress-bar {
+    transition: none;
+  }
+}

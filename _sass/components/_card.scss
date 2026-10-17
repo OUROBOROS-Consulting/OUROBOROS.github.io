@@ -356,6 +356,10 @@
   cursor: pointer;
 }
 
+.values-card:hover .values-card__inner {
+  transform: rotateY(180deg);
+}
+
 .values-card__inner {
   position: relative;
   height: 100%;
@@ -371,7 +375,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   gap: var(--md-sys-spacing-md);
   min-height: var(--site-card-flip-height);
   height: 100%;
@@ -380,13 +384,13 @@
   border-radius: var(--site-card-radius);
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-on-surface);
-  backface-visibility: hidden;
 }
 
 .values-card__front,
 .values-card__back {
   position: absolute;
   inset: 0;
+  backface-visibility: hidden;
 }
 
 .values-card__back {
@@ -405,11 +409,13 @@
   color: var(--md-sys-color-on-surface);
   font-family: var(--font-authority);
   font-size: var(--site-card-title-size);
+  text-align: center;
 }
 
 .values-card__desc {
   margin: 0;
   color: var(--md-sys-color-on-surface-variant);
+  text-align: center;
 }
 
 @media (prefers-reduced-motion: reduce) {

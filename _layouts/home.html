@@ -5,7 +5,7 @@ layout: default
 {% include hero.html %}
 
 <!-- ── Who This Is For ────────────────────────────────────────────────────── -->
-<section id="audience" class="c-section">
+<section id="audience" class="c-section c-section--marble">
   <div class="c-container">
 
 
@@ -14,13 +14,23 @@ layout: default
       <h2 class="authority">If any of this sounds like you, you're in the right place.</h2>
     </div>
 
-    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+    <div class="values-grid">
       {% for aud in site.data.audience %}
-      <div class="c-card c-stack">
-        <i class="{{ aud.icon }} technical text-t" aria-hidden="true"></i>
-        <h3 class="authority c-card-title">{{ aud.title | markdownify }}
-        </h3>
-        <p class="text-s">{{ aud.description | markdownify }}</p>
+      <div class="values-card" role="button" tabindex="0" aria-expanded="false"
+        aria-label="{{ aud.title | escape }}">
+        <div class="values-card__inner">
+          <div class="values-card__front">
+            <div class="values-card__surface">
+              <i class="values-card__icon {{ aud.icon }} values-card__icon--gold" aria-hidden="true"></i>
+              <span class="values-card__name">{{ aud.title | escape }}</span>
+            </div>
+          </div>
+          <div class="values-card__back">
+            <div class="values-card__surface">
+              <div class="values-card__desc">{{ aud.description | markdownify }}</div>
+            </div>
+          </div>
+        </div>
       </div>
       {% endfor %}
     </div>
@@ -28,7 +38,7 @@ layout: default
 </section>
 
 <!-- ── Testimonials ───────────────────────────────────────────────────────── -->
-<section id="testimonials" class="c-section">
+<section id="testimonials" class="c-section c-section--marble">
   <div class="c-container">
 
     <div class="c-stack">
@@ -79,7 +89,7 @@ layout: default
 </section>
 
 <!-- ── About / Stats ──────────────────────────────────────────────────────── -->
-<section id="about" class="c-section">
+<section id="about" class="c-section c-section--marble">
   <div class="c-container">
     <div class="c-stack">
       <p class="technical text-t">By the Numbers</p>
@@ -154,7 +164,7 @@ layout: default
 </section>
 
 <!-- ── Services / Expertise ───────────────────────────────────────────────── -->
-<section id="services" class="c-section">
+<section id="services" class="c-section c-section--marble">
   <div class="c-container">
     <div class="c-stack">
       <header class="c-stack">
@@ -186,7 +196,7 @@ layout: default
 </section>
 
 <!-- ── Work ───────────────────────────────────────────────────────────────── -->
-<section id="work" class="c-section">
+<section id="work" class="c-section c-section--marble">
   <div class="c-container">
     <div class="c-stack">
       <header class="c-stack">

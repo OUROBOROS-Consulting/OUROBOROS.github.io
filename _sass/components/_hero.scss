@@ -60,6 +60,11 @@
   object-fit: contain;
 }
 
+.c-hero__emblem .c-hero__image {
+  border-radius: var(--site-card-radius);
+  object-fit: cover;
+}
+
 .c-hero__content {
   grid-area: content;
   display: flex;
@@ -82,13 +87,6 @@
   margin: 0;
 }
 
-.c-hero__actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: var(--md-sys-spacing-sm);
-}
-
 .c-hero__scroll-hint {
   position: absolute;
   bottom: var(--md-sys-spacing-lg);
@@ -104,7 +102,7 @@
   width: 2px;
   height: 48px;
   background-color: var(--md-sys-color-outline);
-  border-radius: var(--md-sys-shape-full);
+  border-radius: var(--site-radius-full);
   opacity: 0.5;
 }
 

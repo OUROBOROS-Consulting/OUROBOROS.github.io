@@ -72,7 +72,7 @@
         } catch (err) { /* localStorage may be blocked; OS preference still applies via CSS */ }
       })();
     </script>
-    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
     {% if page.layout == 'dashboard' %}
     <link rel="stylesheet" href="{{ '/assets/css/dashboard.css' | relative_url }}" />{% endif %}
     {% if page.extra_css %}
@@ -87,7 +87,7 @@
          so it executes ahead of the body's deferred scripts: toc.js calls
          OuroSpine.draw() as soon as it has built the outline, and that call is
          a no-op if this has not defined window.OuroSpine yet. -->
-    <script defer src="{{ '/assets/js/spine.js' | relative_url }}"></script>
+    <!-- <script defer src="{{ '/assets/js/spine.js' | relative_url }}"></script> -->
   </head>
 
   <body {% if page.show_banner %} class="has-banner" {% endif %}>
@@ -104,9 +104,9 @@
     {% unless page.hide_cta %}{% include cta.html %}{% endunless %}
     {% include footer.html %}
     <script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
-    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 
-    <script src="{{ '/assets/js/progress-bar.js' | relative_url }}"></script>
+    <script src="{{ '/assets/js/progress-bar.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
   </body>
 
 </html>

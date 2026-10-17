@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-:root {
+:root[data-theme="light"] {
   color-scheme: light;
   /* Surface tint */
   --md-sys-color-surface-tint: var(--md-sys-color-primary);
@@ -27,51 +27,51 @@
   /* Error container */
   --md-sys-color-error-container: var(--md-ref-palette-error90);
   /* On tertiary container */
-  --md-sys-color-on-tertiary-container: var(--md-ref-palette-tertiary10);
+  --md-sys-color-on-tertiary-container: var(--p-void-900);
   /* On tertiary */
-  --md-sys-color-on-tertiary: var(--md-ref-palette-tertiary100);
+  --md-sys-color-on-tertiary: var(--p-forensic-100);
   /* Tertiary container */
-  --md-sys-color-tertiary-container: var(--md-ref-palette-tertiary90);
+  --md-sys-color-tertiary-container: var(--p-ember-amber-300);
   /* Tertiary */
-  --md-sys-color-tertiary: var(--md-ref-palette-tertiary40);
+  --md-sys-color-tertiary: var(--p-ember-amber-900);
   /* Shadow */
   --md-sys-color-shadow: var(--md-ref-palette-neutral0);
   /* Error */
   --md-sys-color-error: var(--md-ref-palette-error40);
   /* Outline */
-  --md-sys-color-outline: var(--md-ref-palette-neutral-variant50);
+  --md-sys-color-outline: var(--p-forensic-500);
   /* On background */
-  --md-sys-color-on-background: var(--md-ref-palette-neutral10);
+  --md-sys-color-on-background: var(--p-void-900);
   /* Background */
-  --md-sys-color-background: var(--md-ref-palette-neutral99);
+  --md-sys-color-background: var(--p-forensic-100);
   /* Inverse on surface */
-  --md-sys-color-inverse-on-surface: var(--md-ref-palette-neutral95);
+  --md-sys-color-inverse-on-surface: var(--p-forensic-100);
   /* Inverse surface */
-  --md-sys-color-inverse-surface: var(--md-ref-palette-neutral20);
+  --md-sys-color-inverse-surface: var(--p-forensic-700);
   /* On surface variant */
-  --md-sys-color-on-surface-variant: var(--md-ref-palette-neutral-variant30);
+  --md-sys-color-on-surface-variant: var(--p-forensic-700);
   /* On surface */
-  --md-sys-color-on-surface: var(--md-ref-palette-neutral10);
+  --md-sys-color-on-surface: var(--p-void-900);
   /* Surface Variant */
-  --md-sys-color-surface-variant: var(--md-ref-palette-neutral-variant90);
+  --md-sys-color-surface-variant: var(--p-forensic-200);
   /* Surface */
-  --md-sys-color-surface: var(--md-ref-palette-neutral99);
+  --md-sys-color-surface: var(--p-forensic-100);
   /* On secondary container */
-  --md-sys-color-on-secondary-container: var(--md-ref-palette-secondary10);
+  --md-sys-color-on-secondary-container: var(--p-void-900);
   /* On secondary */
-  --md-sys-color-on-secondary: var(--md-ref-palette-secondary100);
+  --md-sys-color-on-secondary: var(--p-forensic-100);
   /* Secondary container */
-  --md-sys-color-secondary-container: var(--md-ref-palette-secondary90);
+  --md-sys-color-secondary-container: var(--p-ember-gold-deep-300);
   /* Secondary */
-  --md-sys-color-secondary: var(--md-ref-palette-secondary40);
+  --md-sys-color-secondary: var(--p-ember-gold-deep-800);
   /* Inverse primary */
-  --md-sys-color-inverse-primary: var(--md-ref-palette-primary80);
+  --md-sys-color-inverse-primary: var(--p-ember-gold-bright-600);
   /* On primary container */
-  --md-sys-color-on-primary-container: var(--md-ref-palette-primary10);
+  --md-sys-color-on-primary-container: var(--p-void-900);
   /* On primary */
-  --md-sys-color-on-primary: var(--md-ref-palette-primary100);
+  --md-sys-color-on-primary: var(--p-forensic-100);
   /* Primary container */
-  --md-sys-color-primary-container: var(--md-ref-palette-primary90);
+  --md-sys-color-primary-container: var(--p-ember-gold-deep-300);
   /* Primary */
-  --md-sys-color-primary: var(--md-ref-palette-primary40);
+  --md-sys-color-primary: var(--p-ember-gold-deep-900);
 }

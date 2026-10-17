@@ -38,33 +38,34 @@
 
     <!-- Actions: Search, Contact, News, Theme -->
     <div class="c-nav__actions">
-      <form id="nav-search-wrap" class="c-nav__search-wrap" action="/search/" method="get" role="search">
-        <input class="c-nav__search-input" type="search" name="q" aria-label="Search site" placeholder="Search…" autocomplete="off">
-        <button type="submit" class="c-nav__search-submit" aria-label="Search site">
+      <form id="nav-search-wrap" class="c-nav__search-wrap" action="{{ '/search/' | relative_url }}" method="get" role="search">
+        <input id="nav-search-input" class="c-nav__search-input" type="search" name="q" aria-label="Search site" placeholder="Search…" autocomplete="off" tabindex="-1">
+        <button type="submit" class="c-nav__search-submit" aria-label="Submit search" tabindex="-1">
+          <i class="ph-fill ph-arrow-right" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="c-nav__search-toggle" aria-label="Open search" aria-expanded="false"
+          aria-controls="nav-search-input">
           <i class="ph-fill ph-magnifying-glass" aria-hidden="true"></i>
         </button>
       </form>
 
-      <a href="{{ '/intake' | relative_url }}" class="c-nav__action-item" title="Contact">
+      <a href="{{ '/intake' | relative_url }}" class="c-nav__action-item" aria-label="Contact" title="Contact">
         <i class="ph ph-fill ph-envelope" aria-hidden="true"></i>
-        <span class="c-nav__action-text">Contact</span>
       </a>
 
-      <a href="{{ '/announcements' | relative_url }}" class="c-nav__action-item" title="Announcements">
+      <a href="{{ '/announcements' | relative_url }}" class="c-nav__action-item" aria-label="News and announcements" title="News and announcements">
         <i class="ph ph-fill ph-megaphone" aria-hidden="true"></i>
-        <span class="c-nav__action-text">News</span>
       </a>
 
       <button type="button" id="theme-toggle" class="c-nav__action-item c-nav__theme-btn" title="Toggle theme" aria-label="Toggle theme">
         <i class="ph ph-fill ph-moon" aria-hidden="true"></i>
-        <span class="c-nav__action-text">Dark</span>
       </button>
     </div>
 
     <!-- Mobile menu toggle -->
     <button class="c-nav__hamburger" aria-label="Open navigation menu" aria-expanded="false"
       aria-controls="primary-nav-links">
-      <i class="ph-fill ph-bars" aria-hidden="true"></i>
+      <i class="ph-fill ph-list" aria-hidden="true"></i>
     </button>
   </nav>
   <div id="progress-bar-top" class="progress-bar"></div>

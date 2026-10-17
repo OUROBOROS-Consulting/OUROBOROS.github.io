@@ -5,7 +5,7 @@ layout: psa
 icon: "ph ph-fill ph-palette"
 category: "Design"
 hero_icon: ph-palette
-pdf: "/_psas/AI-Design.pdf"
+pdf: "/assets/files/PSA/AI-Design.pdf"
 ---
 
 # AI Design Slop

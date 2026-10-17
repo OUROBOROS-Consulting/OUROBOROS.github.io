@@ -6,7 +6,7 @@
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
   transform: translateY(calc(-100% - var(--md-sys-spacing-md)));
   border: var(--site-border-width-emphasis) solid currentColor;
-  border-radius: var(--md-sys-shape-small);
+  border-radius: var(--site-radius-sm);
   background: var(--md-sys-color-surface);
   color: var(--md-sys-color-on-surface);
   font-weight: var(--md-ref-typeface-weight-bold);
@@ -21,12 +21,12 @@
 .safety-exit {
   position: fixed;
   z-index: 1000;
-  top: var(--md-sys-spacing-md);
-  right: var(--md-sys-spacing-md);
+  right: calc(var(--md-sys-spacing-md) + env(safe-area-inset-right, 0px));
+  bottom: calc(var(--md-sys-spacing-md) + env(safe-area-inset-bottom, 0px));
   min-height: var(--site-safety-target-min-height);
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
   border: var(--site-border-width-emphasis) solid var(--md-sys-color-error);
-  border-radius: var(--md-sys-shape-small);
+  border-radius: var(--site-radius-sm);
   background: var(--md-sys-color-error);
   color: var(--md-sys-color-on-error);
   font: inherit;
@@ -53,8 +53,8 @@
 
 @media (max-width: 30rem) {
   .safety-exit {
-    top: var(--md-sys-spacing-sm);
-    right: var(--md-sys-spacing-sm);
+    right: calc(var(--md-sys-spacing-sm) + env(safe-area-inset-right, 0px));
+    bottom: calc(var(--md-sys-spacing-sm) + env(safe-area-inset-bottom, 0px));
     padding: var(--md-sys-spacing-sm);
   }
 }

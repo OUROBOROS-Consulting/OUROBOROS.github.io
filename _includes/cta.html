@@ -16,22 +16,18 @@
 
             <div class="c-card__body">
                 <!-- Button group simplified for MVP -->
-                <div class="c-cta__actions">
-                    <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn btn-primary">
+                <div class="c-action-group c-cta__actions">
+                    <!-- <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="c-btn c-btn--primary">
                         {{ page.cta_label | default: 'Book a Free Consultation' }}
                         {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
-                    </a>
+                    </a> -->
                     {% if page.cta2_label %}
-                    <a href="{{ page.cta2_url | relative_url }}" class="btn btn-secondary">
+                    <a href="{{ page.cta2_url | relative_url }}" class="c-btn c-btn--secondary">
                         {{ page.cta2_label }}
                         {% if page.cta2_icon %}<i class="{{ page.cta2_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
                     </a>
                     {% endif %}
                 </div>
-            </div>
-
-            <div class="c-card__footer">
-                {% include hours.html variant="compact" %}
             </div>
         </div>
 
@@ -42,13 +38,13 @@
                 <i class="ph-fill ph-envelope rc-answer-icon" aria-hidden="true"></i>
                 <h3 class="rc-title authority">Not yet. Send digital-safety tips and AI tutorials to my inbox instead.</h3>
             </div>
-            
+
             <div class="c-card__body">
                 <p class="card-desc text-s">No pitch and no pressure. Just clear steps you can take on your own time to protect your accounts, your devices, and your peace of mind.</p>
             </div>
 
             <div class="c-card__footer">
-                <a href="{{ site.substack_url }}" class="btn btn-secondary" target="_blank" rel="noopener">
+                <a href="{{ site.substack_url }}" class="c-btn c-btn--secondary" target="_blank" rel="noopener">
                     Subscribe on Substack
                     <i class="ph-fill ph-envelope ms-1" aria-hidden="true"></i>
                 </a>

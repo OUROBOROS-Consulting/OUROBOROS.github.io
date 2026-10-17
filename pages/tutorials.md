@@ -5,21 +5,16 @@ permalink: /resources/tutorials/
 description: "Step-by-step privacy, security, and safety tutorials — from Apple device hardening to documenting interactions and safety planning."
 ---
 
-<header class="page-hero authority">
-  <a class="post-back" href="{{ '/resources/tutorials' | relative_url }}">Resources</a>
-  <div class="page-hero-inner container">
-    <div class="page-hero-text stack">
-      <p class="post-category technical text-t">Resources</p>
-      <h1 class="page-hero-title">Mini-Tutorials</h1>
-      <p class="page-hero-lede text-s">Practical guides on cybersecurity, data privacy, institutional navigation, and survival strategies — designed for real-world application.</p>
-    </div>
-    <div class="page-hero-emblem page-hero-emblem--graduation-cap" aria-hidden="true">
-      <i class="ph ph-fill ph-compass-drafting" aria-hidden="true"></i>
-    </div>
-  </div>
-</header>
+{% include page-hero.html
+  back_url="/resources/"
+  back_label="Resources"
+  category="Resources"
+  title="Mini-Tutorials"
+  lede="Practical guides on cybersecurity, data privacy, institutional navigation, and survival strategies — designed for real-world application."
+  icon="ph-compass-drafting"
+%}
 
-<div class="page-body container">
+<div class="page-body c-container">
   {% assign sections = site.data.tutorials | group_by: "section" %}
   {% for group in sections %}
   <section id="{{ group.name }}" class="stack" style="margin-bottom: var(--md-sys-spacing-xl);">

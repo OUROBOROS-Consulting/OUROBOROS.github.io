@@ -20,15 +20,17 @@
   flex-direction: column;
   gap: var(--md-sys-spacing-md);
   padding: var(--md-sys-spacing-md);
-  border-radius: var(--md-sys-shape-md);
+  border-radius: var(--site-radius-md);
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-on-surface-variant);
 }
 
 .c-hours__header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
+  gap: var(--md-sys-spacing-xs) var(--md-sys-spacing-md);
   border-bottom: 1px solid var(--md-sys-color-outline);
   padding-bottom: var(--md-sys-spacing-xs);
 }

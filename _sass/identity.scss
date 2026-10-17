@@ -1,5 +1,5 @@
 // ── Problematic By Design: Identity Layer ───────────────────────────────
-// This file maps standard HTML elements and brand classes to our 
+// This file maps standard HTML elements and brand classes to our
 // semantic design tokens and typography families.
 
 :root {
@@ -31,8 +31,8 @@ h1, h2, .authority {
   margin-bottom: var(--md-sys-spacing-md);
 }
 
-h1 { font-size: var(--md-sys-typescale-headline-large-size); }
-h2 { font-size: var(--md-sys-typescale-headline-medium-size); }
+h1 { font-size: var(--md-sys-typescale-headline-xxl-size); }
+h2 { font-size: var(--md-sys-typescale-headline-large-size); }
 h3 { font-size: var(--md-sys-typescale-title-large-size); }
 
 // 2. Utility (Syne / Body & UI)

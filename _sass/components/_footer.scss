@@ -2,35 +2,109 @@
 // Responsibility: Layout and arrangement of social links, branding, and credits.
 
 .c-footer {
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
+  background-color: var(--md-sys-color-surface);
+  border-top: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+}
+
+.c-footer__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  gap: var(--md-sys-spacing-xl);
+  width: min(100%, var(--site-footer-content-max-width));
+  margin-inline: auto;
+}
+
+.c-footer__brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--md-sys-spacing-lg);
-  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-md);
-  background-color: var(--md-sys-color-surface);
-  border-top: 1px solid var(--md-sys-color-outline);
+  align-items: flex-start;
+  gap: var(--md-sys-spacing-sm);
 }
 
 .c-footer__links {
   display: flex;
-  gap: var(--md-sys-spacing-md);
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: var(--md-sys-spacing-xs);
   align-items: center;
 }
 
+.c-footer__logo {
+  justify-self: center;
+}
+
+.c-footer__availability {
+  justify-self: end;
+  width: min(100%, 24rem);
+}
+
 .c-footer__social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: var(--md-sys-shape-full);
+  display: grid;
+  place-items: center;
+  width: var(--site-footer-social-control-size);
+  height: var(--site-footer-social-control-size);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-radius-full);
   color: var(--md-sys-color-on-surface-variant);
-  transition: background-color 0.2s, color 0.2s;
+  font-size: var(--site-footer-social-icon-size);
+  text-decoration: none;
+  transition:
+    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
   &:hover {
+    transform: translateY(calc(-1 * var(--site-card-hover-distance)));
+    border-color: var(--md-sys-color-primary);
     background-color: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-primary);
   }
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
+}
+
+.c-footer__availability .c-hours {
+  padding: var(--md-sys-spacing-md) var(--md-sys-spacing-lg);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-radius-md);
+  background-color: color-mix(in srgb, var(--md-sys-color-surface) 82%, var(--md-sys-color-surface-variant));
+  color: var(--md-sys-color-on-surface);
+}
+
+.c-footer__availability .c-hours__header {
+  border-color: color-mix(in srgb, var(--md-sys-color-outline) 60%, transparent);
+}
+
+.c-footer__availability .c-hours__label {
+  margin: 0;
+  color: var(--md-sys-color-primary);
+}
+
+.c-footer__availability .c-hours__timezone,
+.c-footer__availability .c-hours__day,
+.c-footer__availability .c-hours__time,
+.c-footer__availability .c-hours__response,
+.c-footer__availability .c-hours__after {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-footer__availability .c-hours__footer {
+  border-color: color-mix(in srgb, var(--md-sys-color-outline) 60%, transparent);
+}
+
+.c-footer__availability .c-hours__response,
+.c-footer__availability .c-hours__after {
+  margin: 0;
+}
+
+.c-footer__social-link i {
+  display: block;
 }
 
 .c-footer__logo {
@@ -40,21 +114,32 @@
 }
 
 .c-footer__logo-mark {
-  height: 40px;
+  height: var(--site-footer-logo-size);
   width: auto;
 }
 
 .c-footer__credits {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: var(--md-sys-spacing-xs);
-  text-align: center;
+  text-align: left;
+  font-size: var(--md-sys-typescale-body-small-size);
 }
 
 .c-footer__copy {
   margin: 0;
   color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-footer__copy a {
+  color: var(--md-sys-color-on-surface);
+  text-decoration-color: var(--md-sys-color-primary);
+  text-underline-offset: var(--md-sys-spacing-xs);
+}
+
+.c-footer__copy a:hover {
+  color: var(--md-sys-color-primary);
 }
 
 // Disclaimer Bar (The "Footer Sub-organism")
@@ -70,6 +155,11 @@
   font-size: var(--md-sys-typescale-label-small-size);
 }
 
+.c-disclaimer-bar__divider {
+  width: min(var(--site-footer-divider-width), 30%);
+  height: auto;
+}
+
 .c-disclaimer-bar__text {
   margin: 0;
   max-width: 60ch;
@@ -77,6 +167,8 @@
 
 .c-disclaimer-bar__links {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--md-sys-spacing-sm);
 }
 
@@ -86,5 +178,46 @@
 
   &:hover {
     text-decoration: underline;
+  }
+}
+
+@media (max-width: 62rem) {
+  .c-footer__inner {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+
+  .c-footer__logo {
+    grid-column: 1 / -1;
+    grid-row: 1;
+  }
+
+  .c-footer__brand,
+  .c-footer__availability {
+    grid-row: 2;
+  }
+}
+
+@media (max-width: 42rem) {
+  .c-footer {
+    padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-md);
+  }
+
+  .c-footer__inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-lg);
+  }
+
+  .c-footer__brand {
+    gap: var(--md-sys-spacing-sm);
+    grid-row: 2;
+  }
+
+  .c-footer__availability {
+    grid-row: 3;
+  }
+
+  .c-disclaimer-bar {
+    flex-direction: column;
+    text-align: center;
   }
 }

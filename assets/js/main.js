@@ -139,62 +139,66 @@ function initCarousel(sectionId, autoAdvance) {
 initCarousel('testimonials', true);  // auto-advances every 7s
 
 // ── Mobile hamburger — opens the page-links list beneath the bar ──────────────
-// The contact/announcements rail is a permanent fixed strip, not a drawer,
-// so it isn't part of this toggle.
+// The utility actions join the menu when the page links are expanded.
 (function initMobileNav() {
-  const hamburger = document.querySelector('.nav-hamburger');
+  const hamburger = document.querySelector('.c-nav__hamburger');
   const navLinks  = document.getElementById('primary-nav-links');
   if (!hamburger || !navLinks) return;
 
   hamburger.addEventListener('click', (e) => {
     e.stopPropagation();
-    const isOpen = navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('is-open');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    hamburger.querySelector('i').className = isOpen ? 'fas fa-xmark' : 'fas fa-bars';
+    hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    const icon = hamburger.querySelector('i');
+    if (icon) icon.className = isOpen ? 'ph-fill ph-x' : 'ph-fill ph-list';
   });
 
   document.addEventListener('click', (e) => {
     if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('open');
+      navLinks.classList.remove('is-open');
       hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.querySelector('i').className = 'fas fa-bars';
+      hamburger.setAttribute('aria-label', 'Open navigation menu');
+      const icon = hamburger.querySelector('i');
+      if (icon) icon.className = 'ph-fill ph-list';
     }
   });
 })();
 
-// ── Nav search — makes the icon openable without a hover ─────────────────────
-// The input is width:0 until :hover or :focus-within fires. A touch screen has
-// neither before the first tap, and a zero-width input has no tap target, so
-// the submit button was the only reachable control: tapping it submitted an
-// empty query. This intercepts that submit, opens the input and focuses it.
-// Desktop hover still works on its own; .is-open just keeps it open once the
-// pointer leaves.
+// ── Nav search — reveal the field only after explicit activation ──────────────
 (function initNavSearch() {
   const wrap  = document.getElementById('nav-search-wrap');
   if (!wrap) return;
-  const input = wrap.querySelector('.nav-search__input');
+  const input = wrap.querySelector('.c-nav__search-input');
+  const toggle = wrap.querySelector('.c-nav__search-toggle');
+  const submit = wrap.querySelector('.c-nav__search-submit');
+  if (!input || !toggle || !submit) return;
 
-  function open() {
-    wrap.classList.add('is-open');
-    input.focus();
+  function setOpen(isOpen) {
+    wrap.classList.toggle('is-open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Close search' : 'Open search');
+    input.tabIndex = isOpen ? 0 : -1;
+    submit.tabIndex = isOpen ? 0 : -1;
+    const icon = toggle.querySelector('i');
+    if (icon) icon.className = isOpen ? 'ph-fill ph-x' : 'ph-fill ph-magnifying-glass';
+    if (isOpen) input.focus();
   }
 
-  wrap.addEventListener('submit', (e) => {
-    if (input.value.trim()) return;   // real query — let the form navigate
-    e.preventDefault();
-    open();
+  toggle.addEventListener('click', () => {
+    setOpen(!wrap.classList.contains('is-open'));
   });
 
   input.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      wrap.classList.remove('is-open');
-      input.blur();
+      setOpen(false);
+      toggle.focus();
     }
   });
 
   document.addEventListener('click', (e) => {
     if (!wrap.contains(e.target) && !input.value.trim()) {
-      wrap.classList.remove('is-open');
+      setOpen(false);
     }
   });
 })();
@@ -203,10 +207,11 @@ initCarousel('testimonials', true);  // auto-advances every 7s
 // Desktop reveals children on hover/focus-within (CSS only); this only fires
 // via the accordion button, which the design package hides above 768px.
 (function initNavAccordion() {
-  document.querySelectorAll('.nav-accordion-btn').forEach((btn) => {
+  document.querySelectorAll('.c-nav__accordion-btn').forEach((btn) => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
-      const dropdown = btn.closest('.nav-dropdown');
+      const dropdown = btn.closest('.c-nav__dropdown');
+      if (!dropdown) return;
       const isOpen = dropdown.classList.toggle('open');
       btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     });

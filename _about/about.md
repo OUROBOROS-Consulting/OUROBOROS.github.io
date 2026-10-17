@@ -32,12 +32,12 @@ permalink: /about/
         <div class="values-card__front">
           <div class="values-card__surface">
             <i class="{{ val.icon }} values-card__icon" aria-hidden="true"></i>
-            <span class="values-card__name">{{ val.title | markdownify }}</span>
+            <span class="values-card__name">{{ val.title | escape }}</span>
           </div>
         </div>
         <div class="values-card__back">
           <div class="values-card__surface">
-            <p class="values-card__desc">{{ val.description | markdownify }}</p>
+            <div class="values-card__desc">{{ val.description | markdownify }}</div>
           </div>
         </div>
       </div>

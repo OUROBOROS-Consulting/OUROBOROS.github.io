@@ -3,21 +3,39 @@
 
 /* Base Styles */
 .c-btn {
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: var(--md-sys-spacing-xs);
+  min-height: var(--site-button-min-height);
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
-  border-radius: var(--md-sys-shape-full); /* M3 standard for pill buttons */
+  border-radius: var(--site-radius-full); /* M3 standard for pill buttons */
   font-family: inherit;
   font-weight: var(--md-ref-typeface-weight-medium);
   font-size: var(--md-sys-typescale-label-large-size);
   line-height: var(--md-sys-typescale-label-large-line-height);
   text-decoration: none;
   cursor: pointer;
-  transition: all var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+  transition:
+    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
   border: none;
   user-select: none;
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
+}
+
+.c-action-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
 }
 
 /* Primary Variant */
@@ -26,7 +44,8 @@
   color: var(--md-sys-color-on-primary);
 
   &:hover {
-    filter: brightness(0.9);
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
   }
 
   &:active {
@@ -40,7 +59,8 @@
   color: var(--md-sys-color-on-secondary-container);
 
   &:hover {
-    filter: brightness(0.95);
+    background-color: var(--md-sys-color-secondary);
+    color: var(--md-sys-color-on-secondary);
   }
 }
 
@@ -50,7 +70,8 @@
   color: var(--md-sys-color-on-tertiary-container);
 
   &:hover {
-    filter: brightness(0.95);
+    background-color: var(--md-sys-color-tertiary);
+    color: var(--md-sys-color-on-tertiary);
   }
 }
 

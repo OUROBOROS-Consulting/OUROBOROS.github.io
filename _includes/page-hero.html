@@ -4,6 +4,8 @@
      front matter or category.
 
      Params:
+       page.hero_image      — optional local image path (4:3 crops work best), e.g. /assets/images/technology.webp
+       page.hero_image_alt  — meaningful alternative text; omit for decorative imagery
        back_url         — Back-link target, raw path (this include applies relative_url)
        back_label       — Back-link text, e.g. "Back" / "All Services" / "All PSAs"
        tagline          — "true" to render page.tagline (markdownified) above page.lede
@@ -32,21 +34,52 @@
     {% assign hero_icon = 'ph-sparkle' %}
   {% endif %}
 {% endunless %}
-<header class="c-page-hero{{ include.extra_class }}">
+<header class="c-page-hero{% if include.home == 'true' %} c-page-hero--home{% endif %}{{ include.extra_class }}">
   <div class="c-page-hero__inner">
-    <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}">{{ include.back_label }}</a>
+    {% unless include.home == 'true' %}
+    <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}"><i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>{{ include.back_label }}</a>
+    {% endunless %}
 
     <div class="c-page-hero__identity">
-      {% if include.category or page.category %}
-      <p class="label-large text-primary">{{ include.category | default: page.category | default: include.category_default }}</p>
+      {% if include.category or page.category or page.eyebrow %}
+      <p class="label-large text-primary">{{ include.category | default: page.category | default: page.eyebrow | default: include.category_default }}</p>
       {% endif %}
 
-      <h1 class="headline-large">{{ include.title | default: page.title }}</h1>
+      <h1 class="headline-large">
+        {% if include.home == 'true' %}
+        {{ page.name_line1 | default: page.title }}
+        {% if page.name_line2 or page.name_line1 %}
+        <span class="c-page-hero__title-detail">{{ page.name_line2 | default: "Consulting" }}</span>
+        {% endif %}
+        {% else %}
+        {{ include.title | default: page.title }}
+        {% endif %}
+      </h1>
     </div>
 
     <div class="c-page-hero__content">
-      {% if include.tagline == 'true' or page.tagline %}
-      <div class="c-page-hero__tagline body-large">{{ include.tagline | default: page.tagline | markdownify }}</div>
+      {% if include.home == 'true' %}
+      {% if page.tagline_1 %}
+      <div class="c-page-hero__tagline body-large">{{ page.tagline_1 | markdownify }}</div>
+      {% endif %}
+      {% if page.tagline_2 %}
+      <div class="c-page-hero__tagline body-large">{{ page.tagline_2 | markdownify }}</div>
+      {% endif %}
+      <div class="c-action-group c-page-hero__actions">
+        <a href="{{ page.cta_url | default: '/services/' | relative_url }}" class="c-btn c-btn--primary">
+          {{ page.cta_label | default: 'Explore Services' }}
+          {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
+        </a>
+        {% if page.cta2_label %}
+        <a href="{{ page.cta2_url | relative_url }}" class="c-btn c-btn--primary">
+          {{ page.cta2_label }}
+          {% if page.cta2_icon %}<i class="{{ page.cta2_icon }} ms-1" aria-hidden="true"></i>{% endif %}
+        </a>
+        {% endif %}
+      </div>
+      {% else %}
+      {% if page.tagline %}
+      <div class="c-page-hero__tagline body-large">{{ page.tagline | markdownify }}</div>
       {% endif %}
 
       {% if include.lede or page.lede %}
@@ -66,8 +99,8 @@
       {% endif %}
 
       {% if include.cta_mode == 'service' %}
-      <div class="c-page-hero__actions">
-        <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="btn btn-primary">
+      <div class="c-action-group c-page-hero__actions">
+        <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="c-btn c-btn--primary">
           {{ include.cta_label | default: page.cta_label | default: 'Get in Touch' }}
           {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
         </a>
@@ -78,8 +111,8 @@
       {% endif %}
 
       {% if include.cta_mode == 'psa' %}
-      <div class="c-page-hero__actions">
-        <a href="{{ page.pdf | relative_url }}" download class="btn btn-primary">Download PDF</a>
+      <div class="c-action-group c-page-hero__actions">
+        <a href="{{ page.pdf | relative_url }}" download class="c-btn c-btn--primary">Download PDF</a>
         {% if page.date %}
         <p class="label-medium">{{ page.date | date: "%B %Y" }}</p>
         {% endif %}
@@ -88,14 +121,27 @@
 
       {% assign cta_text = include.cta_text | default: page.cta_text %}
       {% if cta_text %}
-      <div class="c-page-hero__actions">
+      <div class="c-action-group c-page-hero__actions">
         <p class="body-medium">{{ cta_text }}</p>
       </div>
       {% endif %}
+      {% endif %}
     </div><!-- /c-page-hero__content -->
 
-    <div class="c-page-hero__art">
+    <div class="c-page-hero__art{% if page.hero_image %} c-page-hero__art--image{% endif %}">
+      {% if page.hero_image %}
+      {% if page.hero_image_alt %}
+      <img class="c-page-hero__image" src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | escape }}" fetchpriority="high">
+      {% else %}
+      <img class="c-page-hero__image" src="{{ page.hero_image | relative_url }}" alt="" aria-hidden="true" fetchpriority="high">
+      {% endif %}
+      {% else %}
+      {% if include.home == 'true' %}
+      <img class="c-page-hero__image c-page-hero__logo" src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" aria-hidden="true">
+      {% else %}
       <i class="ph-fill {{ hero_icon }} c-page-hero__icon" aria-hidden="true"></i>
+      {% endif %}
+      {% endif %}
     </div>
 
     {% if include.scroll_hint == 'true' %}
