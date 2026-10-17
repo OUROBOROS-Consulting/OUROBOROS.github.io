@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-16
+generated: 2026-10-17
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "The power of AI is worrying senior Labour figures – as is the fear of ‘falling behind the public’"
+        url: "https://www.theguardian.com/technology/2026/oct/17/artificial-intelligence-ai-labour-government-safety-uk-extremism"
+        source: "The Guardian"
+        date: 2026-10-17
+        summary: "Westminster appears to be waking up to warnings over AI safety, with concerns over its use by extremist groups and bad actors “I have this sense that, within a few months, AI is going to be all anyone is talking about,”..."
+      - title: "Fake Linda and me: the Agatha Christie-worthy mystery of the fraudster who stole my byline"
+        url: "https://www.theguardian.com/technology/2026/oct/17/fake-linda-and-me-mystery-fraudster-stole-my-byline"
+        source: "The Guardian"
+        date: 2026-10-17
+        summary: "How a string of bizarre events led writer Linda Geddes to don her sleuthing cap and dig into a world of shadowy impersonators It started with an entirely ordinary interaction on LinkedIn. Someone had tagged me in a..."
+      - title: "Super Scam Me documentary shows what it takes to catch a romance scammer"
+        url: "https://arstechnica.com/tech-policy/2026/10/romance-scam-doc-super-scam-me-takes-viewers-deep-into-love-bombing-terrain/"
+        source: "Ars Technica"
+        date: 2026-10-16
+        summary: "Watch an exclusive clip from Super Scam Me where a victim tracks down her scammer."
       - title: "Is your boss watching you? The rise of AI surveillance at work - video"
         url: "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video"
         source: "The Guardian"
@@ -28,16 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-14
         summary: "Kate Fleming says the government must look beyond the models it rewards today, while Jenny Haigh says unlocking potential means recognising that creativity and science are partners Gordon Brown wants Britain to invent..."
-      - title: "Nvidia, worth $5.5tn, donates $250m to UK for AI safety research"
-        url: "https://www.theguardian.com/technology/2026/oct/14/nvidia-donates-to-uk-ai-safety-research"
-        source: "The Guardian"
-        date: 2026-10-14
-        summary: "Pledge spanning five years from world’s most valuable firm comes as concerns about AI agents have risen The $5.5tn (£4.1tn) US chipmaker Nvidia is donating $250m worth of computing power to the UK to support AI safety..."
-      - title: "AI overlords say they want to democratise their technology. Here’s how | Richard Wilson and Clara Long"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/14/ai-overlords-democratise-technology"
-        source: "The Guardian"
-        date: 2026-10-14
-        summary: "A fight over a datacentre in Utah has been a testing ground for citizens’ assemblies, paving the way to oversight What’s your “(p)doom” – the percentage chance that rogue AI will create an existential catastrophe?..."
       - title: "Open models have real benefits. Do they outweigh the risks?"
         url: "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
         source: "MIT Technology Review"
@@ -48,11 +53,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-12
         summary: "The second-largest corporate employer has bet big on robot workers to scale."
-      - title: "Nvidia's big bet on physical AI aims for safer robotaxis, humanoid robots"
-        url: "https://arstechnica.com/ai/2026/10/nvidias-big-bet-on-physical-ai-aims-for-safer-robotaxis-humanoid-robots/"
-        source: "Ars Technica"
-        date: 2026-10-08
-        summary: "Full-stack safety solution for physical AI is being used by robotics companies."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -121,6 +121,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "‘Springer’ agency website offering authorship for sale goes down following Retraction Watch story"
+        url: "https://retractionwatch.com/2026/10/16/springer-agency-website-offering-authorship-for-sale-goes-down-following-retraction-watch-story/"
+        source: "Retraction Watch"
+        date: 2026-10-16
+        summary: "The website for Springer Journals Online, an agency offering authorship slots in articles in exchange for payment, has gone offline, four days after Retraction Watch published its investigation into its activities. As..."
       - title: "Journal retracts, republishes paper on Long COVID treatment trial"
         url: "https://retractionwatch.com/2026/10/15/journal-retracts-republishes-paper-on-long-covid-treatment-trial/"
         source: "Retraction Watch"
@@ -156,11 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-12
         summary: "Computer scientist Richard Fateman got an email in August that was completely “out of the blue”: an offer of coauthorship in articles headed for publication in prestigious journals, in exchange for a fraction of the..."
-      - title: "‘Cerebral torment’: IOP retracts nearly 100 conference papers for tortured phrases"
-        url: "https://retractionwatch.com/2026/10/09/iop-publishing-conference-proceedings-tortured-phrases/"
-        source: "Retraction Watch"
-        date: 2026-10-09
-        summary: "IOP Publishing has retracted nearly 100 papers from three of its conference proceedings after the articles were flagged for containing tortured phrases. Tortured phrases are rephrasings and synonyms — often awkward and..."
       - title: "U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU"
         url: "https://www.propublica.org/article/aau-child-sex-abuse-house-energy-commerce-committee-probe-amateur-athletic-union"
         source: "ProPublica"
@@ -175,11 +175,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-15
         summary: "No one should have to choose between speaking freely and protecting their immigration status. Yet that’s precisely the choice the Trump administration’s mass surveillance of online speech forces on noncitizens living in..."
-      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
-        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
-        source: "EPIC"
-        date: 2026-10-15
-        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
       - title: "Patients: All my best tips on how to opt out of data sharing"
         url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
         source: "The Markup"
@@ -230,3 +225,8 @@ sections:
         source: "EPIC"
         date: 2026-10-07
         summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
+      - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
+        url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
+        source: "Krebs on Security"
+        date: 2026-10-07
+        summary: "A teenager from Amman, Jordan suspected of leading the prolific data theft and extortion group ShinyHunters has been detained and is reportedly cooperating with the FBI to identify other members of the hacking gang..."
