@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Brand
+
+Voice, tokens, and claims rules: `docs/brand-guidelines.md`. Read it before writing copy or CSS. Homepage is the reference.
+
 ## Build & Dev Commands
 
 ```bash

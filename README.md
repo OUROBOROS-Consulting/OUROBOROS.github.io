@@ -145,53 +145,13 @@ Authored content pages use Markdown (`.md`), including pages that combine prose 
 
 ## Design System
 
-### Colors
+Tokens, voice, and claims rules live in [`docs/brand-guidelines.md`](docs/brand-guidelines.md). This repo owns them. The standalone `ouroboros-design` repo is legacy.
 
-<details>
-<summary>CSS custom properties in `_base.scss`</summary>
-
-Defined in the design package, not here. `ouroboros-design/scss/_base.scss` is the single source of truth; this site must not redefine them.
-
-- `--bg1: #0c101a` — page background
-- `--bg-hero: #1e213e` — dark navy, homepage + service hero
-- `--bg2: #1E1E1E` — card/surface
-- `--bg3: #252525` — elevated surface
-- `--gold: #C9A84C` — primary accent
-- `--text: #E8E4DC` — body text
-- `--subdued: #B0AAA0`, `--muted: #999999` — hierarchy
-- `--steel: #7F94A6`, `--amethyst: #A284CA`, `--sage: #6DA187`, `--teal: #5DA19C` — semantic accents
-
-Each accent also has `-dim` (alpha 0.35) and `-ghost` (alpha 0.12) variants. All four were raised on 2026-07-25 to clear WCAG 4.5:1; the prior values failed, `--teal` worst at 3.22:1. Keep at least 18° of hue separation between accents when adjusting, or teal and sage collapse into each other.
-
-</details>
-
-### Texture & Elevation
-
-<details>
-<summary>Scallop patterns & elevation mixins in `_base.scss`</summary>
-
-- `@include scallop-*` (recessed/standard/elevated) — scallop SVG pattern + opacity tier
-- `@include elevation-*` — background + scallop
-- `body::before` — fixed scallop-recessed background
-- `body::after` — cursor spotlight (teal radial gradient, `--cx/--cy` tracked by `main.js`)
-
-</details>
-
-### Typography
-
-Lora (serif), Inter (sans), JetBrains Mono (monospace) via Google Fonts + Font Awesome 6.5.
-
-### SCSS
-
-<details>
-<summary>Partials imported by `assets/css/main.scss`</summary>
-
-- `_base.scss` — reset, tokens, texture, 404
-- `_typography.scss` — prose scale
-- `_buttons.scss`, `_nav.scss`, `_footer.scss` — components
-- `_cards.scss`, `_home.scss`, `_service.scss`, `_essay.scss`, `_cv.scss` — layouts
-
-</details>
+- **Color:** void black `#000000`, forensic white `#F5F5F5`, ember gold `#DDCBA3` (primary), amber `#FFD700` (rare). Light theme: `#F5F5F5` background, `#5C4B38` primary.
+- **Type:** Manufacturing Consent (authority), Syne (utility). Lora and IBM Plex Mono load but are not wired to roles yet.
+- **Surfaces:** marble texture, dark island nav and footer.
+- **Source files:** `_sass/_primitives.scss`, `_sass/identity.scss`, `_sass/themes/`, `_sass/design/`, `_sass/components/`.
+- **Icons:** Phosphor fill.
 
 ---
 

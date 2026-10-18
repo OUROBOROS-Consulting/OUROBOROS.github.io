@@ -4,6 +4,10 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Frontend and design work context. Extends global CLAUDE.md.
 
+## Brand
+
+Read `docs/brand-guidelines.md` before writing copy or styles. No survivor-era vocabulary on client pages.
+
 ## Output Path
 
 Session summary MDs go to `~/Library/Mobile Documents/iCloud~md~obsidian/Documents/Second-Brain/_Firm/_Claude/Outputs/`.

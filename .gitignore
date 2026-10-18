@@ -25,3 +25,5 @@ posts/
 
 # Python bytecode from scripts/fetch_news.py
 __pycache__/
+!docs/brand-guidelines.md
+!docs/copy-fix-plan.md
