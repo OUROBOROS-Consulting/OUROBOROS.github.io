@@ -162,15 +162,15 @@ Each of those is a real boundary with a reason behind it. All three are covered 
 
 ### Is what I tell you confidential?
 
-What you send me stays between us. I do not sell it, share it, or hand it to anyone.
+I do not sell what you send me. The intake form is processed by Formspree, which forwards submissions to my email. This is not legally privileged communication.
 
 The honest limits, so you can decide with the full picture:
 
 **I hold no legal privilege.** Attorney-client privilege and therapist confidentiality are legal protections that attach to licensed professionals. I am neither, so what you tell me is not privileged, and a court could in principle compel it. I have never been asked. You should still know before you tell me anything.
 
-**The form goes through a third party.** The intake form is processed by Formspree, which forwards it to my email. Only what you type is collected. Nothing is gathered silently.
+**The form goes through a third party.** Formspree processes your submission and forwards it to my email. Formspree may process technical request data under its own terms and privacy policy.
 
-**The site itself does not watch you.** No analytics, no cookies, no trackers, no third-party requests at all. You do not have to believe me. Open your browser's network tab and reload any page. The [privacy page](/privacy/) explains what you will see.
+**The site makes external requests.** Its shared layout loads Google Fonts and Phosphor icon stylesheets from third-party providers; some demonstration pages load additional fonts. The [privacy page](/privacy/) describes these requests and what happens when you submit the form.
 
 If you would rather not put something in a form, say so in the first message and we will find another way.
 

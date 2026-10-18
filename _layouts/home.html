@@ -4,6 +4,53 @@ layout: default
 
 {% include hero.html %}
 
+<!-- ── Offers ────────────────────────────────────────────────────────────── -->
+<section id="services" class="c-section c-section--marble">
+  <div class="c-container">
+    <div class="c-stack">
+      <header class="c-stack">
+        <p class="technical text-t">Ways to Work Together</p>
+        <h2 class="authority">What would you like to make easier?</h2>
+        <p class="forensic text-s">Start with the problem you need to solve. We can shape the right-sized work from there.</p>
+      </header>
+    </div>
+
+    <div class="related-grid">
+      {% for offer in site.data.offers %}
+      {% include content-card.html item=offer card_type="offer" link_label=offer.link_label %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── How I Work ────────────────────────────────────────────────────────── -->
+<section id="approach" class="c-section c-section--marble">
+  <div class="c-container">
+    <div class="c-stack">
+      <p class="technical text-t">A Practical Approach</p>
+      <h2 class="authority">Clear decisions. Useful work. A handoff you can own.</h2>
+    </div>
+
+    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+      <article class="c-card c-stack">
+        <p class="technical text-t">01 / Understand</p>
+        <h3 class="authority c-card-title">Start with the real problem</h3>
+        <p class="text-s">We clarify what is getting in the way, what success would look like, and what constraints matter before choosing tools or scope.</p>
+      </article>
+      <article class="c-card c-stack">
+        <p class="technical text-t">02 / Choose</p>
+        <h3 class="authority c-card-title">Use the smallest useful intervention</h3>
+        <p class="text-s">Recommendations account for cost, privacy, accessibility, and the time you can realistically spend maintaining the result.</p>
+      </article>
+      <article class="c-card c-stack">
+        <p class="technical text-t">03 / Hand off</p>
+        <h3 class="authority c-card-title">Leave you more capable</h3>
+        <p class="text-s">Agreed deliverables include the context and documentation needed to understand, use, and maintain the work.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- ── Who This Is For ────────────────────────────────────────────────────── -->
 <section id="audience" class="c-section c-section--marble">
   <div class="c-container">
@@ -41,13 +88,12 @@ layout: default
 <section id="testimonials" class="c-section c-section--marble">
   <div class="c-container">
 
+    {% assign business_testimonials = site.data.testimonials | where: "tag", "Technology" %}
     <div class="c-stack">
       <header class="c-stack">
-        <p class="technical text-t">What Clients Say</p>
+        <p class="technical text-t">Selected References</p>
         <h2 class="authority">Testimonials</h2>
-        <p class="forensic text-s">These testimonials are from federal, corporate, and private
-          engagements, quoted with permission. Survivor and advocacy work is confidential by design.
-        </p>
+        <p class="forensic text-s">These references describe federal technology and data-platform work. They demonstrate technical judgment and operational continuity, not like-for-like small-business projects.</p>
       </header>
     </div>
 
@@ -55,7 +101,7 @@ layout: default
       <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous testimonial">
         <i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>
       </button>
-      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
+      <span class="carousel-count">1 / {{ business_testimonials.size }}</span>
       <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next testimonial">
         <i class="ph ph-fill ph-arrow-fat-line-right" aria-hidden="true"></i>
       </button>
@@ -63,9 +109,9 @@ layout: default
 
     <div class="carousel carousel--testimonials" aria-live="polite" aria-label="Testimonials">
       <div class="carousel-track">
-        {% for ref in site.data.testimonials %}
+        {% for ref in business_testimonials %}
         <div class="carousel-slide" role="group"
-          aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
+          aria-label="Testimonial {{ forloop.index }} of {{ business_testimonials.size }}">
           <div class="c-card c-stack">
             <p class="technical text-t">{{ ref.title }}</p>
             <blockquote class="forensic">
@@ -79,8 +125,8 @@ layout: default
     </div>
 
     <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
-      {% for ref in site.data.testimonials %}
-      <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+      {% for ref in business_testimonials %}
+      <button type="button" class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
         aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
         aria-label="Testimonial {{ forloop.index }}"></button>
       {% endfor %}
@@ -163,38 +209,6 @@ layout: default
   </div>
 </section>
 
-<!-- ── Services / Expertise ───────────────────────────────────────────────── -->
-<section id="services" class="c-section c-section--marble">
-  <div class="c-container">
-    <div class="c-stack">
-      <header class="c-stack">
-        <p class="technical text-t">What I Offer</p>
-        <h2 class="authority">Expertise</h2>
-        <a href="{{ '/services/' | relative_url }}" class="text-s">View All →</a>
-      </header>
-    </div>
-
-    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
-      {% assign sorted_services = site.services | sort: "order" %}
-      {% for service in sorted_services limit: 4 %}
-      <div class="c-card c-stack">
-        {% if service.hero_svg %}
-        <div class="rc-icon"><img src="{{ service.hero_svg | relative_url }}" alt=""
-            aria-hidden="true"></div>
-        {% elsif service.icon %}
-        <div class="rc-icon"><i class="{{ service.icon }} technical text-t" aria-hidden="true"></i>
-        </div>
-        {% endif %}
-        <h3 class="authority c-card-title">{{ service.title }}</h3>
-        <p class="text-s">{{ service.description }}</p>
-        <a href="{{ service.url }}" class="technical text-t c-card-action">Learn More
-          &rarr;</a>
-      </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
-
 <!-- ── Work ───────────────────────────────────────────────────────────────── -->
 <section id="work" class="c-section c-section--marble">
   <div class="c-container">
@@ -208,14 +222,17 @@ layout: default
 
     <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
       {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
-      {% for case in sorted_cases limit: 4 %}
-      <div class="c-card c-stack">
-        <p class="technical text-t">{{ case.tag }}</p>
-        <h3 class="authority c-card-title">{{ case.title }}</h3>
-        <p class="text-s">{{ case.description }}</p>
-        <a href="{{ case.url }}" class="technical text-t c-card-action">Read More
-          &rarr;</a>
-      </div>
+      {% assign featured_cases = sorted_cases | where: "featured", true %}
+      {% assign featured_case = featured_cases | first %}
+      {% assign remaining_cases = sorted_cases %}
+      {% assign remaining_limit = 2 %}
+      {% if featured_case %}
+      {% assign remaining_cases = sorted_cases | where_exp: "case", "case.featured != true" %}
+      {% assign remaining_limit = 1 %}
+      {% include content-card.html item=featured_case variant="home" summary=featured_case.description %}
+      {% endif %}
+      {% for case in remaining_cases limit: remaining_limit %}
+      {% include content-card.html item=case variant="home" summary=case.description %}
       {% endfor %}
     </div>
   </div>

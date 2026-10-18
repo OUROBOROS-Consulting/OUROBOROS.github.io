@@ -35,15 +35,15 @@
   --p-weight-bold: 700;
 
   /* --- Typography Sizes (Raw) --- */
-  --p-font-display-large: 3.815rem;
-  --p-font-display-medium: 2.441rem;
-  --p-font-display-small: 1.875rem;
+  --p-font-display-large: 8rem;
+  --p-font-display-medium: 4rem;
+  --p-font-display-small: 2rem;
   --p-font-headline-large: 1.5rem;
   --p-font-headline-medium: 1.25rem;
   --p-font-title-large: 1.125rem;
   --p-font-body-large: 1rem;
   --p-font-body-medium: 0.875rem;
-  --p-font-label-large: 0.875rem;
+  --p-font-label-large: 1rem;
   --p-font-label-small: 0.75rem;
 
   /* --- Elevation Shadows (Raw) --- */
@@ -81,6 +81,8 @@
   --p-color-ink-dark: #1D1B20;
   --p-color-text-gray: #8e8e8e;
 
+  --p-color-ink-palantir-dark: #191B1C;
+  --p-color-ink-palantir-light: #E8E6E3;
   /* Error Colors (Extracted for Primitives) */
   --p-color-error-light: #B3261E;
   --p-color-error-dark: #F2B8B5;

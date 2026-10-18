@@ -37,23 +37,21 @@ layout: base
     <div>
       <p class="band-label">What Clients Say</p>
       <h2 class="band-heading">Testimonials</h2>
-      <p class="testimonials-context">These
-        testimonials are from federal, corporate, and private engagements, quoted with permission. Survivor and
-        advocacy work is confidential by design.
-      </p>
+      <p class="testimonials-context">These references describe federal technology and data-platform work.</p>
     </div>
     <div class="carousel-controls">
       <button class="carousel-btn carousel-btn--prev" aria-label="Previous testimonial"><i class="ph ph-fill ph-arrow-fat-line-left"></i></button>
-      <span class="carousel-count">1 / {{ site.data.testimonials.size }}</span>
+      {% assign business_testimonials = site.data.testimonials | where: "tag", "Technology" %}
+      <span class="carousel-count">1 / {{ business_testimonials.size }}</span>
       <button class="carousel-btn carousel-btn--next" aria-label="Next testimonial"><i class="ph ph-fill ph-arrow-fat-line-right"></i></button>
     </div>
   </div>
 
   <div class="carousel carousel--testimonials" aria-live="polite" aria-label="Testimonials">
     <div class="carousel-track">
-      {% for ref in site.data.testimonials %}
+      {% for ref in business_testimonials %}
       <div class="carousel-slide" role="group"
-        aria-label="Testimonial {{ forloop.index }} of {{ site.data.testimonials.size }}">
+        aria-label="Testimonial {{ forloop.index }} of {{ business_testimonials.size }}">
         <div class="c-card c-card--framed c-card--callout">
           <div class="card-tag">{{ ref.title }}</div>
           <blockquote>
@@ -67,8 +65,8 @@ layout: base
   </div>
 
   <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
-    {% for ref in site.data.testimonials %}
-    <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+    {% for ref in business_testimonials %}
+    <button type="button" class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
       aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
       aria-label="Testimonial {{ forloop.index }}"></button>
     {% endfor %}

@@ -25,31 +25,15 @@ permalink: /resources/psas/
 <div class="page-body">
   {% if site.psas.size > 0 %}
 
-  {% assign sorted_psas = site.psas | sort: "date" | reverse %}
-  {% assign sections = sorted_psas | map: "section" | uniq | sort %}
-
-  {% for section_name in sections %}
-  {% assign section_psas = sorted_psas | where: "section", section_name %}
-
-  <section class="psa-section">
-    <div class="band-header band-header--compact">
-      <h2 class="band-heading band-heading--compact">{{ section_name }}</h2>
-      <span class="band-count">{{ section_psas.size }} {% if section_psas.size == 1 %}document{% else %}documents{% endif %}</span>
-    </div>
-    <div class="related-grid">
-      {% for psa in section_psas %}
-      <a href="{{ psa.url | relative_url }}" class="c-card c-card--related">
-        <p class="rc-tag">{{ psa.category | default: 'PSA' }}</p>
-        <h3 class="rc-title">{{ psa.title }}</h3>
-        {% if psa.lede %}<p class="card-desc">{{ psa.lede }}</p>{% endif %}
-        {% if psa.date %}<p class="rc-date">{{ psa.date | date: "%B %Y" }}</p>{% endif %}
-        <span class="card-link">View →</span>
-      </a>
-      {% endfor %}
-    </div>
-  </section>
-
-  {% endfor %}
+  {% include grouped-content-list.html
+    items=site.psas
+    group_by="section"
+    singular_label="document"
+    plural_label="documents"
+    card_class="c-card--related"
+    category_default="PSA"
+    link_label="View"
+  %}
 
   {% else %}
   <div class="c-card--formula">

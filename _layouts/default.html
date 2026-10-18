@@ -4,15 +4,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% assign _title = "ouroborOS Consulting — Technology, Research & Advocacy" %}
+    {% assign _title = "ouroborOS Consulting | Design & Tech for Small Business" %}
     {% if page.title %}{% capture _title %}{{ page.title }} — ouroborOS Consulting{% endcapture %}{%
     endif %}
     <title>{{ _title }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
+    {% if page.redirect_to %}
+    <meta http-equiv="refresh" content="0;url={{ page.redirect_to | relative_url }}" />
+    <meta name="robots" content="noindex" />
+    {% endif %}
 
-    {% assign _desc = page.description | default: page.lede | default: "Bespoke solutions where
-    technology, rigorous
-    research, and principled advocacy meet." %}
+    {% assign _desc = page.description | default: page.lede | default: site.description %}
     {% assign _desc = _desc | strip_html | strip_newlines | truncate: 160 %}
     <meta name="description" content="{{ _desc }}" />
     <meta name="author" content="Apostolos Stamenos" />
@@ -44,7 +46,7 @@
 
     <link rel="icon" href="{{ '/assets/images/logo.svg' | relative_url }}" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}" />
-    <!-- Self-hosted fonts — no third-party requests (see /assets/fonts/LICENSE.md) -->
+    <!-- Local font-face declarations; the Google Fonts stylesheet below supplies the display families. -->
     <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}" />
     <!-- Google Fonts for Syne, Manufacturing Consent, Lora, and IBM Plex Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,8 +93,7 @@
   </head>
 
   <body {% if page.show_banner %} class="has-banner" {% endif %}>
-    <a class="skip-link" href="#main">Skip to main content</a>
-    {% include safety-exit.html %}
+    <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
     {% if page.show_banner %}{% include banner.html %}{% endif %}
     <div class="nav-shell">
       {% include nav.html %}

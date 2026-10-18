@@ -2,7 +2,7 @@
 layout: default
 title: Services
 permalink: /services/
-description: "Consulting in technology and AI, teaching, brand and web design, and survivor advocacy. For individuals, nonprofits, small businesses, and startups."
+description: "Brand and website design, workflow automation, and practical technical advice for small businesses and independent professionals."
 ---
 
 {% include page-hero.html
@@ -10,28 +10,18 @@ description: "Consulting in technology and AI, teaching, brand and web design, a
   back_label="Home"
   category="Services"
   title="What I Offer"
-  lede="Advocacy, teaching, technology, and design. Rigorous work for people and organizations operating where standard tools weren't designed to reach."
+  lede="Practical help for three common needs: a clearer brand and website, less repetitive work, or a grounded technical second opinion."
   icon="ph ph-fill ph-briefcase"
+  cta_mode="service"
   cta_url="/intake"
   cta_label="Book a Consultation"
 %}
 
 <div class="page-body">
+  <h2 class="authority">Start with what you need</h2>
   <div class="related-grid">
-
-    <a href="{{ '/services/technology/' | relative_url }}" class="c-card c-card--related">
-      <p class="rc-tag">Technology</p>
-      <h2 class="rc-title">Systems &amp; AI Engineering</h2>
-      <p class="card-desc">Deterministic systems, resilient automation, and high-integrity technical architecture.</p>
-      <span class="card-link">Explore services →</span>
-    </a>
-
-    <a href="{{ '/services/identity/' | relative_url }}" class="c-card c-card--related">
-      <p class="rc-tag">Identity &amp; Strategy</p>
-      <h2 class="rc-title">Design, Strategy &amp; Education</h2>
-      <p class="card-desc">High-concept design, strategic rigor, and professional skill acquisition.</p>
-      <span class="card-link">Explore services →</span>
-    </a>
-
+    {% for offer in site.data.offers %}
+    {% include content-card.html item=offer card_type="offer" card_class="c-card--related" link_label=offer.link_label %}
+    {% endfor %}
   </div>
 </div>

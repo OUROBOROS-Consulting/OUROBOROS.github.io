@@ -10,7 +10,7 @@ permalink: /team/
   back_label="About" 
   category="About" 
   title="Our Team" 
-  lede="The people behind the work. Built on rigorous research, principled advocacy, and a refusal to look away."
+  lede="Meet the people behind ouroborOS Consulting and learn about the experience they bring to each project."
   icon="ph ph-fill ph-users-three"
 %}
 

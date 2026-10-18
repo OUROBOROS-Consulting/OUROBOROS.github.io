@@ -164,7 +164,7 @@ layout: default
         <!-- One dot per slide; JS adds/removes `.active` on navigation -->
         <div class="carousel-dots playlist-carousel-dots" role="tablist" aria-label="Playlist navigation">
           {% for pl in _playlists %}
-          <button class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
+          <button type="button" class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
             aria-label="Playlist {{ forloop.index }}"></button>
           {% endfor %}
         </div>

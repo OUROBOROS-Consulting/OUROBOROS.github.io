@@ -7,48 +7,38 @@ hero_svg: /assets/images/logo.svg
 permalink: /privacy/
 back_url: /about/
 lede: >
-  This page is written for someone who has good reason to be careful.
-  Every claim here is verifiable. Open your browser's network tab and check.
+  This page describes what the site loads, what happens when you contact me,
+  and which services are involved.
 ---
 
-I built this site to be safe to read. If you are being monitored, you already know that trust has to be earned and verified, not promised. So this page does not ask you to take my word for anything. It tells you exactly what this site does, and gives you a way to confirm it yourself.
+This page describes the site's current behavior. Network requests can change as site features and providers change.
 
 ## What this site does not do
 
-This site does not track you. There are no analytics. No cookies. No trackers. No advertising technology. No fingerprinting. Nothing on this site tries to identify you or follow you from page to page.
+This site does not intentionally use analytics, advertising trackers, or fingerprinting. It stores your selected light/dark theme in your browser's local storage if you change the theme.
 
-The site itself does not log your visit. It is hosted on GitHub Pages, which serves the files. Like any web host, GitHub's servers can see requests reach them. I do not add any layer of tracking on top of that, and I receive no record of who visited.
+The site is hosted on GitHub Pages. GitHub may process technical information about requests as part of hosting. I do not receive an individual visitor log through this site.
 
 ## Verify it yourself
 
-You do not have to believe me. Open your browser's developer tools and go to the Network tab. Reload any page. You will see what the page loads and where each request goes.
-
-Every font, every icon, every script on this site is served from this site. Nothing calls out to Google Fonts. Nothing calls a content delivery network. Nothing loads from a third party. Reading this site sends no request anywhere but this site.
+The shared page layout requests Google Fonts stylesheets and Phosphor icon stylesheets from jsDelivr. Some demonstration pages load additional fonts. You can inspect requests in your browser's developer tools. The intake form contacts Formspree when submitted.
 
 ## Links that leave this site
 
-The footer and the contact call-to-action carry links to the newsletter on Substack (`ouroborosconsult.substack.com`) and to other outside pages. Those are ordinary links. Nothing loads from Substack while you are reading here, and no request reaches them until you choose to click.
+The footer and other pages contain links to external sites, including social profiles and Substack. Following a link takes you to that site's service and privacy practices.
 
 Once you follow a link, you are on someone else's site under their rules. Substack can see your IP address the same way any site you open can. That is true of every outbound link on the internet, and I would rather name it than let you assume this site can protect you past its own edge.
 
 ## The contact form
 
-The intake and contact form is processed by Formspree (`formspree.io`). When you submit the form, your answers go to Formspree, and Formspree forwards them to my email.
+The intake form is processed by Formspree (`formspree.io`). When you submit it, the information you provide is sent to Formspree and forwarded to my email. Formspree may also process technical request data under its own terms and privacy policy.
 
-Only what you type is collected. Nothing is gathered silently. There is no hidden field capturing anything about you. If you do not fill in the form and send it, nothing is sent.
+## Browsing privacy
 
-## The quick-exit button
-
-The quick-exit button clears this site's session and local storage and sends you away fast. Use it whenever you need to.
-
-Here is the honest limit. No button on any website can erase your browser history. No button can defeat monitoring software installed on your device. If someone controls your device, they may be able to see where you go regardless of what any site does.
-
-If you have reason to worry about that, the safer path is a private or incognito window, or a device your abuser cannot reach. A library computer or a trusted friend's phone can be safer than your own.
+This site does not provide a quick-exit feature and cannot erase browser history or prevent monitoring software on a device. If you have concerns about someone monitoring your browsing, consider using a device you trust.
 
 ## What happens to what you share
 
-Nothing is sold. Nothing is shared. I do not hand your information to anyone.
-
-What you tell me stays confidential. I use it only to respond to you. That is the whole purpose, and the whole extent, of what I do with it.
+I do not sell form submissions. I use them to respond to your enquiry and handle any related follow-up. Formspree processes the submission as described above. Do not send information that you do not want handled by the form provider.
 
 If you have a question about any of this, or you want something removed, reach out and I will handle it directly.

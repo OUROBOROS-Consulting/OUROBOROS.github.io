@@ -1,23 +1,23 @@
 ---
 layout: default
 title: About
-description: "Apostolos Stamenos, MS. Former federal data scientist at HHS, now running a technology, research, and advocacy consultancy in the Twin Cities."
+description: "Meet Apostolos Stamenos, founder of ouroborOS Consulting, helping small businesses and independent professionals with design and technology."
 permalink: /about/
 ---
 
-{% include page-hero.html 
-  back_url="/" 
-  back_label="Home" 
-  category="About" 
-  title="Apostolos Stamenos" 
-  lede="Technologist, designer, researcher, and advocate working at the intersection of data science, public health, and institutional accountability." 
+{% include page-hero.html
+  back_url="/"
+  back_label="Home"
+  category="About"
+  title="Apostolos Stamenos"
+  lede="Technologist and designer helping small businesses and independent professionals make practical use of design and technology."
   icon="ph ph-fill ph-user-circle"
-  cta_url="/intake" 
+  cta_url="/intake"
   cta_label="Book a Consultation"
 %}
 
 <!-- ── Values ─────────────────────────────────────────────────────────────── -->
-<section id="values">
+<!-- <section id="values">
   <div class="band-header">
     <div>
       <p class="band-label">What I Live By</p>
@@ -44,23 +44,14 @@ permalink: /about/
     </div>
     {% endfor %}
   </div>
-</section>
+</section> -->
 
 <div class="page-body">
   <div class="related-grid">
-
     <a href="{{ '/mission' | relative_url }}" class="c-card c-card--framed">
       <p class="rc-tag">Mission</p>
       <h2 class="rc-title">Mission &amp; Background</h2>
       <p class="card-desc">My career, my values, and what this work is actually for.</p>
-      <span class="card-link">Read more →</span>
-    </a>
-
-    <a href="{{ '/survival-guide.html' | relative_url }}" class="c-card c-card--framed">
-      <p class="rc-tag">Experience</p>
-      <h2 class="rc-title">Survival</h2>
-      <p class="card-desc">A candid account of navigating institutional betrayal — and what I learned about
-        accountability from the inside.</p>
       <span class="card-link">Read more →</span>
     </a>
 

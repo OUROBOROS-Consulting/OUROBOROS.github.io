@@ -10,8 +10,9 @@
       ? Math.min(Math.max((scrolled / totalHeight) * 100, 0), 100)
       : 0;
 
-    topBar.style.width = `${progress}%`;
-    bottomBar.style.width = `${progress}%`;
+    const progressScale = String(progress / 100);
+    topBar.style.setProperty('--progress-scale', progressScale);
+    bottomBar.style.setProperty('--progress-scale', progressScale);
   };
 
   window.addEventListener('scroll', updateProgress, { passive: true });

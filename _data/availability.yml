@@ -22,8 +22,9 @@ hours:
 response: I read every intake within 72 hours, and usually the same day.
 
 after_hours: >-
-  Messages sent outside these hours still reach me. If you are in danger right
-  now, contact emergency services rather than waiting on a reply.
+  Messages sent outside these hours still reach me.
+
+# If you are in danger right now, contact emergency services rather than waiting on a reply.
 
 # One line, used in the closing CTA on every page. Deliberately says nothing
 # about response time: every page's cta_body already states "within 72 hours"

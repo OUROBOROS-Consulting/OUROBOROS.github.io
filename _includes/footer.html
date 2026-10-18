@@ -34,10 +34,20 @@
           <i class="ph-fill ph-envelope" aria-hidden="true"></i>
         </a>
       </nav>
+
+        <nav class="c-disclaimer-bar__links" aria-label="Legal links">
+          <a href="{{ '/disclaimer/' | relative_url }}" class="c-disclaimer-bar__link">Disclaimer</a>
+          &middot;
+          <a href="{{ '/privacy/' | relative_url }}" class="c-disclaimer-bar__link">Privacy</a> &middot;
+          <a href="{{ '/accessibility/' | relative_url }}" class="c-disclaimer-bar__link">Accessibility</a>
+          &middot;
+          <a href="{{ '/llm-disclosure/' | relative_url }}" class="c-disclaimer-bar__link">LLM
+            Disclosure</a>
+        </nav>
     </div>
 
     <a class="c-footer__logo" href="{{ '/' | relative_url }}" aria-label="ouroborOS home">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" class="c-footer__logo-mark">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" class="c-footer__logo-mark" width="1000" height="1000">
     </a>
 
     <div class="c-footer__availability">
@@ -52,16 +62,5 @@
     Not legal or mental-health advice. For professional advice, please consult a licensed attorney or mental-health professional.
   </p>
 
-  <img class="c-disclaimer-bar__divider" src="{{ '/assets/images/divider.svg' | relative_url }}" alt=""
-    aria-hidden="true" />
-
-  <nav class="c-disclaimer-bar__links" aria-label="Legal links">
-    <a href="{{ '/disclaimer/' | relative_url }}" class="c-disclaimer-bar__link">Disclaimer</a>
-    &middot;
-    <a href="{{ '/privacy/' | relative_url }}" class="c-disclaimer-bar__link">Privacy</a> &middot;
-    <a href="{{ '/accessibility/' | relative_url }}"
-      class="c-disclaimer-bar__link">Accessibility</a> &middot;
-    <a href="{{ '/llm-disclosure/' | relative_url }}" class="c-disclaimer-bar__link">LLM
-      Disclosure</a>
-  </nav>
+  <!-- <img class="c-disclaimer-bar__divider" src="{{ '/assets/images/divider.svg' | relative_url }}" alt="" aria-hidden="true" /> -->
 </div>
