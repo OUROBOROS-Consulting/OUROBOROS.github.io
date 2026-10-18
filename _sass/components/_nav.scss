@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
   background-color: var(--md-sys-color-surface);
-  border-bottom: 1px solid var(--md-sys-color-outline);
+  border-bottom: 5px solid var(--md-sys-color-primary);
 }
 
 .c-nav__logo {
@@ -33,7 +33,7 @@
 /* Links and Dropdowns - The "Nav links" Organism logic */
 .c-nav__links {
   display: flex;
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   justify-content: center;
   min-width: 0;
   gap: var(--md-sys-spacing-md);
@@ -77,13 +77,22 @@
   &:hover {
     border-color: var(--md-sys-color-outline);
     background-color: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-primary);
+    color: var(--p-color-white);
   }
 
   &:focus-visible {
     outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
     outline-offset: var(--site-focus-ring-offset);
   }
+}
+
+.c-nav__link > i,
+.c-nav__accordion-btn > i,
+.c-nav__search-submit > i,
+.c-nav__search-toggle > i,
+.c-nav__action-item > i,
+.c-nav__hamburger > i {
+  color: var(--md-sys-color-primary);
 }
 
 .c-nav__link > i {
@@ -196,7 +205,7 @@
 
   &:hover {
     background-color: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-primary);
+    color: var(--p-color-white);
   }
 
   &:focus-visible {

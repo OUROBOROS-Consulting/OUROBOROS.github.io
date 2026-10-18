@@ -1,12 +1,13 @@
 .c-cta {
   box-sizing: border-box;
-  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-md);
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-xl);
 }
 
 .c-cta__inner {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-xl);
   gap: var(--md-sys-spacing-xl);
   width: min(100%, var(--site-footer-content-max-width));
   margin-inline: auto;

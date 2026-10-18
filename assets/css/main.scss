@@ -2,11 +2,11 @@
 ---
 @use "index" as *;
 
-a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):where(:link, :visited) {
+a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.c-nav__link):not(.c-nav__dropdown-link):not(.c-nav__action-item):where(:link, :visited) {
   color: var(--md-sys-color-primary);
 }
 
-a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):where(:hover, :focus-visible) {
+a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.c-nav__link):not(.c-nav__dropdown-link):not(.c-nav__action-item):where(:hover, :focus-visible) {
   color: var(--md-sys-color-secondary);
 }
 
@@ -67,12 +67,12 @@ body {
 
 .c-nav a:link,
 .c-nav a:visited {
-  color: var(--md-sys-color-primary);
+  color: var(--p-color-white);
   text-decoration: none;
 }
 
 .c-nav a:hover {
-  color: var(--md-sys-color-secondary);
+  color: var(--p-color-white);
 }
 
 .c-footer a,
@@ -234,21 +234,21 @@ body {
 }
 
 .c-page-hero__identity {
-  text-align: left;
+  text-align: right;
 }
 
 .c-page-hero__identity h1 {
   font-size: clamp(2rem, 5vw, 4.75rem);
-  text-align: left;
+  text-align: right;
 }
 
 .c-page-hero--home .c-page-hero__identity {
-  align-items: flex-start;
+  // align-items: flex-start;
 }
 
 .c-page-hero--home .c-page-hero__identity h1 {
   font-size: clamp(3.25rem, 6.5vw, 5.75rem);
-  text-align: left;
+  text-align: right;
 }
 
 .c-page-hero--home .c-page-hero__art:not(.c-page-hero__art--image) {
@@ -319,6 +319,31 @@ body {
   border: 0;
   border-bottom: var(--site-border-width) solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
   background-image: none;
+}
+
+.page-body > :is(.page-section, .collection-section) {
+  padding-block: var(--md-sys-spacing-xl) 0;
+}
+
+.page-body > :is(.page-section, .collection-section):last-of-type {
+  padding-bottom: var(--md-sys-spacing-xl);
+}
+
+.page-body .page-section-label + .c-card,
+.page-body .page-section-label + .page-section-content,
+.page-body .collection-section > .band-header + .related-grid,
+.page-body > :is(h1, h2, h3, .band-header, .page-section-label) + :is(
+  .related-grid,
+  .c-grid,
+  .grid,
+  .testimonials-grid,
+  .values-grid
+) {
+  margin-top: var(--md-sys-spacing-xl);
+}
+
+.c-page-hero + .page-body > :first-child:not(.page-section):not(.collection-section) {
+  margin-top: var(--md-sys-spacing-xl);
 }
 
 .c-cta {
