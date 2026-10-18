@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-17
+generated: 2026-10-18
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Microsoft pulls out of AI datacentre project in Essex over power supply concerns"
+        url: "https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns"
+        source: "The Guardian"
+        date: 2026-10-18
+        summary: "Development by UK firm Nscale heralded by ministers as largest of its kind in country loses anchor tenant The development of a huge AI datacentre hailed by the UK government has received a fresh setback after Microsoft..."
+      - title: "World leaders must wise up to threat of cyber-attacks or rogue fridges will be least of their worries | Heather Stewart"
+        url: "https://www.theguardian.com/business/2026/oct/18/world-leaders-threat-cyber-attacks-rogue-fridges-financial-system"
+        source: "The Guardian"
+        date: 2026-10-18
+        summary: "Global cooperation seems unlikely despite AI increasing the risk of digital fraud and the need to protect the financial system Rogue French fridges were an unlikely talking point for the world’s leading economists..."
+      - title: "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 - podcast"
+        url: "https://www.theguardian.com/australia-news/audio/2026/oct/18/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-ep-6-full-story-podcast"
+        source: "The Guardian"
+        date: 2026-10-17
+        summary: "From his remote property in rural Texas, the millionaire businessman Michael Samadi is plotting a new kind of civil rights movement – for the welfare and protection of AI systems. Guardian journalist Michael Safi spends..."
       - title: "The power of AI is worrying senior Labour figures – as is the fear of ‘falling behind the public’"
         url: "https://www.theguardian.com/technology/2026/oct/17/artificial-intelligence-ai-labour-government-safety-uk-extremism"
         source: "The Guardian"
@@ -28,21 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-15
         summary: "Workers have always been monitored by their bosses, first through output targets, and then via computer software labelled ‘bossware’. But AI is transforming the capabilities of these systems, processing huge volumes of..."
-      - title: "Is your boss watching you? The rise of AI surveillance at work – podcast"
-        url: "https://www.theguardian.com/science/audio/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-podcast"
-        source: "The Guardian"
-        date: 2026-10-15
-        summary: "Workers have always been monitored by their bosses, first through output targets, and then via computer software labelled ‘bossware’. But AI is transforming the capabilities of these systems, processing huge volumes of..."
-      - title: "Eight states accuse OpenAI of coaching children to harm themselves in lawsuit"
-        url: "https://www.theguardian.com/technology/2026/oct/14/openai-child-self-harm-lawsuit"
-        source: "The Guardian"
-        date: 2026-10-14
-        summary: "US states sue ChatGPT maker and seek to force the company to change how its products work for young users Eight US states sued OpenAI Wednesday, alleging the ChatGPT maker is harming children en masse. Kansas, Arizona..."
-      - title: "To unlock Britain’s innovation potential, Labour needs to think outside the box | Letters"
-        url: "https://www.theguardian.com/education/2026/oct/14/to-unlock-britains-innovation-potential-labour-needs-to-think-outside-the-box"
-        source: "The Guardian"
-        date: 2026-10-14
-        summary: "Kate Fleming says the government must look beyond the models it rewards today, while Jenny Haigh says unlocking potential means recognising that creativity and science are partners Gordon Brown wants Britain to invent..."
       - title: "Open models have real benefits. Do they outweigh the risks?"
         url: "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
         source: "MIT Technology Review"
