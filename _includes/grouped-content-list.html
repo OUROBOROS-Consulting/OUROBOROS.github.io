@@ -1,0 +1,23 @@
+{% assign sorted_items = include.items | sort: "date" | reverse %}
+{% assign group_names = sorted_items | map: include.group_by | uniq | sort %}
+
+{% for group_name in group_names %}
+{% assign group_items = sorted_items | where: include.group_by, group_name %}
+<section class="collection-section">
+  <div class="band-header band-header--compact">
+    <h2 class="band-heading band-heading--compact">{{ group_name }}</h2>
+    <span class="band-count">{{ group_items.size }} {% if group_items.size == 1 %}{{ include.singular_label }}{% else %}{{ include.plural_label }}{% endif %}</span>
+  </div>
+  <div class="related-grid">
+    {% for item in group_items %}
+    {% include content-card.html
+      item=item
+      card_class=include.card_class
+      category_default=include.category_default
+      link_label=include.link_label
+      show_tags=include.show_tags
+    %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

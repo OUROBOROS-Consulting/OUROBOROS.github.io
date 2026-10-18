@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Resources
-description: "Guides, printable PSAs, tutorials, and reading for survivors, advocates, nonprofits, and small businesses. All free, all hosted here, no sign-up."
+description: "Practical guides, research, and public-service resources on technology, data, privacy, and design. Free to read and share."
 permalink: /resources/
 ---
 
@@ -10,7 +10,7 @@ permalink: /resources/
   back_label="Home"
   category="Resources"
   title="Reference Materials"
-  lede="Curated references drawn from clinical research, legal scholarship, and survivor advocacy. Accurate information is its own form of protection."
+  lede="Practical references on technology, data, privacy, and design, selected for independent professionals and small teams."
   icon="ph ph-fill ph-books"
   cta_url="/intake"
   cta_label="Book a Consultation"
@@ -28,7 +28,7 @@ permalink: /resources/
 
     <a href="{{ '/resources/scholarly/' | relative_url }}" class="c-card c-card--related">
       <p class="rc-tag">Research</p>
-      <h2 class="rc-title">Scholarly</h2>
+      <h2 class="rc-title">Scholarly Resources</h2>
       <p class="card-desc">The research that institutions cite but do not follow.</p>
       <span class="card-link">View →</span>
     </a>
@@ -49,7 +49,7 @@ permalink: /resources/
 
     <a href="{{ '/news/' | relative_url }}" class="c-card c-card--related">
       <p class="rc-tag">Headlines</p>
-      <h2 class="rc-title">What I'm Reading</h2>
+      <h2 class="rc-title">Streamlined Newsfeed</h2>
       <p class="card-desc">Daily headlines on artificial intelligence, coercive control, institutional accountability, and surveillance — gathered from the outlets doing the reporting.</p>
       <span class="card-link">View →</span>
     </a>

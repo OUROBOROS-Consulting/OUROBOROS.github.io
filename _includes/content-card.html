@@ -1,0 +1,36 @@
+{% assign item = include.item %}
+{% assign label = item.category | default: include.category_default %}
+{% assign summary = include.summary | default: item.lede | default: item.description %}
+{% if include.variant == "home" %}
+<div class="c-card c-stack">
+  {% if label %}<p class="technical text-t">{{ label }}</p>{% endif %}
+  {% if item.work_type %}<p class="technical text-t">{{ item.work_type }}</p>{% endif %}
+  <h3 class="authority c-card-title">{{ item.title }}</h3>
+  {% if include.card_type == "offer" %}
+  <p class="text-s">{{ item.lede }}</p>
+  <p class="text-s">{{ item.description }}</p>
+  {% elsif summary %}
+  <p class="text-s">{{ summary }}</p>
+  {% endif %}
+  <a href="{{ item.url | relative_url }}" class="technical text-t c-card-action">{{ include.link_label | default: "Read More" }} &rarr;</a>
+</div>
+{% else %}
+<a href="{{ item.url | relative_url }}" class="c-card {{ include.card_class | default: 'c-card--framed' }}">
+  {% if label %}<p class="rc-tag">{{ label }}</p>{% endif %}
+  {% if item.work_type %}<p class="rc-tag">{{ item.work_type }}</p>{% endif %}
+  <h3 class="rc-title">{{ item.title }}</h3>
+  {% if include.card_type == "offer" %}
+  <p class="card-desc">{{ item.lede }}</p>
+  <p class="card-desc">{{ item.description }}</p>
+  {% elsif summary %}
+  <p class="card-desc">{{ summary }}</p>
+  {% endif %}
+  {% if item.date %}<p class="rc-date">{{ item.date | date: "%B %Y" }}</p>{% endif %}
+  {% if include.show_tags == "true" and item.tags.size > 0 %}
+  <p class="rc-tags">
+    {% for tag in item.tags %}<span class="rc-tag-chip">{{ tag }}</span>{% endfor %}
+  </p>
+  {% endif %}
+  <span class="card-link">{{ include.link_label | default: "Read more" }} &rarr;</span>
+</a>
+{% endif %}

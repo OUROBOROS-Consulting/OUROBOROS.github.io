@@ -5,6 +5,7 @@ layout: sections
 section_layout: stacked
 back_url: /case-studies/
 category: Startup Operations
+work_type: In-house project
 hero_icon: ph-code
 lede: When the consultant becomes the client — how Claude Code was used to design and build this very site, with a lot of human input.
 date: 2026-04-01

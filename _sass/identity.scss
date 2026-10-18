@@ -9,14 +9,42 @@
   --md-ref-typeface-brand: var(--font-authority);
 }
 
-// --- Global Base ---
-body {
-  background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
-  font-family: var(--font-utility, sans-serif); // Default to Syne
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--blush);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+// --- Global Base ---
+// body {
+//   background-color: var(--md-sys-color-surface);
+//   color: var(--md-sys-color-on-surface);
+//   font-family: var(--font-utility, sans-serif); // Default to Syne
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
 main {
   background-color: var(--md-sys-color-surface);

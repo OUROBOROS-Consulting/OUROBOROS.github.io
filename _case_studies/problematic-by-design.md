@@ -1,55 +1,67 @@
 ---
-title: "Problematic by Design"
-description: "Using intentional friction and deliberate dissonance to create unforgettable brand identities."
+title: "Building the ouroborOS Brand System"
+description: "A look at the visual identity, website, and reusable design system developed for ouroborOS Consulting."
 layout: sections
 section_layout: stacked
 back_url: /case-studies/
-category: Brand Strategy
+category: Brand Design
+work_type: In-house project
 hero_icon: ph-palette
-lede: "In a digital landscape saturated with polished, AI-generated visuals, brands face a silent crisis: predictability is a metaphorical death sentence."
+lede: "How a distinct visual identity and reusable design system came together for an independent consulting practice."
 date: 2026-10-08
-tags: [Design, Branding, Strategy]
+tags: [Design, Branding, Web]
 
 about:
-  heading: Overview
+  heading: Project Overview
   body: >
-    Most modern branding strives for a frictionless, sanitized aesthetic that achieves high legibility but zero memorability. This case study explores the methodology of using deliberate dissonance to create brand identities that are visceral, impossible to ignore, and deeply intentional.
+    This is a record of the brand and website created for ouroborOS Consulting. The work brought
+    together a visual identity, web content, and reusable interface patterns for a small consulting
+    practice. It is the firm's own project, not a client engagement.
 
 pull_quote: >
-  "Problematic by design is not about being difficult; it is about being unforgettable."
+  A visual identity is more than its individual pieces; it is the system that holds them together.
 
 sections:
-  - id: problem
-    heading: The Trap of Polished Mediocrity
+  - id: context
+    heading: The Project
     body_paragraphs:
       - >
-        The current design standard favors "polished" outputs—often facilitated by generative AI. While these visuals appear professional, they frequently suffer from overflowing emptiness (high technical execution without a soul), brand homogenization (a sea of sameness), and functional dysfunction (aesthetics that look 'correct' but fail to evoke any psychological response).
+        The firm needed a website that could explain its work clearly and provide a consistent
+        foundation for future pages. The project covered visual direction, page structure, content,
+        and the templates and styles used across the site.
+      - >
+        Because this was an in-house project, there was no external client brief or independent
+        outcome measurement. The site serves as a working example of the firm's design and
+        development approach.
 
-  - id: solution
-    heading: Deliberate Dissonance
+  - id: identity
+    heading: Visual Identity
     body_paragraphs:
       - >
-        Instead of settling for mediocrity, we implement a method of intentional friction. By utilizing visual or tonal elements that are slightly "off," we trigger an instinctual engagement from the viewer. This is not chaos; it is controlled tension.
+        The identity pairs restrained dark and light surfaces with gold accents, expressive display
+        typography, and a marble texture. Abstract imagery and geometric details add atmosphere,
+        while the type hierarchy and repeated spacing patterns organize the content.
       - >
-        **Typographic Editorialization:** Typography is treated as a psychological tool. We use heavy, historical typefaces to lend borrowed gravitas to modern messages (the 'typographic wolf in sheep's clothing') or wide, structurally strange sans-serifs to make information feel surreal and deliberate.
-      - >
-        **Visceral Texture & UI Language:** To move beyond flat digital surfaces, we incorporate textures that evoke specific emotional states—from the tactile luxury of marble and leather to the technological tension of surveillance-inspired imagery like hexagon pixellation and CRT effects.
+        These choices are used selectively across the site. The intent is to give the brand a
+        recognizable character without making every page or component compete for attention.
 
   - id: system
-    heading: Moving from "Vibe" to "System"
+    heading: From Visual Direction to Reusable System
     body_paragraphs:
       - >
-        A high-concept aesthetic is dangerous if it lacks a rigorous framework. To prevent a brand from degrading into visual clutter, we implement three critical guardrails.
+        The site is built with Jekyll and Sass. Shared layouts and components support recurring
+        patterns such as page heroes, cards, navigation, and calls to action. Design tokens keep
+        color, typography, and spacing decisions consistent and make the system easier to maintain.
       - >
-        **I. Strict Visual Hierarchy:** Texture and dissonance must remain subservient to information. If the background competes with the text for attention, the design has failed. We establish strict rules where textures function as layers of depth rather than distractions.
-      - >
-        **II. Accessibility & Functional Integrity:** Aesthetic disruption must never interfere with usability. Our system is built on a foundation of accessibility: maintaining WCAG AAA contrast standards and using controlled, subtle animations that do not trigger photosensitivity issues.
-      - >
-        **III. Multi-Platform Scalability:** A system must work as effectively on a high-resolution website as it does in a mobile newsletter. We focus on creating "systems of friction" that are scalable, ensuring the brand identity remains coherent across all touchpoints without losing its edge.
+        Accessibility is an ongoing design requirement. The site uses responsive layouts and
+        semantic markup; no specific WCAG conformance level is claimed here. Individual pages and
+        interactions should continue to be tested as the site evolves.
 
-  - id: conclusion
-    heading: Conclusion
+  - id: reflection
+    heading: What This Demonstrates
     body_paragraphs:
       - >
-        By balancing radical aesthetic choices with uncompromising functional standards, we create brands that do more than just exist—they command space.
+        This project demonstrates how a solo practice can develop its own brand and web presence
+        using a shared design system. It documents decisions and implementation, rather than
+        claiming measured business results.
 ---

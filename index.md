@@ -2,16 +2,16 @@
 layout: home
 show_banner: true
 title: null
-description: "Transforming complex systems through design, automation, and strategy."
+description: "Clearer brands and websites, less repetitive work, and practical technical advice for small businesses and independent professionals in the Twin Cities."
 
 # Hero
 name_line1: ouroborOS
 # name_line2: Consulting
-eyebrow: Technology ⎈ Design ⎈ Strategy
+eyebrow: Brand & Website ⎈ Workflow & Automation ⎈ Technical Advice
 tagline_1: >
-  Where high-concept design meets award-winning technical architecture. In a sea of predictable, AI-generated sameness, differentiation is your competitive advantage.
+  Clearer brands and websites. Less repetitive work. Better technical decisions.
 tagline_2: >
-  I build bespoke visual identities and robust systems that utilize intentional friction and sophisticated engineering to demand attention. I don't just design how your brand looks; I engineer it to stand the test of time.
+  Practical design and technology for small businesses and independent professionals—scoped around what you need and what you can maintain.
 
 cta_label: Explore Services
 cta_icon: ph ph-fill ph-arrow-fat-line-right
@@ -30,9 +30,4 @@ stats:
   agencies: "5"
   agencies_icon: "ph ph-fill ph-buildings"
   agencies_note: "HHS Divisions Served (Federal Career)"
-  clients: "4+"
-  clients_icon: "ph ph-fill ph-users"
-  clients_note: "Consulting Engagements"
-
-cta_body: Reach out with a brief description of your technical requirements and availability. I'll follow up within 72 hours to discuss systems architecture and implementation.
 ---

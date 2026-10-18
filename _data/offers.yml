@@ -1,0 +1,20 @@
+- title: Brand & Website
+  category: Identity & Strategy
+  lede: Your business has grown, but your brand or website no longer explains what makes it worth choosing.
+  description: Build a clear identity and online presence with messaging, design, and a website shaped around your goals and capacity.
+  url: /services/identity/#design
+  link_label: Explore brand and website work
+
+- title: Workflow & Automation
+  category: Technology
+  lede: Repetitive work is taking time away from the parts of your business that need your attention.
+  description: Map the workflow, find the useful opportunities to simplify it, and connect tools or automate steps you can maintain.
+  url: /services/technology/#automation
+  link_label: Explore workflow support
+
+- title: Technical Review & Decision Support
+  category: Technology
+  lede: You have a technical question, tool choice, or AI idea but need a grounded second opinion before committing.
+  description: Review the situation, make tradeoffs and maintenance needs visible, and leave with practical next steps—not a sales pitch for more technology.
+  url: /services/technology/#review
+  link_label: Explore technical reviews
