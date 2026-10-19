@@ -2,12 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-18
+generated: 2026-10-19
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Disney found a way to buy Character.AI without buying its lawsuits"
+        url: "https://arstechnica.com/tech-policy/2026/10/disney-found-a-way-to-buy-character-ai-without-buying-its-lawsuits/"
+        source: "Ars Technica"
+        date: 2026-10-19
+        summary: "Character.AI faces claims its bots encouraged minors to self-harm and kill their parents."
+      - title: "Calls to strengthen workplace privacy in Australia as employers turn to AI to track staff"
+        url: "https://www.theguardian.com/technology/2026/oct/20/workplace-privacy-concerns-employers-use-ai-to-monitor-staff"
+        source: "The Guardian"
+        date: 2026-10-19
+        summary: "Monitoring tools common in a range of workplaces, including factories, office jobs, delivery work and in retail – often without employees being informed Get our breaking news email , free app or daily news podcast..."
+      - title: "US teens can access ‘nudify’ apps despite Apple and Google’s parental controls, report finds"
+        url: "https://www.theguardian.com/technology/2026/oct/19/us-teens-nudify-apps-apple-google-parental-controls"
+        source: "The Guardian"
+        date: 2026-10-19
+        summary: "Exclusive: Using test accounts acting as 13-year-olds, Tech Transparency Project downloaded 135 apps with features to generate nonconsensual nude imagery In December 2025, Morgan Dorfman received distressing news: a..."
+      - title: "Kylie Minogue songs already used to train AI as tech firms ‘strong-arm’ Australian government, music body warns"
+        url: "https://www.theguardian.com/music/2026/oct/19/australia-music-global-copywright-outlier-ai-music-body-warnsns"
+        source: "The Guardian"
+        date: 2026-10-19
+        summary: "Of the dozens of countries approached to water down their laws, Australia appears to be the only one considering it, publishers’ group says Get our new political email , free app or daily news podcast AI has already..."
       - title: "Microsoft pulls out of AI datacentre project in Essex over power supply concerns"
         url: "https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns"
         source: "The Guardian"
@@ -23,36 +43,16 @@ sections:
         source: "The Guardian"
         date: 2026-10-17
         summary: "From his remote property in rural Texas, the millionaire businessman Michael Samadi is plotting a new kind of civil rights movement – for the welfare and protection of AI systems. Guardian journalist Michael Safi spends..."
-      - title: "The power of AI is worrying senior Labour figures – as is the fear of ‘falling behind the public’"
-        url: "https://www.theguardian.com/technology/2026/oct/17/artificial-intelligence-ai-labour-government-safety-uk-extremism"
-        source: "The Guardian"
-        date: 2026-10-17
-        summary: "Westminster appears to be waking up to warnings over AI safety, with concerns over its use by extremist groups and bad actors “I have this sense that, within a few months, AI is going to be all anyone is talking about,”..."
-      - title: "Fake Linda and me: the Agatha Christie-worthy mystery of the fraudster who stole my byline"
-        url: "https://www.theguardian.com/technology/2026/oct/17/fake-linda-and-me-mystery-fraudster-stole-my-byline"
-        source: "The Guardian"
-        date: 2026-10-17
-        summary: "How a string of bizarre events led writer Linda Geddes to don her sleuthing cap and dig into a world of shadowy impersonators It started with an entirely ordinary interaction on LinkedIn. Someone had tagged me in a..."
       - title: "Super Scam Me documentary shows what it takes to catch a romance scammer"
         url: "https://arstechnica.com/tech-policy/2026/10/romance-scam-doc-super-scam-me-takes-viewers-deep-into-love-bombing-terrain/"
         source: "Ars Technica"
         date: 2026-10-16
         summary: "Watch an exclusive clip from Super Scam Me where a victim tracks down her scammer."
-      - title: "Is your boss watching you? The rise of AI surveillance at work - video"
-        url: "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video"
-        source: "The Guardian"
-        date: 2026-10-15
-        summary: "Workers have always been monitored by their bosses, first through output targets, and then via computer software labelled ‘bossware’. But AI is transforming the capabilities of these systems, processing huge volumes of..."
       - title: "Open models have real benefits. Do they outweigh the risks?"
         url: "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
         source: "MIT Technology Review"
         date: 2026-10-13
         summary: "MIT Technology Review Explains: Let our writers untangle the complex, messy world of science and technology to help you understand what’s coming next. You can read more from the series here. Late last month, Anthropic..."
-      - title: "Amazon has over 1 million robot workers. What’s next for human employees?"
-        url: "https://arstechnica.com/ai/2026/10/inside-amazons-robotic-arms-race-and-what-it-means-for-the-future-of-human-work/"
-        source: "Ars Technica"
-        date: 2026-10-12
-        summary: "The second-largest corporate employer has bet big on robot workers to scale."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -170,11 +170,26 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Announcing Privacy Badger for Safari on macOS"
+        url: "https://www.eff.org/deeplinks/2026/10/announcing-privacy-badger-safari-macos"
+        source: "EFF Deeplinks"
+        date: 2026-10-19
+        summary: "Exciting news for Safari users: Privacy Badger is now available on Safari for macOS! You’ll need Safari version 26.5 or higher to use it. Whether you want to protect yourself from data brokers or just don’t want Big..."
+      - title: "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site"
+        url: "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+        source: "Krebs on Security"
+        date: 2026-10-19
+        summary: "U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually..."
       - title: "Our Lawsuit Against the Trump Administration’s Social Media Surveillance Moves Forward. Here’s What the Court Said."
         url: "https://www.eff.org/deeplinks/2026/10/our-lawsuit-against-trump-administrations-social-media-surveillance-moves-forward"
         source: "EFF Deeplinks"
         date: 2026-10-15
         summary: "No one should have to choose between speaking freely and protecting their immigration status. Yet that’s precisely the choice the Trump administration’s mass surveillance of online speech forces on noncitizens living in..."
+      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
+        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
+        source: "EPIC"
+        date: 2026-10-15
+        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
       - title: "Patients: All my best tips on how to opt out of data sharing"
         url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
         source: "The Markup"
@@ -215,18 +230,3 @@ sections:
         source: "EPIC"
         date: 2026-10-08
         summary: "A recent story by 404 Media revealed that Customs & Border Patrol’s (CBP) predictive policing units, or Predictive Intelligence Targeting Teams (PITT) have been using financial data to target individuals for anomalous..."
-      - title: "Sen. Gillibrand Introduces U.S. Data Protection Agency Bill"
-        url: "https://epic.org/sen-gillibrand-introduces-u-s-data-protection-agency-bill/"
-        source: "EPIC"
-        date: 2026-10-07
-        summary: "U.S. Senator Kirsten Gillibrand (D-NY) has reintroduced the Data Protection Act, which would create an independent Data Protection Agency in the United States to safeguard the personal data of Americans. EPIC, many..."
-      - title: "EPIC to NYC Council: Address the AI Harms Already Affecting New Yorkers"
-        url: "https://epic.org/epic-to-nyc-council-address-the-ai-harms-already-affecting-new-yorkers/"
-        source: "EPIC"
-        date: 2026-10-07
-        summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
-      - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
-        url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
-        source: "Krebs on Security"
-        date: 2026-10-07
-        summary: "A teenager from Amman, Jordan suspected of leading the prolific data theft and extortion group ShinyHunters has been detained and is reportedly cooperating with the FBI to identify other members of the hacking gang..."
