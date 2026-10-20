@@ -2,12 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-19
+generated: 2026-10-20
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Labor and the Coalition are poised to take a reckless gamble on AI. Haven’t they realised community support has collapsed? | Edward Santow and Sarah Sacher"
+        url: "https://www.theguardian.com/technology/commentisfree/2026/oct/21/labor-coalition-poised-to-take-reckless-gamble-on-ai-joint-select-committee"
+        source: "The Guardian"
+        date: 2026-10-20
+        summary: "Australian workers expect the government to act to protect them from AI harms. There is a clear reform solution at hand Get our new political email , free app or daily news podcast Australia’s major political parties..."
+      - title: "US bans use of China’s DeepSeek AI tools by government agencies"
+        url: "https://www.theguardian.com/us-news/2026/oct/20/us-bans-china-deepseek-ai-tools-government-agencies"
+        source: "The Guardian"
+        date: 2026-10-20
+        summary: "Use of tools ‘may result in the transfer of sensitive data’ to China, defense department says The US government on Monday ordered its agencies to stop using artificial intelligence (AI) tools from the Chinese startup..."
+      - title: "I’m a CTO. AI still needs your human expertise | Madhu Shashanka"
+        url: "https://www.theguardian.com/technology/2026/oct/20/ai-human-judgment"
+        source: "The Guardian"
+        date: 2026-10-20
+        summary: "AI is increasingly getting good at doing some tasks, but it can never replace human workers’ judgment Autonomous cars, which may be the safest we have built, keep getting easily avoidable parking tickets. While Waymos..."
+      - title: "Don’t be fooled. The AI that was supposed to save us time is doing just the opposite | Gaby Hinsliff"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/20/ai-supposed-to-save-time-opposite-government-uk"
+        source: "The Guardian"
+        date: 2026-10-20
+        summary: "The government says it can transform the state with AI, but it is no match for the resulting stream of machine-generated slop. And we all pay the cost Another morning, another avalanche of emails. Even after a guilty..."
+      - title: "Accused OpenAI spy had folder called “Saudi Gov Docs,” FBI says"
+        url: "https://arstechnica.com/tech-policy/2026/10/accused-openai-spy-had-folder-called-saudi-gov-docs-fbi-says/"
+        source: "Ars Technica"
+        date: 2026-10-19
+        summary: "US fears Saudi government will help ex-OpenAI engineer flee spying charges."
       - title: "Disney found a way to buy Character.AI without buying its lawsuits"
         url: "https://arstechnica.com/tech-policy/2026/10/disney-found-a-way-to-buy-character-ai-without-buying-its-lawsuits/"
         source: "Ars Technica"
@@ -23,26 +48,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-19
         summary: "Exclusive: Using test accounts acting as 13-year-olds, Tech Transparency Project downloaded 135 apps with features to generate nonconsensual nude imagery In December 2025, Morgan Dorfman received distressing news: a..."
-      - title: "Kylie Minogue songs already used to train AI as tech firms ‘strong-arm’ Australian government, music body warns"
-        url: "https://www.theguardian.com/music/2026/oct/19/australia-music-global-copywright-outlier-ai-music-body-warnsns"
-        source: "The Guardian"
-        date: 2026-10-19
-        summary: "Of the dozens of countries approached to water down their laws, Australia appears to be the only one considering it, publishers’ group says Get our new political email , free app or daily news podcast AI has already..."
-      - title: "Microsoft pulls out of AI datacentre project in Essex over power supply concerns"
-        url: "https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns"
-        source: "The Guardian"
-        date: 2026-10-18
-        summary: "Development by UK firm Nscale heralded by ministers as largest of its kind in country loses anchor tenant The development of a huge AI datacentre hailed by the UK government has received a fresh setback after Microsoft..."
-      - title: "World leaders must wise up to threat of cyber-attacks or rogue fridges will be least of their worries | Heather Stewart"
-        url: "https://www.theguardian.com/business/2026/oct/18/world-leaders-threat-cyber-attacks-rogue-fridges-financial-system"
-        source: "The Guardian"
-        date: 2026-10-18
-        summary: "Global cooperation seems unlikely despite AI increasing the risk of digital fraud and the need to protect the financial system Rogue French fridges were an unlikely talking point for the world’s leading economists..."
-      - title: "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 - podcast"
-        url: "https://www.theguardian.com/australia-news/audio/2026/oct/18/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-ep-6-full-story-podcast"
-        source: "The Guardian"
-        date: 2026-10-17
-        summary: "From his remote property in rural Texas, the millionaire businessman Michael Samadi is plotting a new kind of civil rights movement – for the welfare and protection of AI systems. Guardian journalist Michael Safi spends..."
       - title: "Super Scam Me documentary shows what it takes to catch a romance scammer"
         url: "https://arstechnica.com/tech-policy/2026/10/romance-scam-doc-super-scam-me-takes-viewers-deep-into-love-bombing-terrain/"
         source: "Ars Technica"
@@ -121,6 +126,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Japanese institute finds materials researcher with 41 retractions guilty of ‘extensive’ manipulation"
+        url: "https://retractionwatch.com/2026/10/19/joseph-raj-xavier-national-institute-materials-science-saveetha-retractions-extensive-manipulation/"
+        source: "Retraction Watch"
+        date: 2026-10-19
+        summary: "An investigation by a national research institute in Japan has concluded one of its former researchers fabricated and falsified figures in seven papers. Two publishers confirmed they are investigating the articles..."
       - title: "‘Springer’ agency website offering authorship for sale goes down following Retraction Watch story"
         url: "https://retractionwatch.com/2026/10/16/springer-agency-website-offering-authorship-for-sale-goes-down-following-retraction-watch-story/"
         source: "Retraction Watch"
@@ -156,11 +166,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-13
         summary: "In March, Thomas Harvey sat in on a talk at the American Physical Society’s summit in Denver on a new model of the universe that claimed to eliminate the need for dark matter and dark energy. William George, a fluid..."
-      - title: "A company named Springer that isn’t the publisher is offering authorship for sale"
-        url: "https://retractionwatch.com/2026/10/12/springer-journals-online-authorship-for-sale/"
-        source: "Retraction Watch"
-        date: 2026-10-12
-        summary: "Computer scientist Richard Fateman got an email in August that was completely “out of the blue”: an offer of coauthorship in articles headed for publication in prestigious journals, in exchange for a fraction of the..."
       - title: "U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU"
         url: "https://www.propublica.org/article/aau-child-sex-abuse-house-energy-commerce-committee-probe-amateur-athletic-union"
         source: "ProPublica"
@@ -170,6 +175,11 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Require Police to Get a Warrant to Search ALPR Data"
+        url: "https://www.eff.org/deeplinks/2026/10/require-police-get-warrant-search-alpr-data"
+        source: "EFF Deeplinks"
+        date: 2026-10-19
+        summary: "This post was co-written by Andi Cao , an EFF legal intern. Automated license plate readers (ALPRs) are mass surveillance. They photograph every passing car and log where and when it was captured, building a searchable..."
       - title: "Announcing Privacy Badger for Safari on macOS"
         url: "https://www.eff.org/deeplinks/2026/10/announcing-privacy-badger-safari-macos"
         source: "EFF Deeplinks"
@@ -185,11 +195,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-15
         summary: "No one should have to choose between speaking freely and protecting their immigration status. Yet that’s precisely the choice the Trump administration’s mass surveillance of online speech forces on noncitizens living in..."
-      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
-        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
-        source: "EPIC"
-        date: 2026-10-15
-        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
       - title: "Patients: All my best tips on how to opt out of data sharing"
         url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
         source: "The Markup"
