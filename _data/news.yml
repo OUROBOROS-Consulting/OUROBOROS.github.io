@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-20
+generated: 2026-10-21
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -28,16 +28,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-20
         summary: "The government says it can transform the state with AI, but it is no match for the resulting stream of machine-generated slop. And we all pay the cost Another morning, another avalanche of emails. Even after a guilty..."
-      - title: "Accused OpenAI spy had folder called “Saudi Gov Docs,” FBI says"
-        url: "https://arstechnica.com/tech-policy/2026/10/accused-openai-spy-had-folder-called-saudi-gov-docs-fbi-says/"
-        source: "Ars Technica"
-        date: 2026-10-19
-        summary: "US fears Saudi government will help ex-OpenAI engineer flee spying charges."
-      - title: "Disney found a way to buy Character.AI without buying its lawsuits"
-        url: "https://arstechnica.com/tech-policy/2026/10/disney-found-a-way-to-buy-character-ai-without-buying-its-lawsuits/"
-        source: "Ars Technica"
-        date: 2026-10-19
-        summary: "Character.AI faces claims its bots encouraged minors to self-harm and kill their parents."
       - title: "Calls to strengthen workplace privacy in Australia as employers turn to AI to track staff"
         url: "https://www.theguardian.com/technology/2026/oct/20/workplace-privacy-concerns-employers-use-ai-to-monitor-staff"
         source: "The Guardian"
@@ -48,11 +38,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-19
         summary: "Exclusive: Using test accounts acting as 13-year-olds, Tech Transparency Project downloaded 135 apps with features to generate nonconsensual nude imagery In December 2025, Morgan Dorfman received distressing news: a..."
-      - title: "Super Scam Me documentary shows what it takes to catch a romance scammer"
-        url: "https://arstechnica.com/tech-policy/2026/10/romance-scam-doc-super-scam-me-takes-viewers-deep-into-love-bombing-terrain/"
-        source: "Ars Technica"
-        date: 2026-10-16
-        summary: "Watch an exclusive clip from Super Scam Me where a victim tracks down her scammer."
       - title: "Open models have real benefits. Do they outweigh the risks?"
         url: "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
         source: "MIT Technology Review"
@@ -62,6 +47,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Jess Phillips hopes supreme court ‘sees sense’ and overturns domestic abuse ruling"
+        url: "https://www.theguardian.com/society/2026/oct/21/jess-phillips-hopes-supreme-court-sees-sense-and-overturns-domestic-abuse-ruling"
+        source: "The Guardian"
+        date: 2026-10-21
+        summary: "Court of appeal decision prevents woman from suing police and CPS for disclosing her address to violent ex-partner The Labour MP Jess Phillips has said she hopes the UK’s highest court “sees sense” and overturns a..."
       - title: "‘Manosphere’ warnings as rates of family and sexual violence against Australian children rise sharply"
         url: "https://www.theguardian.com/australia-news/2026/oct/14/family-and-sexual-violence-rates-against-australian-children-rise-sharply-as-researchers-warn-of-manosphere"
         source: "The Guardian"
@@ -87,11 +77,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-05
         summary: "Women ‘set back by 50 years’ as Bolivia, Chile, Argentina and Peru debate tougher penalties for false reports of sexual assaults, despite such cases being rare The Chilean senator Vanessa Kaiser is on a mission. In her..."
-      - title: "My sister Nicole married OJ Simpson. This is what I wish I had known"
-        url: "https://www.theguardian.com/lifeandstyle/2026/oct/05/denise-brown-sister-nicole-brown-simpson-murder-oj-simpson"
-        source: "The Guardian"
-        date: 2026-10-05
-        summary: "Since Nicole Brown Simpson’s murder in 1994, Denise Brown has devoted herself to ending domestic violence. She talks about her beloved sister, the trauma she witnessed in the couple’s marriage and how lives can be saved..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -166,15 +151,15 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-13
         summary: "In March, Thomas Harvey sat in on a talk at the American Physical Society’s summit in Denver on a new model of the universe that claimed to eliminate the need for dark matter and dark energy. William George, a fluid..."
-      - title: "U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU"
-        url: "https://www.propublica.org/article/aau-child-sex-abuse-house-energy-commerce-committee-probe-amateur-athletic-union"
-        source: "ProPublica"
-        date: 2026-10-08
-        summary: "The post U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Victory! Court Rules OPM Data Disclosure to DOGE Is Unlawful"
+        url: "https://www.eff.org/deeplinks/2026/10/victory-court-rules-opms-disclosure-personal-records-doge-unlawful"
+        source: "EFF Deeplinks"
+        date: 2026-10-20
+        summary: "In a victory for data privacy, a federal court in New York definitively ruled that the Office of Personnel Management (OPM) violated the law when it disclosed millions of federal employee records to DOGE agents. In a..."
       - title: "Require Police to Get a Warrant to Search ALPR Data"
         url: "https://www.eff.org/deeplinks/2026/10/require-police-get-warrant-search-alpr-data"
         source: "EFF Deeplinks"
@@ -195,6 +180,11 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-15
         summary: "No one should have to choose between speaking freely and protecting their immigration status. Yet that’s precisely the choice the Trump administration’s mass surveillance of online speech forces on noncitizens living in..."
+      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
+        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
+        source: "EPIC"
+        date: 2026-10-15
+        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
       - title: "Patients: All my best tips on how to opt out of data sharing"
         url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
         source: "The Markup"
@@ -220,18 +210,8 @@ sections:
         source: "The Markup"
         date: 2026-10-14
         summary: "Doctoralia said it was removing trackers that communicated with social media companies out of an abundance of caution"
-      - title: "As Federal Court Rules ALPRs are Mass Surveillance, EFF Gets Disappointing Ruling"
-        url: "https://www.eff.org/deeplinks/2026/10/federal-court-rules-alprs-are-mass-surveillance-eff-gets-disappointing-ruling"
-        source: "EFF Deeplinks"
-        date: 2026-10-13
-        summary: "In an extremely disappointing ruling , a California trial court dismissed SIREN v. San Jose , our case challenging the city of San Jose’s warrantless searches of its vast stores of automated license plate reader (ALPR)..."
       - title: "What it takes for voters to be resilient against AI misinformation"
         url: "https://themarkup.org/hello-world/2026/10/10/election-ai-resilience"
         source: "The Markup"
         date: 2026-10-10
         summary: "A conversation with political scientist Thessalia Merivaki"
-      - title: "CBP’s Predictive Policing Units Have Financial Data, Won’t Say How They Got It"
-        url: "https://epic.org/cbps-predictive-policing-units-have-financial-data-wont-say-how-they-got-it/"
-        source: "EPIC"
-        date: 2026-10-08
-        summary: "A recent story by 404 Media revealed that Customs & Border Patrol’s (CBP) predictive policing units, or Predictive Intelligence Targeting Teams (PITT) have been using financial data to target individuals for anomalous..."
