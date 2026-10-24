@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-23
+generated: 2026-10-24
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Opposition deepfake video of Spanish PM’s wife sparks outrage before election"
+        url: "https://www.theguardian.com/world/2026/oct/23/opposition-deepfake-video-spain-election"
+        source: "The Guardian"
+        date: 2026-10-24
+        summary: "Video shows AI likenesses of people linked to Pedro Sánchez’s Socialist party appearing to admit to wrongdoing A political ad from Spain’s main opposition party that used a deepfake video of the prime minister’s wife..."
+      - title: "John Healey pledges to use budget to harness power of AI to bolster Britain’s security"
+        url: "https://www.theguardian.com/uk-news/2026/oct/24/john-healey-pledges-to-use-budget-to-harness-power-of-ai-to-bolster-britains-security"
+        source: "The Guardian"
+        date: 2026-10-24
+        summary: "Chancellor says government to commit hundreds of millions to develop ‘distinctively British’ approach to AI John Healey has pledged to use Wednesday’s budget to harness the power of artificial intelligence to bolster..."
+      - title: "Updated Google privacy policy says your Gmail might be used for advertising"
+        url: "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/"
+        source: "Ars Technica"
+        date: 2026-10-23
+        summary: "Turning on Personal Intelligence gives the company more data for ad targeting."
       - title: "The Guardian view on AI safety: the push for global regulation must advance | Editorial"
         url: "https://www.theguardian.com/commentisfree/2026/oct/22/the-guardian-view-on-ai-safety-the-push-for-global-regulation-must-advance"
         source: "The Guardian"
@@ -28,16 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-22
         summary: "I’ve been banging the drum about these vulnerabilities for years. It will take more than a handful of exhausted developers to keep us safe Parts of the internet are going dark. In the Netherlands, government websites..."
-      - title: "AI firms say UK has a year to head off datacentre protests before construction is threatened"
-        url: "https://www.theguardian.com/uk-news/2026/oct/22/ai-firms-say-uk-has-a-year-to-head-off-datacentre-protests-before-construction-is-threatened"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "Exclusive: Nvidia, Microsoft and Cisco taskforce urges ministers to offer areas greater benefits from tech infrastructure amid fears of US-style opposition AI companies have told ministers they have 12 months to head..."
-      - title: "‘I’d consider replacing one of my children’: Taika Waititi on robot kids, his cheese-o-meter and Klara and the Sun"
-        url: "https://www.theguardian.com/film/2026/oct/22/taika-waititi-kazuo-ishiguro-robot-friend-klara-and-the-sun"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "The director has turned Kazuo Ishiguro’s acclaimed novel about an ailing adolescent and her glitchy robot friend into a thought-provoking film. What do the pair think this story says about tech, love and grief? In the..."
       - title: "Judge rejects Trump’s wild claim EPA can dismiss data center pollution lawsuits"
         url: "https://arstechnica.com/tech-policy/2026/10/judge-rejects-trumps-wild-claim-epa-can-dismiss-data-center-pollution-lawsuits/"
         source: "Ars Technica"
@@ -63,11 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-20
         summary: "Meta is suspending the sharing feature while it investigates its privacy."
-      - title: "Accused OpenAI spy had folder called “Saudi Gov Docs,” FBI says"
-        url: "https://arstechnica.com/tech-policy/2026/10/accused-openai-spy-had-folder-called-saudi-gov-docs-fbi-says/"
-        source: "Ars Technica"
-        date: 2026-10-19
-        summary: "US fears Saudi government will help ex-OpenAI engineer flee spying charges."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Journal updates retraction notice as Princeton student author stays in the spotlight"
+        url: "https://retractionwatch.com/2026/10/23/correction-retraction-rishika-porandla-princeton-macromolecular-materials-engineering-wiley/"
+        source: "Retraction Watch"
+        date: 2026-10-23
+        summary: "A Wiley journal has corrected a retraction notice to clarify the author, a Princeton student, never conducted the study in the first place, as the student has gained publicity for visits to the offices of Texas..."
       - title: "Thousands of research studies violate journal policies on collaborations between editors and authors"
         url: "https://retractionwatch.com/2026/10/22/editorcheck-handling-editors-authors-collaboration-plos-mdpi-joint-conference-digital-libraries/"
         source: "Retraction Watch"
@@ -166,11 +171,6 @@ sections:
         source: "ProPublica"
         date: 2026-10-15
         summary: "The post Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected appeared first on ProPublica ."
-      - title: "Paper touted by MD Anderson gets expression of concern for data ‘concerns’"
-        url: "https://retractionwatch.com/2026/10/14/science-translational-medicine-md-anderson-expression-of-concern-data-concerns-china/"
-        source: "Retraction Watch"
-        date: 2026-10-14
-        summary: "Science Translational Medicine has issued an expression of concern over “a series” of data concerns in a paper lauded by MD Anderson Cancer Center last year for identifying “a new driver” of bone metastasis. The..."
       - title: "These Women Were Trying to Escape Domestic Abuse. ICE Detained Them Instead."
         url: "https://www.propublica.org/article/domestic-violence-immigrant-victims-ice-detention"
         source: "ProPublica"
