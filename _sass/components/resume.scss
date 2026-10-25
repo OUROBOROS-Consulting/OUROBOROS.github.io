@@ -1,0 +1,70 @@
+.skill-group {
+  margin-bottom: var(--md-sys-spacing-xl);
+}
+
+.skill-group h3 {
+  /* // Use the secondary token color and a slightly bolder style */
+  color: var(--md-sys-color-secondary);
+  font-size: var(--p-font-headline-medium);
+  margin-bottom: var(--md-sys-spacing-sm);
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md-sys-spacing-xs);
+  padding: 5px 0;
+}
+
+.badge {
+  /* // Base token color and shape for the badge container */
+  display: flex;
+  align-items: center;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-on-primary);
+  padding: 8px 16px;
+  border-radius: var(--md-sys-shape-full);
+  font-size: var(--p-font-body-medium);
+  cursor: default;
+  /* Indicate these are descriptive tags */
+
+  /* Hover effect for a polished, interactive feel (Tech Vibe) */
+  &:hover {
+    opacity: 0.9;
+    box-shadow: 0 4px 12px rgba(var(--md-sys-color-primary), 0.3);
+    transition: all 0.2s ease-out;
+  }
+}
+
+/* Icon Handling (Ensuring icons align correctly) */
+.badge i {
+  /* // Forcing the icon color to be part of the badge's text color for consistency */
+  color: var(--md-sys-color-on-primary);
+  margin-right: var(--md-sys-spacing-xs);
+}
+
+
+/* ========================================= */
+/* General Global Improvements (Tech Vibe) */
+/* ========================================= */
+
+header {
+  /* // Make the header feel more like a branding component */
+  padding-bottom: calc(var(--md-sys-spacing-lg));
+  border-bottom: 2px solid var(--md-sys-color-outline);
+}
+
+h2 {
+  font-size: var(--p-font-display-medium);
+  margin-top: calc(var(--md-sys-spacing-xl));
+  margin-bottom: var(--md-sys-spacing-sm);
+
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(var(--md-sys-color-primary), 0.2);
+}
+
+/* Experience section items could also benefit from this professional touch */
+section p {
+  margin-top: var(--md-sys-spacing-xs);
+  line-height: 1.6;
+}

@@ -31,5 +31,6 @@
    "editor.fontFamily": "",
    "terminal.integrated.tabs.defaultColor": "terminal.ansiGreen",
    "editor.defaultFormatter": "vscode.html-language-features",
-   "editor.wordWrap": "bounded"
+   "editor.wordWrap": "bounded",
+   "chat.planAgent.defaultModel": "gemma4:26b (ollama-models)"
 }

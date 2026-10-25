@@ -3,6 +3,7 @@
 
 .c-hero {
   position: relative;
+  // background-color: var(--md-sys-color-surface-container-high);
   box-sizing: border-box;
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.9fr);

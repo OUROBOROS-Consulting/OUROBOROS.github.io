@@ -87,9 +87,10 @@ body {
 }
 
 .c-page-hero {
-  background-image:
-    linear-gradient(var(--site-hero-home-overlay), var(--site-hero-home-overlay)),
-    url("../images/Abstract.jpg");
+  background: linear-gradient(25deg, var(--p-color-ink-palantir-dark), black, var(--p-color-ink-palantir-dark));
+  // background-image:
+  //   linear-gradient(var(--site-hero-home-overlay), var(--site-hero-home-overlay)),
+  //   url("../images/Abstract.jpg");
   background-size: cover, cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -230,7 +231,7 @@ body {
 .c-page-hero {
   border: 0;
   border-bottom: var(--site-border-width) solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
-  background-image: none;
+  // background-image: none;
 }
 
 .c-page-hero__identity {

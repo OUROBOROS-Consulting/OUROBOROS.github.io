@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<!-- ── PSA Hero ──────────────────────────────────────────────────────────── -->
+{% include page-hero.html
+  back_url="/resources/articles/"
+  back_label="All Articles"
+  tagline="false"
+  lede_optional="true"
+  category_default="Article"
+  tag_style="pill"
+  cta_mode="psa"
+%}
+
+<!-- ── PDF Embed ───────────────────────-->
+<div class="substack-post-embed">
+  <p lang="en">The Debt of Vibes by Apostolos Stamenos, MS</p>
+  <p>With AI, the price of creation has vanished, but the cost of liability is skyrocketing. Can you
+    afford to pay that debt?</p><a data-post-link
+    href="https://astamenos.substack.com/p/the-debt-of-vibes">Read on Substack</a>
+</div>
+<script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+
+<!-- ── Optional prose body ───────────────────────────────────────────────── -->
+{% if content != "" %}
+<div class="page-body">
+  <div class="post-body">{{ content }}</div>
+</div>
+{% endif %}
