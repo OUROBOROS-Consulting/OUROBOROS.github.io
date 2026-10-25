@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-24
+generated: 2026-10-25
 sections:
   - id: ai
     title: "Artificial intelligence"
