@@ -2,12 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-25
+generated: 2026-10-26
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Anthropic’s Claude AI model accessed Georgia voter data in US"
+        url: "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us"
+        source: "The Guardian"
+        date: 2026-10-26
+        summary: "Latest example of unauthorised behaviour shows AI model bypassed paywall to access data as part of statistics project Business live – latest updates Anthropic sued for allegedly using 274 Elvis songs to train AI models..."
+      - title: "The focus on AI safety disasters ignores everyday harms"
+        url: "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/"
+        source: "MIT Technology Review"
+        date: 2026-10-26
+        summary: "Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are..."
+      - title: "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models"
+        url: "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music"
+        source: "The Guardian"
+        date: 2026-10-25
+        summary: "Authentic Brands Group says AI company infringed on rights of songs by the King such as Can’t Help Falling in Love The owners of Elvis Presley ’s music catalogue are suing the artificial intelligence ( AI ) company..."
+      - title: "‘Extremely disappointed’: WA government seeks reimbursement from Deloitte over flawed university report"
+        url: "https://www.theguardian.com/australia-news/2026/oct/26/deloitte-report-wa-university-mergers-260m-discrepancy-ai"
+        source: "The Guardian"
+        date: 2026-10-25
+        summary: "State paid consultancy firm $166,000 for feasibility study on merging the three tertiary institutions Get our breaking news email , free app or daily news podcast The Western Australian government has said it is..."
       - title: "Opposition deepfake video of Spanish PM’s wife sparks outrage before election"
         url: "https://www.theguardian.com/world/2026/oct/23/opposition-deepfake-video-spain-election"
         source: "The Guardian"
@@ -23,26 +43,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-23
         summary: "Turning on Personal Intelligence gives the company more data for ad targeting."
-      - title: "The Guardian view on AI safety: the push for global regulation must advance | Editorial"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/22/the-guardian-view-on-ai-safety-the-push-for-global-regulation-must-advance"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "The current US administration is an obstacle, but public demand for protection will ultimately prevail Organisations around the world scrambled on Thursday to fix critical flaws in PHP, the software that powers much of..."
-      - title: "The race to fix huge PHP code flaw at the heart of the internet - The Latest"
-        url: "https://www.theguardian.com/news/video/2026/oct/22/the-race-to-fix-huge-php-flaw-at-the-heart-of-the-internet-the-latest"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "Websites around the world have been taken offline as governments and businesses scramble to fix a flaw in the computer language PHP. There are fears that hackers could exploit the vulnerability to steal data, take..."
-      - title: "PHP: Pretty Huge Problem with the internet – The Latest"
-        url: "https://www.theguardian.com/news/audio/2026/oct/22/php-pretty-huge-problem-with-the-internet-the-latest"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "Websites around the world have been taken offline as governments and businesses scramble to fix a flaw in the computer language PHP. There are fears that hackers could exploit the vulnerability to steal data, take..."
-      - title: "The internet has broken – again. Shouldn’t the tech firms that make billions from it pay to fix it? | Chris Stokel-Walker"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/22/website-shutdowns-ai-human-inaction-developers"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "I’ve been banging the drum about these vulnerabilities for years. It will take more than a handful of exhausted developers to keep us safe Parts of the internet are going dark. In the Netherlands, government websites..."
       - title: "Judge rejects Trump’s wild claim EPA can dismiss data center pollution lawsuits"
         url: "https://arstechnica.com/tech-policy/2026/10/judge-rejects-trumps-wild-claim-epa-can-dismiss-data-center-pollution-lawsuits/"
         source: "Ars Technica"
@@ -72,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘He was like 10 men after taking cocaine‘: how Britain’s drug habit is fuelling domestic abuse"
+        url: "https://www.theguardian.com/society/2026/oct/26/cocaine-britain-drug-habit-fuelling-domestic-abuse"
+        source: "The Guardian"
+        date: 2026-10-26
+        summary: "Home Office figures show nearly two-thirds of drug tests carried out on arrested abuse suspects detected use of a drug that ‘boosts confidence but increases paranoia’ During lockdown, Charlotte and her ex-partner would..."
       - title: "‘No indications’ PHP code flaw has led to government systems being hacked, cyber security official says – as it happened"
         url: "https://www.theguardian.com/politics/live/2026/oct/22/john-healey-chancellor-budget-red-tape-small-businsesses-jackdaw-oil-latest-news-updates"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-11
         summary: "Deceased were all members of the same family, officials say, and one of victims placed the initial emergency call Five people were shot and killed in an apparent murder-suicide at a residence in Georgia on Friday..."
-      - title: "‘I thought the baby would change him’: the women whose pregnancies are blighted by domestic abuse"
-        url: "https://www.theguardian.com/society/2026/oct/07/i-thought-the-baby-would-change-him-the-women-whose-pregnancies-are-blighted-by-domestic-abuse"
-        source: "The Guardian"
-        date: 2026-10-07
-        summary: "An estimated 20,000 cases are disclosed to maternity services in England every year. Two survivors tell their stories Evie bought the baby monitor with a rare flicker of enthusiasm, having become increasingly numb as..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -166,16 +166,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-15
         summary: "Annals of Internal Medicine has retracted a paper on treatments for Long COVID because the authors did not report dosing information for metformin, one of the drugs tested in the study. The editor-in-chief of the..."
-      - title: "Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected"
-        url: "https://www.propublica.org/article/missouri-plan-judge-selection-republican-attacks"
-        source: "ProPublica"
-        date: 2026-10-15
-        summary: "The post Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected appeared first on ProPublica ."
-      - title: "These Women Were Trying to Escape Domestic Abuse. ICE Detained Them Instead."
-        url: "https://www.propublica.org/article/domestic-violence-immigrant-victims-ice-detention"
-        source: "ProPublica"
-        date: 2026-10-14
-        summary: "The post These Women Were Trying to Escape Domestic Abuse. ICE Detained Them Instead. appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -185,26 +175,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-22
         summary: "Canada’s Parliament is debating a massive expansion of surveillance powers that will threaten the privacy and security of millions of people. Bill C-22, also called the Lawful Access Act, has already passed the House of..."
-      - title: "EPIC Urges D.C. Council to Protect Student Privacy and Pass Strong Procurement Guidelines for Edtech"
-        url: "https://epic.org/epic-urges-d-c-council-to-protect-student-privacy-and-pass-strong-procurement-guidelines-for-edtech/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "EPIC submitted public testimony to the D.C. Council Committee of the Whole urging them to pass strong procurement guidelines for technology that utilizes AI or automated decision-making systems in schools."
-      - title: "Meta Fined $25 Billion by New Mexican Court for Violating Privacy During Cambridge Analytica Scandal"
-        url: "https://epic.org/meta-fined-25-billion-by-new-mexican-court-for-violating-privacy-during-cambridge-analytica-scandal/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "On Wednesday, the New Mexico Department of Justice announced that the state is issuing a $25 billion penalty against Meta for the company’s violations of New Mexico’s Unfair Practices Act."
-      - title: "On the Road to Risk: Connected Cars Put Drivers’ Privacy and Safety in Harm’s Way"
-        url: "https://epic.org/on-the-road-to-risk-connected-cars-put-drivers-privacy-and-safety-in-harms-way/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "Connected car privacy is now a mainstream problem for nearly every driver, with even greater risks for certain populations, like targets of domestic violence (DV). Recent state laws, federal regulatory efforts, and..."
-      - title: "EPIC Joins Coalition Urging New York Governor to Sign and Strengthen Surveillance Pricing Law"
-        url: "https://epic.org/epic-joins-coalition-urging-new-york-governor-to-sign-and-strengthen-surveillance-pricing-law/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "EPIC, along with four other organizations, sent a letter to New York Governor Kathy Hochul recommending that she strengthen and sign New York’s One Fair Price Act, a bill that would ban surveillance pricing that is..."
       - title: "Introducing Our New Surveillance Self-Defense Guide: Online Privacy for Parents and Youth"
         url: "https://www.eff.org/deeplinks/2026/10/introducing-our-new-surveillance-self-defense-guide-online-privacy-parents-and"
         source: "EFF Deeplinks"
@@ -215,21 +185,11 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-21
         summary: "The Brazilian National Data Protection Agency (ANPD) plays a pivotal role in the regulation of digital platforms according to new legislation approved in Brazil. Throughout this year, EFF has presented comments, filed..."
-      - title: "Encrypted Messaging Platforms Still Under Attack"
-        url: "https://epic.org/encrypted-messaging-platforms-still-under-attack/"
-        source: "EPIC"
-        date: 2026-10-21
-        summary: "Global Encryption Day is an annual day of action when advocates, champions, and everyday people come together to celebrate, promote, and defend encryption, a key security approach that enables safe online experiences."
       - title: "EFF’s State Legislative Agenda to End ALPR Mass Surveillance"
         url: "https://www.eff.org/deeplinks/2026/10/effs-state-legislative-agenda-end-alpr-mass-surveillance"
         source: "EFF Deeplinks"
         date: 2026-10-21
         summary: "Police agencies across the U.S. have deployed Automated License Plate Readers (ALPRs) to capture images of passing vehicles along with time, date, and GPS coordinates. While the technology itself isn’t new (ALPRs have..."
-      - title: "EPIC, Tech Justice Law, and Scholars Urge Ninth Circuit to Reject Big Tech’s Claim That Addictive, Surveillance-Based Feeds Are Protected Speech"
-        url: "https://epic.org/epic-tech-justice-law-and-scholars-urge-ninth-circuit-to-reject-big-techs-claim-that-addictive-surveillance-based-feeds-are-not-protected-speech/"
-        source: "EPIC"
-        date: 2026-10-21
-        summary: "On Tuesday, EPIC, Tech Justice Law, and sixteen law and technology scholars filed an amicus brief urging the Ninth Circuit to affirm a district court’s decision rejecting Meta, Google, and TikTok’s First Amendment..."
       - title: "Victory! Court Rules OPM Data Disclosure to DOGE Is Unlawful"
         url: "https://www.eff.org/deeplinks/2026/10/victory-court-rules-opms-disclosure-personal-records-doge-unlawful"
         source: "EFF Deeplinks"
@@ -240,3 +200,33 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-19
         summary: "This post was co-written by Andi Cao , an EFF legal intern. Automated license plate readers (ALPRs) are mass surveillance. They photograph every passing car and log where and when it was captured, building a searchable..."
+      - title: "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site"
+        url: "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+        source: "Krebs on Security"
+        date: 2026-10-19
+        summary: "U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually..."
+      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
+        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
+        source: "EPIC"
+        date: 2026-10-15
+        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
+      - title: "Patients: All my best tips on how to opt out of data sharing"
+        url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
+        source: "The Markup"
+        date: 2026-10-15
+        summary: "Even when patients are told they can opt out, medical providers often don’t give patients instructions on how. For patients who are interested in opting out, here are my best tips on how to start."
+      - title: "MyChart and a major hospital said I could opt out of sharing my health data. But they didn’t make it easy"
+        url: "https://themarkup.org/privacy/2026/10/15/mychart-health-data-opt-out-epic-notary-hipaa"
+        source: "The Markup"
+        date: 2026-10-15
+        summary: "My journey included a notary, a hospital that won’t honor its own policies and employees that gave me wrong information."
+      - title: "World’s largest health appointment platform dumps its web trackers after Markup investigation"
+        url: "https://themarkup.org/privacy/2026/10/14/worlds-largest-health-appointment-platform-dumps-its-web-trackers-after-markup-investigation"
+        source: "The Markup"
+        date: 2026-10-14
+        summary: "Doctoralia said it was removing trackers that communicated with social media companies out of an abundance of caution"
+      - title: "What it takes for voters to be resilient against AI misinformation"
+        url: "https://themarkup.org/hello-world/2026/10/10/election-ai-resilience"
+        source: "The Markup"
+        date: 2026-10-10
+        summary: "A conversation with political scientist Thessalia Merivaki"
