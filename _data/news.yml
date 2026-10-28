@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-27
+generated: 2026-10-28
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "‘Emotional intimacy’ from AI chatbots would be banned under Australia’s digital duty of care laws"
+        url: "https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics"
+        source: "The Guardian"
+        date: 2026-10-28
+        summary: "Labor government under pressure to create social media watchdog as new online safety standards bill passes lower house Follow our Australia politics live blog for latest updates Get our breaking news email , free app or..."
+      - title: "AI bots flooded 2023 UK government consultation on disposable vapes ban"
+        url: "https://www.theguardian.com/society/2026/oct/27/ai-bots-flooded-2023-uk-government-consultation-disposable-vapes-ban"
+        source: "The Guardian"
+        date: 2026-10-27
+        summary: "Three-quarters of all responses were machine-generated in failed attempt to stop bill from passing into law, research finds AI bots flooded a government consultation with tens of thousands of fake responses in a failed..."
       - title: "Industrial Intelligence: The next growth opportunity for manufacturing"
         url: "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/"
         source: "MIT Technology Review"
@@ -28,21 +38,11 @@ sections:
         source: "The Guardian"
         date: 2026-10-26
         summary: "If proposed copyright reforms proceed, Australia will become a global IP-laundering paradise. Why would a UK business license its TV shows here if they can be scraped at will? Australia and the UK have always had a..."
-      - title: "Anthropic’s Claude AI model accessed Georgia voter data in US"
-        url: "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us"
-        source: "The Guardian"
-        date: 2026-10-26
-        summary: "Latest example of unauthorised behaviour shows AI model bypassed paywall to access data as part of statistics project Anthropic sued for allegedly using 274 Elvis songs to train AI models Anthropic’s Claude model..."
       - title: "The focus on AI safety disasters ignores everyday harms"
         url: "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/"
         source: "MIT Technology Review"
         date: 2026-10-26
         summary: "Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are..."
-      - title: "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models"
-        url: "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music"
-        source: "The Guardian"
-        date: 2026-10-25
-        summary: "Authentic Brands Group says AI company infringed on rights of songs by the King such as Can’t Help Falling in Love The owners of Elvis Presley ’s music catalogue are suing the artificial intelligence ( AI ) company..."
       - title: "Updated Google privacy policy says your Gmail might be used for advertising"
         url: "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/"
         source: "Ars Technica"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Game theory society yanks support for journal after Elsevier fails to renew EIC contract"
+        url: "https://retractionwatch.com/2026/10/27/game-theory-society-yanks-support-for-journal-after-elsevier-fails-to-renew-eic-contract/"
+        source: "Retraction Watch"
+        date: 2026-10-27
+        summary: "The Game Theory Society is severing ties with one of its official journals. The move comes two months after the journal’s editors resigned because Elsevier failed to renew the contract for the journal’s editor-in-chief..."
       - title: "Another Sydney investigation of astrophysicist leads to retractions"
         url: "https://retractionwatch.com/2026/10/26/joachim-schmidt-university-sydney-investigation-space-scientist-retraction/"
         source: "Retraction Watch"
@@ -161,11 +166,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-19
         summary: "An investigation by a national research institute in Japan has concluded one of its former researchers fabricated and falsified figures in seven papers. Two publishers confirmed they are investigating the articles..."
-      - title: "‘Springer’ agency website offering authorship for sale goes down following Retraction Watch story"
-        url: "https://retractionwatch.com/2026/10/16/springer-agency-website-offering-authorship-for-sale-goes-down-following-retraction-watch-story/"
-        source: "Retraction Watch"
-        date: 2026-10-16
-        summary: "The website for Springer Journals Online, an agency offering authorship slots in articles in exchange for payment, has gone offline, four days after Retraction Watch published its investigation into its activities. As..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -175,6 +175,26 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-22
         summary: "Canada’s Parliament is debating a massive expansion of surveillance powers that will threaten the privacy and security of millions of people. Bill C-22, also called the Lawful Access Act, has already passed the House of..."
+      - title: "EPIC Urges D.C. Council to Protect Student Privacy and Pass Strong Procurement Guidelines for Edtech"
+        url: "https://epic.org/epic-urges-d-c-council-to-protect-student-privacy-and-pass-strong-procurement-guidelines-for-edtech/"
+        source: "EPIC"
+        date: 2026-10-22
+        summary: "EPIC submitted public testimony to the D.C. Council Committee of the Whole urging them to pass strong procurement guidelines for technology that utilizes AI or automated decision-making systems in schools."
+      - title: "Meta Fined $25 Billion by New Mexican Court for Violating Privacy During Cambridge Analytica Scandal"
+        url: "https://epic.org/meta-fined-25-billion-by-new-mexican-court-for-violating-privacy-during-cambridge-analytica-scandal/"
+        source: "EPIC"
+        date: 2026-10-22
+        summary: "On Wednesday, the New Mexico Department of Justice announced that the state is issuing a $25 billion penalty against Meta for the company’s violations of New Mexico’s Unfair Practices Act."
+      - title: "On the Road to Risk: Connected Cars Put Drivers’ Privacy and Safety in Harm’s Way"
+        url: "https://epic.org/on-the-road-to-risk-connected-cars-put-drivers-privacy-and-safety-in-harms-way/"
+        source: "EPIC"
+        date: 2026-10-22
+        summary: "Connected car privacy is now a mainstream problem for nearly every driver, with even greater risks for certain populations, like targets of domestic violence (DV). Recent state laws, federal regulatory efforts, and..."
+      - title: "EPIC Joins Coalition Urging New York Governor to Sign and Strengthen Surveillance Pricing Law"
+        url: "https://epic.org/epic-joins-coalition-urging-new-york-governor-to-sign-and-strengthen-surveillance-pricing-law/"
+        source: "EPIC"
+        date: 2026-10-22
+        summary: "EPIC, along with four other organizations, sent a letter to New York Governor Kathy Hochul recommending that she strengthen and sign New York’s One Fair Price Act, a bill that would ban surveillance pricing that is..."
       - title: "Introducing Our New Surveillance Self-Defense Guide: Online Privacy for Parents and Youth"
         url: "https://www.eff.org/deeplinks/2026/10/introducing-our-new-surveillance-self-defense-guide-online-privacy-parents-and"
         source: "EFF Deeplinks"
@@ -195,8 +215,8 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-21
         summary: "Police agencies across the U.S. have deployed Automated License Plate Readers (ALPRs) to capture images of passing vehicles along with time, date, and GPS coordinates. While the technology itself isn’t new (ALPRs have..."
-      - title: "EPIC, Tech Justice Law, and Scholars Urge Ninth Circuit to Reject Big Tech’s Claim That Addictive, Surveillance-Based Feeds Are Not Protected Speech"
-        url: "https://epic.org/epic-tech-justice-law-and-scholars-urges-ninth-circuit-to-reject-big-techs-claim-that-addictive-surveillance-based-feeds-are-not-protected-speech/"
+      - title: "EPIC, Tech Justice Law, and Scholars Urge Ninth Circuit to Reject Big Tech’s Claim That Addictive, Surveillance-Based Feeds Are Protected Speech"
+        url: "https://epic.org/epic-tech-justice-law-and-scholars-urge-ninth-circuit-to-reject-big-techs-claim-that-addictive-surveillance-based-feeds-are-not-protected-speech/"
         source: "EPIC"
         date: 2026-10-21
         summary: "On Tuesday, EPIC, Tech Justice Law, and sixteen law and technology scholars filed an amicus brief urging the Ninth Circuit to affirm a district court’s decision rejecting Meta, Google, and TikTok’s First Amendment..."
@@ -205,28 +225,8 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-20
         summary: "In a victory for data privacy, a federal court in New York definitively ruled that the Office of Personnel Management (OPM) violated the law when it disclosed millions of federal employee records to DOGE agents. In a..."
-      - title: "New Jersey Advances Strong Chatbot Regulations Based on EPIC’s People-First Model"
-        url: "https://epic.org/new-jersey-advances-strong-chatbot-regulations-based-on-epics-people-first-model/"
-        source: "EPIC"
-        date: 2026-10-20
-        summary: "The bill would put strong privacy safeguards in place for chatbots as well as create a liability framework that will allow New Jerseyans harmed by chatbots to hold companies accountable in court."
-      - title: "Pluribus News: Advocates seek state guardrails as seniors turn to AI companions"
-        url: "https://epic.org/pluribus-news-advocates-seek-state-guardrails-as-seniors-turn-to-ai-companions/"
-        source: "EPIC"
-        date: 2026-10-20
-        summary: "“The People-First bill was unveiled in January by the Electronic Privacy Information Center, Consumer Federation of America and Fairplay. The bill has been endorsed by dozens of organizations.” “Versions or elements of..."
       - title: "Require Police to Get a Warrant to Search ALPR Data"
         url: "https://www.eff.org/deeplinks/2026/10/require-police-get-warrant-search-alpr-data"
         source: "EFF Deeplinks"
         date: 2026-10-19
         summary: "This post was co-written by Andi Cao , an EFF legal intern. Automated license plate readers (ALPRs) are mass surveillance. They photograph every passing car and log where and when it was captured, building a searchable..."
-      - title: "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site"
-        url: "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
-        source: "Krebs on Security"
-        date: 2026-10-19
-        summary: "U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually..."
-      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
-        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
-        source: "EPIC"
-        date: 2026-10-15
-        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
