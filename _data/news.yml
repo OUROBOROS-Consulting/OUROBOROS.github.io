@@ -2,61 +2,96 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-18
+generated: 2026-10-27
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Microsoft pulls out of AI datacentre project in Essex over power supply concerns"
-        url: "https://www.theguardian.com/uk-news/2026/oct/18/microsoft-drops-huge-ai-datacentre-project-in-essex-over-power-supply-concerns"
-        source: "The Guardian"
-        date: 2026-10-18
-        summary: "Development by UK firm Nscale heralded by ministers as largest of its kind in country loses anchor tenant The development of a huge AI datacentre hailed by the UK government has received a fresh setback after Microsoft..."
-      - title: "World leaders must wise up to threat of cyber-attacks or rogue fridges will be least of their worries | Heather Stewart"
-        url: "https://www.theguardian.com/business/2026/oct/18/world-leaders-threat-cyber-attacks-rogue-fridges-financial-system"
-        source: "The Guardian"
-        date: 2026-10-18
-        summary: "Global cooperation seems unlikely despite AI increasing the risk of digital fraud and the need to protect the financial system Rogue French fridges were an unlikely talking point for the world’s leading economists..."
-      - title: "Black Box: The Chatbots | What I Saw at the Double Six Ranch | Ep 6 - podcast"
-        url: "https://www.theguardian.com/australia-news/audio/2026/oct/18/black-box-the-chatbots-what-i-saw-at-the-double-six-ranch-ep-6-full-story-podcast"
-        source: "The Guardian"
-        date: 2026-10-17
-        summary: "From his remote property in rural Texas, the millionaire businessman Michael Samadi is plotting a new kind of civil rights movement – for the welfare and protection of AI systems. Guardian journalist Michael Safi spends..."
-      - title: "The power of AI is worrying senior Labour figures – as is the fear of ‘falling behind the public’"
-        url: "https://www.theguardian.com/technology/2026/oct/17/artificial-intelligence-ai-labour-government-safety-uk-extremism"
-        source: "The Guardian"
-        date: 2026-10-17
-        summary: "Westminster appears to be waking up to warnings over AI safety, with concerns over its use by extremist groups and bad actors “I have this sense that, within a few months, AI is going to be all anyone is talking about,”..."
-      - title: "Fake Linda and me: the Agatha Christie-worthy mystery of the fraudster who stole my byline"
-        url: "https://www.theguardian.com/technology/2026/oct/17/fake-linda-and-me-mystery-fraudster-stole-my-byline"
-        source: "The Guardian"
-        date: 2026-10-17
-        summary: "How a string of bizarre events led writer Linda Geddes to don her sleuthing cap and dig into a world of shadowy impersonators It started with an entirely ordinary interaction on LinkedIn. Someone had tagged me in a..."
-      - title: "Super Scam Me documentary shows what it takes to catch a romance scammer"
-        url: "https://arstechnica.com/tech-policy/2026/10/romance-scam-doc-super-scam-me-takes-viewers-deep-into-love-bombing-terrain/"
-        source: "Ars Technica"
-        date: 2026-10-16
-        summary: "Watch an exclusive clip from Super Scam Me where a victim tracks down her scammer."
-      - title: "Is your boss watching you? The rise of AI surveillance at work - video"
-        url: "https://www.theguardian.com/science/video/2026/oct/15/is-your-boss-watching-you-the-rise-of-ai-surveillance-at-work-video"
-        source: "The Guardian"
-        date: 2026-10-15
-        summary: "Workers have always been monitored by their bosses, first through output targets, and then via computer software labelled ‘bossware’. But AI is transforming the capabilities of these systems, processing huge volumes of..."
-      - title: "Open models have real benefits. Do they outweigh the risks?"
-        url: "https://www.technologyreview.com/2026/10/13/1146366/open-models-have-real-benefits-do-they-outweigh-the-risks/"
+      - title: "Industrial Intelligence: The next growth opportunity for manufacturing"
+        url: "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/"
         source: "MIT Technology Review"
-        date: 2026-10-13
-        summary: "MIT Technology Review Explains: Let our writers untangle the complex, messy world of science and technology to help you understand what’s coming next. You can read more from the series here. Late last month, Anthropic..."
-      - title: "Amazon has over 1 million robot workers. What’s next for human employees?"
-        url: "https://arstechnica.com/ai/2026/10/inside-amazons-robotic-arms-race-and-what-it-means-for-the-future-of-human-work/"
+        date: 2026-10-27
+        summary: "Every manufacturer has its own industrial intelligence. Some is documented, and some resides in the knowledge of experienced workers. Consider an experienced operator preparing to restart a line after a changeover. The..."
+      - title: "UK government met 137 businesses over AI datacentres – but no environmental groups"
+        url: "https://www.theguardian.com/uk-news/2026/oct/27/uk-government-environmental-groups-ai-datacentres-expansion-plans-investigation"
+        source: "The Guardian"
+        date: 2026-10-27
+        summary: "Investigation finds dozens of ministers and civil servants moved into AI roles as government developed datacentre expansion plans The UK’s policy on datacentres and AI was developed without any meetings with..."
+      - title: "‘Digital hostile environment’: AI secretly being embedded across Home Office, report claims"
+        url: "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report"
+        source: "The Guardian"
+        date: 2026-10-27
+        summary: "Tasks from determining asylum seekers’ ages to border surveillance now involve AI, says Open Rights Group AI has been embedded across the Home Office in near-total secrecy, reinforcing the so-called hostile environment..."
+      - title: "In a rush to lure AI companies, the Australian government risks undoing a creative ecosystem that has taken decades to build | Dan Guthrie"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/27/in-a-rush-to-lure-ai-companies-the-australian-government-risks-undoing-a-creative-ecosystem-that-has-taken-decades-to-build"
+        source: "The Guardian"
+        date: 2026-10-26
+        summary: "If proposed copyright reforms proceed, Australia will become a global IP-laundering paradise. Why would a UK business license its TV shows here if they can be scraped at will? Australia and the UK have always had a..."
+      - title: "Anthropic’s Claude AI model accessed Georgia voter data in US"
+        url: "https://www.theguardian.com/technology/2026/oct/26/anthropics-claude-ai-model-accessed-georgia-voter-data-in-us"
+        source: "The Guardian"
+        date: 2026-10-26
+        summary: "Latest example of unauthorised behaviour shows AI model bypassed paywall to access data as part of statistics project Anthropic sued for allegedly using 274 Elvis songs to train AI models Anthropic’s Claude model..."
+      - title: "The focus on AI safety disasters ignores everyday harms"
+        url: "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/"
+        source: "MIT Technology Review"
+        date: 2026-10-26
+        summary: "Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are..."
+      - title: "Anthropic sued for allegedly using 274 Elvis Presley songs to train AI models"
+        url: "https://www.theguardian.com/us-news/2026/oct/25/elvis-presley-anthropic-lawsuit-ai-models-music"
+        source: "The Guardian"
+        date: 2026-10-25
+        summary: "Authentic Brands Group says AI company infringed on rights of songs by the King such as Can’t Help Falling in Love The owners of Elvis Presley ’s music catalogue are suing the artificial intelligence ( AI ) company..."
+      - title: "Updated Google privacy policy says your Gmail might be used for advertising"
+        url: "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/"
         source: "Ars Technica"
-        date: 2026-10-12
-        summary: "The second-largest corporate employer has bet big on robot workers to scale."
+        date: 2026-10-23
+        summary: "Turning on Personal Intelligence gives the company more data for ad targeting."
+      - title: "Judge rejects Trump’s wild claim EPA can dismiss data center pollution lawsuits"
+        url: "https://arstechnica.com/tech-policy/2026/10/judge-rejects-trumps-wild-claim-epa-can-dismiss-data-center-pollution-lawsuits/"
+        source: "Ars Technica"
+        date: 2026-10-21
+        summary: "Trump’s EPA can't unilaterally dismiss SpaceXAI pollution lawsuit, court rules."
+      - title: "The $15 billion ad-powered AI startup your doctor may already be using"
+        url: "https://arstechnica.com/ai/2026/10/the-15-billion-ad-powered-ai-startup-your-doctor-may-already-be-using/"
+        source: "Ars Technica"
+        date: 2026-10-21
+        summary: "OpenEvidence is booming despite questions about accuracy and ads."
+      - title: "Meta drops the word \"train\" from its commercial TOS after AI backlash"
+        url: "https://arstechnica.com/tech-policy/2026/10/meta-drops-the-word-train-from-its-commercial-tos-after-ai-backlash/"
+        source: "Ars Technica"
+        date: 2026-10-20
+        summary: "Meta changes AI scraping policy but won’t add language respecting robots.txt."
+      - title: "Gemini's Personal Intelligence is coming to cars"
+        url: "https://arstechnica.com/google/2026/10/geminis-personal-intelligence-is-coming-to-cars/"
+        source: "Ars Technica"
+        date: 2026-10-20
+        summary: "It's probably time to audit your Gemini settings."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘He was like 10 men after taking cocaine‘: how Britain’s drug habit is fuelling domestic abuse"
+        url: "https://www.theguardian.com/society/2026/oct/26/cocaine-britain-drug-habit-fuelling-domestic-abuse"
+        source: "The Guardian"
+        date: 2026-10-26
+        summary: "Home Office figures show nearly two-thirds of drug tests carried out on arrested abuse suspects detected use of a drug that ‘boosts confidence but increases paranoia’ During lockdown, Charlotte and her ex-partner would..."
+      - title: "‘No indications’ PHP code flaw has led to government systems being hacked, cyber security official says – as it happened"
+        url: "https://www.theguardian.com/politics/live/2026/oct/22/john-healey-chancellor-budget-red-tape-small-businsesses-jackdaw-oil-latest-news-updates"
+        source: "The Guardian"
+        date: 2026-10-22
+        summary: "Some 32 government services are offline while work is carried out to address potential cybersecurity issues, a minister has said Tell us: have you been affected by the PHP code flaw? The Office for National Statistics..."
+      - title: "One in 10 adults in England and Wales experienced domestic abuse in last year, ONS finds"
+        url: "https://www.theguardian.com/society/2026/oct/22/domestic-abuse-england-wales"
+        source: "The Guardian"
+        date: 2026-10-22
+        summary: "Charities say ‘tip of iceberg’ figures show government is not fulfilling pledge to halve violence against women and girls Almost one in 10 adults in England and Wales have experienced domestic abuse in the last year, a..."
+      - title: "Jess Phillips hopes supreme court ‘sees sense’ and overturns domestic abuse ruling"
+        url: "https://www.theguardian.com/society/2026/oct/21/jess-phillips-hopes-supreme-court-sees-sense-and-overturns-domestic-abuse-ruling"
+        source: "The Guardian"
+        date: 2026-10-21
+        summary: "Court of appeal decision prevents woman from suing police and CPS for disclosing her address to violent ex-partner The Labour MP Jess Phillips has said she hopes the UK’s highest court “sees sense” and overturns a..."
       - title: "‘Manosphere’ warnings as rates of family and sexual violence against Australian children rise sharply"
         url: "https://www.theguardian.com/australia-news/2026/oct/14/family-and-sexual-violence-rates-against-australian-children-rise-sharply-as-researchers-warn-of-manosphere"
         source: "The Guardian"
@@ -67,26 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-11
         summary: "Deceased were all members of the same family, officials say, and one of victims placed the initial emergency call Five people were shot and killed in an apparent murder-suicide at a residence in Georgia on Friday..."
-      - title: "‘I thought the baby would change him’: the women whose pregnancies are blighted by domestic abuse"
-        url: "https://www.theguardian.com/society/2026/oct/07/i-thought-the-baby-would-change-him-the-women-whose-pregnancies-are-blighted-by-domestic-abuse"
-        source: "The Guardian"
-        date: 2026-10-07
-        summary: "An estimated 20,000 cases are disclosed to maternity services in England every year. Two survivors tell their stories Evie bought the baby monitor with a rare flicker of enthusiasm, having become increasingly numb as..."
-      - title: "‘Bully in every way’: domestic abuse survivors say ex-partners behind far-right UK street patrols"
-        url: "https://www.theguardian.com/society/2026/oct/06/uk-domestic-abuse-survivors-ex-partners-behind-far-right-street-patrols"
-        source: "The Guardian"
-        date: 2026-10-06
-        summary: "Seven women share their stories to make people aware of patterns of violence behind anti-immigration street patrol movement During their relationship, Lisa’s ex-partner was controlling. He kept her at home where he was..."
-      - title: "‘Defend our men!’: fears for women’s rights in Latin America over plans to counter gender violence laws"
-        url: "https://www.theguardian.com/global-development/2026/oct/05/defend-our-men-fears-for-womens-rights-in-latin-america-over-plans-to-counter-gender-violence-laws"
-        source: "The Guardian"
-        date: 2026-10-05
-        summary: "Women ‘set back by 50 years’ as Bolivia, Chile, Argentina and Peru debate tougher penalties for false reports of sexual assaults, despite such cases being rare The Chilean senator Vanessa Kaiser is on a mission. In her..."
-      - title: "My sister Nicole married OJ Simpson. This is what I wish I had known"
-        url: "https://www.theguardian.com/lifeandstyle/2026/oct/05/denise-brown-sister-nicole-brown-simpson-murder-oj-simpson"
-        source: "The Guardian"
-        date: 2026-10-05
-        summary: "Since Nicole Brown Simpson’s murder in 1994, Denise Brown has devoted herself to ending domestic violence. She talks about her beloved sister, the trauma she witnessed in the couple’s marriage and how lives can be saved..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -121,112 +136,97 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Another Sydney investigation of astrophysicist leads to retractions"
+        url: "https://retractionwatch.com/2026/10/26/joachim-schmidt-university-sydney-investigation-space-scientist-retraction/"
+        source: "Retraction Watch"
+        date: 2026-10-26
+        summary: "The University of Sydney has once again investigated the work of a former research fellow in its physics department, this time resulting in the retraction of two papers over concerns that data in several figures were..."
+      - title: "Journal updates retraction notice as Princeton student author stays in the spotlight"
+        url: "https://retractionwatch.com/2026/10/23/correction-retraction-rishika-porandla-princeton-macromolecular-materials-engineering-wiley/"
+        source: "Retraction Watch"
+        date: 2026-10-23
+        summary: "A Wiley journal has corrected a retraction notice to clarify the author, a Princeton student, never conducted the study in the first place, as the student has gained publicity for visits to the offices of Texas..."
+      - title: "Thousands of research studies violate journal policies on collaborations between editors and authors"
+        url: "https://retractionwatch.com/2026/10/22/editorcheck-handling-editors-authors-collaboration-plos-mdpi-joint-conference-digital-libraries/"
+        source: "Retraction Watch"
+        date: 2026-10-22
+        summary: "Over 10,000 peer-reviewed papers from two publishers breach journal policies about past collaborations between handling editors and authors, a new analysis has found. The work — presented October 15 at the 26th ACM/IEEE..."
+      - title: "Journal founded by plastic surgeon touts studies of products he’s tied to – including one that has been retracted"
+        url: "https://retractionwatch.com/2026/10/21/journal-founded-by-plastic-surgeon-touts-studies-of-products-hes-tied-to-including-one-that-has-been-retracted/"
+        source: "Retraction Watch"
+        date: 2026-10-21
+        summary: "In a February 2018 editorial, Rod Rohrich, a plastic surgeon and the former president of the World Association of Medical Editors, blasted predatory journals for “the damage that these illegitimate open access journals..."
+      - title: "Japanese institute finds materials researcher with 41 retractions guilty of ‘extensive’ manipulation"
+        url: "https://retractionwatch.com/2026/10/19/joseph-raj-xavier-national-institute-materials-science-saveetha-retractions-extensive-manipulation/"
+        source: "Retraction Watch"
+        date: 2026-10-19
+        summary: "An investigation by a national research institute in Japan has concluded one of its former researchers fabricated and falsified figures in seven papers. Two publishers confirmed they are investigating the articles..."
       - title: "‘Springer’ agency website offering authorship for sale goes down following Retraction Watch story"
         url: "https://retractionwatch.com/2026/10/16/springer-agency-website-offering-authorship-for-sale-goes-down-following-retraction-watch-story/"
         source: "Retraction Watch"
         date: 2026-10-16
         summary: "The website for Springer Journals Online, an agency offering authorship slots in articles in exchange for payment, has gone offline, four days after Retraction Watch published its investigation into its activities. As..."
-      - title: "Journal retracts, republishes paper on Long COVID treatment trial"
-        url: "https://retractionwatch.com/2026/10/15/journal-retracts-republishes-paper-on-long-covid-treatment-trial/"
-        source: "Retraction Watch"
-        date: 2026-10-15
-        summary: "Annals of Internal Medicine has retracted a paper on treatments for Long COVID because the authors did not report dosing information for metformin, one of the drugs tested in the study. The editor-in-chief of the..."
-      - title: "Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected"
-        url: "https://www.propublica.org/article/missouri-plan-judge-selection-republican-attacks"
-        source: "ProPublica"
-        date: 2026-10-15
-        summary: "The post Frustrated by Losses in the Courts, Missouri Republicans Want to Change How Top Judges Are Selected appeared first on ProPublica ."
-      - title: "Paper touted by MD Anderson gets expression of concern for data ‘concerns’"
-        url: "https://retractionwatch.com/2026/10/14/science-translational-medicine-md-anderson-expression-of-concern-data-concerns-china/"
-        source: "Retraction Watch"
-        date: 2026-10-14
-        summary: "Science Translational Medicine has issued an expression of concern over “a series” of data concerns in a paper lauded by MD Anderson Cancer Center last year for identifying “a new driver” of bone metastasis. The..."
-      - title: "Former Crick Ph.D. student loses COVID vaccine paper for fabrication"
-        url: "https://retractionwatch.com/2026/10/14/former-crick-ph-d-student-loses-covid-vaccine-paper-for-fabrication/"
-        source: "Retraction Watch"
-        date: 2026-10-14
-        summary: "Science Translational Medicine has retracted a paper on COVID-19 vaccines after an institutional investigation revealed a former Ph.D. student fabricated data and falsified images in the article. The retraction is the..."
-      - title: "These Women Were Trying to Escape Domestic Abuse. ICE Detained Them Instead."
-        url: "https://www.propublica.org/article/domestic-violence-immigrant-victims-ice-detention"
-        source: "ProPublica"
-        date: 2026-10-14
-        summary: "The post These Women Were Trying to Escape Domestic Abuse. ICE Detained Them Instead. appeared first on ProPublica ."
-      - title: "Authors respond with ‘a bit like a threat’ after journal reveals postdoc’s identity"
-        url: "https://retractionwatch.com/2026/10/13/physics-of-fluids-aip-publishing-authors-respond-journal-postdoc-identity/"
-        source: "Retraction Watch"
-        date: 2026-10-13
-        summary: "In March, Thomas Harvey sat in on a talk at the American Physical Society’s summit in Denver on a new model of the universe that claimed to eliminate the need for dark matter and dark energy. William George, a fluid..."
-      - title: "A company named Springer that isn’t the publisher is offering authorship for sale"
-        url: "https://retractionwatch.com/2026/10/12/springer-journals-online-authorship-for-sale/"
-        source: "Retraction Watch"
-        date: 2026-10-12
-        summary: "Computer scientist Richard Fateman got an email in August that was completely “out of the blue”: an offer of coauthorship in articles headed for publication in prestigious journals, in exchange for a fraction of the..."
-      - title: "U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU"
-        url: "https://www.propublica.org/article/aau-child-sex-abuse-house-energy-commerce-committee-probe-amateur-athletic-union"
-        source: "ProPublica"
-        date: 2026-10-08
-        summary: "The post U.S. Lawmakers Launch Sexual Abuse Probe of Youth Sports Giant AAU appeared first on ProPublica ."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
-      - title: "Our Lawsuit Against the Trump Administration’s Social Media Surveillance Moves Forward. Here’s What the Court Said."
-        url: "https://www.eff.org/deeplinks/2026/10/our-lawsuit-against-trump-administrations-social-media-surveillance-moves-forward"
+      - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
+        url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
         source: "EFF Deeplinks"
-        date: 2026-10-15
-        summary: "No one should have to choose between speaking freely and protecting their immigration status. Yet that’s precisely the choice the Trump administration’s mass surveillance of online speech forces on noncitizens living in..."
-      - title: "Patients: All my best tips on how to opt out of data sharing"
-        url: "https://themarkup.org/privacy/2026/10/15/tips-how-to-opt-out-of-data-sharing"
-        source: "The Markup"
-        date: 2026-10-15
-        summary: "Even when patients are told they can opt out, medical providers often don’t give patients instructions on how. For patients who are interested in opting out, here are my best tips on how to start."
-      - title: "MyChart and a major hospital said I could opt out of sharing my health data. But they didn’t make it easy"
-        url: "https://themarkup.org/privacy/2026/10/15/mychart-health-data-opt-out-epic-notary-hipaa"
-        source: "The Markup"
-        date: 2026-10-15
-        summary: "My journey included a notary, a hospital that won’t honor its own policies and employees that gave me wrong information."
-      - title: "DHS Inspector General Finds That TSA is Not Properly Safeguarding Passenger Facial Recognition Data"
-        url: "https://www.eff.org/deeplinks/2026/10/dhs-inspector-general-finds-tsa-not-properly-safeguarding-passenger-facial"
+        date: 2026-10-22
+        summary: "Canada’s Parliament is debating a massive expansion of surveillance powers that will threaten the privacy and security of millions of people. Bill C-22, also called the Lawful Access Act, has already passed the House of..."
+      - title: "Introducing Our New Surveillance Self-Defense Guide: Online Privacy for Parents and Youth"
+        url: "https://www.eff.org/deeplinks/2026/10/introducing-our-new-surveillance-self-defense-guide-online-privacy-parents-and"
         source: "EFF Deeplinks"
-        date: 2026-10-14
-        summary: "EFF legal intern Gabrielle Ladun was the principal author of this post. The Department of Homeland Security Office of Inspector General (DHS OIG) has published a summary of findings from its audit of the Transportation..."
-      - title: "🗣 A Victory for Freedom of Speech Online | EFFector 38.18"
-        url: "https://www.eff.org/deeplinks/2026/10/victory-freedom-speech-online-effector-3818"
+        date: 2026-10-21
+        summary: "The internet is a vast and confusing place no matter your age. Trying to help youth engage with it safely and privately is a complicated topic that touches on many different skillsets and ideas. But just because it’s..."
+      - title: "EFF to Brazil’s ANPD: Data Privacy and Free Expression Must Underpin Platform Regulations"
+        url: "https://www.eff.org/deeplinks/2026/10/eff-brazils-anpd-data-privacy-and-free-expression-must-underpin-platform"
         source: "EFF Deeplinks"
-        date: 2026-10-14
-        summary: "No one should have to think twice before criticizing the government online. But a mass surveillance program known as \"Catch and Revoke\" was created to make millions do just that. EFF and other defenders of free speech..."
-      - title: "World’s largest health appointment platform dumps its web trackers after Markup investigation"
-        url: "https://themarkup.org/privacy/2026/10/14/worlds-largest-health-appointment-platform-dumps-its-web-trackers-after-markup-investigation"
-        source: "The Markup"
-        date: 2026-10-14
-        summary: "Doctoralia said it was removing trackers that communicated with social media companies out of an abundance of caution"
-      - title: "As Federal Court Rules ALPRs are Mass Surveillance, EFF Gets Disappointing Ruling"
-        url: "https://www.eff.org/deeplinks/2026/10/federal-court-rules-alprs-are-mass-surveillance-eff-gets-disappointing-ruling"
-        source: "EFF Deeplinks"
-        date: 2026-10-13
-        summary: "In an extremely disappointing ruling , a California trial court dismissed SIREN v. San Jose , our case challenging the city of San Jose’s warrantless searches of its vast stores of automated license plate reader (ALPR)..."
-      - title: "What it takes for voters to be resilient against AI misinformation"
-        url: "https://themarkup.org/hello-world/2026/10/10/election-ai-resilience"
-        source: "The Markup"
-        date: 2026-10-10
-        summary: "A conversation with political scientist Thessalia Merivaki"
-      - title: "CBP’s Predictive Policing Units Have Financial Data, Won’t Say How They Got It"
-        url: "https://epic.org/cbps-predictive-policing-units-have-financial-data-wont-say-how-they-got-it/"
+        date: 2026-10-21
+        summary: "The Brazilian National Data Protection Agency (ANPD) plays a pivotal role in the regulation of digital platforms according to new legislation approved in Brazil. Throughout this year, EFF has presented comments, filed..."
+      - title: "Encrypted Messaging Platforms Still Under Attack"
+        url: "https://epic.org/encrypted-messaging-platforms-still-under-attack/"
         source: "EPIC"
-        date: 2026-10-08
-        summary: "A recent story by 404 Media revealed that Customs & Border Patrol’s (CBP) predictive policing units, or Predictive Intelligence Targeting Teams (PITT) have been using financial data to target individuals for anomalous..."
-      - title: "Sen. Gillibrand Introduces U.S. Data Protection Agency Bill"
-        url: "https://epic.org/sen-gillibrand-introduces-u-s-data-protection-agency-bill/"
+        date: 2026-10-21
+        summary: "Global Encryption Day is an annual day of action when advocates, champions, and everyday people come together to celebrate, promote, and defend encryption, a key security approach that enables safe online experiences."
+      - title: "EFF’s State Legislative Agenda to End ALPR Mass Surveillance"
+        url: "https://www.eff.org/deeplinks/2026/10/effs-state-legislative-agenda-end-alpr-mass-surveillance"
+        source: "EFF Deeplinks"
+        date: 2026-10-21
+        summary: "Police agencies across the U.S. have deployed Automated License Plate Readers (ALPRs) to capture images of passing vehicles along with time, date, and GPS coordinates. While the technology itself isn’t new (ALPRs have..."
+      - title: "EPIC, Tech Justice Law, and Scholars Urge Ninth Circuit to Reject Big Tech’s Claim That Addictive, Surveillance-Based Feeds Are Not Protected Speech"
+        url: "https://epic.org/epic-tech-justice-law-and-scholars-urges-ninth-circuit-to-reject-big-techs-claim-that-addictive-surveillance-based-feeds-are-not-protected-speech/"
         source: "EPIC"
-        date: 2026-10-07
-        summary: "U.S. Senator Kirsten Gillibrand (D-NY) has reintroduced the Data Protection Act, which would create an independent Data Protection Agency in the United States to safeguard the personal data of Americans. EPIC, many..."
-      - title: "EPIC to NYC Council: Address the AI Harms Already Affecting New Yorkers"
-        url: "https://epic.org/epic-to-nyc-council-address-the-ai-harms-already-affecting-new-yorkers/"
+        date: 2026-10-21
+        summary: "On Tuesday, EPIC, Tech Justice Law, and sixteen law and technology scholars filed an amicus brief urging the Ninth Circuit to affirm a district court’s decision rejecting Meta, Google, and TikTok’s First Amendment..."
+      - title: "Victory! Court Rules OPM Data Disclosure to DOGE Is Unlawful"
+        url: "https://www.eff.org/deeplinks/2026/10/victory-court-rules-opms-disclosure-personal-records-doge-unlawful"
+        source: "EFF Deeplinks"
+        date: 2026-10-20
+        summary: "In a victory for data privacy, a federal court in New York definitively ruled that the Office of Personnel Management (OPM) violated the law when it disclosed millions of federal employee records to DOGE agents. In a..."
+      - title: "New Jersey Advances Strong Chatbot Regulations Based on EPIC’s People-First Model"
+        url: "https://epic.org/new-jersey-advances-strong-chatbot-regulations-based-on-epics-people-first-model/"
         source: "EPIC"
-        date: 2026-10-07
-        summary: "On Monday, Mayu Tobin-Miyaji, Counsel at EPIC, testified at New York City Council’s rare council-wide hearing on a series of bills to establish safeguards on artificial intelligence (AI)."
-      - title: "ShinyHunters Extorted Boeing Spin-off Prior to Arrests"
-        url: "https://krebsonsecurity.com/2026/10/shinyhunters-extorted-boeing-spin-off-prior-to-arrests/"
+        date: 2026-10-20
+        summary: "The bill would put strong privacy safeguards in place for chatbots as well as create a liability framework that will allow New Jerseyans harmed by chatbots to hold companies accountable in court."
+      - title: "Pluribus News: Advocates seek state guardrails as seniors turn to AI companions"
+        url: "https://epic.org/pluribus-news-advocates-seek-state-guardrails-as-seniors-turn-to-ai-companions/"
+        source: "EPIC"
+        date: 2026-10-20
+        summary: "“The People-First bill was unveiled in January by the Electronic Privacy Information Center, Consumer Federation of America and Fairplay. The bill has been endorsed by dozens of organizations.” “Versions or elements of..."
+      - title: "Require Police to Get a Warrant to Search ALPR Data"
+        url: "https://www.eff.org/deeplinks/2026/10/require-police-get-warrant-search-alpr-data"
+        source: "EFF Deeplinks"
+        date: 2026-10-19
+        summary: "This post was co-written by Andi Cao , an EFF legal intern. Automated license plate readers (ALPRs) are mass surveillance. They photograph every passing car and log where and when it was captured, building a searchable..."
+      - title: "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site"
+        url: "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
         source: "Krebs on Security"
-        date: 2026-10-07
-        summary: "A teenager from Amman, Jordan suspected of leading the prolific data theft and extortion group ShinyHunters has been detained and is reportedly cooperating with the FBI to identify other members of the hacking gang..."
+        date: 2026-10-19
+        summary: "U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually..."
+      - title: "PRESS RELEASE: Voting Rights and Privacy Organizations Sue Trump-Vance Administration Over Secretive Collection of Millions of Americans’ Voter Records"
+        url: "https://epic.org/press-release-voting-rights-and-privacy-organizations-sue-trump-vance-administration-over-secretive-collection-of-millions-of-americans-voter-records-2/"
+        source: "EPIC"
+        date: 2026-10-15
+        summary: "The League of Women Voters, the Electronic Privacy Information Center (EPIC), and the League of United Latin American Citizens (LULAC) filed a lawsuit today challenging the Trump-Vance administration’s secretive and..."
