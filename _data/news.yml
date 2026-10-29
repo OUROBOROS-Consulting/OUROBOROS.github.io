@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-28
+generated: 2026-10-29
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "What is it like to work when your co-workers are AI agents?"
+        url: "https://www.theguardian.com/technology/2026/oct/29/ai-agent-coworker"
+        source: "The Guardian"
+        date: 2026-10-29
+        summary: "Using AI for roles from executive assistants to chiefs of staff, companies are boasting about doing more with less, creating tension with their human workers On an average workday, Dhruv Amin chats with dozens of..."
+      - title: "Could Abdul El-Sayed’s plan for AI companies stave off catastrophe? | Jerel Ezell"
+        url: "https://www.theguardian.com/commentisfree/2026/oct/29/abdul-el-sayed-ai-companies-public-ownership"
+        source: "The Guardian"
+        date: 2026-10-29
+        summary: "The Michigan Senate candidate is calling for public ownership and other reforms, offering a potential antidote to ideological gridlock The Michigan senatorial candidate Abdul El-Sayed, a Democrat, occupies a strange but..."
       - title: "‘Emotional intimacy’ from AI chatbots would be banned under Australia’s digital duty of care laws"
         url: "https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics"
         source: "The Guardian"
@@ -33,11 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-27
         summary: "Tasks from determining asylum seekers’ ages to border surveillance now involve AI, says Open Rights Group AI has been embedded across the Home Office in near-total secrecy, reinforcing the so-called hostile environment..."
-      - title: "In a rush to lure AI companies, the Australian government risks undoing a creative ecosystem that has taken decades to build | Dan Guthrie"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/27/in-a-rush-to-lure-ai-companies-the-australian-government-risks-undoing-a-creative-ecosystem-that-has-taken-decades-to-build"
-        source: "The Guardian"
-        date: 2026-10-26
-        summary: "If proposed copyright reforms proceed, Australia will become a global IP-laundering paradise. Why would a UK business license its TV shows here if they can be scraped at will? Australia and the UK have always had a..."
       - title: "The focus on AI safety disasters ignores everyday harms"
         url: "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/"
         source: "MIT Technology Review"
@@ -63,11 +68,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-20
         summary: "Meta changes AI scraping policy but won’t add language respecting robots.txt."
-      - title: "Gemini's Personal Intelligence is coming to cars"
-        url: "https://arstechnica.com/google/2026/10/geminis-personal-intelligence-is-coming-to-cars/"
-        source: "Ars Technica"
-        date: 2026-10-20
-        summary: "It's probably time to audit your Gemini settings."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Springer Nature journal could lose registry standing for clearing author of duplication"
+        url: "https://retractionwatch.com/2026/10/29/innovative-higher-education-springer-nature-norway-registry-duplication/"
+        source: "Retraction Watch"
+        date: 2026-10-29
+        summary: "A Springer Nature journal’s failure to find duplication in two papers by the same author could cost its official recognition as a scholarly publication in Norway. The national register in Norway that decides which..."
+      - title: "Federal U.S. judge tosses $1 billion defamation lawsuit against Elsevier"
+        url: "https://retractionwatch.com/2026/10/28/global-plasma-solutions-gps-elsevier-lawsuit-defamation-ruling/"
+        source: "Retraction Watch"
+        date: 2026-10-28
+        summary: "A district judge has ended a $1 billion defamation case against Elsevier over a study about air purification technology after concluding the plaintiff’s evidence was too weak to take to trial. Global Plasma Solutions..."
       - title: "Game theory society yanks support for journal after Elsevier fails to renew EIC contract"
         url: "https://retractionwatch.com/2026/10/27/game-theory-society-yanks-support-for-journal-after-elsevier-fails-to-renew-eic-contract/"
         source: "Retraction Watch"
@@ -156,45 +166,45 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-22
         summary: "Over 10,000 peer-reviewed papers from two publishers breach journal policies about past collaborations between handling editors and authors, a new analysis has found. The work — presented October 15 at the 26th ACM/IEEE..."
-      - title: "Journal founded by plastic surgeon touts studies of products he’s tied to – including one that has been retracted"
-        url: "https://retractionwatch.com/2026/10/21/journal-founded-by-plastic-surgeon-touts-studies-of-products-hes-tied-to-including-one-that-has-been-retracted/"
-        source: "Retraction Watch"
-        date: 2026-10-21
-        summary: "In a February 2018 editorial, Rod Rohrich, a plastic surgeon and the former president of the World Association of Medical Editors, blasted predatory journals for “the damage that these illegitimate open access journals..."
-      - title: "Japanese institute finds materials researcher with 41 retractions guilty of ‘extensive’ manipulation"
-        url: "https://retractionwatch.com/2026/10/19/joseph-raj-xavier-national-institute-materials-science-saveetha-retractions-extensive-manipulation/"
-        source: "Retraction Watch"
-        date: 2026-10-19
-        summary: "An investigation by a national research institute in Japan has concluded one of its former researchers fabricated and falsified figures in seven papers. Two publishers confirmed they are investigating the articles..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "EPIC, CFA and Fairplay Urge Stronger Rules Under Colorado Automated Decision-Making Technology and Chatbot Laws"
+        url: "https://epic.org/epic-cfa-and-fairplay-urge-stronger-rules-under-colorado-automated-decision-making-technology-and-chatbot-laws/"
+        source: "EPIC"
+        date: 2026-10-28
+        summary: "EPIC, Consumer Federation of America (CFA), and Fairplay submitted comments on Monday in response to the Colorado Department of Law’s rulemaking for the state’s recently-passed Automated Decision-Making Technology Act..."
+      - title: "The Sum & Substance: Business, financial groups fear unintended consequences of proposed AI rules"
+        url: "https://epic.org/the-sum-substance-business-financial-groups-fear-unintended-consequences-of-proposed-ai-rules/"
+        source: "EPIC"
+        date: 2026-10-27
+        summary: "“The law requires human review only when it is ‘commercially reasonable,’ but that vague standard concerns both companies worrying it will require a lot of reassessments and consumer groups fearing it will allow..."
+      - title: "USA Today: Can you sue over targeted ads? ‘Blockbuster’ Supreme Court case to decide"
+        url: "https://epic.org/usa-today-can-you-sue-over-targeted-ads-blockbuster-supreme-court-case-to-decide/"
+        source: "EPIC"
+        date: 2026-10-27
+        summary: "“’We have had a massive proliferation in online tracking and profiling in the last few decades,’ said Sara Geoghegan, a lawyer with the Electronic Privacy Information Center, which filed a brief supporting Salazar. ‘We..."
+      - title: "EPIC Urges Supreme Court to Protect Voters and Strike Down Arizona’s SAVE-based Voter-Registration Cancellation Program"
+        url: "https://epic.org/epic-urges-supreme-court-to-protect-voters-and-strike-down-arizonas-save-based-voter-registration-cancellation-program/"
+        source: "EPIC"
+        date: 2026-10-27
+        summary: "On October 20, 2026, EPIC filed an amicus brief in Republican National Committee v. Mi Familia Vota urging the Supreme Court to strike down Arizona House Bill (H.B.) 2243. EPIC was represented on the brief by pro bono..."
+      - title: "The Wash: From Blockbuster video to TikTok, Supreme Court weighs the future of video privacy"
+        url: "https://epic.org/the-wash-from-blockbuster-video-to-tiktok-supreme-court-weighs-the-future-of-video-privacy/"
+        source: "EPIC"
+        date: 2026-10-26
+        summary: "“Paramount argued that expanding the term ‘consumer’ to include someone purchasing non-video services from a site could create far-reaching problems for non-video retailers that host videos on their websites.” “But Tom..."
+      - title: "New York City’s “Click to Cancel” Rule Goes Into Effect"
+        url: "https://epic.org/new-york-citys-click-to-cancel-rule-goes-into-effect/"
+        source: "EPIC"
+        date: 2026-10-26
+        summary: "This month, New York City’s rule on subscription traps took effect, protecting New Yorkers from confusing, time-consuming hurdles that make it difficult to cancel a subscription. The rule requires that companies must..."
       - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
         url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
         source: "EFF Deeplinks"
         date: 2026-10-22
         summary: "Canada’s Parliament is debating a massive expansion of surveillance powers that will threaten the privacy and security of millions of people. Bill C-22, also called the Lawful Access Act, has already passed the House of..."
-      - title: "EPIC Urges D.C. Council to Protect Student Privacy and Pass Strong Procurement Guidelines for Edtech"
-        url: "https://epic.org/epic-urges-d-c-council-to-protect-student-privacy-and-pass-strong-procurement-guidelines-for-edtech/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "EPIC submitted public testimony to the D.C. Council Committee of the Whole urging them to pass strong procurement guidelines for technology that utilizes AI or automated decision-making systems in schools."
-      - title: "Meta Fined $25 Billion by New Mexican Court for Violating Privacy During Cambridge Analytica Scandal"
-        url: "https://epic.org/meta-fined-25-billion-by-new-mexican-court-for-violating-privacy-during-cambridge-analytica-scandal/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "On Wednesday, the New Mexico Department of Justice announced that the state is issuing a $25 billion penalty against Meta for the company’s violations of New Mexico’s Unfair Practices Act."
-      - title: "On the Road to Risk: Connected Cars Put Drivers’ Privacy and Safety in Harm’s Way"
-        url: "https://epic.org/on-the-road-to-risk-connected-cars-put-drivers-privacy-and-safety-in-harms-way/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "Connected car privacy is now a mainstream problem for nearly every driver, with even greater risks for certain populations, like targets of domestic violence (DV). Recent state laws, federal regulatory efforts, and..."
-      - title: "EPIC Joins Coalition Urging New York Governor to Sign and Strengthen Surveillance Pricing Law"
-        url: "https://epic.org/epic-joins-coalition-urging-new-york-governor-to-sign-and-strengthen-surveillance-pricing-law/"
-        source: "EPIC"
-        date: 2026-10-22
-        summary: "EPIC, along with four other organizations, sent a letter to New York Governor Kathy Hochul recommending that she strengthen and sign New York’s One Fair Price Act, a bill that would ban surveillance pricing that is..."
       - title: "Introducing Our New Surveillance Self-Defense Guide: Online Privacy for Parents and Youth"
         url: "https://www.eff.org/deeplinks/2026/10/introducing-our-new-surveillance-self-defense-guide-online-privacy-parents-and"
         source: "EFF Deeplinks"
@@ -205,21 +215,11 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-21
         summary: "The Brazilian National Data Protection Agency (ANPD) plays a pivotal role in the regulation of digital platforms according to new legislation approved in Brazil. Throughout this year, EFF has presented comments, filed..."
-      - title: "Encrypted Messaging Platforms Still Under Attack"
-        url: "https://epic.org/encrypted-messaging-platforms-still-under-attack/"
-        source: "EPIC"
-        date: 2026-10-21
-        summary: "Global Encryption Day is an annual day of action when advocates, champions, and everyday people come together to celebrate, promote, and defend encryption, a key security approach that enables safe online experiences."
       - title: "EFF’s State Legislative Agenda to End ALPR Mass Surveillance"
         url: "https://www.eff.org/deeplinks/2026/10/effs-state-legislative-agenda-end-alpr-mass-surveillance"
         source: "EFF Deeplinks"
         date: 2026-10-21
         summary: "Police agencies across the U.S. have deployed Automated License Plate Readers (ALPRs) to capture images of passing vehicles along with time, date, and GPS coordinates. While the technology itself isn’t new (ALPRs have..."
-      - title: "EPIC, Tech Justice Law, and Scholars Urge Ninth Circuit to Reject Big Tech’s Claim That Addictive, Surveillance-Based Feeds Are Protected Speech"
-        url: "https://epic.org/epic-tech-justice-law-and-scholars-urge-ninth-circuit-to-reject-big-techs-claim-that-addictive-surveillance-based-feeds-are-not-protected-speech/"
-        source: "EPIC"
-        date: 2026-10-21
-        summary: "On Tuesday, EPIC, Tech Justice Law, and sixteen law and technology scholars filed an amicus brief urging the Ninth Circuit to affirm a district court’s decision rejecting Meta, Google, and TikTok’s First Amendment..."
       - title: "Victory! Court Rules OPM Data Disclosure to DOGE Is Unlawful"
         url: "https://www.eff.org/deeplinks/2026/10/victory-court-rules-opms-disclosure-personal-records-doge-unlawful"
         source: "EFF Deeplinks"
