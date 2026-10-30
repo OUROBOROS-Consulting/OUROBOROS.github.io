@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-29
+generated: 2026-10-30
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Experts warn AI copyright changes could breach Australian constitution and spark huge compensation rights case"
+        url: "https://www.theguardian.com/law/2026/oct/31/experts-warn-ai-copyright-changes-could-breach-australian-constitution-and-spark-huge-compensation-rights-case"
+        source: "The Guardian"
+        date: 2026-10-30
+        summary: "Scraping copyrighted material from internet could ‘potentially’ amount to acquisition of property by government, Anne Twomey says Get our daily political email , free app or daily news podcast Altering copyright law to..."
       - title: "What is it like to work when your co-workers are AI agents?"
         url: "https://www.theguardian.com/technology/2026/oct/29/ai-agent-coworker"
         source: "The Guardian"
@@ -38,11 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-27
         summary: "Investigation finds dozens of ministers and civil servants moved into AI roles as government developed datacentre expansion plans The UK’s policy on datacentres and AI was developed without any meetings with..."
-      - title: "‘Digital hostile environment’: AI secretly being embedded across Home Office, report claims"
-        url: "https://www.theguardian.com/politics/2026/oct/27/digital-hostile-environment-ai-secretly-embedded-home-office-report"
-        source: "The Guardian"
-        date: 2026-10-27
-        summary: "Tasks from determining asylum seekers’ ages to border surveillance now involve AI, says Open Rights Group AI has been embedded across the Home Office in near-total secrecy, reinforcing the so-called hostile environment..."
       - title: "The focus on AI safety disasters ignores everyday harms"
         url: "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/"
         source: "MIT Technology Review"
@@ -72,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘His honesty gave courage to survivors’: domestic abuse charities praise Patrick Stewart’s legacy"
+        url: "https://www.theguardian.com/culture/2026/oct/30/domestic-abuse-charities-patrick-stewart-amnesty-international-refuge"
+        source: "The Guardian"
+        date: 2026-10-30
+        summary: "Actor first shared his childhood experiences as part of Amnesty International campaign and became Refuge ambassador When Patrick Stewart was growing up in the 1940s, he witnessed how, after his father beat his mother..."
       - title: "‘He was like 10 men after taking cocaine‘: how Britain’s drug habit is fuelling domestic abuse"
         url: "https://www.theguardian.com/society/2026/oct/26/cocaine-britain-drug-habit-fuelling-domestic-abuse"
         source: "The Guardian"
@@ -97,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-13
         summary: "Study authors say increase cannot be attributed to any one factor and list income inequality and reporting increases due to growing awareness as other likely reasons Get our breaking news email , free app or daily news..."
-      - title: "Five people shot and killed in apparent murder-suicide, Georgia police say"
-        url: "https://www.theguardian.com/us-news/2026/oct/10/douglas-georgia-shooting-deaths"
-        source: "The Guardian"
-        date: 2026-10-11
-        summary: "Deceased were all members of the same family, officials say, and one of victims placed the initial emergency call Five people were shot and killed in an apparent murder-suicide at a residence in Georgia on Friday..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
