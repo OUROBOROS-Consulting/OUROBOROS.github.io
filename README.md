@@ -261,5 +261,3 @@ bundle exec jekyll serve --drafts
 </details>
 
 ---
-
-> This repo is used for prototyping. Not soliciting via GitHub.

@@ -52,7 +52,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manufacturing+Consent&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manufacturing+Consent&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&family=Kode+Mono:wght@400..700&display=swap"
       rel="stylesheet">
     {% if page.noindex %}
     <meta name="robots" content="noindex,nofollow" />
@@ -60,6 +60,8 @@
     <meta name="robots"
       content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
     {% endif %}
+
+    <!-- Theme preferences  -->
     <script>
       // Blocking, inline, runs before any stylesheet paints. Applies a
       // previously-chosen theme immediately so there is no flash of the
@@ -74,6 +76,7 @@
         } catch (err) { /* localStorage may be blocked; OS preference still applies via CSS */ }
       })();
     </script>
+
     <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}?v={{ site.time | date: '%s' }}" />
     {% if page.layout == 'dashboard' %}
     <link rel="stylesheet" href="{{ '/assets/css/dashboard.css' | relative_url }}" />{% endif %}
@@ -85,11 +88,8 @@
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/regular/style.css" />
     <link rel="stylesheet" type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css" />
-    <!-- Draws the golden thread in the rail and the TOC. Deferred from <head>
-         so it executes ahead of the body's deferred scripts: toc.js calls
-         OuroSpine.draw() as soon as it has built the outline, and that call is
-         a no-op if this has not defined window.OuroSpine yet. -->
-    <!-- <script defer src="{{ '/assets/js/spine.js' | relative_url }}"></script> -->
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.1/lottie.min.js"></script>
   </head>
 
   <body {% if page.show_banner %} class="has-banner" {% endif %}>

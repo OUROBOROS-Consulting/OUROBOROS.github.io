@@ -1,0 +1,57 @@
+````scss
+/* assets/_404.scss */
+
+@use "design/tokens" at mixin;
+
+// --- Structure & Layout ---
+
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center; /* Vertically centers content */
+  justify-content: center; /* Horizontally centers content */
+  text-align: center;
+  padding: 4rem 1.5rem;
+}
+
+/* --- Main Heading --- */
+
+.page-container h1 {
+  font-size: clamp(2rem, 6vw, 4rem); // Responsive scaling for the '404'
+  color: var(--md-sys-color-primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.1em;
+}
+
+/* --- Body Content --- */
+
+.page-container p {
+  max-width: 600px;
+  margin-bottom: 2rem;
+  color: var(--md-sys-color-text);
+  line-height: 1.6;
+}
+
+/* --- Call to Action Button (Reusing general component styling) --- */
+
+.error-cta {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  background-color: var(--md-sys-color-primary);
+  color: var(--md-sys-color-text-on-primary);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--md-sys-color-secondary); // Use a slightly different color on hover
+  }
+}
+
+/* Specific media query adjustments */
+@media (max-width: 600px) {
+  .page-container h1 {
+    font-size: clamp(2rem, 8vw, 3rem); /* Slightly smaller/more mobile-friendly headline */
+  }
+}
+````

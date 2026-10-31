@@ -10,7 +10,8 @@
   gap: var(--md-sys-spacing-xs);
   min-height: var(--site-button-min-height);
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
-  border-radius: var(--site-radius-full); /* M3 standard for pill buttons */
+  border-radius: var(--site-radius-full);
+  /* M3 standard for pill buttons */
   font-family: inherit;
   font-weight: var(--md-ref-typeface-weight-medium);
   font-size: var(--md-sys-typescale-label-large-size);
@@ -46,6 +47,7 @@
   &:hover {
     background-color: var(--md-sys-color-primary-container);
     color: var(--md-sys-color-on-primary-container);
+    box-shadow: 0 0 25px rgba(221, 203, 163, 0.4);
   }
 
   &:active {
@@ -97,16 +99,33 @@
   }
 }
 
-/* 
+/*
   LEGACY BRIDGE
   Allows existing .btn classes to work during refactor transition.
 */
-.btn { @extend .c-btn; }
-.btn-primary   { @extend .c-btn--primary; }
-.btn-secondary { @extend .c-btn--secondary; }
-.btn-tertiary  { @extend .c-btn--tertiary; }
-.btn-outline   { @extend .c-btn--outline; }
-.btn-text      { @extend .c-btn--text; }
+.btn {
+  @extend .c-btn;
+}
+
+.btn-primary {
+  @extend .c-btn--primary;
+}
+
+.btn-secondary {
+  @extend .c-btn--secondary;
+}
+
+.btn-tertiary {
+  @extend .c-btn--tertiary;
+}
+
+.btn-outline {
+  @extend .c-btn--outline;
+}
+
+.btn-text {
+  @extend .c-btn--text;
+}
 
 a[href],
 button,
@@ -124,6 +143,7 @@ summary,
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .c-btn,
   .c-btn:active {
     transition-duration: var(--site-motion-reduced-duration);

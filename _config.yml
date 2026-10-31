@@ -31,7 +31,7 @@ collections:
     permalink: /announcements/:slug/
   about:
     output: true
-    permalink: /about/:slug/
+    permalink: /docs/:slug/
 
 # build settings
 # "scripts" is listed explicitly: fetch_news.py is a build-time tool, not site

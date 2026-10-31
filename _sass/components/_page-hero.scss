@@ -53,11 +53,12 @@
 
 .c-page-hero__identity > .label-large {
   margin: 0 0 var(--md-sys-spacing-sm);
+  
 }
 
 .c-page-hero__identity h1 {
   margin: 0;
-  font-size: clamp(var(--p-font-display-small), 7vw, 5.75rem);
+  font-size: clamp(var(--p-font-display-large), 7vw, 5.75rem);
   line-height: 0.98;
   letter-spacing: -0.035em;
   overflow-wrap: anywhere;
