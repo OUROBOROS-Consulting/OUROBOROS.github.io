@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-30
+generated: 2026-10-31
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -28,21 +28,11 @@ sections:
         source: "The Guardian"
         date: 2026-10-28
         summary: "Labor government under pressure to create social media watchdog as new online safety standards bill passes lower house Follow our Australia politics live blog for latest updates Get our breaking news email , free app or..."
-      - title: "AI bots flooded 2023 UK government consultation on disposable vapes ban"
-        url: "https://www.theguardian.com/society/2026/oct/27/ai-bots-flooded-2023-uk-government-consultation-disposable-vapes-ban"
-        source: "The Guardian"
-        date: 2026-10-27
-        summary: "Three-quarters of all responses were machine-generated in failed attempt to stop bill from passing into law, research finds AI bots flooded a government consultation with tens of thousands of fake responses in a failed..."
       - title: "Industrial Intelligence: The next growth opportunity for manufacturing"
         url: "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/"
         source: "MIT Technology Review"
         date: 2026-10-27
         summary: "Every manufacturer has its own industrial intelligence. Some is documented, and some resides in the knowledge of experienced workers. Consider an experienced operator preparing to restart a line after a changeover. The..."
-      - title: "UK government met 137 businesses over AI datacentres – but no environmental groups"
-        url: "https://www.theguardian.com/uk-news/2026/oct/27/uk-government-environmental-groups-ai-datacentres-expansion-plans-investigation"
-        source: "The Guardian"
-        date: 2026-10-27
-        summary: "Investigation finds dozens of ministers and civil servants moved into AI roles as government developed datacentre expansion plans The UK’s policy on datacentres and AI was developed without any meetings with..."
       - title: "The focus on AI safety disasters ignores everyday harms"
         url: "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/"
         source: "MIT Technology Review"
@@ -53,21 +43,6 @@ sections:
         source: "Ars Technica"
         date: 2026-10-23
         summary: "Turning on Personal Intelligence gives the company more data for ad targeting."
-      - title: "Judge rejects Trump’s wild claim EPA can dismiss data center pollution lawsuits"
-        url: "https://arstechnica.com/tech-policy/2026/10/judge-rejects-trumps-wild-claim-epa-can-dismiss-data-center-pollution-lawsuits/"
-        source: "Ars Technica"
-        date: 2026-10-21
-        summary: "Trump’s EPA can't unilaterally dismiss SpaceXAI pollution lawsuit, court rules."
-      - title: "The $15 billion ad-powered AI startup your doctor may already be using"
-        url: "https://arstechnica.com/ai/2026/10/the-15-billion-ad-powered-ai-startup-your-doctor-may-already-be-using/"
-        source: "Ars Technica"
-        date: 2026-10-21
-        summary: "OpenEvidence is booming despite questions about accuracy and ads."
-      - title: "Meta drops the word \"train\" from its commercial TOS after AI backlash"
-        url: "https://arstechnica.com/tech-policy/2026/10/meta-drops-the-word-train-from-its-commercial-tos-after-ai-backlash/"
-        source: "Ars Technica"
-        date: 2026-10-20
-        summary: "Meta changes AI scraping policy but won’t add language respecting robots.txt."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -136,6 +111,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Scientific Reports on hold in PubMed while NLM reevaluates journal"
+        url: "https://retractionwatch.com/2026/10/30/scientific-reports-pubmed-on-hold-national-library-medicine-evaluation/"
+        source: "Retraction Watch"
+        date: 2026-10-30
+        summary: "The National Library of Medicine has stopped indexing articles from Scientific Reports in MEDLINE because the journal’s inclusion in the world’s largest biomedical library is under review, Retraction Watch has learned..."
       - title: "Springer Nature journal could lose registry standing for clearing author of duplication"
         url: "https://retractionwatch.com/2026/10/29/innovative-higher-education-springer-nature-norway-registry-duplication/"
         source: "Retraction Watch"
@@ -161,11 +141,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-23
         summary: "A Wiley journal has corrected a retraction notice to clarify the author, a Princeton student, never conducted the study in the first place, as the student has gained publicity for visits to the offices of Texas..."
-      - title: "Thousands of research studies violate journal policies on collaborations between editors and authors"
-        url: "https://retractionwatch.com/2026/10/22/editorcheck-handling-editors-authors-collaboration-plos-mdpi-joint-conference-digital-libraries/"
-        source: "Retraction Watch"
-        date: 2026-10-22
-        summary: "Over 10,000 peer-reviewed papers from two publishers breach journal policies about past collaborations between handling editors and authors, a new analysis has found. The work — presented October 15 at the 26th ACM/IEEE..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
