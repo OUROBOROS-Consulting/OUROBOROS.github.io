@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-10-31
+generated: 2026-11-01
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -23,11 +23,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-29
         summary: "The Michigan Senate candidate is calling for public ownership and other reforms, offering a potential antidote to ideological gridlock The Michigan senatorial candidate Abdul El-Sayed, a Democrat, occupies a strange but..."
-      - title: "‘Emotional intimacy’ from AI chatbots would be banned under Australia’s digital duty of care laws"
-        url: "https://www.theguardian.com/australia-news/2026/oct/28/emotional-intimacy-ai-chatbots-ban-digital-duty-of-care-laws-australian-politics"
-        source: "The Guardian"
-        date: 2026-10-28
-        summary: "Labor government under pressure to create social media watchdog as new online safety standards bill passes lower house Follow our Australia politics live blog for latest updates Get our breaking news email , free app or..."
       - title: "Industrial Intelligence: The next growth opportunity for manufacturing"
         url: "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/"
         source: "MIT Technology Review"
