@@ -2,19 +2,19 @@
 layout: default
 title: Services
 permalink: /services/
-description: "Brand and website design, workflow automation, and practical technical advice for small businesses and independent professionals."
+description: "Private AI engineering, AI privacy consulting, data audits, and custom tools for organizations handling confidential data."
 ---
 
 {% include page-hero.html
   back_url="/"
   back_label="Home"
   category="Services"
-  title="What I Offer"
-  lede="Practical help for three common needs: a clearer brand and website, less repetitive work, or a grounded technical second opinion."
+  title="Private AI & Data Privacy"
+  lede="Most teams don't know where their data goes once it hits AI. I build private AI, audit data quality, and help you set rules your team can follow."
   icon="ph ph-fill ph-briefcase"
   cta_mode="service"
   cta_url="/intake"
-  cta_label="Book a Consultation"
+  cta_label="Request a free 20-minute AI privacy call"
 %}
 
 <div class="page-body">

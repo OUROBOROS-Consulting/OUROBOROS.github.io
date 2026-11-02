@@ -1,4 +1,19 @@
 @forward "md/palette";
 // @forward "md/colors";
+@forward "md/palette";
+// @forward "md/colors";
 @forward "md/typography";
 @forward "md/baseline";
+
+/* Global Overrides and Additions */
+/* Set the primary utility/code font stack explicitly here for safety */
+$font-mono: 'Kode Mono', monospace;
+
+
+/* === Typography Updates === */
+/* 
+ * Font Stack Cleanup: 
+ * Removed explicit uses of 'Manufacturing Consent'. 
+ * Default primary font stack is now Spectral, falling back to Kode Mono and then a system default.
+ * The semantic variable --font-utility should be updated elsewhere if required for other elements.
+ */

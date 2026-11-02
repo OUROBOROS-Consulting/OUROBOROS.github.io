@@ -1,6 +1,7 @@
 ---
-title: Client Intake
+title: Request a Free 20-Minute AI Privacy Call
 layout: default
+description: "Request a free 20-minute AI privacy call with Apostolos Stamenos. Do not send confidential information through this form."
 # Explicit because this file moved to legal/ on 2026-08-08. It was the only page
 # in the repo relying on Jekyll's default path-derived URL, so the move would have
 # silently sent it to /legal/intake.html. Every link to it in the site goes through
@@ -17,8 +18,8 @@ hide_cta: true
   <!-- MASTHEAD -->
   <div class="intake-masthead">
     <div>
-      <h1 class="intake-masthead-title">Client Intake Form</h1>
-      <div class="intake-masthead-subtitle">Technology Advisory &amp; Consulting Services &nbsp;·&nbsp; Confidential
+      <h1 class="intake-masthead-title">Request a Free 20-Minute AI Privacy Call</h1>
+      <div class="intake-masthead-subtitle">AI Privacy Call &nbsp;·&nbsp; Request Form
       </div>
     </div>
     <div class="intake-masthead-meta">
@@ -65,8 +66,9 @@ hide_cta: true
 
     <!-- CONFIDENTIAL BANNER -->
     <div class="intake-banner">
-      <p><strong>Submission and privacy:</strong> Formspree processes submissions and forwards them to my email. Please do not include passwords or sensitive details that are not needed for your enquiry. Information sent through this form is not legally privileged.</p>
-      <p><strong>Skip anything you're not ready to share</strong> — we can cover it together.</p>
+      <p><strong>Do not send confidential data here.</strong> Formspree processes this form and forwards it to my email. Do not include passwords, client records, secrets, or other sensitive material. This form is not legally privileged.</p>
+      <p><strong>The first call is free and lasts 20 minutes.</strong> Use this form to request a call. I will follow up within 72 hours.</p>
+      <p><strong>      Skip anything you're not ready to share</strong> — we can sort it out on the call.</p>
       <p><strong>Privacy:</strong> Avoid entering sensitive information you do not need to share here. If you have concerns about someone monitoring this device, consider contacting me from a device you trust.</p>
     </div>
 
@@ -74,12 +76,11 @@ hide_cta: true
     <div class="intake-section">
       <div class="intake-section-header">
         <span class="intake-section-number">01</span>
-        <span class="intake-section-title">How can I help?</span>
+        <span class="intake-section-title">What do you need help with?</span>
       </div>
 
       <div class="intake-note">
-        Select the category that best describes what you're looking for. The form will adapt to show only what's
-        relevant.
+        Choose the closest fit: private AI and data audits, or AI privacy and governance. The form will show the relevant questions.
       </div>
 
       <div class="service-cards">
@@ -467,21 +468,21 @@ hide_cta: true
 
       <div class="field-row">
         <div class="field-group">
-          <label for="tech-problem">What are you building or trying to solve?</label>
+          <label for="tech-problem">What AI or data problem do you need to solve?</label>
           <!-- Closing tag is welded to the opening one on purpose: a
                textarea's content is its value, so the newline and indent that
                used to sit here shipped as twelve spaces of pre-filled text.
                The placeholder never showed and the field submitted blank
                whitespace. Never put this tag on its own line. -->
           <textarea id="tech-problem" name="tech_problem" rows="3"
-            placeholder="Describe the problem, system, or product..."></textarea>
+            placeholder="Name the tool or describe the problem. Do not include confidential data, client details, or secrets."></textarea>
         </div>
       </div>
 
       <div class="field-row col-2">
         <div class="field-group">
-          <label for="tech-stack">Current tech stack or environment (if known)</label>
-          <input type="text" id="tech-stack" name="tech_stack" placeholder="e.g., Python / React / AWS, or 'unsure'">
+          <label for="tech-stack">Current AI or data environment (if known)</label>
+          <input type="text" id="tech-stack" name="tech_stack" placeholder="e.g., hosted AI service, local LLM, cloud data platform, or 'unsure'">
         </div>
         <div class="field-group">
           <label for="tech-org">Organization or context</label>
@@ -493,17 +494,16 @@ hide_cta: true
         <fieldset class="field-group">
           <legend>Type of engagement needed</legend>
           <div class="check-group">
-            <label class="check-item"><input type="checkbox" name="tech_engagement" value="architecture"> Architecture
-              /
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="architecture"> Private AI
               design</label>
-            <label class="check-item"><input type="checkbox" name="tech_engagement" value="development"> Development /
-              build</label>
-            <label class="check-item"><input type="checkbox" name="tech_engagement" value="security_review"> Security
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="development"> AI workflow
+              or tool build</label>
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="privacy_review"> AI privacy
               review</label>
-            <label class="check-item"><input type="checkbox" name="tech_engagement" value="audit"> Code / system
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="data_audit"> Data-quality
               audit</label>
-            <label class="check-item"><input type="checkbox" name="tech_engagement" value="strategy"> Technical
-              strategy</label>
+            <label class="check-item"><input type="checkbox" name="tech_engagement" value="governance"> AI governance
+              and training</label>
             <label class="check-item"><input type="checkbox" name="tech_engagement" value="other"> Other</label>
           </div>
         </fieldset>
@@ -531,17 +531,17 @@ hide_cta: true
 
       <div class="field-row">
         <div class="field-group">
-          <label for="timeline">Is there a deadline or urgent event?</label>
+          <label for="timeline">Is there a reporting date or project deadline?</label>
           <input type="text" id="timeline" name="timeline"
-            placeholder="e.g., court hearing June 15, board presentation in 3 weeks, ASAP">
+            placeholder="e.g., a report due in three weeks">
         </div>
       </div>
 
       <div class="field-row">
         <div class="field-group">
-          <label for="anything-else">Anything else to share before your consultation? (optional)</label>
+          <label for="anything-else">Anything else about your AI or data question? (optional)</label>
           <textarea id="anything-else" name="additional_information" rows="3"
-            placeholder="Context, questions, or anything you'd like to raise upfront..."></textarea>
+            placeholder="Questions or context only. Do not include confidential data, client details, or secrets."></textarea>
         </div>
       </div>
 
@@ -557,8 +557,7 @@ hide_cta: true
           {%- endcomment -%}
           <label class="intake-ack">
             <input type="checkbox" name="acknowledgment" value="acknowledged" required>
-            <span>I understand this intake does not constitute legal advice, does not establish a client relationship,
-              and does not guarantee services. My information is held in strict confidence.</span>
+            <span>I understand Formspree processes this form and forwards it by email. This does not create legal privilege or a client relationship, and does not guarantee services.</span>
           </label>
         </div>
       </div>
@@ -571,7 +570,7 @@ hide_cta: true
         success message above. One source so the number cannot drift.
       {%- endcomment -%}
       <p class="intake-submit-note">{{ site.data.availability.response }}</p>
-      <button type="submit" class="btn" data-fs-submit-btn>Submit Intake</button>
+      <button type="submit" class="btn" data-fs-submit-btn>Request My Free Call</button>
       {%- comment -%}
         Ghost, not .btn. Both buttons carried identical weight, so the page
         offered two equally-loud endings and neither read as the action.
@@ -581,8 +580,8 @@ hide_cta: true
 
     <!-- DOC FOOTER -->
     <div class="intake-doc-footer">
-      <span>CONFIDENTIAL · CLIENT INTAKE · APOSTOLOS STAMENOS</span>
-      <span>Information held in strict confidence</span>
+      <span>AI PRIVACY CALL REQUEST · APOSTOLOS STAMENOS</span>
+      <span>Do not include confidential data. This form is not legally privileged.</span>
     </div>
 
   </form>
@@ -596,7 +595,7 @@ hide_cta: true
     'advocacy': 'survivor',
     'courses': 'literacy',
     'technology': 'technical',
-    'design': 'studio'
+    'identity': 'studio'
   };
   document.querySelectorAll('[name="service_type"]').forEach(function (radio) {
     radio.addEventListener('change', function () {

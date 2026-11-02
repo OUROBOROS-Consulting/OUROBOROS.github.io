@@ -1,9 +1,9 @@
-- title: Small Businesses
+- title: Organizations with Sensitive Data
   icon:   ph-fill ph-briefcase
   description: >
-    Small teams need dependable systems that keep the work moving. Get help connecting tools, automating repeat tasks, and improving your digital presence without adding unnecessary complexity.
+    Most teams cannot say where their data goes after it enters an AI tool. Map the data flow, choose a private setup, and set clear rules before confidential information moves.
 
-- title: Solopreneurs
+- title: Teams Accountable for Reporting
   icon:   ph-fill ph-user
   description: >
-    Independent professionals need an online presence and business systems that fit their practice. Get practical support with identity, websites, and tools you can manage yourself.
+    Bad numbers can reach leadership, Congress, or the public before anyone catches them. Audit data and add checks that flag impossible values before they go out.

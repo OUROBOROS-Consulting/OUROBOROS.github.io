@@ -1,20 +1,27 @@
-- title: Brand & Website
-  category: Identity & Strategy
-  lede: Your business has grown, but your brand or website no longer explains what makes it worth choosing.
-  description: Build a clear identity and online presence with messaging, design, and a website shaped around your goals and capacity.
-  url: /services/identity/#design
-  link_label: Explore brand and website work
-
-- title: Workflow & Automation
+- title: Private AI & Agentic Workflows
   category: Technology
-  lede: Repetitive work is taking time away from the parts of your business that need your attention.
-  description: Map the workflow, find the useful opportunities to simplify it, and connect tools or automate steps you can maintain.
+  lede: Your team needs AI's speed without sending confidential data to a vendor.
+  description: Build locally hosted AI and agentic workflows that keep sensitive data inside your walls, with clear limits and human review.
   url: /services/technology/#automation
-  link_label: Explore workflow support
+  link_label: Explore private AI work
 
-- title: Technical Review & Decision Support
+- title: AI Privacy & Governance
   category: Technology
-  lede: You have a technical question, tool choice, or AI idea but need a grounded second opinion before committing.
-  description: Review the situation, make tradeoffs and maintenance needs visible, and leave with practical next steps—not a sales pitch for more technology.
-  url: /services/technology/#review
-  link_label: Explore technical reviews
+  lede: You need to know what your AI tools can see, where data goes, and who is accountable.
+  description: Map data flows, set practical rules for AI use, and choose tools that fit your privacy and oversight needs.
+  url: /services/identity/
+  link_label: Explore AI privacy and governance
+
+- title: Data Audits & Anomaly Detection
+  category: Technology
+  lede: A wrong number can reach the public before anyone knows it is wrong.
+  description: Audit data quality and add checks that flag impossible or unexpected values before they reach a report or decision.
+  url: /services/technology/#data-quality
+  link_label: Explore data audits
+
+- title: Custom Tools for Sensitive Data
+  category: Technology
+  lede: Complex information is hard to use when the tools around it do not fit the work.
+  description: Build focused tools that make important information easier to understand and use, without handing it to an outside AI service.
+  url: /services/technology/#custom-tools
+  link_label: Explore custom tools

@@ -3,10 +3,10 @@
 // semantic design tokens and typography families.
 
 :root {
-  --font-utility: 'Syne', sans-serif;
-  --font-authority: 'Manufacturing Consent', serif;
+  // --font-utility: 'Syne', sans-serif;
+  --font-authority: serif;
   --md-ref-typeface-plain: var(--font-utility);
-  --md-ref-typeface-brand: var(--font-authority);
+  // --md-ref-typeface-brand: var(--font-authority);
 }
 
 

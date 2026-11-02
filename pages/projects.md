@@ -2,7 +2,7 @@
 layout: default
 title: Projects
 permalink: /projects/
-description: "Selected work in brand design, web development, automation, and technical consulting."
+description: "Selected work in private AI, data quality, and federal public-health technology."
 ---
 
 {% assign case_count = site.case_studies.size | default: 0 %}
@@ -15,7 +15,7 @@ description: "Selected work in brand design, web development, automation, and te
   back_label="Home" 
   category="Projects" 
   title="Projects" 
-  lede="Examples of brand design, web development, automation, and technical consulting."
+  lede="Evidence from federal public-health systems, data modeling, and operational migrations."
   icon="ph ph-briefcase"
 %}
 
@@ -25,7 +25,7 @@ description: "Selected work in brand design, web development, automation, and te
     <a href="{{ '/case-studies/' | relative_url }}" class="c-card c-stack">
       <p class="technical text-t">Client Work</p>
       <h2 class="authority" style="margin:0; font-size: 1.5rem;">Case Studies</h2>
-      <p class="text-s">Selected client engagements and in-house projects, including solo-business setup, federal technology work, and this firm's own brand system.</p>
+      <p class="text-s">Selected work includes forecasting and anomaly-detection models used to flag impossible data across 6,000+ hospitals, and the HHS Protect Public and Vaccines.gov migration to CDC and ASPR: 3,900+ users moved in under six months with zero disruption.</p>
       <span class="technical text-t" style="margin-top:auto; border-top: 1px solid var(--md-sys-color-outline); padding-top:10px;">{{ case_count }} case studies &amp; projects &rarr;</span>
     </a>
 

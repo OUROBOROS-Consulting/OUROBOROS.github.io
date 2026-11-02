@@ -18,24 +18,20 @@ cta_body: Still have a question I did not answer?
 
 ### What does ouroborOS Consulting actually do?
 
-Four things, and they are less related than the word "consulting" makes them sound.
+I build private AI for organizations that handle confidential data. I also help teams map where their data goes, set practical AI rules, audit data quality, and build tools around sensitive information.
 
-I help people navigate institutions that are not built to be navigated. I teach courses in AI, public records research, digital self-defense, and the Mac sitting in front of you. I build technology and AI systems for people and small organizations. And I design brands and websites.
+At HHS, I built models CDC leadership used to catch impossible hospital data before it reached Congress. I also led a 3,900-user migration with zero disruption. See [the services](/services/) and [the work behind them](/projects/).
 
-The first two exist because I have been through institutional processes without help and know what that costs. The second two are the commercial spine of the practice. All four are priced to be worth doing, because a service I cannot sustain is not a service.
+### What services do you offer?
 
-### How do the four services differ?
+| Need | What I do |
+| --- | --- |
+| Keep AI private | Build locally hosted AI and agentic workflows designed to keep confidential data inside your environment. |
+| Understand AI exposure | Map data flows, review tool choices, and set practical AI governance rules. |
+| Catch bad numbers | Audit data quality and add checks that flag impossible values before reporting. |
+| Make information usable | Build focused tools for complex or sensitive data. |
 
-The clearest way to tell them apart is by who does the work.
-
-| Service | Who does the work | Typical rate |
-| --- | --- | --- |
-| [Advocacy & Institutional Navigation](/services/advocacy/) | We do it together, on your own records | $100/hr, $125 to $225 for records and chronology work |
-| [Education & Training](/services/education/) | You do it, I teach you how | $125 to $150 a session, $1,200 half-day workshop |
-| [Technology & AI](/services/technology/) | I build it and hand you the keys | $150 to $375/hr |
-| [Brand & Digital Studio](/services/design/) | I build it and hand you the keys | $100 to $200/hr |
-
-If you are not sure which one you need, book the free consultation and I will tell you. Sometimes the answer is that you need none of them, and I will say that too.
+The first 20-minute AI privacy call is free. We will identify the problem and decide whether I can help. I will tell you if I am the wrong person.
 
 ## The line between teaching and doing
 
@@ -124,31 +120,21 @@ If you are in danger right now, contact emergency services. The [survival guide]
 
 ### What does it cost, and will you turn me away if I cannot pay?
 
-My floor is $100 an hour. That is what advocacy sessions, record review, and individual coaching cost. There is no means test, no paperwork, and no rate below it for anyone.
-
-This page has now moved that number twice, and you should be able to watch it move. I first said nobody would be turned away for inability to pay, which implied a $0 option that never existed. I replaced it with $50. That was the same mistake in a smaller size: $50 an hour does not cover the hours it takes to do this work properly, so it was a rate I would have had to quietly abandon or resent. A firm that edits a broken promise in the dark is doing the thing this firm exists to oppose, so I am doing it in the light instead.
-
-Here is the honest version. I have two decades in information technology, this is my only income, and I have rent and groceries like anyone else. $100 an hour is what a competent professional charges and it is what keeps the practice open. I would rather hand you a real number before you tell me anything about your finances. That disclosure costs you something, and you should not have to spend it to find out the answer.
+The first 20-minute AI privacy call is free. After that, technical advisory is $150–$250 per hour; private AI and workflow builds are $200–$350 per hour. Data audits are scoped and quoted before work starts. See [full service details](/services/technology/).
 
 What has not changed, and will not: everything published on this site stays free.
 
 ### Do you do free work?
 
-The first conversation is free. Forty-five minutes for advocacy, thirty for training. No commitment, and no referral required.
+The first AI privacy call is free and lasts 20 minutes. No commitment and no referral required.
 
-Everything on this site is free and always will be: the tutorials, the survival guide, the PSAs, the glossary. That is deliberate. Most people who need this do not need to hire me, they need the information, and gatekeeping it would be indefensible.
+The guides and resources on this site are free to read.
 
-Beyond that, no. I do not have pro bono capacity right now and I am not going to imply that I do. If $100 an hour is out of reach, tell me on the intro call and I will spend that call pointing you at what costs nothing: the tutorials here, the survival guide, and the domestic violence advocate in your county, who is free and who can do things I cannot.
-
-That is a worse answer than the one you wanted. It is the true one, and you can act on it today.
+There is no obligation to hire me after the call. If the work is outside my scope, I will say so.
 
 ### Why does organizational and technical work cost more?
 
-Because it is a different job, not because it subsidizes a cheaper one.
-
-A half-day workshop is eight people, a room, and material prepared in advance. A records campaign runs for months across agencies that are not trying to help. Building and handing over a working system carries risk I have to stand behind afterward. Those cost more per hour because they demand more per hour.
-
-I used to say the high rates funded the low ones. That framing was aspirational and I am cutting it. There is no cross-subsidy to point at, so I am not going to describe one. What is actually free is free because it is published and costs me nothing to give you again.
+Private AI systems and data audits require careful scoping, implementation, testing, and handoff. I quote the work before it starts. You will know the cost and limits before you commit.
 
 ## Limits and privacy
 
@@ -176,4 +162,4 @@ If you would rather not put something in a form, say so in the first message and
 
 ### How do I start?
 
-[Book the free consultation](/intake). Tell me roughly what is going on. If I am the wrong person, I will say so on that call rather than take your money to find out slowly.
+[Request a free 20-minute AI privacy call](/intake/). Tell me what tools your team uses and what you need to protect. Do not send confidential data through the form; it is processed by Formspree and is not legally privileged.

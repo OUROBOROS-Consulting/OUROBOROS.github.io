@@ -10,8 +10,8 @@ layout: default
     <div class="c-stack">
       <header class="c-stack">
         <p class="technical text-t">Ways to Work Together</p>
-        <h2 class="authority">What would you like to make easier?</h2>
-        <p class="forensic text-s">Start with the problem you need to solve. We can shape the right-sized work from there.</p>
+        <h2 class="authority">AI should not sell out your data.</h2>
+        <p class="forensic text-s">Keep confidential information inside your walls. Start with a free 20-minute AI privacy call.</p>
       </header>
     </div>
 
@@ -28,7 +28,7 @@ layout: default
   <div class="c-container">
     <div class="c-stack">
       <p class="technical text-t">A Practical Approach</p>
-      <h2 class="authority">Clear decisions. Useful work. A handoff you can own.</h2>
+      <h2 class="authority">Private by design. Checked before it ships.</h2>
     </div>
 
     <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
@@ -39,8 +39,8 @@ layout: default
       </article>
       <article class="c-card c-stack">
         <p class="technical text-t">02 / Choose</p>
-        <h3 class="authority c-card-title">Use the smallest useful intervention</h3>
-        <p class="text-s">Recommendations account for cost, privacy, accessibility, and the time you can realistically spend maintaining the result.</p>
+        <h3 class="authority c-card-title">Keep secrets inside your walls</h3>
+        <p class="text-s">Choose where data is processed, limit what AI can access, and keep people responsible for the decisions.</p>
       </article>
       <article class="c-card c-stack">
         <p class="technical text-t">03 / Hand off</p>
@@ -88,12 +88,12 @@ layout: default
 <section id="testimonials" class="c-section c-section--marble">
   <div class="c-container">
 
-    {% assign business_testimonials = site.data.testimonials | where: "tag", "Technology" %}
+    {% assign technology_testimonials = site.data.testimonials | where: "tag", "Technology" %}
     <div class="c-stack">
       <header class="c-stack">
         <p class="technical text-t">Selected References</p>
         <h2 class="authority">Testimonials</h2>
-        <p class="forensic text-s">These references describe federal technology and data-platform work. They demonstrate technical judgment and operational continuity, not like-for-like small-business projects.</p>
+        <p class="forensic text-s">These federal references describe high-stakes technology and data-platform work. They show how I approach complex systems, not a promise of identical results in every environment.</p>
       </header>
     </div>
 
@@ -101,7 +101,7 @@ layout: default
       <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous testimonial">
         <i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>
       </button>
-      <span class="carousel-count">1 / {{ business_testimonials.size }}</span>
+      <span class="carousel-count">1 / {{ technology_testimonials.size }}</span>
       <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next testimonial">
         <i class="ph ph-fill ph-arrow-fat-line-right" aria-hidden="true"></i>
       </button>
@@ -109,9 +109,9 @@ layout: default
 
     <div class="carousel carousel--testimonials" aria-live="polite" aria-label="Testimonials">
       <div class="carousel-track">
-        {% for ref in business_testimonials %}
+        {% for ref in technology_testimonials %}
         <div class="carousel-slide" role="group"
-          aria-label="Testimonial {{ forloop.index }} of {{ business_testimonials.size }}">
+          aria-label="Testimonial {{ forloop.index }} of {{ technology_testimonials.size }}">
           <div class="c-card c-stack">
             <p class="technical text-t">{{ ref.title }}</p>
             <blockquote class="forensic">
@@ -125,11 +125,33 @@ layout: default
     </div>
 
     <div class="carousel-dots" role="tablist" aria-label="Testimonial navigation">
-      {% for ref in business_testimonials %}
+      {% for ref in technology_testimonials %}
       <button type="button" class="carousel-dot{% if forloop.first %} active{% endif %}" role="tab"
         aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
         aria-label="Testimonial {{ forloop.index }}"></button>
       {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ── Background ───────────────────────────────────────────────────────── -->
+<section id="background" class="c-section c-section--marble">
+  <div class="c-container">
+    <div class="c-stack">
+      <p class="technical text-t">Why This Work</p>
+      <h2 class="authority">Leaks and bad numbers start with choices. Make the choices visible.</h2>
+    </div>
+
+    <div class="c-grid c-grid--2">
+      <article class="c-card c-stack">
+        <p class="text-s">During the COVID-19 response at the U.S. Department of Health and Human Services, I shipped forecasting and anomaly-detection models that flagged impossible numbers across 6,000+ hospitals before CDC leadership reported them to Congress, the media, and the public.</p>
+        <p class="text-s">I also led the move of HHS Protect Public and Vaccines.gov to CDC and ASPR: 3,900+ users in under six months, with zero disruption. The HHS CIO recognized my work with two separate HHS awards.</p>
+      </article>
+      <article class="c-card c-stack">
+        <p class="text-s">Today, I build locally hosted AI and agentic workflows that keep confidential data inside your walls. I audit data so reported numbers hold up, and build tools that make complex information usable.</p>
+        <p class="text-s">My research in Bayesian statistics is peer-reviewed. I write about agentic AI and privacy at <a href="{{ site.substack_url }}">Problematic by Design</a>. Every engagement is confidential, with plain-language reporting.</p>
+        <p class="text-s">If your data can't afford to leak or be wrong, <a href="/intake/">request a free 20-minute AI privacy call</a>. I'll follow up within 72 hours.</p>
+      </article>
     </div>
   </div>
 </section>
@@ -142,70 +164,17 @@ layout: default
       <h2 class="authority">{{ page.about_heading }}</h2>
     </div>
 
+    {% if page.stats.metrics %}
     <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
-
-      {% if page.stats.years_experience %}
+      {% for metric in page.stats.metrics %}
       <div class="c-card c-stack">
-        {% if page.stats.years_experience_icon %}<i
-          class="{{ page.stats.years_experience_icon }} technical text-t" aria-hidden="true"></i>{%
-        endif %}
-        <span class="authority c-card-value">{{ page.stats.years_experience }}</span>
-        <span class="text-s">{{ page.stats.years_experience_note | default: "Years of Professional
-          Experience" }}</span>
+        {% if metric.icon %}<i class="{{ metric.icon }} technical text-t" aria-hidden="true"></i>{% endif %}
+        <span class="authority c-card-value">{{ metric.value }}</span>
+        <span class="text-s">{{ metric.note }}</span>
       </div>
-      {% endif %}
-
-      {% if page.stats.publications %}
-      <div class="c-card c-stack">
-        {% if page.stats.publications_icon %}<i
-          class="{{ page.stats.publications_icon }} technical text-t" aria-hidden="true"></i>{%
-        endif
-        %}
-        <span class="authority c-card-value">{{ page.stats.publications }}</span>
-        <span class="text-s">Publications &amp; Papers</span>
-      </div>
-      {% endif %}
-
-      {% if page.stats.students_tutored %}
-      <div class="c-card c-stack">
-        {% if page.stats.students_tutored_icon %}<i
-          class="{{ page.stats.students_tutored_icon }} technical text-t" aria-hidden="true"></i>{%
-        endif %}
-        <span class="authority c-card-value">{{ page.stats.students_tutored }}</span>
-        <span class="text-s">Students Tutored</span>
-      </div>
-      {% endif %}
-
-      {% if page.stats.clients %}
-      <div class="c-card c-stack">
-        {% if page.stats.clients_icon %}<i class="{{ page.stats.clients_icon }} technical text-t"
-          aria-hidden="true"></i>{% endif %}
-        <span class="authority c-card-value">{{ page.stats.clients }}</span>
-        <span class="text-s">{{ page.stats.clients_note | default: "Consulting Engagements"
-          }}</span>
-      </div>
-      {% endif %}
-
-      {% if page.stats.agencies %}
-      <div class="c-card c-stack">
-        {% if page.stats.agencies_icon %}<i class="{{ page.stats.agencies_icon }} technical text-t"
-          aria-hidden="true"></i>{% endif %}
-        <span class="authority c-card-value">{{ page.stats.agencies }}</span>
-        <span class="text-s">{{ page.stats.agencies_note | default: "Agencies &amp; Orgs" }}</span>
-      </div>
-      {% endif %}
-
-      {% if page.stats.phd_program %}
-      <div class="c-card c-stack">
-        {% if page.stats.phd_program_icon %}<i
-          class="{{ page.stats.phd_program_icon }} technical text-t" aria-hidden="true"></i>{% endif
-        %}
-        <span class="authority c-card-value">{{ page.stats.phd_program }}</span>
-        <span class="text-s">PhD Program</span>
-      </div>
-      {% endif %}
-
+      {% endfor %}
     </div>
+    {% endif %}
   </div>
 </section>
 

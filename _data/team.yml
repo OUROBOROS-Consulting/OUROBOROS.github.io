@@ -18,19 +18,7 @@
     - Award-winning federal data scientist
     - Psychopathology research
   bio: |
-    Founder of ouroborOS Consulting. Former federal data scientist at HHS, where I led agency-wide transitions of public health infrastructure during the
-    COVID response and built FedRAMP-compliant machine learning and language systems on Palantir Foundry.
-
-    My technical work spans Bayesian modeling, neuroimaging, high-throughput
-    data pipelines, and anomaly detection in national health data systems. I
-    build things that have to work: under deadline, under regulatory constraint,
-    at scale.
-
-    My current consulting work focuses on small businesses and solo practitioners
-    who need practical design or technical capacity without hiring a full-time
-    specialist. Previous work includes federal technology, research, and public-interest
-    projects. I find what is slowing the work down, then help choose a fitting response:
-    sometimes an AI tool, sometimes a simple automation, a better workflow, or a different app.
+    Apostolos Stamenos builds private AI for organizations that handle confidential data and can't afford a leak. Most teams don't know where their data goes once it enters an AI tool. Apostolos builds locally hosted AI and agentic workflows that keep that data inside your walls, and audits your data so the numbers you report hold up. At the U.S. Department of Health and Human Services, he built the models CDC leadership used to catch impossible hospital data before it reached Congress, and led a 3,900-user migration with zero disruption. Book a free 20-minute AI privacy call.
   links:
     linkedin: https://www.linkedin.com/in/apostolos-stamenos
     contact: /intake

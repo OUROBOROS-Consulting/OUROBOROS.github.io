@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Resources
-description: "Practical guides, research, and public-service resources on technology, data, privacy, and design. Free to read and share."
+description: "Practical guides on AI privacy, data protection, and public-interest technology. Free to read and share."
 permalink: /resources/
 ---
 
@@ -10,10 +10,10 @@ permalink: /resources/
   back_label="Home"
   category="Resources"
   title="Reference Materials"
-  lede="Practical references on technology, data, privacy, and design, selected for independent professionals and small teams."
+  lede="Plain-language guides on AI privacy, data protection, and public-interest technology."
   icon="ph ph-fill ph-books"
   cta_url="/intake"
-  cta_label="Book a Consultation"
+  cta_label="Request a free 20-minute AI privacy call"
 %}
 
 <div class="page-body">
