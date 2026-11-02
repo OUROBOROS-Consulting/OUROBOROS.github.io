@@ -2,27 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-01
+generated: 2026-11-02
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Experts warn AI copyright changes could breach Australian constitution and spark huge compensation rights case"
-        url: "https://www.theguardian.com/law/2026/oct/31/experts-warn-ai-copyright-changes-could-breach-australian-constitution-and-spark-huge-compensation-rights-case"
+      - title: "Palantir AI tech unused or little used by 29 NHS trusts said to be benefiting from it"
+        url: "https://www.theguardian.com/technology/2026/nov/02/palantir-unused-nhs-hospital-trusts"
         source: "The Guardian"
-        date: 2026-10-30
-        summary: "Scraping copyrighted material from internet could ‘potentially’ amount to acquisition of property by government, Anne Twomey says Get our daily political email , free app or daily news podcast Altering copyright law to..."
-      - title: "What is it like to work when your co-workers are AI agents?"
-        url: "https://www.theguardian.com/technology/2026/oct/29/ai-agent-coworker"
+        date: 2026-11-02
+        summary: "Exclusive: Gap between NHS claim and trusts’ comments described as ‘very misleading’ by senior health official More than two dozen hospital trusts the NHS claims have benefited from Palantir’s medical data platform are..."
+      - title: "Police use facial recognition to scan one million faces in WA trial leading to 122 arrests"
+        url: "https://www.theguardian.com/australia-news/2026/nov/02/wa-police-facial-recognition-technology-trial"
         source: "The Guardian"
-        date: 2026-10-29
-        summary: "Using AI for roles from executive assistants to chiefs of staff, companies are boasting about doing more with less, creating tension with their human workers On an average workday, Dhruv Amin chats with dozens of..."
-      - title: "Could Abdul El-Sayed’s plan for AI companies stave off catastrophe? | Jerel Ezell"
-        url: "https://www.theguardian.com/commentisfree/2026/oct/29/abdul-el-sayed-ai-companies-public-ownership"
-        source: "The Guardian"
-        date: 2026-10-29
-        summary: "The Michigan Senate candidate is calling for public ownership and other reforms, offering a potential antidote to ideological gridlock The Michigan senatorial candidate Abdul El-Sayed, a Democrat, occupies a strange but..."
+        date: 2026-11-02
+        summary: "Deployments of surveillance vans over five months resulted in nine false alerts and led officers to engage with 146 registered sex offenders Get our breaking news email , free app or daily news podcast More than a..."
       - title: "Industrial Intelligence: The next growth opportunity for manufacturing"
         url: "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/"
         source: "MIT Technology Review"
@@ -33,15 +28,20 @@ sections:
         source: "MIT Technology Review"
         date: 2026-10-26
         summary: "Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are..."
-      - title: "Updated Google privacy policy says your Gmail might be used for advertising"
-        url: "https://arstechnica.com/gadgets/2026/10/updated-google-privacy-policy-says-your-gmail-might-be-used-for-advertising/"
-        source: "Ars Technica"
-        date: 2026-10-23
-        summary: "Turning on Personal Intelligence gives the company more data for ad targeting."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "I Died review – moving portrait of Tzotzil women confronting patriarchal violence in the Mexican highlands"
+        url: "https://www.theguardian.com/film/2026/nov/02/i-died-review-moving-portrait-of-tzotzil-women-confronting-patriarchal-violence-in-the-mexican-highlands"
+        source: "The Guardian"
+        date: 2026-11-02
+        summary: "Ana Ts’uyeb’s poetic film celebrates the resilience of Indigenous women while exploring the possibility of a different future Shot in her home village of Naranjatic Alto in the Mexican highlands, Ana Ts’uyeb’s..."
+      - title: "Domestic violence survivor living ‘in terror’ after attacker released without tag"
+        url: "https://www.theguardian.com/society/2026/nov/02/domestic-violence-survivor-terror-attacker-released-without-tag"
+        source: "The Guardian"
+        date: 2026-11-02
+        summary: "Woman among hundreds asking why electronic trackers not fitted before offenders leave prison A domestic violence survivor who was punched, threatened with a knife and had her front door kicked in by her former partner..."
       - title: "‘His honesty gave courage to survivors’: domestic abuse charities praise Patrick Stewart’s legacy"
         url: "https://www.theguardian.com/culture/2026/oct/30/domestic-abuse-charities-patrick-stewart-amnesty-international-refuge"
         source: "The Guardian"
@@ -62,16 +62,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-22
         summary: "Charities say ‘tip of iceberg’ figures show government is not fulfilling pledge to halve violence against women and girls Almost one in 10 adults in England and Wales have experienced domestic abuse in the last year, a..."
-      - title: "Jess Phillips hopes supreme court ‘sees sense’ and overturns domestic abuse ruling"
-        url: "https://www.theguardian.com/society/2026/oct/21/jess-phillips-hopes-supreme-court-sees-sense-and-overturns-domestic-abuse-ruling"
-        source: "The Guardian"
-        date: 2026-10-21
-        summary: "Court of appeal decision prevents woman from suing police and CPS for disclosing her address to violent ex-partner The Labour MP Jess Phillips has said she hopes the UK’s highest court “sees sense” and overturns a..."
-      - title: "‘Manosphere’ warnings as rates of family and sexual violence against Australian children rise sharply"
-        url: "https://www.theguardian.com/australia-news/2026/oct/14/family-and-sexual-violence-rates-against-australian-children-rise-sharply-as-researchers-warn-of-manosphere"
-        source: "The Guardian"
-        date: 2026-10-13
-        summary: "Study authors say increase cannot be attributed to any one factor and list income inequality and reporting increases due to growing awareness as other likely reasons Get our breaking news email , free app or daily news..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -106,6 +96,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Computing journal retracts 13 papers, including four from past EIC"
+        url: "https://retractionwatch.com/2026/11/02/computing-journal-retracts-13-papers-including-four-from-past-eic/"
+        source: "Retraction Watch"
+        date: 2026-11-02
+        summary: "An Elsevier journal on computer applications in biomedicine has retracted 13 papers — including four by a former editor-in-chief — for suspicious authorship changes and erroneous citations. The articles were published..."
       - title: "Scientific Reports on hold in PubMed while NLM reevaluates journal"
         url: "https://retractionwatch.com/2026/10/30/scientific-reports-pubmed-on-hold-national-library-medicine-evaluation/"
         source: "Retraction Watch"
@@ -131,11 +126,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-26
         summary: "The University of Sydney has once again investigated the work of a former research fellow in its physics department, this time resulting in the retraction of two papers over concerns that data in several figures were..."
-      - title: "Journal updates retraction notice as Princeton student author stays in the spotlight"
-        url: "https://retractionwatch.com/2026/10/23/correction-retraction-rishika-porandla-princeton-macromolecular-materials-engineering-wiley/"
-        source: "Retraction Watch"
-        date: 2026-10-23
-        summary: "A Wiley journal has corrected a retraction notice to clarify the author, a Princeton student, never conducted the study in the first place, as the student has gained publicity for visits to the offices of Texas..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
