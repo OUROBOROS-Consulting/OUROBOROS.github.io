@@ -41,7 +41,7 @@ The folder names never appear in a URL — every one of these files carries an e
 | `/404.html` | `legal/404.md` |
 | `/about/` | `_about/about.md` |
 | `/announcements/` | `pages/announcements.md` |
-| `/case-studies/` | `_about/case-studies.md` |
+| `/case-studies/` | `pages/case-studies.md` |
 | `/design-system/` | `pages/design-system.html` |
 | `/intake/` | `legal/intake.html` |
 | `/projects/` | `pages/projects.md` |
@@ -89,7 +89,7 @@ The folder names never appear in a URL — every one of these files carries an e
 | `/survival-guide.html` | `_about/survival.md` |
 | `/work/cassandra/` | `_case_studies/cassandra.md` |
 | `/work/claudius/` | `_case_studies/claudius.md` |
-| `/work/sanctuary/` | `_case_studies/sanctuary.md` |
+| `/work/problematic-by-design/` | `_case_studies/problematic-by-design.md` |
 
 </details>
 
@@ -126,7 +126,7 @@ Declared in `_config.yml`. A collection sets the **URL**, never the layout.
 |---|---|---|---|---|
 | `about` | `_about/` | `/:slug` | 5 | mixed: default, article, sections |
 | `services` | `_services/` | `/services/:slug/` | 4 | service |
-| `case_studies` | `_case_studies/` | `/work/:slug/` | 4 | sections |
+| `case_studies` | `_case_studies/` | `/work/:slug/` | 3 | sections |
 | `resources` | `_resources/` | `/resources/:slug/` | 12 | article, sections |
 | `announcements` | `_announcements/` | `/announcements/:slug/` | 1 | announcement |
 | `psas` | `_psas/` | `/resources/psas/:slug/` | 3 (2 published) | psa |
