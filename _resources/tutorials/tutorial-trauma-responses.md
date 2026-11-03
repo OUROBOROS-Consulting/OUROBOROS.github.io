@@ -12,8 +12,8 @@ cta_label: Get in Touch
 ---
 
 <div style="background: var(--calloutbg); border-left: 3px solid var(--gold); padding: 1.5rem 2rem; margin: 2rem 0 2.5rem;">
-  <p style="font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin: 0 0 1rem 0;">TL;DR</p>
-  <ul style="margin: 0; padding-left: 1.25rem; color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.75;">
+  <p style="font-size: 0.875rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin: 0 0 1rem 0;">TL;DR</p>
+  <ul style="margin: 0; padding-left: 1.25rem; color: var(--text); line-height: 1.75;">
     <li>Trauma responses are nervous system states — not choices, not weakness.</li>
     <li>Identify your early warning signs before you are fully activated.</li>
     <li>Have one grounding technique you can use anywhere; practice it when calm.</li>

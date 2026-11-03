@@ -1,14 +1,14 @@
 ---
 layout: article
-title: Streamlined Newsfeed
+title: News & External Reporting
 icon: ph ph-fill ph-newspaper
 category: Resources
 permalink: /news/
 back_url: /resources/
+hide_cta: true
 lede: >
-  Headlines on artificial intelligence, coercive control, institutional
-  accountability, and surveillance. Gathered from outlets that do the
-  reporting, refreshed daily, and linked plainly.
+  Daily links to outside reporting on AI, technology, privacy, surveillance,
+  and public-interest issues.
 cta_body: Want help making sense of any of this?
 ---
 

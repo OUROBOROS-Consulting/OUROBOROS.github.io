@@ -3,10 +3,15 @@
 // semantic design tokens and typography families.
 
 :root {
-  // --font-utility: 'Syne', sans-serif;
-  --font-authority: serif;
+  --font-sans: 'Syne', 'Inter', 'DejaVu Sans', system-ui, sans-serif;
+  --font-mono: 'Kode Mono', monospace;
+  --font-utility: var(--font-sans);
+  --font-authority: 'Spectral', Georgia, serif;
+  --font-forensic: var(--font-authority);
+  --font-technical: var(--font-mono);
+  --body: var(--font-utility);
   --md-ref-typeface-plain: var(--font-utility);
-  // --md-ref-typeface-brand: var(--font-authority);
+  --md-ref-typeface-brand: var(--font-authority);
 }
 
 
@@ -32,7 +37,7 @@ body {
   background: var(--blush);
   color: var(--ink);
   font-family: var(--body);
-  font-size: 17px;
+  font-size: 1.125rem;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
 }
@@ -69,17 +74,24 @@ p, li, div, span, .text-s {
   color: var(--md-sys-color-text-secondary);
 }
 
-// 3. Forensic (Spectral / Analytical/ Detail)
+// 3. Forensic (Spectral / Analytical Detail)
 .forensic, em, i, blockquote {
   font-family: var(--font-forensic, serif);
   color: var(--md-sys-color-text-tertiary);
 }
 
-// 4. Technical (Space Mono / Notation & Code)
+// 4. Technical (Kode Mono / Notation & Code)
 code, kbd, samp, .technical, .notation {
   font-family: var(--font-technical, monospace);
   font-size: var(--md-sys-typescale-body-small-size);
   color: var(--md-sys-color-text-tertiary);
+}
+
+.technical,
+.notation {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.055em;
+  text-transform: uppercase;
 }
 
 // --- Explicit Utility Classes ---

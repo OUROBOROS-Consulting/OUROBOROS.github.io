@@ -46,7 +46,9 @@
 }
 
 .c-card-value {
+  font-family: var(--font-technical);
   font-size: var(--site-stat-value-size);
+  font-variant-numeric: tabular-nums;
 }
 
 .c-card-action {
@@ -317,14 +319,22 @@
 
 .c-card--related .rc-tag,
 .c-card--framed .rc-tag,
+.c-card--related .rc-tag-chip,
+.c-card--framed .rc-tag-chip,
 .c-card--related .rc-date,
 .c-card--framed .rc-date,
 .related-card .rc-tag,
 .card--framed .rc-tag,
+.related-card .rc-tag-chip,
+.card--framed .rc-tag-chip,
 .related-card .rc-date,
 .card--framed .rc-date {
   margin: 0;
   color: var(--md-sys-color-primary);
+  font-family: var(--font-technical);
+  font-size: var(--md-sys-typescale-label-small-size);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .c-card--related .rc-title,
@@ -359,7 +369,11 @@
   margin-top: auto;
   padding-top: var(--md-sys-spacing-md);
   color: var(--md-sys-color-primary);
+  font-family: var(--font-technical);
+  font-size: var(--md-sys-typescale-label-small-size);
   font-weight: var(--md-ref-typeface-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
 }
 
 .resources-grid {

@@ -1,24 +1,24 @@
 ---
-title: "Technology"
-description: "Private AI engineer and AI privacy consultant for organizations that handle confidential data. Local LLMs, AI governance, and data audits."
+title: "Private AI & Data Systems"
+description: "Build locally hosted AI, agentic workflows, data-quality checks, and custom tools for organizations handling confidential data."
 layout: sections
 section_layout: stacked
 back_url: /
 category: Services
-hero_icon: ph-cpu
+hero_icon: ph-head-circuit
 lede: "Get AI's speed without sending confidential data outside your walls."
 about:
-  heading: Private AI. Data that holds up.
+  heading: Private AI engineering and data integrity
   body: >
-    Most teams do not know where their data goes once it hits AI. A provider may store prompts or use them to improve its service. Check the terms—or keep the data local. I am a data privacy consultant and private AI engineer. I build locally hosted AI and agentic workflows that keep confidential data inside your walls, audit data so reported numbers hold up, and build tools that make complex information useful.
+    This is the hands-on service: plan and build private AI, data-quality checks, and custom tools that fit your environment. If you need an independent review of AI data flows, governance rules, or tool choices without a build, see [AI Privacy & Governance Advisory](/services/identity/).
 sections:
   - id: review
-    heading: "Technical Review & Decision Support"
+    heading: "Technical Planning & Architecture"
     body_paragraphs:
-      - "Before you connect an AI tool to confidential data, find out what it can see and where that information goes."
-      - "**Map data flows:** Identify what enters each tool, where it is processed, and what leaves your environment."
-      - "**AI governance:** Set practical rules for access, human review, and accountability. No jargon. No policy binder nobody reads."
-      - "**AI security:** Limit access and check where data goes. This is advice, not a penetration test, security certification, or guarantee. Get a qualified security audit when you need one."
+      - "Plan the system before implementation. Identify what data and tools are involved, what must stay inside your environment, and where a person needs to review the result."
+      - "**Technical workflow advisory:** Compare implementation options and choose a practical next step."
+      - "**Build-specific data flows:** Trace what the proposed system receives, processes, and returns so the design has clear boundaries."
+      - "For a standalone AI privacy or governance review, without an implementation project, see [AI Privacy & Governance Advisory](/services/identity/). This work is not a penetration test or security certification."
 
   - id: automation
     heading: "Private AI & Agentic Workflows"
@@ -52,7 +52,7 @@ sections:
   - id: engagement
     heading: "Engagement Models & Pricing"
     body_paragraphs:
-      - "**AI privacy and workflow advisory:** ($150–$250/hr) Map data flows, assess AI use, and plan next steps."
+      - "**Technical workflow advisory:** ($150–$250/hr) Plan a technical workflow, assess implementation options, and choose a practical next step. Standalone AI privacy and governance reviews are a separate advisory service at $200–$300/hr."
       - "**Private AI and custom workflow build:** ($200–$350/hr) Scope and implement local AI, agentic workflows, or focused tools."
       - "**Data-quality audit:** Contact me for a scoped quote."
       - "**Ongoing support:** Contact me to discuss maintenance and review."

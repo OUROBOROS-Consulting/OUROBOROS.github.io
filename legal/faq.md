@@ -1,20 +1,21 @@
 ---
 layout: article
-title: Frequently Asked Questions
+title: Scope, Privacy & Safety FAQ
 icon: fa-circle-question
 category: About
 hero_icon: ph-question
 permalink: /faq/
 back_url: /about/
 collapse_questions: true
+hide_cta: true
 lede: >
-  Straight answers, including the ones that cost me work. If a question you
-  have is not here, ask it. I will answer it the same way and then add it to
-  this page.
+  Clear answers about the limits of this work, privacy, and public-interest
+  resources. For service scope, pricing, and the free AI privacy call, see the
+  Consulting FAQ.
 cta_body: Still have a question I did not answer?
 ---
 
-## What this firm is
+## Consulting work
 
 ### What does ouroborOS Consulting actually do?
 
@@ -114,7 +115,7 @@ Here is what I can do.
 
 **Who can actually identify them.** Law enforcement, through a report. A licensed private investigator, which in practice usually means one working through an attorney. A domestic violence advocate in your county, who can also help with an order for protection and who costs nothing.
 
-If you are in danger right now, contact emergency services. The [survival guide](/survival-guide.html) lists resources that can help.
+If you are in danger right now, contact emergency services. The [safety and support resources](/resources/survival/) list organizations that may help.
 
 ## Money
 

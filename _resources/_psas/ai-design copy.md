@@ -2,9 +2,9 @@
 title: "Product Debt & Vibes"
 description: "A visual guide to spotting machine-generated design flaws and technical debt."
 layout: psa
-icon: "ph ph-fill ph-palette"
+icon: "ph ph-fill ph-pen-nib"
 category: "Design"
-hero_icon: ph-nib
+hero_icon: ph-pen-nib
 pdf: "/assets/files/PSA/AI-Design.pdf"
 ---
 

@@ -26,42 +26,50 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 
 ### Page → layout, complete
 
-54 pages build. Sorted by layout, then URL. `docs/` is in `exclude:` and never builds.
+47 HTML pages build. Sorted by layout, then URL. `docs/` is in `exclude:` and never builds.
 
 Standalone pages live in two folders, not at the repo root: `pages/` for hub and index
-pages, `legal/` for legal, contact and utility pages. Only `index.md` sits at the root.
-The folder names never appear in a URL — every one of these files carries an explicit
-`permalink:`, which is what makes the grouping free to change.
+pages, `legal/` for legal, contact and utility pages. The root contains `index.md` and
+the company page, `about.md`. The folder names never appear in a URL: standalone pages
+use explicit permalinks, while the homepage and the CRT demo keep their generated paths.
 
 <details>
-<summary><strong>default</strong> — 14 pages</summary>
+<summary><strong>default</strong> — 19 pages</summary>
 
 | URL | Source |
 |---|---|
 | `/404.html` | `legal/404.md` |
-| `/about/` | `_about/about.md` |
+| `/about/` | `about.md` |
 | `/announcements/` | `pages/announcements.md` |
 | `/case-studies/` | `pages/case-studies.md` |
+| `/design-portfolio/` | `pages/design-portfolio.html` |
 | `/design-system/` | `pages/design-system.html` |
-| `/intake/` | `legal/intake.html` |
+| `/framework/` | `pages/framework-redirect.md` |
+| `/intake/` | `pages/intake.html` |
+| `/material/` | `pages/material.html` |
 | `/projects/` | `pages/projects.md` |
 | `/resources/` | `pages/resources.md` |
 | `/resources/psas/` | `pages/psas.md` |
 | `/resources/tutorials/` | `pages/tutorials.md` |
+| `/resume/` | `pages/resume.html` |
 | `/search/` | `legal/search.html` |
 | `/services/` | `pages/services.md` |
-| `/team/` | `_about/team.md` |
+| `/survival-guide.html` | `pages/survival-guide-redirect.md` |
+| `/team/` | `pages/team.md` |
+| `/work/sanctuary/` | `pages/sanctuary-redirect.md` |
 
 </details>
 
 <details>
-<summary><strong>article</strong> — 15 pages</summary>
+<summary><strong>article</strong> — 19 pages</summary>
 
 | URL | Source |
 |---|---|
 | `/accessibility/` | `legal/accessibility.md` |
+| `/consulting-faq/` | `pages/consulting-faq.md` |
 | `/disclaimer/` | `legal/disclaimer.md` |
-| `/framework/` | `_about/framework.md` |
+| `/faq/` | `legal/faq.md` |
+| `/llm-disclosure/` | `legal/llm-disclosure.md` |
 | `/news/` | `pages/news.md` |
 | `/privacy/` | `legal/privacy.md` |
 | `/resources/glossary/` | `_resources/glossary.md` |
@@ -75,6 +83,7 @@ The folder names never appear in a URL — every one of these files carries an e
 | `/resources/tutorial-icloud-adp/` | `_resources/tutorials/tutorial-icloud-adp.md` |
 | `/resources/tutorial-safety-plan/` | `_resources/tutorials/tutorial-safety-plan.md` |
 | `/resources/tutorial-trauma-responses/` | `_resources/tutorials/tutorial-trauma-responses.md` |
+| `/services/design/` | `pages/design-services.md` |
 
 </details>
 
@@ -83,10 +92,10 @@ The folder names never appear in a URL — every one of these files carries an e
 
 | URL | Source |
 |---|---|
-| `/mission.html` | `_about/mission.md` |
-| `/resources/scholarly/` | `_resources/scholarly.md` |
-| `/resources/survival/` | `_resources/survival.md` |
-| `/survival-guide.html` | `_about/survival.md` |
+| `/resources/scholarly/` | `pages/scholarly.md` |
+| `/resources/survival/` | `pages/survival.md` |
+| `/services/identity/` | `_services/identity.md` |
+| `/services/technology/` | `_services/technology.md` |
 | `/work/cassandra/` | `_case_studies/cassandra.md` |
 | `/work/claudius/` | `_case_studies/claudius.md` |
 | `/work/problematic-by-design/` | `_case_studies/problematic-by-design.md` |
@@ -94,104 +103,53 @@ The folder names never appear in a URL — every one of these files carries an e
 </details>
 
 <details>
-<summary><strong>service</strong> — 4 pages</summary>
-
-| URL | Source |
-|---|---|
-| `/services/advocacy/` | `_services/advocacy.md` |
-| `/services/design/` | `_services/design.md` |
-| `/services/education/` | `_services/education.md` |
-| `/services/technology/` | `_services/technology.md` |
-
-</details>
-
-<details>
-<summary><strong>home</strong> — 1 page &nbsp;·&nbsp; <strong>announcement</strong> — 1 page &nbsp;·&nbsp; <strong>psa</strong> — 2 pages</summary>
+<summary><strong>home</strong> — 1 page &nbsp;·&nbsp; <strong>standalone demo</strong> — 1 page</summary>
 
 | URL | Source | Layout |
 |---|---|---|
 | `/` | `index.md` | home |
-| `/announcements/site-launch/` | `_announcements/site-launch.md` | announcement |
-| `/resources/psas/ai-price/` | `_psas/ai-price.md` | psa |
-| `/resources/psas/dark-data/` | `_psas/dark-data.md` | psa |
-| — | `_psas/DSM.md` | psa ⚠ `published: false` |
+| `/pages/crt-test.html` | `pages/crt-test.html` | standalone HTML |
 
 </details>
 
 ### Collections
 
-Declared in `_config.yml`. A collection sets the **URL**, never the layout.
+Declared in `_config.yml`. A collection sets the **URL**, never the layout. The
+three active collections are services, case studies, and resources.
 
 | Collection | Source dir | Permalink | Items | Layouts used |
 |---|---|---|---|---|
-| `about` | `_about/` | `/:slug` | 5 | mixed: default, article, sections |
-| `services` | `_services/` | `/services/:slug/` | 4 | service |
+| `services` | `_services/` | `/services/:slug/` | 2 | sections |
 | `case_studies` | `_case_studies/` | `/work/:slug/` | 3 | sections |
-| `resources` | `_resources/` | `/resources/:slug/` | 12 | article, sections |
-| `announcements` | `_announcements/` | `/announcements/:slug/` | 1 | announcement |
-| `psas` | `_psas/` | `/resources/psas/:slug/` | 3 (2 published) | psa |
+| `resources` | `_resources/` | `/resources/:slug/` | 11 | article |
 
-Layout is chosen by **content shape**, not by collection: `default` for hub/listing pages, `article` for linear prose, `sections` for block-assembled pages. `_about/` mixes all three. Do not assume one layout per collection.
+Layout is chosen by **content shape**, not by collection: `default` for hub/listing pages, `article` for linear prose, and `sections` for block-assembled pages.
 
-**Hub pages belong in `pages/`, not inside a collection.** `pages/resources.md`, `pages/psas.md`, and `pages/services.md` all loop over or link into collections; they are not items in one. Keeping them out avoids permalink overrides that fight the collection pattern. They sat at the repo root until 2026-08-08, when 17 loose files there made the root unreadable; the folder is organisational only, and the explicit permalinks mean it costs nothing.
+**Hub pages belong in `pages/`, not inside a collection.** The resources and services hubs live there. The PSA hub reads its three PDF records from `_data/psas.yml`; those PDFs are not a Jekyll collection.
 
 Authored content pages use Markdown (`.md`), including pages that combine prose with Liquid and raw HTML. Keep `.html` for reusable Jekyll layouts/includes and standalone interface or demo pages that are authored as complete HTML documents.
 
 ### Anomalies
 
-**Extensionless URL forms.** `/intake.html`, `/mission.html`, and `/survival-guide.html` build as files, not directories, because their permalinks lack a trailing slash. Internal links use the extensionless form (`/intake` × 154, `/mission` × 48). GitHub Pages resolves these by appending `.html`, so they work, but they are inconsistent with the trailing-slash directories used everywhere else.
+**Legacy routes.** `/framework/` redirects to `/about/`, `/survival-guide.html` redirects to `/resources/survival/`, and `/announcements/` redirects to `/news/`. These preserve old entry points while the current navigation uses the active pages.
 
 ---
 
 ## Design System
 
-### Colors
+The design system is maintained in `_sass/design/`. Its single token entry point is
+`_sass/design/_tokens.scss` (import it as `design/tokens`); it forwards the active
+Material palette, typography, shape, and motion modules, site semantic tokens,
+identity, and themes. Do not redeclare tokens elsewhere.
 
-<details>
-<summary>CSS custom properties in `_base.scss`</summary>
+Jekyll resolves imports through `_sass`. `assets/css/main.scss` uses
+`_sass/index.scss`, which composes the tokens with reusable styles from
+`_sass/components/`. Smaller page-specific stylesheets can import `design/tokens`
+directly. Keep page-specific geometry and image-backed styling in `assets/css/`.
 
-Defined in the design package, not here. `ouroboros-design/scss/_base.scss` is the single source of truth; this site must not redefine them.
-
-- `--bg1: #0c101a` — page background
-- `--bg-hero: #1e213e` — dark navy, homepage + service hero
-- `--bg2: #1E1E1E` — card/surface
-- `--bg3: #252525` — elevated surface
-- `--gold: #C9A84C` — primary accent
-- `--text: #E8E4DC` — body text
-- `--subdued: #B0AAA0`, `--muted: #999999` — hierarchy
-- `--steel: #7F94A6`, `--amethyst: #A284CA`, `--sage: #6DA187`, `--teal: #5DA19C` — semantic accents
-
-Each accent also has `-dim` (alpha 0.35) and `-ghost` (alpha 0.12) variants. All four were raised on 2026-07-25 to clear WCAG 4.5:1; the prior values failed, `--teal` worst at 3.22:1. Keep at least 18° of hue separation between accents when adjusting, or teal and sage collapse into each other.
-
-</details>
-
-### Texture & Elevation
-
-<details>
-<summary>Scallop patterns & elevation mixins in `_base.scss`</summary>
-
-- `@include scallop-*` (recessed/standard/elevated) — scallop SVG pattern + opacity tier
-- `@include elevation-*` — background + scallop
-- `body::before` — fixed scallop-recessed background
-- `body::after` — cursor spotlight (teal radial gradient, `--cx/--cy` tracked by `main.js`)
-
-</details>
-
-### Typography
-
-Lora (serif), Inter (sans), JetBrains Mono (monospace) via Google Fonts + Font Awesome 6.5.
-
-### SCSS
-
-<details>
-<summary>Partials imported by `assets/css/main.scss`</summary>
-
-- `_base.scss` — reset, tokens, texture, 404
-- `_typography.scss` — prose scale
-- `_buttons.scss`, `_nav.scss`, `_footer.scss` — components
-- `_cards.scss`, `_home.scss`, `_service.scss`, `_essay.scss`, `_cv.scss` — layouts
-
-</details>
+`assets/css/` owns site-specific page geometry and styling for image assets stored
+in `assets/images/`. Keep reusable design-system rules in `_sass/design/` and avoid
+duplicating them in page stylesheets.
 
 ---
 

@@ -32,7 +32,7 @@ The [FAQ](/faq/) sets out exactly where that line falls, including what happens 
 
 I am not a therapist, a clinician, or a crisis counselor. The writing and resources here are educational and informational. They are meant to help you understand what happened to you and orient your next decision. They are not treatment, diagnosis, or a substitute for care from a qualified professional.
 
-If you are in crisis or in danger right now, contact emergency services or a crisis line. The [survival guide](/survival-guide.html) lists resources that can help.
+If you are in crisis or in danger right now, contact emergency services or a crisis line. The [safety and support resources](/resources/survival/) list organizations that may help.
 
 ## Mention is not endorsement
 

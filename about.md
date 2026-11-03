@@ -1,27 +1,34 @@
 ---
 layout: default
-title: About Apostolos Stamenos
+title: About ouroborOS Consulting
 permalink: /about/
 category: About
-description: "Apostolos Stamenos is a private AI engineer and data privacy consultant. He builds local LLMs, audits data, and helps organizations protect confidential information."
+description: "ouroborOS Consulting helps organizations use AI with confidential data in view through private AI systems, data audits, and practical governance."
 ---
 
 {% include page-hero.html
   back_url="/"
   back_label="Home"
   category="About"
-  title="Apostolos Stamenos"
-  lede="Most teams don't know where their data goes once it hits AI. I build private AI that keeps it inside your walls, so you get AI's speed without the leak."
-  icon="ph ph-fill ph-user-circle"
+  title="ouroborOS Consulting"
+  lede="Most teams don't know where their data goes once it hits AI. The firm builds private systems that help keep it inside your walls."
+  icon="ph ph-fill ph-buildings"
   cta_mode="service"
   cta_url="/intake/"
   cta_label="Request a free 20-minute AI privacy call"
 %}
 
 <div class="page-body">
-  <p>Apostolos Stamenos builds private AI for organizations that handle confidential data and can't afford a leak. Most teams don't know where their data goes once it enters an AI tool. Apostolos builds locally hosted AI and agentic workflows that keep that data inside your walls, and audits your data so the numbers you report hold up. At the U.S. Department of Health and Human Services, he built the models CDC leadership used to catch impossible hospital data before it reached Congress, and led a 3,900-user migration with zero disruption. Book a free 20-minute AI privacy call. No obligation. Plain answers.</p>
+  <h2>Why the firm exists</h2>
+  <p>AI can expose confidential data. Bad data can become a confident answer or a public mistake. Those failures often start with early design choices: what a tool can access, where information goes, and whether anyone checks the result.</p>
+  <p>Founder-led ouroborOS Consulting helps organizations make those choices deliberately. The work starts with understanding the data, the systems around it, and what could go wrong. Then Apostolos builds practical safeguards and explains what they do in plain language.</p>
 
-  <p>The HHS CIO recognized his work with two separate HHS awards. His research in Bayesian statistics is peer-reviewed. He writes about agentic AI and privacy at <a href="{{ site.substack_url }}">Problematic by Design</a>.</p>
+  <h2>What we do</h2>
+  <p>The firm's primary work is private AI and data integrity: locally hosted AI and agentic workflows designed to keep sensitive information within your environment; data-flow reviews and practical AI governance; and audits that catch errors before they reach a report or decision.</p>
+  <p>Graphic design, web design, and education are also available as secondary services. They help organizations communicate clearly, build trust, and use technology with care.</p>
 
-  <p>Every engagement is confidential, with plain-language reporting. The intake form is processed by Formspree and is not legally privileged; do not send confidential material through it. <a href="/llm-disclosure/">Read how client information is handled.</a></p>
+  <h2>Evidence, not promises</h2>
+  <p>Founder Apostolos Stamenos worked at the U.S. Department of Health and Human Services during the COVID-19 response. He built forecasting and anomaly-detection models that flagged impossible reports from more than 6,000 hospitals before release, and led a migration serving 3,900+ users in under six months with zero disruption. The HHS CIO recognized his work with two awards. <a href="/team/">Meet Apostolos</a> or <a href="/case-studies/">read the case studies</a>.</p>
+
+  <p>Project materials are handled confidentially within the agreed scope and systems, with plain-language reporting. No system can promise zero risk, and consulting does not create legal privilege. The intake form is processed by Formspree, so do not send confidential material through it. <a href="/llm-disclosure/">Read how client information is handled</a> or <a href="/intake/">request a free 20-minute AI privacy call</a>. In that call, we will identify the main question and a useful next step; there is no obligation to hire.</p>
 </div>

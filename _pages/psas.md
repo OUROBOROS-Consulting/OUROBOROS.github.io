@@ -61,7 +61,7 @@ These briefings serve as my professional business cards—distilling complex obs
 
 .psa-card__category {
   font-family: var(--font-sans);
-  font-size: var(--ourob-type-size-1);
+  font-size: var(--md-sys-typescale-label-small-size);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ourob-color-mark-border);

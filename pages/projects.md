@@ -6,7 +6,7 @@ description: "Selected work in private AI, data quality, and federal public-heal
 ---
 
 {% assign case_count = site.case_studies.size | default: 0 %}
-{% assign psa_count = site.psas.size | default: 0 %}
+{% assign psa_count = site.data.psas.size | default: 0 %}
 {% assign total_count = case_count | plus: psa_count %}
 {% assign page.cta_text = total_count | append: " pieces" %}
 

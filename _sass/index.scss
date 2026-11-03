@@ -9,10 +9,7 @@
 // ────────────────────────────────────────────────────────────────────
 
 // Foundation: design tokens, reset, mixins, body texture
-// @forward "design/md/palette";
-// @forward "design/md/colors";
-// @forward "design/md/typography";
-@forward "design/md/baseline";
+@forward "design/tokens";
 @forward "primitives";
 
 // Type levels: the five size/leading/weight/tracking/ink bindings

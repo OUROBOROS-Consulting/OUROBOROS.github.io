@@ -12,8 +12,8 @@ cta_label: Get in Touch
 ---
 
 <div style="background: var(--calloutbg); border-left: 3px solid var(--gold); padding: 1.5rem 2rem; margin: 2rem 0 2.5rem;">
-  <p style="font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin: 0 0 1rem 0;">TL;DR</p>
-  <ul style="margin: 0; padding-left: 1.25rem; color: var(--text); font-family: 'Inter', sans-serif; font-size: 0.95rem; line-height: 1.75;">
+  <p style="font-size: 0.875rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin: 0 0 1rem 0;">TL;DR</p>
+  <ul style="margin: 0; padding-left: 1.25rem; color: var(--text); line-height: 1.75;">
     <li>AI-generated images have specific artifacts — hands, teeth, background edges, and reflections are the most reliable tells.</li>
     <li>Voice cloning requires as little as three seconds of audio; treat any unexpected urgent call with skepticism regardless of how familiar the voice sounds.</li>
     <li>Preserve evidence before contacting platforms to report — once reported, content may be removed before you've documented it.</li>

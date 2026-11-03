@@ -10,7 +10,7 @@
 
 - name: Apostolos Stamenos
   role: Founder & Principal
-  # Real headshot, same file /about and schema.html use.
+  # Real headshot, used on /team/ and in schema.html.
   photo: /assets/images/AS.png
   photo_alt: Apostolos Stamenos
   credentials:

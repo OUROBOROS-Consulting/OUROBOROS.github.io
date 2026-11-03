@@ -1,11 +1,24 @@
 - title: Services
   url: /services/
-  icon: ph-briefcase
+  icon: ph-wrench
   children:
-    - title: Technology
+    - title: Private AI & Data Systems
       url: /services/technology/
-    - title: AI Privacy & Governance
+    - title: AI Privacy & Governance Advisory
       url: /services/identity/
+    - title: Web & Graphic Design
+      url: /services/design/
+    - title: Consulting FAQ
+      url: /consulting-faq/
+
+- title: Work
+  url: /projects/
+  icon: ph-folder-open
+  children:
+    - title: Case Studies
+      url: /case-studies/
+    - title: Design Portfolio
+      url: /design-portfolio/
 
 - title: Resources
   url: /resources/
@@ -15,14 +28,22 @@
     - /glossary
     - /tutorials
     - /scholarly
+    - /survival
     - /news
+    - /announcements
   children:
-    - title: PSAs
+    - title: AI & Data Guides
+      url: /resources/tutorials/
+    - title: Public-Interest Resources
       url: /resources/psas/
+    - title: Research Bibliography
+      url: /resources/scholarly/
+    - title: News & External Reporting
+      url: /news/
 
 - title: About
   url: /about/
-  icon: ph-info
+  icon: ph-buildings
   active_paths:
     - /mission
     - /framework
@@ -32,11 +53,7 @@
   children:
     - title: Team
       url: /team/
-    - title: Framework
-      url: /framework/
-    - title: Case Studies
-      url: /case-studies/
-    - title: FAQ
+    - title: Scope & Privacy FAQ
       url: /faq/
     - title: Resume
       url: /resume/

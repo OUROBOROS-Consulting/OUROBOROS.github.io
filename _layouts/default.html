@@ -48,11 +48,11 @@
     <link rel="apple-touch-icon" href="{{ '/assets/images/logo.svg' | relative_url }}" />
     <!-- Local font-face declarations; the Google Fonts stylesheet below supplies the display families. -->
     <link rel="stylesheet" href="{{ '/assets/css/fonts.css' | relative_url }}" />
-    <!-- Google Fonts for Syne, Manufacturing Consent, Lora, and IBM Plex Mono -->
+    <!-- Google Fonts for Syne, Spectral, Manufacturing Consent, and Kode Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Manufacturing+Consent&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=IBM+Plex+Mono:wght@400;500&family=Kode+Mono:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Manufacturing+Consent&family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Syne:wght@400;500;600;700;800&display=swap"
       rel="stylesheet">
     {% if page.noindex %}
     <meta name="robots" content="noindex,nofollow" />
@@ -93,6 +93,7 @@
   </head>
 
   <body {% if page.show_banner %} class="has-banner" {% endif %}>
+    <div class="c-background-morph" aria-hidden="true"></div>
     <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
     {% if page.show_banner %}{% include banner.html %}{% endif %}
     <div class="nav-shell">
@@ -104,6 +105,15 @@
     <!-- Closing CTA — suppressed via hide_cta front matter (e.g. intake) -->
     {% unless page.hide_cta %}{% include cta.html %}{% endunless %}
     {% include footer.html %}
+    <svg class="c-site-effects" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <filter id="background-displacement" x="-25%" y="-25%" width="150%" height="150%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.013" numOctaves="3" seed="3" result="background-noise" />
+          <feDisplacementMap id="background-displacement-map" in="SourceGraphic" in2="background-noise" scale="22"
+            xChannelSelector="R" yChannelSelector="G" />
+        </filter>
+      </defs>
+    </svg>
     <script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script defer src="{{ '/assets/js/noise.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>

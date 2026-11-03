@@ -1,16 +1,16 @@
-- title: Private AI & Agentic Workflows
+- title: Private AI & Data Systems
   category: Technology
-  lede: Your team needs AI's speed without sending confidential data to a vendor.
-  description: Build locally hosted AI and agentic workflows that keep sensitive data inside your walls, with clear limits and human review.
+  lede: Build and check AI and data systems without handing sensitive information to outside providers.
+  description: Implement locally hosted AI, agentic workflows, data-quality checks, and custom tools. For privacy reviews, governance, and training without a build, see the advisory service.
   url: /services/technology/#automation
-  link_label: Explore private AI work
+  link_label: Explore private AI and data systems
 
-- title: AI Privacy & Governance
+- title: AI Privacy & Governance Advisory
   category: Technology
   lede: You need to know what your AI tools can see, where data goes, and who is accountable.
-  description: Map data flows, set practical rules for AI use, and choose tools that fit your privacy and oversight needs.
+  description: Get an independent review of AI data flows, practical rules, and tool choices. This is advisory work—not a software build, penetration test, or certification.
   url: /services/identity/
-  link_label: Explore AI privacy and governance
+  link_label: Explore privacy and governance advisory
 
 - title: Data Audits & Anomaly Detection
   category: Technology

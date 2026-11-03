@@ -49,7 +49,9 @@
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   font-size: var(--md-sys-typescale-label-large-size);
+  font-family: var(--font-technical);
   font-weight: var(--md-ref-typeface-weight-medium);
+  letter-spacing: 0.04em;
   white-space: nowrap;
 }
 
@@ -85,8 +87,10 @@
   border: var(--site-border-width) solid transparent;
   border-radius: var(--site-radius-md);
   color: var(--md-sys-color-on-surface);
+  font-family: var(--font-technical);
   font-size: var(--site-nav-label-size);
   font-weight: var(--md-ref-typeface-weight-medium);
+  letter-spacing: 0.04em;
   line-height: var(--site-nav-label-line-height);
   text-transform: uppercase;
   white-space: nowrap;
@@ -202,7 +206,7 @@
   border: var(--site-border-width) solid var(--md-sys-color-outline);
   border-radius: var(--site-radius-md);
   background-color: var(--md-sys-color-surface);
-  box-shadow: var(--md-elevation-level-2);
+  box-shadow: var(--site-card-elevation);
   z-index: 10;
 }
 
@@ -217,8 +221,10 @@
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
   border-radius: var(--site-radius-sm);
   color: var(--md-sys-color-on-surface);
+  font-family: var(--font-technical);
   font-size: var(--md-sys-typescale-body-medium-size);
   line-height: var(--md-sys-typescale-body-medium-line-height);
+  letter-spacing: 0.035em;
   text-transform: uppercase;
   text-decoration: none;
   transition:

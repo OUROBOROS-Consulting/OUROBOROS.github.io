@@ -1,17 +1,17 @@
 ---
-title: "AI Privacy & Governance"
-description: "AI privacy consultant for organizations handling confidential data. Map data flows, set AI governance rules, and choose private AI tools."
+title: "AI Privacy & Governance Advisory"
+description: "Independent AI privacy and governance reviews for organizations handling confidential data. Map data flows, set usable rules, and assess tool choices."
 layout: sections
-icon: ph ph-fill ph-pen-nib
+icon: ph ph-fill ph-shield-check
 section_layout: stacked
 back_url: /
 category: Services
-hero_icon: ph-pen-nib
+hero_icon: ph-shield-check
 lede: "Know what your AI tools can see, where your data goes, and who is accountable."
 about:
-  heading: AI privacy without the policy fog
+  heading: Independent advice. Clear next steps.
   body: >
-    If your team uses AI, confidential information may be leaving your environment without anyone noticing. I help you map the risk, set usable rules, and decide whether a local LLM or another private AI setup fits. This is practical guidance, not a security certification.
+    This is advisory work, not a software build. I review where AI data goes, help set usable rules, and assess tool choices. You leave with clear priorities and next steps. If you already know you need a local AI build or custom data tool, see [Private AI & Data Systems](/services/technology/).
 sections:
   - id: data-flows
     heading: "Map AI Data Flows"
@@ -32,7 +32,7 @@ sections:
   - id: tools
     heading: "Choose Private AI Tools"
     body_paragraphs:
-      - "Compare hosted AI services with local LLMs and other private AI options."
+      - "Get an independent comparison of hosted AI services, local LLMs, and other private AI options. This review recommends a direction; implementation is scoped through [Private AI & Data Systems](/services/technology/)."
       - "**Fit the tool to the data:** Consider confidentiality, hosting, access, cost, and the work the model must do."
       - "**Check the limits:** Local hosting does not remove every risk. Review who can access the system, what it connects to, and how it is maintained."
       - "**Next step:** Get a short list of options and a clear recommendation, including when not to use AI."
@@ -40,9 +40,16 @@ sections:
   - id: engagement
     heading: "Engagement & Pricing"
     body_paragraphs:
-      - "**AI privacy and governance advisory:** ($200–$300/hr) Review data flows, policies, and tool choices."
-      - "**AI privacy training:** Individual coaching starts at $150 per 90-minute session. Organizational workshops are priced at $1,200 for a half-day or $2,000 for a full day."
-      - "**Implementation:** For local AI builds and custom workflows, see [Private AI & Agentic Workflows](/services/technology/#automation)."
+      - "**AI privacy and governance review:** ($200–$300/hr) Review data flows, policies, and tool choices, then leave with clear priorities and next steps. This does not include software implementation."
+      - "**Need a build?** For local AI, agentic workflows, data checks, or custom tools, see [Private AI & Data Systems](/services/technology/)."
+
+  - id: training
+    heading: "Education & Training"
+    body_paragraphs:
+      - "Learn to use AI with clear privacy boundaries and human review."
+      - "**Individual coaching:** $150 for a 90-minute session."
+      - "**Organizational workshops:** $1,200 for a half day or $2,000 for a full day."
+      - "Training is educational, not legal advice or a security certification. [Ask about a workshop or coaching session](/intake/)."
 
   - id: policies
     heading: "Our Policies"

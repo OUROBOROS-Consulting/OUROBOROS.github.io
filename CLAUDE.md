@@ -76,15 +76,22 @@ Pick one per section:
 
 Secondary nav is data-driven from \`_data/nav.yml\`. Each entry supports \`active_paths\` — a list of additional URL prefixes that mark the item active beyond its own \`url\`. Use this when a section spans multiple URL roots.
 
-## Styling: design system lives in \`_sass/design/\` (No Change)
+## Styling: design system lives in \`_sass/design/\`
 
-Moved in-repo from the standalone \`ouroboros-design\` package on 2026-08-11 — see [[project_design-consolidation-2026-08-11]]. \`_sass/design/\` owns every token, mixin, and component style; \`assets/css/*.scss\` files @use "design/index" (or "design/tokens" for the lighter entry points: intake.scss, quiz.scss, dashboard.scss). Jekyll's default \`_sass\` load path resolves these — no node_modules, no npm package, no second repo.
+The design system moved in-repo from the standalone \`ouroboros-design\` package on
+2026-08-11 — see [[project_design-consolidation-2026-08-11]]. Its single token
+entry point is \`_sass/design/_tokens.scss\` (import as \`design/tokens\`), which
+forwards the active Material palette, typography, shape, and motion modules,
+site semantic tokens, identity, and themes. Never redeclare tokens elsewhere.
 
-**Never redeclare a design token outside \`_sass/design/\`.**
+\`assets/css/main.scss\` uses \`_sass/index.scss\`, the site-level Sass entry point.
+It forwards \`design/tokens\` and reusable styles from \`_sass/components/\`.
+Page-specific stylesheets can import \`design/tokens\` directly; \`assets/css/\`
+owns page geometry and image-backed styling for assets in \`assets/images/\`.
 
-**What \`assets/css/\` legitimately owns:** raster-backed textures (the \`Marble.png\` / \`Abstract.png\` / \`Pattern-hero.jpg\` rules), because the image assets live in \`assets/images/\` here, and page-geometry overrides specific to this site's layout.
-
-**The \`ouroboros-design\` GitHub repo still exists** — the \`AI-B-Cs\` project depends on it via \`file:../ouroboros-design\`. It is no longer this site's source of truth and no longer needs to be pushed before this repo. Don't copy changes back into it; \`_sass/design/\` and \`ouroboros-design/scss/\` are independent now and will drift.
+The separate \`ouroboros-design\` repository remains an independent dependency of
+the \`AI-B-Cs\` project. This site uses \`_sass/design/\` as its source of truth;
+do not copy changes between the two repositories.
 
 ## Class Prefixes (No Change)
 

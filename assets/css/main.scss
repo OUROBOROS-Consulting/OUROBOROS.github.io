@@ -12,7 +12,60 @@ a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.
 
 body {
   margin: 0;
+  isolation: isolate;
   background-color: var(--md-sys-color-background);
+}
+
+.c-background-morph {
+  position: fixed;
+  z-index: 1;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.c-background-morph ~ :not(.nav-shell):not(script):not(svg) {
+  position: relative;
+  z-index: 2;
+}
+
+#main.c-container {
+  background-color: transparent;
+}
+
+.c-article__body :is(p, li, dd, blockquote),
+.post-body :is(p, li, dd, blockquote),
+.page-body > :is(p, ul, ol, blockquote) {
+  font-size: 1.333rem;
+  line-height: 1.6;
+}
+
+.c-background-morph::before {
+  position: absolute;
+  inset: -20%;
+  background:
+    radial-gradient(
+      ellipse 43rem 31rem at var(--background-pointer-x, 50%) var(--background-pointer-y, 50%),
+      color-mix(in srgb, var(--md-sys-color-primary) 3%, transparent) 0%,
+      color-mix(in srgb, var(--md-sys-color-on-background) 8%, transparent) 24%,
+      color-mix(in srgb, var(--md-sys-color-primary) 5%, transparent) 53%,
+      transparent 82%
+    ),
+    radial-gradient(
+      ellipse 27rem 39rem at var(--background-trail-x, 50%) var(--background-trail-y, 50%),
+      color-mix(in srgb, var(--md-sys-color-on-background) 4%, transparent) 0%,
+      color-mix(in srgb, var(--md-sys-color-primary) 4%, transparent) 42%,
+      transparent 84%
+    );
+  content: "";
+  opacity: 0.72;
+  filter: url(#background-displacement);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-background-morph {
+    display: none;
+  }
 }
 
 .nav-shell {
@@ -87,13 +140,27 @@ body {
 }
 
 .c-page-hero {
-  /* 🔑 HEXAGON PATTERN FINAL MERGE START */
-  background-image: 
-    linear-gradient(25deg, var(--p-color-ink-palantir-dark), black, var(--p-color-ink-palantir-dark)),
-    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='100%' height='100%'><defs><pattern id='hexagonPattern' width='100px' height='120px' patternUnits='userSpaceOnUse'><path d='M 30 15 L 50 45 L 70 15 L 70 65 L 50 95 L 30 65 Z' fill='none' stroke='%23D0A96B' stroke-width='4'/></pattern></defs></svg>");
-  background-size: cover, 100px 120px; /* Added pattern size */
+  background-image: linear-gradient(25deg, var(--p-color-ink-palantir-dark), black, var(--p-color-ink-palantir-dark));
+  background-size: cover;
   background-position: center;
-  background-repeat: no-repeat, repeat; /* Repeat the pattern background */
+  background-repeat: no-repeat;
+}
+
+.c-page-hero::before {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  background-image: url("../images/Abstract.jpg");
+  background-position: center;
+  background-size: cover;
+  content: "";
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.c-page-hero__inner {
+  z-index: 1;
 }
 
 .c-page-hero {
@@ -460,6 +527,93 @@ body {
 
 .c-footer__social-link {
   border-radius: var(--site-radius-md);
+}
+
+.c-section--paper {
+  color: var(--p-void-900);
+  background-color: var(--p-forensic-100);
+  border-bottom-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
+}
+
+.c-section--paper > .c-container > .c-stack:first-child {
+  margin-bottom: var(--md-sys-spacing-xl);
+  padding: var(--md-sys-spacing-xl) 0 0;
+}
+
+.c-section--paper > .c-container > .c-stack:first-child::before {
+  content: none;
+}
+
+.c-section--paper :is(.authority, .text-s, .text-t, .technical, .forensic, p, li, blockquote, cite) {
+  color: var(--p-void-900);
+}
+
+.c-section--paper :is(.technical, .text-t) {
+  color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--paper .forensic {
+  color: var(--p-forensic-700);
+}
+
+.c-section--paper .c-card {
+  color: var(--p-void-900);
+  background-color: var(--p-color-white);
+  border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
+}
+
+.c-section--paper .c-card :is(.authority, .text-s, .text-t, .technical, .forensic, p, li, blockquote, cite) {
+  color: var(--p-void-900);
+}
+
+#main .c-section--paper .c-card :is(.technical, .text-t, .c-card-action, .rc-tag, .rc-date, .rc-tag-chip, .card-link) {
+  color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--paper .c-card .rc-title {
+  color: var(--p-void-900);
+}
+
+.c-section--paper .values-card__surface {
+  color: var(--p-void-900);
+  background-color: var(--p-color-white);
+  border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
+}
+
+.c-section--paper :is(.values-card__name, .values-card__desc) {
+  color: var(--p-void-900);
+}
+
+.c-section--paper .values-card__icon--gold {
+  color: var(--p-ember-gold-deep-900);
+}
+
+#main .c-section--paper a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.c-nav__link):not(.c-nav__dropdown-link):not(.c-nav__action-item):where(:link, :visited) {
+  color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--paper .carousel-btn,
+.c-section--paper .carousel-dot {
+  color: var(--p-void-900);
+  background-color: var(--p-color-white);
+  border-color: color-mix(in srgb, var(--p-forensic-700) 35%, transparent);
+}
+
+.c-section--paper .carousel-btn i,
+.c-section--paper .carousel-count {
+  color: var(--p-forensic-700);
+}
+
+.c-section--paper .carousel-btn:hover,
+.c-section--paper .carousel-dot:hover {
+  color: var(--p-void-900);
+  background-color: var(--p-forensic-200);
+  border-color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--paper .carousel-dot.active {
+  background-color: var(--p-ember-gold-deep-900);
+  border-color: var(--p-ember-gold-deep-900);
 }
 
 .c-footer__availability .c-hours {

@@ -1,646 +1,501 @@
 ---
 ---
-
 @use "design/tokens" as *;
-  /* ── Intake wrapper ──
-     Was `max-width + margin: auto + padding: 10vw` — the exact anti-pattern
-     the page-band mixin (_base.scss) exists to fix. body reserves
-     --rail-total in its own padding-left, so an auto-margin container in here
-     centred on a box that's already offset right, then added symmetric
-     padding on top of that — stacking the rail gap onto the left only. That
-     was the whole "form has left margin" bug.
-     Hand-inlined rather than `@include page-band` because this file only
-     imports the tokens partial, not base.
-     The custom properties themselves (--rail-total, --gutter, --measure-page)
-     are plain runtime CSS vars main.css already sets at :root, so no Sass
-     import is needed to reach them — only the mixin's math is reproduced.
-     Same technique, same cap, as .page-body site-wide. */
-  .intake-wrapper {
-    width: calc(100% + var(--rail-total, 0px));
-    margin-left: calc(var(--rail-total, 0px) * -1);
-    padding-inline: max(var(--gutter), calc((100% + var(--rail-total, 0px) - var(--measure-page)) / 2));
-    padding-block: var(--ourob-space-8) var(--ourob-space-12);
-    margin-top: var(--ourob-space-8);
-  }
 
-  /* ── Masthead ── */
+.intake-wrapper {
+  box-sizing: border-box;
+  width: calc(100% + var(--rail-total, 0px));
+  margin-top: var(--md-sys-spacing-xl);
+  margin-left: calc(var(--rail-total, 0px) * -1);
+  padding: clamp(1.5rem, 4vw, 3.5rem) max(
+    var(--gutter),
+    calc((100% + var(--rail-total, 0px) - var(--measure-page)) / 2)
+  );
+  color: var(--md-sys-color-on-background);
+}
+
+.intake-masthead {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.55fr);
+  align-items: end;
+  gap: var(--md-sys-spacing-xl);
+  padding: clamp(1rem, 2vw, 1.5rem) 0 clamp(2rem, 4vw, 3rem);
+  border-bottom: var(--site-border-width) solid var(--md-sys-color-outline);
+}
+
+.intake-heading {
+  max-width: 46rem;
+}
+
+.intake-eyebrow,
+.intake-response-label {
+  margin: 0 0 var(--md-sys-spacing-sm);
+  color: var(--md-sys-color-primary);
+}
+
+.intake-masthead-title {
+  margin: 0;
+  color: var(--md-sys-color-text-primary);
+  font-family: var(--font-authority);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: var(--md-ref-typeface-weight-regular);
+  line-height: 1.02;
+  letter-spacing: -0.025em;
+}
+
+.intake-lede {
+  max-width: 58ch;
+  margin: var(--md-sys-spacing-md) 0 0;
+  color: var(--md-sys-color-text-secondary);
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.6;
+}
+
+.intake-masthead-meta {
+  justify-self: end;
+  max-width: 26rem;
+  padding-left: var(--md-sys-spacing-lg);
+  border-left: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+}
+
+.intake-response-label {
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+.intake-response {
+  margin: 0;
+  color: var(--md-sys-color-text-primary);
+  line-height: 1.55;
+}
+
+.intake-email {
+  display: inline-block;
+  margin-top: var(--md-sys-spacing-sm);
+  color: var(--md-sys-color-primary);
+  overflow-wrap: anywhere;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.intake-hours {
+  margin: var(--md-sys-spacing-md) 0 var(--md-sys-spacing-xl);
+}
+
+.intake-hours summary {
+  width: fit-content;
+  padding: var(--md-sys-spacing-sm) 0;
+  color: var(--md-sys-color-on-surface-variant);
+  cursor: pointer;
+}
+
+.intake-hours .c-hours {
+  margin-top: var(--md-sys-spacing-sm);
+}
+
+.intake-status {
+  margin-bottom: var(--md-sys-spacing-lg);
+  padding: var(--md-sys-spacing-md) var(--md-sys-spacing-lg);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-left: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface);
+  line-height: 1.6;
+}
+
+.intake-status--error {
+  border-left-color: var(--md-sys-color-error);
+}
+
+.intake-body {
+  overflow: clip;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-radius-md);
+  background-color: var(--md-sys-color-surface);
+}
+
+.intake-privacy {
+  padding: var(--md-sys-spacing-lg) clamp(1rem, 3vw, 2.5rem);
+  border-bottom: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-left: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-surface-variant);
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: 1.65;
+}
+
+.intake-privacy p {
+  margin: 0;
+}
+
+.intake-privacy p + p {
+  margin-top: var(--md-sys-spacing-sm);
+}
+
+.intake-privacy-title {
+  margin: 0 0 var(--md-sys-spacing-sm);
+  color: var(--md-sys-color-primary);
+}
+
+.intake-privacy strong {
+  color: var(--md-sys-color-on-surface);
+}
+
+.intake-section {
+  min-width: 0;
+  margin: 0;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  border: 0;
+  border-bottom: var(--site-border-width) solid var(--md-sys-color-outline);
+}
+
+.intake-track[hidden] {
+  display: none;
+}
+
+.intake-section-header {
+  display: flex;
+  align-items: baseline;
+  gap: var(--md-sys-spacing-md);
+  margin-bottom: var(--md-sys-spacing-lg);
+}
+
+.intake-section-number {
+  flex: 0 0 auto;
+  color: var(--md-sys-color-primary);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+.intake-section-title {
+  margin: 0;
+  color: var(--md-sys-color-text-primary);
+  font-family: var(--font-authority);
+  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-weight: var(--md-ref-typeface-weight-regular);
+  line-height: 1.2;
+}
+
+.intake-hint {
+  margin: 0 0 var(--md-sys-spacing-md);
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: 1.55;
+}
+
+.service-fieldset,
+.field-group {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.service-fieldset > legend,
+.field-group > legend {
+  width: 100%;
+  margin-bottom: var(--md-sys-spacing-sm);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-utility);
+  font-size: var(--md-sys-typescale-body-medium-size);
+  font-weight: var(--md-ref-typeface-weight-medium);
+  line-height: 1.5;
+}
+
+.service-fieldset > legend.intake-hint {
+  margin-bottom: var(--md-sys-spacing-md);
+  font-weight: var(--md-ref-typeface-weight-regular);
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--md-sys-spacing-md);
+}
+
+.service-card {
+  position: relative;
+  display: block;
+  min-width: 0;
+  cursor: pointer;
+}
+
+.service-card input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+.service-card-inner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-sm);
+  height: 100%;
+  min-height: 10rem;
+  padding: var(--md-sys-spacing-lg);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-radius-md);
+  background-color: var(--md-sys-color-background);
+  transition:
+    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+}
+
+.service-card:hover .service-card-inner {
+  border-color: var(--md-sys-color-primary);
+}
+
+.service-card input:checked + .service-card-inner {
+  border-color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-primary-container);
+}
+
+.service-card input:focus-visible + .service-card-inner {
+  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline-offset: var(--site-focus-ring-offset);
+}
+
+.service-card-index {
+  color: var(--md-sys-color-primary);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+.service-card-title {
+  color: var(--md-sys-color-text-primary);
+  font-family: var(--font-authority);
+  font-size: var(--md-sys-typescale-title-large-size);
+  line-height: 1.2;
+}
+
+.service-card-desc {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.field-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--md-sys-spacing-lg);
+  margin-top: var(--md-sys-spacing-lg);
+}
+
+.field-row--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-xs);
+}
+
+.intake-body label,
+.intake-body legend {
+  color: var(--md-sys-color-on-surface);
+}
+
+.field-group > label {
+  font-family: var(--font-utility);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: var(--md-ref-typeface-weight-medium);
+  line-height: 1.45;
+}
+
+.intake-optional {
+  margin-left: 0.35em;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-label-small-size);
+  font-weight: var(--md-ref-typeface-weight-regular);
+}
+
+.intake-body input[type="text"],
+.intake-body input[type="email"],
+.intake-body input[type="tel"],
+.intake-body select,
+.intake-body textarea {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--site-safety-target-min-height);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-radius-sm);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-background);
+  font-family: var(--font-utility);
+  font-size: 1rem;
+  font-weight: var(--md-ref-typeface-weight-regular);
+  line-height: 1.5;
+}
+
+.intake-body input::placeholder,
+.intake-body textarea::placeholder {
+  color: var(--md-sys-color-on-surface-variant);
+  opacity: 0.78;
+}
+
+.intake-body select {
+  cursor: pointer;
+}
+
+.intake-body textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+
+.intake-body input:focus-visible,
+.intake-body select:focus-visible,
+.intake-body textarea:focus-visible {
+  border-color: var(--md-sys-color-primary);
+  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline-offset: var(--site-focus-ring-offset);
+}
+
+.check-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--md-sys-spacing-sm);
+}
+
+.check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--md-sys-spacing-sm);
+  min-height: var(--site-safety-target-min-height);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border-radius: var(--site-radius-sm);
+  background-color: var(--md-sys-color-background);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-utility);
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: 1.45;
+  cursor: pointer;
+}
+
+.check-item:has(input:checked) {
+  border-color: var(--md-sys-color-primary);
+  background-color: var(--md-sys-color-primary-container);
+}
+
+.check-item input,
+.intake-ack input {
+  flex: 0 0 auto;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0.15em 0 0;
+  accent-color: var(--md-sys-color-primary);
+}
+
+.check-item:focus-within,
+.intake-ack:focus-within {
+  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline-offset: var(--site-focus-ring-offset);
+}
+
+.intake-submit {
+  display: grid;
+  gap: var(--md-sys-spacing-lg);
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background-color: var(--md-sys-color-surface-variant);
+}
+
+.intake-ack {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--md-sys-spacing-sm);
+  max-width: 75ch;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: 1.6;
+  cursor: pointer;
+}
+
+.intake-ack input {
+  margin-top: 0.25em;
+}
+
+.intake-submit-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--md-sys-spacing-sm);
+}
+
+.intake-submit-actions .c-btn {
+  min-height: var(--site-safety-target-min-height);
+  font-family: var(--font-technical);
+  font-size: var(--md-sys-typescale-label-medium-size);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.intake-submit-actions .intake-print {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+@media (max-width: 48rem) {
   .intake-masthead {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: start;
-    gap: var(--ourob-space-7);
-    padding: var(--ourob-space-9) var(--ourob-space-10);
-    background-image: linear-gradient(rgba(10, 10, 10, 0.80), rgba(5, 5, 5, 0.90)),
-    url('{{ "/assets/images/Marble.png" | relative_url }}');
-    background-size: cover, 520px 520px;
-    background-position: center, center;
-    background-repeat: no-repeat, repeat;
-    border: var(--site-border-width) solid var(--md-sys-color-outline);
-    border-bottom: none;
-    position: relative;
-    overflow: hidden;
-    background-color: var(--md-sys-color-inverse-surface);
-    color: var(--md-sys-color-on-inverse-surface);
-  }
-
-  .intake-masthead::after {
-    content: '';
-    position: absolute;
-    top: -40px;
-    right: -40px;
-    width: 160px;
-    height: 160px;
-    border-radius: var(--ourob-radius-round);
-    border: 30px solid rgba(201, 168, 76, 0.05);
-    pointer-events: none;
-  }
-
-  .intake-masthead-title {
-    // Became an <h1> for a11y (was a div). Reset the UA block margin the
-    // masthead layout was never built to absorb.
-    margin: 0;
-    font-family: 'Lora', Georgia, serif;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-    font-weight: 600;
-    color: var(--ourob-color-ink-3);
-    line-height: 1.1;
-  }
-
-  .intake-masthead-subtitle {
-    font-size: 0.7rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--ourob-color-ink-1);
-    margin-top: var(--ourob-space-3);
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-lg);
   }
 
   .intake-masthead-meta {
-    text-align: right;
+    justify-self: stretch;
+    max-width: none;
+  }
+}
+
+@media (max-width: 38rem) {
+  .intake-wrapper {
+    margin-top: var(--md-sys-spacing-md);
+    padding-block: var(--md-sys-spacing-lg);
   }
 
-  .intake-masthead-name {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 0.95rem;
-    color: var(--ourob-color-ink-3);
+  .intake-masthead-title {
+    font-size: clamp(2.25rem, 11vw, 3.25rem);
   }
 
-  .intake-masthead-contact {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--ourob-color-ink-1);
-    margin-top: var(--ourob-space-2);
-    line-height: 1.8;
-  }
-
-  .intake-masthead-rule {
-    height: 2px;
-    background: linear-gradient(90deg, var(--ourob-color-mark), transparent);
-  }
-
-  /* ── Form body ── */
-  .intake-body {
-    background-color: var(--ourob-color-surface-2);
-    border: 1px solid var(--ourob-color-line-3);
-    border-top: none;
-  }
-
-  /* ── Confidential banner ── */
-  .intake-banner {
-    padding: var(--ourob-space-5) var(--ourob-space-7);
-    border-left: 2px solid var(--ourob-color-mark);
-    background: var(--ourob-color-surface-3);
-    font-size: 0.8rem;
-    color: var(--ourob-color-ink-1);
-    line-height: 1.7;
-
-    strong {
-      color: var(--ourob-color-mark);
-      font-weight: 500;
-    }
-  }
-
-  /* ── Sections ── */
-  .intake-section {
-    padding: var(--ourob-space-9) var(--ourob-space-10) 0;
-    animation: fadeUp 0.4s ease both;
-  }
-
-  .track-label {
-    color: var(--ourob-color-line-3);
-  }
-
-  /* ── Service type cards ──
-     minmax(0, 1fr), not bare 1fr: a plain `1fr` track carries an implicit
-     minmax(auto, 1fr), so it won't shrink below its content's min-content
-     width. On a laptop viewport — still 4 columns, less width than desktop —
-     that pushed the row wider than .intake-wrapper and the cards overflowed
-     the page. minmax(0, 1fr) removes that floor. */
-  .service-cards {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--md-sys-spacing-md);
-  }
-
-  /* ⚠ .service-card IS a <label>, so the field-caption rule above it applies:
-     0.68rem, 0.12em tracking, ALL CAPS. That treatment is right for a two-word
-     caption and wrong for a card holding a serif title and a sentence of body
-     copy — it rendered the descriptions as unreadable uppercase. The children
-     already re-declare font-size, family and colour; only case and tracking
-     inherit through, so only those need resetting. Scoped here rather than
-     loosened on the label rule, because the short .check-item chips ("YES",
-     "EMAIL ONLY") do want the caps. */
-  .service-card {
-    cursor: pointer;
-    display: block;
-    text-transform: none;
-    letter-spacing: normal;
-    font-weight: var(--md-ref-typeface-weight-regular);
-  }
-
-  .service-card input[type="radio"] {
-    position: absolute;
-    opacity: 0;
-    width: 0;
-    height: 0;
+  .service-cards,
+  .field-row--two {
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .service-card-inner {
-    /* One definition, two consumers: the icon's own box and the width the
-       title has to give up for it. They were independent numbers and drifted
-       apart — see the padding-right rule below. */
-    --card-icon-size: var(--site-service-card-icon-size);
-    --card-icon-inset: var(--site-service-card-icon-inset);
+    min-height: 0;
+  }
 
-    border: var(--site-border-width) solid var(--md-sys-color-outline);
-    background: var(--md-sys-color-surface-variant);
-    padding: var(--site-card-padding-comfortable);
-    transition:
-      border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-      background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
-    height: 100%;
-    display: flex;
+  .intake-submit-actions {
+    align-items: stretch;
     flex-direction: column;
-    gap: var(--md-sys-spacing-sm);
-    // Flex items default to min-width: auto, which reasserts the same
-    // content-based floor minmax(0, 1fr) above just removed on the grid
-    // track. Belt and suspenders against the same overflow.
-    min-width: 0;
   }
 
-  /* Corner icon: same treatment as the home services cards, sized down because
-     this grid is four across. Two-class selectors so they beat the design
-     package's bare .card-icon rules regardless of stylesheet order. */
-  .service-card-inner:has(.card-icon) {
-    position: relative;
-  }
-
-  .service-card-inner .card-icon {
-    position: absolute;
-    top: var(--site-card-padding-comfortable);
-    right: var(--card-icon-inset);
-    width: var(--card-icon-size);
-    margin-bottom: 0;
-    font-size: var(--site-card-icon-size);
-    color: var(--md-sys-color-primary);
-  }
-
-  /* Only the title sits beside the icon, so only the title gives up width. The
-     min-height matches the icon box, which guarantees the description always
-     starts below it and can stay full width.
-     ⚠ The reservation must count the icon's inset as well as its width. It
-     counted the width alone, so on the two cards with a long title the last
-     word ran under the glyph. */
-  .service-card-inner:has(.card-icon) .service-card-title {
-    padding-right: calc(var(--card-icon-size) + var(--card-icon-inset) + var(--md-sys-spacing-sm));
-    min-height: var(--card-icon-size);
-  }
-
-  .service-card:hover .service-card-inner {
-    border-color: var(--md-sys-color-primary);
-  }
-
-  .service-card input:checked+.service-card-inner {
-    border-color: var(--md-sys-color-primary);
-    background: var(--md-sys-color-primary-container);
-  }
-
-  .service-card input:checked+.service-card-inner .service-card-title,
-  .service-card input:checked+.service-card-inner .service-card-desc {
-    color: var(--md-sys-color-on-primary-container);
-  }
-
-  /* The radio itself is visually hidden — surface keyboard focus on the card */
-  .service-card input:focus-visible+.service-card-inner {
-    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
-    outline-offset: var(--site-focus-ring-offset);
-  }
-
-  .service-card-icon {
-    font-size: var(--md-sys-typescale-title-large-size);
-    color: var(--md-sys-color-primary);
-    opacity: var(--site-service-card-icon-opacity);
-  }
-
-  .service-card input:checked+.service-card-inner .service-card-icon {
-    opacity: 1;
-  }
-
-  .service-card-title {
-    font-family: var(--font-authority);
-    font-size: var(--md-sys-typescale-title-medium-size);
-    color: var(--md-sys-color-on-surface);
-    line-height: var(--md-sys-typescale-title-medium-line-height);
-  }
-
-  .service-card-desc {
-    font-size: var(--md-sys-typescale-body-small-size);
-    color: var(--md-sys-color-on-surface-variant);
-    line-height: var(--md-sys-typescale-body-small-line-height);
-    font-family: var(--font-utility);
-    font-weight: var(--md-ref-typeface-weight-regular);
-  }
-
-  /* Both of these restate minmax(0, …) rather than writing a bare 1fr. A bare
-     1fr is minmax(auto, 1fr), which puts back exactly the content-based floor
-     the base rule at the top of this block removed — and it did: the card ran
-     9px past the right edge at 320px. Any future override of this grid has to
-     carry the 0 minimum too. */
-  @media (max-width: 768px) {
-    .service-cards {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-  }
-
-  @media (max-width: 480px) {
-    .service-cards {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-
-  .intake-section-header {
-    display: flex;
-    align-items: baseline;
-    gap: var(--ourob-space-5);
-    padding-bottom: var(--ourob-space-5);
-    border-bottom: 1px solid var(--ourob-color-line-3);
-    margin-bottom: var(--ourob-space-8);
-  }
-
-  .intake-section-number {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    color: var(--ourob-color-mark);
-    letter-spacing: 0.1em;
-    flex-shrink: 0;
-  }
-
-  .intake-section-title {
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1.1rem;
-    font-weight: 400;
-    color: var(--ourob-color-ink-3);
-  }
-
-  .intake-divider {
-    height: 1px;
-    background: var(--ourob-color-line-3);
-    margin: 0 var(--ourob-space-10);
-    opacity: 0.6;
-  }
-
-  /* ── Note boxes ── */
-  .intake-note {
-    background: var(--ourob-color-surface-3);
-    border-left: 2px solid var(--ourob-color-line-3);
-    padding: var(--ourob-space-5) var(--ourob-space-6);
-    font-size: 0.82rem;
-    color: var(--ourob-color-ink-1);
-    line-height: 1.75;
-    margin-bottom: var(--ourob-space-7);
-  }
-
-  .intake-note.warning {
-    border-left-color: var(--ourob-color-mark);
-    color: var(--ourob-color-ink-1);
-  }
-
-  /* ── Field layout ── */
-  .field-row {
-    display: grid;
-    gap: var(--ourob-space-6);
-    margin-bottom: var(--ourob-space-6);
-  }
-
-  .field-row.col-2 {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .field-row.col-3 {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .field-group {
-    display: flex;
-    flex-direction: column;
-    gap: var(--ourob-space-2);
-  }
-
-  /* ── Labels ── */
-  .intake-body label {
-    font-size: 0.68rem;
-    font-weight: 500;
-    color: var(--ourob-color-ink-1);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-  }
-
-  /* Fieldsets group each radio/checkbox question with its options for
-     assistive tech; render them exactly like the plain label rows. */
-  .intake-body fieldset {
-    border: none;
-    min-width: 0;
-  }
-
-  .intake-body legend {
-    font-size: 0.68rem;
-    font-weight: 500;
-    color: var(--ourob-color-ink-1);
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: var(--ourob-space-2);
-  }
-
-  /* ── Inputs ── */
-  .intake-body input[type="text"],
-  .intake-body input[type="email"],
-  .intake-body input[type="tel"],
-  .intake-body input[type="date"],
-  .intake-body select,
-  .intake-body textarea {
+  .intake-submit-actions .c-btn {
     width: 100%;
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 1.00rem;
-    color: var(--ourob-color-ink-3);
-    background: var(--ourob-color-surface-3);
-    border: 1px solid var(--ourob-color-line-3);
-    padding: var(--ourob-space-3) var(--ourob-space-5);
-    /* Explicit, because <select> and <input> take different `normal`
-       line-heights from the UA. Same padding and font-size still produced two
-       different box heights, and the pair sitting side by side in the contact
-       row made it obvious. */
-    line-height: 1.5;
-    transition: border-color 0.2s;
-    -webkit-appearance: none;
   }
+}
 
-  .intake-body input:focus,
-  .intake-body select:focus,
-  .intake-body textarea:focus {
-    border-color: var(--ourob-color-mark-dim);
-  }
-
-  .intake-body textarea {
-    resize: vertical;
-    min-height: 90px;
-    line-height: 1.7;
-  }
-
-  .intake-body select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%237a7269' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.9rem center;
-    background-color: var(--ourob-color-surface-3);
-    padding-right: var(--ourob-space-8);
-    cursor: pointer;
-    color: var(--ourob-color-ink-3);
-  }
-
-  /* ── Checkbox / radio groups ── */
-  .check-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--ourob-space-3);
-    margin-top: var(--ourob-space-1);
-  }
-
-  .check-item {
-    display: flex;
-    align-items: center;
-    gap: var(--ourob-space-3);
-    cursor: pointer;
-    padding: var(--ourob-space-2) var(--ourob-space-5);
-    border: 1px solid var(--ourob-color-line-3);
-    background: var(--ourob-color-surface-3);
-    font-size: 0.78rem;
-    color: var(--ourob-color-ink-1);
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    transition: border-color 0.2s, color 0.2s;
-    user-select: none;
-  }
-
-  .check-item:hover {
-    border-color: var(--ourob-color-mark-dim);
-    color: var(--ourob-color-ink-3);
-  }
-
-  .check-item:has(input:checked) {
-    border-color: var(--ourob-color-mark);
-    color: var(--ourob-color-mark);
-  }
-
-  .check-item input[type="checkbox"],
-  .check-item input[type="radio"] {
-    width: 13px;
-    height: 13px;
-    accent-color: var(--ourob-color-mark);
-    cursor: pointer;
-    flex-shrink: 0;
-    border: none;
+@media print {
+  .intake-wrapper {
+    width: 100%;
+    margin: 0;
     padding: 0;
-    background: none;
-    box-shadow: none;
   }
 
-  .check-item input:focus {
-    box-shadow: none;
+  .intake-hours,
+  .intake-print,
+  [data-fs-success],
+  [data-fs-error] {
+    display: none !important;
   }
 
-  /* ── Acknowledgment ──
-     The only required checkbox on the page, and a sentence rather than a chip.
-     It borrowed .check-item, which centred a two-line sentence on a 13px box
-     and uppercased it. Its own class: sentence case, top-aligned box, and the
-     gold edge that marks it as the one thing that must be ticked. */
-  .intake-ack {
-    display: flex;
-    align-items: flex-start;
-    gap: var(--ourob-space-4);
-    cursor: pointer;
-    padding: var(--ourob-space-4) var(--ourob-space-5);
-    border: 1px solid var(--ourob-color-mark-border);
-    background: var(--ourob-color-surface-3);
-    font-family: 'Inter', sans-serif;
-    font-size: 0.78rem;
-    font-weight: 300;
-    letter-spacing: normal;
-    text-transform: none;
-    line-height: 1.6;
-    color: var(--ourob-color-ink-2);
-    transition: border-color 0.2s, color 0.2s;
-
-    &:hover {
-      color: var(--ourob-color-ink-3);
-    }
-
-    &:has(input:checked) {
-      border-color: var(--ourob-color-mark);
-    }
-
-    input[type="checkbox"] {
-      width: 13px;
-      height: 13px;
-      /* Optical centring on the first line of text, not the first pixel. */
-      margin-top: 0.28em;
-      accent-color: var(--ourob-color-mark);
-      cursor: pointer;
-      flex-shrink: 0;
-    }
+  .intake-track[hidden] {
+    display: block !important;
   }
 
-  /* ── Formspree result banners ──
-     ⚠ Never add a `display` declaration here. Both banners carry the [hidden]
-     attribute; the UA's display:none for it loses to any author display rule,
-     and they would show on page load. */
-  .intake-banner {
-    padding: var(--ourob-space-5) var(--ourob-space-10);
-    background: var(--ourob-color-surface-3);
-    border-left: 2px solid;
-    font-size: 0.85rem;
-    line-height: 1.6;
+  .intake-body,
+  .intake-section,
+  .intake-masthead {
+    break-inside: avoid;
   }
-
-  .intake-banner--ok {
-    border-left-color: var(--ourob-color-mark);
-    color: var(--ourob-color-mark);
-  }
-
-  .intake-banner--err {
-    border-left-color: var(--alert);
-    color: var(--alert);
-  }
-
-  /* ── Signature block ── */
-  .sig-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--ourob-space-8);
-    margin-top: var(--ourob-space-1);
-  }
-
-  .sig-field {
-    display: flex;
-    flex-direction: column;
-    gap: var(--ourob-space-2);
-  }
-
-  .sig-line {
-    border: none;
-    border-bottom: 1px solid var(--ourob-color-line-3);
-    height: 44px;
-    background: transparent;
-    padding: 0 var(--ourob-space-1);
-    font-family: 'Lora', Georgia, serif;
-    font-size: 1rem;
-    color: var(--ourob-color-ink-3);
-    width: 100%;
-    transition: border-color 0.2s;
-  }
-
-  .sig-line:focus-visible {
-    outline: 2px solid var(--ourob-color-mark);
-    outline-offset: 2px;
-    border-color: var(--ourob-color-mark);
-  }
-
-  /* ── Submit area ── */
-  .intake-submit {
-    padding: var(--ourob-space-9) var(--ourob-space-10) 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--ourob-space-6);
-    flex-wrap: wrap;
-  }
-
-  .intake-submit-note {
-    font-size: 0.78rem;
-    color: var(--ourob-color-ink-1);
-    max-width: 400px;
-    line-height: 1.6;
-
-    a {
-      color: var(--ourob-color-mark);
-      text-decoration: none;
-      border-bottom: 1px solid var(--ourob-color-mark-dim);
-
-      &:hover {
-        border-color: var(--ourob-color-mark);
-      }
-    }
-  }
-
-  /* ── Doc footer ── */
-  .intake-doc-footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--ourob-space-5);
-  }
-
-  /* ── Mobile / tablet responsive ── */
-  @media (max-width: 768px) {
-
-    /* Horizontal padding no longer needs a local override: --gutter itself
-       drops to max(6vw, --rail-total + --ourob-space-4) at this breakpoint (see
-       _base.scss), which is what used to be hand-duplicated here. Only the
-       bottom padding still shrinks for mobile rhythm. */
-    .intake-wrapper {
-      padding-block-end: var(--ourob-space-11);
-    }
-
-    /* Masthead: stack title over meta instead of the cramped 1fr/auto row that
-       let the two columns visually collide. */
-    .intake-masthead {
-      grid-template-columns: minmax(0, 1fr);
-      padding: var(--ourob-space-8) var(--ourob-space-card);
-    }
-
-    .intake-masthead-meta {
-      text-align: left;
-    }
-
-    .intake-section,
-    .intake-submit {
-      padding-left: var(--ourob-space-card);
-      padding-right: var(--ourob-space-card);
-    }
-
-    .intake-divider {
-      margin-left: var(--ourob-space-card);
-      margin-right: var(--ourob-space-card);
-    }
-
-    /* Two-up field pairs stack to one column so inputs get full width. */
-    .field-row.col-2,
-    .field-row.col-3 {
-      grid-template-columns: minmax(0, 1fr);
-    }
-
-    /* Doc footer: stack the two confidentiality lines instead of colliding. */
-    .intake-doc-footer {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: var(--ourob-space-2);
-    }
-  }
+}
