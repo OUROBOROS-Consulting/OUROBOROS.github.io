@@ -16,6 +16,27 @@ body {
   background-color: var(--md-sys-color-background);
 }
 
+:where(
+  input:not([type]),
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  input[type="password"],
+  input[type="number"],
+  input[type="date"],
+  input[type="time"],
+  input[type="datetime-local"],
+  input[type="month"],
+  input[type="week"],
+  select,
+  textarea,
+  [contenteditable="true"]
+) {
+  font-family: var(--font-technical);
+}
+
 .c-background-morph {
   position: fixed;
   z-index: 1;
@@ -106,6 +127,7 @@ body {
   color: inherit;
   background: transparent;
   font: inherit;
+  font-family: var(--font-technical);
   cursor: pointer;
 }
 
@@ -287,17 +309,30 @@ body {
 }
 
 #cta {
-  background-color: linear-gradient(25deg, var(--p-color-ink-palantir-dark), black, var(--p-color-ink-palantir-dark));
-  // background-image:
-  //   linear-gradient(
-  //     color-mix(in srgb, var(--md-sys-color-surface), transparent 20%),
-  //     color-mix(in srgb, var(--md-sys-color-surface), transparent 10%)
-  //   ),
-  //   url("../images/Abstract.jpg");
+  position: relative;
+  isolation: isolate;
+  background-color: var(--p-color-black);
   background-size: cover, cover;
   background-position: center, center;
   background-repeat: no-repeat;
   border: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+}
+
+#cta::before {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url("../images/Abstract.jpg");
+  background-position: center;
+  background-size: cover;
+  content: "";
+  opacity: 0.55;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+#cta .c-cta__inner {
+  position: relative;
 }
 
 .progress-bar {

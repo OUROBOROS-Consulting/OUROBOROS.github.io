@@ -70,7 +70,7 @@
 }
 
 .c-footer__availability .c-hours {
-  padding: var(--md-sys-spacing-md) var(--md-sys-spacing-lg);
+  padding: var(--md-sys-spacing-md);
   border: var(--site-border-width) solid var(--md-sys-color-outline);
   border-radius: var(--site-radius-md);
   background-color: color-mix(in srgb, var(--md-sys-color-surface) 82%, var(--md-sys-color-surface-variant));
@@ -92,6 +92,11 @@
 .c-footer__availability .c-hours__response,
 .c-footer__availability .c-hours__after {
   color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-footer__availability .c-hours__day {
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .c-footer__availability .c-hours__footer {
@@ -149,7 +154,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--md-sys-spacing-md);
-  padding: var(--md-sys-spacing-md) var(--md-sys-spacing-lg);
+  padding: 0 var(--md-sys-spacing-lg);
   background-color: var(--md-sys-color-surface-variant);
   border-top: 1px solid var(--md-sys-color-outline);
   font-size: var(--md-sys-typescale-body-small-size);
@@ -195,6 +200,12 @@
   .c-footer__brand,
   .c-footer__availability {
     grid-row: 2;
+  }
+
+  .c-footer__availability {
+    grid-column: 1 / -1;
+    grid-row: 3;
+    width: min(100%, 30rem);
   }
 }
 

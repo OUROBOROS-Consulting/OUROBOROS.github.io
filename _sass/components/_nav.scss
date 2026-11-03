@@ -33,10 +33,10 @@
 /* Links and Dropdowns - The "Nav links" Organism logic */
 .c-nav__links {
   display: flex;
-  flex: 0 0 auto;
+  flex: 1 1 auto;
   justify-content: center;
   min-width: 0;
-  gap: var(--md-sys-spacing-md);
+  gap: 0;
   align-items: center;
 }
 
@@ -75,17 +75,24 @@
   display: flex;
   flex: 0 0 auto;
   align-items: center;
+  padding-inline: var(--md-sys-spacing-xs);
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+}
+
+.c-nav__dropdown.is-active {
+  border-bottom-color: var(--md-sys-color-primary);
 }
 
 .c-nav__link {
   box-sizing: border-box;
   display: inline-flex;
   align-items: center;
-  gap: var(--md-sys-spacing-xs);
+  gap: 0;
   min-height: var(--site-nav-control-size);
-  padding: 0 var(--md-sys-spacing-xs);
-  border: var(--site-border-width) solid transparent;
-  border-radius: var(--site-radius-md);
+  padding: 0 var(--md-sys-spacing-sm);
+  border: 0;
+  border-radius: 0;
   color: var(--md-sys-color-on-surface);
   font-family: var(--font-technical);
   font-size: var(--site-nav-label-size);
@@ -96,8 +103,6 @@
   white-space: nowrap;
   text-decoration: none;
   transition:
-    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
     color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
   &:link,
@@ -107,9 +112,12 @@
   }
 
   &:hover {
-    border-color: var(--md-sys-color-outline);
-    background-color: var(--md-sys-color-surface-variant);
-    color: var(--p-color-white);
+    color: var(--md-sys-color-primary);
+  }
+
+  &[aria-current="page"],
+  &[aria-current="location"] {
+    color: var(--md-sys-color-primary);
   }
 
   &:focus-visible {
@@ -118,7 +126,6 @@
   }
 }
 
-.c-nav__link > i,
 .c-nav__accordion-btn > i,
 .c-nav__search-submit > i,
 .c-nav__search-toggle > i,
@@ -127,13 +134,20 @@
   color: var(--md-sys-color-primary);
 }
 
-.c-nav__link > i {
-  font-size: var(--site-nav-icon-size);
-}
-
 .c-nav__dropdown-row {
   display: flex;
   align-items: center;
+  gap: 0;
+}
+
+.c-nav__dropdown > .c-nav__dropdown-row > .c-nav__accordion-btn {
+  width: auto;
+  height: auto;
+  padding: var(--md-sys-spacing-xs);
+  border: 0;
+  border-radius: 0;
+  color: var(--md-sys-color-on-surface);
+  font-size: var(--md-sys-typescale-label-medium-size);
 }
 
 .c-nav__accordion-btn,
@@ -237,6 +251,11 @@
     text-decoration: none;
   }
 
+  .c-nav__dropdown-link[aria-current="page"],
+  .c-nav__dropdown-link[aria-current="location"] {
+    color: var(--md-sys-color-primary);
+  }
+
   &:hover {
     background-color: var(--md-sys-color-surface-variant);
     color: var(--p-color-white);
@@ -286,10 +305,7 @@
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-on-surface);
   border-radius: var(--site-radius-sm);
-  transition:
-    flex-basis var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    width var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    opacity var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+  transition: opacity var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 }
 
 .c-nav__search-wrap.is-open .c-nav__search-input {

@@ -1,6 +1,5 @@
 - title: Services
   url: /services/
-  icon: ph-wrench
   children:
     - title: Private AI & Data Systems
       url: /services/technology/
@@ -13,7 +12,6 @@
 
 - title: Work
   url: /projects/
-  icon: ph-folder-open
   children:
     - title: Case Studies
       url: /case-studies/
@@ -22,7 +20,6 @@
 
 - title: Resources
   url: /resources/
-  icon: ph-books
   active_paths:
     - /psas
     - /glossary
@@ -43,7 +40,6 @@
 
 - title: About
   url: /about/
-  icon: ph-buildings
   active_paths:
     - /mission
     - /framework

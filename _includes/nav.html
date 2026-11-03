@@ -10,11 +10,21 @@
     <!-- Page links -->
     <div class="c-nav__links" id="primary-nav-links">
       {% for item in site.data.nav %}
-      <div class="c-nav__dropdown">
+      {% assign item_is_active = false %}
+      {% if item.url != '/' and page.url contains item.url %}
+      {% assign item_is_active = true %}
+      {% endif %}
+      {% for active_path in item.active_paths %}
+      {% assign active_prefix = active_path | append: '/' %}
+      {% if page.url == active_path or page.url contains active_prefix %}
+      {% assign item_is_active = true %}
+      {% endif %}
+      {% endfor %}
+      <div class="c-nav__dropdown{% if item_is_active %} is-active{% endif %}">
         {% if item.children %}
         <div class="c-nav__dropdown-row">
-          <a href="{{ item.url | relative_url }}" class="c-nav__link">
-            <i class="ph-fill {{ item.icon }}" aria-hidden="true"></i>
+          <a href="{{ item.url | relative_url }}" class="c-nav__link"
+            {% if page.url == item.url %}aria-current="page"{% elsif item_is_active %}aria-current="location"{% endif %}>
             {{ item.title }}
           </a>
           <button type="button" class="c-nav__accordion-btn" aria-expanded="false"
@@ -25,13 +35,18 @@
         </div>
         <div class="c-nav__dropdown-menu" id="nav-dropdown-menu-{{ forloop.index }}">
           {% for child in item.children %}
-          <a href="{{ child.url | relative_url }}" class="c-nav__dropdown-link">{{ child.title
-            }}</a>
+          {% assign child_is_active = false %}
+          {% if child.url != '/' and page.url contains child.url %}
+          {% assign child_is_active = true %}
+          {% endif %}
+          <a href="{{ child.url | relative_url }}"
+            class="c-nav__dropdown-link{% if child_is_active %} is-active{% endif %}"
+            {% if page.url == child.url %}aria-current="page"{% elsif child_is_active %}aria-current="location"{% endif %}>{{ child.title }}</a>
           {% endfor %}
         </div>
         {% else %}
-        <a href="{{ item.url | relative_url }}" class="c-nav__link">
-          <i class="ph-fill {{ item.icon }}" aria-hidden="true"></i>
+        <a href="{{ item.url | relative_url }}" class="c-nav__link"
+          {% if page.url == item.url %}aria-current="page"{% elsif item_is_active %}aria-current="location"{% endif %}>
           {{ item.title }}
         </a>
         {% endif %}

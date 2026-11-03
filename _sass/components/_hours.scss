@@ -64,6 +64,10 @@
   font-variant-numeric: tabular-nums;
 }
 
+.c-hours__time {
+  margin: 0;
+}
+
 .c-hours__row--closed {
   opacity: 0.5;
   text-decoration: line-through;
