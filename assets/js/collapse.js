@@ -13,7 +13,7 @@
  * deferred, so document order decides.
  */
 (function () {
-  var body = document.querySelector('.post-body');
+  var body = document.querySelector('.c-article__body, .post-body');
   if (!body) return;
 
   var headings = [].slice.call(body.querySelectorAll(':scope > h3'));
@@ -26,6 +26,9 @@
     details.className = 'faq-item';
 
     var summary = document.createElement('summary');
+    var icon = document.createElement('i');
+    icon.className = 'ph ph-plus faq-toggle-icon';
+    icon.setAttribute('aria-hidden', 'true');
     var answer = document.createElement('div');
     answer.className = 'faq-answer';
 
@@ -40,9 +43,15 @@
 
     h3.parentNode.insertBefore(details, h3);
     summary.appendChild(h3);
+    summary.appendChild(icon);
     run.forEach(function (el) { answer.appendChild(el); });
     details.appendChild(summary);
     details.appendChild(answer);
+
+    details.addEventListener('toggle', function () {
+      icon.classList.toggle('ph-plus', !details.open);
+      icon.classList.toggle('ph-minus', details.open);
+    });
 
     items.push(details);
   });

@@ -1,42 +1,56 @@
 const displacementMap = document.getElementById('hero-displacement-map');
-const heroArtwork = document.querySelectorAll('.c-page-hero__art');
+const heroArtwork = document.querySelectorAll('.c-page-hero__icon, .c-page-hero__logo');
+const glitchNoise = document.getElementById('hero-glitch-noise');
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-if (displacementMap && heroArtwork.length && !prefersReducedMotion.matches) {
-  const maxDisplacement = 48;
-  let targetScale = 0;
-  let currentScale = 0;
+if (displacementMap && glitchNoise && heroArtwork.length && !prefersReducedMotion.matches) {
+  let glitchUntil = 0;
+  let nextBurstAt = 0;
   let animationFrame = 0;
+  let isGlitching = false;
 
-  function animateDisplacement() {
-    targetScale *= 0.95;
-    currentScale += (targetScale - currentScale) * 0.42;
-    displacementMap.setAttribute('scale', currentScale.toFixed(1));
-
-    if (targetScale > 0.1 || currentScale > 0.1) {
-      animationFrame = requestAnimationFrame(animateDisplacement);
-    } else {
+  function animateGlitch(now) {
+    if (now >= glitchUntil) {
       displacementMap.setAttribute('scale', '0');
+      glitchNoise.setAttribute('baseFrequency', '0.02 0.55');
       animationFrame = 0;
+      isGlitching = false;
+      return;
     }
+
+    if (now >= nextBurstAt) {
+      const burst = Math.random() > 0.28;
+      displacementMap.setAttribute('scale', burst ? String(18 + Math.round(Math.random() * 18)) : '0');
+      glitchNoise.setAttribute(
+        'baseFrequency',
+        burst
+          ? `${(0.08 + Math.random() * 0.1).toFixed(2)} ${(0.45 + Math.random() * 0.45).toFixed(2)}`
+          : '0.02 0.55'
+      );
+      nextBurstAt = now + 18 + Math.random() * 42;
+    }
+
+    animationFrame = requestAnimationFrame(animateGlitch);
   }
 
-  function scheduleDisplacement() {
-    if (!animationFrame) {
-      animationFrame = requestAnimationFrame(animateDisplacement);
+  function triggerGlitch() {
+    glitchUntil = performance.now() + 680;
+    if (!isGlitching) {
+      isGlitching = true;
+      nextBurstAt = 0;
+      animationFrame = requestAnimationFrame(animateGlitch);
     }
   }
 
   heroArtwork.forEach((artwork) => {
-    artwork.addEventListener('pointerenter', () => {
-      targetScale = maxDisplacement;
-      scheduleDisplacement();
+    artwork.addEventListener('pointerenter', (event) => {
+      if (event.pointerType === 'touch') return;
+      triggerGlitch();
     });
 
     artwork.addEventListener('pointermove', (event) => {
-      const movement = Math.hypot(event.movementX, event.movementY);
-      targetScale = Math.min(maxDisplacement, targetScale + movement * 2);
-      scheduleDisplacement();
+      if (event.pointerType === 'touch') return;
+      if (Math.hypot(event.movementX, event.movementY) > 1) triggerGlitch();
     });
   });
 }

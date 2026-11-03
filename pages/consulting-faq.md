@@ -2,6 +2,7 @@
 layout: article
 title: Consulting FAQ
 permalink: /consulting-faq/
+collapse_questions: true
 category: Services
 back_url: /services/
 hero_icon: ph-chats-circle
@@ -47,7 +48,8 @@ No. AI privacy and governance work is practical consulting, not a penetration te
 - Data-quality audits: **Scoped quote**
 - Individual AI privacy coaching: **$150 per 90-minute session**
 - Organizational AI privacy workshops: **$1,200 for a half day** or **$2,000 for a full day**
-- Web and graphic design: **Scoped to the project**
+- Web and graphic design: **$150 minimum** for custom design work; larger projects are scoped individually
+- Figma templates and design workflows: **Ask about available products and prices**
 
 The scope and cost are agreed before paid work begins.
 
