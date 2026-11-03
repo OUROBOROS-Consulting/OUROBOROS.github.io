@@ -1,0 +1,102 @@
+.private-ai-flow {
+  margin-block: var(--md-sys-spacing-xl);
+}
+
+.private-ai-flow__steps {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--md-sys-spacing-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.private-ai-flow__steps::before {
+  position: absolute;
+  top: 1rem;
+  right: 16.67%;
+  left: 16.67%;
+  height: 1px;
+  background-color: var(--md-sys-color-outline);
+  content: "";
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 480ms var(--site-motion-easing-standard) 120ms;
+}
+
+.private-ai-flow.is-visible .private-ai-flow__steps::before {
+  transform: scaleX(1);
+}
+
+.private-ai-flow__step {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  gap: var(--md-sys-spacing-sm);
+  text-align: center;
+}
+
+.private-ai-flow__number {
+  display: grid;
+  width: 2rem;
+  aspect-ratio: 1;
+  place-items: center;
+  border: var(--site-border-width) solid var(--md-sys-color-primary);
+  border-radius: var(--site-radius-full);
+  background-color: var(--md-sys-color-surface);
+  color: var(--md-sys-color-primary);
+  font-family: var(--font-utility, monospace);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+.private-ai-flow__step h3,
+.private-ai-flow__step p {
+  margin: 0;
+}
+
+.private-ai-flow__step h3 {
+  font-size: var(--md-sys-typescale-title-medium-size);
+}
+
+.private-ai-flow__step p {
+  margin-top: var(--md-sys-spacing-xs);
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+@media (max-width: 40rem) {
+  .private-ai-flow__steps {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--md-sys-spacing-md);
+  }
+
+  .private-ai-flow__steps::before {
+    top: 1rem;
+    bottom: 1rem;
+    left: 1rem;
+    width: 1px;
+    height: auto;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+
+  .private-ai-flow.is-visible .private-ai-flow__steps::before {
+    transform: scaleY(1);
+  }
+
+  .private-ai-flow__step {
+    grid-template-columns: 2rem minmax(0, 1fr);
+    justify-items: start;
+    gap: var(--md-sys-spacing-md);
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .private-ai-flow__steps::before,
+  .private-ai-flow.is-visible .private-ai-flow__steps::before {
+    transform: none;
+    transition: none;
+  }
+}

@@ -22,6 +22,7 @@ sections:
 
   - id: automation
     heading: "Private AI & Agentic Workflows"
+    private_ai_flow: true
     body_paragraphs:
       - "Use AI's speed without sending confidential data to an outside provider."
       - "**Local LLMs:** Run language models on infrastructure you control. The right setup depends on your systems, capacity, and threat model."

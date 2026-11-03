@@ -17,16 +17,39 @@ document.querySelectorAll('.values-card').forEach(card => {
   });
 });
 
-// ── Scroll-triggered fade-in ──────────────────────────────────────────────────
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      e.target.classList.add('visible');
-      observer.unobserve(e.target);
-    }
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+// ── Scroll-triggered reveals ──────────────────────────────────────────────────
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reducedMotion && 'IntersectionObserver' in window) {
+  const revealTargets = document.querySelectorAll(
+    '.page-section-label, .band-header, .authority, .c-card, .values-card, .private-ai-flow, .fade-in, .c-article__body > h2, .post-body > h2, .page-body > h2'
+  );
+
+  if (revealTargets.length) {
+    document.documentElement.classList.add('motion-enhanced');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-visible');
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -24px 0px' });
+
+    revealTargets.forEach((element) => {
+      element.classList.add('motion-reveal');
+
+      if (element.matches('.c-card, .values-card')) {
+        const siblings = Array.from(element.parentElement.children)
+          .filter((sibling) => sibling.matches('.c-card, .values-card'));
+        const siblingIndex = siblings.indexOf(element);
+        element.style.setProperty('--reveal-delay', `${Math.min(siblingIndex * 80, 240)}ms`);
+      }
+
+      revealObserver.observe(element);
+    });
+  }
+}
 
 // ── Cursor spotlight ──────────────────────────────────────────────────────────
 // Sets --cx/--cy on :root; body::after in _base.scss renders the glow via CSS.

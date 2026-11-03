@@ -28,6 +28,7 @@
     - /framework
     - /team
     - /faq
+    - /resume
   children:
     - title: Team
       url: /team/
@@ -37,3 +38,5 @@
       url: /case-studies/
     - title: FAQ
       url: /faq/
+    - title: Resume
+      url: /resume/

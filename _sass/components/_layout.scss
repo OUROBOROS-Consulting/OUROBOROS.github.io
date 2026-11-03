@@ -57,3 +57,29 @@ section:last-of-type {
   background: var(--md-sys-color-primary);
   margin-bottom: var(--md-sys-spacing-sm);
 }
+
+html.motion-enhanced .motion-reveal:not(.is-visible) {
+  opacity: 0;
+  translate: 0 0.75rem;
+}
+
+html.motion-enhanced .motion-reveal {
+  transition:
+    opacity 480ms var(--site-motion-easing-standard),
+    translate 480ms var(--site-motion-easing-standard);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+
+html.motion-enhanced .motion-reveal.is-visible {
+  opacity: 1;
+  translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html.motion-enhanced .motion-reveal,
+  html.motion-enhanced .motion-reveal:not(.is-visible) {
+    opacity: 1;
+    translate: none;
+    transition: none;
+  }
+}

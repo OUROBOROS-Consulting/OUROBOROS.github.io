@@ -55,6 +55,14 @@
   }
 }
 
+.c-btn .ph-arrow-right {
+  transition: transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+}
+
+.c-btn:is(:hover, :focus-visible) .ph-arrow-right {
+  transform: translateX(0.2rem);
+}
+
 /* Secondary Variant */
 .c-btn--secondary {
   background-color: var(--md-sys-color-secondary-container);
@@ -147,6 +155,15 @@ summary,
   .c-btn,
   .c-btn:active {
     transition-duration: var(--site-motion-reduced-duration);
+    transform: none;
+  }
+
+  .c-btn .ph-arrow-right {
+    transition: none;
+    transform: none;
+  }
+
+  .c-btn:is(:hover, :focus-visible) .ph-arrow-right {
     transform: none;
   }
 }

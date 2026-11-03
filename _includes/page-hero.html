@@ -15,7 +15,7 @@
        cta_mode         — "none" | "service" (button + optional page.price,
                            inside the text column) | "psa" (download page.pdf +
                            optional page.date, its own grid column)
-       scroll_hint      — "true" to render the .scroll-hint chevron
+       scroll_hint      — "false" to omit the scroll cue (shown by default)
      ══════════════════════════════════════════════════════════════════════ -->
 {% assign hero_icon = page.hero_icon | default: include.hero_icon %}
 {% unless hero_icon %}
@@ -154,11 +154,11 @@
       </defs>
     </svg>
 
-    {% if include.scroll_hint == 'true' %}
+    {% unless include.scroll_hint == 'false' %}
     <div class="c-page-hero__scroll-hint">
       <div class="c-page-hero__scroll-line"></div>
       <span class="label-small">Scroll</span>
     </div>
-    {% endif %}
+    {% endunless %}
   </div><!-- /c-page-hero__inner -->
 </header><!-- /c-page-hero -->

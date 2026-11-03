@@ -188,6 +188,27 @@
   background-color: var(--md-sys-color-outline);
   border-radius: var(--site-radius-full);
   opacity: 0.5;
+  transform-origin: top;
+  animation: page-scroll-cue 400ms var(--site-motion-easing-standard) 2;
+}
+
+@keyframes page-scroll-cue {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scaleY(0.55);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: scaleY(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .c-page-hero__scroll-line {
+    animation: none;
+  }
 }
 
 @media (max-width: 48rem) {

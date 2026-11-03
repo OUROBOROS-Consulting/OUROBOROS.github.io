@@ -1,0 +1,39 @@
+---
+---
+@use "design/tokens" as *;
+
+.design-portfolio__section-copy {
+  max-width: 58ch;
+}
+
+.design-portfolio__grid,
+.design-portfolio__approach {
+  margin-top: var(--md-sys-spacing-xl);
+}
+
+.design-portfolio__sample {
+  min-width: 0;
+  margin: 0;
+}
+
+.design-portfolio__image-slot {
+  display: grid;
+  min-height: 14rem;
+  aspect-ratio: 4 / 3;
+  align-content: center;
+  justify-items: center;
+  gap: var(--md-sys-spacing-sm);
+  border: var(--site-border-width) dashed var(--md-sys-color-outline);
+  background-color: var(--md-sys-color-surface-variant);
+  text-align: center;
+}
+
+.design-portfolio__caption {
+  padding-top: var(--md-sys-spacing-md);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--md-sys-typescale-label-large-font);
+}
+
+.design-portfolio__approach .c-card {
+  height: 100%;
+}

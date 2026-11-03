@@ -242,6 +242,10 @@ layout: default
 
       {% endif %}
     </div><!-- /page-section-content -->
+
+    {% if section.private_ai_flow %}
+    {% include private-ai-flow.html %}
+    {% endif %}
   </section>
 
   {% endfor %}
