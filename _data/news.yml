@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-02
+generated: 2026-11-03
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "How “reverse game theory” could keep AI agents in check"
+        url: "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/"
+        source: "MIT Technology Review"
+        date: 2026-11-03
+        summary: "A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to..."
+      - title: "‘A serious failure’: CPS prosecutor cites imaginary case to high court after AI search"
+        url: "https://www.theguardian.com/technology/2026/nov/03/a-serious-failure-cps-prosecutor-cites-imaginary-case-to-high-court-after-ai-search"
+        source: "The Guardian"
+        date: 2026-11-03
+        summary: "Exclusive: Nonexistent precedent cited in alleged child rape case adds to dozens of AI-related errors plaguing court proceedings A senior crown prosecutor acting in a high court case cited an imaginary legal precedent..."
+      - title: "AI-powered malware ‘highly likely’ to be used to hack UK infrastructure by 2028"
+        url: "https://www.theguardian.com/technology/2026/nov/03/ai-powered-malware-artificial-intelligence-hacking-critical-uk-infrastructure"
+        source: "The Guardian"
+        date: 2026-11-03
+        summary: "National Cyber Security Centre expects attacks on critical facilities such as power stations, airports and hospitals AI-powered malicious software is “highly likely” to be used in hacking attacks against the UK’s power..."
       - title: "Palantir AI tech unused or little used by 29 NHS trusts said to be benefiting from it"
         url: "https://www.theguardian.com/technology/2026/nov/02/palantir-unused-nhs-hospital-trusts"
         source: "The Guardian"
@@ -23,11 +38,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-10-27
         summary: "Every manufacturer has its own industrial intelligence. Some is documented, and some resides in the knowledge of experienced workers. Consider an experienced operator preparing to restart a line after a changeover. The..."
-      - title: "The focus on AI safety disasters ignores everyday harms"
-        url: "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/"
-        source: "MIT Technology Review"
-        date: 2026-10-26
-        summary: "Consider what passes for success in technology policy. An AI company promises that its chatbot will not encourage suicide. A social media platform makes it more difficult for children to buy fentanyl. These are..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -130,6 +140,11 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Privacy's Defenders Podcast: The Secret Room"
+        url: "https://www.eff.org/deeplinks/2026/10/privacys-defenders-podcast-secret-room"
+        source: "EFF Deeplinks"
+        date: 2026-11-03
+        summary: "The government’s surveillance powers grew rapidly after Sept. 11, 2001, some in public view and some in secret. EFF suspected but couldn’t prove that the National Security Agency was spying on Americans' communications..."
       - title: "EPIC, CFA and Fairplay Urge Stronger Rules Under Colorado Automated Decision-Making Technology and Chatbot Laws"
         url: "https://epic.org/epic-cfa-and-fairplay-urge-stronger-rules-under-colorado-automated-decision-making-technology-and-chatbot-laws/"
         source: "EPIC"
@@ -185,8 +200,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-20
         summary: "In a victory for data privacy, a federal court in New York definitively ruled that the Office of Personnel Management (OPM) violated the law when it disclosed millions of federal employee records to DOGE agents. In a..."
-      - title: "Require Police to Get a Warrant to Search ALPR Data"
-        url: "https://www.eff.org/deeplinks/2026/10/require-police-get-warrant-search-alpr-data"
-        source: "EFF Deeplinks"
-        date: 2026-10-19
-        summary: "This post was co-written by Andi Cao , an EFF legal intern. Automated license plate readers (ALPRs) are mass surveillance. They photograph every passing car and log where and when it was captured, building a searchable..."
