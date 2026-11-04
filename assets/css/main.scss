@@ -16,6 +16,55 @@ body {
   background-color: var(--md-sys-color-background);
 }
 
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: min(100%, 56rem);
+  min-height: clamp(30rem, calc(100svh - 7rem), 48rem);
+  margin-inline: auto;
+  padding-block: clamp(3rem, 8vh, 6rem);
+}
+
+.error-code {
+  margin: 0 0 var(--md-sys-spacing-md);
+  color: var(--md-sys-color-primary);
+  font-family: var(--font-technical);
+  font-size: clamp(3rem, 9vw, 6rem);
+  line-height: 1;
+  letter-spacing: 0.08em;
+}
+
+.error-heading {
+  max-width: 18ch;
+  margin: 0 0 var(--md-sys-spacing-md);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.08;
+}
+
+.error-lede {
+  max-width: 56ch;
+  margin: 0 0 var(--md-sys-spacing-xl);
+  font-size: var(--md-sys-typescale-body-large-size);
+  line-height: var(--md-sys-typescale-body-large-line-height);
+}
+
+.error-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md-sys-spacing-sm);
+  margin-bottom: var(--md-sys-spacing-xl);
+}
+
+.error-footnote {
+  max-width: 60ch;
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-small-size);
+  line-height: var(--md-sys-typescale-body-small-line-height);
+}
+
 :where(
   input:not([type]),
   input[type="text"],
@@ -415,7 +464,7 @@ body {
 }
 
 .c-page-hero--home .c-page-hero__identity {
-  // align-items: flex-start;
+  align-items: flex-start;
 }
 
 .c-page-hero--home .c-page-hero__identity h1 {

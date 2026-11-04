@@ -79,8 +79,6 @@
   aspect-ratio: 5 / 6;
   margin-inline: auto;
   overflow: hidden;
-  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
 }
 
 .hex-portrait img {
