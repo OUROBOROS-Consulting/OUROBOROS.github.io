@@ -2,37 +2,52 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-03
+generated: 2026-11-04
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Albanese government warned it’s ‘sleepwalking into another robodebt scenario’ over use of algorithms and AI"
+        url: "https://www.theguardian.com/australia-news/2026/nov/05/albanese-government-warned-its-sleepwalking-into-another-robodebt-scenario-over-use-of-algorithms-and-ai"
+        source: "The Guardian"
+        date: 2026-11-04
+        summary: "Centre for Public Integrity report says mandatory audit and public register of all automated decision-making needed Get our breaking news email , free app or daily news podcast The federal government is “sleepwalking..."
+      - title: "Canva layoffs: design giant to cut or relocate more than 1,200 jobs in major restructure"
+        url: "https://www.theguardian.com/australia-news/2026/nov/04/canva-layoffs-job-cuts-restructure"
+        source: "The Guardian"
+        date: 2026-11-04
+        summary: "Chief executive Melanie Perkins describes job cuts as ‘without doubt the hardest moment in our thirteen-year history’ in email to staff Get our breaking news email , free app or daily news podcast Canva is cutting or..."
+      - title: "US tech stocks recover after selloff spooks investors over AI spending"
+        url: "https://www.theguardian.com/business/2026/nov/03/us-tech-stocks-recovery-ai-spending"
+        source: "The Guardian"
+        date: 2026-11-03
+        summary: "Midterms didn’t appear to have huge impact, though predicted wins for Democrats could mean more regulation US tech stocks made a recovery on Tuesday afternoon after a selloff spooked investors over AI spending..."
+      - title: "Google says there’s no way to use Search without using artificial intelligence"
+        url: "https://www.theguardian.com/technology/2026/nov/03/google-search-artificial-intelligence"
+        source: "The Guardian"
+        date: 2026-11-03
+        summary: "In announcement geared to schools, tech giant shows how entwined AI is with the world’s most popular website Google just acknowledged that you can’t use Google Search without using artificial intelligence . The search..."
+      - title: "Google will let schools skip AI tools, but they have to give up search, too"
+        url: "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/"
+        source: "Ars Technica"
+        date: 2026-11-03
+        summary: "Google will offer schools AI tools that purportedly don't give away the answers."
       - title: "How “reverse game theory” could keep AI agents in check"
         url: "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/"
         source: "MIT Technology Review"
         date: 2026-11-03
         summary: "A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to..."
-      - title: "‘A serious failure’: CPS prosecutor cites imaginary case to high court after AI search"
+      - title: "‘A serious failure’: CPS prosecutor cites imaginary case to court after AI search"
         url: "https://www.theguardian.com/technology/2026/nov/03/a-serious-failure-cps-prosecutor-cites-imaginary-case-to-high-court-after-ai-search"
         source: "The Guardian"
         date: 2026-11-03
-        summary: "Exclusive: Nonexistent precedent cited in alleged child rape case adds to dozens of AI-related errors plaguing court proceedings A senior crown prosecutor acting in a high court case cited an imaginary legal precedent..."
+        summary: "Exclusive: Nonexistent precedent cited in alleged child rape case adds to dozens of AI-related errors plaguing court proceedings A senior crown prosecutor acting cited an imaginary legal precedent in an error that has..."
       - title: "AI-powered malware ‘highly likely’ to be used to hack UK infrastructure by 2028"
         url: "https://www.theguardian.com/technology/2026/nov/03/ai-powered-malware-artificial-intelligence-hacking-critical-uk-infrastructure"
         source: "The Guardian"
         date: 2026-11-03
         summary: "National Cyber Security Centre expects attacks on critical facilities such as power stations, airports and hospitals AI-powered malicious software is “highly likely” to be used in hacking attacks against the UK’s power..."
-      - title: "Palantir AI tech unused or little used by 29 NHS trusts said to be benefiting from it"
-        url: "https://www.theguardian.com/technology/2026/nov/02/palantir-unused-nhs-hospital-trusts"
-        source: "The Guardian"
-        date: 2026-11-02
-        summary: "Exclusive: Gap between NHS claim and trusts’ comments described as ‘very misleading’ by senior health official More than two dozen hospital trusts the NHS claims have benefited from Palantir’s medical data platform are..."
-      - title: "Police use facial recognition to scan one million faces in WA trial leading to 122 arrests"
-        url: "https://www.theguardian.com/australia-news/2026/nov/02/wa-police-facial-recognition-technology-trial"
-        source: "The Guardian"
-        date: 2026-11-02
-        summary: "Deployments of surveillance vans over five months resulted in nine false alerts and led officers to engage with 146 registered sex offenders Get our breaking news email , free app or daily news podcast More than a..."
       - title: "Industrial Intelligence: The next growth opportunity for manufacturing"
         url: "https://www.technologyreview.com/2026/10/27/1147142/industrial-intelligence-the-next-growth-opportunity-for-manufacturing/"
         source: "MIT Technology Review"
@@ -42,6 +57,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Cocaine overtakes heroin as leading cause of drug deaths in England and Wales"
+        url: "https://www.theguardian.com/society/2026/nov/04/cocaine-overtakes-heroin-drug-deaths-england-wales"
+        source: "The Guardian"
+        date: 2026-11-04
+        summary: "Charities say government ‘must act now’ with cocaine-specific deaths eight times higher than in 2010 Cocaine has overtaken heroin as the biggest cause of drug deaths in England and Wales, figures from the Office for..."
       - title: "I Died review – moving portrait of Tzotzil women confronting patriarchal violence in the Mexican highlands"
         url: "https://www.theguardian.com/film/2026/nov/02/i-died-review-moving-portrait-of-tzotzil-women-confronting-patriarchal-violence-in-the-mexican-highlands"
         source: "The Guardian"
@@ -67,11 +87,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-22
         summary: "Some 32 government services are offline while work is carried out to address potential cybersecurity issues, a minister has said Tell us: have you been affected by the PHP code flaw? The Office for National Statistics..."
-      - title: "One in 10 adults in England and Wales experienced domestic abuse in last year, ONS finds"
-        url: "https://www.theguardian.com/society/2026/oct/22/domestic-abuse-england-wales"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "Charities say ‘tip of iceberg’ figures show government is not fulfilling pledge to halve violence against women and girls Almost one in 10 adults in England and Wales have experienced domestic abuse in the last year, a..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -106,6 +121,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Bioengineered retracts 119 more papers as investigation continues"
+        url: "https://retractionwatch.com/2026/11/03/bioengineered-retracts-119-more-papers-as-investigation-continues/"
+        source: "Retraction Watch"
+        date: 2026-11-03
+        summary: "Bioengineered retracted 119 papers in October amid investigations into suspected paper mill activity and other integrity-related concerns at the Taylor & Francis journal. Clarivate delisted Bioengineered from its Web of..."
       - title: "Computing journal retracts 13 papers, including four from past EIC"
         url: "https://retractionwatch.com/2026/11/02/computing-journal-retracts-13-papers-including-four-from-past-eic/"
         source: "Retraction Watch"
@@ -131,50 +151,45 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-27
         summary: "The Game Theory Society is severing ties with one of its official journals. The move comes two months after the journal’s editors resigned because Elsevier failed to renew the contract for the journal’s editor-in-chief..."
-      - title: "Another Sydney investigation of astrophysicist leads to retractions"
-        url: "https://retractionwatch.com/2026/10/26/joachim-schmidt-university-sydney-investigation-space-scientist-retraction/"
-        source: "Retraction Watch"
-        date: 2026-10-26
-        summary: "The University of Sydney has once again investigated the work of a former research fellow in its physics department, this time resulting in the retraction of two papers over concerns that data in several figures were..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Postal Service Surveilled Protest Activities Online With Little Rules, Oversight"
+        url: "https://www.eff.org/deeplinks/2026/11/postal-service-surveilled-protest-activities-online-little-rules-oversight"
+        source: "EFF Deeplinks"
+        date: 2026-11-03
+        summary: "The U.S. Postal Service used social media surveillance to monitor and report on protests across the political spectrum, government records show. The records , disclosed to EFF and other requesters suing the postal..."
+      - title: "Defending Privacy Has Been Essential to the Fight to Ensure the Right to Vote This Year"
+        url: "https://epic.org/defending-privacy-has-been-essential-to-the-fight-to-ensure-the-right-to-vote-this-year/"
+        source: "EPIC"
+        date: 2026-11-03
+        summary: "While voters across the nation cast their votes at the ballot box today, EPIC has spent the past year fighting to protect that right to vote. In every election cycle there are important legal battles that define and..."
       - title: "Privacy's Defenders Podcast: The Secret Room"
         url: "https://www.eff.org/deeplinks/2026/10/privacys-defenders-podcast-secret-room"
         source: "EFF Deeplinks"
         date: 2026-11-03
         summary: "The government’s surveillance powers grew rapidly after Sept. 11, 2001, some in public view and some in secret. EFF suspected but couldn’t prove that the National Security Agency was spying on Americans' communications..."
-      - title: "EPIC, CFA and Fairplay Urge Stronger Rules Under Colorado Automated Decision-Making Technology and Chatbot Laws"
-        url: "https://epic.org/epic-cfa-and-fairplay-urge-stronger-rules-under-colorado-automated-decision-making-technology-and-chatbot-laws/"
+      - title: "PRESS RELEASE: Judge blocks Trump administration scheme to disenfranchise voters"
+        url: "https://epic.org/press-release-judge-blocks-trump-administration-scheme-to-disenfranchise-voters-2/"
         source: "EPIC"
-        date: 2026-10-28
-        summary: "EPIC, Consumer Federation of America (CFA), and Fairplay submitted comments on Monday in response to the Colorado Department of Law’s rulemaking for the state’s recently-passed Automated Decision-Making Technology Act..."
-      - title: "The Sum & Substance: Business, financial groups fear unintended consequences of proposed AI rules"
-        url: "https://epic.org/the-sum-substance-business-financial-groups-fear-unintended-consequences-of-proposed-ai-rules/"
+        date: 2026-11-03
+        summary: "Washington, D.C. – On the eve of election day, a district court judge ordered the Trump administration to immediately stop sending error-filled federal lists of supposed “likely noncitizen voters” to election..."
+      - title: "The Verge: Here’s why you can’t shake those unhinged political texts"
+        url: "https://epic.org/the-verge-heres-why-you-cant-shake-those-unhinged-political-texts/"
         source: "EPIC"
-        date: 2026-10-27
-        summary: "“The law requires human review only when it is ‘commercially reasonable,’ but that vague standard concerns both companies worrying it will require a lot of reassessments and consumer groups fearing it will allow..."
-      - title: "USA Today: Can you sue over targeted ads? ‘Blockbuster’ Supreme Court case to decide"
-        url: "https://epic.org/usa-today-can-you-sue-over-targeted-ads-blockbuster-supreme-court-case-to-decide/"
+        date: 2026-10-31
+        summary: "“By collating all of this information, campaigns can try to infer your behavior, though they also might end up with outdated info, like old addresses that lead you to getting texts about a state you no longer live in..."
+      - title: "Democracy Docket: Federal judge questions DOJ voter ‘purge’ targeting minorities right before election"
+        url: "https://epic.org/democracy-docket-federal-judge-questions-doj-voter-purge-targeting-minorities-right-before-election/"
         source: "EPIC"
-        date: 2026-10-27
-        summary: "“’We have had a massive proliferation in online tracking and profiling in the last few decades,’ said Sara Geoghegan, a lawyer with the Electronic Privacy Information Center, which filed a brief supporting Salazar. ‘We..."
-      - title: "EPIC Urges Supreme Court to Protect Voters and Strike Down Arizona’s SAVE-based Voter-Registration Cancellation Program"
-        url: "https://epic.org/epic-urges-supreme-court-to-protect-voters-and-strike-down-arizonas-save-based-voter-registration-cancellation-program/"
+        date: 2026-10-31
+        summary: "U.S. District Judge Tanya Chutkan, appointed by former President Barack Obama, heard arguments on a request from pro-voting groups for a temporary restraining order to immediately block the Department of Justice (DOJ)..."
+      - title: "EPIC Comments to EDPB on Guidelines on Web Scraping for AI: Go Further"
+        url: "https://epic.org/epic-comments-to-edpb-on-guidelines-on-web-scraping-for-ai-go-further/"
         source: "EPIC"
-        date: 2026-10-27
-        summary: "On October 20, 2026, EPIC filed an amicus brief in Republican National Committee v. Mi Familia Vota urging the Supreme Court to strike down Arizona House Bill (H.B.) 2243. EPIC was represented on the brief by pro bono..."
-      - title: "The Wash: From Blockbuster video to TikTok, Supreme Court weighs the future of video privacy"
-        url: "https://epic.org/the-wash-from-blockbuster-video-to-tiktok-supreme-court-weighs-the-future-of-video-privacy/"
-        source: "EPIC"
-        date: 2026-10-26
-        summary: "“Paramount argued that expanding the term ‘consumer’ to include someone purchasing non-video services from a site could create far-reaching problems for non-video retailers that host videos on their websites.” “But Tom..."
-      - title: "New York City’s “Click to Cancel” Rule Goes Into Effect"
-        url: "https://epic.org/new-york-citys-click-to-cancel-rule-goes-into-effect/"
-        source: "EPIC"
-        date: 2026-10-26
-        summary: "This month, New York City’s rule on subscription traps took effect, protecting New Yorkers from confusing, time-consuming hurdles that make it difficult to cancel a subscription. The rule requires that companies must..."
+        date: 2026-10-30
+        summary: "There is nothing innovative in violating people's privacy to make more money."
       - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
         url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
         source: "EFF Deeplinks"
@@ -195,8 +210,8 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-21
         summary: "Police agencies across the U.S. have deployed Automated License Plate Readers (ALPRs) to capture images of passing vehicles along with time, date, and GPS coordinates. While the technology itself isn’t new (ALPRs have..."
-      - title: "Victory! Court Rules OPM Data Disclosure to DOGE Is Unlawful"
-        url: "https://www.eff.org/deeplinks/2026/10/victory-court-rules-opms-disclosure-personal-records-doge-unlawful"
-        source: "EFF Deeplinks"
-        date: 2026-10-20
-        summary: "In a victory for data privacy, a federal court in New York definitively ruled that the Office of Personnel Management (OPM) violated the law when it disclosed millions of federal employee records to DOGE agents. In a..."
+      - title: "Feds Suspect Ransom Negotiator Ran ShinyHunters Extortion Site"
+        url: "https://krebsonsecurity.com/2026/10/feds-suspect-ransom-negotiator-ran-shinyhunters-extortion-site/"
+        source: "Krebs on Security"
+        date: 2026-10-19
+        summary: "U.S. federal investigators pursuing the ShinyHunters hacking group that recently stole highly sensitive data from the FBI have identified executives at two different ransomware negotiation firms who maintained unusually..."
