@@ -162,7 +162,7 @@
   height: var(--site-nav-control-size);
   padding: 0;
   border: var(--site-border-width) solid transparent;
-  border-radius: var(--site-radius-md);
+  border-radius: var(--site-radius-none);
   background: transparent;
   color: var(--md-sys-color-on-surface);
   font-size: var(--site-nav-icon-size);
@@ -218,7 +218,7 @@
   min-width: 14rem;
   padding: var(--md-sys-spacing-xs);
   border: var(--site-border-width) solid var(--md-sys-color-outline);
-  border-radius: var(--site-radius-md);
+  border-radius: var(--site-radius-none);
   background-color: var(--md-sys-color-surface);
   box-shadow: var(--site-card-elevation);
   z-index: 10;
