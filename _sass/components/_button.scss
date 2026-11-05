@@ -41,12 +41,7 @@
 
 /* Primary Variant */
 .c-btn--primary {
-  background-color: var(--md-sys-color-primary);
-  color: var(--md-sys-color-on-primary);
-
   &:hover {
-    background-color: var(--md-sys-color-primary-container);
-    color: var(--md-sys-color-on-primary-container);
     box-shadow: 0 0 25px rgba(221, 203, 163, 0.4);
   }
 
@@ -63,25 +58,15 @@
   transform: translateX(0.2rem);
 }
 
-/* Secondary Variant */
-.c-btn--secondary {
-  background-color: var(--md-sys-color-secondary-container);
-  color: var(--md-sys-color-on-secondary-container);
-
-  &:hover {
-    background-color: var(--md-sys-color-secondary);
-    color: var(--md-sys-color-on-secondary);
-  }
-}
-
-/* Tertiary Variant */
+.c-btn--primary,
+.c-btn--secondary,
 .c-btn--tertiary {
-  background-color: var(--md-sys-color-tertiary-container);
-  color: var(--md-sys-color-on-tertiary-container);
+  background-color: var(--site-action-surface);
+  color: var(--site-action-text);
 
   &:hover {
-    background-color: var(--md-sys-color-tertiary);
-    color: var(--md-sys-color-on-tertiary);
+    background-color: var(--site-action-surface);
+    color: var(--site-action-text);
   }
 }
 

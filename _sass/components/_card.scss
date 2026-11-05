@@ -6,8 +6,8 @@
   flex-direction: column;
   padding: var(--site-card-padding-compact);
   border-radius: var(--site-card-radius);
-  background-color: var(--md-sys-color-surface);
-  color: var(--md-sys-color-on-surface);
+  background-color: var(--site-card-surface);
+  color: var(--p-color-ink-palantir-light);
   border: var(--site-border-width) solid var(--md-sys-color-outline);
   transition:
     background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
@@ -15,12 +15,12 @@
 
   /* Variants */
   &--elevated {
-    background-color: var(--md-sys-color-surface-variant);
+    background-color: var(--site-card-surface);
     box-shadow: var(--site-card-elevation);
   }
 
   &--subtle {
-    background-color: var(--md-sys-color-surface-variant);
+    background-color: var(--site-card-surface);
     border: none;
   }
 
@@ -213,8 +213,8 @@
   min-width: 0;
   border: var(--site-border-width) solid var(--md-sys-color-outline);
   border-radius: var(--site-card-radius);
-  background-color: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface);
+  background-color: var(--site-card-surface);
+  color: var(--p-color-ink-palantir-light);
 }
 
 .c-card--related,
@@ -411,8 +411,8 @@
   padding: var(--md-sys-spacing-lg);
   border: var(--site-border-width) solid var(--md-sys-color-outline);
   border-radius: var(--site-card-radius);
-  background-color: var(--md-sys-color-surface-variant);
-  color: var(--md-sys-color-on-surface);
+  background-color: var(--site-card-surface);
+  color: var(--p-color-ink-palantir-light);
 }
 
 .values-card__front,

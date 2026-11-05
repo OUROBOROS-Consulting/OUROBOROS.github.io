@@ -607,17 +607,18 @@ body {
 .c-card-formula,
 .related-card,
 .values-card__surface {
-  --md-sys-color-surface: var(--p-color-ink-palantir-dark);
-  --md-sys-color-surface-variant: var(--p-color-ink-palantir-dark);
+  --md-sys-color-surface: var(--site-card-surface);
+  --md-sys-color-surface-variant: var(--site-card-surface);
   --md-sys-color-on-surface: var(--p-color-ink-palantir-light);
   --md-sys-color-on-surface-variant: var(--p-color-ink-palantir-light);
   --md-sys-color-text-primary: var(--p-color-ink-palantir-light);
   --md-sys-color-text-secondary: var(--p-color-ink-palantir-light);
   --md-sys-color-text-tertiary: var(--p-color-ink-palantir-light);
+  --md-sys-color-primary: var(--site-action-surface);
   --md-sys-color-outline: color-mix(in srgb, var(--p-color-ink-palantir-light) 28%, transparent);
   border-radius: var(--site-card-radius);
   color: var(--p-color-ink-palantir-light);
-  background-color: var(--p-color-ink-palantir-dark);
+  background-color: var(--site-card-surface);
   border-color: color-mix(in srgb, var(--p-color-ink-palantir-light) 18%, transparent);
   box-shadow: none;
 }
@@ -710,35 +711,35 @@ body {
 }
 
 .c-section--paper .c-card {
-  color: var(--p-void-900);
-  background-color: var(--p-color-white);
+  color: var(--p-color-ink-palantir-light);
+  background-color: var(--site-card-surface);
   border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
 }
 
 .c-section--paper .c-card :is(.authority, .text-s, .text-t, .technical, .forensic, p, li, blockquote, cite) {
-  color: var(--p-void-900);
+  color: var(--p-color-ink-palantir-light);
 }
 
 #main .c-section--paper .c-card :is(.technical, .text-t, .c-card-action, .rc-tag, .rc-date, .rc-tag-chip, .card-link) {
-  color: var(--p-ember-gold-deep-900);
+  color: var(--site-action-surface);
 }
 
 .c-section--paper .c-card .rc-title {
-  color: var(--p-void-900);
+  color: var(--p-color-ink-palantir-light);
 }
 
 .c-section--paper .values-card__surface {
-  color: var(--p-void-900);
-  background-color: var(--p-color-white);
+  color: var(--p-color-ink-palantir-light);
+  background-color: var(--site-card-surface);
   border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
 }
 
 .c-section--paper :is(.values-card__name, .values-card__desc) {
-  color: var(--p-void-900);
+  color: var(--p-color-ink-palantir-light);
 }
 
 .c-section--paper .values-card__icon--gold {
-  color: var(--p-ember-gold-deep-900);
+  color: var(--site-action-surface);
 }
 
 #main .c-section--paper a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.c-nav__link):not(.c-nav__dropdown-link):not(.c-nav__action-item):where(:link, :visited) {

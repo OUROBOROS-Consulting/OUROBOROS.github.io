@@ -35,21 +35,11 @@
     }
   }
 
-  // Mode: Announcement (Primary Role)
-  &--announcement {
-    background-color: var(--md-sys-color-primary);
-    color: var(--md-sys-color-on-primary);
-  }
-
-  // Mode: Tagline/Brand (Secondary or Tertiary Role)
-  &--brand {
-    background-color: var(--md-sys-color-secondary-container);
-    color: var(--md-sys-color-on-secondary-container);
-  }
-
+  &--announcement,
+  &--brand,
   &--tagline {
-    background-color: var(--md-sys-color-tertiary-container);
-    color: var(--md-sys-color-on-tertiary-container);
+    background-color: var(--site-action-surface);
+    color: var(--site-action-text);
   }
 }
 

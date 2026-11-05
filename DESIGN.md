@@ -30,10 +30,15 @@ motion:
   interaction: "var(--site-motion-interaction-duration)"
   reduced: "var(--site-motion-reduced-duration)"
 components:
+  button:
+    backgroundColor: "var(--site-action-surface)"
+    textColor: "var(--site-action-text)"
   banner:
-    backgroundColor: "{colors.primary}"
-    textColor: "var(--md-sys-color-on-primary)"
+    backgroundColor: "var(--site-action-surface)"
+    textColor: "var(--site-action-text)"
     padding: "{spacing.sm} {spacing.md}"
+  card:
+    backgroundColor: "var(--site-card-surface)"
 ---
 
 # Visual system
@@ -48,6 +53,9 @@ Keep decoration structural and restrained. Avoid flicker and non-essential
 animation; honor `prefers-reduced-motion`. Decorative effects must not obscure
 content or controls.
 
-The site banner is an opt-in component. Its CRT test is a static scanline overlay
-using the banner's current text color; it must not alter content, link behavior,
-or layout.
+Filled buttons and every banner variant use the fixed gold action surface
+(`--site-action-surface`, `#DDCBA3`) with black text (`--site-action-text`) in
+both themes. All card surfaces use the fixed dark surface (`--site-card-surface`,
+`#191B1C`) in either theme, with light text for contrast. The site banner is
+opt-in. Its CRT test is a static scanline overlay using the banner's current text
+color; it must not alter content, link behavior, or layout.
