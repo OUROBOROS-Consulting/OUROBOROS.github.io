@@ -40,9 +40,7 @@ default.html          ← HTML shell: fonts, nav, rail, footer, main.js
   ├── home.html         ← Single-page landing
   ├── article.html      ← BODY-driven: progress bar → hero → {{ content }} → who → CTA
   ├── sections.html     ← FRONT-MATTER-driven: hero → about (now in docs/) → page.sections loop → links
-  ├── service.html      ← Service detail: hero → specializations → policies → included → pricing → CTA
-  ├── announcement.html ← Single announcement, but content moves to /docs/newsroom/
-  └── psa.html          ← PDF embed via iframe ⚠ zero pages, see README Anomalies
+  └── psa.html          ← PDF embed via iframe for PSA source documents
 \`\`\`
 
 **Directory Consolidation:**

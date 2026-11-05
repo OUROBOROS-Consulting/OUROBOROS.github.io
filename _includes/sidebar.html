@@ -1,7 +1,7 @@
-<aside id="rail" class="rail" aria-label="Contact and announcements" data-spine>
+<aside id="rail" class="rail" aria-label="Contact and theme controls" data-spine>
   <!-- Three lanes, left to right: the snake, then the beads, then the icons.
        The snake is a ::before on .rail-nav (NOT on this element) so it stretches
-       to the height of the bead run — add a fourth rail-group and it grows on
+       to the height of the bead run — add a rail-group and it grows on
        its own. See _sass/design/_sidebar-rail.scss for the lane budget; all
        three lanes share 3.5rem and there is ~3px of slack.
 
@@ -20,13 +20,6 @@
       <a class="rail-item" href="{{ '/intake' | relative_url }}" title="Contact"{% if page.url contains '/intake' %} aria-current="page"{% endif %}>
         <span class="rail-ic"><i class="ph ph-fill ph-envelope" aria-hidden="true"></i></span>
         <span class="rail-tx">Contact</span>
-      </a>
-    </div>
-    <div class="rail-group{% if page.url contains '/announcements' %} rail-group--active{% endif %}" data-spine-node>
-      <span class="spine-tick" aria-hidden="true"></span>
-      <a class="rail-item" href="{{ '/announcements' | relative_url }}" title="Announcements"{% if page.url contains '/announcements' %} aria-current="page"{% endif %}>
-        <span class="rail-ic"><i class="ph ph-fill ph-megaphone" aria-hidden="true"></i></span>
-        <span class="rail-tx">Announcements</span>
       </a>
     </div>
     <div class="rail-group" data-spine-node>

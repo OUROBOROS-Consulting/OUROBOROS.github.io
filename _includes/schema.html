@@ -15,7 +15,7 @@
     BreadcrumbList  every page except the homepage
     Service         pages in the _services collection
     FAQPage         any page with collapse_questions: true
-    Article         article and announcement layouts that carry a date
+    Article         article layouts that carry a date
 
   ⚠ Every string that reaches JSON goes through `| jsonify`, which emits its own
   surrounding quotes and escapes internal ones. Do not wrap those in quotes here
@@ -256,7 +256,7 @@
       test is precomputed here instead of written inline.
     {%- endcomment -%}
     {%- assign _is_prose = false -%}
-    {%- if page.layout == 'announcement' or page.layout == 'article' -%}
+    {%- if page.layout == 'article' -%}
       {%- if page.date -%}{%- assign _is_prose = true -%}{%- endif -%}
     {%- endif -%}
     {%- if _is_prose %},

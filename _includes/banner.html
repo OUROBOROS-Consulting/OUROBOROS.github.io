@@ -2,9 +2,9 @@
 {% if b.visible %}
 
 {% if b.url %}
-<a href="{{ b.url | relative_url }}" class="c-banner c-banner--{{ b.type }}" aria-label="Site banner">
+<a href="{{ b.url | relative_url }}" class="c-banner c-banner--{{ b.type }}{% if b.crt %} c-banner--crt{% endif %}">
 {% else %}
-<div class="c-banner c-banner--{{ b.type }}" role="banner">
+<div class="c-banner c-banner--{{ b.type }}{% if b.crt %} c-banner--crt{% endif %}" role="banner">
 {% endif %}
 
   {% if b.type == "announcement" %}

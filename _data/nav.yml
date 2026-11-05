@@ -27,7 +27,6 @@
     - /scholarly
     - /survival
     - /news
-    - /announcements
   children:
     - title: AI & Data Guides
       url: /resources/tutorials/
@@ -42,7 +41,6 @@
   url: /about/
   active_paths:
     - /mission
-    - /framework
     - /team
     - /faq
     - /resume

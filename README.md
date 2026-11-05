@@ -17,8 +17,6 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 ├── home.html           single-page landing
 ├── article.html        body-driven: progress bar → hero → {{ content }} → who → CTA
 ├── sections.html       front-matter-driven: hero → about → page.sections loop → links
-├── service.html        service detail: hero → specializations → policies → included → pricing → CTA
-├── announcement.html   single announcement
 └── psa.html            PDF embed via iframe
 ```
 
@@ -26,7 +24,7 @@ default.html            HTML shell: fonts, nav-shell, left rail, footer, main.js
 
 ### Page → layout, complete
 
-47 HTML pages build. Sorted by layout, then URL. `docs/` is in `exclude:` and never builds.
+43 HTML pages build. Sorted by layout, then URL. `docs/` is in `exclude:` and never builds.
 
 Standalone pages live in two folders, not at the repo root: `pages/` for hub and index
 pages, `legal/` for legal, contact and utility pages. The root contains `index.md` and
@@ -34,17 +32,15 @@ the company page, `about.md`. The folder names never appear in a URL: standalone
 use explicit permalinks, while the homepage and the CRT demo keep their generated paths.
 
 <details>
-<summary><strong>default</strong> — 19 pages</summary>
+<summary><strong>default</strong> — 15 pages</summary>
 
 | URL | Source |
 |---|---|
 | `/404.html` | `legal/404.md` |
 | `/about/` | `about.md` |
-| `/announcements/` | `pages/announcements.md` |
 | `/case-studies/` | `pages/case-studies.md` |
 | `/design-portfolio/` | `pages/design-portfolio.html` |
 | `/design-system/` | `pages/design-system.html` |
-| `/framework/` | `pages/framework-redirect.md` |
 | `/intake/` | `pages/intake.html` |
 | `/material/` | `pages/material.html` |
 | `/projects/` | `pages/projects.md` |
@@ -54,9 +50,7 @@ use explicit permalinks, while the homepage and the CRT demo keep their generate
 | `/resume/` | `pages/resume.html` |
 | `/search/` | `legal/search.html` |
 | `/services/` | `pages/services.md` |
-| `/survival-guide.html` | `pages/survival-guide-redirect.md` |
 | `/team/` | `pages/team.md` |
-| `/work/sanctuary/` | `pages/sanctuary-redirect.md` |
 
 </details>
 
@@ -128,10 +122,6 @@ Layout is chosen by **content shape**, not by collection: `default` for hub/list
 **Hub pages belong in `pages/`, not inside a collection.** The resources and services hubs live there. The PSA hub reads its three PDF records from `_data/psas.yml`; those PDFs are not a Jekyll collection.
 
 Authored content pages use Markdown (`.md`), including pages that combine prose with Liquid and raw HTML. Keep `.html` for reusable Jekyll layouts/includes and standalone interface or demo pages that are authored as complete HTML documents.
-
-### Anomalies
-
-**Legacy routes.** `/framework/` redirects to `/about/`, `/survival-guide.html` redirects to `/resources/survival/`, and `/announcements/` redirects to `/news/`. These preserve old entry points while the current navigation uses the active pages.
 
 ---
 

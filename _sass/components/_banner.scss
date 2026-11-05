@@ -10,6 +10,31 @@
   text-decoration: none;
   transition: background-color 0.2s ease;
 
+  &--crt {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    &::before {
+      position: absolute;
+      z-index: 0;
+      inset: 0;
+      background: repeating-linear-gradient(
+        to bottom,
+        currentColor 0 1px,
+        transparent 1px 3px
+      );
+      content: "";
+      opacity: 0.12;
+      pointer-events: none;
+    }
+
+    > * {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
   // Mode: Announcement (Primary Role)
   &--announcement {
     background-color: var(--md-sys-color-primary);
