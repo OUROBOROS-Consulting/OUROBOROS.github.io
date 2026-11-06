@@ -45,7 +45,7 @@
   min-width: var(--site-nav-control-size);
   gap: var(--md-sys-spacing-xs);
   padding-inline: var(--md-sys-spacing-md);
-  border-color: var(--md-sys-color-primary);
+  border-color: var(--p-color-ink-palantir-light);
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
   font-size: var(--md-sys-typescale-label-large-size);
@@ -61,7 +61,7 @@
 }
 
 .c-nav__portfolio:hover {
-  border-color: var(--md-sys-color-primary-container);
+  border-color: var(--p-color-ink-palantir-light);
   background-color: var(--md-sys-color-primary-container);
   color: var(--md-sys-color-on-primary-container);
 }
@@ -180,7 +180,7 @@
 .c-nav__search-toggle:hover,
 .c-nav__action-item:hover,
 .c-nav__hamburger:hover {
-  border-color: var(--md-sys-color-outline);
+  border-color: var(--p-color-ink-palantir-light);
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-primary);
 }
@@ -195,7 +195,7 @@
 }
 
 .c-nav__accordion-btn[aria-expanded="true"] {
-  border-color: var(--md-sys-color-outline);
+  border-color: var(--p-color-ink-palantir-light);
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-primary);
 }
@@ -233,7 +233,7 @@
 .c-nav__dropdown-link {
   display: block;
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
-  border-radius: var(--site-radius-sm);
+  border-radius: var(--p-radius-0);
   color: var(--md-sys-color-on-surface);
   font-family: var(--font-technical);
   font-size: var(--md-sys-typescale-body-medium-size);
@@ -304,7 +304,7 @@
   pointer-events: none;
   background-color: var(--md-sys-color-surface-variant);
   color: var(--md-sys-color-on-surface);
-  border-radius: var(--site-radius-sm);
+  border-radius: var(--p-radius-0);
   transition: opacity var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 }
 

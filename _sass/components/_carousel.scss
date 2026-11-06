@@ -65,7 +65,7 @@
 
 .carousel-btn:hover,
 .carousel-dot:hover {
-  border-color: var(--md-sys-color-primary);
+  border-color: var(--p-color-ink-palantir-light);
   color: var(--md-sys-color-primary);
 }
 
@@ -91,7 +91,7 @@
 }
 
 .carousel-dot.active {
-  border-color: var(--md-sys-color-primary);
+  border-color: var(--p-color-ink-palantir-light);
   background: var(--md-sys-color-primary);
 }
 

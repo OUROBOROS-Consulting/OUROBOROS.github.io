@@ -2,11 +2,11 @@
 ---
 @use "index" as *;
 
-a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.c-nav__link):not(.c-nav__dropdown-link):not(.c-nav__action-item):where(:link, :visited) {
+a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, .c-nav__dropdown-link, .c-nav__action-item)):where(:link, :visited) {
   color: var(--md-sys-color-primary);
 }
 
-a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.c-nav__link):not(.c-nav__dropdown-link):not(.c-nav__action-item):where(:hover, :focus-visible) {
+a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, .c-nav__dropdown-link, .c-nav__action-item)):where(:hover, :focus-visible) {
   color: var(--md-sys-color-secondary);
 }
 
@@ -666,7 +666,7 @@ body {
 .related-card:is(a[href], [role="button"]):hover,
 .card--framed:is(a[href], [role="button"]):hover {
   transform: none;
-  border-color: var(--md-sys-color-primary);
+  border-color: var(--p-color-ink-palantir-light);
 }
 
 .c-btn {
@@ -734,7 +734,7 @@ body {
   border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
 }
 
-.c-section--paper :is(.values-card__name, .values-card__desc) {
+.c-section--paper :is(.values-card__name, .values-card__desc, .values-card__desc p) {
   color: var(--p-color-ink-palantir-light);
 }
 
@@ -742,7 +742,47 @@ body {
   color: var(--site-action-surface);
 }
 
-#main .c-section--paper a:not(.c-btn):not(.btn):not(.btn-sovereign):not(.c-banner):not(.skip-link):not(.c-nav__link):not(.c-nav__dropdown-link):not(.c-nav__action-item):where(:link, :visited) {
+#main .c-section--paper a:not(:where(
+  .c-btn,
+  .btn,
+  .btn-sovereign,
+  .c-banner,
+  .skip-link,
+  .c-nav__link,
+  .c-nav__dropdown-link,
+  .c-nav__action-item,
+  .c-card,
+  .c-card--related,
+  .c-card--framed,
+  .c-card--callout,
+  .c-card--formula,
+  .c-card-formula,
+  .card,
+  .card--framed,
+  .card--callout,
+  .card--formula,
+  .related-card,
+  .values-card,
+  .card-link,
+  .bib-link,
+  .team-link,
+  .rc-tag,
+  .rc-date,
+  .rc-tag-chip,
+  .card-tag,
+  .c-card a,
+  .c-card--related a,
+  .c-card--framed a,
+  .c-card--callout a,
+  .c-card--formula a,
+  .c-card-formula a,
+  .card a,
+  .card--framed a,
+  .card--callout a,
+  .card--formula a,
+  .related-card a,
+  .values-card a
+)):where(:link, :visited) {
   color: var(--p-ember-gold-deep-900);
 }
 

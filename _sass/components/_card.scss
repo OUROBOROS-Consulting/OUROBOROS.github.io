@@ -185,7 +185,7 @@
 .related-card:is(a[href], [role="button"]):hover,
 .card--framed:is(a[href], [role="button"]):hover {
   transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-  border-color: var(--md-sys-color-primary);
+  border-color: var(--p-color-ink-palantir-light);
 }
 
 .c-card:is(a[href], [role="button"]):focus-visible,
@@ -443,7 +443,7 @@
 
 .values-card__desc {
   margin: 0;
-  color: var(--md-sys-color-on-surface-variant);
+  color: var(--p-color-ink-palantir-light);
   text-align: center;
 }
 

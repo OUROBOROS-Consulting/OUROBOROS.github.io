@@ -5,7 +5,7 @@
 .c-stack {
   display: flex;
   flex-direction: column;
-  gap: var(--md-sys-spacing-md); /* Default gap */
+  // gap: var(--md-sys-spacing-md); /* Default gap */
 }
 
 .c-stack--sm { gap: var(--md-sys-spacing-sm); }

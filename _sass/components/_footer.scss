@@ -58,7 +58,7 @@
 
   &:hover {
     transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-    border-color: var(--md-sys-color-primary);
+    border-color: var(--p-color-ink-palantir-light);
     background-color: var(--md-sys-color-surface-variant);
     color: var(--md-sys-color-primary);
   }
