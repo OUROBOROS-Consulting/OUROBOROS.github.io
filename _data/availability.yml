@@ -7,11 +7,11 @@
 # embed: the promise is the cost.
 
 timezone: Central Time
-timezone_note: Minneapolis, Minnesota
+# timezone_note: Minneapolis, Minnesota
 
 hours:
   - days: Mon to Fri
-    time: 12:00 PM to 8:00 PM
+    time: 11:00 AM to 6:00 PM
     closed: false
   - days: Sat & Sun
     time: 12:00 PM to 5:00 PM
@@ -30,4 +30,4 @@ after_hours: >-
 # about response time: every page's cta_body already states "within 72 hours"
 # directly above this line, and repeating it inside the same card reads as
 # padding. What the CTA was missing is *when*, not *how fast*.
-compact: Monday to Friday, 12PM to 8PM Central; Saturday & Sunday, 12PM to 5PM Central.
+compact: Monday to Friday, 11AM to 6PM Central; Saturday & Sunday, 12PM to 5PM Central.
