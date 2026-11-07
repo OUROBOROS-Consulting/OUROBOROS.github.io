@@ -2,7 +2,7 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-06
+generated: 2026-11-07
 sections:
   - id: ai
     title: "Artificial intelligence"
@@ -28,26 +28,6 @@ sections:
         source: "Ars Technica"
         date: 2026-11-05
         summary: "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says."
-      - title: "Winner of the Prix Goncourt literary prize admits to using AI"
-        url: "https://www.theguardian.com/books/2026/nov/05/winner-of-the-prix-goncourt-literary-prize-admits-to-using-ai-philippe-jaenada"
-        source: "The Guardian"
-        date: 2026-11-05
-        summary: "Philippe Jaenada told French radio that he used ChatGPT to ‘play with the reader’, after the prize removed a different book from its longlist over allegations of AI use The winner of France’s most prestigious literary..."
-      - title: "Australians are yet to see the benefits of AI and datacentres – and US midterms show they could be political kryptonite"
-        url: "https://www.theguardian.com/australia-news/2026/nov/06/ai-datacentre-boom-could-be-political-kryptonite-australia"
-        source: "The Guardian"
-        date: 2026-11-05
-        summary: "Albanese should tread carefully as he struggles to make case for how the new technology will benefit ordinary voters Get our daily political email , free app or daily news podcast When will Australia see the benefits of..."
-      - title: "UK found to be ‘dangerously’ reliant on China for critical minerals needed for defence and AI"
-        url: "https://www.theguardian.com/world/2026/nov/05/uk-dangerously-reliant-on-china-critical-minerals-military-ai-renewable-energy"
-        source: "The Guardian"
-        date: 2026-11-05
-        summary: "Delivering net zero also at risk, say MPs as they call for centralised policy and funding for mines and diversification The UK is “dangerously” dependent on China for critical raw materials needed for the military..."
-      - title: "Scare campaigns: Victoria’s major parties trade blows over AI-generated videos of leaders in election ads"
-        url: "https://www.theguardian.com/australia-news/2026/nov/05/victoria-election-2026-ai-generated-video-ads-ntwnfb"
-        source: "The Guardian"
-        date: 2026-11-04
-        summary: "Transparency and advertising experts say trust in politics could be further eroded as a result of ‘lies, deepfakes and AI-generated politicians’ Get our daily political email , free app or daily news podcast It’s the..."
       - title: "Google will let schools skip AI tools, but they have to give up search, too"
         url: "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/"
         source: "Ars Technica"
@@ -165,6 +145,11 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Presenting 'Desire Lines: Encoding Queer Digital Futures'"
+        url: "https://www.eff.org/deeplinks/2026/11/presenting-desire-lines-encoding-queer-digital-futures"
+        source: "EFF Deeplinks"
+        date: 2026-11-06
+        summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
       - title: "Big Tech Companies Repeat Same Losing Arguments in New Challenge to California’s AB 1709"
         url: "https://epic.org/big-tech-companies-repeat-same-losing-arguments-in-new-challenge-to-californias-ab-1709/"
         source: "EPIC"
@@ -220,8 +205,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-10-21
         summary: "The internet is a vast and confusing place no matter your age. Trying to help youth engage with it safely and privately is a complicated topic that touches on many different skillsets and ideas. But just because it’s..."
-      - title: "EFF to Brazil’s ANPD: Data Privacy and Free Expression Must Underpin Platform Regulations"
-        url: "https://www.eff.org/deeplinks/2026/10/eff-brazils-anpd-data-privacy-and-free-expression-must-underpin-platform"
-        source: "EFF Deeplinks"
-        date: 2026-10-21
-        summary: "The Brazilian National Data Protection Agency (ANPD) plays a pivotal role in the regulation of digital platforms according to new legislation approved in Brazil. Throughout this year, EFF has presented comments, filed..."
