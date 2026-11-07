@@ -2,42 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-05
+generated: 2026-11-07
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Australians are yet to see the benefits of AI and datacentres – and US midterms show they could be political kryptonite"
-        url: "https://www.theguardian.com/australia-news/2026/nov/06/ai-datacentre-boom-could-be-political-kryptonite-australia"
+      - title: "Fearing AI disruption, white-collar workers are quitting their jobs"
+        url: "https://www.theguardian.com/technology/2026/nov/06/ai-disruption-job-quitting"
         source: "The Guardian"
+        date: 2026-11-06
+        summary: "While there’s no evidence linking AI to mass layoffs, the tech has already ‘changed worker psychology’ When artificial intelligence researcher Mrinank Sharma quit his job at Anthropic earlier this year, the news rippled..."
+      - title: "Teachers and parents: what are your experiences of AI-generated emails?"
+        url: "https://www.theguardian.com/technology/2026/nov/06/teachers-and-parents-what-are-your-experiences-of-ai-generated-emails"
+        source: "The Guardian"
+        date: 2026-11-06
+        summary: "We’d like to hear from teachers and parents about how AI is changing communication between schools and families As AI tools such as ChatGPT and Claude become increasingly common in everyday life, we are interested in..."
+      - title: "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable"
+        url: "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/"
+        source: "Ars Technica"
         date: 2026-11-05
-        summary: "Albanese should tread carefully as he struggles to make case for how the new technology will benefit ordinary voters Get our daily political email , free app or daily news podcast When will Australia see the benefits of..."
-      - title: "UK found to be ‘dangerously’ reliant on China for critical minerals needed for defence and AI"
-        url: "https://www.theguardian.com/world/2026/nov/05/uk-dangerously-reliant-on-china-critical-minerals-military-ai-renewable-energy"
-        source: "The Guardian"
+        summary: "Google is technically offering schools more choice but not the choices anyone wants."
+      - title: "Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder."
+        url: "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/"
+        source: "Ars Technica"
         date: 2026-11-05
-        summary: "Delivering net zero also at risk, say MPs as they call for centralised policy and funding for mines and diversification The UK is “dangerously” dependent on China for critical raw materials needed for the military..."
-      - title: "Scare campaigns: Victoria’s major parties trade blows over AI-generated videos of leaders in election ads"
-        url: "https://www.theguardian.com/australia-news/2026/nov/05/victoria-election-2026-ai-generated-video-ads-ntwnfb"
-        source: "The Guardian"
-        date: 2026-11-04
-        summary: "Transparency and advertising experts say trust in politics could be further eroded as a result of ‘lies, deepfakes and AI-generated politicians’ Get our daily political email , free app or daily news podcast It’s the..."
-      - title: "US parents and teachers: share your thoughts on Google turning off Search for schools that reject AI"
-        url: "https://www.theguardian.com/technology/2026/nov/04/google-search-ai-schools"
-        source: "The Guardian"
-        date: 2026-11-04
-        summary: "Google announced that schools restricting AI entirely will lose access to Google Search. What do you think of this? Google announced this week that schools restricting AI entirely will lose access to Google Search..."
-      - title: "Albanese government warned it is ‘sleepwalking into another robodebt scenario’ over use of algorithms and AI"
-        url: "https://www.theguardian.com/australia-news/2026/nov/05/albanese-government-warned-its-sleepwalking-into-another-robodebt-scenario-over-use-of-algorithms-and-ai"
-        source: "The Guardian"
-        date: 2026-11-04
-        summary: "Centre for Public Integrity report calls for audit and public register of all automated decision-making Get our breaking news email , free app or daily news podcast The federal government is “sleepwalking its way into..."
-      - title: "Canva layoffs: design giant to cut or relocate more than 1,200 jobs in major restructure"
-        url: "https://www.theguardian.com/australia-news/2026/nov/04/canva-layoffs-job-cuts-restructure"
-        source: "The Guardian"
-        date: 2026-11-04
-        summary: "Chief executive Melanie Perkins describes job cuts as ‘without doubt the hardest moment in our thirteen-year history’ in email to staff Get our breaking news email , free app or daily news podcast Canva is cutting or..."
+        summary: "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says."
       - title: "Google will let schools skip AI tools, but they have to give up search, too"
         url: "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/"
         source: "Ars Technica"
@@ -155,6 +145,16 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Presenting 'Desire Lines: Encoding Queer Digital Futures'"
+        url: "https://www.eff.org/deeplinks/2026/11/presenting-desire-lines-encoding-queer-digital-futures"
+        source: "EFF Deeplinks"
+        date: 2026-11-06
+        summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
+      - title: "Big Tech Companies Repeat Same Losing Arguments in New Challenge to California’s AB 1709"
+        url: "https://epic.org/big-tech-companies-repeat-same-losing-arguments-in-new-challenge-to-californias-ab-1709/"
+        source: "EPIC"
+        date: 2026-11-05
+        summary: "Yesterday, three Big Tech companies—Meta, Google, and TikTok—filed lawsuits against California’s AB 1709, arguing that the law’s prohibition on deploying addictive feeds and other addictive features to minors violates..."
       - title: "Want to Rent an Internet Address at the White House?"
         url: "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
         source: "Krebs on Security"
@@ -170,41 +170,31 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-03
         summary: "The U.S. Postal Service used social media surveillance to monitor and report on protests across the political spectrum, government records show. The records , disclosed to EFF and other requesters suing the postal..."
+      - title: "Defending Privacy Has Been Essential to the Fight to Ensure the Right to Vote This Year"
+        url: "https://epic.org/defending-privacy-has-been-essential-to-the-fight-to-ensure-the-right-to-vote-this-year/"
+        source: "EPIC"
+        date: 2026-11-03
+        summary: "While voters across the nation cast their votes at the ballot box today, EPIC has spent the past year fighting to protect that right to vote. In every election cycle there are important legal battles that define and..."
       - title: "Privacy's Defenders Podcast: The Secret Room"
         url: "https://www.eff.org/deeplinks/2026/10/privacys-defenders-podcast-secret-room"
         source: "EFF Deeplinks"
         date: 2026-11-03
         summary: "The government’s surveillance powers grew rapidly after Sept. 11, 2001, some in public view and some in secret. EFF suspected but couldn’t prove that the National Security Agency was spying on Americans' communications..."
-      - title: "EPIC, CFA and Fairplay Urge Stronger Rules Under Colorado Automated Decision-Making Technology and Chatbot Laws"
-        url: "https://epic.org/epic-cfa-and-fairplay-urge-stronger-rules-under-colorado-automated-decision-making-technology-and-chatbot-laws/"
+      - title: "PRESS RELEASE: Judge blocks Trump administration scheme to disenfranchise voters"
+        url: "https://epic.org/press-release-judge-blocks-trump-administration-scheme-to-disenfranchise-voters-2/"
         source: "EPIC"
-        date: 2026-10-28
-        summary: "EPIC, Consumer Federation of America (CFA), and Fairplay submitted comments on Monday in response to the Colorado Department of Law’s rulemaking for the state’s recently-passed Automated Decision-Making Technology Act..."
-      - title: "The Sum & Substance: Business, financial groups fear unintended consequences of proposed AI rules"
-        url: "https://epic.org/the-sum-substance-business-financial-groups-fear-unintended-consequences-of-proposed-ai-rules/"
+        date: 2026-11-03
+        summary: "Washington, D.C. – On the eve of election day, a district court judge ordered the Trump administration to immediately stop sending error-filled federal lists of supposed “likely noncitizen voters” to election..."
+      - title: "The Verge: Here’s why you can’t shake those unhinged political texts"
+        url: "https://epic.org/the-verge-heres-why-you-cant-shake-those-unhinged-political-texts/"
         source: "EPIC"
-        date: 2026-10-27
-        summary: "“The law requires human review only when it is ‘commercially reasonable,’ but that vague standard concerns both companies worrying it will require a lot of reassessments and consumer groups fearing it will allow..."
-      - title: "USA Today: Can you sue over targeted ads? ‘Blockbuster’ Supreme Court case to decide"
-        url: "https://epic.org/usa-today-can-you-sue-over-targeted-ads-blockbuster-supreme-court-case-to-decide/"
+        date: 2026-10-31
+        summary: "“By collating all of this information, campaigns can try to infer your behavior, though they also might end up with outdated info, like old addresses that lead you to getting texts about a state you no longer live in..."
+      - title: "Democracy Docket: Federal judge questions DOJ voter ‘purge’ targeting minorities right before election"
+        url: "https://epic.org/democracy-docket-federal-judge-questions-doj-voter-purge-targeting-minorities-right-before-election/"
         source: "EPIC"
-        date: 2026-10-27
-        summary: "“’We have had a massive proliferation in online tracking and profiling in the last few decades,’ said Sara Geoghegan, a lawyer with the Electronic Privacy Information Center, which filed a brief supporting Salazar. ‘We..."
-      - title: "EPIC Urges Supreme Court to Protect Voters and Strike Down Arizona’s SAVE-based Voter-Registration Cancellation Program"
-        url: "https://epic.org/epic-urges-supreme-court-to-protect-voters-and-strike-down-arizonas-save-based-voter-registration-cancellation-program/"
-        source: "EPIC"
-        date: 2026-10-27
-        summary: "On October 20, 2026, EPIC filed an amicus brief in Republican National Committee v. Mi Familia Vota urging the Supreme Court to strike down Arizona House Bill (H.B.) 2243. EPIC was represented on the brief by pro bono..."
-      - title: "The Wash: From Blockbuster video to TikTok, Supreme Court weighs the future of video privacy"
-        url: "https://epic.org/the-wash-from-blockbuster-video-to-tiktok-supreme-court-weighs-the-future-of-video-privacy/"
-        source: "EPIC"
-        date: 2026-10-26
-        summary: "“Paramount argued that expanding the term ‘consumer’ to include someone purchasing non-video services from a site could create far-reaching problems for non-video retailers that host videos on their websites.” “But Tom..."
-      - title: "New York City’s “Click to Cancel” Rule Goes Into Effect"
-        url: "https://epic.org/new-york-citys-click-to-cancel-rule-goes-into-effect/"
-        source: "EPIC"
-        date: 2026-10-26
-        summary: "This month, New York City’s rule on subscription traps took effect, protecting New Yorkers from confusing, time-consuming hurdles that make it difficult to cancel a subscription. The rule requires that companies must..."
+        date: 2026-10-31
+        summary: "U.S. District Judge Tanya Chutkan, appointed by former President Barack Obama, heard arguments on a request from pro-voting groups for a temporary restraining order to immediately block the Department of Justice (DOJ)..."
       - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
         url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
         source: "EFF Deeplinks"
