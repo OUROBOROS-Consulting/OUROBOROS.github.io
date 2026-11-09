@@ -5,6 +5,13 @@
   url: /services/technology/#automation
   link_label: Explore private AI and data systems
 
+- title: Private AI Setup
+  category: Technology
+  lede: A fixed-price setup of an AI assistant that runs on your own computer. Your files, notes, and drafts stay on your machine.
+  description: Set up by a statistician with a Federal IT background. Configures the model, engine, and assistant for local use.
+  url: /services/private-ai-setup/
+  link_label: Explore private AI setup
+
 - title: AI Privacy & Governance Advisory
   category: Technology
   lede: You need to know what your AI tools can see, where data goes, and who is accountable.

@@ -1,6 +1,8 @@
 - title: Services
   url: /services/
   children:
+    - title: Private AI Setup
+      url: /services/private-ai-setup/
     - title: Private AI & Data Systems
       url: /services/technology/
     - title: AI Privacy & Governance Advisory
