@@ -2,17 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-08
+generated: 2026-11-09
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Nancy Pelosi’s replacement is ready to regulate AI"
+        url: "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/"
+        source: "MIT Technology Review"
+        date: 2026-11-09
+        summary: "As a California state senator, Scott Wiener authored legislation aimed at curbing the risks of advanced AI. Now, after winning a tight congressional race for former Speaker of the House Nancy Pelosi’s open San Francisco..."
+      - title: "Parents and teachers decry Google pledge to yank Search if schools block AI: ‘This threat is nothing but extortion’"
+        url: "https://www.theguardian.com/us-news/2026/nov/09/parents-teachers-google-search-schools-ai"
+        source: "The Guardian"
+        date: 2026-11-09
+        summary: "Company says schools should control student AI use, but if they block its AI tools, they’ll lose access to search engine Parents and teachers across the US are criticizing Google’s announcement that schools choosing to..."
+      - title: "Today’s AI won’t achieve superintelligence. But catastrophic risk is real | Sunita Verma"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/09/ai-superintelligence-risk"
+        source: "The Guardian"
+        date: 2026-11-09
+        summary: "The same technical limits that prevent superintelligence make these systems dangerous. But we know how to regulate them Many Silicon Valley leaders believe superintelligence is an imminent threat to society. The White..."
       - title: "‘AI clog’: UK public bodies battle onslaught of chatbot-generated complaints"
         url: "https://www.theguardian.com/technology/2026/nov/08/ai-clog-public-bodies-local-authorities-onslaught-chatbot-generated-correspondence"
         source: "The Guardian"
         date: 2026-11-08
-        summary: "MPs, local authorities, lawyers, schools and more are receiving floods of grievances, requests and legal challenges, often complex to read and respond to “It started as a trickle in 2024 and now it’s an onslaught.”..."
+        summary: "MPs, local authorities, lawyers, schools and more are receiving floods of grievances, requests and legal challenges, often complex to read and respond to ‘It started as a trickle in 2024 and now it’s an onslaught.”..."
       - title: "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable"
         url: "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/"
         source: "Ars Technica"
@@ -145,11 +160,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-06
         summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
-      - title: "Big Tech Companies Repeat Same Losing Arguments in New Challenge to California’s AB 1709"
-        url: "https://epic.org/big-tech-companies-repeat-same-losing-arguments-in-new-challenge-to-californias-ab-1709/"
-        source: "EPIC"
-        date: 2026-11-05
-        summary: "Yesterday, three Big Tech companies—Meta, Google, and TikTok—filed lawsuits against California’s AB 1709, arguing that the law’s prohibition on deploying addictive feeds and other addictive features to minors violates..."
       - title: "Want to Rent an Internet Address at the White House?"
         url: "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
         source: "Krebs on Security"
@@ -190,6 +200,11 @@ sections:
         source: "EPIC"
         date: 2026-10-31
         summary: "U.S. District Judge Tanya Chutkan, appointed by former President Barack Obama, heard arguments on a request from pro-voting groups for a temporary restraining order to immediately block the Department of Justice (DOJ)..."
+      - title: "EPIC Comments to EDPB on Guidelines on Web Scraping for AI: Go Further"
+        url: "https://epic.org/epic-comments-to-edpb-on-guidelines-on-web-scraping-for-ai-go-further/"
+        source: "EPIC"
+        date: 2026-10-30
+        summary: "There is nothing innovative in violating people's privacy to make more money."
       - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
         url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
         source: "EFF Deeplinks"
