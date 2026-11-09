@@ -33,7 +33,7 @@
   align-items: center;
   gap: var(--md-sys-spacing-xs);
   justify-self: start;
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   color: var(--md-sys-color-on-surface-variant);
   text-decoration: none;
 }
@@ -54,7 +54,7 @@
 
 .c-page-hero__identity > .label-large {
   margin: 0 0 var(--md-sys-spacing-sm);
-  
+
 }
 
 .c-page-hero__identity h1 {

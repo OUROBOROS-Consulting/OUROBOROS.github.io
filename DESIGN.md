@@ -11,11 +11,11 @@ colors:
   secondary: "var(--md-sys-color-secondary)"
 typography:
   display:
-    fontFamily: "var(--font-authority)"
+    fontFamily: "var(--font-serif)"
   body:
-    fontFamily: "var(--font-utility)"
+    fontFamily: "var(--font-sans)"
   technical:
-    fontFamily: "var(--font-technical)"
+    fontFamily: "var(--font-mono)"
 spacing:
   xs: "var(--md-sys-spacing-xs)"
   sm: "var(--md-sys-spacing-sm)"

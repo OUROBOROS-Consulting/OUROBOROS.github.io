@@ -2,22 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-07
+generated: 2026-11-08
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Fearing AI disruption, white-collar workers are quitting their jobs"
-        url: "https://www.theguardian.com/technology/2026/nov/06/ai-disruption-job-quitting"
+      - title: "‘AI clog’: UK public bodies battle onslaught of chatbot-generated complaints"
+        url: "https://www.theguardian.com/technology/2026/nov/08/ai-clog-public-bodies-local-authorities-onslaught-chatbot-generated-correspondence"
         source: "The Guardian"
-        date: 2026-11-06
-        summary: "While there’s no evidence linking AI to mass layoffs, the tech has already ‘changed worker psychology’ When artificial intelligence researcher Mrinank Sharma quit his job at Anthropic earlier this year, the news rippled..."
-      - title: "Teachers and parents: what are your experiences of AI-generated emails?"
-        url: "https://www.theguardian.com/technology/2026/nov/06/teachers-and-parents-what-are-your-experiences-of-ai-generated-emails"
-        source: "The Guardian"
-        date: 2026-11-06
-        summary: "We’d like to hear from teachers and parents about how AI is changing communication between schools and families As AI tools such as ChatGPT and Claude become increasingly common in everyday life, we are interested in..."
+        date: 2026-11-08
+        summary: "MPs, local authorities, lawyers, schools and more are receiving floods of grievances, requests and legal challenges, often complex to read and respond to “It started as a trickle in 2024 and now it’s an onslaught.”..."
       - title: "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable"
         url: "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/"
         source: "Ars Technica"
@@ -106,6 +101,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Diabetes association VP resigns over response to editorial boycott following protest at annual meeting"
+        url: "https://retractionwatch.com/2026/11/07/american-diabetes-association-vp-resigns-protest-editors-boycott/"
+        source: "Retraction Watch"
+        date: 2026-11-08
+        summary: "The top publishing executive at the American Diabetes Association has resigned over how the organization has handled an editorial boycott at one of its journals following a protest at its annual meeting earlier this..."
       - title: "SafeSport Will Now Alert Schools, Clubs if Coaches Sanctioned for Abuse Continue to Work With Kids"
         url: "https://www.propublica.org/article/safesport-child-abuse-notification-system-impact"
         source: "ProPublica"
@@ -136,11 +136,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-10-30
         summary: "The National Library of Medicine has stopped indexing articles from Scientific Reports in MEDLINE because the journal’s inclusion in the world’s largest biomedical library is under review, Retraction Watch has learned..."
-      - title: "Springer Nature journal could lose registry standing for clearing author of duplication"
-        url: "https://retractionwatch.com/2026/10/29/innovative-higher-education-springer-nature-norway-registry-duplication/"
-        source: "Retraction Watch"
-        date: 2026-10-29
-        summary: "A Springer Nature journal’s failure to find duplication in two papers by the same author could cost its official recognition as a scholarly publication in Norway. The national register in Norway that decides which..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."

@@ -41,7 +41,7 @@
 }
 
 .c-hours__timezone {
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   font-size: var(--md-sys-typescale-label-small-size);
   font-variant-numeric: tabular-nums;
   opacity: 0.8;
@@ -60,7 +60,7 @@
 
 .c-hours__day,
 .c-hours__time {
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
 }
 
