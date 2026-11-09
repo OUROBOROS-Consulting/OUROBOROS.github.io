@@ -73,7 +73,7 @@
   padding: var(--md-sys-spacing-md);
   border: var(--site-border-width) solid var(--md-sys-color-outline);
   border-radius: var(--site-radius-none);
-  background-color: color-mix(in srgb, var(--md-sys-color-surface) 82%, var(--md-sys-color-surface-variant));
+  background-color: var(--site-card-surface);
   color: var(--md-sys-color-on-surface);
 }
 
@@ -154,7 +154,7 @@
   justify-content: center;
   align-items: center;
   gap: var(--md-sys-spacing-md);
-  padding: 0 var(--md-sys-spacing-lg);
+  padding: var(--md-sys-spacing-lg);
   background-color: var(--md-sys-color-surface-variant);
   border-top: 1px solid var(--md-sys-color-outline);
   font-size: var(--md-sys-typescale-body-small-size);

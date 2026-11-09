@@ -6,12 +6,10 @@
   --font-sans: 'Syne', 'Inter', 'DejaVu Sans', system-ui, sans-serif;
   --font-mono: 'Kode Mono', monospace;
   --font-utility: var(--font-sans);
-  --font-authority: 'Spectral', Georgia, serif;
-  --font-forensic: var(--font-authority);
-  --font-technical: var(--font-mono);
+  --font-serif: 'Spectral', Georgia, serif;
   --body: var(--font-utility);
   --md-ref-typeface-plain: var(--font-utility);
-  --md-ref-typeface-brand: var(--font-authority);
+  --md-ref-typeface-brand: var(--font-serif);
 }
 
 
@@ -58,7 +56,7 @@ main {
 
 // 1. Authority (Manufacturing Consent)
 h1, h2, .authority {
-  font-family: var(--font-authority, serif);
+  font-family: var(--font-serif, serif);
   color: var(--md-sys-color-text-primary);
   line-height: 0.95;
   margin-bottom: var(--md-sys-spacing-md);
@@ -76,13 +74,13 @@ p, li, div, span, .text-s {
 
 // 3. Forensic (Spectral / Analytical Detail)
 .forensic, em, i, blockquote {
-  font-family: var(--font-forensic, serif);
+  font-family: var(--font-serif, serif);
   color: var(--md-sys-color-text-tertiary);
 }
 
 // 4. Technical (Kode Mono / Notation & Code)
 code, kbd, samp, .technical, .notation {
-  font-family: var(--font-technical, monospace);
+  font-family: var(--font-mono, monospace);
   font-size: var(--md-sys-typescale-body-small-size);
   color: var(--md-sys-color-text-tertiary);
 }
@@ -109,7 +107,7 @@ code, kbd, samp, .technical, .notation {
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
   background-color: var(--site-action-surface);
   color: var(--site-action-text);
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;

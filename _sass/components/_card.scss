@@ -46,7 +46,7 @@
 }
 
 .c-card-value {
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   font-size: var(--site-stat-value-size);
   font-variant-numeric: tabular-nums;
 }
@@ -134,7 +134,7 @@
 .team-name {
   margin: 0;
   color: var(--md-sys-color-on-surface);
-  font-family: var(--font-authority);
+  font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   line-height: var(--site-card-title-line-height);
 }
@@ -285,7 +285,7 @@
 .card--callout .card-title {
   margin: var(--md-sys-spacing-sm) 0;
   color: var(--md-sys-color-on-surface);
-  font-family: var(--font-authority);
+  font-family: var(--font-serif);
 }
 
 .c-card--callout .card-body,
@@ -329,7 +329,7 @@
 .card--framed .rc-date {
   margin: 0;
   color: var(--md-sys-color-primary);
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   font-size: var(--md-sys-typescale-label-small-size);
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -343,7 +343,7 @@
 .card--framed .card-title {
   margin: var(--md-sys-spacing-sm) 0;
   color: var(--md-sys-color-on-surface);
-  font-family: var(--font-authority);
+  font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   line-height: var(--site-card-title-line-height);
 }
@@ -367,7 +367,7 @@
   margin-top: auto;
   padding-top: var(--md-sys-spacing-md);
   color: var(--md-sys-color-primary);
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   font-size: var(--md-sys-typescale-label-small-size);
   font-weight: var(--md-ref-typeface-weight-semibold);
   letter-spacing: 0.04em;
@@ -436,7 +436,7 @@
 
 .values-card__name {
   color: var(--md-sys-color-on-surface);
-  font-family: var(--font-authority);
+  font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   text-align: center;
 }

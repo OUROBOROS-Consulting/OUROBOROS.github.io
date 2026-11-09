@@ -10,12 +10,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   color: var(--md-sys-color-secondary);
 }
 
-body {
-  margin: 0;
-  isolation: isolate;
-  background-color: var(--md-sys-color-background);
-}
-
 .error-page {
   display: flex;
   flex-direction: column;
@@ -30,7 +24,7 @@ body {
 .error-code {
   margin: 0 0 var(--md-sys-spacing-md);
   color: var(--md-sys-color-primary);
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   font-size: clamp(3rem, 9vw, 6rem);
   line-height: 1;
   letter-spacing: 0.08em;
@@ -83,7 +77,7 @@ body {
   textarea,
   [contenteditable="true"]
 ) {
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
 }
 
 .c-background-morph {
@@ -176,7 +170,7 @@ body {
   color: inherit;
   background: transparent;
   font: inherit;
-  font-family: var(--font-technical);
+  font-family: var(--font-mono);
   cursor: pointer;
 }
 
@@ -746,7 +740,6 @@ body {
   .c-btn,
   .btn,
   .btn-sovereign,
-  .c-banner,
   .skip-link,
   .c-nav__link,
   .c-nav__dropdown-link,

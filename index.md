@@ -26,12 +26,12 @@ about_heading: Proof in the numbers
 stats:
   metrics:
     - value: "6,000+"
-      icon: "ph ph-fill ph-hospital"
+      # icon: "ph ph-fill ph-hospital"
       note: "Hospitals in COVID-19 reporting models"
     - value: "3,900+"
-      icon: "ph ph-fill ph-users-three"
+      # icon: "ph ph-fill ph-users-three"
       note: "Users moved with zero disruption"
     - value: "2"
-      icon: "ph ph-fill ph-medal"
+      # icon: "ph ph-fill ph-medal"
       note: "HHS awards from the HHS CIO"
 ---

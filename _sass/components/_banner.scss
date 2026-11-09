@@ -38,7 +38,7 @@
   &--announcement,
   &--brand,
   &--tagline {
-    background-color: var(--site-action-surface);
+    background-color: var(--md-sys-color-inverse-surface);
     color: var(--site-action-text);
   }
 }
@@ -48,7 +48,7 @@
 }
 
 .c-banner__text {
-  /* Inherits typography from the HTML (e.g., label-small or body-medium) */
+  font-family: var(--font-mono, monospace);
 }
 
 .c-banner__arrow {
