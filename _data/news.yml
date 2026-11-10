@@ -2,12 +2,42 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-09
+generated: 2026-11-10
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\""
+        url: "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
+        source: "Ars Technica"
+        date: 2026-11-10
+        summary: "The new model is up to twice as successful at some tasks."
+      - title: "ChatGPT’s Teen Mode could deprive teenagers of a fundamental need | Robin Kirman"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/10/chatgpt-teen-mode-cognitive-skills"
+        source: "The Guardian"
+        date: 2026-11-10
+        summary: "What young students stand to lose is more than cognitive skill: it’s a reliable sense of their own minds In August, OpenAI launched Teen Mode – a version of ChatGPT in which every user under 18 will automatically be..."
+      - title: "Australia to introduce mandatory reporting after OpenAI hack to combat artificial intelligence ‘going rogue’"
+        url: "https://www.theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack"
+        source: "The Guardian"
+        date: 2026-11-10
+        summary: "Government flags criminal law changes to ensure companies can’t argue in future ‘that someone didn’t know the computer was loaded’ Get our daily political email , free app or daily news podcast OpenAI will not face..."
+      - title: "Mandatory AI safety and security protections announced after OpenAI breach of Medicare – video"
+        url: "https://www.theguardian.com/australia-news/video/2026/nov/10/mandatory-ai-safety-and-security-protections-announced-after-openai-breach-of-medicare-video"
+        source: "The Guardian"
+        date: 2026-11-10
+        summary: "Australia's prime minister said its government would set up a new AI safety regulator and Labor would consider six key obligations on AI companies. The review made 18 recommendations. Anthony Albanese said: 'We accept..."
+      - title: "Teenager who planned terror attack in Sydney tells court he was radicalised online and used AI to strategise"
+        url: "https://www.theguardian.com/australia-news/2026/nov/10/teen-planned-sydney-terror-attack-using-chatgpt-radicalised-tiktok-ntwnfb"
+        source: "The Guardian"
+        date: 2026-11-10
+        summary: "Boy says he was first exposed to extremist material on TikTok, turned to Telegram and YouTube for bomb-making instructions, and used ChatGPT to devise his plans Get our breaking news email , free app or daily news..."
+      - title: "The AI poster boy, the ‘Chinese spy’ and Trump: how an affair may have harmed US security"
+        url: "https://www.theguardian.com/technology/2026/nov/09/nvidia-affair-huang-trump-national-security"
+        source: "The Guardian"
+        date: 2026-11-09
+        summary: "Jensen Huang’s close relationship with president means Nvidia CEO’s affair with woman alleged to be working for Beijing is under intense scrutiny A hand on the back, a kiss on the cheek; the footage of Alice Huang’s..."
       - title: "Nancy Pelosi’s replacement is ready to regulate AI"
         url: "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/"
         source: "MIT Technology Review"
@@ -18,16 +48,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-09
         summary: "Company says schools should control student AI use, but if they block its AI tools, they’ll lose access to search engine Parents and teachers across the US are criticizing Google’s announcement that schools choosing to..."
-      - title: "Today’s AI won’t achieve superintelligence. But catastrophic risk is real | Sunita Verma"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/09/ai-superintelligence-risk"
-        source: "The Guardian"
-        date: 2026-11-09
-        summary: "The same technical limits that prevent superintelligence make these systems dangerous. But we know how to regulate them Many Silicon Valley leaders believe superintelligence is an imminent threat to society. The White..."
-      - title: "‘AI clog’: UK public bodies battle onslaught of chatbot-generated complaints"
-        url: "https://www.theguardian.com/technology/2026/nov/08/ai-clog-public-bodies-local-authorities-onslaught-chatbot-generated-correspondence"
-        source: "The Guardian"
-        date: 2026-11-08
-        summary: "MPs, local authorities, lawyers, schools and more are receiving floods of grievances, requests and legal challenges, often complex to read and respond to ‘It started as a trickle in 2024 and now it’s an onslaught.”..."
       - title: "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable"
         url: "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/"
         source: "Ars Technica"
@@ -116,6 +136,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Misconduct cases remain unresolved for years in South Korea, data show"
+        url: "https://retractionwatch.com/2026/11/10/misconduct-cases-remain-unresolved-for-years-in-south-korea-data-show/"
+        source: "Retraction Watch"
+        date: 2026-11-10
+        summary: "Misconduct inquiries in South Korea meant to be completed within months are taking years instead, according to data from the country’s primary agency for academic research. Of the 83 misconduct cases the National..."
+      - title: "A year after plagiarism allegations and author’s retraction request, Elsevier is still investigating"
+        url: "https://retractionwatch.com/2026/11/09/forest-policy-economics-land-use-policy-plagiarism-allegations-retraction-request-elsevier/"
+        source: "Retraction Watch"
+        date: 2026-11-09
+        summary: "At a glance, the papers look completely different: One, published in 2023, describes forest co-management in Bangladesh. The other, published last year, is about soil conservation in China. But an author on the older..."
       - title: "Diabetes association VP resigns over response to editorial boycott following protest at annual meeting"
         url: "https://retractionwatch.com/2026/11/07/american-diabetes-association-vp-resigns-protest-editors-boycott/"
         source: "Retraction Watch"
@@ -141,16 +171,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-03
         summary: "Bioengineered retracted 119 papers in October amid investigations into suspected paper mill activity and other integrity-related concerns at the Taylor & Francis journal. Clarivate delisted Bioengineered from its Web of..."
-      - title: "Computing journal retracts 13 papers, including four from past EIC"
-        url: "https://retractionwatch.com/2026/11/02/computing-journal-retracts-13-papers-including-four-from-past-eic/"
-        source: "Retraction Watch"
-        date: 2026-11-02
-        summary: "An Elsevier journal on computer applications in biomedicine has retracted 13 papers — including four by a former editor-in-chief — for suspicious authorship changes and erroneous citations. The articles were published..."
-      - title: "Scientific Reports on hold in PubMed while NLM reevaluates journal"
-        url: "https://retractionwatch.com/2026/10/30/scientific-reports-pubmed-on-hold-national-library-medicine-evaluation/"
-        source: "Retraction Watch"
-        date: 2026-10-30
-        summary: "The National Library of Medicine has stopped indexing articles from Scientific Reports in MEDLINE because the journal’s inclusion in the world’s largest biomedical library is under review, Retraction Watch has learned..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -160,6 +180,11 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-06
         summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
+      - title: "Big Tech Companies Repeat Same Losing Arguments in New Challenge to California’s AB 1709"
+        url: "https://epic.org/big-tech-companies-repeat-same-losing-arguments-in-new-challenge-to-californias-ab-1709/"
+        source: "EPIC"
+        date: 2026-11-05
+        summary: "Yesterday, three Big Tech companies—Meta, Google, and TikTok—filed lawsuits against California’s AB 1709, arguing that the law’s prohibition on deploying addictive feeds and other addictive features to minors violates..."
       - title: "Want to Rent an Internet Address at the White House?"
         url: "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
         source: "Krebs on Security"
@@ -200,11 +225,6 @@ sections:
         source: "EPIC"
         date: 2026-10-31
         summary: "U.S. District Judge Tanya Chutkan, appointed by former President Barack Obama, heard arguments on a request from pro-voting groups for a temporary restraining order to immediately block the Department of Justice (DOJ)..."
-      - title: "EPIC Comments to EDPB on Guidelines on Web Scraping for AI: Go Further"
-        url: "https://epic.org/epic-comments-to-edpb-on-guidelines-on-web-scraping-for-ai-go-further/"
-        source: "EPIC"
-        date: 2026-10-30
-        summary: "There is nothing innovative in violating people's privacy to make more money."
       - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
         url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
         source: "EFF Deeplinks"
