@@ -46,6 +46,7 @@
     - /team
     - /faq
     - /resume
+    - /accessibility
   children:
     - title: Team
       url: /team/
@@ -53,3 +54,5 @@
       url: /faq/
     - title: Resume
       url: /resume/
+    - title: Accessibility
+      url: /accessibility/

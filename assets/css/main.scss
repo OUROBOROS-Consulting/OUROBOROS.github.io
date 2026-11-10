@@ -234,18 +234,12 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   --md-sys-color-tertiary-container: var(--p-ember-amber-400);
   --md-sys-color-on-tertiary-container: var(--p-void-900);
   color: var(--p-color-white);
-  background-color: var(--p-void-900);
+  background-color: black;
 }
 
 .c-nav {
   box-sizing: border-box;
   width: 100%;
-  background-image:
-    linear-gradient(
-      color-mix(in srgb, var(--md-sys-color-surface), transparent 40%),
-      color-mix(in srgb, var(--md-sys-color-surface), transparent 77%)
-    ),
-    url("../images/Marble.png");
   background-size: cover, 380px 380px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
@@ -259,7 +253,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 }
 
 .c-nav a:hover {
-  color: var(--p-color-white);
+  /* No override - keeps white text on dark nav background */
 }
 
 .c-footer a,

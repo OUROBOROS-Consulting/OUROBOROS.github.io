@@ -234,8 +234,9 @@
   min-height: 10rem;
   padding: var(--md-sys-spacing-lg);
   border: var(--site-border-width) solid var(--md-sys-color-outline);
-  border-radius: var(--site-radius-md);
-  background-color: var(--md-sys-color-background);
+  border-radius: var(--site-card-radius);
+  background-color: var(--site-card-surface);
+  color: var(--p-color-ink-palantir-light);
   transition:
     border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
     background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);

@@ -1,0 +1,83 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   DESIGN SERVICE BANNER — Typewriter Effect
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.design-service-hero .c-page-hero__content > p {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.05em;
+  border-right: 2px solid var(--md-sys-color-primary);
+  padding-right: 0.25em;
+  margin-bottom: 0;
+}
+
+.design-service-hero .c-page-hero__content > p::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  white-space: nowrap;
+  animation: typewriter 3s steps(0.15em, jump-start) forwards,
+             blink-caret 0.75s step-end infinite;
+  color: var(--md-sys-color-primary);
+  font-weight: var(--md-sys-typescale-body-large-weight);
+}
+
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: var(--md-sys-color-primary); }
+}
+
+/* Desktop: full typewriter effect */
+@media (min-width: 48rem) {
+  .design-service-hero .c-page-hero__content > p {
+    overflow: hidden;
+    border-right: 2px solid var(--md-sys-color-primary);
+  }
+}
+
+/* Mobile: fade in instead of typewriter for better readability */
+@media (max-width: 47.98rem) {
+  .design-service-hero .c-page-hero__content > p {
+    overflow: visible;
+    border-right: none;
+    animation: fade-in 0.6s ease-out;
+  }
+
+  .design-service-hero .c-page-hero__content > p::before {
+    display: none;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .design-service-hero .c-page-hero__content > p::before {
+    animation: none;
+  }
+  
+  .design-service-hero .c-page-hero__content > p {
+    border-right: none;
+    animation: fade-in 0.3s ease-out;
+  }
+}

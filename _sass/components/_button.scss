@@ -58,6 +58,55 @@
   transform: translateX(0.2rem);
 }
 
+/* Light button (white background, black text) */
+.c-btn--light {
+  background: #FFFFFF;
+  border: 1px solid #000000;
+  color: #000000;
+  font-family: 'Kode Mono', monospace;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 18px 24px;
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  &:hover {
+    background: #000000;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+  }
+
+  &:active {
+    transform: scale(var(--site-button-press-scale));
+  }
+}
+
+/* Dark button (black background, white text) - DEFAULT */
+.c-btn--dark {
+  background: #000000;
+  border: 1px solid #FFFFFF;
+  color: #FFFFFF;
+  font-family: 'Kode Mono', monospace;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  padding: 18px 24px;
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  &:hover {
+    background: #FFFFFF;
+    border-color: #000000;
+    color: #000000;
+  }
+
+  &:active {
+    transform: scale(var(--site-button-press-scale));
+  }
+}
+
+/* Primary Variant */
 .c-btn--primary,
 .c-btn--secondary,
 .c-btn--tertiary {
@@ -120,35 +169,11 @@
   @extend .c-btn--text;
 }
 
-a[href],
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-summary,
-[role="button"] {
-  cursor: pointer;
+/* Light and Dark button legacy */
+.btn-light {
+  @extend .c-btn--light;
 }
 
-:disabled,
-[aria-disabled="true"] {
-  cursor: not-allowed;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .c-btn,
-  .c-btn:active {
-    transition-duration: var(--site-motion-reduced-duration);
-    transform: none;
-  }
-
-  .c-btn .ph-arrow-right {
-    transition: none;
-    transform: none;
-  }
-
-  .c-btn:is(:hover, :focus-visible) .ph-arrow-right {
-    transform: none;
-  }
+.btn-dark {
+  @extend .c-btn--dark;
 }
