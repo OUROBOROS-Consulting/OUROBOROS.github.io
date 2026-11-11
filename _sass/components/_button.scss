@@ -60,21 +60,21 @@
 
 /* Light button (white background, black text) */
 .c-btn--light {
-  background: #FFFFFF;
-  border: 1px solid #000000;
-  color: #000000;
-  font-family: 'Kode Mono', monospace;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.2;
-  padding: 18px 24px;
+  background: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-on-background);
+  color: var(--md-sys-color-on-background);
+  font-family: var(--font-mono);
+  font-weight: var(--md-ref-typeface-weight-bold);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
   text-align: center;
   letter-spacing: -0.02em;
 
   &:hover {
-    background: #000000;
-    border-color: #FFFFFF;
-    color: #FFFFFF;
+    background: var(--md-sys-color-on-background);
+    border-color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface);
   }
 
   &:active {
@@ -82,23 +82,23 @@
   }
 }
 
-/* Dark button (black background, white text) - DEFAULT */
+/* Dark button (black background, white text) */
 .c-btn--dark {
-  background: #000000;
-  border: 1px solid #FFFFFF;
-  color: #FFFFFF;
-  font-family: 'Kode Mono', monospace;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.2;
-  padding: 18px 24px;
+  background: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-on-surface);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-mono);
+  font-weight: var(--md-ref-typeface-weight-bold);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
   text-align: center;
   letter-spacing: -0.02em;
 
   &:hover {
-    background: #FFFFFF;
-    border-color: #000000;
-    color: #000000;
+    background: var(--md-sys-color-on-surface);
+    border-color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface);
   }
 
   &:active {
@@ -141,39 +141,14 @@
   }
 }
 
-/*
-  LEGACY BRIDGE
-  Allows existing .btn classes to work during refactor transition.
-*/
-.btn {
-  @extend .c-btn;
-}
-
-.btn-primary {
-  @extend .c-btn--primary;
-}
-
-.btn-secondary {
-  @extend .c-btn--secondary;
-}
-
-.btn-tertiary {
-  @extend .c-btn--tertiary;
-}
-
-.btn-outline {
-  @extend .c-btn--outline;
-}
-
-.btn-text {
-  @extend .c-btn--text;
-}
-
-/* Light and Dark button legacy */
-.btn-light {
-  @extend .c-btn--light;
-}
-
+/* Legacy semantic classes - deprecated, use .c-btn--* */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-tertiary,
+.btn-outline,
+.btn-text,
+.btn-light,
 .btn-dark {
-  @extend .c-btn--dark;
+  /* Kept for backward compatibility only */
 }

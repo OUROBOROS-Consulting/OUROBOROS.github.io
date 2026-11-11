@@ -123,11 +123,7 @@
   color: #000000;
 }
 
-.c-footer__logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
+/* Duplicate .c-footer__logo removed (originally at lines 126-130, now using definition at line 34) */
 
 .c-footer__logo-mark {
   height: var(--site-footer-logo-size);
