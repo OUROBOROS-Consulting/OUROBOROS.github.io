@@ -1,0 +1,37 @@
+---
+version: 1.0
+last_updated: 2026-11-11
+currency: USD
+---
+pricing:
+  consulting_hourly:
+    - name: Low
+      rate: 150
+      description: Ad hoc advice, undefined scope, initial assessment
+    - name: Medium
+      rate: 250
+      description: Hands-on build, data flow review, governance rules
+    - name: High
+      rate: 350
+      description: Principal consultant, complex integrations, senior review
+  fixed_fee:
+    - service: AI Readiness Assessment
+      price: "$5,000-$25,000"
+      deliverables: Risk inventory, data flow diagrams, governance gaps
+    - service: Full Privacy Audit
+      price: "$25,000-$75,000"
+      deliverables: Deep-dive review, remediation plan, vendor review
+    - service: Governance Framework
+      price: "$150,000-$450,000"
+      deliverables: Policies, RACI, audit procedures, training
+  retainers:
+    - plan: Monthly review
+      price: "$2,000/mo"
+      includes: 5 hours consulting, monitoring, monthly report
+    - plan: Priority access
+      price: "$5,000/mo"
+      includes: 10 hours consulting, expedited review, incident support
+    - plan: Dedicated support
+      price: "$10,000/mo"
+      includes: 20 hours consulting, embedded availability, 24/7 escalation
+  design_services: "Separate - contact for quotes"
