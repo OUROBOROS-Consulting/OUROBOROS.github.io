@@ -34,7 +34,7 @@ I use two kinds of language model. One runs on my desk. One runs on a company's 
 |---|---|
 | Anything sensitive: your documents, your correspondence, names, dates, case detail | The local model on my machine. Nothing leaves. |
 | My own work: this website, my research notes, my writing, my code | Anthropic's Claude, on Anthropic's servers |
-| Records stripped of names and identifying detail, where I need depth the local model cannot reach | Claude, and only after I have removed the detail by hand |
+| Records with names and identifying detail removed, where I need depth the local model cannot reach | Claude, and only after I have removed the detail by hand |
 
 That third row is a real thing I have done, not a hypothetical. I am naming it because a disclosure page that admits nothing is worth nothing.
 
