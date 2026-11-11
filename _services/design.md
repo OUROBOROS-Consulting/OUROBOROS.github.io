@@ -120,6 +120,8 @@ sections:
         **Initial consultation:** Free (30 minutes). Discuss your needs, review my approach, and determine 
         if we're a good fit.
       - >
+        **Design Context Pack:** $1,200 to $2,500 standalone. A complete design system written in plain text for anyone to ground their own local model on. This is the only offering on the ladder that a client could resell or reuse indefinitely without any further engagement.
+      - >
         **Small projects:** Fixed-price options available for scoped work. Contact me to discuss.
   
   - id: values
