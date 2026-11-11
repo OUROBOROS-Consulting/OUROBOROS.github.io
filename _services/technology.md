@@ -1,6 +1,6 @@
 ---
 title: "Private AI & Data Systems"
-description: "Build locally hosted AI, agentic workflows, data-quality checks, and custom tools for organizations handling confidential data."
+lede: "Get AI's speed without sending confidential data outside your walls."
 layout: sections
 section_layout: stacked
 back_url: /
@@ -10,7 +10,7 @@ lede: "Get AI's speed without sending confidential data outside your walls."
 about:
   heading: Private AI engineering and data integrity
   body: >
-    This is the hands-on service: plan and build private AI, data-quality checks, and custom tools that fit your environment. If you need an independent review of AI data flows, governance rules, or tool choices without a build, see [AI Privacy & Governance Advisory](/services/identity/).
+    This is the hands-on service. I plan and build private AI, data-quality checks, and custom tools that fit your environment. If you need an independent review of AI data flows, governance rules, or tool choices without a build, see [AI Privacy & Governance Advisory](/services/identity/).
 sections:
   - id: review
     heading: "Technical Planning & Architecture"

@@ -33,8 +33,8 @@
     {
       "@type": ["Organization", "ProfessionalService"],
       "@id": {{ site.url | append: '/#org' | jsonify }},
-      "name": "ouroborOS Consulting",
-      "alternateName": "ouroborOS Consulting",
+      "name": "ouroborOS",
+      "alternateName": "ouroborOS",
       "url": {{ site.url | append: '/' | jsonify }},
       "description": {{ _org_desc | jsonify }},
       "logo": {
@@ -42,7 +42,7 @@
         "@id": {{ site.url | append: '/#logo' | jsonify }},
         "url": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
         "contentUrl": {{ '/assets/images/logo.svg' | absolute_url | jsonify }},
-        "caption": "ouroborOS Consulting"
+        "caption": "ouroborOS"
       },
       "image": { "@id": {{ site.url | append: '/#logo' | jsonify }} },
       "founder": { "@id": {{ site.url | append: '/#person' | jsonify }} },
@@ -101,7 +101,7 @@
       "@type": "WebSite",
       "@id": {{ site.url | append: '/#website' | jsonify }},
       "url": {{ site.url | append: '/' | jsonify }},
-      "name": "ouroborOS Consulting",
+      "name": "ouroborOS",
       "description": {{ _org_desc | jsonify }},
       "publisher": { "@id": {{ site.url | append: '/#org' | jsonify }} },
       "inLanguage": "en-US"

@@ -1,6 +1,6 @@
 ---
 title: "Building the ouroborOS Brand System"
-description: "A look at the visual identity, website, and reusable design system developed for ouroborOS Consulting."
+description: "A look at the visual identity, website, and reusable design system developed for ouroborOS."
 layout: sections
 section_layout: stacked
 back_url: /case-studies/
@@ -14,7 +14,7 @@ tags: [Design, Branding, Web]
 about:
   heading: Project Overview
   body: >
-    This is a record of the brand and website created for ouroborOS Consulting. The work brought
+    This is a record of the brand and website created for ouroborOS. The work brought
     together a visual identity, web content, and reusable interface patterns for a small consulting
     practice. It is the firm's own project, not a client engagement.
 

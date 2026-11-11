@@ -1,16 +1,16 @@
 ---
 layout: default
-title: About ouroborOS Consulting
+title: About ouroborOS
 permalink: /about/
 category: About
-description: "ouroborOS Consulting helps organizations use AI with confidential data in view through private AI systems, data audits, and practical governance."
+description: "ouroborOS helps organizations use AI with confidential data in view through private AI systems, data audits, and practical governance."
 ---
 
 {% include page-hero.html
   back_url="/"
   back_label="Home"
   category="About"
-  title="ouroborOS Consulting"
+  title="ouroborOS"
   lede="Most teams don't know where their data goes once it hits AI. The firm builds private systems that help keep it inside your walls."
   icon="ph ph-fill ph-buildings"
   cta_mode="service"
@@ -21,7 +21,7 @@ description: "ouroborOS Consulting helps organizations use AI with confidential 
 <div class="page-body">
   <h2>Why the firm exists</h2>
   <p>AI can expose confidential data. Bad data can become a confident answer or a public mistake. Those failures often start with early design choices: what a tool can access, where information goes, and whether anyone checks the result.</p>
-  <p>Founder-led ouroborOS Consulting helps organizations make those choices deliberately. The work starts with understanding the data, the systems around it, and what could go wrong. Then Apostolos builds practical safeguards and explains what they do in plain language.</p>
+  <p>Founder-led ouroborOS helps organizations make those choices deliberately. The work starts with understanding the data, the systems around it, and what could go wrong. Then Apostolos builds practical safeguards and explains what they do in plain language.</p>
 
   <h2>What we do</h2>
   <p>The firm's primary work is private AI and data integrity: locally hosted AI and agentic workflows designed to keep sensitive information within your environment; data-flow reviews and practical AI governance; and audits that catch errors before they reach a report or decision.</p>

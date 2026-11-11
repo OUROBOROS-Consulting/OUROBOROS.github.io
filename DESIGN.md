@@ -1,6 +1,6 @@
 ---
 version: 1
-name: ouroborOS Consulting
+name: ouroborOS
 description: Dark editorial identity for private AI, data privacy, and consulting.
 colors:
   canvas: "var(--md-sys-color-background)"

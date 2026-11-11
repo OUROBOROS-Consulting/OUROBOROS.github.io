@@ -2,7 +2,7 @@
 layout: default
 title: Services
 permalink: /services/
-description: "Private AI engineering, AI privacy consulting, data audits, and custom tools for organizations handling confidential data."
+description: "Private AI engineering, AI privacy consulting, data audits. Custom tools for confidential data."
 ---
 
 {% include page-hero.html
@@ -31,7 +31,7 @@ description: "Private AI engineering, AI privacy consulting, data audits, and cu
     </div>
     <div class="page-section-content">
       <h2 class="authority">Design and education</h2>
-      <p>Private AI and data integrity are the firm's priority. Web and graphic design, plus AI privacy education and training, are also available as separate services.</p>
+      <p>I do web design and AI privacy training. Separate services.</p>
       <ul>
         <li><a href="/services/design/">Explore web and graphic design services</a></li>
         <li><a href="/design-portfolio/">View the design portfolio</a></li>
@@ -40,5 +40,8 @@ description: "Private AI engineering, AI privacy consulting, data audits, and cu
     </div>
   </section>
 
-  <p class="text-s">Want to know what happens on the first call, how project data is handled, or what services cost? <a href="/consulting-faq/">Read the consulting FAQ</a>.</p>
+  <p class="text-s">Pricing: $150-350/hr. Call details, data handling: <a href="/consulting-faq/">Read the consulting FAQ</a>.</p>
+
+  {% include lead-magnet-pricing.html %}
+
 </div>

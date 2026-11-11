@@ -3,7 +3,7 @@ layout: default
 title: Team
 permalink: /team/
 category: About
-description: "Meet Apostolos Stamenos, founder of ouroborOS Consulting, and learn about the experience informing the firm's private AI and data work."
+description: "Meet Apostolos Stamenos, founder of ouroborOS, and learn about the experience informing the firm's private AI and data work."
 ---
 
 {% include page-hero.html

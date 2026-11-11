@@ -17,7 +17,7 @@ cta_body: Still have a question I did not answer?
 
 ## Consulting work
 
-### What does ouroborOS Consulting actually do?
+### What does ouroborOS actually do?
 
 I build private AI for organizations that handle confidential data. I also help teams map where their data goes, set practical AI rules, audit data quality, and build tools around sensitive information.
 

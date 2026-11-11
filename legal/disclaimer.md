@@ -42,4 +42,4 @@ This site names people, organizations, institutions, tools, and research. A ment
 
 Apple, iPhone, iPad, Mac, and iCloud are trademarks of Apple Inc. Claude is a trademark of Anthropic, PBC. All other marks belong to their respective owners.
 
-ouroborOS Consulting is independent. It is not affiliated with, sponsored by, or endorsed by Apple or Anthropic. I choose these tools because their design matches the threat model this work demands. That choice is mine, and I answer for it.
+ouroborOS is independent. It is not affiliated with, sponsored by, or endorsed by Apple or Anthropic. I choose these tools because their design matches the threat model this work demands. That choice is mine, and I answer for it.

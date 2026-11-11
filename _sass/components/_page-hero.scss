@@ -23,7 +23,7 @@
   width: min(100%, 68rem);
   margin-inline: auto;
   padding-top: clamp(3rem, 7vh, 6rem);
-  padding-bottom: 3rem;
+  padding-bottom: var(--md-sys-spacing-sm);
 }
 
 .c-page-hero__back {

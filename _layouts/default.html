@@ -4,8 +4,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% assign _title = "ouroborOS Consulting | Private AI & Data Privacy" %}
-    {% if page.title %}{% capture _title %}{{ page.title }} — ouroborOS Consulting{% endcapture %}{%
+    {% assign _title = "ouroborOS | Private AI & Data Privacy" %}
+    {% if page.title %}{% capture _title %}{{ page.title }} — ouroborOS{% endcapture %}{%
     endif %}
     <title>{{ _title }}</title>
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
@@ -29,13 +29,13 @@
     {% else %}
     <meta property="og:type" content="website" />
     {% endif %}
-    <meta property="og:site_name" content="ouroborOS Consulting" />
+    <meta property="og:site_name" content="ouroborOS" />
     <meta property="og:locale" content="en_US" />
     <meta property="og:url" content="{{ page.url | absolute_url }}" />
     <meta property="og:title" content="{{ _title }}" />
     <meta property="og:description" content="{{ _desc }}" />
     <meta property="og:image" content="{{ '/assets/images/Social-Preview.jpg' | absolute_url }}" />
-    <meta property="og:image:alt" content="ouroborOS Consulting" />
+    <meta property="og:image:alt" content="ouroborOS" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="{{ _title }}" />
     <meta name="twitter:description" content="{{ _desc }}" />

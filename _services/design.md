@@ -11,13 +11,9 @@ lede: "Design that works as well as it looks."
 about:
   heading: Thoughtful craft, built to last
   body: >
-    I create visual systems and digital products for organizations that need more than surface-level aesthetics. 
-    Whether establishing a brand identity from the ground up, redesigning a web presence, or refining an existing 
-    interface, I focus on design that is both functional and distinctive.
-    
-    My approach blends technical precision with editorial sensibility. I build design systems that scale, 
-    create interfaces that serve real work, and develop visual identities that communicate substance without 
-    ornamentation.
+    I create visual systems and digital products for organizations that need more than surface-level aesthetics. I focus on design that is both functional and distinctive.
+
+    My approach blends technical precision with editorial sensibility. I build design systems that scale, create interfaces that serve real work, and develop visual identities that communicate substance without ornamentation.
 sections:
   - id: philosophy
     heading: Design Philosophy

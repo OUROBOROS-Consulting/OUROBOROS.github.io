@@ -275,6 +275,13 @@
   gap: var(--md-sys-spacing-lg);
 }
 
+/* Related grid layout */
+.related-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: var(--md-sys-spacing-lg);
+}
+
 /* Team grid layout */
 .team-grid {
   display: grid;

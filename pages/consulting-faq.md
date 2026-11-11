@@ -7,14 +7,14 @@ category: Services
 back_url: /services/
 hero_icon: ph-chats-circle
 lede: Straight answers about the work, the first call, privacy, and cost.
-description: "Answers about ouroborOS Consulting's private AI, data, design, and education services, including what the free AI privacy call covers."
+description: "Answers about ouroborOS's private AI, data governance, and web design services, including scope, pricing, and what the free AI privacy call covers."
 ---
 
 ## Starting a project
 
 ### What happens on the free 20-minute AI privacy call?
 
-We will outline where your team's AI data goes, identify the main question or risk to investigate, and agree on a useful next step. You do not need to share confidential details. There is no obligation to hire me.
+We identify where your AI data flows, flag high-risk patterns, and agree on a useful next step. You do not need to share confidential details. There is no obligation to hire me.
 
 ### What should I send through the inquiry form?
 
@@ -24,11 +24,24 @@ Only a high-level description of the problem and a way to reach you. Formspree p
 
 Choose the closest option or select “Other / not sure.” The first conversation can help establish whether the work fits and what to do next. If it is outside my scope, I will say so.
 
+### What do clients typically leave with?
+
+- A working local AI workflow that doesn't send data outside your control
+- Data flow diagrams and a risk inventory you can audit
+- Governance rules that your team can actually follow
+- A clear next step: build, train, or walk away
+
+### What kind of organizations work with you?
+
+Startups and solo practitioners building private AI, data systems, or custom tools. Advisory practices that need professional digital infrastructure. Organizations facing institutional betrayal that need technical safeguards.
+
 ## Scope and limits
 
 ### What does the firm do?
 
 Private AI systems and agentic workflows, AI privacy and governance reviews, data-quality audits, and custom tools for sensitive information. Web and graphic design, plus AI privacy education and training, are also available as separate services. [See the design services](/services/design/).
+
+I help you ship private AI that works, not theoretical systems that never leave your screen.
 
 ### Does “private AI” mean zero risk?
 
