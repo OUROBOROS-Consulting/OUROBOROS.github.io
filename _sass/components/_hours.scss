@@ -80,3 +80,14 @@
     font-size: var(--md-sys-typescale-body-small-size);
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .c-hours__timezone {
+    opacity: 1;
+  }
+
+  .c-hours__row--closed {
+    text-decoration: line-through;
+    opacity: 1;
+  }
+}
