@@ -92,7 +92,7 @@
       <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.1/lottie.min.js"></script> -->
   </head>
 
-  <body {% if page.show_banner %} class="has-banner" {% endif %}>
+  <body {% if page.show_banner %} class="has-banner" {% endif %} {% if page.extra_class %} class="{{ page.extra_class }}"{% endif %}>
     <!-- <div class="c-background-morph" aria-hidden="true"></div> -->
     <!-- <a class="skip-link" href="#main">Skip to main content</a> -->
     {% if page.show_banner %}{% include banner.html %}{% endif %}

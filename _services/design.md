@@ -6,6 +6,7 @@ section_layout: stacked
 back_url: "/"
 category: Services
 hero_icon: ph ph-fill ph-paint-brush-broad
+extra_css: design-service
 extra_class: design-service-hero
 lede: "Design that works as well as it looks."
 about:
