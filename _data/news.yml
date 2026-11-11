@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-10
+generated: 2026-11-11
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "AI has made it ‘close to impossible’ to assess university coursework, regulator says"
+        url: "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator"
+        source: "The Guardian"
+        date: 2026-11-11
+        summary: "Office for Students says institutions in England should return to traditional exams and in-person presentations Universities should go back to traditional exams and in-person presentations to grade students after..."
       - title: "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\""
         url: "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
         source: "Ars Technica"
@@ -43,11 +48,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-11-09
         summary: "As a California state senator, Scott Wiener authored legislation aimed at curbing the risks of advanced AI. Now, after winning a tight congressional race for former Speaker of the House Nancy Pelosi’s open San Francisco..."
-      - title: "Parents and teachers decry Google pledge to yank Search if schools block AI: ‘This threat is nothing but extortion’"
-        url: "https://www.theguardian.com/us-news/2026/nov/09/parents-teachers-google-search-schools-ai"
-        source: "The Guardian"
-        date: 2026-11-09
-        summary: "Company says schools should control student AI use, but if they block its AI tools, they’ll lose access to search engine Parents and teachers across the US are criticizing Google’s announcement that schools choosing to..."
       - title: "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable"
         url: "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/"
         source: "Ars Technica"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "“We Have No One”: How Trump’s Dismantling of the VA Left a Veterans Hospital in Crisis"
+        url: "https://www.propublica.org/article/east-orange-va-hospital-veterans-decline-new-jersey"
+        source: "ProPublica"
+        date: 2026-11-11
+        summary: "The post “We Have No One”: How Trump’s Dismantling of the VA Left a Veterans Hospital in Crisis appeared first on ProPublica ."
       - title: "Misconduct cases remain unresolved for years in South Korea, data show"
         url: "https://retractionwatch.com/2026/11/10/misconduct-cases-remain-unresolved-for-years-in-south-korea-data-show/"
         source: "Retraction Watch"
