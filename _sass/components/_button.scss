@@ -139,6 +139,11 @@
   &:hover {
     background-color: var(--md-sys-color-primary-container);
   }
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
 }
 
 /* Legacy semantic classes - deprecated, use .c-btn--* */

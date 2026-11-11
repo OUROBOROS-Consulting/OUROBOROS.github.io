@@ -21,9 +21,8 @@
   column-gap: clamp(2.5rem, 7vw, 7rem);
   row-gap: var(--md-sys-spacing-lg);
   width: min(100%, 68rem);
-  min-height: calc(100vh - clamp(3rem, 7vh, 6rem) - clamp(3rem, 7vh, 6rem));
-  min-height: calc(100svh - clamp(3rem, 7vh, 6rem) - clamp(3rem, 7vh, 6rem));
   margin-inline: auto;
+  padding-top: clamp(3rem, 7vh, 6rem);
   padding-bottom: 3rem;
 }
 
@@ -226,8 +225,7 @@
     align-items: start;
     column-gap: clamp(1rem, 5vw, 2rem);
     row-gap: var(--md-sys-spacing-md);
-    min-height: calc(100vh - 6rem);
-    min-height: calc(100svh - 6rem);
+    padding-top: clamp(3rem, 7vh, 6rem);
     padding-bottom: 0;
   }
 

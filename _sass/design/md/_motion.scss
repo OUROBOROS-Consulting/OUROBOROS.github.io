@@ -184,3 +184,15 @@
       var(--md-sys-motion-easing-emphasized-x1),
       var(--md-sys-motion-easing-emphasized-y1));
 }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    transition-property: none !important;
+    animation-duration: 0.01ms !important;
+    animation-property: none !important;
+    scroll-behavior: auto !important;
+  }
+}

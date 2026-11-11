@@ -647,16 +647,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   color: var(--p-color-ink-palantir-light);
 }
 
-.c-card:is(a[href], [role="button"]):hover,
-.c-card--related:is(a[href], [role="button"]):hover,
-.c-card--framed:is(a[href], [role="button"]):hover,
-.card:is(a[href], [role="button"]):hover,
-.related-card:is(a[href], [role="button"]):hover,
-.card--framed:is(a[href], [role="button"]):hover {
-  transform: none;
-  border-color: var(--p-color-ink-palantir-light);
-}
-
 .c-btn {
   border-radius: var(--site-radius-none);
 }
