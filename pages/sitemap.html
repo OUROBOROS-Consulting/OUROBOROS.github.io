@@ -1,0 +1,68 @@
+---
+layout: default
+title: Sitemap
+permalink: /sitemap/
+hide_cta: true
+noindex: true
+---
+
+<header class="sitemap-masthead">
+  <h1>Sitemap</h1>
+  <p class="sitemap-subtitle">Complete list of published pages on this site</p>
+</header>
+
+<nav class="sitemap-nav" aria-label="Sitemap">
+
+  {% assign all_pages = site.pages | where_exp: "page", "page.permalink != '/sitemap/'" %}
+
+  <h2>Site Pages</h2>
+  <ul>
+    {% for page in all_pages %}
+    {% unless page.permalink == '/sitemap/' or page.permalink == '/search/' or page.permalink == '/design-system/' %}
+    {% if page.permalink contains '/pages/' or page.permalink contains '/_pages/' %}
+    <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+    {% endif %}
+    {% endunless %}
+    {% endfor %}
+  </ul>
+
+  <h2>Legal</h2>
+  <ul>
+    {% for post in site.categories.legal %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Resources</h2>
+  <ul>
+    {% for post in site.resources %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Services</h2>
+  <ul>
+    {% for service in site.services %}
+    <li><a href="{{ service.url }}">{{ service.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Projects</h2>
+  <ul>
+    {% for post in site.case_studies %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+  <h2>Documentation</h2>
+  <ul>
+    {% for post in site.docs %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    {% endfor %}
+  </ul>
+
+</nav>
+
+<footer class="sitemap-foot">
+  <p>Generated {{ site.time | date: '%B %Y' }}</p>
+</footer>
