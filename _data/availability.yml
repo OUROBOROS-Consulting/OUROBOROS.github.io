@@ -10,7 +10,19 @@ timezone: Central Time
 # timezone_note: Minneapolis, Minnesota
 
 hours:
-  - days: Mon to Fri
+  - days: Mon
+    time: 11:00 AM to 6:00 PM
+    closed: false
+  - days: Tue
+    time: 11:00 AM to 6:00 PM
+    closed: false
+  - days: Wed
+    time: 11:00 AM to 6:00 PM
+    closed: false
+  - days: Thu
+    time: 11:00 AM to 6:00 PM
+    closed: false
+  - days: Fri
     time: 11:00 AM to 6:00 PM
     closed: false
   - days: Sat & Sun
@@ -19,7 +31,7 @@ hours:
 
 # Single source for the intake page's three response-time lines: the strip at
 # the top, the note beside the submit button, and the post-submit confirmation.
-response: I read every intake within 72 hours, and usually the same day.
+response: I read every intake within 72 hours, and usually on the same day.
 
 after_hours: >-
   Messages sent outside these hours still reach me.
