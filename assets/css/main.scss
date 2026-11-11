@@ -345,7 +345,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   border-top: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
 }
 
-#cta {
+.c-cta--cta {
   position: relative;
   isolation: isolate;
   background-color: var(--p-color-black);
@@ -355,7 +355,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   border: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
 }
 
-#cta::before {
+.c-cta--cta::before {
   position: absolute;
   z-index: -1;
   inset: 0;
@@ -368,7 +368,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   pointer-events: none;
 }
 
-#cta .c-cta__inner {
+.c-cta--cta .c-cta__inner {
   position: relative;
 }
 
@@ -797,7 +797,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   background-image: none;
 }
 
-#cta {
+.c-cta--cta {
   border: 0;
   border-top: var(--site-border-width) solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
   background-color: var(--p-color-black);

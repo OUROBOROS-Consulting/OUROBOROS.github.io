@@ -3,14 +3,27 @@
   children:
     - title: Private AI Setup
       url: /services/private-ai-setup/
+      lede: A fixed-price setup of an AI assistant that runs on your own computer
+      description: Set up by a statistician with a Federal IT background. Configures the model, engine, and assistant for local use
+      link_label: Explore private AI setup
     - title: Private AI & Data Systems
       url: /services/technology/
+      lede: Build and check AI and data systems without handing sensitive information to outside providers
+      description: Implement locally hosted AI, agentic workflows, data-quality checks, and custom tools
+      link_label: Explore private AI and data systems
     - title: AI Privacy & Governance Advisory
       url: /services/identity/
+      lede: You need to know what your AI tools can see, where data goes, and who is accountable
+      description: Get an independent review of AI data flows, practical rules, and tool choices
+      link_label: Explore privacy and governance advisory
     - title: Web & Graphic Design
       url: /services/design/
+      lede: A complete, production-ready website that embodies your unique voice
+      description: Build a lean, utilitarian design that communicates authority and credibility
+      link_label: Explore design services
     - title: Consulting FAQ
       url: /consulting-faq/
+      link_label: Read the FAQ
 
 - title: Work
   url: /projects/

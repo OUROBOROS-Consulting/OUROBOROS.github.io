@@ -16,8 +16,8 @@ layout: default
     </div>
 
     <div class="related-grid">
-      {% for offer in site.data.offers %}
-      {% include content-card.html item=offer card_type="offer" link_label=offer.link_label %}
+      {% for service in site.data.nav[0].children %}
+      {% include content-card.html item=service card_type="offer" variant="home" link_label=service.link_label %}
       {% endfor %}
     </div>
   </div>

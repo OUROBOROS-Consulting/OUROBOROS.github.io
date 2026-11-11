@@ -20,8 +20,8 @@ description: "Private AI engineering, AI privacy consulting, data audits, and cu
 <div class="page-body">
   <h2 class="authority">Start with what you need</h2>
   <div class="related-grid">
-    {% for offer in site.data.offers %}
-    {% include content-card.html item=offer card_type="offer" card_class="c-card--related" link_label=offer.link_label %}
+    {% for service in site.data.nav[0].children %}
+    {% include content-card.html item=service card_type="offer" card_class="c-card--related" link_label=service.link_label %}
     {% endfor %}
   </div>
 
