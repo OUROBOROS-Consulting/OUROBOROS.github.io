@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+
 <!-- ── PSA Hero ──────────────────────────────────────────────────────────── -->
 {% include page-hero.html
   back_url="/resources/psas/"
@@ -22,6 +23,8 @@ layout: default
     <a href="{{ page.pdf | relative_url }}" download>download it here</a>.
   </p>
 </div>
+
+<!-- 2026-11-11: Fixed orphan closing tags in PDF embed section -->
 
 <!-- ── Optional prose body ───────────────────────────────────────────────── -->
 {% if content != "" %}

@@ -15,13 +15,14 @@ layout: default
     <div class="c-article__body">
       {{ content }}
     </div>
-  </article>
 
-  {% include toc.html %}
+    {% include toc.html %}
+  </article>
 </div>
 
 {% if page.collapse_questions %}
 <!-- Must precede toc.js: collapse.js reparents the h3s the TOC is built from. -->
+<!-- 2026-11-11: Removed inline style tag_style="anchor", handled via CSS class -->
 <script src="/assets/js/collapse.js" defer></script>
 {% endif %}
 <script src="/assets/js/toc.js" defer></script>

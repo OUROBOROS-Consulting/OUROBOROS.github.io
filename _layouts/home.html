@@ -31,7 +31,8 @@ layout: default
       <h2 class="authority">Private by design. Checked before it ships.</h2>
     </div>
 
-    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+    <!-- 2026-11-11: Removed inline style margin-top, using CSS class for spacing consistency -->
+    <div class="c-grid c-grid--3">
       <article class="c-card c-stack">
         <p class="technical text-t">01 / Understand</p>
         <h3 class="authority c-card-title">Start with the real problem</h3>
@@ -54,7 +55,6 @@ layout: default
 <!-- ── Who This Is For ────────────────────────────────────────────────────── -->
 <section id="audience" class="c-section c-section--marble c-section--paper">
   <div class="c-container">
-
 
     <div class="c-stack">
       <p class="technical text-t">Who This Is For</p>
@@ -115,7 +115,8 @@ layout: default
           <div class="c-card c-stack">
             <p class="technical text-t">{{ ref.title }}</p>
             <blockquote class="forensic">
-              <p class="text-s" style="font-style: italic;">{{ ref.description | markdownify }}</p>
+              <!-- 2026-11-11: Removed inline style font-style: italic, using CSS class for emphasis -->
+              <p class="text-s italic">{{ ref.description | markdownify }}</p>
               <cite class="technical text-t">— {{ ref.reference }}</cite>
             </blockquote>
           </div>
@@ -165,7 +166,8 @@ layout: default
     </div>
 
     {% if page.stats.metrics %}
-    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+    <!-- 2026-11-11: Removed inline style margin-top, using CSS class for spacing consistency -->
+    <div class="c-grid c-grid--3">
       {% for metric in page.stats.metrics %}
       <div class="c-card c-stack">
         {% if metric.icon %}<i class="{{ metric.icon }} technical text-t" aria-hidden="true"></i>{% endif %}
@@ -189,7 +191,8 @@ layout: default
       </header>
     </div>
 
-    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+    <!-- 2026-11-11: Removed inline style margin-top, using CSS class for spacing consistency -->
+    <div class="c-grid c-grid--3">
       {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
       {% assign featured_cases = sorted_cases | where: "featured", true %}
       {% assign featured_case = featured_cases | first %}

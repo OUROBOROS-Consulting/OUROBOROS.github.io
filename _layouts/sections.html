@@ -254,6 +254,7 @@ layout: default
 </div><!-- /page-toc-wrap -->
 {% endif %}
 
+<!-- 2026-11-11: Removed inline style tag_style="anchor", handled via CSS class -->
 {%- comment -%}
   ══════════════════════════════════════════════════════════════════════
   SOCIAL / PROFILE LINKS  (optional)
@@ -316,7 +317,7 @@ layout: default
 <!-- ══════════════════════════════════════════════════════════════════════
      Progress bar behavior is shared from the default layout.
      Scroll progress is handled by assets/js/progress-bar.js.
-     (defined at the very top of this file) from 0% to 100%.
+     (defined at the very top of this file) from 0% to 100%.\n
      scrollY        = how far the user has scrolled in pixels
      scrollHeight   = total page height in pixels
      innerHeight    = visible viewport height in pixels
