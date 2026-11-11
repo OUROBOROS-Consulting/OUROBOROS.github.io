@@ -1,0 +1,302 @@
+// ── Card Variants (M3 Semantic Atom) ──────────────────────────────────────────
+// Responsibility: Specialized card types for different use cases.
+
+/* Team card */
+.c-card--team {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-card--team__header {
+  margin-bottom: var(--md-sys-spacing-md);
+}
+
+.c-card--team__bio {
+  flex-grow: 1;
+}
+
+.c-card--team__footer {
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+}
+
+.c-card--team__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md-sys-spacing-sm);
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+}
+
+/* Formula card */
+.c-card--formula {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  padding: var(--site-card-padding-comfortable);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+
+  &__interior {
+    display: flex;
+    flex-direction: column;
+    gap: var(--md-sys-spacing-md);
+  }
+
+  &__item {
+    display: flex;
+    align-items: baseline;
+    gap: var(--md-sys-spacing-sm);
+  }
+
+  &__marker {
+    color: var(--md-sys-color-primary);
+    font-size: var(--md-sys-typescale-body-medium-size);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: var(--md-ref-typeface-weight-semibold);
+    color: var(--md-sys-color-on-surface);
+  }
+
+  &__desc {
+    margin: 0;
+    color: var(--md-sys-color-on-surface-variant);
+    font-size: var(--md-sys-typescale-body-small-size);
+  }
+}
+
+.c-card-formula {
+  @extend .c-card--formula;
+}
+
+/* Framed card */
+.c-card--framed {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  padding: var(--site-card-padding-comfortable);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-card--framed__tag {
+  color: var(--md-sys-color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--md-sys-typescale-label-small-size);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0;
+  display: inline-block;
+  padding: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
+  background-color: var(--md-sys-color-primary-container);
+  border-radius: var(--p-radius-0);
+}
+
+.c-card--framed__content {
+  flex-grow: 1;
+}
+
+.c-card--framed__footer {
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+}
+
+/* Citation card */
+.c-card--citation {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-sm);
+}
+
+.c-card--citation__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md-sys-spacing-sm);
+  font-size: var(--md-sys-typescale-label-small-size);
+  font-style: italic;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-card--citation__cited {
+  margin: 0;
+  font-size: var(--md-sys-typescale-label-small-size);
+  font-style: normal;
+  font-weight: var(--md-ref-typeface-weight-medium);
+}
+
+/* Testimonial card */
+.c-card--testimonial {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  padding: var(--md-sys-spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-card--testimonial__quote {
+  margin: 0;
+  font-size: var(--md-sys-typescale-body-large-size);
+  font-style: italic;
+  flex-grow: 1;
+}
+
+.c-card--testimonial__author {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md-sys-spacing-sm);
+  align-items: baseline;
+}
+
+.c-card--testimonial__author-name {
+  font-weight: var(--md-ref-typeface-weight-semibold);
+}
+
+.c-card--testimonial__author-role {
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+/* Service card */
+.c-card--service {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  padding: var(--site-card-padding-comfortable);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-card--service__title {
+  margin: 0;
+  font-size: var(--md-sys-typescale-title-medium-size);
+  font-weight: var(--md-ref-typeface-weight-semibold);
+}
+
+.c-card--service__desc {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+.c-card--service__icon {
+  margin-top: auto;
+  margin-bottom: var(--md-sys-spacing-sm);
+  color: var(--md-sys-color-primary);
+}
+
+/* Design Context Pack card */
+.c-card--design-context {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  padding: var(--site-card-padding-comfortable);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+}
+
+.c-card--design-context__title {
+  margin: 0;
+  font-size: var(--md-sys-typescale-title-medium-size);
+  font-weight: var(--md-ref-typeface-weight-semibold);
+}
+
+.c-card--design-context__desc {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-card--design-context__details {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-xs);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+/* Pricing card */
+.c-card--pricing {
+  min-width: 0;
+  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  background-color: var(--site-card-surface);
+  padding: var(--site-card-padding-comfortable);
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+  text-align: center;
+}
+
+.c-card--pricing__title {
+  margin: 0;
+  font-size: var(--md-sys-typescale-label-large-size);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.c-card--pricing__price {
+  margin: 0;
+  font-size: var(--md-sys-typescale-display-large-size);
+  font-weight: var(--md-ref-typeface-weight-bold);
+  font-family: var(--font-mono);
+  color: var(--md-sys-color-primary);
+}
+
+.c-card--pricing__desc {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-body-medium-size);
+}
+
+/* Testimonials grid layout */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
+  gap: var(--md-sys-spacing-lg);
+}
+
+/* Team grid layout */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  gap: var(--md-sys-spacing-lg);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Portrait hexagon layout */
+.hex-portrait {
+  box-sizing: border-box;
+  width: min(100%, 18rem);
+  aspect-ratio: 5 / 6;
+  margin-inline: auto;
+  overflow: hidden;
+}
+
+.hex-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
