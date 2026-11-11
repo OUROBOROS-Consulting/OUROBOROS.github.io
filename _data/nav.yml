@@ -1,6 +1,8 @@
 - title: Services
   url: /services/
   children:
+    - title: Private AI Setup
+      url: /services/private-ai-setup/
     - title: Private AI & Data Systems
       url: /services/technology/
     - title: AI Privacy & Governance Advisory
@@ -44,6 +46,7 @@
     - /team
     - /faq
     - /resume
+    - /accessibility
   children:
     - title: Team
       url: /team/
@@ -51,3 +54,5 @@
       url: /faq/
     - title: Resume
       url: /resume/
+    - title: Accessibility
+      url: /accessibility/

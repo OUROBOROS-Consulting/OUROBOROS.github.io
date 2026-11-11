@@ -58,6 +58,55 @@
   transform: translateX(0.2rem);
 }
 
+/* Light button (white background, black text) */
+.c-btn--light {
+  background: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-on-background);
+  color: var(--md-sys-color-on-background);
+  font-family: var(--font-mono);
+  font-weight: var(--md-ref-typeface-weight-bold);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  &:hover {
+    background: var(--md-sys-color-on-background);
+    border-color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface);
+  }
+
+  &:active {
+    transform: scale(var(--site-button-press-scale));
+  }
+}
+
+/* Dark button (black background, white text) */
+.c-btn--dark {
+  background: var(--md-sys-color-on-surface);
+  border: 1px solid var(--md-sys-color-on-surface);
+  color: var(--md-sys-color-on-surface);
+  font-family: var(--font-mono);
+  font-weight: var(--md-ref-typeface-weight-bold);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  &:hover {
+    background: var(--md-sys-color-on-surface);
+    border-color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-surface);
+  }
+
+  &:active {
+    transform: scale(var(--site-button-press-scale));
+  }
+}
+
+/* Primary Variant */
 .c-btn--primary,
 .c-btn--secondary,
 .c-btn--tertiary {
@@ -92,63 +141,14 @@
   }
 }
 
-/*
-  LEGACY BRIDGE
-  Allows existing .btn classes to work during refactor transition.
-*/
-.btn {
-  @extend .c-btn;
-}
-
-.btn-primary {
-  @extend .c-btn--primary;
-}
-
-.btn-secondary {
-  @extend .c-btn--secondary;
-}
-
-.btn-tertiary {
-  @extend .c-btn--tertiary;
-}
-
-.btn-outline {
-  @extend .c-btn--outline;
-}
-
-.btn-text {
-  @extend .c-btn--text;
-}
-
-a[href],
-button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"],
-summary,
-[role="button"] {
-  cursor: pointer;
-}
-
-:disabled,
-[aria-disabled="true"] {
-  cursor: not-allowed;
-}
-
-@media (prefers-reduced-motion: reduce) {
-
-  .c-btn,
-  .c-btn:active {
-    transition-duration: var(--site-motion-reduced-duration);
-    transform: none;
-  }
-
-  .c-btn .ph-arrow-right {
-    transition: none;
-    transform: none;
-  }
-
-  .c-btn:is(:hover, :focus-visible) .ph-arrow-right {
-    transform: none;
-  }
+/* Legacy semantic classes - deprecated, use .c-btn--* */
+.btn,
+.btn-primary,
+.btn-secondary,
+.btn-tertiary,
+.btn-outline,
+.btn-text,
+.btn-light,
+.btn-dark {
+  /* Kept for backward compatibility only */
 }

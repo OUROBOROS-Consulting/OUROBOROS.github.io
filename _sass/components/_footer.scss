@@ -3,8 +3,8 @@
 
 .c-footer {
   padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
-  background-color: var(--md-sys-color-surface);
-  border-top: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
+  background-color: #000000;
+  border-top: 0.125rem solid #FFFFFF;
 }
 
 .c-footer__inner {
@@ -43,12 +43,18 @@
 .c-footer__social-link {
   display: grid;
   place-items: center;
-  width: var(--site-footer-social-control-size);
-  height: var(--site-footer-social-control-size);
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  box-sizing: border-box;
+  display: inline-grid;
+  place-items: center;
+  // width: var(--site-nav-control-size);
+  // height: var(--site-nav-control-size);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-sm);
+  border: var(--site-border-width) solid transparent;
   border-radius: var(--site-radius-none);
-  color: var(--md-sys-color-on-surface-variant);
-  font-size: var(--site-footer-social-icon-size);
+  background: #000000;
+  border-color: #FFFFFF;
+  font-size: var(--site-nav-icon-size);
+  line-height: 1;
   text-decoration: none;
   transition:
     background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
@@ -58,32 +64,32 @@
 
   &:hover {
     transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-    border-color: var(--p-color-ink-palantir-light);
-    background-color: var(--md-sys-color-surface-variant);
-    color: var(--md-sys-color-primary);
+    border-color: #000000;
+    background-color: #FFFFFF;
+    color: #000000;
   }
 
   &:focus-visible {
-    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline: var(--site-focus-ring-width) solid #FFFFFF;
     outline-offset: var(--site-focus-ring-offset);
   }
 }
 
 .c-footer__availability .c-hours {
   padding: var(--md-sys-spacing-md);
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
+  border: var(--site-border-width) solid #FFFFFF;
   border-radius: var(--site-radius-none);
-  background-color: var(--site-card-surface);
-  color: var(--md-sys-color-on-surface);
+  background-color: #000000;
+  color: #FFFFFF;
 }
 
 .c-footer__availability .c-hours__header {
-  border-color: color-mix(in srgb, var(--md-sys-color-outline) 60%, transparent);
+  border-color: #FFFFFF;
 }
 
 .c-footer__availability .c-hours__label {
   margin: 0;
-  color: var(--md-sys-color-primary);
+  color: #FFFFFF;
 }
 
 .c-footer__availability .c-hours__timezone,
@@ -91,7 +97,7 @@
 .c-footer__availability .c-hours__time,
 .c-footer__availability .c-hours__response,
 .c-footer__availability .c-hours__after {
-  color: var(--md-sys-color-on-surface-variant);
+  color: #FFFFFF;
 }
 
 .c-footer__availability .c-hours__day {
@@ -100,7 +106,7 @@
 }
 
 .c-footer__availability .c-hours__footer {
-  border-color: color-mix(in srgb, var(--md-sys-color-outline) 60%, transparent);
+  border-color: #FFFFFF;
 }
 
 .c-footer__availability .c-hours__response,
@@ -110,13 +116,14 @@
 
 .c-footer__social-link i {
   display: block;
+  color: #FFFFFF;
 }
 
-.c-footer__logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+.c-footer__social-link:hover i {
+  color: #000000;
 }
+
+/* Duplicate .c-footer__logo removed (originally at lines 126-130, now using definition at line 34) */
 
 .c-footer__logo-mark {
   height: var(--site-footer-logo-size);
@@ -134,17 +141,17 @@
 
 .c-footer__copy {
   margin: 0;
-  color: var(--md-sys-color-on-surface-variant);
+  color: #FFFFFF;
 }
 
 .c-footer__copy a {
-  color: var(--md-sys-color-on-surface);
-  text-decoration-color: var(--md-sys-color-primary);
+  color: #FFFFFF;
+  text-decoration-color: #FFFFFF;
   text-underline-offset: var(--md-sys-spacing-xs);
 }
 
 .c-footer__copy a:hover {
-  color: var(--md-sys-color-primary);
+  color: #FFFFFF;
 }
 
 // Disclaimer Bar (The "Footer Sub-organism")
@@ -155,8 +162,8 @@
   align-items: center;
   gap: var(--md-sys-spacing-md);
   padding: var(--md-sys-spacing-lg);
-  background-color: var(--md-sys-color-surface-variant);
-  border-top: 1px solid var(--md-sys-color-outline);
+  background-color: #FFFFFF;
+  border-top: 1px solid #DDCBA3;
   font-size: var(--md-sys-typescale-body-small-size);
 }
 
@@ -179,7 +186,7 @@
 
 .c-disclaimer-bar__link {
   font-size: inherit;
-  color: var(--md-sys-color-primary);
+  color: #DDCBA3;
   text-decoration: none;
 
   &:hover {

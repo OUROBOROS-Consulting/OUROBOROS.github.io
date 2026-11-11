@@ -234,18 +234,12 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   --md-sys-color-tertiary-container: var(--p-ember-amber-400);
   --md-sys-color-on-tertiary-container: var(--p-void-900);
   color: var(--p-color-white);
-  background-color: var(--p-void-900);
+  background-color: black;
 }
 
 .c-nav {
   box-sizing: border-box;
   width: 100%;
-  background-image:
-    linear-gradient(
-      color-mix(in srgb, var(--md-sys-color-surface), transparent 40%),
-      color-mix(in srgb, var(--md-sys-color-surface), transparent 77%)
-    ),
-    url("../images/Marble.png");
   background-size: cover, 380px 380px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
@@ -259,7 +253,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 }
 
 .c-nav a:hover {
-  color: var(--p-color-white);
+  /* No override - keeps white text on dark nav background */
 }
 
 .c-footer a,
@@ -622,8 +616,8 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 .c-hours,
 .carousel-btn,
 .carousel-dot {
-  --md-sys-color-surface: var(--p-color-ink-palantir-dark);
-  --md-sys-color-surface-variant: var(--p-color-ink-palantir-dark);
+  --md-sys-color-surface: var(--site-card-surface);
+  --md-sys-color-surface-variant: var(--site-card-surface);
   --md-sys-color-on-surface: var(--p-color-ink-palantir-light);
   --md-sys-color-on-surface-variant: var(--p-color-ink-palantir-light);
   --md-sys-color-text-primary: var(--p-color-ink-palantir-light);
@@ -631,11 +625,11 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   --md-sys-color-text-tertiary: var(--p-color-ink-palantir-light);
   --md-sys-color-outline: color-mix(in srgb, var(--p-color-ink-palantir-light) 28%, transparent);
   color: var(--p-color-ink-palantir-light);
-  background-color: var(--p-color-ink-palantir-dark);
+  background-color: var(--site-card-surface);
 }
 
 .c-footer__availability .c-hours {
-  background-color: var(--p-color-ink-palantir-dark);
+  background-color: var(--site-card-surface);
 }
 
 #main :is(
@@ -805,7 +799,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 
 .c-footer__availability .c-hours {
   border-radius: var(--site-radius-md);
-  background-color: var(--p-color-ink-palantir-dark);
+  background-color: var(--site-card-surface);
 }
 
 .c-disclaimer-bar {
