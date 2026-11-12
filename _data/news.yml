@@ -2,12 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-11
+generated: 2026-11-12
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "US workers are fighting to protect their jobs from AI – and winning"
+        url: "https://www.theguardian.com/technology/2026/nov/12/us-workers-governments-unions-ai"
+        source: "The Guardian"
+        date: 2026-11-12
+        summary: "As governments adopt AI, workers are gaining ground in how it’s used and securing safeguards against its harms In the shadow of Silicon Valley, workers for the city of Oakland, California, worry the region will deploy..."
+      - title: "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395"
+        url: "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/"
+        source: "Ars Technica"
+        date: 2026-11-12
+        summary: "The first Gemini smartglasses are a collab between Google, Samsung, Gentle Monster, and Warby Parker."
+      - title: "NHS England deletes ‘misleading’ claim 137 trusts benefiting from Palantir AI tools"
+        url: "https://www.theguardian.com/technology/2026/nov/12/nhs-england-deletes-misleading-claim-137-trusts-benefiting-from-palantir-ai-tools"
+        source: "The Guardian"
+        date: 2026-11-12
+        summary: "Exclusive: The Guardian revealed 29 hospital trusts were not or hardly using the controversial patient data tech NHS England has deleted a claim from its website stating 137 hospital trusts are benefiting from..."
+      - title: "Fewer hours and higher wages – or more burnout and surveillance: employers told to prepare for AI"
+        url: "https://www.theguardian.com/technology/2026/nov/12/fewer-hours-and-higher-wages-or-more-burnout-and-surveillance-employers-told-to-prepare-for-ai"
+        source: "The Guardian"
+        date: 2026-11-12
+        summary: "Workplace relations minister Amanda Rishworth launches best practice guide on AI adoption after Qantas and Canva job cuts Get our daily political email , free app or daily news podcast Entry-level jobs will be the first..."
       - title: "AI has made it ‘close to impossible’ to assess university coursework, regulator says"
         url: "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator"
         source: "The Guardian"
@@ -23,26 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-10
         summary: "What young students stand to lose is more than cognitive skill: it’s a reliable sense of their own minds In August, OpenAI launched Teen Mode – a version of ChatGPT in which every user under 18 will automatically be..."
-      - title: "Australia to introduce mandatory reporting after OpenAI hack to combat artificial intelligence ‘going rogue’"
-        url: "https://www.theguardian.com/technology/2026/nov/10/australia-manadatory-reporting-openai-medicare-hack"
-        source: "The Guardian"
-        date: 2026-11-10
-        summary: "Government flags criminal law changes to ensure companies can’t argue in future ‘that someone didn’t know the computer was loaded’ Get our daily political email , free app or daily news podcast OpenAI will not face..."
-      - title: "Mandatory AI safety and security protections announced after OpenAI breach of Medicare – video"
-        url: "https://www.theguardian.com/australia-news/video/2026/nov/10/mandatory-ai-safety-and-security-protections-announced-after-openai-breach-of-medicare-video"
-        source: "The Guardian"
-        date: 2026-11-10
-        summary: "Australia's prime minister said its government would set up a new AI safety regulator and Labor would consider six key obligations on AI companies. The review made 18 recommendations. Anthony Albanese said: 'We accept..."
-      - title: "Teenager who planned terror attack in Sydney tells court he was radicalised online and used AI to strategise"
-        url: "https://www.theguardian.com/australia-news/2026/nov/10/teen-planned-sydney-terror-attack-using-chatgpt-radicalised-tiktok-ntwnfb"
-        source: "The Guardian"
-        date: 2026-11-10
-        summary: "Boy says he was first exposed to extremist material on TikTok, turned to Telegram and YouTube for bomb-making instructions, and used ChatGPT to devise his plans Get our breaking news email , free app or daily news..."
-      - title: "The AI poster boy, the ‘Chinese spy’ and Trump: how an affair may have harmed US security"
-        url: "https://www.theguardian.com/technology/2026/nov/09/nvidia-affair-huang-trump-national-security"
-        source: "The Guardian"
-        date: 2026-11-09
-        summary: "Jensen Huang’s close relationship with president means Nvidia CEO’s affair with woman alleged to be working for Beijing is under intense scrutiny A hand on the back, a kiss on the cheek; the footage of Alice Huang’s..."
       - title: "Nancy Pelosi’s replacement is ready to regulate AI"
         url: "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/"
         source: "MIT Technology Review"
@@ -136,6 +136,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Do PubPeer comments make a difference? A small study tried to find out"
+        url: "https://retractionwatch.com/2026/11/11/do-pubpeer-comments-make-a-difference-a-small-study-tried-to-find-out/"
+        source: "Retraction Watch"
+        date: 2026-11-11
+        summary: "PubPeer launched a new look on Nov. 9, including a dashboard showing the post-publication peer review platform has surpassed a half million comments in its 14 years of operation. Also among the newly public statistics..."
       - title: "“We Have No One”: How Trump’s Dismantling of the VA Left a Veterans Hospital in Crisis"
         url: "https://www.propublica.org/article/east-orange-va-hospital-veterans-decline-new-jersey"
         source: "ProPublica"
@@ -171,11 +176,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-04
         summary: "Some people might happily take credit for an article in Nature they did not write. That’s not the case when the credited author is a cofounder of Retraction Watch and the attribution comes in a citation to an article..."
-      - title: "Bioengineered retracts 119 more papers as investigation continues"
-        url: "https://retractionwatch.com/2026/11/03/bioengineered-retracts-119-more-papers-as-investigation-continues/"
-        source: "Retraction Watch"
-        date: 2026-11-03
-        summary: "Bioengineered retracted 119 papers in October amid investigations into suspected paper mill activity and other integrity-related concerns at the Taylor & Francis journal. Clarivate delisted Bioengineered from its Web of..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
