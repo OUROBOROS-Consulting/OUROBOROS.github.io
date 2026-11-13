@@ -33,6 +33,15 @@ exclude: ["script", "scripts", "vendor", "bower.json", "Gemfile", "Gemfile.lock"
   "_resources/scholarly.md.bak", "_resources/survival.md.bak"]
 markdown: kramdown
 
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    custom_inline: ["<code>", "</code>"]
+    custom_block: ["<pre>", "</pre>"]
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap

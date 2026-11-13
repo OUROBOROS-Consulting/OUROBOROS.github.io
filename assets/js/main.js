@@ -1,27 +1,10 @@
 /* main.js */
 
-// ── Values card flip ──────────────────────────────────────────────────────────
-// Each card's front and back are separate absolutely-positioned faces inside .values-card__inner, so a single nested <button> can't sit "on" both without its own layout rules. .values-card itself already carries role="button",
-// tabindex="0" and aria-expanded (see _about/about.md) — this wires up
-// click plus Enter/Space, and keeps aria-expanded in sync with the flip state.
-document.querySelectorAll('.values-card').forEach(card => {
-  function toggleFlip() {
-    const isFlipped = card.classList.toggle('is-flipped');
-    card.setAttribute('aria-expanded', isFlipped ? 'true' : 'false');
-  }
-  card.addEventListener('click', toggleFlip);
-  card.addEventListener('keydown', (e) => {
-    if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
-    e.preventDefault(); // stop Space from scrolling the page
-    toggleFlip();
-  });
-});
-
 // ── Scroll-triggered reveals ──────────────────────────────────────────────────
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reducedMotion && 'IntersectionObserver' in window) {
   const revealTargets = document.querySelectorAll(
-    '.page-section-label, .band-header, .authority, .c-card, .values-card, .private-ai-flow, .fade-in, .c-article__body > h2, .post-body > h2, .page-body > h2'
+    '.page-section-label, .band-header, .authority, .c-card, .private-ai-flow, .fade-in, .c-article__body > h2, .post-body > h2, .page-body > h2'
   );
 
   if (revealTargets.length) {
@@ -39,9 +22,9 @@ if (!reducedMotion && 'IntersectionObserver' in window) {
     revealTargets.forEach((element) => {
       element.classList.add('motion-reveal');
 
-      if (element.matches('.c-card, .values-card')) {
+      if (element.matches('.c-card')) {
         const siblings = Array.from(element.parentElement.children)
-          .filter((sibling) => sibling.matches('.c-card, .values-card'));
+          .filter((sibling) => sibling.matches('.c-card'));
         const siblingIndex = siblings.indexOf(element);
         element.style.setProperty('--reveal-delay', `${Math.min(siblingIndex * 80, 240)}ms`);
       }

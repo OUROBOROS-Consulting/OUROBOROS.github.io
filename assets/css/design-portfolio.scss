@@ -143,3 +143,38 @@
 .page-section--stacked {
   padding: var(--md-sys-spacing-xl) 0;
 }
+
+/* Card action links - make them look like buttons */
+.c-card :is(a, button):where(.c-card-action) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md-sys-spacing-xs);
+  min-height: 2.5rem;
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  font-family: var(--font-mono);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--site-action-surface);
+  border-radius: var(--site-radius-none);
+  background-color: var(--site-action-surface);
+  color: var(--site-action-text);
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--site-action-surface), black 10%);
+    color: var(--site-action-text);
+  }
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
+
+  i {
+    font-size: 1.1em;
+  }
+}

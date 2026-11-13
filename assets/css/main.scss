@@ -1,9 +1,12 @@
 ---
 ---
 @use "index" as *;
+@use "services-identity" as *;
+@use "services-technology" as *;
 
 a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, .c-nav__dropdown-link, .c-nav__action-item)):where(:link, :visited) {
   color: var(--md-sys-color-primary);
+  font-family: var(--font-mono);
 }
 
 a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, .c-nav__dropdown-link, .c-nav__action-item)):where(:hover, :focus-visible) {
@@ -569,7 +572,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 
 #main a:is(
   .c-card,
-  .c-card--related,
   .c-card--framed,
   .c-card--callout,
   .c-card--formula,
@@ -583,7 +585,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 }
 
 .c-card,
-.c-card--related,
 .c-card--framed,
 .c-card--callout,
 .c-card--formula,
@@ -634,7 +635,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 
 #main :is(
   .c-card,
-  .c-card--related,
   .c-card--framed,
   .c-card--callout,
   .c-card--formula,
@@ -643,7 +643,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   .card--callout,
   .card--formula,
   .related-card
-  ) :is(.rc-tag, .rc-date, .card-link, .card-tag, .team-role, .bib-link, .team-link) {
+  ) :is(.rc-tag, .rc-date, .card-link, .card-tag, .bib-link) {
     color: var(--p-color-ink-palantir-light);
   }
 
@@ -821,19 +821,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   color: var(--p-color-ink-palantir-light);
 }
 
-.c-section--paper .values-card__surface {
-  color: var(--p-color-ink-palantir-light);
-  background-color: var(--site-card-surface);
-  border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
-}
 
-.c-section--paper :is(.values-card__name, .values-card__desc, .values-card__desc p) {
-  color: var(--p-color-ink-palantir-light);
-}
-
-.c-section--paper .values-card__icon--gold {
-  color: var(--site-action-surface);
-}
 
 #main .c-section--paper a:not(:where(
   .c-btn,
@@ -844,7 +832,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   .c-nav__dropdown-link,
   .c-nav__action-item,
   .c-card,
-  .c-card--related,
   .c-card--framed,
   .c-card--callout,
   .c-card--formula,
@@ -853,27 +840,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   .card--framed,
   .card--callout,
   .card--formula,
-  .related-card,
-  .values-card,
-  .card-link,
-  .bib-link,
-  .team-link,
-  .rc-tag,
-  .rc-date,
-  .rc-tag-chip,
-  .card-tag,
-  .c-card a,
-  .c-card--related a,
-  .c-card--framed a,
-  .c-card--callout a,
-  .c-card--formula a,
-  .c-card-formula a,
-  .card a,
-  .card--framed a,
-  .card--callout a,
-  .card--formula a,
-  .related-card a,
-  .values-card a
+  .related-card a
 )):where(:link, :visited) {
   color: var(--p-ember-gold-deep-900);
 }

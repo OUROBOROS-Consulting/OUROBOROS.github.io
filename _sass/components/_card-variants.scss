@@ -3,16 +3,25 @@
 
 /* Team card */
 .c-card--team {
-  min-width: 0;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
   background-color: var(--site-card-surface);
   display: flex;
-  flex-direction: column;
+  flex-direction: row !important;
   gap: var(--md-sys-spacing-md);
+  align-items: flex-start;
+  padding: 0;
+  margin: 0;
 }
 
-.c-card--team__header {
-  margin-bottom: var(--md-sys-spacing-md);
+.c-card--team__portrait {
+  flex-shrink: 0;
+  margin-bottom: 0;
+}
+
+.c-card--team__content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-sm);
 }
 
 .c-card--team__bio {
@@ -34,9 +43,6 @@
 
 /* Formula card */
 .c-card--formula {
-  min-width: 0;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
-  background-color: var(--site-card-surface);
   padding: var(--site-card-padding-comfortable);
   overflow: hidden;
   display: flex;
@@ -82,46 +88,40 @@
   @extend .c-card--formula;
 }
 
-/* Framed card */
+/* Framed card (tagged links) */
 .c-card--framed {
   min-width: 0;
   border: var(--site-border-width) solid var(--md-sys-color-outline);
   background-color: var(--site-card-surface);
-  padding: var(--site-card-padding-comfortable);
+  padding: var(--site-card-padding-compact);
   display: flex;
   flex-direction: column;
-  gap: var(--md-sys-spacing-md);
-}
+  gap: var(--md-sys-spacing-sm);
 
-.c-card--framed__tag {
-  color: var(--md-sys-color-primary);
-  font-family: var(--font-mono);
-  font-size: var(--md-sys-typescale-label-small-size);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin: 0;
-  display: inline-block;
-  padding: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
-  background-color: var(--md-sys-color-primary-container);
-  border-radius: var(--p-radius-0);
-}
+  &__tag {
+    color: var(--md-sys-color-primary);
+    font-family: var(--font-mono);
+    font-size: var(--md-sys-typescale-label-small-size);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin: 0;
+    display: inline-block;
+    padding: var(--md-sys-spacing-xs) var(--md-sys-spacing-sm);
+    background-color: var(--md-sys-color-primary-container);
+    border-radius: var(--p-radius-0);
+  }
 
-.c-card--framed__content {
-  flex-grow: 1;
-}
+  &__content {
+    flex-grow: 1;
+  }
 
-.c-card--framed__footer {
-  margin-top: auto;
-  padding-top: var(--md-sys-spacing-md);
+  &__footer {
+    margin-top: auto;
+  }
 }
 
 /* Citation card */
 .c-card--citation {
-  min-width: 0;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
-  background-color: var(--site-card-surface);
-  display: flex;
-  flex-direction: column;
   gap: var(--md-sys-spacing-sm);
 }
 
@@ -143,13 +143,7 @@
 
 /* Testimonial card */
 .c-card--testimonial {
-  min-width: 0;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
-  background-color: var(--site-card-surface);
   padding: var(--md-sys-spacing-lg);
-  display: flex;
-  flex-direction: column;
-  gap: var(--md-sys-spacing-md);
 }
 
 .c-card--testimonial__quote {
@@ -176,106 +170,8 @@
   font-size: var(--md-sys-typescale-label-small-size);
 }
 
-/* Service card */
-.c-card--service {
-  min-width: 0;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
-  background-color: var(--site-card-surface);
-  padding: var(--site-card-padding-comfortable);
-  display: flex;
-  flex-direction: column;
-  gap: var(--md-sys-spacing-md);
-}
-
-.c-card--service__title {
-  margin: 0;
-  font-size: var(--md-sys-typescale-title-medium-size);
-  font-weight: var(--md-ref-typeface-weight-semibold);
-}
-
-.c-card--service__desc {
-  margin: 0;
-  color: var(--md-sys-color-on-surface-variant);
-  font-size: var(--md-sys-typescale-body-medium-size);
-}
-
-.c-card--service__icon {
-  margin-top: auto;
-  margin-bottom: var(--md-sys-spacing-sm);
-  color: var(--md-sys-color-primary);
-}
-
-/* Design Context Pack card */
-.c-card--design-context {
-  min-width: 0;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
-  background-color: var(--site-card-surface);
-  padding: var(--site-card-padding-comfortable);
-  display: flex;
-  flex-direction: column;
-  gap: var(--md-sys-spacing-md);
-}
-
-.c-card--design-context__title {
-  margin: 0;
-  font-size: var(--md-sys-typescale-title-medium-size);
-  font-weight: var(--md-ref-typeface-weight-semibold);
-}
-
-.c-card--design-context__desc {
-  margin: 0;
-  color: var(--md-sys-color-on-surface-variant);
-}
-
-.c-card--design-context__details {
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: var(--md-sys-spacing-xs);
-  font-size: var(--md-sys-typescale-label-small-size);
-}
-
-/* Pricing card */
-.c-card--pricing {
-  min-width: 0;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
-  background-color: var(--site-card-surface);
-  padding: var(--site-card-padding-comfortable);
-  display: flex;
-  flex-direction: column;
-  gap: var(--md-sys-spacing-md);
-  text-align: center;
-}
-
-.c-card--pricing__title {
-  margin: 0;
-  font-size: var(--md-sys-typescale-label-large-size);
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.c-card--pricing__price {
-  margin: 0;
-  font-size: var(--md-sys-typescale-display-large-size);
-  font-weight: var(--md-ref-typeface-weight-bold);
-  font-family: var(--font-mono);
-  color: var(--md-sys-color-primary);
-}
-
-.c-card--pricing__desc {
-  margin: 0;
-  color: var(--md-sys-color-on-surface-variant);
-  font-size: var(--md-sys-typescale-body-medium-size);
-}
-
-/* Testimonials grid layout */
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
-  gap: var(--md-sys-spacing-lg);
-}
-
-/* Related grid layout */
+/* Grid layouts */
+.testimonials-grid,
 .related-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
@@ -299,6 +195,12 @@
   aspect-ratio: 5 / 6;
   margin-inline: auto;
   overflow: hidden;
+}
+
+/* Team card portrait - left aligned, no centering */
+.c-card--team .hex-portrait {
+  margin-inline: 0;
+  margin-bottom: 0;
 }
 
 .hex-portrait img {
@@ -356,14 +258,45 @@
 }
 
 .team-link {
-  font-size: var(--md-sys-typescale-body-small-size);
-  color: var(--site-action-surface);
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  font-size: var(--site-nav-icon-size);
+  line-height: 1;
+  color: var(--md-sys-color-primary);
+  text-decoration: none;
+  display: inline-grid;
+  place-items: center;
+  padding: var(--md-sys-spacing-sm);
+  background: #000000;
+  border: var(--site-border-width) solid var(--md-sys-color-on-surface);
+  border-radius: var(--site-radius-none);
+  gap: var(--md-sys-spacing-xs);
+  transition: background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard), border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard), color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+}
+
+.team-link i {
+  font-size: 1.2em;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 .team-link:hover {
-  color: var(--md-sys-color-secondary);
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.team-link:hover i {
+  color: #000000 !important;
+}
+
+/* More specific selector for team card links */
+.c-card--team .team-link:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.c-card--team .team-link:hover i {
+  color: #000000 !important;
 }
 
 /* Content card classes (used by content-card.html) */

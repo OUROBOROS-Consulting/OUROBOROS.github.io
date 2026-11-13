@@ -3,6 +3,7 @@ title: "Private AI & Data Systems"
 lede: "Get AI's speed without sending confidential data outside your walls."
 layout: sections
 section_layout: stacked
+extra_css: services-technology
 back_url: /
 category: Services
 hero_icon: ph-head-circuit

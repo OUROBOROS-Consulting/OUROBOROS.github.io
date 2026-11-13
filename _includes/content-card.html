@@ -15,7 +15,8 @@
   <a href="{{ item.url | relative_url }}" class="technical text-t c-card-action">{{ include.link_label | default: "Read More" }} &rarr;</a>
 </div>
 {% else %}
-<a href="{{ item.url | relative_url }}" class="c-card {{ include.card_class | default: 'c-card--framed' }}">
+<div class="c-card {{ include.card_class | default: 'c-card--framed' }}">
+  <div class="c-card__link">
   {% if label %}<p class="rc-tag">{{ label }}</p>{% endif %}
   {% if item.work_type %}<p class="rc-tag">{{ item.work_type }}</p>{% endif %}
   <h3 class="rc-title">{{ item.title }}</h3>
@@ -31,6 +32,7 @@
     {% for tag in item.tags %}<span class="rc-tag-chip">{{ tag }}</span>{% endfor %}
   </p>
   {% endif %}
-  <span class="card-link">{{ include.link_label | default: "Read more" }} &rarr;</span>
-</a>
+  <a class="card-link" href="{{ item.url | relative_url }}">{{ include.link_label | default: "Read more" }} &rarr;</a>
+</div>
+</div>
 {% endif %}

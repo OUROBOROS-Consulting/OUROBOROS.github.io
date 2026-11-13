@@ -230,10 +230,14 @@ layout: default
       <div class="c-card c-card--formula">
         <div class="c-card-formula__interior">
           {% if section.body_paragraphs %}
-          <!-- Each list item becomes its own Markdown-rendered block -->
-          {% for paragraph in section.body_paragraphs %}
-          {{ paragraph | markdownify }}
-          {% endfor %}
+          <!-- Each paragraph becomes a list item in a bulleted list -->
+          <div class="c-stack">
+            <ul>
+              {% for paragraph in section.body_paragraphs %}
+              <li>{{ paragraph | markdownify }}</li>
+              {% endfor %}
+            </ul>
+          </div>
           {% elsif section.body %}
           <p>{{ section.body }}</p>
           {% endif %}
@@ -252,6 +256,11 @@ layout: default
 </div><!-- /page-body (sections loop) -->
 {% include toc.html %}
 </div><!-- /page-toc-wrap -->
+{% endif %}
+
+<!-- Extra CSS (if any) -->
+{% if page.extra_css %}
+<link rel="stylesheet" href="{{ '/assets/css/' | append: page.extra_css | append: '.css' | relative_url }}" />
 {% endif %}
 
 <!-- 2026-11-11: Removed inline style tag_style="anchor", handled via CSS class -->

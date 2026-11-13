@@ -17,6 +17,18 @@
     background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
     border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
+  // Shared structural properties for all variants
+  &--team,
+  &--formula,
+  &--citation,
+  &--testimonial,
+  &--service,
+  &--design-context,
+  &--pricing {
+    min-width: 0;
+    gap: var(--md-sys-spacing-md);
+  }
+
   &--elevated {
     box-shadow: var(--site-card-elevation);
   }

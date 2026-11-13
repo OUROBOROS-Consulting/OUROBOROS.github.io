@@ -63,22 +63,10 @@ layout: default
 
     <div class="values-grid">
       {% for aud in site.data.audience %}
-      <div class="values-card" role="button" tabindex="0" aria-expanded="false"
-        aria-label="{{ aud.title | escape }}">
-        <div class="values-card__inner">
-          <div class="values-card__front">
-            <div class="values-card__surface">
-              <i class="values-card__icon {{ aud.icon }} values-card__icon--gold" aria-hidden="true"></i>
-              <span class="values-card__name">{{ aud.title | escape }}</span>
-            </div>
-          </div>
-          <div class="values-card__back">
-            <div class="values-card__surface">
-              <div class="values-card__desc">{{ aud.description | markdownify }}</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <article class="c-card c-stack">
+        <p class="technical text-t">{{ aud.title | escape }}</p>
+        <p class="text-s">{{ aud.description | markdownify }}</p>
+      </article>
       {% endfor %}
     </div>
   </div>

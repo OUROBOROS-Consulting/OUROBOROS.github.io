@@ -27,7 +27,7 @@ hide_cta: true
   {% if site.data.psas.size > 0 %}
   <div class="related-grid">
     {% for item in site.data.psas %}
-    <article class="c-card c-card--related">
+    <article class="c-card c-card--framed">
       {% if item.category %}<p class="rc-tag">{{ item.category | escape }}</p>{% endif %}
       <h2 class="rc-title">{{ item.title | escape }}</h2>
       <p class="card-desc">{{ item.description | escape }}</p>

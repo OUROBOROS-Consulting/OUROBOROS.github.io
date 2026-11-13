@@ -4,6 +4,7 @@ description: "Independent AI privacy and governance reviews for organizations ha
 layout: sections
 icon: ph ph-fill ph-shield-check
 section_layout: stacked
+extra_css: services-identity
 back_url: /
 category: Services
 hero_icon: ph-shield-check

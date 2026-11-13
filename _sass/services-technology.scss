@@ -1,0 +1,73 @@
+@use "design/tokens" as *;
+
+/* Service pages - Private AI & Data Systems and AI Privacy & Governance Advisory */
+
+/* Service page layout */
+.services-technology,
+.services-identity {
+  padding: var(--md-sys-spacing-xl) 0;
+}
+
+/* Bulleted lists in service pages */
+.c-stack ul {
+  padding-left: var(--md-sys-spacing-lg);
+  margin: var(--md-sys-spacing-md) 0;
+}
+
+.c-stack ul li {
+  position: relative;
+  padding-left: var(--md-sys-spacing-md);
+  margin-bottom: var(--md-sys-spacing-sm);
+  line-height: 1.6;
+}
+
+.c-stack ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 8px;
+  height: 8px;
+  background-color: var(--md-sys-color-primary);
+  border-radius: 50%;
+}
+
+/* Links in service pages use Kode Mono */
+.c-stack ul li a:not(.c-btn):not(.c-card-action) {
+  font-family: var(--font-mono);
+}
+
+/* Card action links - make them look like buttons */
+.c-card :is(a, button):where(.c-card-action) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md-sys-spacing-xs);
+  min-height: 2.5rem;
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  font-family: var(--font-mono);
+  font-size: var(--md-sys-typescale-body-small-size);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--site-action-surface);
+  border-radius: var(--site-radius-none);
+  background-color: var(--site-action-surface);
+  color: var(--site-action-text);
+  transition: background-color 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--site-action-surface), black 10%);
+    color: var(--site-action-text);
+  }
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline-offset: var(--site-focus-ring-offset);
+  }
+
+  i {
+    font-size: 1.1em;
+  }
+}
