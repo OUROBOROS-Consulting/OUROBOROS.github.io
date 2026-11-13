@@ -112,6 +112,11 @@
   color: var(--md-sys-color-on-background);
 }
 
+.c-footer__social-link:focus-visible {
+  outline: var(--site-focus-ring-width) solid #FFFFFF;
+  outline-offset: var(--site-focus-ring-offset);
+}
+
 /* Duplicate .c-footer__logo removed (originally at lines 126-130, now using definition at line 34) */
 
 .c-footer__logo-mark {
