@@ -41,25 +41,22 @@
 }
 
 .c-footer__social-link {
-  display: grid;
-  place-items: center;
   box-sizing: border-box;
   display: inline-grid;
   place-items: center;
-  // width: var(--site-nav-control-size);
-  // height: var(--site-nav-control-size);
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-sm);
   border: var(--site-border-width) solid transparent;
   border-radius: var(--site-radius-none);
   background: var(--md-sys-color-surface);
   border-color: var(--md-sys-color-on-surface);
+  color: #000000;
   font-size: var(--site-nav-icon-size);
   line-height: 1;
   text-decoration: none;
+  cursor: pointer;
   transition:
     background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
     border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
     transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
   i {
