@@ -187,12 +187,12 @@
   cursor: pointer;
 
   &:hover {
-      border-color: #000000;
-      background-color: #FFFFFF;
-      color: #000000;
-      i {
-        color: #000000;
-      }
+    border-color: var(--md-sys-color-on-surface);
+    background-color: var(--md-sys-color-on-surface);
+    color: var(--md-sys-color-on-background);
+    i {
+      color: var(--md-sys-color-on-background);
+    }
   }
 }
 

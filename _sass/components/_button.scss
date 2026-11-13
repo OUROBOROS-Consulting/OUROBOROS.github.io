@@ -42,7 +42,8 @@
 /* Primary Variant */
 .c-btn--primary {
   &:hover {
-    box-shadow: 0 0 25px rgba(221, 203, 163, 0.4);
+    background-color: var(--md-sys-color-primary-container);
+    color: var(--md-sys-color-on-primary-container);
   }
 
   &:active {
