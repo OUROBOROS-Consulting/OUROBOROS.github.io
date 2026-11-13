@@ -278,25 +278,23 @@
   vertical-align: middle;
 }
 
-.team-link:hover {
-  background: var(--md-sys-color-on-surface) !important;
-  color: var(--md-sys-color-on-background) !important;
-  border-color: var(--md-sys-color-on-background) !important;
+.team-link {
+  background: transparent !important;
+  color: #000000 !important;
+  border-color: transparent !important;
 }
 
-.team-link:hover i {
-  color: var(--md-sys-color-on-background) !important;
+.team-link i {
+  font-size: 1.2em;
+  line-height: 1;
+  vertical-align: middle;
 }
 
 /* More specific selector for team card links */
-.c-card--team .team-link:hover {
-  background: var(--md-sys-color-on-surface) !important;
-  color: var(--md-sys-color-on-background) !important;
-  border-color: var(--md-sys-color-on-background) !important;
-}
-
-.c-card--team .team-link:hover i {
-  color: var(--md-sys-color-on-background) !important;
+.c-card--team .team-link {
+  background: transparent !important;
+  color: #000000 !important;
+  border-color: transparent !important;
 }
 
 /* Content card classes (used by content-card.html) */
