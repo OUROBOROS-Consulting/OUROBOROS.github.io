@@ -1,6 +1,5 @@
 // ── Hero Organism (M3 Semantic) ─────────────────────────────────────────────
 // Responsibility: Layout and arrangement of brand identity and primary copy.
-
 .c-hero {
   position: relative;
   // background-color: var(--md-sys-color-surface-container-high);
@@ -20,6 +19,7 @@
   padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 5vw, 4rem);
   padding-bottom: clamp(6rem, 10vh, 8rem);
   text-align: left;
+  overflow: hidden;
 }
 
 .c-hero__identity {

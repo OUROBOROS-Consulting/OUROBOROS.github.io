@@ -1,0 +1,11 @@
+// primitives/_tokens.scss
+// Material Design 3 tokens (aggregated from md/ folder)
+// This file aggregates MD3 reference tokens and site tokens
+
+@forward "semantic-tokens";
+// @forward "palette";
+@forward "typography";
+@forward "shape";
+@forward "motion";
+@use "themes/light" as *;
+@use "themes/dark" as *;

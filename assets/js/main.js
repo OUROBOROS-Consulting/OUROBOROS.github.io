@@ -4,7 +4,7 @@
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if (!reducedMotion && 'IntersectionObserver' in window) {
   const revealTargets = document.querySelectorAll(
-    '.page-section-label, .band-header, .authority, .c-card, .private-ai-flow, .fade-in, .c-article__body > h2, .post-body > h2, .page-body > h2'
+    '.page-section-label, .band-header, .authority, .c-card, .private-ai-flow, .c-article__body > h2, .post-body > h2, .page-body > h2'
   );
 
   if (revealTargets.length) {

@@ -1,19 +1,29 @@
-// Foundation: design tokens, reset, mixins, body texture
-@forward "design/tokens";
-@forward "primitives";
-@forward "components/banner";
-@forward "components/button";
-@forward "components/card";
-@forward "components/card-formula";
-@forward "components/carousel";
-@forward "components/cta";
-@forward "components/divider";
-@forward "components/footer";
-@forward "components/flow";
-@forward "components/hero";
-@forward "components/page-hero";
-@forward "components/hours";
-@forward "components/design-service";
-@forward "components/layout";
-@forward "components/nav";
-@forward "components/spacing";
+// Foundation: primitives (tokens, resets, typography)
+@forward "primitives/tokens";
+@forward "primitives/semantic-tokens";
+
+// 📱 Interactive Components (buttons, cards, CTAs, forms)
+@forward "components/interactive/button";
+@forward "components/interactive/card";
+@forward "components/interactive/card-formula";
+@forward "components/interactive/card-variants";
+@forward "components/interactive/cta";
+
+// 🧭 Navigation Components (nav, footer, flow, hours)
+@forward "components/navigation/footer";
+@forward "components/navigation/flow";
+@forward "components/navigation/hours";
+@forward "components/navigation/nav";
+
+// 🎨 Typography/Content Components (hero, page-hero, spacing)
+@forward "components/typography/hero";
+@forward "components/typography/page-hero";
+@forward "components/typography/spacing";
+
+// ✨ Special Components (banner, carousel, design-service, divider, layout, resume)
+@forward "components/special/banner";
+@forward "components/special/carousel";
+@forward "components/special/design-service";
+@forward "components/special/divider";
+@forward "components/special/layout";
+@forward "components/special/resume";
