@@ -62,19 +62,8 @@
     color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
     transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
-  &:hover {
-    transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-    border-color: var(--md-sys-color-on-surface);
-    background-color: var(--md-sys-color-on-surface);
+  i {
     color: #000000;
-    i {
-      color: #000000;
-    }
-  }
-
-  &:focus-visible {
-    outline: var(--site-focus-ring-width) solid var(--md-sys-color-on-surface);
-    outline-offset: var(--site-focus-ring-offset);
   }
 }
 

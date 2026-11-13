@@ -41,10 +41,8 @@
 
 /* Primary Variant */
 .c-btn--primary {
-  &:hover {
-    background-color: var(--md-sys-color-primary-container);
-    color: #000000;
-  }
+  background-color: var(--md-sys-color-primary-container);
+  color: #000000;
 
   &:active {
     transform: scale(var(--site-button-press-scale));
