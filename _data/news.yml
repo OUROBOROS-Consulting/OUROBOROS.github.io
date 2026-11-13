@@ -2,13 +2,23 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-12
+generated: 2026-11-13
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "US workers are fighting to protect their jobs from AI – and winning"
+      - title: "The datacenter industry is using propaganda to fight opposition | Samuel Woolley, Dean Jackson and Maia Woluchem"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/13/datacenter-industry-propaganda"
+        source: "The Guardian"
+        date: 2026-11-13
+        summary: "Big tech has used misdirection, disinformation and jargon to obscure the harm the facilities can cause to communities “Antifa”. “Commies”. “Chinese bots”. Everyone from tech leaders to the president has called..."
+      - title: "Google faces calls for AI moratoriums in schools after Gemini pilot backlash"
+        url: "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
+        source: "Ars Technica"
+        date: 2026-11-12
+        summary: "Families confront Google after teen’s lawsuit labels Gemini a “suicide coach.”"
+      - title: "US public workers are fighting to protect their jobs from AI – and some are winning"
         url: "https://www.theguardian.com/technology/2026/nov/12/us-workers-governments-unions-ai"
         source: "The Guardian"
         date: 2026-11-12
@@ -38,11 +48,6 @@ sections:
         source: "Ars Technica"
         date: 2026-11-10
         summary: "The new model is up to twice as successful at some tasks."
-      - title: "ChatGPT’s Teen Mode could deprive teenagers of a fundamental need | Robin Kirman"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/10/chatgpt-teen-mode-cognitive-skills"
-        source: "The Guardian"
-        date: 2026-11-10
-        summary: "What young students stand to lose is more than cognitive skill: it’s a reliable sense of their own minds In August, OpenAI launched Teen Mode – a version of ChatGPT in which every user under 18 will automatically be..."
       - title: "Nancy Pelosi’s replacement is ready to regulate AI"
         url: "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/"
         source: "MIT Technology Review"
@@ -58,11 +63,6 @@ sections:
         source: "Ars Technica"
         date: 2026-11-05
         summary: "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says."
-      - title: "Google will let schools skip AI tools, but they have to give up search, too"
-        url: "https://arstechnica.com/ai/2026/11/google-will-let-schools-skip-ai-tools-but-they-have-to-give-up-search-too/"
-        source: "Ars Technica"
-        date: 2026-11-03
-        summary: "Google will offer schools AI tools that purportedly don't give away the answers."
       - title: "How “reverse game theory” could keep AI agents in check"
         url: "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/"
         source: "MIT Technology Review"
@@ -180,16 +180,41 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "EPIC and Student Defense Submit Comment on Treasury Department’s Takeover of Federal Student Aid Records"
+        url: "https://epic.org/epic-and-student-defense-submit-comment-on-treasury-departments-takeover-of-federal-student-aid-records/"
+        source: "EPIC"
+        date: 2026-11-09
+        summary: "EPIC and Student Defense submitted a comment to the U.S. Department of Treasury (Treasury) Friday regarding its takeover of Federal Student Aid from the U.S. Department of Education (ED), in response to a System of..."
+      - title: "WIRED: AI Companies Really, Really Want to Buy Your Work Files and Emails"
+        url: "https://epic.org/wired-ai-companies-really-really-want-to-buy-your-work-files-and-emails/"
+        source: "EPIC"
+        date: 2026-11-06
+        summary: "“The union’s objections cast a light on the dark side of this gold rush. Despite the claims of virtually all the data companies that no PII goes into AI models, critics feel that there is still danger of personal data..."
+      - title: "Tech Insider: 56% Cite AI in Vote, Yet Big Tech May Win [2026]"
+        url: "https://epic.org/tech-insider-56-cite-ai-in-vote-yet-big-tech-may-win-2026/"
+        source: "EPIC"
+        date: 2026-11-06
+        summary: "“CNET noted that Elon Musk and other tech leaders poured hundreds of millions of dollars into Republican campaigns, yet voters still delivered Democratic sweeps in battleground states. Tech critics read that as proof of..."
+      - title: "CNET: Will Democrats Rein in Big Tech? It Starts With Privacy and Data Centers"
+        url: "https://epic.org/cnet-will-democrats-rein-in-big-tech-it-starts-with-privacy-and-data-centers/"
+        source: "EPIC"
+        date: 2026-11-06
+        summary: "“Artificial intelligence was central to the national conversation during the midterms, alongside concerns about affordability and the Iran war. From data centers needed to power AI to how it’s used in surveillance tech..."
       - title: "Presenting 'Desire Lines: Encoding Queer Digital Futures'"
         url: "https://www.eff.org/deeplinks/2026/11/presenting-desire-lines-encoding-queer-digital-futures"
         source: "EFF Deeplinks"
         date: 2026-11-06
         summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
-      - title: "Big Tech Companies Repeat Same Losing Arguments in New Challenge to California’s AB 1709"
-        url: "https://epic.org/big-tech-companies-repeat-same-losing-arguments-in-new-challenge-to-californias-ab-1709/"
+      - title: "Seoul Economic Daily: Character.AI Bankruptcy Raises Fears Over Chat Records"
+        url: "https://epic.org/seoul-economic-daily-character-ai-bankruptcy-raises-fears-over-chat-records/"
         source: "EPIC"
         date: 2026-11-05
-        summary: "Yesterday, three Big Tech companies—Meta, Google, and TikTok—filed lawsuits against California’s AB 1709, arguing that the law’s prohibition on deploying addictive feeds and other addictive features to minors violates..."
+        summary: "“Calli Schroeder, AI lead at the Electronic Privacy Information Center (EPIC), told the BBC that users disclose far more private and sensitive information when talking to anthropomorphized chatbots. She added that..."
+      - title: "Gadget Review: New Jersey Wants to Make AI Companies Pay $5,000 for Every Violation"
+        url: "https://epic.org/gadget-review-new-jersey-wants-to-make-ai-companies-pay-5000-for-every-violation/"
+        source: "EPIC"
+        date: 2026-11-05
+        summary: "“The Electronic Privacy Information Center supports A5607, arguing that major chatbot providers have repeatedly failed to prioritize user safety over profit and should not be left to self-regulate. That is EPIC’s..."
       - title: "Want to Rent an Internet Address at the White House?"
         url: "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
         source: "Krebs on Security"
@@ -205,38 +230,13 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-03
         summary: "The U.S. Postal Service used social media surveillance to monitor and report on protests across the political spectrum, government records show. The records , disclosed to EFF and other requesters suing the postal..."
-      - title: "Defending Privacy Has Been Essential to the Fight to Ensure the Right to Vote This Year"
-        url: "https://epic.org/defending-privacy-has-been-essential-to-the-fight-to-ensure-the-right-to-vote-this-year/"
-        source: "EPIC"
-        date: 2026-11-03
-        summary: "While voters across the nation cast their votes at the ballot box today, EPIC has spent the past year fighting to protect that right to vote. In every election cycle there are important legal battles that define and..."
       - title: "Privacy's Defenders Podcast: The Secret Room"
         url: "https://www.eff.org/deeplinks/2026/10/privacys-defenders-podcast-secret-room"
         source: "EFF Deeplinks"
         date: 2026-11-03
         summary: "The government’s surveillance powers grew rapidly after Sept. 11, 2001, some in public view and some in secret. EFF suspected but couldn’t prove that the National Security Agency was spying on Americans' communications..."
-      - title: "PRESS RELEASE: Judge blocks Trump administration scheme to disenfranchise voters"
-        url: "https://epic.org/press-release-judge-blocks-trump-administration-scheme-to-disenfranchise-voters-2/"
-        source: "EPIC"
-        date: 2026-11-03
-        summary: "Washington, D.C. – On the eve of election day, a district court judge ordered the Trump administration to immediately stop sending error-filled federal lists of supposed “likely noncitizen voters” to election..."
-      - title: "The Verge: Here’s why you can’t shake those unhinged political texts"
-        url: "https://epic.org/the-verge-heres-why-you-cant-shake-those-unhinged-political-texts/"
-        source: "EPIC"
-        date: 2026-10-31
-        summary: "“By collating all of this information, campaigns can try to infer your behavior, though they also might end up with outdated info, like old addresses that lead you to getting texts about a state you no longer live in..."
-      - title: "Democracy Docket: Federal judge questions DOJ voter ‘purge’ targeting minorities right before election"
-        url: "https://epic.org/democracy-docket-federal-judge-questions-doj-voter-purge-targeting-minorities-right-before-election/"
-        source: "EPIC"
-        date: 2026-10-31
-        summary: "U.S. District Judge Tanya Chutkan, appointed by former President Barack Obama, heard arguments on a request from pro-voting groups for a temporary restraining order to immediately block the Department of Justice (DOJ)..."
       - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
         url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
         source: "EFF Deeplinks"
         date: 2026-10-22
         summary: "Canada’s Parliament is debating a massive expansion of surveillance powers that will threaten the privacy and security of millions of people. Bill C-22, also called the Lawful Access Act, has already passed the House of..."
-      - title: "Introducing Our New Surveillance Self-Defense Guide: Online Privacy for Parents and Youth"
-        url: "https://www.eff.org/deeplinks/2026/10/introducing-our-new-surveillance-self-defense-guide-online-privacy-parents-and"
-        source: "EFF Deeplinks"
-        date: 2026-10-21
-        summary: "The internet is a vast and confusing place no matter your age. Trying to help youth engage with it safely and privately is a complicated topic that touches on many different skillsets and ideas. But just because it’s..."
