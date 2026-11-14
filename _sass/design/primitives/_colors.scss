@@ -1,0 +1,32 @@
+// Color Primitives (Hex/RGBA)
+// This is the source of truth for all color values.
+// Do not mix color systems. Use the semantic palette layers above.
+
+:root {
+  /* Neutrals / Surfaces */
+  --p-color-white: #FFFFFF;
+  --p-color-black: #000000;
+  --p-color-void-black: #000000;
+  --p-color-charcoal: #121212;
+  --p-color-surface-dark-1: #000000;
+  --p-color-surface-dark-2: #1A1A1A;
+  --p-color-surface-dark-3: #242424;
+  --p-color-surface-dark-4: #303030;
+  --p-color-surface-dark-5: #424242;
+  --p-color-surface-light-1: #F5F5F5;
+  --p-color-surface-light-2: #E0E0E0;
+  --p-color-surface-light-3: #F3F3F3;
+  --p-color-surface-light-4: #DFDFDF;
+  --p-color-surface-light-5: #FFFFFF;
+
+  /* Text / Ink */
+  --p-color-ink-light: #FFFFFF;
+  --p-color-ink-dark: #1D1B20;
+  --p-color-text-gray: #8e8e8e;
+
+  /* Error Colors */
+  --p-color-error-light: #B3261E;
+  --p-color-error-dark: #F2B8B5;
+  --p-color-on-error-light: #FFFFFF;
+  --p-color-on-error-dark: #601410;
+}

@@ -1,0 +1,13 @@
+// Radius Scale (Raw)
+// This is the source of truth for all border-radius values.
+// Theme-aware components should use semantic tokens that reference this.
+
+:root {
+  --p-radius-0: 0rem;
+  --p-radius-xs: 2px;
+  --p-radius-sm: 3px;
+  --p-radius-md: 4px;
+  --p-radius-lg: 8px;
+  --p-radius-xl: 20px;
+  --p-radius-full: 9999px;
+}
