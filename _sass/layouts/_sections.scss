@@ -1,0 +1,174 @@
+.c-section--paper {
+  color: var(--p-void-900);
+  background-color: var(--p-forensic-100);
+  border-bottom-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
+}
+
+.c-section--paper>.c-container>.c-stack:first-child {
+  margin-bottom: var(--md-sys-spacing-xl);
+  padding: var(--md-sys-spacing-xl) 0 0;
+}
+
+.c-section--paper>.c-container>.c-stack:first-child::before {
+  content: none;
+}
+
+.c-section--paper :is(.authority, .text-s, .text-t, .technical, .forensic, p, li, blockquote, cite) {
+  color: var(--p-void-900);
+}
+
+.c-section--paper :is(.technical, .text-t) {
+  color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--paper .forensic {
+  color: var(--p-forensic-700);
+}
+
+.c-section--paper .c-card {
+  color: var(--p-color-ink-palantir-light);
+  background-color: var(--site-card-surface);
+  border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
+}
+
+.c-section--paper .c-card :is(.authority, .text-s, .text-t, .technical, .forensic, p, li, blockquote, cite) {
+  color: var(--p-color-ink-palantir-light);
+}
+
+#main .c-section--paper .c-card :is(.technical, .text-t, .c-card-action, .rc-tag, .rc-date, .rc-tag-chip, .card-link) {
+  color: var(--site-action-surface);
+}
+
+.c-section--paper .c-card .rc-title {
+  color: var(--p-color-ink-palantir-light);
+}
+
+.c-section--paper .values-card__surface {
+  color: var(--p-color-ink-palantir-light);
+  background-color: var(--site-card-surface);
+  border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
+}
+
+.c-section--paper :is(.values-card__name, .values-card__desc, .values-card__desc p) {
+  color: var(--p-color-ink-palantir-light);
+}
+
+.c-section--paper .values-card__icon--gold {
+  color: var(--site-action-surface);
+}
+
+#main .c-section--paper a:not(:where(.c-btn,
+    .btn,
+    .btn-sovereign,
+    .skip-link,
+    .c-nav__link,
+    .c-nav__dropdown-link,
+    .c-nav__action-item,
+    .c-card,
+    .c-card--related,
+    .c-card--framed,
+    .c-card--callout,
+    .c-card--formula,
+    .c-card-formula,
+    .card,
+    .card--framed,
+    .card--callout,
+    .card--formula,
+    .related-card,
+    .values-card,
+    .card-link,
+    .bib-link,
+    .team-link,
+    .rc-tag,
+    .rc-date,
+    .rc-tag-chip,
+    .card-tag,
+    .c-card a,
+    .c-card--related a,
+    .c-card--framed a,
+    .c-card--callout a,
+    .c-card--formula a,
+    .c-card-formula a,
+    .card a,
+    .card--framed a,
+    .card--callout a,
+    .card--formula a,
+    .related-card a,
+    .values-card a)):where(:link, :visited) {
+  color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--paper .carousel-btn,
+.c-section--paper .carousel-dot {
+  color: var(--p-void-900);
+  background-color: var(--p-color-white);
+  border-color: color-mix(in srgb, var(--p-forensic-700) 35%, transparent);
+}
+
+.c-section--paper .carousel-btn i,
+.c-section--paper .carousel-count {
+  color: var(--p-forensic-700);
+}
+
+.c-section--paper .carousel-btn:hover,
+.c-section--paper .carousel-dot:hover {
+  color: var(--p-void-900);
+  background-color: var(--p-forensic-200);
+  border-color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--paper .carousel-dot.active {
+  background-color: var(--p-ember-gold-deep-900);
+  border-color: var(--p-ember-gold-deep-900);
+}
+
+.c-section--marble>.c-container>.c-stack:first-child {
+  --md-sys-color-surface: var(--p-color-black);
+  --md-sys-color-on-surface: var(--p-color-white);
+  --md-sys-color-on-surface-variant: var(--p-color-white);
+  --md-sys-color-text-primary: var(--p-color-white);
+  --md-sys-color-text-secondary: var(--p-color-white);
+  --md-sys-color-text-tertiary: var(--p-color-white);
+  padding: 0;
+  border-block: 0;
+  background-image: none;
+}
+
+.c-section--marble .forensic {
+  color: var(--md-sys-color-on-surface-variant);
+}
+
+.c-section--marble {
+  width: auto;
+  margin-inline: calc(50% - 50vw);
+  background-image: none;
+}
+
+.c-section--marble>.c-container>.c-stack:first-child::before {
+  border: 0;
+  background-color: var(--p-color-black);
+  background-image: none;
+}
+
+
+.page-body> :is(.page-section, .collection-section) {
+  padding-block: var(--md-sys-spacing-xl) 0;
+}
+
+.page-body> :is(.page-section, .collection-section):last-of-type {
+  padding-bottom: var(--md-sys-spacing-xl);
+}
+
+.page-body .page-section-label+.c-card,
+.page-body .page-section-label+.page-section-content,
+.page-body .collection-section>.band-header+.related-grid,
+.page-body> :is(h1, h2, h3, .band-header, .page-section-label)+ :is(.related-grid,
+  .c-grid,
+  .grid,
+  .testimonials-grid,
+  .values-grid) {
+  margin-top: var(--md-sys-spacing-sm);
+  margin-bottom: var(--md-sys-spacing-sm);
+}
+
+

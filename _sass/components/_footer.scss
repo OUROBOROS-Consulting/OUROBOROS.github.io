@@ -40,6 +40,11 @@
   width: min(100%, 24rem);
 }
 
+.c-footer__availability .c-hours {
+  border-radius: var(--site-radius-md);
+  background-color: var(--site-card-surface);
+}
+
 .c-footer__social-link {
   display: grid;
   place-items: center;
@@ -162,7 +167,7 @@
   align-items: center;
   gap: var(--md-sys-spacing-md);
   padding: var(--md-sys-spacing-lg);
-  background-color: var(--p-color-white);
+  background-color: var(--p-color-black);
   border-top: 1px solid var(--site-action-surface);
   font-size: var(--md-sys-typescale-body-small-size);
 }
@@ -173,6 +178,7 @@
 }
 
 .c-disclaimer-bar__text {
+  color: var(--p-color-white);
   margin: 0;
   max-width: 60ch;
 }

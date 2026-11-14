@@ -1,0 +1,23 @@
+.progress-bar {
+  position: fixed;
+  left: 0;
+  z-index: 1002;
+  width: 100%;
+  height: var(--site-border-width-emphasis);
+  background-color: var(--p-ember-gold-bright-600);
+  pointer-events: none;
+  transform: scaleX(var(--progress-scale, 0));
+  transform-origin: left center;
+  transition: transform var(--site-motion-reduced-duration) linear;
+}
+
+#progress-bar-top {
+  top: 0;
+}
+
+#progress-bar-bottom {
+  bottom: 0;
+  right: 0;
+  left: auto;
+  transform-origin: right center;
+}
