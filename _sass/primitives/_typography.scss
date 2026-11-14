@@ -5,7 +5,7 @@
 $font-serif:     'Spectral', Georgia, serif;
 $font-sans:      'Syne', 'Inter', 'DejaVu Sans', system-ui, sans-serif;
 $font-syne:     'Syne', sans-serif;
-$font-heading:     'Spectral', serif;
+$font-heading:     $font-serif;
 $font-mono:      'Kode Mono', monospace;
 
 /*
@@ -45,7 +45,7 @@ $font-mono:      'Kode Mono', monospace;
   /* Label Small font size */
   --md-sys-typescale-label-small-size-value: 11px;
   --md-sys-typescale-label-small-size-unit: 2px;
-  --md-sys-typescale-label-small-size: 11px;
+  --md-sys-typescale-label-small-size: 14px;
   /* Label Small font weight */
   --md-sys-typescale-label-small-weight: var(--md-ref-typeface-weight-medium);
   /* Label Small font name */
@@ -67,7 +67,7 @@ $font-mono:      'Kode Mono', monospace;
   /* Label Medium font size */
   --md-sys-typescale-label-medium-size-value: 12px;
   --md-sys-typescale-label-medium-size-unit: 2px;
-  --md-sys-typescale-label-medium-size: 12px;
+  --md-sys-typescale-label-medium-size: 16px;
   /* Label Medium font weight */
   --md-sys-typescale-label-medium-weight: var(--md-ref-typeface-weight-medium);
   /* Label Medium font name */
@@ -88,7 +88,7 @@ $font-mono:      'Kode Mono', monospace;
   /* Label Large font size */
   --md-sys-typescale-label-large-size-value: 14px;
   --md-sys-typescale-label-large-size-unit: 2px;
-  --md-sys-typescale-label-large-size: 14px;
+  --md-sys-typescale-label-large-size: 16px;
   /* Label Large font weight */
   --md-sys-typescale-label-large-weight: var(--md-ref-typeface-weight-medium);
   /* Label Large font name */
@@ -264,7 +264,7 @@ $font-mono:      'Kode Mono', monospace;
   /* Headline Large */
   --md-sys-typescale-headline-large-text-transform: unset;
   --md-sys-typescale-headline-large-axis-value: unset;
-  --md-sys-typescale-headline-large-font-style: unset;
+  --md-sys-typescale-headline-large-font-style: var(--font-serif);
   --md-sys-typescale-headline-large-text-decoration: unset;
   /* Headline Large line height */
   --md-sys-typescale-headline-large-line-height-value: 40px;
@@ -338,9 +338,9 @@ $font-mono:      'Kode Mono', monospace;
   --md-sys-typescale-display-large-tracking-unit: 2px;
   --md-sys-typescale-display-large-tracking: -0.25px;
   /* Display Large font size */
-  --md-sys-typescale-display-large-size-value: 57px;
+  --md-sys-typescale-display-large-size-value: 100px;
   --md-sys-typescale-display-large-size-unit: 2px;
-  --md-sys-typescale-display-large-size: 57px;
+  --md-sys-typescale-display-large-size: 100px;
   /* Display Large font weight */
   --md-sys-typescale-display-large-weight: var(--md-ref-typeface-weight-regular);
   /* Display Large font name */
@@ -356,6 +356,7 @@ $font-mono:      'Kode Mono', monospace;
   /* Regular weight */
   --md-ref-typeface-weight-regular: 400;
 }
+
 
 /* Label Small */
 .label-small {

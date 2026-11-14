@@ -12,7 +12,7 @@
   --font-serif: 'Spectral', Georgia, serif;
   --body: var(--font-sans);
   --md-ref-typeface-plain: var(--font-sans);
-  --md-ref-typeface-brand: var(--font-serif);
+  --md-ref-typeface-brand: var(--font-heading);
 }
 
 
@@ -36,11 +36,34 @@ html {
 body {
   margin: 0;
   background: var(--blush);
-  color: var(--ink);
-  font-family: var(--body);
+  color: var(--p-color-ink-palantir-light);
+  font-family: var(--font-sans);
   font-size: 1.125rem;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ── Typography: Headers ────────────────────────────────────────────────── */
+:where(h1, h2, h3, h4, h5, h6) {
+  font-family: var(--font-serif);
+  color: var(--p-color-white);
+  font-weight: 900;
+}
+
+h1 {
+  font-size: 96px;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 64px;
+  line-height: 1.1;
+}
+
+.display {
+  font-size: 128px;
+  line-height: 1;
+  font-weight: 900;
 }
 
 main {
