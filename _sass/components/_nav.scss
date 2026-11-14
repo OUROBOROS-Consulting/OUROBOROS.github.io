@@ -2,15 +2,15 @@
 // Responsibility: Orchestrating brand identity, primary links, search, and utilities.
 
 .c-nav {
-  display: grid;
+  // display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
+  padding: var(--md-sys-spacing-md) var(--md-sys-spacing-md);
   background-color: var(--p-void-900);
   border-bottom: var(--p-spacing-4) solid var(--p-void-900);
   gap: var(--md-sys-spacing-md);
   // max-width: 1280px;
-  margin: 0 0;
+  // margin: 0 0;
   width: 100%;
   box-sizing: border-box;
 }
@@ -38,7 +38,7 @@
   align-items: center;
   gap: var(--md-sys-spacing-xs);
   order: 3;
-  margin-left: auto;
+  // margin-left: auto;
 }
 
 .c-nav__actions {
@@ -56,22 +56,12 @@
 }
 
 .c-nav__container {
-  display: flex;
+  // display: flex;
   align-items: center;
   gap: var(--md-sys-spacing-lg);
   width: 100%;
   min-width: 0;
 }
-
-/* Links and Dropdowns - The "Nav links" Organism logic */
-// .c-nav__main-nav {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-//   gap: 0;
-//   min-width: 0;
-//   order: 1;
-// }
 
 .c-nav__links {
   display: flex;
