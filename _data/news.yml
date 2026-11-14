@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-13
+generated: 2026-11-14
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader"
+        source: "The Guardian"
+        date: 2026-11-13
+        summary: "This is not a personality contest. This is a debate about the future of the Democratic party The election for Democratic Senate leader between Chuck Schumer and Chris Van Hollen must be understood for what it is. This..."
       - title: "The datacenter industry is using propaganda to fight opposition | Samuel Woolley, Dean Jackson and Maia Woluchem"
         url: "https://www.theguardian.com/commentisfree/2026/nov/13/datacenter-industry-propaganda"
         source: "The Guardian"
@@ -33,16 +38,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-12
         summary: "Exclusive: The Guardian revealed 29 hospital trusts were not or hardly using the controversial patient data tech NHS England has deleted a claim from its website stating 137 hospital trusts are benefiting from..."
-      - title: "Fewer hours and higher wages – or more burnout and surveillance: employers told to prepare for AI"
-        url: "https://www.theguardian.com/technology/2026/nov/12/fewer-hours-and-higher-wages-or-more-burnout-and-surveillance-employers-told-to-prepare-for-ai"
-        source: "The Guardian"
-        date: 2026-11-12
-        summary: "Workplace relations minister Amanda Rishworth launches best practice guide on AI adoption after Qantas and Canva job cuts Get our daily political email , free app or daily news podcast Entry-level jobs will be the first..."
-      - title: "AI has made it ‘close to impossible’ to assess university coursework, regulator says"
-        url: "https://www.theguardian.com/education/2026/nov/11/ai-close-to-impossible-assess-university-coursework-regulator"
-        source: "The Guardian"
-        date: 2026-11-11
-        summary: "Office for Students says institutions in England should return to traditional exams and in-person presentations Universities should go back to traditional exams and in-person presentations to grade students after..."
       - title: "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\""
         url: "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
         source: "Ars Technica"
@@ -161,11 +156,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-08
         summary: "The top publishing executive at the American Diabetes Association has resigned over how the organization has handled an editorial boycott at one of its journals following a protest at its annual meeting earlier this..."
-      - title: "SafeSport Will Now Alert Schools, Clubs if Coaches Sanctioned for Abuse Continue to Work With Kids"
-        url: "https://www.propublica.org/article/safesport-child-abuse-notification-system-impact"
-        source: "ProPublica"
-        date: 2026-11-05
-        summary: "The post SafeSport Will Now Alert Schools, Clubs if Coaches Sanctioned for Abuse Continue to Work With Kids appeared first on ProPublica ."
       - title: "U.S. university asks journal to remove professor’s name from paper with coauthor in China"
         url: "https://retractionwatch.com/2026/11/04/us-university-asks-journal-to-remove-professors-name-from-paper-with-coauthor-in-china/"
         source: "Retraction Watch"
