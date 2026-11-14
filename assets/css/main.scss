@@ -362,12 +362,12 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 }
 
 :root[data-theme="light"] {
-  --md-sys-color-background: #fff;
+  --md-sys-color-background: var(--p-color-white);
   --md-sys-color-on-background: #1e2124;
   --md-sys-color-outline: #d9d9d9;
   --md-sys-color-on-surface: #1e2124;
   --md-sys-color-on-surface-variant: #636363;
-  --md-sys-color-surface: #fff;
+  --md-sys-color-surface: var(--p-color-white);
   --md-sys-color-surface-variant: #f3f3f3;
   --md-sys-color-text-primary: #1e2124;
   --md-sys-color-text-secondary: #424242;

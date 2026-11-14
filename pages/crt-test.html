@@ -7,8 +7,8 @@
     <style>
         body {
             margin: 0;
-            background: #050505;
-            color: #eee;
+            background: var(--p-color-void-900);
+            color: var(--p-color-on-void-100);
             font-family: monospace;
             display: flex;
             flex-direction: column;
@@ -18,7 +18,7 @@
             overflow: hidden;
         }
         canvas {
-            border: 2px solid #333;
+            border: 2px solid var(--p-color-surface-dark-4);
             box-shadow: 0 0 40px rgba(0,0,0,0.8);
             max-width: 90vw;
             max-height: 70vh;
@@ -26,13 +26,13 @@
         .controls {
             margin-top: 20px;
             padding: 15px;
-            background: #1a1a1a;
+            background: var(--p-color-surface-dark-2);
             border-radius: 8px;
             font-size: 14px;
             text-align: center;
         }
-        .status { margin-bottom: 10px; color: #0f0; }
-        .error { color: #f44; }
+        .status { margin-bottom: 10px; color: var(--p-color-ember-gold-bright-600); }
+        .error { color: var(--p-color-error-light); }
     </style>
 </head>
 <body>
