@@ -208,9 +208,12 @@
   letter-spacing: 0.035em;
   text-transform: uppercase;
   text-decoration: none;
-  // transition:
-  //   background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-  //   color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+  transition:
+    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
+    transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+  position: relative;
+  z-index: 1;
 
   &:link,
   &:visited {
@@ -232,6 +235,162 @@
     outline: var(--site-focus-ring-width) solid var(--p-color-white);
     outline-offset: calc(-1 * var(--site-focus-ring-width));
   }
+}
+
+/* Dropdown links with asymmetric timing: instant hover-in, delayed gradated hover-out */
+.c-nav__dropdown-link {
+  /* Base state: black background, white text */
+  background-color: var(--p-void-900);
+  color: var(--p-color-white);
+}
+
+/* Hover state - instant swap */
+.c-nav__dropdown-link:hover {
+  background-color: var(--p-color-white);
+  color: var(--p-void-900);
+  transform: scale(1.02);
+}
+
+/* Staggered hover-out animations for lingering effect */
+.c-nav__dropdown-link:nth-child(1):not(:hover) {
+  animation: revert-color-1 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(2):not(:hover) {
+  animation: revert-color-2 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(3):not(:hover) {
+  animation: revert-color-3 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(4):not(:hover) {
+  animation: revert-color-4 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(5):not(:hover) {
+  animation: revert-color-5 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(6):not(:hover) {
+  animation: revert-color-6 250ms ease-out forwards;
+}
+
+/* Keyframes for staggered revert animations */
+@keyframes revert-color-1 {
+  0% {
+    background-color: var(--p-color-white);
+    color: var(--p-void-900);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: var(--p-void-900);
+    color: var(--p-color-white);
+    transform: scale(1);
+  }
+}
+
+@keyframes revert-color-2 {
+  0% {
+    background-color: var(--p-color-white);
+    color: var(--p-void-900);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: var(--p-void-900);
+    color: var(--p-color-white);
+    transform: scale(1);
+  }
+}
+
+@keyframes revert-color-3 {
+  0% {
+    background-color: var(--p-color-white);
+    color: var(--p-void-900);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: var(--p-void-900);
+    color: var(--p-color-white);
+    transform: scale(1);
+  }
+}
+
+@keyframes revert-color-4 {
+  0% {
+    background-color: var(--p-color-white);
+    color: var(--p-void-900);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: var(--p-void-900);
+    color: var(--p-color-white);
+    transform: scale(1);
+  }
+}
+
+@keyframes revert-color-5 {
+  0% {
+    background-color: var(--p-color-white);
+    color: var(--p-void-900);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: var(--p-void-900);
+    color: var(--p-color-white);
+    transform: scale(1);
+  }
+}
+
+@keyframes revert-color-6 {
+  0% {
+    background-color: var(--p-color-white);
+    color: var(--p-void-900);
+    transform: scale(1.02);
+  }
+  100% {
+    background-color: var(--p-void-900);
+    color: var(--p-color-white);
+    transform: scale(1);
+  }
+}
+
+/* aria-current items: start white/black, hover inverts, delayed gradated revert */
+.c-nav__dropdown-link[aria-current="page"] {
+  background-color: var(--p-color-white);
+  color: var(--p-void-900);
+  transform: scale(1.02);
+}
+
+.c-nav__dropdown-link[aria-current="page"]:hover {
+  background-color: var(--p-void-900);
+  color: var(--p-color-white);
+  transform: scale(1);
+}
+
+/* Same staggered delays apply to aria-current items when hovering */
+.c-nav__dropdown-link:nth-child(1)[aria-current="page"]:not(:hover) {
+  animation: revert-color-1 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(2)[aria-current="page"]:not(:hover) {
+  animation: revert-color-2 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(3)[aria-current="page"]:not(:hover) {
+  animation: revert-color-3 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(4)[aria-current="page"]:not(:hover) {
+  animation: revert-color-4 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(5)[aria-current="page"]:not(:hover) {
+  animation: revert-color-5 250ms ease-out forwards;
+}
+
+.c-nav__dropdown-link:nth-child(6)[aria-current="page"]:not(:hover) {
+  animation: revert-color-6 250ms ease-out forwards;
 }
 
 /* Utility/Action Buttons (Search, Contact, News, Theme) */
