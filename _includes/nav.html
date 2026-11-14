@@ -1,14 +1,8 @@
 <!-- ── Nav Organism ───────────────────────────────────────────────────────── -->
 <header aria-label="Main navigation" class="c-nav">
   <nav class="c-nav__container" aria-label="Primary">
-    <!-- Logo -->
-    <a class="c-nav__logo" href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="ouroborOS"
-        class="c-nav__logo-mark">
-    </a>
-
-    <!-- Page links -->
-    <div class="c-nav__links" id="primary-nav-links">
+    <!-- Left links (first 2) -->
+    <div class="c-nav__links c-nav__links--left">
       {% for item in site.data.nav %}
       {% assign item_is_active = false %}
       {% if item.url != '/' and page.url contains item.url %}
@@ -20,6 +14,7 @@
       {% assign item_is_active = true %}
       {% endif %}
       {% endfor %}
+      {% if forloop.index <= 2 %} <!-- First 2 links on left -->
       <div class="c-nav__dropdown{% if item_is_active %} is-active{% endif %}">
         {% if item.children %}
         <div class="c-nav__dropdown-row">
@@ -51,6 +46,63 @@
         </a>
         {% endif %}
       </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Logo in center -->
+    <a class="c-nav__logo" href="{{ '/' | relative_url }}">
+      <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="ouroborOS"
+        class="c-nav__logo-mark">
+    </a>
+
+    <!-- Right links (last 2) -->
+    <div class="c-nav__links c-nav__links--right">
+      {% for item in site.data.nav %}
+      {% assign item_is_active = false %}
+      {% if item.url != '/' and page.url contains item.url %}
+      {% assign item_is_active = true %}
+      {% endif %}
+      {% for active_path in item.active_paths %}
+      {% assign active_prefix = active_path | append: '/' %}
+      {% if page.url == active_path or page.url contains active_prefix %}
+      {% assign item_is_active = true %}
+      {% endif %}
+      {% endfor %}
+      {% assign total_nav = site.data.nav | size %}
+      {% if total_nav == 4 and forloop.index >= 3 %} <!-- Last 2 links (items 3 and 4) on right -->
+      <div class="c-nav__dropdown{% if item_is_active %} is-active{% endif %}">
+        {% if item.children %}
+        <div class="c-nav__dropdown-row">
+          <a href="{{ item.url | relative_url }}" class="c-nav__link"
+            {% if page.url == item.url %}aria-current="page"{% elsif item_is_active %}aria-current="location"{% endif %}>
+            {{ item.title }}
+          </a>
+          <button type="button" class="c-nav__accordion-btn" aria-expanded="false"
+            aria-controls="nav-dropdown-menu-{{ forloop.index }}"
+            aria-label="Toggle {{ item.title }} submenu">
+            <i class="ph-fill ph-caret-down" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="c-nav__dropdown-menu" id="nav-dropdown-menu-{{ forloop.index }}">
+          {% for child in item.children %}
+          {% assign child_is_active = false %}
+          {% if child.url != '/' and page.url contains child.url %}
+          {% assign child_is_active = true %}
+          {% endif %}
+          <a href="{{ child.url | relative_url }}"
+            class="c-nav__dropdown-link{% if child_is_active %} is-active{% endif %}"
+            {% if page.url == child.url %}aria-current="page"{% elsif child_is_active %}aria-current="location"{% endif %}>{{ child.title }}</a>
+          {% endfor %}
+        </div>
+        {% else %}
+        <a href="{{ item.url | relative_url }}" class="c-nav__link"
+          {% if page.url == item.url %}aria-current="page"{% elsif item_is_active %}aria-current="location"{% endif %}>
+          {{ item.title }}
+        </a>
+        {% endif %}
+      </div>
+      {% endif %}
       {% endfor %}
     </div>
 

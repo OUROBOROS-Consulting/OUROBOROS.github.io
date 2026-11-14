@@ -4,27 +4,27 @@
 .c-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
-  background-color: var(--p-void-900); /* Primary = black */
+  background-color: var(--p-void-900);
   border-bottom: var(--p-spacing-4) solid var(--p-void-900);
 }
 
 .c-nav__logo {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   text-decoration: none;
+  padding: 0 var(--md-sys-spacing-md);
 }
 
 .c-nav__logo-mark {
-  height: var(--site-nav-logo-size);;
+  height: var(--site-nav-logo-size);
   width: auto;
 }
 
 .c-nav__container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: var(--md-sys-spacing-md);
   width: 100%;
   min-width: 0;
@@ -38,6 +38,12 @@
   min-width: 0;
   gap: 0;
   align-items: center;
+}
+
+/* Add spacing between left links and logo, and logo and right links */
+.c-nav__links--left + .c-nav__logo,
+.c-nav__logo + .c-nav__links--right {
+  padding: 0 var(--md-sys-spacing-sm);
 }
 
 
@@ -83,7 +89,7 @@
   }
 
   &:hover {
-    color: var(--p-void-900);
+    color: var(--p-color-white);
   }
 
   &[aria-current="page"],
