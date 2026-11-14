@@ -2,11 +2,26 @@
 // Responsibility: Orchestrating brand identity, primary links, search, and utilities.
 
 .c-nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-md);
   background-color: var(--p-void-900);
   border-bottom: var(--p-spacing-4) solid var(--p-void-900);
+  gap: var(--md-sys-spacing-md);
+  // max-width: 1280px;
+  margin: 0 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.c-nav__main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--md-sys-spacing-lg);
+  min-width: 0;
+  order: 1;
 }
 
 .c-nav__logo {
@@ -17,6 +32,24 @@
   padding: 0 var(--md-sys-spacing-md);
 }
 
+.c-nav__actions-container {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  order: 3;
+  margin-left: auto;
+}
+
+.c-nav__actions {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  order: 3;
+  margin-left: auto;
+}
+
 .c-nav__logo-mark {
   height: var(--site-nav-logo-size);
   width: auto;
@@ -25,19 +58,27 @@
 .c-nav__container {
   display: flex;
   align-items: center;
-  gap: var(--md-sys-spacing-md);
+  gap: var(--md-sys-spacing-lg);
   width: 100%;
   min-width: 0;
 }
 
 /* Links and Dropdowns - The "Nav links" Organism logic */
+// .c-nav__main-nav {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   gap: 0;
+//   min-width: 0;
+//   order: 1;
+// }
+
 .c-nav__links {
   display: flex;
-  flex: 1 1 auto;
-  justify-content: center;
+  flex: 0 0 auto;
+  align-items: center;
   min-width: 0;
   gap: 0;
-  align-items: center;
 }
 
 /* Add spacing between left links and logo, and logo and right links */
@@ -82,11 +123,6 @@
   transition:
     color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
-  &:link,
-  &:visited {
-    color: var(--p-color-white);
-    text-decoration: none;
-  }
 
   &:hover {
     color: var(--p-color-white);
@@ -121,7 +157,7 @@
 .c-nav__dropdown > .c-nav__dropdown-row > .c-nav__accordion-btn {
   width: auto;
   height: auto;
-  padding: var(--md-sys-spacing-xs);
+  padding: var(--md-sys-spacing-sm);
   border: 0;
   border-radius: 0;
   color: var(--p-color-white);
@@ -243,13 +279,6 @@
   }
 }
 
-/* Dropdown links with asymmetric timing: instant hover-in, delayed gradated hover-out */
-.c-nav__dropdown-link {
-  /* Base state: black background, white text */
-  background-color: var(--p-void-900);
-  color: var(--p-color-white);
-}
-
 /* Hover state - instant swap */
 .c-nav__dropdown-link:hover {
   background-color: var(--p-color-white);
@@ -362,19 +391,6 @@
 }
 
 /* aria-current items: start white/black, hover inverts, delayed gradated revert */
-.c-nav__dropdown-link[aria-current="page"] {
-  background-color: var(--p-color-white);
-  color: var(--p-void-900);
-  transform: scale(1.02);
-}
-
-.c-nav__dropdown-link[aria-current="page"]:hover {
-  background-color: var(--p-void-900);
-  color: var(--p-color-white);
-  transform: scale(1);
-}
-
-/* Same staggered delays apply to aria-current items when hovering */
 .c-nav__dropdown-link:nth-child(1)[aria-current="page"]:not(:hover) {
   animation: revert-color-1 250ms ease-out forwards;
 }
@@ -400,21 +416,6 @@
 }
 
 /* Utility/Action Buttons (Search, Contact, News, Theme) */
-.c-nav__actions {
-  display: flex;
-  flex: 0 0 auto;
-  align-items: center;
-  gap: var(--md-sys-spacing-xs);
-}
-
-.c-nav__links.is-open ~ .c-nav__actions {
-  display: flex;
-  flex: 1 0 100%;
-  order: 2;
-  justify-content: flex-start;
-  padding-top: var(--md-sys-spacing-sm);
-  border-top: var(--site-border-width) solid var(--p-color-white);
-}
 
 .c-nav__search-wrap {
   position: relative;
@@ -476,13 +477,22 @@
 }
 
 @media (max-width: 62rem) {
-  .c-nav__container {
+  .c-nav {
+    display: flex;
     flex-wrap: wrap;
+  }
+
+  .c-nav__main-nav {
+    order: 1;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
 
   .c-nav__hamburger {
     display: inline-grid;
     margin-left: auto;
+    order: 3;
   }
 
   .c-nav__links,
@@ -493,9 +503,17 @@
   .c-nav__links.is-open {
     display: grid;
     flex: 1 0 100%;
-    order: 1;
+    order: 2;
     justify-content: stretch;
     gap: var(--md-sys-spacing-xs);
+  }
+
+  .c-nav__links.is-open ~ .c-nav__actions {
+    display: flex;
+    flex: 1 0 100%;
+    order: 4;
+    justify-content: flex-end;
+    margin-top: var(--md-sys-spacing-sm);
   }
 
   .c-nav__dropdown,

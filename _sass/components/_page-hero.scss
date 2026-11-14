@@ -5,6 +5,10 @@
   min-height: 100vh;
   min-height: 100svh;
   padding: clamp(3rem, 7vh, 6rem) clamp(1.5rem, 5vw, 4rem);
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .c-page-hero__inner {
@@ -21,10 +25,13 @@
   column-gap: clamp(2.5rem, 7vw, 7rem);
   row-gap: var(--site-spacing-lg);
   width: 100%;
-  min-height: calc(100vh - clamp(3rem, 7vh, 6rem) - clamp(3rem, 7vh, 6rem));
-  min-height: calc(100svh - clamp(3rem, 7vh, 6rem) - clamp(3rem, 7vh, 6rem));
-  margin-inline: auto;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--md-sys-spacing-lg);
+  padding-right: var(--md-sys-spacing-lg);
   padding-bottom: 3rem;
+  overflow-x: hidden;
 }
 
 .c-page-hero__back {
@@ -113,13 +120,16 @@
 }
 
 .c-page-hero__icon {
-  font-size: clamp(12rem, 27vw, 24rem);
+  font-size: clamp(12rem, 27vw, 18rem);
   line-height: 1;
+  max-width: 100%;
 }
 
 .c-page-hero__icon,
 .c-page-hero__logo {
   filter: url(#hero-displacement);
+  max-width: 100%;
+  height: auto;
 }
 
 .c-page-hero__filter-defs {
@@ -216,6 +226,7 @@
 @media (max-width: 48rem) {
   .c-page-hero {
     padding: 2.5rem 1.25rem 3.5rem;
+    overflow-x: hidden;
   }
 
   .c-page-hero__inner {

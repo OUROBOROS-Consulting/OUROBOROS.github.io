@@ -111,7 +111,10 @@
   background-color: black;
   border: 0;
   border-bottom: var(--site-border-width) solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
-  // background-image: none;
+  background-image: url("../images/Abstract.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .c-page-hero__identity {

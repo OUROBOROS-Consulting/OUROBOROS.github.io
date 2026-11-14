@@ -97,6 +97,9 @@
     <div class="nav-shell">
       {% include nav.html %}
     </div>
+    {% if page.layout == 'home' %}
+    {% include hero.html %}
+    {% endif %}
     <main id="main" class="c-container">
       {{ content }}
     </main>
