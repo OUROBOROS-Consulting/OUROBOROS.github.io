@@ -2,61 +2,58 @@
 ---
 @use "index" as *;
 
+// ── Problematic By Design: Identity Layer ───────────────────────────────
+// This file maps standard HTML elements and brand classes to our
+// semantic design tokens and typography families.
+
+:root {
+  --font-sans: 'Syne', 'Inter', 'DejaVu Sans', system-ui, sans-serif;
+  --font-mono: 'Kode Mono', monospace;
+  --font-serif: 'Spectral', Georgia, serif;
+  --body: var(--font-sans);
+  --md-ref-typeface-plain: var(--font-sans);
+  --md-ref-typeface-brand: var(--font-serif);
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background: var(--blush);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  background-color: var(--md-sys-color-surface);
+  min-height: 100vh;
+}
+
 a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, .c-nav__dropdown-link, .c-nav__action-item)):where(:link, :visited) {
   color: var(--md-sys-color-primary);
 }
 
 a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, .c-nav__dropdown-link, .c-nav__action-item)):where(:hover, :focus-visible) {
   color: var(--md-sys-color-secondary);
-}
-
-.error-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  width: min(100%, 56rem);
-  min-height: clamp(30rem, calc(100svh - 7rem), 48rem);
-  margin-inline: auto;
-  padding-block: clamp(3rem, 8vh, 6rem);
-}
-
-.error-code {
-  margin: 0 0 var(--md-sys-spacing-md);
-  color: var(--md-sys-color-primary);
-  font-family: var(--font-mono);
-  font-size: clamp(3rem, 9vw, 6rem);
-  line-height: 1;
-  letter-spacing: 0.08em;
-}
-
-.error-heading {
-  max-width: 18ch;
-  margin: 0 0 var(--md-sys-spacing-md);
-  font-size: clamp(2rem, 5vw, 3.25rem);
-  line-height: 1.08;
-}
-
-.error-lede {
-  max-width: 56ch;
-  margin: 0 0 var(--md-sys-spacing-xl);
-  font-size: var(--md-sys-typescale-body-large-size);
-  line-height: var(--md-sys-typescale-body-large-line-height);
-}
-
-.error-nav {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--md-sys-spacing-sm);
-  margin-bottom: var(--md-sys-spacing-xl);
-}
-
-.error-footnote {
-  max-width: 60ch;
-  margin: 0;
-  color: var(--md-sys-color-on-surface-variant);
-  font-size: var(--md-sys-typescale-body-small-size);
-  line-height: var(--md-sys-typescale-body-small-line-height);
 }
 
 :where(
@@ -78,19 +75,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   [contenteditable="true"]
 ) {
   font-family: var(--font-mono);
-}
-
-.c-background-morph {
-  position: fixed;
-  z-index: 1;
-  inset: 0;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.c-background-morph ~ :not(.nav-shell):not(script):not(svg) {
-  position: relative;
-  z-index: 2;
 }
 
 #main.c-container {
@@ -209,34 +193,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   width: 100%;
 }
 
-.c-nav,
-.c-footer,
-.c-disclaimer-bar,
-.c-page-hero {
-  --md-sys-color-surface: var(--p-void-900);
-  --md-sys-color-on-surface: var(--p-color-white);
-  --md-sys-color-surface-variant: var(--p-forensic-700);
-  --md-sys-color-on-surface-variant: var(--p-color-white);
-  --md-sys-color-text-primary: var(--p-color-white);
-  --md-sys-color-text-secondary: var(--p-forensic-100);
-  --md-sys-color-text-tertiary: var(--p-ember-gold-bright-600);
-  --md-sys-color-outline: var(--p-forensic-500);
-  --md-sys-color-primary: var(--p-ember-gold-bright-600);
-  --md-sys-color-on-primary: var(--p-void-900);
-  --md-sys-color-primary-container: var(--p-ember-gold-bright-800);
-  --md-sys-color-on-primary-container: var(--p-void-900);
-  --md-sys-color-secondary: var(--p-ember-gold-bright-800);
-  --md-sys-color-on-secondary: var(--p-void-900);
-  --md-sys-color-secondary-container: var(--p-ember-gold-bright-800);
-  --md-sys-color-on-secondary-container: var(--p-void-900);
-  --md-sys-color-tertiary: var(--p-ember-amber-500);
-  --md-sys-color-on-tertiary: var(--p-void-900);
-  --md-sys-color-tertiary-container: var(--p-ember-amber-400);
-  --md-sys-color-on-tertiary-container: var(--p-void-900);
-  color: var(--p-color-white);
-  background-color: black;
-}
-
 .c-nav {
   box-sizing: border-box;
   width: 100%;
@@ -301,12 +257,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 .c-footer,
 .c-disclaimer-bar {
   background-color: var(--md-sys-color-surface);
-  background-image:
-    linear-gradient(
-      color-mix(in srgb, var(--md-sys-color-surface), transparent 20%),
-      color-mix(in srgb, var(--md-sys-color-surface), transparent 10%)
-    ),
-    url("../images/Marble.png");
   background-size: cover, 720px 720px;
   background-position: center, center;
   background-repeat: no-repeat, repeat;
@@ -424,11 +374,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   --md-sys-color-text-tertiary: var(--p-ember-gold-deep-900);
 }
 
-.c-nav {
-  border: 0;
-  border-bottom: var(--site-border-width) solid color-mix(in srgb, var(--md-sys-color-on-surface) 18%, transparent);
-  background-image: none;
-}
 
 .c-nav__link,
 .c-nav__dropdown-link {

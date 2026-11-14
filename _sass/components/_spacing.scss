@@ -63,9 +63,6 @@
       width: 100vw;
       border-block: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
       background-color: var(--p-void-900);
-      background-image:
-        linear-gradient(var(--site-marble-overlay-strong), var(--site-marble-overlay-strong)),
-        url("../images/Marble.png");
       background-size: cover, 720px 720px;
       background-position: center, center;
       background-repeat: no-repeat, repeat;

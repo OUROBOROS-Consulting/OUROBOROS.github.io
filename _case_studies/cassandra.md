@@ -1,6 +1,6 @@
 ---
 title: Cassandra's Advisory Practice
-description: "Business tools and digital presence for a solo advisory practice."
+description: "Design  and digital presence for a solo advisory practice."
 layout: sections
 section_layout: stacked
 back_url: /case-studies/
@@ -8,9 +8,9 @@ category: Solopreneur
 work_type: Client engagement
 featured: true
 hero_icon: ph-chart-line-up
-lede: "Helping an experienced professional establish the digital tools and online presence for an independent advisory practice."
-date: 2026-02-01
-tags: [Business Systems, Digital Presence, Solopreneur]
+lede: "Helping an experienced AI governance professional establish the digital tools and online presence for an independent advisory practice."
+date: 2026-11-13
+tags: [Design, Business Systems, Digital Presence, Solopreneur]
 
 # ── Overview blurb ──────────────────────────────────────────────────
 about:
@@ -66,7 +66,4 @@ sections:
         This engagement reflects a common need among independent professionals: choosing digital tools and building an online presence without taking on systems that are too complex for the business.
       - >
         What distinguishes good consulting from bad consulting is not technical sophistication. It is knowing that your job is to become unnecessary — not toward dependency on a consultant, but toward not needing one.
-      - >
-        The work also included discussing AI tools and how to use them with care. The aim was
-        to help the client make informed choices and remain comfortable managing her own setup.
 ---
