@@ -58,9 +58,33 @@
   --site-border-width-emphasis: 0.125rem;
   --site-footer-content-max-width: 76rem;
 
+  // Added button hover glow:
+  --site-button-hover-glow: rgba(var(--p-ember-gold-bright-600), 0.4);
+
+  // Added button arrow offset:
+  --site-button-arrow-offset: 3px;
+
+  // Added button letter-spacing:
+  --site-button-letter-spacing: -0.02em;
+
+  // Added logo size for nav (square logo, 120px)
+  --site-nav-logo-size: 100px;
+
   /* ── Typography References ───────────────────────────────────────────────── */
   // Note: Typography is handled by the typography module in _tokens.scss.
   // Do not redefine type values here. Reference only.
+  // Added CSS custom property font sizes for legacy compatibility:
+  --p-font-display-large: 57px;
+  --p-font-display-medium: 45px;
+  --p-font-headline-medium: 28px;
+  --p-font-headline-large: 32px;
+  --p-font-headline-small: 24px;
+
+  // Added radius token for divider glyph:
+  --p-radius-xl: 16px;
+
+  // Added motion spacing for animations:
+  --p-motion-entrance-offset: 10px;
 
   /* ── Motion ──────────────────────────────────────────────────────────────── */
   --site-motion-interaction-duration: var(--md-sys-motion-duration-200);

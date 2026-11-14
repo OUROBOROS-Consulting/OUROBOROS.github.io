@@ -7,7 +7,7 @@
   justify-content: space-between;
   padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
   background-color: var(--p-void-900); /* Primary = black */
-  border-bottom: 5px solid var(--p-void-900);
+  border-bottom: var(--p-spacing-4) solid var(--p-void-900);
 }
 
 .c-nav__logo {
@@ -17,7 +17,7 @@
 }
 
 .c-nav__logo-mark {
-  height: 48px; /* Standardized nav height */
+  height: var(--site-nav-logo-size);;
   width: auto;
 }
 

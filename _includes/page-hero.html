@@ -1,22 +1,3 @@
-<!-- ══════════════════════════════════════════════════════════════════════
-     PAGE HERO — shared .c-page-hero markup for article / sections / service /
-     psa layouts. Each page uses a large Phosphor icon, selected from its
-     front matter or category.
-
-     Params:
-       page.hero_image      — optional local image path (4:3 crops work best), e.g. /assets/images/technology.webp
-       page.hero_image_alt  — meaningful alternative text; omit for decorative imagery
-       back_url         — Back-link target, raw path (this include applies relative_url)
-       back_label       — Back-link text, e.g. "Back" / "All Services" / "All PSAs"
-       tagline          — "true" to render page.tagline (markdownified) above page.lede
-       lede_optional    — "true" to omit the <p> entirely when page.lede is blank
-       category_default — fallback text when page.category is unset (psa: "PSA")
-       tag_style        — "anchor" (slugified jump-link pills) | "pill" (plain span)
-       cta_mode         — "none" | "service" (button + optional page.price,
-                           inside the text column) | "psa" (download page.pdf +
-                           optional page.date, its own grid column)
-       scroll_hint      — "false" to omit the scroll cue (shown by default)
-     ══════════════════════════════════════════════════════════════════════ -->
 {% assign hero_icon = page.hero_icon | default: include.hero_icon %}
 {% unless hero_icon %}
   {% assign configured_icon = page.icon | default: include.icon %}

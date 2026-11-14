@@ -42,7 +42,7 @@
 /* Primary Variant */
 .c-btn--primary {
   &:hover {
-    box-shadow: 0 0 25px rgba(221, 203, 163, 0.4);
+    box-shadow: 0 0 25px var(--site-button-hover-glow);
   }
 
   &:active {
@@ -55,7 +55,7 @@
 }
 
 .c-btn:is(:hover, :focus-visible) .ph-arrow-right {
-  transform: translateX(0.2rem);
+  transform: translateX(var(--site-button-arrow-offset));
 }
 
 /* Light button (white background, black text) */
@@ -69,7 +69,7 @@
   line-height: var(--md-sys-typescale-label-large-line-height);
   padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
   text-align: center;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--site-button-letter-spacing);
 
   &:hover {
     background: var(--md-sys-color-on-background);
@@ -93,7 +93,7 @@
   line-height: var(--md-sys-typescale-label-large-line-height);
   padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
   text-align: center;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--site-button-letter-spacing);
 
   &:hover {
     background: var(--md-sys-color-on-surface);

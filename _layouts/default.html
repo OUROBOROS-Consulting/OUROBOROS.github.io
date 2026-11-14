@@ -100,18 +100,10 @@
     <main id="main" class="c-container">
       {{ content }}
     </main>
+    
     <!-- Closing CTA — suppressed via hide_cta front matter (e.g. intake) -->
     {% unless page.hide_cta %}{% include cta.html %}{% endunless %}
     {% include footer.html %}
-    <!-- <svg class="c-site-effects" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="background-displacement" x="-25%" y="-25%" width="150%" height="150%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.013" numOctaves="3" seed="3" result="background-noise" />
-          <feDisplacementMap id="background-displacement-map" in="SourceGraphic" in2="background-noise" scale="22"
-            xChannelSelector="R" yChannelSelector="G" />
-        </filter>
-      </defs>
-    </svg> -->
     <script defer src="{{ '/assets/js/search.js' | relative_url }}"></script>
     <script src="{{ '/assets/js/main.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
     <script defer src="{{ '/assets/js/noise.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
