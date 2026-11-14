@@ -1,6 +1,13 @@
-// Foundation: design tokens, reset, mixins, body texture
-@forward "design/tokens";
-@forward "primitives";
+// Foundation: design tokens (via primitives), reset, mixins, body texture
+// Main entry point for the component library.
+// Imports primitives (raw values) and all component styles.
+
+@forward "primitives/spacing";
+@forward "primitives/radius";
+@forward "primitives/shadows";
+@forward "primitives/colors";
+@forward "primitives/brand";
+
 @forward "components/banner";
 @forward "components/button";
 @forward "components/card";

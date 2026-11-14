@@ -1,6 +1,6 @@
 ---
 ---
-@use "design/tokens" as *;
+@forward "_primitives";
 
 .intake-wrapper {
   box-sizing: border-box;
