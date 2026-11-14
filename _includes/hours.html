@@ -5,11 +5,12 @@
   <p class="c-hours__time">{{ a.compact }}</p>
 </div>
 {%- else -%}
-<aside class="c-hours" aria-labelledby="hours-label">
+<!-- <aside class="c-hours" aria-labelledby="hours-label">
   <div class="c-hours__header">
     <p class="c-hours__label" id="hours-label">Availability</p>
     <p class="c-hours__timezone">{{ a.timezone }}<span class="c-hours__note">{{ a.timezone_note }}</span></p>
   </div>
+
   <dl class="c-hours__list">
     {%- for row in a.hours %}
     <div class="c-hours__row{% if row.closed %} c-hours__row--closed{% endif %}">
@@ -18,9 +19,15 @@
     </div>
     {%- endfor %}
   </dl>
+
   <div class="c-hours__footer">
     <p class="c-hours__response">{{ a.response }}</p>
     <p class="c-hours__after">{{ a.after_hours }}</p>
   </div>
-</aside>
+</aside> -->
+<md-filled-card>
+<div>
+  kuysacvsudvc
+</div>
+</md-filled-card>
 {%- endif -%}

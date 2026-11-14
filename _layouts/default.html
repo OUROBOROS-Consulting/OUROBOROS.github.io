@@ -90,6 +90,23 @@
     <link rel="stylesheet" type="text/css"
       href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.2/src/fill/style.css" />
 
+    <script type="importmap">
+            {
+              "imports": {
+                "@material/web/": "https://esm.run/@material/web/"
+              }
+            }
+    </script>
+    
+    <script type="module">
+      import '@material/web/all.js';
+      import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+      import { styles as rippleStyles } from '@material/web/ripple/dom-registry.js';
+      import { styles as buttonStyles } from '@material/web/button/filled-button-registry.js';
+
+      document.adoptedStyleSheets.push(typescaleStyles.styleSheet, rippleStyles.styleSheet, buttonStyles.styleSheet);
+    </script>
+
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.6.1/lottie.min.js"></script> -->
   </head>
 
@@ -113,8 +130,9 @@
     <script defer
       src="{{ '/assets/js/noise.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 
-    <script
+    <script defer
       src="{{ '/assets/js/progress-bar.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
+    <script defer src="{{ '/assets/js/material-snippets.js' | relative_url }}"></script>
   </body>
 
 </html>

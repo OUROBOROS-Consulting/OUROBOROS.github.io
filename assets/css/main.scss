@@ -907,3 +907,65 @@ a:not(:where(.c-btn, .c-banner, .c-nav__link, .c-nav__dropdown-link, .c-nav__act
   background-color: var(--p-color-black);
   background-image: none;
 }
+
+/* Material Web filled-button styling to match design system */
+md-filled-button {
+  --md-filled-button-container-class: c-btn;
+  --md-filled-button-disabled-class: is-disabled;
+  --md-filled-button-focus-ripple-class: is-focused;
+  --md-filled-button-hover-class: is-hovered;
+  --md-filled-button-pressed-class: is-pressed;
+}
+
+.c-btn[aria-disabled="true"] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.c-btn.is-hovered {
+  background-color: color-mix(in srgb, var(--md-sys-color-primary) 20%, var(--md-sys-color-on-primary));
+}
+
+.c-btn.is-pressed {
+  background-color: var(--md-sys-color-primary);
+}
+
+.c-btn.is-focused .c-btn__label,
+.c-btn.is-pressed .c-btn__label {
+  color: var(--md-sys-color-on-primary-container);
+}
+
+.c-btn__label {
+  color: var(--md-sys-color-on-primary);
+  font-size: var(--md-sys-typescale-label-large-size);
+  font-weight: 500;
+  line-height: 1.25;
+}
+
+.c-btn[disabled] {
+  opacity: 0.38;
+  pointer-events: none;
+}
+
+/* Override for nav hamburger button */
+.c-nav__hamburger {
+  min-height: var(--site-button-min-height);
+  border-radius: var(--site-radius-none);
+  padding: 0 1.5rem;
+  --md-filled-button-label-color: var(--md-sys-color-on-surface);
+}
+
+.c-nav__hamburger.is-hovered,
+.c-nav__hamburger.is-pressed {
+  background-color: color-mix(in srgb, var(--md-sys-color-primary) 25%, var(--md-sys-color-on-primary));
+}
+
+.c-nav__hamburger.is-hovered .c-btn__label,
+.c-nav__hamburger.is-pressed .c-btn__label {
+  color: var(--md-sys-color-on-primary);
+}
+
+/* Dark theme adjustments */
+:root[data-theme="light"] .c-nav__hamburger {
+  --md-filled-button-label-color: var(--md-sys-color-on-surface);
+}

@@ -1,48 +1,34 @@
-<!-- ══════════════════════════════════════════════════════════════════════
-     PAGE HERO — shared .c-page-hero markup for article / sections / service /
-     psa layouts. Each page uses a large Phosphor icon, selected from its
-     front matter or category.
-
-     Params:
-       page.hero_image      — optional local image path (4:3 crops work best), e.g. /assets/images/technology.webp
-       page.hero_image_alt  — meaningful alternative text; omit for decorative imagery
-       back_url         — Back-link target, raw path (this include applies relative_url)
-       back_label       — Back-link text, e.g. "Back" / "All Services" / "All PSAs"
-       tagline          — "true" to render page.tagline (markdownified) above page.lede
-       lede_optional    — "true" to omit the <p> entirely when page.lede is blank
-       category_default — fallback text when page.category is unset (psa: "PSA")
-       tag_style        — "anchor" (slugified jump-link pills) | "pill" (plain span)
-       cta_mode         — "none" | "service" (button + optional page.price,
-                           inside the text column) | "psa" (download page.pdf +
-                           optional page.date, its own grid column)
-       scroll_hint      — "false" to omit the scroll cue (shown by default)
-     ══════════════════════════════════════════════════════════════════════ -->
 {% assign hero_icon = page.hero_icon | default: include.hero_icon %}
 {% unless hero_icon %}
-  {% assign configured_icon = page.icon | default: include.icon %}
-  {% if configured_icon contains 'ph-' %}
-    {% assign hero_icon = configured_icon | split: ' ' | last %}
-  {% elsif configured_icon contains 'fa-book-open' %}
-    {% assign hero_icon = 'ph-book-open' %}
-  {% elsif configured_icon contains 'fa-microscope' %}
-    {% assign hero_icon = 'ph-microscope' %}
-  {% elsif configured_icon contains 'fa-circle-question' %}
-    {% assign hero_icon = 'ph-question' %}
-  {% elsif configured_icon contains 'fa-triangle-exclamation' %}
-    {% assign hero_icon = 'ph-warning' %}
-  {% else %}
-    {% assign hero_icon = 'ph-sparkle' %}
-  {% endif %}
+{% assign configured_icon = page.icon | default: include.icon %}
+{% if configured_icon contains 'ph-' %}
+{% assign hero_icon = configured_icon | split: ' ' | last %}
+{% elsif configured_icon contains 'fa-book-open' %}
+{% assign hero_icon = 'ph-book-open' %}
+{% elsif configured_icon contains 'fa-microscope' %}
+{% assign hero_icon = 'ph-microscope' %}
+{% elsif configured_icon contains 'fa-circle-question' %}
+{% assign hero_icon = 'ph-question' %}
+{% elsif configured_icon contains 'fa-triangle-exclamation' %}
+{% assign hero_icon = 'ph-warning' %}
+{% else %}
+{% assign hero_icon = 'ph-sparkle' %}
+{% endif %}
 {% endunless %}
-<header class="c-page-hero{% if include.home == 'true' %} c-page-hero--home{% endif %}{{ include.extra_class }}">
+
+<header
+  class="c-page-hero{% if include.home == 'true' %} c-page-hero--home{% endif %}{{ include.extra_class }}">
   <div class="c-page-hero__inner">
     {% unless include.home == 'true' %}
-    <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}"><i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>{{ include.back_label }}</a>
+    <a class="c-page-hero__back" href="{{ include.back_url | relative_url }}"><i
+        class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>{{ include.back_label
+      }}</a>
     {% endunless %}
 
     <div class="c-page-hero__identity">
       {% if include.category or page.category or page.eyebrow %}
-      <p class="label-large text-primary">{{ include.category | default: page.category | default: page.eyebrow | default: include.category_default }}</p>
+      <p class="label-large text-primary">{{ include.category | default: page.category | default:
+        page.eyebrow | default: include.category_default }}</p>
       {% endif %}
 
       <h1 class="headline-large">
@@ -66,14 +52,17 @@
       <div class="c-page-hero__tagline body-large">{{ page.tagline_2 | markdownify }}</div>
       {% endif %}
       <div class="c-action-group c-page-hero__actions">
-        <a href="{{ page.cta_url | default: '/services/' | relative_url }}" class="c-btn c-btn--primary">
+        <a href="{{ page.cta_url | default: '/services/' | relative_url }}"
+          class="c-btn c-btn--primary">
           {{ page.cta_label | default: 'Explore Services' }}
-          {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
+          {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else
+          %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
         </a>
         {% if page.cta2_label %}
         <a href="{{ page.cta2_url | relative_url }}" class="c-btn c-btn--primary">
           {{ page.cta2_label }}
-          {% if page.cta2_icon %}<i class="{{ page.cta2_icon }} ms-1" aria-hidden="true"></i>{% endif %}
+          {% if page.cta2_icon %}<i class="{{ page.cta2_icon }} ms-1" aria-hidden="true"></i>{%
+          endif %}
         </a>
         {% endif %}
       </div>
@@ -100,9 +89,11 @@
 
       {% if include.cta_mode == 'service' %}
       <div class="c-action-group c-page-hero__actions">
-        <a href="{{ page.cta_url | default: '/intake' | relative_url }}" class="c-btn c-btn--primary">
+        <a href="{{ page.cta_url | default: '/intake' | relative_url }}"
+          class="c-btn c-btn--primary">
           {{ include.cta_label | default: page.cta_label | default: 'Get in Touch' }}
-          {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
+          {% if page.cta_icon %}<i class="{{ page.cta_icon }} ms-1" aria-hidden="true"></i>{% else
+          %}<i class="ph-fill ph-arrow-right ms-1" aria-hidden="true"></i>{% endif %}
         </a>
         {% if page.price %}
         <p class="body-medium">{{ page.price }}</p>
@@ -112,7 +103,8 @@
 
       {% if include.cta_mode == 'psa' %}
       <div class="c-action-group c-page-hero__actions">
-        <a href="{{ page.pdf | relative_url }}" download class="c-btn c-btn--primary">Download PDF</a>
+        <a href="{{ page.pdf | relative_url }}" download class="c-btn c-btn--primary">Download
+          PDF</a>
         {% if page.date %}
         <p class="label-medium">{{ page.date | date: "%B %Y" }}</p>
         {% endif %}
@@ -121,9 +113,9 @@
 
       {% assign cta_text = include.cta_text | default: page.cta_text %}
       {% if cta_text %}
-      <div class="c-action-group c-page-hero__actions">
-        <p class="body-medium">{{ cta_text }}</p>
-      </div>
+        <div class="c-action-group c-page-hero__actions">
+          <p class="body-medium">{{ cta_text }}</p>
+        </div>
       {% endif %}
       {% endif %}
     </div><!-- /c-page-hero__content -->
@@ -131,34 +123,38 @@
     <div class="c-page-hero__art{% if page.hero_image %} c-page-hero__art--image{% endif %}">
       {% if page.hero_image %}
       {% if page.hero_image_alt %}
-      <img class="c-page-hero__image" src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_image_alt | escape }}" fetchpriority="high">
+      <img class="c-page-hero__image" src="{{ page.hero_image | relative_url }}"
+        alt="{{ page.hero_image_alt | escape }}" fetchpriority="high">
       {% else %}
-      <img class="c-page-hero__image" src="{{ page.hero_image | relative_url }}" alt="" aria-hidden="true" fetchpriority="high">
+      <img class="c-page-hero__image" src="{{ page.hero_image | relative_url }}" alt=""
+        aria-hidden="true" fetchpriority="high">
       {% endif %}
       {% else %}
       {% if include.home == 'true' %}
-      <img class="c-page-hero__image c-page-hero__logo" src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" aria-hidden="true" width="1000" height="1000">
+      <img class="c-page-hero__image c-page-hero__logo"
+        src="{{ '/assets/images/logo.svg' | relative_url }}" alt="" aria-hidden="true" width="1000"
+        height="1000">
       {% else %}
       <i class="ph-fill {{ hero_icon }} c-page-hero__icon" aria-hidden="true"></i>No
       {% endif %}
       {% endif %}
     </div>
 
-    <svg class="c-page-hero__filter-defs" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <svg class="c-page-hero__filter-defs" aria-hidden="true" focusable="false"
+      xmlns="http://www.w3.org/2000/svg">
       <defs>
         <filter id="hero-displacement" x="-8%" y="-8%" width="116%" height="116%">
-          <feTurbulence id="hero-glitch-noise" type="fractalNoise" baseFrequency="0.02 0.55" numOctaves="1" seed="3" result="hero-noise" />
-          <feDisplacementMap id="hero-displacement-map" in="SourceGraphic" in2="hero-noise" scale="0"
-            xChannelSelector="R" yChannelSelector="G" />
+          <feTurbulence id="hero-glitch-noise" type="fractalNoise" baseFrequency="0.02 0.55"
+            numOctaves="1" seed="3" result="hero-noise" />
+          <feDisplacementMap id="hero-displacement-map" in="SourceGraphic" in2="hero-noise"
+            scale="0" xChannelSelector="R" yChannelSelector="G" />
         </filter>
       </defs>
     </svg>
 
-    {% unless include.scroll_hint == 'false' %}
     <div class="c-page-hero__scroll-hint">
       <div class="c-page-hero__scroll-line"></div>
-      <span class="label-small">Scroll</span>
+      <span class="label-small">SCROLL</span>
     </div>
-    {% endunless %}
   </div><!-- /c-page-hero__inner -->
 </header><!-- /c-page-hero -->

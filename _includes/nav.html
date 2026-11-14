@@ -20,6 +20,7 @@
       {% assign item_is_active = true %}
       {% endif %}
       {% endfor %}
+
       <div class="c-nav__dropdown{% if item_is_active %} is-active{% endif %}">
         {% if item.children %}
         <div class="c-nav__dropdown-row">
@@ -70,22 +71,26 @@
         </button>
       </form>
 
-      <a href="{{ '/intake' | relative_url }}" class="c-nav__action-item" aria-label="Contact"
+      <button type="button" id="contact" class="c-nav__action-item" aria-label="Contact"
         title="Contact">
-        <i class="ph ph-fill ph-envelope" aria-hidden="true"></i>
-      </a>
+        <a href="{{ '/intake' | relative_url }}" class="c-nav__action-item" aria-label="Contact"
+          title="Contact">
+          <i class="ph-fill ph-envelope" aria-hidden="true"></i>
+        </a>
+      </button>
 
       <button type="button" id="theme-toggle" class="c-nav__action-item c-nav__theme-btn"
         title="Toggle theme" aria-label="Toggle theme">
-        <i class="ph ph-fill ph-moon" aria-hidden="true"></i>
+        <i class="ph-fill ph-moon" aria-hidden="true"></i>
       </button>
     </div>
 
     <!-- Mobile menu toggle -->
-    <button type="button" class="c-nav__hamburger" aria-label="Open navigation menu"
+    <button class="c-nav__action-item c-nav__hamburger" aria-label="Open navigation menu"
       aria-expanded="false" aria-controls="primary-nav-links">
       <i class="ph-fill ph-list" aria-hidden="true"></i>
     </button>
+
   </nav>
   <div id="progress-bar-top" class="progress-bar"></div>
   <div id="progress-bar-bottom" class="progress-bar"></div>

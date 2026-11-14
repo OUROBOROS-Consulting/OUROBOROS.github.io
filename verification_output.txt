@@ -1,3 +1,0 @@
-Using {{ site.docs.biography.url }} for biography links.
-Using {{ site.docs.newsroom.url }} for announcements links.
-Using {{ site.docs.portfolio.url }} for case study links.
