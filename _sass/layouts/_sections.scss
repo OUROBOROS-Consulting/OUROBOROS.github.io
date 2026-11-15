@@ -49,11 +49,18 @@
   border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
 }
 
-.c-section--paper :is(.values-card__name, .values-card__desc, .values-card__desc p) {
+.c-section--paper .audience-card__surface {
+  color: var(--p-color-ink-palantir-light);
+  background-color: var(--site-card-surface);
+  border-color: color-mix(in srgb, var(--p-forensic-700) 28%, transparent);
+}
+
+.c-section--paper :is(.values-card__name, .audience-card__name, .values-card__desc, .audience-card__desc, .values-card__desc p, .audience-card__desc p) {
   color: var(--p-color-ink-palantir-light);
 }
 
-.c-section--paper .values-card__icon--gold {
+.c-section--paper .values-card__icon--gold,
+.c-section--paper .audience-card__icon--gold {
   color: var(--site-action-surface);
 }
 
@@ -75,6 +82,7 @@
     .card--callout,
     .card--formula,
     .related-card,
+    .audience-card,
     .values-card,
     .card-link,
     .bib-link,
@@ -94,7 +102,8 @@
     .card--callout a,
     .card--formula a,
     .related-card a,
-    .values-card a)):where(:link, :visited) {
+    .values-card a,
+    .audience-card a)):where(:link, :visited) {
   color: var(--p-ember-gold-deep-900);
 }
 

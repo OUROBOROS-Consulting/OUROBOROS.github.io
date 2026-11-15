@@ -436,6 +436,7 @@
   transition: opacity var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 }
 
+.c-nav__search-wrap:hover .c-nav__search-input,
 .c-nav__search-wrap.is-open .c-nav__search-input {
   flex-basis: min(var(--site-nav-search-width), 32vw);
   width: min(var(--site-nav-search-width), 32vw);
@@ -450,6 +451,7 @@
   display: none;
 }
 
+.c-nav__search-wrap:hover .c-nav__search-submit,
 .c-nav__search-wrap.is-open .c-nav__search-submit {
   display: inline-grid;
 }

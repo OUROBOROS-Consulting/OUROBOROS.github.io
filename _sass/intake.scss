@@ -348,7 +348,7 @@
 .intake-body select:focus-visible,
 .intake-body textarea:focus-visible {
   border-color: var(--p-color-ink-palantir-light);
-  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
   outline-offset: var(--site-focus-ring-offset);
 }
 

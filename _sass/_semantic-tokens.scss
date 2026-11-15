@@ -38,7 +38,9 @@
 
   /* ── Focus & Interaction ────────────────────────────────────────────────── */
   --site-focus-ring-width: var(--md-sys-spacing-sm);
+  --site-focus-ring-width-thin: var(--md-sys-spacing-xs);
   --site-focus-ring-offset: var(--md-sys-spacing-sm);
+  --site-focus-ring-color: var(--md-sys-color-primary);
   --site-button-min-height: 2.75rem;
   --site-button-press-scale: 0.97;
 

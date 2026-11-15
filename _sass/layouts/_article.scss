@@ -50,7 +50,7 @@
 .post-body .faq-item>summary:focus-visible,
 .c-article__body .faq-expand-all:focus-visible,
 .post-body .faq-expand-all:focus-visible {
-  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
   outline-offset: var(--site-focus-ring-offset);
 }
 

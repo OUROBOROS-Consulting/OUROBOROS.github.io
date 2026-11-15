@@ -429,30 +429,20 @@
   color: var(--md-sys-color-primary);
 }
 
-/* Values card (flip card) */
-.values-card {
+/* Audience card (static front/back) */
+.audience-card {
   min-width: 0;
   height: var(--site-card-flip-height);
   perspective: var(--site-card-flip-perspective);
-  cursor: pointer;
 }
 
-.values-card:hover .values-card__inner {
-  transform: rotateY(180deg);
-}
-
-.values-card__inner {
+.audience-card__inner {
   position: relative;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform var(--site-card-flip-duration) var(--site-motion-easing-standard);
 }
 
-.values-card.is-flipped .values-card__inner {
-  transform: rotateY(180deg);
-}
-
-.values-card__surface {
+.audience-card__surface {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -467,36 +457,44 @@
   color: var(--p-color-ink-palantir-light);
 }
 
-.values-card__front,
-.values-card__back {
+.audience-card__front,
+.audience-card__back {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
 }
 
-  .values-card__back {
+  .audience-card__back {
   transform: rotateY(180deg);
 }
 
-.values-card__icon {
+.audience-card__icon {
   font-size: var(--site-card-icon-size);
 }
 
-.values-card__icon--gold {
+.audience-card__icon--gold {
   color: var(--md-sys-color-primary);
 }
 
-.values-card__name {
+.audience-card__name {
   color: var(--md-sys-color-on-surface);
   font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   text-align: center;
 }
 
-.values-card__desc {
+.audience-card__desc {
   margin: 0;
   color: var(--p-color-ink-palantir-light);
   text-align: center;
+}
+
+/* Values card (flip card) - legacy */
+.values-card {
+  min-width: 0;
+  height: var(--site-card-flip-height);
+  perspective: var(--site-card-flip-perspective);
+  cursor: default;
 }
 
 /* Feed card */
@@ -617,6 +615,7 @@
 .card--callout,
 .card--formula,
 .related-card,
+.audience-card,
 .values-card {
   /* Card containers are NOT clickable - only internal links interact */
   text-decoration: none;
@@ -636,7 +635,7 @@
   }
 
   &:focus-visible {
-    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+    outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
     outline-offset: var(--site-focus-ring-offset);
   }
 }
@@ -664,7 +663,9 @@
   .c-card--related:is(a[href], [role="button"]):hover,
   .c-card--framed:is(a[href], [role="button"]):hover,
   .card:is(a[href], [role="button"]):hover,
-  .related-card:is(a[href], [role="button"]):hover {
+  .related-card:is(a[href], [role="button"]):hover,
+  .audience-card:is(a[href], [role="button"]):hover,
+  .values-card:is(a[href], [role="button"]):hover {
     transform: none;
   }
 }

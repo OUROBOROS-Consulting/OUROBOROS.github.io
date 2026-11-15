@@ -58,20 +58,20 @@ layout: default
       <h2 class="authority">If any of this sounds like you, you're in the right place.</h2>
     </div>
 
-    <div class="values-grid">
+    <div class="audience-grid">
       {% for aud in site.data.audience %}
-      <div class="values-card" role="button" tabindex="0" aria-expanded="false"
+      <div class="audience-card"
         aria-label="{{ aud.title | escape }}">
-        <div class="values-card__inner">
-          <div class="values-card__front">
-            <div class="values-card__surface">
-              <i class="values-card__icon {{ aud.icon }} values-card__icon--gold" aria-hidden="true"></i>
-              <span class="values-card__name">{{ aud.title | escape }}</span>
+        <div class="audience-card__inner">
+          <div class="audience-card__front">
+            <div class="audience-card__surface">
+              <i class="audience-card__icon {{ aud.icon }} audience-card__icon--gold" aria-hidden="true"></i>
+              <span class="audience-card__name">{{ aud.title | escape }}</span>
             </div>
           </div>
-          <div class="values-card__back">
-            <div class="values-card__surface">
-              <div class="values-card__desc">{{ aud.description | markdownify }}</div>
+          <div class="audience-card__back">
+            <div class="audience-card__surface">
+              <div class="audience-card__desc">{{ aud.description | markdownify }}</div>
             </div>
           </div>
         </div>
