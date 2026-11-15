@@ -330,6 +330,28 @@
   text-transform: uppercase;
 }
 
+/* Date styling for all card types */
+.rc-date {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+/* Link styling for all card types */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+  color: var(--md-sys-color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--md-sys-typescale-label-small-size);
+  font-weight: var(--md-ref-typeface-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 /* BibTeX card */
 .bib-card {
   min-width: 0;
@@ -583,7 +605,7 @@
   gap: var(--md-sys-spacing-sm);
 }
 
-/* Interactive states - shared */
+/* Interactive states - cards are not clickable containers */
 .c-card,
 .c-card--related,
 .c-card--framed,
@@ -596,34 +618,32 @@
 .card--formula,
 .related-card,
 .values-card {
-  cursor: pointer;
+  /* Card containers are NOT clickable - only internal links interact */
   text-decoration: none;
   transition:
     background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
-  &:is(a[href], [role="button"]) {
-    cursor: pointer;
-    text-decoration: none;
+  &:hover {
+    background-color: var(--site-card-hover-surface);
+    border-color: var(--site-card-hover-border);
+  }
+}
 
-    &:hover {
-      transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-      border-color: var(--p-color-ink-palantir-light);
-    }
+/* Individual links inside cards maintain pointer behavior */
+.c-card a,
+.c-card--related a,
+.c-card--framed a,
+.c-card--callout a,
+.c-card--formula a {
+  cursor: pointer;
+  text-decoration: none;
 
-    &:focus-visible {
-      outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
-      outline-offset: var(--site-focus-ring-offset);
-    }
+  &:hover {
+    text-decoration: underline;
   }
 
-  &:is(a[href], [role="button"]):hover {
-    transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-    border-color: var(--p-color-ink-palantir-light);
-  }
-
-  &:is(a[href], [role="button"]):focus-visible {
+  &:focus-visible {
     outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
     outline-offset: var(--site-focus-ring-offset);
   }

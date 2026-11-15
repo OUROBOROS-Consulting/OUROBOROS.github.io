@@ -151,7 +151,7 @@ layout: default
                 {% if pl.title or pl.description %}
                 <div class="playlist-meta">
                   {% if pl.title %}<h3 class="playlist-title">{{ pl.title }}</h3>{% endif %}
-                  {% if pl.description %}<p class="card-desc">{{ pl.description }}</p>{% endif %}
+                  {% if pl.description %}<p class="c-card--framed__desc">{{ pl.description }}</p>{% endif %}
                 </div>
                 {% endif %}
 
@@ -205,7 +205,7 @@ layout: default
            The `data-bibtex-src` attribute tells the script where to fetch.
       ─────────────────────────────────────────────────────────────────── -->
       <div class="testimonials-grid" data-bibtex-src="{{ section.bibtex_src }}">
-        <p class="card-desc">Loading references…</p>
+        <p class="c-card--framed__desc">Loading references…</p>
       </div>
 
       {% elsif section.html %}

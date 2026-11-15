@@ -35,12 +35,12 @@
   color: var(--p-color-ink-palantir-light);
 }
 
-#main .c-section--paper .c-card :is(.technical, .text-t, .c-card-action, .rc-tag, .rc-date, .rc-tag-chip, .card-link) {
-  color: var(--site-action-surface);
+#main .c-section--paper .c-card :is(.technical, .text-t, .c-card-action, .rc-tag, .rc-date, .rc-tag-chip, .c-card-title, .card-link) {
+  color: var(--md-sys-color-on-surface);
 }
 
-.c-section--paper .c-card .rc-title {
-  color: var(--p-color-ink-palantir-light);
+#main .c-section--paper .c-card .c-card--related .c-card-title {
+  color: var(--md-sys-color-on-surface);
 }
 
 .c-section--paper .values-card__surface {

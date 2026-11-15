@@ -27,7 +27,7 @@ permalink: /case-studies/
   %}
   {% else %}
   <div class="c-card">
-    <p class="card-desc">Case studies coming soon.</p>
+    <p class="c-card--framed__desc">Case studies coming soon.</p>
   </div>
   {% endif %}
 </div>
