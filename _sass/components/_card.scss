@@ -626,7 +626,8 @@
 .c-card--related a,
 .c-card--framed a,
 .c-card--callout a,
-.c-card--formula a {
+.c-card--formula a,
+.values-card a {
   cursor: pointer;
   text-decoration: none;
 
@@ -641,7 +642,7 @@
 }
 
 .values-card:focus-visible {
-  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
   outline-offset: var(--site-focus-ring-offset);
 }
 

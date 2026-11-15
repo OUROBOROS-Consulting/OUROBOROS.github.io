@@ -111,7 +111,7 @@
   }
 
   &:focus-visible {
-    outline: var(--site-focus-ring-width) solid var(--p-color-white);
+    outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
     outline-offset: var(--site-focus-ring-offset);
   }
 }

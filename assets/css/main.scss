@@ -89,7 +89,8 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 }
 
 a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, .c-nav__dropdown-link, .c-nav__action-item)):where(:hover, :focus-visible) {
-  color: var(--md-sys-color-secondary);
+  color: var(--p-color-white);
+  outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
 }
 
 :where(
