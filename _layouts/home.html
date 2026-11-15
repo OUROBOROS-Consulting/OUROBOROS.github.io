@@ -53,7 +53,6 @@ layout: default
 <section id="audience" class="c-section c-section--marble c-section--paper">
   <div class="c-container">
 
-
     <div class="c-stack">
       <p class="technical text-t">Who This Is For</p>
       <h2 class="authority">If any of this sounds like you, you're in the right place.</h2>
@@ -95,16 +94,6 @@ layout: default
       </header>
     </div>
 
-    <div class="carousel-controls">
-      <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous testimonial">
-        <i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>
-      </button>
-      <span class="carousel-count">1 / {{ technology_testimonials.size }}</span>
-      <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next testimonial">
-        <i class="ph ph-fill ph-arrow-fat-line-right" aria-hidden="true"></i>
-      </button>
-    </div>
-
     <div class="carousel carousel--testimonials" aria-live="polite" aria-label="Testimonials">
       <div class="carousel-track">
         {% for ref in technology_testimonials %}
@@ -128,6 +117,16 @@ layout: default
         aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
         aria-label="Testimonial {{ forloop.index }}"></button>
       {% endfor %}
+    </div>
+
+    <div class="carousel-controls">
+      <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Previous testimonial">
+        <i class="ph ph-fill ph-arrow-fat-line-left" aria-hidden="true"></i>
+      </button>
+      <span class="carousel-count">1 / {{ technology_testimonials.size }}</span>
+      <button class="carousel-btn carousel-btn--next" type="button" aria-label="Next testimonial">
+        <i class="ph ph-fill ph-arrow-fat-line-right" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 </section>

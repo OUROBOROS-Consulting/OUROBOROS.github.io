@@ -620,14 +620,6 @@
 .values-card {
   /* Card containers are NOT clickable - only internal links interact */
   text-decoration: none;
-  transition:
-    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
-
-  &:hover {
-    background-color: var(--site-card-hover-surface);
-    border-color: var(--site-card-hover-border);
-  }
 }
 
 /* Individual links inside cards maintain pointer behavior */

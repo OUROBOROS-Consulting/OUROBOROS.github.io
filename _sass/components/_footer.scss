@@ -105,7 +105,6 @@
     transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
   &:hover {
-    transform: translateY(calc(-1 * var(--site-card-hover-distance)));
     border-color: var(--p-color-black);
     background-color: var(--p-color-white);
     color: var(--p-color-black);
