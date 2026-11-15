@@ -2,7 +2,7 @@
 title: "Web & Graphic Design"
 description: "Brand identity, web design, graphic design, and UI/UX for organizations that value clarity, accessibility, and thoughtful craft."
 layout: sections
-section_layout: stacked
+section_layout: none
 back_url: "/"
 category: Services
 hero_icon: ph ph-fill ph-paint-brush-broad

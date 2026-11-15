@@ -3,7 +3,7 @@ title: "AI Privacy & Governance Advisory"
 description: "Independent AI privacy and governance reviews for organizations handling confidential data. Map data flows, set usable rules, and assess tool choices."
 layout: sections
 icon: ph ph-fill ph-shield-check
-section_layout: stacked
+section_layout: none
 back_url: /
 category: Services
 hero_icon: ph-shield-check

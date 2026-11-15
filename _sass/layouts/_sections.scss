@@ -169,4 +169,45 @@
   .values-grid) {
   // margin-top: var(--md-sys-spacing-sm);
   // margin-bottom: var(--md-sys-spacing-sm);
-}
+  }
+
+  /* Make sections layout use article styling */
+  .c-article__body {
+    padding: 0;
+    margin: 0;
+  }
+
+  .c-article__body section.section {
+    padding: var(--md-sys-spacing-xl) 0;
+  }
+
+  .c-article__body section.section:first-of-type {
+    padding-top: 0;
+  }
+
+  .c-article__body .section-label + .section-content {
+    padding-inline-start: var(--md-sys-spacing-xl);
+  }
+
+  .c-article__body .about-section .section-label + .section-content {
+    padding-inline-start: var(--md-sys-spacing-xl);
+  }
+
+  .c-article__body .pull-quote-section {
+    padding: var(--md-sys-spacing-xl) 0;
+  }
+
+  .c-article__body .links-section {
+    padding: var(--md-sys-spacing-xl) 0;
+  }
+
+  /* Keep label left-aligned, content full-width */
+  .section-label {
+    padding: 0;
+    margin: 0 0 var(--md-sys-spacing-sm) 0;
+  }
+
+  .section-content {
+    padding: 0;
+    margin: 0;
+  }

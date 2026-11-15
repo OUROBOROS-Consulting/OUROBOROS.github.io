@@ -2,7 +2,7 @@
 title: "Private AI Setup"
 description: "Fixed-price setup of a local AI assistant that runs on your computer. Your files, notes, and drafts stay on your machine."
 layout: sections
-section_layout: stacked
+section_layout: none
 back_url: /
 category: Services
 hero_icon: ph ph-fill ph-desktop
