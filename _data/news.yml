@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-14
+generated: 2026-11-15
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Is the AI job apocalypse finally here? The evidence suggests otherwise | John Quiggin"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/16/is-the-ai-job-apocalypse-finally-here-the-evidence-suggests-otherwise"
+        source: "The Guardian"
+        date: 2026-11-15
+        summary: "The role AI played in job losses at Australia’s NAB, Qantas, Canva and Atlassian is far from clear – but it may prove to have more impact on the stock market than the jobs market Get our breaking news email , free app..."
+      - title: "Art ‘must not be sacrificed on the altar of corporate profit’, Liberal senator says as AI policy debate rages"
+        url: "https://www.theguardian.com/australia-news/2026/nov/15/art-over-profit-ai-policy-debate-andrew-mclachlan"
+        source: "The Guardian"
+        date: 2026-11-14
+        summary: "Andrew McLachlan says he chooses ‘real forests over virtual ones’ as he urges Labor government to consider AI’s impact on artists and environment Get our daily political email , free app or daily news podcast The..."
       - title: "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders"
         url: "https://www.theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader"
         source: "The Guardian"
@@ -33,11 +43,6 @@ sections:
         source: "Ars Technica"
         date: 2026-11-12
         summary: "The first Gemini smartglasses are a collab between Google, Samsung, Gentle Monster, and Warby Parker."
-      - title: "NHS England deletes ‘misleading’ claim 137 trusts benefiting from Palantir AI tools"
-        url: "https://www.theguardian.com/technology/2026/nov/12/nhs-england-deletes-misleading-claim-137-trusts-benefiting-from-palantir-ai-tools"
-        source: "The Guardian"
-        date: 2026-11-12
-        summary: "Exclusive: The Guardian revealed 29 hospital trusts were not or hardly using the controversial patient data tech NHS England has deleted a claim from its website stating 137 hospital trusts are benefiting from..."
       - title: "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\""
         url: "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
         source: "Ars Technica"
@@ -67,6 +72,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘I’m still trying to find out who I am’: the little-understood plight of Forgotten Australians"
+        url: "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb"
+        source: "The Guardian"
+        date: 2026-11-14
+        summary: "They number more than half a million yet the ongoing trauma from their time in orphanages and institutions remains poorly known When Judy Leonard entered the orphanage, she was given a bed with a number. That was how..."
       - title: "Cocaine overtakes heroin for first time in England and Wales drug-death figures"
         url: "https://www.theguardian.com/society/2026/nov/04/cocaine-overtakes-heroin-drug-deaths-england-wales"
         source: "The Guardian"
@@ -92,11 +102,6 @@ sections:
         source: "The Guardian"
         date: 2026-10-26
         summary: "Home Office figures show nearly two-thirds of drug tests carried out on arrested abuse suspects detected use of a drug that ‘boosts confidence but increases paranoia’ During lockdown, Charlotte and her ex-partner would..."
-      - title: "‘No indications’ PHP code flaw has led to government systems being hacked, cyber security official says – as it happened"
-        url: "https://www.theguardian.com/politics/live/2026/oct/22/john-healey-chancellor-budget-red-tape-small-businsesses-jackdaw-oil-latest-news-updates"
-        source: "The Guardian"
-        date: 2026-10-22
-        summary: "Some 32 government services are offline while work is carried out to address potential cybersecurity issues, a minister has said Tell us: have you been affected by the PHP code flaw? The Office for National Statistics..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -170,11 +175,21 @@ sections:
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "New York City Becomes the Latest City to Ban Surveillance Pricing"
+        url: "https://epic.org/new-york-city-becomes-the-latest-city-to-ban-surveillance-pricing/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "EPIC testified in support of Introduction 0891-2026, a bill that prohibits businesses from engaging in surveillance pricing, in the NYC Council hearing in June and now urges the Mayor to sign this bill into law."
+      - title: "EPIC Testifies in New York State and the City of Boston Urging for ALPR Guardrails and Greater Transparency"
+        url: "https://epic.org/epic-testifies-in-new-york-state-and-the-city-of-boston-urging-for-alpr-guardrails-and-greater-transparency/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "New York’s proposed AB10808 and its companion, Senate Bill S.9890, and Boston's proposed amended ordinance addresses residents' privacy rights as ALPR technology becomes more widespread."
       - title: "EPIC and Student Defense Submit Comment on Treasury Department’s Takeover of Federal Student Aid Records"
         url: "https://epic.org/epic-and-student-defense-submit-comment-on-treasury-departments-takeover-of-federal-student-aid-records/"
         source: "EPIC"
         date: 2026-11-09
-        summary: "EPIC and Student Defense submitted a comment to the U.S. Department of Treasury (Treasury) Friday regarding its takeover of Federal Student Aid from the U.S. Department of Education (ED), in response to a System of..."
+        summary: "Under this proposed system, records regarding federal student aid applicants, grant recipients and borrowers would be provided to the Treasury from three ED systems: The National Student Loan Data System (NSLDS), the..."
       - title: "WIRED: AI Companies Really, Really Want to Buy Your Work Files and Emails"
         url: "https://epic.org/wired-ai-companies-really-really-want-to-buy-your-work-files-and-emails/"
         source: "EPIC"
@@ -195,16 +210,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-06
         summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
-      - title: "Seoul Economic Daily: Character.AI Bankruptcy Raises Fears Over Chat Records"
-        url: "https://epic.org/seoul-economic-daily-character-ai-bankruptcy-raises-fears-over-chat-records/"
-        source: "EPIC"
-        date: 2026-11-05
-        summary: "“Calli Schroeder, AI lead at the Electronic Privacy Information Center (EPIC), told the BBC that users disclose far more private and sensitive information when talking to anthropomorphized chatbots. She added that..."
-      - title: "Gadget Review: New Jersey Wants to Make AI Companies Pay $5,000 for Every Violation"
-        url: "https://epic.org/gadget-review-new-jersey-wants-to-make-ai-companies-pay-5000-for-every-violation/"
-        source: "EPIC"
-        date: 2026-11-05
-        summary: "“The Electronic Privacy Information Center supports A5607, arguing that major chatbot providers have repeatedly failed to prioritize user safety over profit and should not be left to self-regulate. That is EPIC’s..."
       - title: "Want to Rent an Internet Address at the White House?"
         url: "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
         source: "Krebs on Security"
