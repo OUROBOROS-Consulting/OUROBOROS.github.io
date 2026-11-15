@@ -5,6 +5,11 @@
   // display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
   padding: var(--md-sys-spacing-md) var(--md-sys-spacing-md);
   background-color: var(--p-void-900);
   border-bottom: var(--p-spacing-4) solid var(--p-void-900);

@@ -2,13 +2,14 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  min-height: 100vh;
-  min-height: 100svh;
+  min-height: calc(100svh - 6rem);
   padding: clamp(3rem, 7vh, 6rem) clamp(1.5rem, 5vw, 4rem);
   margin-left: calc(50% - 50vw);
   width: 100vw;
   overflow: hidden;
   overflow-x: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .c-page-hero__inner {
@@ -238,8 +239,7 @@
     align-items: start;
     column-gap: clamp(1rem, 5vw, 2rem);
     row-gap: var(--md-sys-spacing-md);
-    min-height: calc(100vh - 6rem);
-    min-height: calc(100svh - 6rem);
+    min-height: calc(100svh - 8.5rem);
     padding-bottom: 0;
   }
 

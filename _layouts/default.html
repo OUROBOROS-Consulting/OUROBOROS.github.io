@@ -94,9 +94,8 @@
 
   <body {% if page.show_banner %} class="has-banner" {% endif %}>
     {% if page.show_banner %}{% include banner.html %}{% endif %}
-    <div class="nav-shell">
-      {% include nav.html %}
-    </div>
+    <div class="nav-shell" aria-hidden="true"></div>
+    {% include nav.html %}
     {% if page.layout == 'home' %}
     {% include hero.html %}
     {% endif %}

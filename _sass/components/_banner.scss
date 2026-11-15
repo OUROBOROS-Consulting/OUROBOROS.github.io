@@ -9,6 +9,9 @@
   gap: var(--md-sys-spacing-sm);
   text-decoration: none;
   transition: background-color 0.2s ease;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 99;
 
   // CRT effect for the banner.
   &--crt {
