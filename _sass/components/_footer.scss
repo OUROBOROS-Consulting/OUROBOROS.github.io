@@ -2,15 +2,41 @@
 // Responsibility: Layout and arrangement of social links, branding, and credits.
 
 .c-footer {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh; // svh avoids mobile toolbar jump
   padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-lg);
   background-color: var(--p-color-black);
   border-top: 0.125rem solid var(--p-color-white);
 }
 
+.c-footer__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.c-footer__scrim {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to bottom, rgb(0 0 0 / 0.75) 90%, rgb(0 0 0 / 0.25) 20%);
+  pointer-events: none;
+}
+
 .c-footer__inner {
+  flex: 1; // fills the footer height
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  align-items: center;
+  grid-template-rows: 1fr; // row 1 absorbs free space; the rest are auto
+  align-items: end;
   gap: var(--md-sys-spacing-xl);
   width: min(100%, var(--site-footer-content-max-width));
   margin-inline: auto;
@@ -32,7 +58,18 @@
 }
 
 .c-footer__logo {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  align-self: center;
   justify-self: center;
+}
+
+.c-footer__logo-mark {
+  // height: min(60svh, 85vw); // large, never overflows
+  height: var(--site-footer-logo-size);
+  width: auto;
+  mix-blend-mode: screen;
+  opacity: 1;
 }
 
 .c-footer__availability {
@@ -126,13 +163,6 @@
 
 .c-footer__social-link:hover i {
   color: var(--p-color-black);
-}
-
-/* Duplicate .c-footer__logo removed (originally at lines 126-130, now using definition at line 34) */
-
-.c-footer__logo-mark {
-  height: var(--site-footer-logo-size);
-  width: auto;
 }
 
 .c-footer__credits {
@@ -244,5 +274,11 @@
   .c-disclaimer-bar {
     flex-direction: column;
     text-align: center;
+  }
+
+  .c-footer__logo-mark {
+    height: var(--site-footer-logo-size);
+    transform: none; // transforms ignore layout and would overlap row 2
+    mix-blend-mode: normal;
   }
 }

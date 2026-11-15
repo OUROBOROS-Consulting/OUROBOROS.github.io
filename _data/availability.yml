@@ -10,11 +10,11 @@ timezone: Central Time
 # timezone_note: Minneapolis, Minnesota
 
 hours:
-  - days: Mon to Fri
-    time: 11:00 AM to 6:00 PM
+  - days: Mon - Fri
+    time: 11:00 AM - 6:00 PM
     closed: false
   - days: Sat & Sun
-    time: 12:00 PM to 5:00 PM
+    time: 12:00 PM - 5:00 PM
     closed: false
 
 # Single source for the intake page's three response-time lines: the strip at

@@ -108,6 +108,17 @@
 }
 
 .c-page-hero {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: calc(100svh - 6rem);
+  padding: clamp(3rem, 7vh, 6rem) clamp(1.5rem, 5vw, 4rem);
+  margin-left: calc(50% - 50vw);
+  width: 100vw;
+  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  align-items: center;
   background-color: black;
   border: 0;
   border-bottom: var(--site-border-width) solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
