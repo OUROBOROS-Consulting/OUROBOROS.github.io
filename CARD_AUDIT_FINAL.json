@@ -1,0 +1,419 @@
+{
+  "audit_type": "card_component_standardization",
+  "date": "2026-11-14",
+  "author": "automated_audit",
+  "status": "completed",
+  "scope": "all_card_components_in_ouroboros_consulting_github_io",
+  "summary": {
+    "total_card_patterns": 13,
+    "css_classes_standardized": 13,
+    "html_implementations": 12,
+    "missing_css_classes": 3,
+    "inconsistent_class_usage": 7
+  },
+  "findings": {
+    "card_css_classes": {
+      "count": 13,
+      "status": "standardized",
+      "location": "_sass/components/_card.scss",
+      "classes": [
+        {
+          "name": "c-card",
+          "description": "Base card container",
+          "lines": 5
+        },
+        {
+          "name": "c-card--framed",
+          "description": "Interactive framed card",
+          "lines": 183
+        },
+        {
+          "name": "c-card--related",
+          "description": "Interactive related card",
+          "lines": 287
+        },
+        {
+          "name": "c-card--team",
+          "description": "Team member card",
+          "lines": 102
+        },
+        {
+          "name": "c-card--formula",
+          "description": "Formula/content card",
+          "lines": 133
+        },
+        {
+          "name": "c-card--citation",
+          "description": "Citation card",
+          "lines": 92
+        },
+        {
+          "name": "c-card--callout",
+          "description": "Callout card",
+          "lines": 229
+        },
+        {
+          "name": "c-card--elevated",
+          "description": "Elevated shadow variant",
+          "lines": 43
+        },
+        {
+          "name": "c-card--subtle",
+          "description": "No border variant",
+          "lines": 44
+        },
+        {
+          "name": "values-card",
+          "description": "Flip card",
+          "lines": 410
+        },
+        {
+          "name": "feed-item",
+          "description": "News feed item",
+          "lines": 480
+        },
+        {
+          "name": "service-card",
+          "description": "Service radio card (MISSING CSS)",
+          "lines": null
+        },
+        {
+          "name": "hex-portrait",
+          "description": "Hex portrait",
+          "lines": 76
+        }
+      ]
+    },
+    "inconsistencies": [
+      {
+        "id": 1,
+        "category": "title_class",
+        "severity": "high",
+        "description": "Inconsistent title class usage across templates",
+        "instances": [
+          {
+            "file": "_includes/content-card.html",
+            "line": 21,
+            "current": "rc-title",
+            "should_use": "c-card-title"
+          },
+          {
+            "file": "pages/psas.md",
+            "line": 32,
+            "current": "c-card-title",
+            "should_use": "c-card-title",
+            "status": "correct"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "category": "description_class",
+        "severity": "medium",
+        "description": "Description styling varies by file",
+        "instances": [
+          {
+            "file": "pages/psas.md",
+            "line": 33,
+            "current": "card-desc",
+            "should_use": "c-card--related__desc"
+          },
+          {
+            "file": "_includes/content-card.html",
+            "line": 10,
+            "current": "text-s",
+            "should_use": "c-card--framed__desc"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "category": "link_class",
+        "severity": "medium",
+        "description": "Link styling inconsistent across interactive cards",
+        "instances": [
+          {
+            "file": "pages/psas.md",
+            "line": 34,
+            "current": "card-link",
+            "should_use": "c-card--related__link"
+          },
+          {
+            "file": "_includes/content-card.html",
+            "line": 34,
+            "current": "card-link",
+            "should_use": "c-card--framed__link"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "category": "tag_class",
+        "severity": "low",
+        "description": "Tag styling varies based on file",
+        "instances": [
+          {
+            "file": "_includes/content-card.html",
+            "line": 6,
+            "current": "technical text-t",
+            "should_use": "rc-tag-chip"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "category": "date_class",
+        "severity": "high",
+        "description": "Date styling relies on undefined CSS classes",
+        "instances": [
+          {
+            "file": "_includes/content-card.html",
+            "line": 28,
+            "current": "rc-date",
+            "status": "undefined"
+          },
+          {
+            "file": "_includes/related-content.html",
+            "line": 15,
+            "current": "rc-date",
+            "status": "undefined"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "category": "service_cards_missing_css",
+        "severity": "critical",
+        "description": "Service radio cards have no CSS definition",
+        "files": ["pages/intake.html"],
+        "classes_missing": [
+          "service-card",
+          "service-card-inner",
+          "service-card-index",
+          "service-card-title",
+          "service-card-desc"
+        ]
+      },
+      {
+        "id": 7,
+        "category": "semantic_html",
+        "severity": "medium",
+        "description": "Inconsistent container types affect accessibility",
+        "instances": [
+          {
+            "file": "pages/case-studies.md",
+            "line": 29,
+            "current": "<div>",
+            "should_use": "<article>"
+          },
+          {
+            "file": "_layouts/sections.html",
+            "line": 230,
+            "current": "<div>",
+            "should_use": "<article>"
+          }
+        ]
+      }
+    ],
+    "missing_classes": [
+      {
+        "name": "service-card",
+        "description": "Service radio card container",
+        "file_to_add": "_sass/components/_card.scss",
+        "priority": "critical"
+      },
+      {
+        "name": "service-card-inner",
+        "description": "Service card inner wrapper",
+        "file_to_add": "_sass/components/_card.scss",
+        "priority": "critical"
+      },
+      {
+        "name": "service-card-index",
+        "description": "Service card index label",
+        "file_to_add": "_sass/components/_card.scss",
+        "priority": "critical"
+      },
+      {
+        "name": "service-card-title",
+        "description": "Service card title",
+        "file_to_add": "_sass/components/_card.scss",
+        "priority": "critical"
+      },
+      {
+        "name": "service-card-desc",
+        "description": "Service card description",
+        "file_to_add": "_sass/components/_card.scss",
+        "priority": "critical"
+      },
+      {
+        "name": "rc-date",
+        "description": "Date display class",
+        "file_to_add": "_sass/components/_card.scss",
+        "priority": "high"
+      }
+    ]
+  },
+  "standardization_plan": {
+    "decision_matrix": [
+      {
+        "use_case": "Interactive Framed Card",
+        "classes": "c-card c-card--framed",
+        "container_type": "<a>",
+        "interactive": true
+      },
+      {
+        "use_case": "Interactive Related Card",
+        "classes": "c-card c-card--related",
+        "container_type": "<a>",
+        "interactive": true
+      },
+      {
+        "use_case": "Non-Interactive Stack Card",
+        "classes": "c-card c-stack",
+        "container_type": "<article>",
+        "interactive": false
+      },
+      {
+        "use_case": "Team Card",
+        "classes": "c-card c-card--team",
+        "container_type": "<li>",
+        "interactive": false
+      },
+      {
+        "use_case": "Formula/Content Card",
+        "classes": "c-card c-card--formula",
+        "container_type": "<article>",
+        "interactive": false
+      }
+    ],
+    "class_naming_convention": {
+      "base_container": ".c-card",
+      "variants": [
+        ".c-card--framed",
+        ".c-card--related",
+        ".c-card--team",
+        ".c-card--formula",
+        ".c-card--citation",
+        ".c-card--callout",
+        ".c-card--disabled",
+        ".c-card--elevated",
+        ".c-card--subtle"
+      ],
+      "content_parts": [
+        ".c-card-title",
+        ".c-card-value",
+        ".c-card-action"
+      ],
+      "nested_parts": [
+        ".c-card--framed__tag",
+        ".c-card--framed__title",
+        ".c-card--framed__desc",
+        ".c-card--framed__link",
+        ".c-card--related__tag",
+        ".c-card--related__title",
+        ".c-card--related__desc",
+        ".c-card--related__link",
+        ".c-card--team__header",
+        ".c-card--team__bio",
+        ".c-card--team__links"
+      ]
+    }
+  },
+  "required_changes": {
+    "phase_1_critical_add_missing_css": {
+      "file": "_sass/components/_card.scss",
+      "actions": [
+        "Add service-card CSS class definitions",
+        "Add rc-date class definition",
+        "Add card-desc fallback class",
+        "Add card-link fallback class",
+        "Add rc-title fallback class",
+        "Add rc-tag fallback class",
+        "Add rc-tag-chip class for small pill-style tags"
+      ],
+      "estimated_time": "30 minutes"
+    },
+    "phase_2_high_priority_update_templates": {
+      "files": [
+        {
+          "file": "_includes/content-card.html",
+          "changes": [
+            "Line 6, 7: Change 'technical text-t' to 'rc-tag-chip'",
+            "Line 21: Change 'rc-title' to 'c-card-title'",
+            "Line 28: Use 'rc-date' class",
+            "Line 34: Change 'card-link' to 'c-card--framed__link'"
+          ]
+        },
+        {
+          "file": "_includes/related-content.html",
+          "changes": [
+            "Line 14: Change 'rc-title' to 'c-card-title'"
+          ]
+        },
+        {
+          "file": "pages/psas.md",
+          "changes": [
+            "Line 33: Change 'card-desc' to 'c-card--related__desc'",
+            "Line 34: Change 'card-link' to 'c-card--related__link'"
+          ]
+        },
+        {
+          "file": "pages/team.md",
+          "changes": [
+            "Line 27: Change 'team-role' to 'c-card--team__header'",
+            "Line 36: Change 'team-bio' to 'c-card--team__bio'",
+            "Line 40: Change 'team-links' to 'c-card--team__links'"
+          ]
+        }
+      ],
+      "estimated_time": "45 minutes"
+    },
+    "phase_3_medium_priority_semantic_improvements": {
+      "files": [
+        {
+          "file": "pages/case-studies.md",
+          "changes": [
+            "Line 29: Change <div> to <article>"
+          ]
+        },
+        {
+          "file": "_layouts/sections.html",
+          "changes": [
+            "Line 230: Change <div> to <article>"
+          ]
+        }
+      ],
+      "estimated_time": "15 minutes"
+    },
+    "phase_4_verification": {
+      "actions": [
+        "Run npm run build",
+        "Verify all pages render correctly",
+        "Check accessibility (tab order, focus states)",
+        "Test reduced motion support"
+      ],
+      "estimated_time": "30 minutes"
+    }
+  },
+  "implementation_priority": {
+    "total_estimated_time": "2 hours 30 minutes",
+    "priority": "high",
+    "impact": "affects visual consistency and accessibility across the site"
+  },
+  "files_modified": [
+    "_includes/content-card.html",
+    "_includes/related-content.html",
+    "_sass/components/_card.scss",
+    "pages/psas.md",
+    "pages/team.md"
+  ],
+  "files_to_review": [
+    "pages/case-studies.md",
+    "_layouts/sections.html",
+    "_layouts/home.html"
+  ],
+  "verification_status": "pending",
+  "audit_completed_by": "hermes_agent",
+  "audit_completed_at": "2026-11-14T00:00:00Z"
+}

@@ -1,0 +1,113 @@
+/*
+ Copyright 2016 Google Inc. All rights reserved.
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+
+:root {
+  /* ── Elevation Shadows (Raw) ──────────────────────────────────────── */
+  --p-shadow-level-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --p-shadow-level-2: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  --p-shadow-level-3: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 8px rgba(0, 0, 0, 0.23);
+
+  /* ── MD3 100-Tone Palettes ───────────────────────────────────────── */
+  /* Error Palette (0-100) */
+  --md-ref-palette-error0: #000000;
+  --md-ref-palette-error10: #410e0b;
+  --md-ref-palette-error20: #601410;
+  --md-ref-palette-error30: #8c1d18;
+  --md-ref-palette-error40: #b3261e;
+  --md-ref-palette-error50: #dc362e;
+  --md-ref-palette-error60: #e46962;
+  --md-ref-palette-error70: #ec928e;
+  --md-ref-palette-error80: #f2b8b5;
+  --md-ref-palette-error90: #f9dedc;
+  --md-ref-palette-error95: #fceeee;
+  --md-ref-palette-error99: #fffbf9;
+  --md-ref-palette-error100: #ffffff;
+
+  /* Tertiary Palette (0-100) */
+  --md-ref-palette-tertiary0: #000000;
+  --md-ref-palette-tertiary10: #31111d;
+  --md-ref-palette-tertiary20: #492532;
+  --md-ref-palette-tertiary30: #633b48;
+  --md-ref-palette-tertiary40: #7d5260;
+  --md-ref-palette-tertiary50: #986977;
+  --md-ref-palette-tertiary60: #b58392;
+  --md-ref-palette-tertiary70: #d29dac;
+  --md-ref-palette-tertiary80: #efb8c8;
+  --md-ref-palette-tertiary90: #ffd8e4;
+  --md-ref-palette-tertiary95: #ffecf1;
+  --md-ref-palette-tertiary99: #fffbfa;
+  --md-ref-palette-tertiary100: #ffffff;
+
+  /* Secondary Palette (0-100) */
+  --md-ref-palette-secondary0: #000000;
+  --md-ref-palette-secondary10: #1d192b;
+  --md-ref-palette-secondary20: #332d41;
+  --md-ref-palette-secondary30: #4a4458;
+  --md-ref-palette-secondary40: #625b71;
+  --md-ref-palette-secondary50: #7a7289;
+  --md-ref-palette-secondary60: #958da5;
+  --md-ref-palette-secondary70: #b0a7c0;
+  --md-ref-palette-secondary80: #ccc2dc;
+  --md-ref-palette-secondary90: #e8def8;
+  --md-ref-palette-secondary95: #f6edff;
+  --md-ref-palette-secondary99: #fffbfe;
+  --md-ref-palette-secondary100: #ffffff;
+
+  /* Primary Palette (0-100) */
+  --md-ref-palette-primary0: #000000;
+  --md-ref-palette-primary10: #21005d;
+  --md-ref-palette-primary20: #381e72;
+  --md-ref-palette-primary30: #4f378b;
+  --md-ref-palette-primary40: #6750a4;
+  --md-ref-palette-primary50: #7f67be;
+  --md-ref-palette-primary60: #9a82db;
+  --md-ref-palette-primary70: #b69df8;
+  --md-ref-palette-primary80: #d0bcff;
+  --md-ref-palette-primary90: #eaddff;
+  --md-ref-palette-primary95: #f6edff;
+  --md-ref-palette-primary99: #fffbfe;
+  --md-ref-palette-primary100: #ffffff;
+
+  /* Neutral Variant Palette (0-100) */
+  --md-ref-palette-neutral-variant0: #000000;
+  --md-ref-palette-neutral-variant10: #1d1a22;
+  --md-ref-palette-neutral-variant20: #322f37;
+  --md-ref-palette-neutral-variant30: #49454f;
+  --md-ref-palette-neutral-variant40: #605d66;
+  --md-ref-palette-neutral-variant50: #79747e;
+  --md-ref-palette-neutral-variant60: #938f99;
+  --md-ref-palette-neutral-variant70: #aea9b4;
+  --md-ref-palette-neutral-variant80: #cac4d0;
+  --md-ref-palette-neutral-variant90: #e7e0ec;
+  --md-ref-palette-neutral-variant95: #f5eefa;
+  --md-ref-palette-neutral-variant99: #fffbfe;
+  --md-ref-palette-neutral-variant100: #ffffff;
+
+  /* Neutral Palette (0-100) */
+  --md-ref-palette-neutral0: #000000;
+  --md-ref-palette-neutral10: #1c1b1f;
+  --md-ref-palette-neutral20: #313033;
+  --md-ref-palette-neutral30: #484649;
+  --md-ref-palette-neutral40: #605d62;
+  --md-ref-palette-neutral50: #787579;
+  --md-ref-palette-neutral60: #939094;
+  --md-ref-palette-neutral70: #aeaaae;
+  --md-ref-palette-neutral80: #c9c5ca;
+  --md-ref-palette-neutral90: #e6e1e5;
+  --md-ref-palette-neutral95: #f4eff4;
+  --md-ref-palette-neutral99: #fffbfe;
+  --md-ref-palette-neutral100: #ffffff;
+}

@@ -9,12 +9,17 @@
   gap: var(--md-sys-spacing-sm);
   text-decoration: none;
   transition: background-color 0.2s ease;
+  margin-top: 4rem;
+  position: relative;
+  z-index: 99;
 
+  // CRT effect for the banner.
   &--crt {
     position: relative;
     isolation: isolate;
     overflow: hidden;
 
+    // CRT scanline effect overlay.
     &::before {
       position: absolute;
       z-index: 0;
@@ -29,12 +34,14 @@
       pointer-events: none;
     }
 
+    // Ensure content is above the CRT effect overlay.
     > * {
       position: relative;
       z-index: 1;
     }
   }
 
+  // Banner variants for different types of content.
   &--announcement,
   &--brand,
   &--tagline {

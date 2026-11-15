@@ -330,6 +330,28 @@
   text-transform: uppercase;
 }
 
+/* Date styling for all card types */
+.rc-date {
+  margin: 0;
+  color: var(--md-sys-color-on-surface-variant);
+  font-size: var(--md-sys-typescale-label-small-size);
+}
+
+/* Link styling for all card types */
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--md-sys-spacing-xs);
+  margin-top: auto;
+  padding-top: var(--md-sys-spacing-md);
+  color: var(--md-sys-color-primary);
+  font-family: var(--font-mono);
+  font-size: var(--md-sys-typescale-label-small-size);
+  font-weight: var(--md-ref-typeface-weight-semibold);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
 /* BibTeX card */
 .bib-card {
   min-width: 0;
@@ -407,30 +429,20 @@
   color: var(--md-sys-color-primary);
 }
 
-/* Values card (flip card) */
-.values-card {
+/* Audience card (static front/back) */
+.audience-card {
   min-width: 0;
   height: var(--site-card-flip-height);
   perspective: var(--site-card-flip-perspective);
-  cursor: pointer;
 }
 
-.values-card:hover .values-card__inner {
-  transform: rotateY(180deg);
-}
-
-.values-card__inner {
+.audience-card__inner {
   position: relative;
   height: 100%;
   transform-style: preserve-3d;
-  transition: transform var(--site-card-flip-duration) var(--site-motion-easing-standard);
 }
 
-.values-card.is-flipped .values-card__inner {
-  transform: rotateY(180deg);
-}
-
-.values-card__surface {
+.audience-card__surface {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -445,36 +457,44 @@
   color: var(--p-color-ink-palantir-light);
 }
 
-.values-card__front,
-.values-card__back {
+.audience-card__front,
+.audience-card__back {
   position: absolute;
   inset: 0;
   backface-visibility: hidden;
 }
 
-.values-card__back {
+  .audience-card__back {
   transform: rotateY(180deg);
 }
 
-.values-card__icon {
+.audience-card__icon {
   font-size: var(--site-card-icon-size);
 }
 
-.values-card__icon--gold {
+.audience-card__icon--gold {
   color: var(--md-sys-color-primary);
 }
 
-.values-card__name {
+.audience-card__name {
   color: var(--md-sys-color-on-surface);
   font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   text-align: center;
 }
 
-.values-card__desc {
+.audience-card__desc {
   margin: 0;
   color: var(--p-color-ink-palantir-light);
   text-align: center;
+}
+
+/* Values card (flip card) - legacy */
+.values-card {
+  min-width: 0;
+  height: var(--site-card-flip-height);
+  perspective: var(--site-card-flip-perspective);
+  cursor: default;
 }
 
 /* Feed card */
@@ -583,7 +603,7 @@
   gap: var(--md-sys-spacing-sm);
 }
 
-/* Interactive states - shared */
+/* Interactive states - cards are not clickable containers */
 .c-card,
 .c-card--related,
 .c-card--framed,
@@ -595,42 +615,34 @@
 .card--callout,
 .card--formula,
 .related-card,
+.audience-card,
 .values-card {
+  /* Card containers are NOT clickable - only internal links interact */
+  text-decoration: none;
+}
+
+/* Individual links inside cards maintain pointer behavior */
+.c-card a,
+.c-card--related a,
+.c-card--framed a,
+.c-card--callout a,
+.c-card--formula a,
+.values-card a {
   cursor: pointer;
   text-decoration: none;
-  transition:
-    background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
-    transform var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
 
-  &:is(a[href], [role="button"]) {
-    cursor: pointer;
-    text-decoration: none;
-
-    &:hover {
-      transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-      border-color: var(--p-color-ink-palantir-light);
-    }
-
-    &:focus-visible {
-      outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
-      outline-offset: var(--site-focus-ring-offset);
-    }
+  &:hover {
+    text-decoration: underline;
   }
 
-  &:is(a[href], [role="button"]):hover {
-    transform: translateY(calc(-1 * var(--site-card-hover-distance)));
-    border-color: var(--p-color-ink-palantir-light);
-  }
-
-  &:is(a[href], [role="button"]):focus-visible {
-    outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  &:focus-visible {
+    outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
     outline-offset: var(--site-focus-ring-offset);
   }
 }
 
 .values-card:focus-visible {
-  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
   outline-offset: var(--site-focus-ring-offset);
 }
 
@@ -652,7 +664,9 @@
   .c-card--related:is(a[href], [role="button"]):hover,
   .c-card--framed:is(a[href], [role="button"]):hover,
   .card:is(a[href], [role="button"]):hover,
-  .related-card:is(a[href], [role="button"]):hover {
+  .related-card:is(a[href], [role="button"]):hover,
+  .audience-card:is(a[href], [role="button"]):hover,
+  .values-card:is(a[href], [role="button"]):hover {
     transform: none;
   }
 }

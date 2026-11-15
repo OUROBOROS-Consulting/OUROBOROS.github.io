@@ -62,7 +62,7 @@
 @keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(var(--p-motion-entrance-offset));
   }
   to {
     opacity: 1;

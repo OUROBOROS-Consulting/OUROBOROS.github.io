@@ -1,0 +1,129 @@
+// Semantic Design Tokens
+// This layer maps semantic design system names to primitive values.
+// Components should import from _tokens.scss, not from here directly.
+//
+// Structure:
+//   PRIMITIVES (md/*) → SEMANTIC TOKENS (_semantic-tokens.scss) → COMPONENTS
+
+:root {
+  /* ── Spacing ───────────────────────────────────────────────────────────── */
+  --md-sys-spacing-xs: var(--p-spacing-4);
+  --md-sys-spacing-sm: var(--p-spacing-8);
+  --md-sys-spacing-md: var(--p-spacing-16);
+  --md-sys-spacing-lg: var(--p-spacing-24);
+  --md-sys-spacing-xl: var(--p-spacing-32);
+
+  /* ── Radius (Shape) ────────────────────────────────────────────────────── */
+  --site-radius-none: var(--p-radius-0);
+  --site-radius-sm: var(--p-radius-sm);
+  --site-radius-md: var(--p-radius-md);
+  --site-radius-lg: var(--p-radius-lg);
+  --site-radius-xl: var(--p-radius-xl);
+  --site-radius-full: var(--p-radius-full);
+
+  /* ── Shadows (Elevation) ───────────────────────────────────────────────── */
+  --site-shadow-1: var(--p-shadow-level-1);
+  --site-shadow-2: var(--p-shadow-level-2);
+  --site-shadow-3: var(--p-shadow-level-3);
+
+  /* ── Card System ────────────────────────────────────────────────────────── */
+  --site-card-surface: var(--p-color-ink-palantir-dark);
+  --site-card-surface-light: var(--p-color-surface-light-1);
+  --site-card-surface-dark: var(--p-color-surface-dark-1);
+  --site-card-radius: var(--site-radius-none);
+  --site-card-padding-compact: var(--md-sys-spacing-md);
+  --site-card-padding-comfortable: var(--md-sys-spacing-lg);
+  --site-card-elevation: var(--site-shadow-2);
+  --site-card-hover-distance: var(--md-sys-spacing-sm);
+
+  /* ── Focus & Interaction ────────────────────────────────────────────────── */
+  --site-focus-ring-width: var(--md-sys-spacing-sm);
+  --site-focus-ring-width-thin: var(--md-sys-spacing-xs);
+  --site-focus-ring-offset: var(--md-sys-spacing-sm);
+  --site-focus-ring-color: var(--md-sys-color-primary);
+  --site-button-min-height: 2.75rem;
+  --site-button-press-scale: 0.97;
+
+  /* ── Brand Colors ───────────────────────────────────────────────────────── */
+  --site-action-surface: var(--p-ember-gold-bright-600);
+  --site-action-surface-hover: var(--p-ember-gold-bright-700);
+  --site-action-surface-active: var(--p-ember-gold-bright-800);
+  --site-action-text: var(--p-void-900);
+  --site-action-text-light: var(--p-void-100);
+
+  /* ── Error Colors ───────────────────────────────────────────────────────── */
+  --site-error-surface: var(--p-color-error-light);
+  --site-error-text: var(--p-color-on-error-dark);
+
+  /* ── Layout ──────────────────────────────────────────────────────────────── */
+  --site-border-width: 1px;
+  --site-border-width-emphasis: 0.125rem;
+  --site-footer-content-max-width: 76rem;
+  --md-sys-color-outline: #CCCCCC;
+
+  // Added button hover glow:
+  --site-button-hover-glow: rgba(var(--p-ember-gold-bright-600), 0.4);
+
+  // Added button arrow offset:
+  --site-button-arrow-offset: 3px;
+
+  // Added button letter-spacing:
+  --site-button-letter-spacing: -0.02em;
+
+  // Added logo size for nav (square logo, 120px)
+  --site-nav-logo-size: 100px;
+
+  /* ── Typography References ───────────────────────────────────────────────── */
+  // Note: Typography is handled by the typography module in _tokens.scss.
+  // Do not redefine type values here. Reference only.
+  // Added CSS custom property font sizes for legacy compatibility:
+  --p-font-display-large: 57px;
+  --p-font-display-medium: 45px;
+  --p-font-headline-medium: 28px;
+  --p-font-headline-large: 32px;
+  --p-font-headline-small: 24px;
+
+  // Nav typography tokens:
+  --site-nav-label-size: 1.75rem;
+  --site-nav-label-line-height: 1.25;
+
+  // Added radius token for divider glyph:
+  --p-radius-xl: 16px;
+
+  // Added motion spacing for animations:
+  --p-motion-entrance-offset: 10px;
+
+  /* ── Motion ──────────────────────────────────────────────────────────────── */
+  --site-motion-interaction-duration: var(--md-sys-motion-duration-200);
+  --site-motion-reduced-duration: var(--md-sys-motion-duration-50);
+  --site-motion-easing-standard: cubic-bezier(
+    var(--md-sys-motion-easing-standard-x0),
+    var(--md-sys-motion-easing-standard-y0),
+    var(--md-sys-motion-easing-standard-x1),
+    var(--md-sys-motion-easing-standard-y1)
+  );
+
+  /* ── Legacy / Site-Wide ─────────────────────────────────────────────────── */
+  --site-card-grid-min-width: 17rem;
+  --site-resource-card-grid-min-width: 19rem;
+  --site-card-flip-height: 15rem;
+  --site-card-flip-perspective: 62.5rem;
+  --site-card-flip-duration: var(--md-sys-motion-duration-500);
+  --site-marble-overlay-strong: color-mix(in srgb, var(--p-void-900) 84%, transparent);
+  --site-nav-control-size: 3.25rem;
+  --site-nav-icon-size: 1.75rem;
+  --site-nav-search-width: 16rem;
+  --site-footer-logo-size: 8.5rem;
+  --site-footer-social-control-size: 2.75rem;
+  --site-footer-social-icon-size: 1.25rem;
+  --site-footer-divider-width: 12rem;
+  --site-testimonial-card-ratio: 16 / 9;
+  --site-carousel-control-size: 2.5rem;
+  --site-carousel-dot-size: 0.75rem;
+  --site-carousel-content-max-width: 48rem;
+  --site-state-disabled-opacity: 0.38;
+  --site-stat-value-size: var(--md-sys-typescale-display-small-size);
+  --site-card-title-size: var(--md-sys-typescale-title-large-size);
+  --site-card-title-line-height: var(--md-sys-typescale-title-large-line-height);
+  --site-safety-target-min-height: 2.75rem;
+}

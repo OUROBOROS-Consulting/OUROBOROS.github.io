@@ -48,14 +48,12 @@ layout: default
          body:    "One or two sentences of context."
      ══════════════════════════════════════════════════════════════════════ -->
 {% if page.about %}
-<div class="page-body page-body--banded">
-  <section class="page-section">
-    <!-- Left column: label / heading -->
-    <div class="page-section-label">
+<div class="c-article__body about-section">
+  <section class="section">
+    <div class="section-label">
       <p>{{ page.about.heading }}</p>
     </div>
-    <!-- Right column: body text -->
-    <div class="page-section-content">
+    <div class="section-content">
       <p>{{ page.about.body }}</p>
     </div>
   </section>
@@ -69,7 +67,7 @@ layout: default
        pull_quote: "Whatever you want to emphasise."
      ══════════════════════════════════════════════════════════════════════ -->
 {% if page.pull_quote %}
-<div class="page-body">
+<div class="c-article__body pull-quote-section">
   <aside class="pull-quote">
     <blockquote>{{ page.pull_quote }}</blockquote>
   </aside>
@@ -95,24 +93,16 @@ layout: default
        body: "text"              — see CARD BODY block below
      ══════════════════════════════════════════════════════════════════════ -->
 {% if page.sections %}
-<div class="page-toc-wrap page-toc-wrap--svc">
-<div class="page-body page-body--banded">
-  {% for section in page.sections %}
+<div class="c-article__body sections-container">
+{% for section in page.sections %}
 
   {%- comment -%}
     Section: {{ section.heading }}
     id="{{ section.id }}"
-    Layout: two columns — label (left) + content (right)
+    Layout: Full-width section
   {%- endcomment -%}
-  <section id="{{ section.id }}" class="page-section{% if page.section_layout == 'stacked' %} page-section--stacked{% endif %}">
-
-    <!-- Left column: small label text -->
-    <div class="page-section-label">
-      <p>{{ section.heading }}</p>
-    </div>
-
-    <!-- Right column: dynamic content (see branches below) -->
-    <div class="page-section-content">
+  <section id="{{ section.id }}" class="c-article__body section">
+    <h2 class="authority">{{ section.heading }}</h2>
 
       {% if section.playlist_carousel %}
       <!-- ── PLAYLIST CAROUSEL ──────────────────────────────────────────
@@ -150,8 +140,8 @@ layout: default
                 <!-- Optional metadata below the iframe -->
                 {% if pl.title or pl.description %}
                 <div class="playlist-meta">
-                  {% if pl.title %}<p class="playlist-title">{{ pl.title }}</p>{% endif %}
-                  {% if pl.description %}<p class="card-desc">{{ pl.description }}</p>{% endif %}
+                  {% if pl.title %}<h3 class="playlist-title">{{ pl.title }}</h3>{% endif %}
+                  {% if pl.description %}<p class="c-card--framed__desc">{{ pl.description }}</p>{% endif %}
                 </div>
                 {% endif %}
 
@@ -186,7 +176,7 @@ layout: default
       <div class="testimonials-grid">
         {% for _item in _items %}
         <div class="c-card c-card--citation">
-          <span class="bib-title">{{ _item.title }}</span>
+          <h3 class="bib-title">{{ _item.title }}</h3>
           {% if _item.author %}<p class="bib-byline">{{ _item.author }}</p>{% endif %}
           {% if _item.note %}<p class="bib-venue">{{ _item.note | markdownify }}</p>{% endif %}
           {% if _item.description %}<p class="bib-venue">{{ _item.description | markdownify }}</p>{% endif %}
@@ -205,7 +195,7 @@ layout: default
            The `data-bibtex-src` attribute tells the script where to fetch.
       ─────────────────────────────────────────────────────────────────── -->
       <div class="testimonials-grid" data-bibtex-src="{{ section.bibtex_src }}">
-        <p class="card-desc">Loading references…</p>
+        <p class="c-card--framed__desc">Loading references…</p>
       </div>
 
       {% elsif section.html %}
@@ -241,7 +231,6 @@ layout: default
       </div>
 
       {% endif %}
-    </div><!-- /page-section-content -->
 
     {% if section.private_ai_flow %}
     {% include private-ai-flow.html %}
@@ -249,9 +238,8 @@ layout: default
   </section>
 
   {% endfor %}
-</div><!-- /page-body (sections loop) -->
+</div><!-- /sections-container -->
 {% include toc.html %}
-</div><!-- /page-toc-wrap -->
 {% endif %}
 
 {%- comment -%}
@@ -272,7 +260,7 @@ layout: default
   ══════════════════════════════════════════════════════════════════════
 {%- endcomment -%}
 {% if page.links %}
-<div class="page-body">
+<div class="c-article__body links-section">
   <nav class="footer-links foundation-links">
     {% if page.links.github %}<a href="{{ page.links.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
     {% if page.links.linkedin %}<a href="{{ page.links.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}

@@ -2,7 +2,7 @@
 title: "Private AI & Data Systems"
 description: "Build locally hosted AI, agentic workflows, data-quality checks, and custom tools for organizations handling confidential data."
 layout: sections
-section_layout: stacked
+section_layout: none
 back_url: /
 category: Services
 hero_icon: ph-head-circuit

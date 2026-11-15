@@ -1,6 +1,4 @@
 ---
----
-@use "design/tokens" as *;
 
 .intake-wrapper {
   box-sizing: border-box;
@@ -12,6 +10,14 @@
     calc((100% + var(--rail-total, 0px) - var(--measure-page)) / 2)
   );
   color: var(--md-sys-color-on-background);
+  position: relative;
+  z-index: 200;
+}
+
+.intake-body {
+  position: relative;
+  z-index: 2;
+  overflow: visible;
 }
 
 .intake-masthead {
@@ -104,13 +110,6 @@
 
 .intake-status--error {
   border-left-color: var(--md-sys-color-error);
-}
-
-.intake-body {
-  overflow: clip;
-  border: var(--site-border-width) solid var(--md-sys-color-outline);
-  border-radius: var(--site-radius-md);
-  background-color: var(--md-sys-color-surface);
 }
 
 .intake-privacy {
@@ -348,7 +347,7 @@
 .intake-body select:focus-visible,
 .intake-body textarea:focus-visible {
   border-color: var(--p-color-ink-palantir-light);
-  outline: var(--site-focus-ring-width) solid var(--md-sys-color-primary);
+  outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
   outline-offset: var(--site-focus-ring-offset);
 }
 
@@ -372,6 +371,10 @@
   font-size: var(--md-sys-typescale-body-small-size);
   line-height: 1.45;
   cursor: pointer;
+}
+
+.check-item-text {
+  flex: 1;
 }
 
 .check-item:has(input:checked) {

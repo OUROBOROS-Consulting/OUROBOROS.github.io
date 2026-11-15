@@ -159,10 +159,10 @@
         var entries = parseBibtex(text);
         el.innerHTML = entries.length
           ? entries.map(renderEntry).join('\n')
-          : '<p class="card-desc">No references found.</p>';
+          : '<p class="c-card--framed__desc">No references found.</p>';
       })
       .catch(function (err) {
-        el.innerHTML = '<p class="card-desc">Could not load references: ' + err.message + '</p>';
+        el.innerHTML = '<p class="c-card--framed__desc">Could not load references: ' + err.message + '</p>';
       });
   });
 

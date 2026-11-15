@@ -29,14 +29,14 @@ hide_cta: true
     {% for item in site.data.psas %}
     <article class="c-card c-card--related">
       {% if item.category %}<p class="rc-tag">{{ item.category | escape }}</p>{% endif %}
-      <h2 class="rc-title">{{ item.title | escape }}</h2>
-      <p class="card-desc">{{ item.description | escape }}</p>
-      <a class="card-link" href="{{ item.file | relative_url }}" download>Download PDF →</a>
+      <h3 class="c-card-title">{{ item.title | escape }}</h3>
+      <p class="c-card--related__desc">{{ item.description | escape }}</p>
+      <a class="c-card--related__link" href="{{ item.file | relative_url }}" download>Download PDF &rarr;</a>
     </article>
     {% endfor %}
   </div>
 
   {% else %}
-  <p class="card-desc">No public-service announcements are available yet.</p>
+  <p class="c-card--related__desc">No public-service announcements are available yet.</p>
   {% endif %}
 </div>

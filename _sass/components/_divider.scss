@@ -23,8 +23,8 @@
 }
 
 .c-divider__glyph {
-  width: 24px;
-  height: 24px;
+  width: var(--p-radius-xl);
+  height: var(--p-radius-xl);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

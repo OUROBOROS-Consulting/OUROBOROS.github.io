@@ -13,7 +13,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: var(--md-sys-spacing-xs);
-  padding: 5px 0;
+  padding: var(--p-spacing-4) 0;
 }
 
 .badge {
@@ -22,7 +22,7 @@
   align-items: center;
   background-color: var(--md-sys-color-primary);
   color: var(--md-sys-color-on-primary);
-  padding: 8px 16px;
+  padding: var(--p-spacing-8) var(--p-spacing-12);
   border-radius: var(--md-sys-shape-full);
   font-size: var(--p-font-body-medium);
   cursor: default;
@@ -59,7 +59,7 @@ h2 {
   margin-top: calc(var(--md-sys-spacing-xl));
   margin-bottom: var(--md-sys-spacing-sm);
 
-  padding-bottom: 5px;
+  padding-bottom: var(--p-spacing-4);
   border-bottom: 1px solid rgba(var(--md-sys-color-primary), 0.2);
 }
 
