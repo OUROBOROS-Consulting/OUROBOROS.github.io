@@ -105,6 +105,7 @@
     .values-card a,
     .audience-card a)):where(:link, :visited) {
   color: var(--p-ember-gold-deep-900);
+  font-family: var(--font-mono);
 }
 
 .c-section--paper .carousel-btn,

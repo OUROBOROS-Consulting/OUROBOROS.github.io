@@ -96,6 +96,8 @@
 
   <body {% if page.show_banner %} class="has-banner" {% endif %}{% if page.hide_cta %} class="intake-margin" {% endif %}>
     {% if page.show_banner %}{% include banner.html %}{% endif %}
+    <!-- Skip Link for Accessibility (WCAG 2.4.1) -->
+    <a href="#main" class="skip-link" style="position:absolute;left:-9999px;top:auto;width:auto;height:auto;margin:auto;padding:1rem 1.5rem;background:#111;color:#fff;z-index:9999;text-decoration:none;border-radius:0 0 8px 0;">Skip to main content</a>
     <div class="nav-shell" aria-hidden="true"></div>
     {% include nav.html %}
     {% if page.layout == 'home' %}
