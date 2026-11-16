@@ -17,7 +17,7 @@ permalink: /resources/
 %}
 
 <div class="page-body">
-  <h2 class="authority">AI and data</h2>
+  <h2 class="text-s">AI and data</h2>
   <p>Guides for teams deciding how to use AI, protect information, and check data.</p>
   <div class="related-grid resources-grid">
 
@@ -37,7 +37,7 @@ permalink: /resources/
 
   </div>
 
-  <h2 class="authority">Public-interest resources</h2>
+  <h2 class="text-s">Public-interest resources</h2>
   <p>Free references and guides on safety, trauma, institutional accountability, and related topics. These are separate from consulting services.</p>
   <div class="related-grid resources-grid">
     <article class="c-card c-card--related">

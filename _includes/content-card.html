@@ -3,8 +3,8 @@
 {% assign summary = include.summary | default: item.lede | default: item.description %}
 {% if include.variant == "home" %}
 <div class="c-card c-stack">
-  {% if label %}<p class="technical text-t">{{ label }}</p>{% endif %}
-  {% if item.work_type %}<p class="technical text-t">{{ item.work_type }}</p>{% endif %}
+  {% if label %}<p class="rc-tag-chip">{{ label }}</p>{% endif %}
+  {% if item.work_type %}<p class="rc-tag-chip">{{ item.work_type }}</p>{% endif %}
   <h3 class="authority c-card-title">{{ item.title }}</h3>
   {% if include.card_type == "offer" %}
   <p class="text-s">{{ item.lede }}</p>
@@ -12,7 +12,7 @@
   {% elsif summary %}
   <p class="text-s">{{ summary }}</p>
   {% endif %}
-  <a href="{{ item.url | relative_url }}" class="technical text-t c-card-action">{{ include.link_label | default: "Read More" }} &rarr;</a>
+  <a href="{{ item.url | relative_url }}" class="rc-tag-chip c-card-action">{{ include.link_label | default: "Read More" }} &rarr;</a>
 </div>
 {% else %}
 <article class="c-card {{ include.card_class | default: 'c-card--framed' }}">

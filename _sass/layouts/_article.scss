@@ -67,11 +67,30 @@
 
 .c-article__body .faq-expand-all,
 .post-body .faq-expand-all {
-  padding: 0.625rem 0.875rem;
+  min-height: var(--site-button-min-height);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  border-radius: var(--p-radius-0);
+  font-family: var(--font-mono);
+  font-weight: var(--md-ref-typeface-weight-medium);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
   border: 1px solid var(--p-forensic-400);
   color: inherit;
-  background: transparent;
-  font: inherit;
-  font-family: var(--font-mono);
-  cursor: pointer;
+  background-color: var(--p-void-900);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--p-forensic-100);
+    color: var(--p-void-900);
+  }
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
+    outline-offset: var(--site-focus-ring-offset);
+  }
 }
