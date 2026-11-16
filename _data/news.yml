@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-15
+generated: 2026-11-16
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Building trustworthy AI by fencing it in, not predicting it"
+        url: "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/"
+        source: "MIT Technology Review"
+        date: 2026-11-16
+        summary: "In October this year, OpenAI disclosed that two of its AI agents had switched off the systems built to monitor them. One muted its own safety alerts after misreading an instruction not to send messages; the other..."
+      - title: "UK exposed to polycrisis of threats amid government ‘complacency’"
+        url: "https://www.theguardian.com/society/2026/nov/16/uk-exposed-to-polycrisis-of-threats-amid-government-complacency"
+        source: "The Guardian"
+        date: 2026-11-16
+        summary: "Lords report calls for urgent new approach to resilience planning in face of cyber-attacks, sabotage and climate crisis Ministers are complacent in the face of fast-changing and increasingly interconnected threats to..."
+      - title: "Reports of AI-related child sexual abuse material rise 8,400% in two years, data shows"
+        url: "https://www.theguardian.com/technology/2026/nov/16/ai-related-child-sexual-abuse-material-rise-exploitation-deepfakes"
+        source: "The Guardian"
+        date: 2026-11-16
+        summary: "Calls for governments to recognise sexual exploitation of children as preventable public health emergency Reports of artificial intelligence being used to sexually exploit children have risen by more than 8,400% in two..."
       - title: "Is the AI job apocalypse finally here? The evidence suggests otherwise | John Quiggin"
         url: "https://www.theguardian.com/commentisfree/2026/nov/16/is-the-ai-job-apocalypse-finally-here-the-evidence-suggests-otherwise"
         source: "The Guardian"
@@ -23,21 +38,11 @@ sections:
         source: "The Guardian"
         date: 2026-11-13
         summary: "This is not a personality contest. This is a debate about the future of the Democratic party The election for Democratic Senate leader between Chuck Schumer and Chris Van Hollen must be understood for what it is. This..."
-      - title: "The datacenter industry is using propaganda to fight opposition | Samuel Woolley, Dean Jackson and Maia Woluchem"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/13/datacenter-industry-propaganda"
-        source: "The Guardian"
-        date: 2026-11-13
-        summary: "Big tech has used misdirection, disinformation and jargon to obscure the harm the facilities can cause to communities “Antifa”. “Commies”. “Chinese bots”. Everyone from tech leaders to the president has called..."
       - title: "Google faces calls for AI moratoriums in schools after Gemini pilot backlash"
         url: "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
         source: "Ars Technica"
         date: 2026-11-12
         summary: "Families confront Google after teen’s lawsuit labels Gemini a “suicide coach.”"
-      - title: "US public workers are fighting to protect their jobs from AI – and some are winning"
-        url: "https://www.theguardian.com/technology/2026/nov/12/us-workers-governments-unions-ai"
-        source: "The Guardian"
-        date: 2026-11-12
-        summary: "As governments adopt AI, workers are gaining ground in how it’s used and securing safeguards against its harms In the shadow of Silicon Valley, workers for the city of Oakland, California, worry the region will deploy..."
       - title: "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395"
         url: "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/"
         source: "Ars Technica"
@@ -53,25 +58,25 @@ sections:
         source: "MIT Technology Review"
         date: 2026-11-09
         summary: "As a California state senator, Scott Wiener authored legislation aimed at curbing the risks of advanced AI. Now, after winning a tight congressional race for former Speaker of the House Nancy Pelosi’s open San Francisco..."
-      - title: "Google: Schools can keep search while skipping Gemini, but AI search is non-negotiable"
-        url: "https://arstechnica.com/ai/2026/11/google-schools-can-keep-search-while-skipping-gemini-but-ai-search-is-non-negotiable/"
-        source: "Ars Technica"
-        date: 2026-11-05
-        summary: "Google is technically offering schools more choice but not the choices anyone wants."
-      - title: "Lawsuit: Man introduced his wife to ChatGPT. She used it to plan his murder."
-        url: "https://arstechnica.com/tech-policy/2026/11/lawsuit-man-introduced-his-wife-to-chatgpt-she-used-it-to-plan-his-murder/"
-        source: "Ars Technica"
-        date: 2026-11-05
-        summary: "Bitter energy drinks turned out to be ChatGPT-steered poisoning, lawsuit says."
-      - title: "How “reverse game theory” could keep AI agents in check"
-        url: "https://www.technologyreview.com/2026/11/03/1147934/reverse-game-theory-mechanism-design-ai-alignment/"
-        source: "MIT Technology Review"
-        date: 2026-11-03
-        summary: "A new approach known as “reverse game theory” aims to control powerful AI models by designing systems that incentivize them to stick to the rules. As AI models become more capable, safety researchers are scrambling to..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Devon police renewed shotgun licence of known abuser who later killed his wife"
+        url: "https://www.theguardian.com/uk-news/2026/nov/16/domestic-abuser-john-perkins-shotguns-kathryn-devon-police"
+        source: "The Guardian"
+        date: 2026-11-16
+        summary: "Ex-marine John Perkins, who also killed himself, had been violent to Kathryn Perkins over 42-year marriage, Exeter inquests hear A “controlling and violent” former Royal Marine who shot his wife dead after she told him..."
+      - title: "Darker pornography, deepfakes and chemical coercion: Farah Nazeer on the new frontlines of the sexual violence crisis"
+        url: "https://www.theguardian.com/society/2026/nov/16/darker-pornography-deepfakes-and-chemical-coercion-farah-nazeer-on-the-new-frontlines-of-the-sexual-violence-crisis"
+        source: "The Guardian"
+        date: 2026-11-16
+        summary: "The head of Women’s Aid has a unique insight into the ways technology provides mechanisms for abuse. She discusses online predators, the UK’s early release scheme – and why the fastest growing cohort of domestic abusers..."
+      - title: "Digital finance products used to abuse almost 20% of young women and girls, UK report finds"
+        url: "https://www.theguardian.com/society/2026/nov/15/digital-finance-products-abuse-against-young-women-and-girls-report"
+        source: "The Guardian"
+        date: 2026-11-16
+        summary: "Survey respondents describe current or former partners controlling bank accounts and taking out credit online without full consent Almost one in five young women and girls in the UK have experienced digital financial..."
       - title: "‘I’m still trying to find out who I am’: the little-understood plight of Forgotten Australians"
         url: "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb"
         source: "The Guardian"
@@ -87,21 +92,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-02
         summary: "Ana Ts’uyeb’s poetic film celebrates the resilience of Indigenous women while exploring the possibility of a different future Shot in her home village of Naranjatic Alto in the Mexican highlands, Ana Ts’uyeb’s..."
-      - title: "Domestic violence survivor living ‘in terror’ after attacker released without tag"
-        url: "https://www.theguardian.com/society/2026/nov/02/domestic-violence-survivor-terror-attacker-released-without-tag"
-        source: "The Guardian"
-        date: 2026-11-02
-        summary: "Woman among hundreds asking why electronic trackers not fitted before offenders leave prison A domestic violence survivor who was punched, threatened with a knife and had her front door kicked in by her former partner..."
-      - title: "‘His honesty gave courage to survivors’: domestic abuse charities praise Patrick Stewart’s legacy"
-        url: "https://www.theguardian.com/culture/2026/oct/30/domestic-abuse-charities-patrick-stewart-amnesty-international-refuge"
-        source: "The Guardian"
-        date: 2026-10-30
-        summary: "Actor first shared his childhood experiences as part of Amnesty International campaign and became Refuge ambassador When Patrick Stewart was growing up in the 1940s, he witnessed how, after his father beat his mother..."
-      - title: "‘He was like 10 men after taking cocaine‘: how Britain’s drug habit is fuelling domestic abuse"
-        url: "https://www.theguardian.com/society/2026/oct/26/cocaine-britain-drug-habit-fuelling-domestic-abuse"
-        source: "The Guardian"
-        date: 2026-10-26
-        summary: "Home Office figures show nearly two-thirds of drug tests carried out on arrested abuse suspects detected use of a drug that ‘boosts confidence but increases paranoia’ During lockdown, Charlotte and her ex-partner would..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -136,6 +126,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Publisher investigating papers with fake references by EIC of sports journal"
+        url: "https://retractionwatch.com/2026/11/16/publisher-investigating-papers-with-fake-references-by-eic-of-sports-journal/"
+        source: "Retraction Watch"
+        date: 2026-11-16
+        summary: "A Polish sports journal is investigating papers published by its editor-in-chief that include nonexistent references following a Retraction Watch inquiry. The editor denied using AI and said he will correct the fake..."
       - title: "Do PubPeer comments make a difference? A small study tried to find out"
         url: "https://retractionwatch.com/2026/11/11/do-pubpeer-comments-make-a-difference-a-small-study-tried-to-find-out/"
         source: "Retraction Watch"
@@ -166,15 +161,15 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-04
         summary: "A physics journal has removed a professor’s name from an article at his university’s request, because a coauthor works at a university in China that has been flagged for national security concerns. “The decision of the..."
-      - title: "A year later, Springer Nature journal hasn’t updated article with fake reference to our cofounder"
-        url: "https://retractionwatch.com/2026/11/04/daru-journal-pharmaceutical-sciences-springer-nature-fake-reference-cofounder-year-later/"
-        source: "Retraction Watch"
-        date: 2026-11-04
-        summary: "Some people might happily take credit for an article in Nature they did not write. That’s not the case when the credited author is a cofounder of Retraction Watch and the attribution comes in a citation to an article..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Amazon Ring’s New Indoor Surveillance Drone Is Not Compatible with Privacy"
+        url: "https://www.eff.org/deeplinks/2026/11/amazon-rings-new-indoor-surveillance-drone-not-compatible-privacy"
+        source: "EFF Deeplinks"
+        date: 2026-11-16
+        summary: "Amazon Ring has finally announced their long-dreaded indoor drone , a small flying surveillance device connected to their security suite of products that can fly around your house filming and recording things. The..."
       - title: "New York City Becomes the Latest City to Ban Surveillance Pricing"
         url: "https://epic.org/new-york-city-becomes-the-latest-city-to-ban-surveillance-pricing/"
         source: "EPIC"
@@ -230,8 +225,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-03
         summary: "The government’s surveillance powers grew rapidly after Sept. 11, 2001, some in public view and some in secret. EFF suspected but couldn’t prove that the National Security Agency was spying on Americans' communications..."
-      - title: "Canadians Are Running Out Of Time To Oppose The Dangerous C-22 Surveillance Bill"
-        url: "https://www.eff.org/deeplinks/2026/10/canadians-are-running-out-time-oppose-dangerous-c-22-surveillance-bill"
-        source: "EFF Deeplinks"
-        date: 2026-10-22
-        summary: "Canada’s Parliament is debating a massive expansion of surveillance powers that will threaten the privacy and security of millions of people. Bill C-22, also called the Lawful Access Act, has already passed the House of..."
