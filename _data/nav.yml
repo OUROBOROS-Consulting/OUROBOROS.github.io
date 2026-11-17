@@ -44,14 +44,11 @@
   active_paths:
     - /mission
     - /team
-    - /faq
     - /resume
     - /accessibility
   children:
     - title: Team
       url: /team/
-    - title: Scope & Privacy FAQ
-      url: /faq/
     - title: Resume
       url: /resume/
     - title: Accessibility
