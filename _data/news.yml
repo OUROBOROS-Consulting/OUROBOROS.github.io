@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-16
+generated: 2026-11-17
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Jensen Huang to testify before Congress on ‘potential breach of national security’"
+        url: "https://www.theguardian.com/technology/2026/nov/17/jensen-huang-testify-congress-nvidia-affair-spy"
+        source: "The Guardian"
+        date: 2026-11-17
+        summary: "High-stakes hearing comes in wake of resignation from Nvidia after alleged affair with suspected Chinese spy Nvidia’s former CEO Jensen Huang will testify before several congressional committees on 1 December, setting..."
+      - title: "Automated warfare is already here. Now governments must restrain it | Helen Clark"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/17/automated-warfare-here-governments-restrain-ai-militaries-treaty"
+        source: "The Guardian"
+        date: 2026-11-17
+        summary: "AI systems can allow militaries to find and annihilate targets within seconds. A meaningful treaty must prioritise human control – and accountability Helen Clark is former head of the UN Development Programme and former..."
+      - title: "California sues OpenAI over safety concerns after rogue agent hacking"
+        url: "https://www.theguardian.com/technology/2026/nov/16/california-openai-rogue-agent-hacking-lawsuit"
+        source: "The Guardian"
+        date: 2026-11-16
+        summary: "Lawsuit stems from earlier incident where tech company’s products hacked into open-source platform Hugging Face California sued OpenAI on Monday, accusing the artificial intelligence titan of developing its technology..."
       - title: "Building trustworthy AI by fencing it in, not predicting it"
         url: "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/"
         source: "MIT Technology Review"
@@ -28,16 +43,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-15
         summary: "The role AI played in job losses at Australia’s NAB, Qantas, Canva and Atlassian is far from clear – but it may prove to have more impact on the stock market than the jobs market Get our breaking news email , free app..."
-      - title: "Art ‘must not be sacrificed on the altar of corporate profit’, Liberal senator says as AI policy debate rages"
-        url: "https://www.theguardian.com/australia-news/2026/nov/15/art-over-profit-ai-policy-debate-andrew-mclachlan"
-        source: "The Guardian"
-        date: 2026-11-14
-        summary: "Andrew McLachlan says he chooses ‘real forests over virtual ones’ as he urges Labor government to consider AI’s impact on artists and environment Get our daily political email , free app or daily news podcast The..."
-      - title: "What the choice between Chuck Schumer and Chris Van Hollen for Senate leader is all about | Bernie Sanders"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/13/chuck-schumer-chris-van-hollen-senate-leader"
-        source: "The Guardian"
-        date: 2026-11-13
-        summary: "This is not a personality contest. This is a debate about the future of the Democratic party The election for Democratic Senate leader between Chuck Schumer and Chris Van Hollen must be understood for what it is. This..."
       - title: "Google faces calls for AI moratoriums in schools after Gemini pilot backlash"
         url: "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
         source: "Ars Technica"
@@ -62,6 +67,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘He’s a master manipulator’: one woman’s fight against her abuser’s early release –podcast"
+        url: "https://www.theguardian.com/news/audio/2026/nov/17/hes-a-master-manipulator-one-womans-fight-against-her-abusers-early-release-podcast"
+        source: "The Guardian"
+        date: 2026-11-17
+        summary: "The government is releasing criminals early to stop prisons being overcrowded. But where does that leave their victims? Helen Pidd speaks to a domestic abuse survivor about the release of her perpetrator – former..."
       - title: "Devon police renewed shotgun licence of known abuser who later killed his wife"
         url: "https://www.theguardian.com/uk-news/2026/nov/16/domestic-abuser-john-perkins-shotguns-kathryn-devon-police"
         source: "The Guardian"
@@ -87,11 +97,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-04
         summary: "Charities say government ‘must act now’ as figures reveal eight times more cocaine-related deaths than in 2010 Cocaine is now associated with more drug deaths than heroin for the first time in England and Wales..."
-      - title: "I Died review – moving portrait of Tzotzil women confronting patriarchal violence in the Mexican highlands"
-        url: "https://www.theguardian.com/film/2026/nov/02/i-died-review-moving-portrait-of-tzotzil-women-confronting-patriarchal-violence-in-the-mexican-highlands"
-        source: "The Guardian"
-        date: 2026-11-02
-        summary: "Ana Ts’uyeb’s poetic film celebrates the resilience of Indigenous women while exploring the possibility of a different future Shot in her home village of Naranjatic Alto in the Mexican highlands, Ana Ts’uyeb’s..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -126,11 +131,21 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
-      - title: "Publisher investigating papers with fake references by EIC of sports journal"
+      - title: "A Federal Women’s Prison Became a “Rape Club.” After Officials Shut It Down, Rampant Abuse Continued Elsewhere."
+        url: "https://www.propublica.org/article/federal-womens-prison-sexual-abuse-reform-dublin-bop"
+        source: "ProPublica"
+        date: 2026-11-17
+        summary: "The post A Federal Women’s Prison Became a “Rape Club.” After Officials Shut It Down, Rampant Abuse Continued Elsewhere. appeared first on ProPublica ."
+      - title: "‘Too good to be true’: Biotech company’s paper on Parkinson’s retracted for data manipulation"
+        url: "https://retractionwatch.com/2026/11/16/cell-reports-denali-therapeutics-neurodegeneration/"
+        source: "Retraction Watch"
+        date: 2026-11-16
+        summary: "A Cell Press journal has retracted a paper on Parkinson’s disease following the discovery that the first author manipulated data in the work. The retraction notice in Cell Reports states one of the coauthors found the..."
+      - title: "Publisher to issue corrections to papers with fake references by EIC of sports journal"
         url: "https://retractionwatch.com/2026/11/16/publisher-investigating-papers-with-fake-references-by-eic-of-sports-journal/"
         source: "Retraction Watch"
         date: 2026-11-16
-        summary: "A Polish sports journal is investigating papers published by its editor-in-chief that include nonexistent references following a Retraction Watch inquiry. The editor denied using AI and said he will correct the fake..."
+        summary: "A Polish sports journal will correct papers published by its editor-in-chief that include nonexistent references following a Retraction Watch inquiry. The editor denied using AI and said he will correct the fake..."
       - title: "Do PubPeer comments make a difference? A small study tried to find out"
         url: "https://retractionwatch.com/2026/11/11/do-pubpeer-comments-make-a-difference-a-small-study-tried-to-find-out/"
         source: "Retraction Watch"
@@ -156,11 +171,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-08
         summary: "The top publishing executive at the American Diabetes Association has resigned over how the organization has handled an editorial boycott at one of its journals following a protest at its annual meeting earlier this..."
-      - title: "U.S. university asks journal to remove professor’s name from paper with coauthor in China"
-        url: "https://retractionwatch.com/2026/11/04/us-university-asks-journal-to-remove-professors-name-from-paper-with-coauthor-in-china/"
-        source: "Retraction Watch"
-        date: 2026-11-04
-        summary: "A physics journal has removed a professor’s name from an article at his university’s request, because a coauthor works at a university in China that has been flagged for national security concerns. “The decision of the..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
