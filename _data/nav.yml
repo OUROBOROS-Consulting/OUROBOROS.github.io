@@ -1,12 +1,8 @@
 - title: Services
   url: /services/
   children:
-    - title: Private AI Setup
-      url: /services/private-ai-setup/
-    - title: Private AI & Data Systems
+    - title: Technology Services
       url: /services/technology/
-    - title: AI Privacy & Governance Advisory
-      url: /services/identity/
     - title: Web & Graphic Design
       url: /services/design/
     - title: Consulting FAQ

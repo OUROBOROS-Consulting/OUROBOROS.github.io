@@ -3,7 +3,40 @@
   <nav class="c-nav__container" aria-label="Primary">
     <!-- Mobile menu container (single list) -->
     <div class="c-nav__mobile-menu" id="c-nav__mobile-menu">
-      <div class="c-nav__mobile-links" id="c-nav__mobile-links">
+      <!-- Row 1: Actions + Logo + Hamburger -->
+      <div class="c-nav__mobile-header-row">
+        <!-- Left: Action buttons -->
+        <nav class="c-nav__mobile-actions-left">
+          <form id="nav-search-wrap" class="c-nav__search-wrap" action="{{ '/search/' | relative_url }}" method="get" role="search">
+            <input id="nav-search-input" class="c-nav__search-input" type="search" name="q" aria-label="Search site" placeholder="Search…" autocomplete="off" tabindex="-1">
+            <button type="submit" class="c-nav__search-submit" aria-label="Submit search" tabindex="-1">
+              <i class="ph-fill ph-arrow-right" aria-hidden="true"></i>
+            </button>
+            <button type="button" class="c-nav__search-toggle" aria-label="Open search" aria-expanded="false" aria-controls="nav-search-input">
+              <i class="ph-fill ph-magnifying-glass" aria-hidden="true"></i>
+            </button>
+          </form>
+          <a href="{{ '/intake' | relative_url }}" class="c-nav__action-item" aria-label="Contact" title="Contact">
+            <i class="ph-fill ph-envelope" aria-hidden="true"></i>
+          </a>
+          <button type="button" id="theme-toggle" class="c-nav__action-item c-nav__theme-btn" title="Toggle theme" aria-label="Toggle theme">
+            <i class="ph-fill ph-moon" aria-hidden="true"></i>
+          </button>
+        </nav>
+
+        <!-- Center: Logo -->
+        <a class="c-nav__mobile-logo" href="{{ '/' | relative_url }}">
+          <img src="{{ '/assets/images/logo.svg' | relative_url }}" alt="ouroborOS" class="c-nav__logo-mark">
+        </a>
+
+        <!-- Right: Hamburger -->
+        <button type="button" class="c-nav__mobile-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="c-nav__mobile-links">
+          <i class="ph-fill ph-list" aria-hidden="true"></i>
+        </button>
+      </div>
+
+      <!-- Row 2: Mobile links (hidden by default) -->
+      <div class="c-nav__mobile-links" id="c-nav__mobile-links" aria-label="Primary navigation">
         {% for item in site.data.nav %}
         {% assign item_is_active = false %}
         {% if item.url != '/' and page.url contains item.url %}
@@ -17,11 +50,12 @@
         {% endfor %}
         <div class="c-nav__mobile-dropdown{% if item_is_active %} is-active{% endif %}">
           {% if item.children %}
-          <div class="c-nav__mobile-dropdown-row">
+          <div class="c-nav__mobile-dropdown-row" role="button" tabindex="0" aria-expanded="false">
             <a href="{{ item.url | relative_url }}" class="c-nav__link" {% if page.url==item.url
               %}aria-current="page" {% elsif item_is_active %}aria-current="location" {% endif %}>
               {{ item.title }}
             </a>
+            <i class="ph ph-caret-down" aria-hidden="true"></i>
           </div>
           <div class="c-nav__mobile-dropdown-menu">
             {% for child in item.children %}

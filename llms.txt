@@ -29,7 +29,7 @@ work. Advocacy work is done alongside the client, on the client's own records.
 Education is taught so the client stops needing the firm. Technology and design
 work is built and handed over, source and documentation included.
 
-Rates are published in full at /faq/ and on each service page. A sliding scale
+Rates are published in full at /consulting-faq/ and on each service page. A sliding scale
 applies to individuals; commercial and institutional rates are higher and fund
 the reduced-rate work. Discovery calls are free.
 
@@ -50,7 +50,7 @@ the reduced-rate work. Discovery calls are free.
 {% endfor %}
 ## Answers and policies
 
-- [Frequently Asked Questions]({{ '/faq/' | absolute_url }}): Rates, the line between teaching and doing, what the firm turns down, and why. The most useful single page on the site.
+- [Frequently Asked Questions]({{ '/consulting-faq/' | absolute_url }}): Rates, the line between teaching and doing, what the firm turns down, and why. The most useful single page on the site.
 - [Disclaimer]({{ '/disclaimer/' | absolute_url }}): What this firm is not. No legal advice, no therapy, no licensed investigation.
 - [Privacy]({{ '/privacy/' | absolute_url }}): No third-party requests, no analytics, no trackers, no cookies set by this site.
 - [Accessibility]({{ '/accessibility/' | absolute_url }}): WCAG conformance statement and the remediation record.
@@ -78,6 +78,6 @@ the reduced-rate work. Discovery calls are free.
   FedRAMP-compliant machine learning systems.
 - Teaching public records research is lawful in Minnesota. Performing that
   research on a third party's behalf is not, without a license, and the firm
-  declines those requests. See /faq/.
+  declines those requests. See /consulting-faq/."
 - Small businesses and startups are clients, not a separate business line. The
   commercial work funds the sliding-scale work for survivors and individuals.

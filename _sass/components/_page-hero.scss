@@ -2,7 +2,7 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  min-height: calc(100svh - 6rem);
+  min-height: 100vh;
   padding: clamp(3rem, 7vh, 6rem) clamp(1.5rem, 5vw, 4rem);
   margin-left: calc(50% - 50vw);
   width: 100vw;
@@ -239,7 +239,7 @@
     align-items: start;
     column-gap: clamp(1rem, 5vw, 2rem);
     row-gap: var(--md-sys-spacing-md);
-    min-height: calc(100svh - 8.5rem);
+    min-height: 100vh;
     padding-bottom: 0;
   }
 

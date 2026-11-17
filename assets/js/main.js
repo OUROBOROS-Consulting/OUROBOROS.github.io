@@ -163,59 +163,136 @@ initCarousel('testimonials', true);  // auto-advances every 7s
 
 // ── Mobile hamburger — opens the single mobile links list beneath the bar ──────
 // The utility actions join the menu when the mobile links are expanded.
-(function initMobileNav() {
-  const hamburger = document.querySelector('.c-nav__hamburger');
-  const mobileLinks = document.querySelector('#c-nav__mobile-links');
-  const mobileDropdowns = mobileLinks.querySelectorAll('.c-nav__mobile-dropdown');
-  const mobileMenuContainer = document.querySelector('.c-nav__mobile-menu');
-  const mobileLinksList = document.querySelector('.c-nav__mobile-links');
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    (function initMobileNav() {
+      const hamburger = document.querySelector('.c-nav__hamburger, .c-nav__mobile-hamburger');
+      const mobileLinks = document.querySelector('#c-nav__mobile-links');
+      const mobileDropdowns = mobileLinks?.querySelectorAll('.c-nav__mobile-dropdown');
+      const mobileMenuContainer = document.querySelector('.c-nav__mobile-menu');
+      const mobileLinksList = document.querySelector('.c-nav__mobile-links');
 
-  if (!hamburger || !mobileLinksList) return;
+      if (!hamburger || !mobileLinksList) return;
 
-  // Toggle mobile menu
-  hamburger.addEventListener('click', (e) => {
-    e.stopPropagation();
-    const isOpen = mobileLinks.classList.toggle('is-open');
-    hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-    hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
-    const icon = hamburger.querySelector('i');
-    if (icon) icon.className = isOpen ? 'ph-fill ph-x' : 'ph-fill ph-list';
+      // Toggle mobile menu
+      hamburger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = mobileLinks.classList.toggle('is-open');
+        hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+        const icon = hamburger.querySelector('i');
+        if (icon) icon.className = isOpen ? 'ph-fill ph-x' : 'ph-fill ph-list';
+      });
+
+      // Close mobile menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (mobileLinks?.classList.contains('is-open')) {
+          mobileLinks.classList.remove('is-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+          hamburger.setAttribute('aria-label', 'Open navigation menu');
+          const icon = hamburger.querySelector('i');
+          if (icon) icon.className = 'ph-fill ph-list';
+        }
+      });
+
+      // Mobile accordion toggle (click chevron to open/close submenu)
+      mobileDropdowns?.forEach((dropdown) => {
+        const dropdownRow = dropdown.querySelector('.c-nav__mobile-dropdown-row');
+        if (!dropdownRow) return;
+        
+        const hasChildren = dropdown.querySelector('.c-nav__mobile-dropdown-menu');
+        if (!hasChildren) return;
+        
+        const dropdownLink = dropdownRow.querySelector('.c-nav__link');
+        const chevron = dropdownRow.querySelector('.ph-caret-down');
+        
+        if (!dropdownLink || !chevron) return;
+        
+        dropdownRow.addEventListener('click', (e) => {
+          e.stopPropagation();
+          const isOpen = dropdown.classList.toggle('is-open');
+          const chevron = dropdownRow.querySelector('.ph-caret-down');
+          const link = dropdownRow.querySelector('.c-nav__link');
+          
+          chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+          link.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        });
+        
+        // Keyboard support
+        dropdownRow.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            dropdownRow.click();
+          }
+        });
+      });
+    })();
   });
+} else {
+  // Run immediately if DOM already ready
+  (function initMobileNav() {
+    const hamburger = document.querySelector('.c-nav__hamburger, .c-nav__mobile-hamburger');
+    const mobileLinks = document.querySelector('#c-nav__mobile-links');
+    const mobileDropdowns = mobileLinks?.querySelectorAll('.c-nav__mobile-dropdown');
+    const mobileMenuContainer = document.querySelector('.c-nav__mobile-menu');
+    const mobileLinksList = document.querySelector('.c-nav__mobile-links');
 
-  // Close mobile menu when clicking outside
-  document.addEventListener('click', (e) => {
-    if (mobileLinks.classList.contains('is-open')) {
-      mobileLinks.classList.remove('is-open');
-      hamburger.setAttribute('aria-expanded', 'false');
-      hamburger.setAttribute('aria-label', 'Open navigation menu');
+    if (!hamburger || !mobileLinksList) return;
+
+    // Toggle mobile menu
+    hamburger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = mobileLinks.classList.toggle('is-open');
+      hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
       const icon = hamburger.querySelector('i');
-      if (icon) icon.className = 'ph-fill ph-list';
-    }
-  });
+      if (icon) icon.className = isOpen ? 'ph-fill ph-x' : 'ph-fill ph-list';
+    });
 
-  // Mobile dropdown toggle (click to open/close submenu)
-  mobileDropdowns.forEach((dropdown) => {
-    const hasChildren = dropdown.querySelector('.c-nav__mobile-dropdown-menu');
-    if (!hasChildren) return;
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (mobileLinks?.classList.contains('is-open')) {
+        mobileLinks.classList.remove('is-open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-label', 'Open navigation menu');
+        const icon = hamburger.querySelector('i');
+        if (icon) icon.className = 'ph-fill ph-list';
+      }
+    });
 
-    const dropdownLink = dropdown.querySelector('.c-nav__mobile-link');
-    if (!dropdownLink) return;
-
-    dropdownLink.addEventListener('click', (e) => {
-      e.preventDefault();
-      const isOpen = dropdown.classList.toggle('is-open');
-      dropdownLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-
-      // Close other dropdowns
-      mobileDropdowns.forEach((other) => {
-        if (other !== dropdown && other.classList.contains('is-open')) {
-          other.classList.remove('is-open');
-          other.querySelector('.c-nav__mobile-link')?.setAttribute('aria-expanded', 'false');
+    // Mobile accordion toggle (click chevron to open/close submenu)
+    mobileDropdowns?.forEach((dropdown) => {
+      const dropdownRow = dropdown.querySelector('.c-nav__mobile-dropdown-row');
+      if (!dropdownRow) return;
+      
+      const hasChildren = dropdown.querySelector('.c-nav__mobile-dropdown-menu');
+      if (!hasChildren) return;
+      
+      const dropdownLink = dropdownRow.querySelector('.c-nav__link');
+      const chevron = dropdownRow.querySelector('.ph-caret-down');
+      
+      if (!dropdownLink || !chevron) return;
+      
+      dropdownRow.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = dropdown.classList.toggle('is-open');
+        const chevron = dropdownRow.querySelector('.ph-caret-down');
+        const link = dropdownRow.querySelector('.c-nav__link');
+        
+        chevron.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+        link.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+      
+      // Keyboard support
+      dropdownRow.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          dropdownRow.click();
         }
       });
     });
-  });
-})();
+  })();
+}
 
 // ── Nav search — reveal the field only after explicit activation ──────────────
 (function initNavSearch() {

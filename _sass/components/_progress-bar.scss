@@ -1,3 +1,4 @@
+// Horizontal Progress Bar Styles
 .progress-bar-horizontal {
   position: fixed;
   left: 0;
@@ -11,6 +12,7 @@
   transition: transform var(--site-motion-reduced-duration) linear;
 }
 
+// Vertical Progress Bar Styles
 .progress-bar-vertical {
   position: fixed;
   bottom: 0;
@@ -24,10 +26,10 @@
   transition: transform var(--site-motion-reduced-duration) linear;
 }
 
+// Top and Bottom Progress Bars
 #progress-bar-top {
   top: 0;
 }
-
 #progress-bar-bottom {
   bottom: 0;
   right: 0;
@@ -35,12 +37,12 @@
   transform-origin: right center;
 }
 
+// Left and Right Progress Bars
 #progress-bar-left {
   bottom: 0;
   left: 0;
   transform-origin: center bottom;
 }
-
 #progress-bar-right {
   top: 0;
   right: 0;

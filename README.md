@@ -62,7 +62,7 @@ use explicit permalinks, while the homepage and the CRT demo keep their generate
 | `/accessibility/` | `legal/accessibility.md` |
 | `/consulting-faq/` | `pages/consulting-faq.md` |
 | `/disclaimer/` | `legal/disclaimer.md` |
-| `/faq/` | `legal/faq.md` |
+| `/consulting-faq/` | `pages/consulting-faq.md` |
 | `/llm-disclosure/` | `legal/llm-disclosure.md` |
 | `/news/` | `pages/news.md` |
 | `/privacy/` | `legal/privacy.md` |

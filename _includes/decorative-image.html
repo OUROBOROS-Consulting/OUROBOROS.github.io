@@ -1,0 +1,11 @@
+<!-- ── Decorative Image Include ───────────────────────────────────────────────
+     Use this for purely decorative images that should be skipped by screen readers.
+     Required attributes: aria-hidden="true" (alt="" is acceptable but aria-hidden is preferred)
+     Optional: loading="lazy" for performance
+     Example:
+     {% include decorative-image.html src="image.jpg" class="decorative-bg" loading="lazy" %}
+-->
+<img class="{{ include.class }}{% if include.loading %} loading="lazy"{% endif %}" 
+     src="{{ include.src | relative_url }}" 
+     alt="" 
+     aria-hidden="true">
