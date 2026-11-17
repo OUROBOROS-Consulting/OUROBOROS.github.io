@@ -26,7 +26,7 @@ Every engagement here is one of two things: helping you obtain and organize reco
 
 Part of that boundary is not mine to choose. Minnesota licenses investigative work under Minn. Stat. §326.338, and I am not licensed. The rest of it I would hold anyway: the same techniques that let a journalist verify a source let an abuser find someone who moved. I screen every engagement for purpose, and I decline what I cannot establish.
 
-The [FAQ](/faq/) sets out exactly where that line falls, including what happens inside a training session.
+The [FAQ](/consulting-faq/) sets out exactly where that line falls, including what happens inside a training session.
 
 ## This is not mental-health or crisis care
 

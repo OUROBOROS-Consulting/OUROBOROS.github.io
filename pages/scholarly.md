@@ -11,7 +11,10 @@ back_url: /resources/
 lede: Selected research references on trauma, coercive control, public health, and institutional response.
 about:
   heading: A working bibliography
-  body: These references support the site's public-interest writing and ongoing research. The list is selective, not exhaustive; follow the DOI or source link to read the original work.
+  body:
+    - These references support the site's public-interest writing and ongoing research.
+    - The list is selective, not exhaustive.
+    - Follow the DOI or source link to read the original work.
 sections:
   - id: tech-abuse
     heading: Technology-Facilitated Abuse
