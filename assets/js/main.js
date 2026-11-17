@@ -101,7 +101,7 @@ function initCarousel(sectionId, autoAdvance) {
     timer = setInterval(() => go(current + 1), 7000);
   }
 
-  // ── Pause/Play toggle (WCAG 2.2.2) ───────────────────────────────────────
+  // ── Pause/Play toggle (WCAG 2.2.2) ────────────────────────────────────────
   // Reuses .carousel-btn for styling. Only rendered for autoplaying carousels
   // with more than one slide and no reduced-motion preference (nothing to
   // pause otherwise).
@@ -161,30 +161,59 @@ function initCarousel(sectionId, autoAdvance) {
 // values section is now a static grid — no carousel init needed
 initCarousel('testimonials', true);  // auto-advances every 7s
 
-// ── Mobile hamburger — opens the page-links list beneath the bar ──────────────
-// The utility actions join the menu when the page links are expanded.
+// ── Mobile hamburger — opens the single mobile links list beneath the bar ──────
+// The utility actions join the menu when the mobile links are expanded.
 (function initMobileNav() {
   const hamburger = document.querySelector('.c-nav__hamburger');
-  const navLinks  = document.getElementById('primary-nav-links');
-  if (!hamburger || !navLinks) return;
+  const mobileLinks = document.querySelector('#c-nav__mobile-links');
+  const mobileDropdowns = mobileLinks.querySelectorAll('.c-nav__mobile-dropdown');
+  const mobileMenuContainer = document.querySelector('.c-nav__mobile-menu');
+  const mobileLinksList = document.querySelector('.c-nav__mobile-links');
 
+  if (!hamburger || !mobileLinksList) return;
+
+  // Toggle mobile menu
   hamburger.addEventListener('click', (e) => {
     e.stopPropagation();
-    const isOpen = navLinks.classList.toggle('is-open');
+    const isOpen = mobileLinks.classList.toggle('is-open');
     hamburger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
     hamburger.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
     const icon = hamburger.querySelector('i');
     if (icon) icon.className = isOpen ? 'ph-fill ph-x' : 'ph-fill ph-list';
   });
 
+  // Close mobile menu when clicking outside
   document.addEventListener('click', (e) => {
-    if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
-      navLinks.classList.remove('is-open');
+    if (mobileLinks.classList.contains('is-open')) {
+      mobileLinks.classList.remove('is-open');
       hamburger.setAttribute('aria-expanded', 'false');
       hamburger.setAttribute('aria-label', 'Open navigation menu');
       const icon = hamburger.querySelector('i');
       if (icon) icon.className = 'ph-fill ph-list';
     }
+  });
+
+  // Mobile dropdown toggle (click to open/close submenu)
+  mobileDropdowns.forEach((dropdown) => {
+    const hasChildren = dropdown.querySelector('.c-nav__mobile-dropdown-menu');
+    if (!hasChildren) return;
+
+    const dropdownLink = dropdown.querySelector('.c-nav__mobile-link');
+    if (!dropdownLink) return;
+
+    dropdownLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = dropdown.classList.toggle('is-open');
+      dropdownLink.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+
+      // Close other dropdowns
+      mobileDropdowns.forEach((other) => {
+        if (other !== dropdown && other.classList.contains('is-open')) {
+          other.classList.remove('is-open');
+          other.querySelector('.c-nav__mobile-link')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
   });
 })();
 

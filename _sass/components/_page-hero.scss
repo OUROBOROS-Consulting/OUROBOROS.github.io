@@ -27,11 +27,11 @@
   row-gap: var(--site-spacing-lg);
   width: 100%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--md-sys-spacing-lg);
-  padding-right: var(--md-sys-spacing-lg);
-  padding-bottom: 3rem;
+  margin: auto;
+  // padding-left: var(--md-sys-spacing-lg);
+  // padding-right: var(--md-sys-spacing-lg);
+  // padding-bottom: 3rem;
+  padding: auto;
   overflow-x: hidden;
 }
 

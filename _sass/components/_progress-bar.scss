@@ -1,4 +1,4 @@
-.progress-bar {
+.progress-bar-horizontal {
   position: fixed;
   left: 0;
   z-index: 1002;
@@ -7,6 +7,19 @@
   background-color: var(--p-ember-gold-bright-600);
   pointer-events: none;
   transform: scaleX(var(--progress-scale, 0));
+  transform-origin: left center;
+  transition: transform var(--site-motion-reduced-duration) linear;
+}
+
+.progress-bar-vertical {
+  position: fixed;
+  bottom: 0;
+  z-index: 1002;
+  height: 100%;
+  width: var(--site-border-width-emphasis);
+  background-color: var(--p-ember-gold-bright-600);
+  pointer-events: none;
+  transform: scaleY(var(--progress-scale, 0));
   transform-origin: left center;
   transition: transform var(--site-motion-reduced-duration) linear;
 }
@@ -20,4 +33,17 @@
   right: 0;
   left: auto;
   transform-origin: right center;
+}
+
+#progress-bar-left {
+  bottom: 0;
+  left: 0;
+  transform-origin: center bottom;
+}
+
+#progress-bar-right {
+  top: 0;
+  right: 0;
+  left: auto;
+  transform-origin: center top;
 }

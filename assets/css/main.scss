@@ -152,7 +152,7 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .progress-bar {
+  .progress-bar-horizontal {
     transition: none;
   }
 }
