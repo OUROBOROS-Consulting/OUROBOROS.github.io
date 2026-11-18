@@ -1,26 +1,2 @@
-{% assign b = site.data.banner %}
-{% if b.visible %}
-
-{% if b.url %}
-<a href="{{ b.url | relative_url }}" class="c-banner c-banner--{{ b.type }}{% if b.crt %} c-banner--crt{% endif %}">
-{% else %}
-<div class="c-banner c-banner--{{ b.type }}{% if b.crt %} c-banner--crt{% endif %}" role="banner">
-{% endif %}
-
-  {% if b.type == "announcement" %}
-    <i class="ph-fill ph-bell-ringing c-banner__icon" aria-hidden="true"></i>
-    <span class="label-small">{{ b.text }}</span>
-    {% if b.url %}<span class="c-banner__arrow" aria-hidden="true">→</span>{% endif %}
-
-  {% elsif b.type == "tagline" or b.type == "brand" %}
-    <span class="label-medium">{{ b.text }}</span>
-
-  {% endif %}
-
-{% if b.url %}
-</a>
-{% else %}
-</div>
-{% endif %}
-
-{% endif %}
+<!-- Banner hidden for professional appearance -->
+<!-- {% assign b = site.data.banner %}{% if b.visible %}<div class="c-banner c-banner--{{ b.type }}{% if b.crt %} c-banner--crt{% endif %}">{% if b.type == "announcement" %}<i class="ph-fill ph-bell-ringing c-banner__icon" aria-hidden="true"></i><span class="label-small">{{ b.text }}</span>{% if b.url %}<span class="c-banner__arrow" aria-hidden="true">→</span>{% endif %}{% elsif b.type == "tagline" or b.type == "brand" %}<span class="label-medium">{{ b.text }}</span>{% endif %}{% if b.url %}</div><a>{% else %}</div>{% endif %}{% endif %} -->
