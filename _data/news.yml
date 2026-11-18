@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-17
+generated: 2026-11-18
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "‘Zero’ evidence that recent cascade of tech outages are linked, says Rubio"
+        url: "https://www.theguardian.com/us-news/2026/nov/18/zero-evidence-recent-tech-outages-linked-marco-rubio"
+        source: "The Guardian"
+        date: 2026-11-18
+        summary: "US secretary of state’s comments come as vulnerability in programming language Java highlighted There is “zero evidence” that a wave of IT outages – which have grounded flights, cut off work access, limited bank access..."
+      - title: "Elton John backs Australian artists in fight against AI in surprise Aria awards appearance"
+        url: "https://www.theguardian.com/music/2026/nov/18/elton-john-ai-campaign-australia-artists-aria-awards-copyright"
+        source: "The Guardian"
+        date: 2026-11-18
+        summary: "British musician backs Not AI’s To Take campaign, saying Albanese government has ‘a duty to protect Australian artists and their work’ Aria awards 2026 red carpet: Tame Impala, Baker Boy, G Flip and more – in pictures..."
+      - title: "Ofqual urges ‘life-altering’ penalties for students who use tech to cheat"
+        url: "https://www.theguardian.com/education/2026/nov/18/ofqual-urges-life-altering-penalties-for-students-who-use-tech-to"
+        source: "The Guardian"
+        date: 2026-11-18
+        summary: "England’s exam regulator says those caught using AI or smart glasses face disqualification from GCSEs and A-levels Students in England could suffer “life-altering” penalties if they are caught relying on AI or smart..."
       - title: "Jensen Huang to testify before Congress on ‘potential breach of national security’"
         url: "https://www.theguardian.com/technology/2026/nov/17/jensen-huang-testify-congress-nvidia-affair-spy"
         source: "The Guardian"
@@ -28,21 +43,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-11-16
         summary: "In October this year, OpenAI disclosed that two of its AI agents had switched off the systems built to monitor them. One muted its own safety alerts after misreading an instruction not to send messages; the other..."
-      - title: "UK exposed to polycrisis of threats amid government ‘complacency’"
-        url: "https://www.theguardian.com/society/2026/nov/16/uk-exposed-to-polycrisis-of-threats-amid-government-complacency"
-        source: "The Guardian"
-        date: 2026-11-16
-        summary: "Lords report calls for urgent new approach to resilience planning in face of cyber-attacks, sabotage and climate crisis Ministers are complacent in the face of fast-changing and increasingly interconnected threats to..."
-      - title: "Reports of AI-related child sexual abuse material rise 8,400% in two years, data shows"
-        url: "https://www.theguardian.com/technology/2026/nov/16/ai-related-child-sexual-abuse-material-rise-exploitation-deepfakes"
-        source: "The Guardian"
-        date: 2026-11-16
-        summary: "Calls for governments to recognise sexual exploitation of children as preventable public health emergency Reports of artificial intelligence being used to sexually exploit children have risen by more than 8,400% in two..."
-      - title: "Is the AI job apocalypse finally here? The evidence suggests otherwise | John Quiggin"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/16/is-the-ai-job-apocalypse-finally-here-the-evidence-suggests-otherwise"
-        source: "The Guardian"
-        date: 2026-11-15
-        summary: "The role AI played in job losses at Australia’s NAB, Qantas, Canva and Atlassian is far from clear – but it may prove to have more impact on the stock market than the jobs market Get our breaking news email , free app..."
       - title: "Google faces calls for AI moratoriums in schools after Gemini pilot backlash"
         url: "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
         source: "Ars Technica"
@@ -131,6 +131,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Former NIH neuroscientist passes 30 retractions"
+        url: "https://retractionwatch.com/2026/11/17/eliezer-masliah-nih-aging-institute-image-manipulation-retractions/"
+        source: "Retraction Watch"
+        date: 2026-11-17
+        summary: "Investigations into the work of a former top neuroscientist at the National Institutes of Health have left the researcher, Eliezer Masliah, with 32 retractions to date. Fifteen of them came this year, as journals..."
       - title: "A Federal Women’s Prison Became a “Rape Club.” After Officials Shut It Down, Rampant Abuse Continued Elsewhere."
         url: "https://www.propublica.org/article/federal-womens-prison-sexual-abuse-reform-dublin-bop"
         source: "ProPublica"
@@ -166,35 +171,30 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-09
         summary: "At a glance, the papers look completely different: One, published in 2023, describes forest co-management in Bangladesh. The other, published last year, is about soil conservation in China. But an author on the older..."
-      - title: "Diabetes association VP resigns over response to editorial boycott following protest at annual meeting"
-        url: "https://retractionwatch.com/2026/11/07/american-diabetes-association-vp-resigns-protest-editors-boycott/"
-        source: "Retraction Watch"
-        date: 2026-11-08
-        summary: "The top publishing executive at the American Diabetes Association has resigned over how the organization has handled an editorial boycott at one of its journals following a protest at its annual meeting earlier this..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
     items:
+      - title: "Surveillance Isn't Safety: A Comic About Organizing Against Flock and Other Foes"
+        url: "https://www.eff.org/deeplinks/2026/11/surveillance-isnt-safety-comic-about-organizing-against-surveillance"
+        source: "EFF Deeplinks"
+        date: 2026-11-18
+        summary: "In the new comic \"Surveillance Isn't Safety\"—available for free today— cartoonist Bryn Adams explores the growing movement against mass surveillance through their involvement in the community fight against Flock Safety..."
+      - title: "Voters Reject ALPRs and Surveillance Tech at the Ballot Box"
+        url: "https://www.eff.org/deeplinks/2026/11/voters-reject-alprs-and-surveillance-tech-ballot-box"
+        source: "EFF Deeplinks"
+        date: 2026-11-18
+        summary: "Do automated license plate readers (ALPRs) have any place in our communities? That question has been a hot topic in city council meetings , community conversations , and news coverage around the country for months. This..."
       - title: "Amazon Ring’s New Indoor Surveillance Drone Is Not Compatible with Privacy"
         url: "https://www.eff.org/deeplinks/2026/11/amazon-rings-new-indoor-surveillance-drone-not-compatible-privacy"
         source: "EFF Deeplinks"
         date: 2026-11-16
         summary: "Amazon Ring has finally announced their long-dreaded indoor drone , a small flying surveillance device connected to their security suite of products that can fly around your house filming and recording things. The..."
-      - title: "New York City Becomes the Latest City to Ban Surveillance Pricing"
-        url: "https://epic.org/new-york-city-becomes-the-latest-city-to-ban-surveillance-pricing/"
-        source: "EPIC"
-        date: 2026-11-12
-        summary: "EPIC testified in support of Introduction 0891-2026, a bill that prohibits businesses from engaging in surveillance pricing, in the NYC Council hearing in June and now urges the Mayor to sign this bill into law."
-      - title: "EPIC Testifies in New York State and the City of Boston Urging for ALPR Guardrails and Greater Transparency"
-        url: "https://epic.org/epic-testifies-in-new-york-state-and-the-city-of-boston-urging-for-alpr-guardrails-and-greater-transparency/"
-        source: "EPIC"
-        date: 2026-11-12
-        summary: "New York’s proposed AB10808 and its companion, Senate Bill S.9890, and Boston's proposed amended ordinance addresses residents' privacy rights as ALPR technology becomes more widespread."
       - title: "EPIC and Student Defense Submit Comment on Treasury Department’s Takeover of Federal Student Aid Records"
         url: "https://epic.org/epic-and-student-defense-submit-comment-on-treasury-departments-takeover-of-federal-student-aid-records/"
         source: "EPIC"
         date: 2026-11-09
-        summary: "Under this proposed system, records regarding federal student aid applicants, grant recipients and borrowers would be provided to the Treasury from three ED systems: The National Student Loan Data System (NSLDS), the..."
+        summary: "EPIC and Student Defense submitted a comment to the U.S. Department of Treasury (Treasury) Friday regarding its takeover of Federal Student Aid from the U.S. Department of Education (ED), in response to a System of..."
       - title: "WIRED: AI Companies Really, Really Want to Buy Your Work Files and Emails"
         url: "https://epic.org/wired-ai-companies-really-really-want-to-buy-your-work-files-and-emails/"
         source: "EPIC"
@@ -215,6 +215,16 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-06
         summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
+      - title: "Seoul Economic Daily: Character.AI Bankruptcy Raises Fears Over Chat Records"
+        url: "https://epic.org/seoul-economic-daily-character-ai-bankruptcy-raises-fears-over-chat-records/"
+        source: "EPIC"
+        date: 2026-11-05
+        summary: "“Calli Schroeder, AI lead at the Electronic Privacy Information Center (EPIC), told the BBC that users disclose far more private and sensitive information when talking to anthropomorphized chatbots. She added that..."
+      - title: "Gadget Review: New Jersey Wants to Make AI Companies Pay $5,000 for Every Violation"
+        url: "https://epic.org/gadget-review-new-jersey-wants-to-make-ai-companies-pay-5000-for-every-violation/"
+        source: "EPIC"
+        date: 2026-11-05
+        summary: "“The Electronic Privacy Information Center supports A5607, arguing that major chatbot providers have repeatedly failed to prioritize user safety over profit and should not be left to self-regulate. That is EPIC’s..."
       - title: "Want to Rent an Internet Address at the White House?"
         url: "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
         source: "Krebs on Security"
@@ -225,13 +235,3 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-04
         summary: "Yesterday, along with the ACLU, EFF filed an amicus brief in the Ninth Circuit court of appeals in United States v. Spurlock , a case involving a “tower dump” warrant. These overbroad warrants require cellular providers..."
-      - title: "Postal Service Surveilled Protest Activities Online With Little Rules, Oversight"
-        url: "https://www.eff.org/deeplinks/2026/11/postal-service-surveilled-protest-activities-online-little-rules-oversight"
-        source: "EFF Deeplinks"
-        date: 2026-11-03
-        summary: "The U.S. Postal Service used social media surveillance to monitor and report on protests across the political spectrum, government records show. The records , disclosed to EFF and other requesters suing the postal..."
-      - title: "Privacy's Defenders Podcast: The Secret Room"
-        url: "https://www.eff.org/deeplinks/2026/10/privacys-defenders-podcast-secret-room"
-        source: "EFF Deeplinks"
-        date: 2026-11-03
-        summary: "The government’s surveillance powers grew rapidly after Sept. 11, 2001, some in public view and some in secret. EFF suspected but couldn’t prove that the National Security Agency was spying on Americans' communications..."
