@@ -24,8 +24,7 @@ sections:
     body_paragraphs:
       - >
         **Less as a principle, not a constraint.** Good design removes friction and clarifies intent. 
-        My work is built on the belief that thoughtful choices—about what to emphasize, what to omit, 
-        and how to structure information—create lasting value.
+        My work is built on the belief that thoughtful choices – about what to emphasize, what to omit, and how to structure information – create lasting value.
       - >
         **Accessibility as a design requirement, not an add-on.** Every interface I build is designed 
         with WCAG standards in mind from the start. Clear typography, sufficient contrast, semantic markup, 
@@ -37,7 +36,7 @@ sections:
       - >
         **Substance in form.** Visual identity should reflect the work it represents. My clients span 
         consulting, research, and professional services. The design communicates credibility, precision, 
-        and human judgment—not decorative flair.
+        and human judgment – not decorative flair.
   
   - id: offerings
     heading: Service Offerings
@@ -134,7 +133,7 @@ sections:
         understanding the problem before proposing solutions.
       - >
         **Efficiency:** Wasted effort compounds. I document my work, create reusable patterns, and focus 
-        human attention where it belongs—on difficult choices and creative work.
+        focus human attention where it belongs – on difficult choices and creative work.
       - >
         **Autonomy:** I design systems that respect user agency. Interfaces should support informed decision-making, 
         not obscure it.

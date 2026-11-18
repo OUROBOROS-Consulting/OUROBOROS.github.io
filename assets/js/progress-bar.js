@@ -1,7 +1,9 @@
 (function () {
   const topBar = document.getElementById('progress-bar-top');
   const bottomBar = document.getElementById('progress-bar-bottom');
-  if (!topBar || !bottomBar) return;
+  const leftBar = document.getElementById('progress-bar-left');
+  const rightBar = document.getElementById('progress-bar-right');
+  if (!topBar || !bottomBar || !leftBar || !rightBar) return;
 
   const updateProgress = () => {
     const scrolled = window.scrollY;
@@ -13,6 +15,8 @@
     const progressScale = String(progress / 100);
     topBar.style.setProperty('--progress-scale', progressScale);
     bottomBar.style.setProperty('--progress-scale', progressScale);
+    leftBar.style.setProperty('--progress-scale', progressScale);
+    rightBar.style.setProperty('--progress-scale', progressScale);
   };
 
   window.addEventListener('scroll', updateProgress, { passive: true });

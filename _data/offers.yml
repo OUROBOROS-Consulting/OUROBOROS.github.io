@@ -1,23 +1,9 @@
-- title: Private AI & Data Systems
+- title: Technology Services
   category: Technology
-  lede: Build and check AI and data systems without handing sensitive information to outside providers.
-  description: Implement locally hosted AI, agentic workflows, data-quality checks, and custom tools. For privacy reviews, governance, and training without a build, see the advisory service.
-  url: /services/technology/#automation
-  link_label: Explore private AI and data systems
-
-- title: Private AI Setup
-  category: Technology
-  lede: A fixed-price setup of an AI assistant that runs on your own computer. Your files, notes, and drafts stay on your machine.
-  description: Set up by a statistician with a Federal IT background. Configures the model, engine, and assistant for local use.
-  url: /services/private-ai-setup/
-  link_label: Explore private AI setup
-
-- title: AI Privacy & Governance Advisory
-  category: Technology
-  lede: You need to know what your AI tools can see, where data goes, and who is accountable.
-  description: Get an independent review of AI data flows, practical rules, and tool choices. This is advisory work—not a software build, penetration test, or certification.
-  url: /services/identity/
-  link_label: Explore privacy and governance advisory
+  lede: Private AI, data systems, and governance for confidential information.
+  description: Implementation, product setup, and advisory services that keep your data inside your environment.
+  url: /services/technology/
+  link_label: Explore technology services
 
 - title: Data Audits & Anomaly Detection
   category: Technology

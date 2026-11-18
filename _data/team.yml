@@ -1,6 +1,6 @@
 # ── Team ──────────────────────────────────────────────────────────────────────
 # One block per person. The /team/ page loops over this file, so adding a future
-# hire is a single block here — no HTML or CSS changes required.
+# hire is a single block here – no HTML or CSS changes required.
 #
 # photo: 5:6 portrait recommended (hex frame crops to that ratio).
 # bio:   Markdown, rendered as paragraphs. Blank line between them.

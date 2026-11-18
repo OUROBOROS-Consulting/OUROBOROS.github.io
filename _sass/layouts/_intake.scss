@@ -3,7 +3,6 @@
 .intake-wrapper {
   box-sizing: border-box;
   width: calc(100% + var(--rail-total, 0px));
-  margin-top: var(--md-sys-spacing-xl);
   margin-left: calc(var(--rail-total, 0px) * -1);
   padding: clamp(1.5rem, 4vw, 3.5rem) max(
     var(--gutter),
@@ -13,6 +12,11 @@
   position: relative;
   z-index: 200;
 }
+
+/* Fix for fixed navbar: add margin to .c-container for intake page */
+// .c-container.intake-margin {
+//   margin-top: var(--site-nav-height, 80px);
+// }
 
 .intake-body {
   position: relative;
@@ -25,6 +29,7 @@
   grid-template-columns: minmax(0, 1fr) minmax(15rem, 0.55fr);
   align-items: end;
   gap: var(--md-sys-spacing-xl);
+  margin-top: 200px;
   padding: clamp(1rem, 2vw, 1.5rem) 0 clamp(2rem, 4vw, 3rem);
   border-bottom: var(--site-border-width) solid var(--md-sys-color-outline);
 }
@@ -60,7 +65,6 @@
 .intake-masthead-meta {
   justify-self: end;
   max-width: 26rem;
-  padding-left: var(--md-sys-spacing-lg);
   border-left: var(--site-border-width-emphasis) solid var(--md-sys-color-primary);
 }
 
@@ -439,6 +443,9 @@
 }
 
 @media (max-width: 48rem) {
+  .intake-wrapper {
+    padding-block: var(--md-sys-spacing-lg);
+  }
   .intake-masthead {
     grid-template-columns: minmax(0, 1fr);
     gap: var(--md-sys-spacing-lg);
@@ -452,7 +459,6 @@
 
 @media (max-width: 38rem) {
   .intake-wrapper {
-    margin-top: var(--md-sys-spacing-md);
     padding-block: var(--md-sys-spacing-lg);
   }
 
@@ -482,7 +488,6 @@
 @media print {
   .intake-wrapper {
     width: 100%;
-    margin: 0;
     padding: 0;
   }
 

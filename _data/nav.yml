@@ -1,12 +1,8 @@
 - title: Services
   url: /services/
   children:
-    - title: Private AI Setup
-      url: /services/private-ai-setup/
-    - title: Private AI & Data Systems
+    - title: Technology Services
       url: /services/technology/
-    - title: AI Privacy & Governance Advisory
-      url: /services/identity/
     - title: Web & Graphic Design
       url: /services/design/
     - title: Consulting FAQ
@@ -44,14 +40,11 @@
   active_paths:
     - /mission
     - /team
-    - /faq
     - /resume
     - /accessibility
   children:
     - title: Team
       url: /team/
-    - title: Scope & Privacy FAQ
-      url: /faq/
     - title: Resume
       url: /resume/
     - title: Accessibility

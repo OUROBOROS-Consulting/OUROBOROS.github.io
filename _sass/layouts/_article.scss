@@ -8,12 +8,12 @@
 .c-article__body .faq-list,
 .post-body .faq-list {
   margin-block: 1.5rem 2rem;
-  border-block: 1px solid var(--md-sys-color-outline);
+  border-block: 1px solid var(--p-forensic-400);
 }
 
 .c-article__body .faq-item+.faq-item,
 .post-body .faq-item+.faq-item {
-  border-top: 1px solid var(--md-sys-color-outline);
+  border-top: 1px solid var(--p-forensic-400);
 }
 
 .c-article__body .faq-item>summary,
@@ -43,7 +43,8 @@
 .c-article__body .faq-item>summary h3,
 .post-body .faq-item>summary h3 {
   margin: 0;
-  font-size: var(--md-sys-typescale-title-medium-size);
+  font-size: var(--md-sys-typescale-headline-small-size);
+  font-weight: var(--md-ref-typeface-weight-medium);
 }
 
 .c-article__body .faq-item>summary:focus-visible,
@@ -56,7 +57,7 @@
 
 .c-article__body .faq-answer,
 .post-body .faq-answer {
-  padding: 0 2.5rem 1rem 0;
+  padding: 0 2.5rem 1rem 2.5rem;
 }
 
 .c-article__body .faq-answer> :first-child,
@@ -66,11 +67,30 @@
 
 .c-article__body .faq-expand-all,
 .post-body .faq-expand-all {
-  padding: 0.625rem 0.875rem;
-  border: 1px solid var(--md-sys-color-outline);
-  color: inherit;
-  background: transparent;
-  font: inherit;
+  min-height: var(--site-button-min-height);
+  padding: var(--md-sys-spacing-sm) var(--md-sys-spacing-lg);
+  border-radius: var(--p-radius-0);
   font-family: var(--font-mono);
+  font-weight: var(--md-ref-typeface-weight-medium);
+  font-size: var(--md-sys-typescale-label-large-size);
+  line-height: var(--md-sys-typescale-label-large-line-height);
+  text-decoration: none;
   cursor: pointer;
+  transition: background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
+  border: 1px solid var(--p-forensic-400);
+  color: inherit;
+  background-color: var(--p-void-900);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    background-color: var(--p-forensic-100);
+    color: var(--p-void-900);
+  }
+
+  &:focus-visible {
+    outline: var(--site-focus-ring-width-thin) solid var(--site-focus-ring-color);
+    outline-offset: var(--site-focus-ring-offset);
+  }
 }

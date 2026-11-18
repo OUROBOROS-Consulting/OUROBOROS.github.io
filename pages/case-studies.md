@@ -10,7 +10,7 @@ permalink: /case-studies/
   back_label="All Projects"
   category="Work"
   title="Case Studies"
-  lede="What the work involved, what changed, and what it can—and cannot—show."
+  lede="What the work involved, what changed, and what it can – and cannot – show."
   icon="ph ph-fill ph-folder-open"
 %}
 

@@ -7,8 +7,8 @@ layout: default
   <div class="c-container">
     <div class="c-stack">
       <header class="c-stack">
-        <p class="technical text-t">Ways to Work Together</p>
-        <h2 class="authority">AI should not sell out your data.</h2>
+        <p class="rc-tag-chip">Ways to Work Together</p>
+        <h1 class="text-s">AI should not sell out your data.</h1>
         <p class="forensic text-s">Keep confidential information inside your walls. Start with a free 20-minute AI privacy call.</p>
       </header>
     </div>
@@ -25,24 +25,24 @@ layout: default
 <section id="approach" class="c-section c-section--marble">
   <div class="c-container">
     <div class="c-stack">
-      <p class="technical text-t">A Practical Approach</p>
-      <h2 class="authority">Private by design. Checked before it ships.</h2>
+      <p class="rc-tag-chip">A Practical Approach</p>
+      <h2 class="text-s">Private by design. Checked before it ships.</h2>
     </div>
 
     <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
       <article class="c-card c-stack">
-        <p class="technical text-t">01 / Understand</p>
-        <h3 class="authority c-card-title">Start with the real problem</h3>
+        <p class="rc-tag-chip">01 / Understand</p>
+        <h2 class="authority c-card-title">Start with the real problem</h2>
         <p class="text-s">We clarify what is getting in the way, what success would look like, and what constraints matter before choosing tools or scope.</p>
       </article>
       <article class="c-card c-stack">
-        <p class="technical text-t">02 / Choose</p>
-        <h3 class="authority c-card-title">Keep secrets inside your walls</h3>
+        <p class="rc-tag-chip">02 / Choose</p>
+        <h2 class="authority c-card-title">Keep secrets inside your walls</h2>
         <p class="text-s">Choose where data is processed, limit what AI can access, and keep people responsible for the decisions.</p>
       </article>
       <article class="c-card c-stack">
-        <p class="technical text-t">03 / Hand off</p>
-        <h3 class="authority c-card-title">Leave you more capable</h3>
+        <p class="rc-tag-chip">03 / Hand off</p>
+        <h2 class="authority c-card-title">Leave you more capable</h2>
         <p class="text-s">Agreed deliverables include the context and documentation needed to understand, use, and maintain the work.</p>
       </article>
     </div>
@@ -54,8 +54,8 @@ layout: default
   <div class="c-container">
 
     <div class="c-stack">
-      <p class="technical text-t">Who This Is For</p>
-      <h2 class="authority">If any of this sounds like you, you're in the right place.</h2>
+      <p class="rc-tag-chip">Who This Is For</p>
+      <h2 class="text-s">If any of this sounds like you, you're in the right place.</h2>
     </div>
 
     <div class="audience-grid">
@@ -88,8 +88,8 @@ layout: default
     {% assign technology_testimonials = site.data.testimonials | where: "tag", "Technology" %}
     <div class="c-stack">
       <header class="c-stack">
-        <p class="technical text-t">Selected References</p>
-        <h2 class="authority">Testimonials</h2>
+        <p class="rc-tag-chip">Selected References</p>
+        <h2 class="text-s">Testimonials</h2>
         <p class="forensic text-s">These federal references describe high-stakes technology and data-platform work. They show how I approach complex systems, not a promise of identical results in every environment.</p>
       </header>
     </div>
@@ -100,10 +100,10 @@ layout: default
         <div class="carousel-slide" role="group"
           aria-label="Testimonial {{ forloop.index }} of {{ technology_testimonials.size }}">
           <div class="c-card c-stack">
-            <p class="technical text-t">{{ ref.title }}</p>
+            <p class="rc-tag-chip">{{ ref.title }}</p>
             <blockquote class="forensic">
               <p class="text-s" style="font-style: italic;">{{ ref.description | markdownify }}</p>
-              <cite class="technical text-t">— {{ ref.reference }}</cite>
+              <cite class="rc-tag-chip">— {{ ref.reference }}</cite>
             </blockquote>
           </div>
         </div>
@@ -135,8 +135,8 @@ layout: default
 <section id="background" class="c-section c-section--marble c-section--paper">
   <div class="c-container">
     <div class="c-stack">
-      <p class="technical text-t">Why This Work</p>
-      <h2 class="authority">Leaks and bad numbers start with choices. Make the choices visible.</h2>
+      <p class="rc-tag-chip">Why This Work</p>
+      <h2 class="text-s">Leaks and bad numbers start with choices. Make the choices visible.</h2>
     </div>
 
     <div class="c-grid c-grid--2">
@@ -157,15 +157,15 @@ layout: default
 <section id="about" class="c-section c-section--marble">
   <div class="c-container">
     <div class="c-stack">
-      <p class="technical text-t">By the Numbers</p>
-      <h2 class="authority">{{ page.about_heading }}</h2>
+      <p class="rc-tag-chip">By the Numbers</p>
+      <h2 class="text-s">{{ page.about_heading }}</h2>
     </div>
 
     {% if page.stats.metrics %}
     <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
       {% for metric in page.stats.metrics %}
       <div class="c-card c-stack">
-        {% if metric.icon %}<i class="{{ metric.icon }} technical text-t" aria-hidden="true"></i>{% endif %}
+        {% if metric.icon %}<i class="{{ metric.icon }} rc-tag-chip" aria-hidden="true"></i>{% endif %}
         <span class="authority c-card-value">{{ metric.value }}</span>
         <span class="text-s">{{ metric.note }}</span>
       </div>
@@ -180,8 +180,8 @@ layout: default
   <div class="c-container">
     <div class="c-stack">
       <header class="c-stack">
-        <p class="technical text-t">Selected Work</p>
-        <h2 class="authority">Case Studies</h2>
+        <p class="rc-tag-chip">Selected Work</p>
+        <h2 class="text-s">Case Studies</h2>
         <a href="{{ '/case-studies/' | relative_url }}" class="text-s">View All →</a>
       </header>
     </div>

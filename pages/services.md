@@ -18,7 +18,7 @@ description: "Private AI engineering, AI privacy consulting, data audits, and cu
 %}
 
 <div class="page-body">
-  <h2 class="authority">Start with what you need</h2>
+  <h2 class="text-s">Start with what you need</h2>
   <div class="related-grid">
     {% for offer in site.data.offers %}
     {% include content-card.html item=offer card_type="offer" card_class="c-card--related" link_label=offer.link_label %}
@@ -30,8 +30,8 @@ description: "Private AI engineering, AI privacy consulting, data audits, and cu
       <p>Additional services</p>
     </div>
     <div class="page-section-content">
-      <h2 class="authority">Design and education</h2>
-      <p>Private AI and data integrity are the firm's priority. Web and graphic design, plus AI privacy education and training, are also available as separate services.</p>
+      <h2 class="text-s">Design and education</h2>
+      <p>Private AI and data integrity are the firm's priority. Web and graphic design are also available as separate services.</p>
       <ul>
         <li><a href="/services/design/">Explore web and graphic design services</a></li>
         <li><a href="/design-portfolio/">View the design portfolio</a></li>
@@ -40,5 +40,5 @@ description: "Private AI engineering, AI privacy consulting, data audits, and cu
     </div>
   </section>
 
-  <p class="text-s">Want to know what happens on the first call, how project data is handled, or what services cost? <a href="/consulting-faq/">Read the consulting FAQ</a>.</p>
+  <p class="text-s">Want to know what happens on the first call, how project data is handled, or what services cost? Read the consulting FAQ.</p>
 </div>
