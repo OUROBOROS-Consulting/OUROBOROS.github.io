@@ -2,42 +2,37 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-18
+generated: 2026-11-19
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "When tech workers have to quit their jobs to raise the alarm, it’s time to worry | Isabelle Ferreras"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/19/tech-workers-quit-jobs-raise-alarm-worry-ai-humanity-autocracies"
+        source: "The Guardian"
+        date: 2026-11-19
+        summary: "We can’t make AI safe for humanity if tech bosses are allowed to run their companies like autocracies Over the past two years, a troubling pattern has emerged across the world’s leading AI laboratories. Time and again..."
+      - title: "Ram through datacentres no one wants and hope the AI bubble never bursts: that’s the UK’s growth plan | George Monbiot"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/19/uk-growth-plan-datacentres-ai-bubble-big-tech"
+        source: "The Guardian"
+        date: 2026-11-19
+        summary: "The government doesn’t know what they are going to be used for, but that’s beside the point. Their real purpose is to sustain the share price of big tech It should have the status of an economic law: the sectors a..."
+      - title: "Four Maryland high school students sue after AI mistakes Doritos bag for gun"
+        url: "https://www.theguardian.com/us-news/2026/nov/18/maryland-baltimore-county-doritos-gun-ai-lawsuit"
+        source: "The Guardian"
+        date: 2026-11-18
+        summary: "Football players say they are ‘traumatized’ after being handcuffed and detained by police while waiting for rides Four current and former students at a Maryland high school have filed a lawsuit a year after armed police..."
+      - title: "Muse privacy invasions are freaking out Meta staffers, internal chats show"
+        url: "https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show/"
+        source: "Ars Technica"
+        date: 2026-11-18
+        summary: "Erratic Muse outputs sharing random bank, bitcoin balances aren’t real, Meta says."
       - title: "‘Zero’ evidence that recent cascade of tech outages are linked, says Rubio"
         url: "https://www.theguardian.com/us-news/2026/nov/18/zero-evidence-recent-tech-outages-linked-marco-rubio"
         source: "The Guardian"
         date: 2026-11-18
         summary: "US secretary of state’s comments come as vulnerability in programming language Java highlighted There is “zero evidence” that a wave of IT outages – which have grounded flights, cut off work access, limited bank access..."
-      - title: "Elton John backs Australian artists in fight against AI in surprise Aria awards appearance"
-        url: "https://www.theguardian.com/music/2026/nov/18/elton-john-ai-campaign-australia-artists-aria-awards-copyright"
-        source: "The Guardian"
-        date: 2026-11-18
-        summary: "British musician backs Not AI’s To Take campaign, saying Albanese government has ‘a duty to protect Australian artists and their work’ Aria awards 2026 red carpet: Tame Impala, Baker Boy, G Flip and more – in pictures..."
-      - title: "Ofqual urges ‘life-altering’ penalties for students who use tech to cheat"
-        url: "https://www.theguardian.com/education/2026/nov/18/ofqual-urges-life-altering-penalties-for-students-who-use-tech-to"
-        source: "The Guardian"
-        date: 2026-11-18
-        summary: "England’s exam regulator says those caught using AI or smart glasses face disqualification from GCSEs and A-levels Students in England could suffer “life-altering” penalties if they are caught relying on AI or smart..."
-      - title: "Jensen Huang to testify before Congress on ‘potential breach of national security’"
-        url: "https://www.theguardian.com/technology/2026/nov/17/jensen-huang-testify-congress-nvidia-affair-spy"
-        source: "The Guardian"
-        date: 2026-11-17
-        summary: "High-stakes hearing comes in wake of resignation from Nvidia after alleged affair with suspected Chinese spy Nvidia’s former CEO Jensen Huang will testify before several congressional committees on 1 December, setting..."
-      - title: "Automated warfare is already here. Now governments must restrain it | Helen Clark"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/17/automated-warfare-here-governments-restrain-ai-militaries-treaty"
-        source: "The Guardian"
-        date: 2026-11-17
-        summary: "AI systems can allow militaries to find and annihilate targets within seconds. A meaningful treaty must prioritise human control – and accountability Helen Clark is former head of the UN Development Programme and former..."
-      - title: "California sues OpenAI over safety concerns after rogue agent hacking"
-        url: "https://www.theguardian.com/technology/2026/nov/16/california-openai-rogue-agent-hacking-lawsuit"
-        source: "The Guardian"
-        date: 2026-11-16
-        summary: "Lawsuit stems from earlier incident where tech company’s products hacked into open-source platform Hugging Face California sued OpenAI on Monday, accusing the artificial intelligence titan of developing its technology..."
       - title: "Building trustworthy AI by fencing it in, not predicting it"
         url: "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/"
         source: "MIT Technology Review"
@@ -53,11 +48,6 @@ sections:
         source: "Ars Technica"
         date: 2026-11-12
         summary: "The first Gemini smartglasses are a collab between Google, Samsung, Gentle Monster, and Warby Parker."
-      - title: "DeepMind reveals Gemini Robotics 2.5 and open safety benchmark \"ASIMOV-jailbreak\""
-        url: "https://arstechnica.com/google/2026/11/deepmind-reveals-gemini-robotics-2-5-and-open-safety-benchmark-asimov-jailbreak/"
-        source: "Ars Technica"
-        date: 2026-11-10
-        summary: "The new model is up to twice as successful at some tasks."
       - title: "Nancy Pelosi’s replacement is ready to regulate AI"
         url: "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/"
         source: "MIT Technology Review"
@@ -67,6 +57,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "‘I came close to killing Sally about six times’: how my abusive father was enabled by his fame"
+        url: "https://www.theguardian.com/society/2026/nov/19/my-abusive-father-was-enabled-by-his-fame"
+        source: "The Guardian"
+        date: 2026-11-19
+        summary: "Like Russell Brand, my father was put on a pedestal by the media, despite a history of troubling, misogynistic comments. Meanwhile, my mother suffered through years of appalling treatment Even though decades have..."
       - title: "‘He’s a master manipulator’: one woman’s fight against her abuser’s early release –podcast"
         url: "https://www.theguardian.com/news/audio/2026/nov/17/hes-a-master-manipulator-one-womans-fight-against-her-abusers-early-release-podcast"
         source: "The Guardian"
@@ -92,11 +87,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-14
         summary: "They number more than half a million yet the ongoing trauma from their time in orphanages and institutions remains poorly known When Judy Leonard entered the orphanage, she was given a bed with a number. That was how..."
-      - title: "Cocaine overtakes heroin for first time in England and Wales drug-death figures"
-        url: "https://www.theguardian.com/society/2026/nov/04/cocaine-overtakes-heroin-drug-deaths-england-wales"
-        source: "The Guardian"
-        date: 2026-11-04
-        summary: "Charities say government ‘must act now’ as figures reveal eight times more cocaine-related deaths than in 2010 Cocaine is now associated with more drug deaths than heroin for the first time in England and Wales..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -156,11 +146,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-11
         summary: "PubPeer launched a new look on Nov. 9, including a dashboard showing the post-publication peer review platform has surpassed a half million comments in its 14 years of operation. Also among the newly public statistics..."
-      - title: "“We Have No One”: How Trump’s Dismantling of the VA Left a Veterans Hospital in Crisis"
-        url: "https://www.propublica.org/article/east-orange-va-hospital-veterans-decline-new-jersey"
-        source: "ProPublica"
-        date: 2026-11-11
-        summary: "The post “We Have No One”: How Trump’s Dismantling of the VA Left a Veterans Hospital in Crisis appeared first on ProPublica ."
       - title: "Misconduct cases remain unresolved for years in South Korea, data show"
         url: "https://retractionwatch.com/2026/11/10/misconduct-cases-remain-unresolved-for-years-in-south-korea-data-show/"
         source: "Retraction Watch"
@@ -190,11 +175,21 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-16
         summary: "Amazon Ring has finally announced their long-dreaded indoor drone , a small flying surveillance device connected to their security suite of products that can fly around your house filming and recording things. The..."
+      - title: "New York City Becomes the Latest City to Ban Surveillance Pricing"
+        url: "https://epic.org/new-york-city-becomes-the-latest-city-to-ban-surveillance-pricing/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "EPIC testified in support of Introduction 0891-2026, a bill that prohibits businesses from engaging in surveillance pricing, in the NYC Council hearing in June and now urges the Mayor to sign this bill into law."
+      - title: "EPIC Testifies in New York State and the City of Boston Urging for ALPR Guardrails and Greater Transparency"
+        url: "https://epic.org/epic-testifies-in-new-york-state-and-the-city-of-boston-urging-for-alpr-guardrails-and-greater-transparency/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "New York’s proposed AB10808 and its companion, Senate Bill S.9890, and Boston's proposed amended ordinance addresses residents' privacy rights as ALPR technology becomes more widespread."
       - title: "EPIC and Student Defense Submit Comment on Treasury Department’s Takeover of Federal Student Aid Records"
         url: "https://epic.org/epic-and-student-defense-submit-comment-on-treasury-departments-takeover-of-federal-student-aid-records/"
         source: "EPIC"
         date: 2026-11-09
-        summary: "EPIC and Student Defense submitted a comment to the U.S. Department of Treasury (Treasury) Friday regarding its takeover of Federal Student Aid from the U.S. Department of Education (ED), in response to a System of..."
+        summary: "Under this proposed system, records regarding federal student aid applicants, grant recipients and borrowers would be provided to the Treasury from three ED systems: The National Student Loan Data System (NSLDS), the..."
       - title: "WIRED: AI Companies Really, Really Want to Buy Your Work Files and Emails"
         url: "https://epic.org/wired-ai-companies-really-really-want-to-buy-your-work-files-and-emails/"
         source: "EPIC"
@@ -215,16 +210,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-06
         summary: "What does the digital future look like? Who gets to imagine it, shape it, and make it real? Building a freer, more inclusive digital age requires not only challenging systems of surveillance and control, but also making..."
-      - title: "Seoul Economic Daily: Character.AI Bankruptcy Raises Fears Over Chat Records"
-        url: "https://epic.org/seoul-economic-daily-character-ai-bankruptcy-raises-fears-over-chat-records/"
-        source: "EPIC"
-        date: 2026-11-05
-        summary: "“Calli Schroeder, AI lead at the Electronic Privacy Information Center (EPIC), told the BBC that users disclose far more private and sensitive information when talking to anthropomorphized chatbots. She added that..."
-      - title: "Gadget Review: New Jersey Wants to Make AI Companies Pay $5,000 for Every Violation"
-        url: "https://epic.org/gadget-review-new-jersey-wants-to-make-ai-companies-pay-5000-for-every-violation/"
-        source: "EPIC"
-        date: 2026-11-05
-        summary: "“The Electronic Privacy Information Center supports A5607, arguing that major chatbot providers have repeatedly failed to prioritize user safety over profit and should not be left to self-regulate. That is EPIC’s..."
       - title: "Want to Rent an Internet Address at the White House?"
         url: "https://krebsonsecurity.com/2026/11/want-to-rent-an-internet-address-at-the-white-house/"
         source: "Krebs on Security"
