@@ -16,15 +16,13 @@ layout: default
       {{ content }}
     </div>
   </article>
-
-  {% include toc.html %}
 </div>
 
 {% if page.collapse_questions %}
 <!-- Must precede toc.js: collapse.js reparents the h3s the TOC is built from. -->
 <script src="/assets/js/collapse.js" defer></script>
 {% endif %}
-<script src="/assets/js/toc.js" defer></script>
+<!-- <script src="/assets/js/toc.js" defer></script> -->
 <script>
   const bar = document.getElementById('progress-bar-horizontal');
   window.addEventListener('scroll', () => {

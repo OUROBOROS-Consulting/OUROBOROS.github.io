@@ -2,20 +2,55 @@
 layout: default
 ---
 
-<!-- ── Offers ────────────────────────────────────────────────────────────── -->
-<section id="services" class="c-section c-section--marble c-section--paper">
+<!-- ── Features ────────────────────────────────────────────────────────────── -->
+<section id="features" class="c-section c-section--marble">
   <div class="c-container">
     <div class="c-stack">
       <header class="c-stack">
-        <p class="rc-tag-chip">Ways to Work Together</p>
-        <h1 class="text-s">AI should not sell out your data.</h1>
-        <p class="forensic text-s">Keep confidential information inside your walls. Start with a free 20-minute AI privacy call.</p>
+        <p class="rc-tag-chip">What We Deliver</p>
+        <h2 class="text-s">Dual Pillars of Excellence</h2>
       </header>
     </div>
 
-    <div class="related-grid">
-      {% for offer in site.data.offers %}
-      {% include content-card.html item=offer card_type="offer" link_label=offer.link_label %}
+    <div class="c-grid c-grid--2" style="margin-top: var(--md-sys-spacing-xl);">
+      <article class="c-card c-stack">
+        <p class="rc-tag-chip">01 / Systems Engineering</p>
+        <h2 class="authority c-card-title">Automation That Works</h2>
+        <p class="text-s">Custom workflows, security-first architecture, and deterministic pipelines. We build what runs, not what looks good.</p>
+      </article>
+      <article class="c-card c-stack">
+        <p class="rc-tag-chip">02 / The Identity Studio</p>
+        <h2 class="authority c-card-title">Design With Authority</h2>
+        <p class="text-s">High-concept branding and web design for those who need to carve psychological space, not just predict pixels.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ── Offers ────────────────────────────────────────────────────────────── -->
+<section id="services" class="c-section c-section--marble">
+  <div class="c-container">
+    <div class="c-stack">
+      <header class="c-stack">
+        <p class="rc-tag-chip">Selected Work</p>
+        <h2 class="text-s">Case Studies</h2>
+        <a href="{{ '/case-studies/' | relative_url }}" class="text-s">View All →</a>
+      </header>
+    </div>
+
+    <div class="c-grid c-grid--3" style="margin-top: var(--md-sys-spacing-xl);">
+      {% assign sorted_cases = site.case_studies | sort: "date" | reverse %}
+      {% assign featured_cases = sorted_cases | where: "featured", true %}
+      {% assign featured_case = featured_cases | first %}
+      {% assign remaining_cases = sorted_cases %}
+      {% assign remaining_limit = 2 %}
+      {% if featured_case %}
+      {% assign remaining_cases = sorted_cases | where_exp: "case", "case.featured != true" %}
+      {% assign remaining_limit = 1 %}
+      {% include content-card.html item=featured_case variant="home" summary=featured_case.description %}
+      {% endif %}
+      {% for case in remaining_cases limit: remaining_limit %}
+      {% include content-card.html item=case variant="home" summary=case.description %}
       {% endfor %}
     </div>
   </div>

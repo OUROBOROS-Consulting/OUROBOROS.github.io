@@ -76,6 +76,39 @@
       </div>
     </div>
 
+        <!-- Actions: Search, Contact, News, Theme -->
+        <div class="c-nav__actions-container">
+          <div class="c-nav__actions">
+            <form id="nav-search-wrap" class="c-nav__search-wrap" action="{{ '/search/' | relative_url }}" method="get"
+              role="search">
+              <input id="nav-search-input" class="c-nav__search-input" type="search" name="q" aria-label="Search site"
+                placeholder="Search…" autocomplete="off" tabindex="-1">
+              <button type="submit" class="c-nav__search-submit" aria-label="Submit search" tabindex="-1">
+                <i class="ph-fill ph-arrow-right" aria-hidden="true"></i>
+              </button>
+
+              <button type="button" class="c-nav__search-toggle" aria-label="Open search" aria-expanded="false"
+                aria-controls="nav-search-input">
+                <i class="ph-fill ph-magnifying-glass" aria-hidden="true"></i>
+              </button>
+            </form>
+
+            <a href="{{ '/intake' | relative_url }}" class="c-nav__action-item" aria-label="Contact" title="Contact">
+              <i class="ph ph-fill ph-envelope" aria-hidden="true"></i>
+            </a>
+
+            <button type="button" id="theme-toggle" class="c-nav__action-item c-nav__theme-btn" title="Toggle theme"
+              aria-label="Toggle theme">
+              <i class="ph ph-fill ph-moon" aria-hidden="true"></i>
+            </button>
+          </div>
+
+          <!-- Mobile menu toggle -->
+          <button type="button" class="c-nav__hamburger" aria-label="Open navigation menu" aria-expanded="false"
+            aria-controls="c-nav__mobile-links">
+            <i class="ph-fill ph-list" aria-hidden="true"></i>
+          </button>
+        </div>
     <div class="c-nav__main-nav">
       <!-- Left links (first 2) -->
       <div class="c-nav__links c-nav__links--left">
@@ -170,42 +203,6 @@
         {% endif %}
         {% endfor %}
       </div>
-    </div>
-
-    <!-- Actions: Search, Contact, News, Theme -->
-    <div class="c-nav__actions-container">
-      <div class="c-nav__actions">
-        <form id="nav-search-wrap" class="c-nav__search-wrap"
-          action="{{ '/search/' | relative_url }}" method="get" role="search">
-          <input id="nav-search-input" class="c-nav__search-input" type="search" name="q"
-            aria-label="Search site" placeholder="Search…" autocomplete="off" tabindex="-1">
-          <button type="submit" class="c-nav__search-submit" aria-label="Submit search"
-            tabindex="-1">
-            <i class="ph-fill ph-arrow-right" aria-hidden="true"></i>
-          </button>
-
-          <button type="button" class="c-nav__search-toggle" aria-label="Open search"
-            aria-expanded="false" aria-controls="nav-search-input">
-            <i class="ph-fill ph-magnifying-glass" aria-hidden="true"></i>
-          </button>
-        </form>
-
-        <a href="{{ '/intake' | relative_url }}" class="c-nav__action-item" aria-label="Contact"
-          title="Contact">
-          <i class="ph ph-fill ph-envelope" aria-hidden="true"></i>
-        </a>
-
-        <button type="button" id="theme-toggle" class="c-nav__action-item c-nav__theme-btn"
-          title="Toggle theme" aria-label="Toggle theme">
-          <i class="ph ph-fill ph-moon" aria-hidden="true"></i>
-        </button>
-      </div>
-
-      <!-- Mobile menu toggle -->
-      <button type="button" class="c-nav__hamburger" aria-label="Open navigation menu"
-        aria-expanded="false" aria-controls="c-nav__mobile-links">
-        <i class="ph-fill ph-list" aria-hidden="true"></i>
-      </button>
     </div>
   </nav>
   <div id="progress-bar-top" class="progress-bar-horizontal"></div>

@@ -72,6 +72,7 @@
   letter-spacing: -0.035em;
   overflow-wrap: anywhere;
   color: var(--p-color-white);
+  font-weight: 900;
 }
 
 .c-page-hero__title-detail {
@@ -79,7 +80,7 @@
   margin-top: 0.2em;
   font-family: var(--font-utility, sans-serif);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: var(--md-ref-typeface-weight-medium);
+  font-weight: 900;
   letter-spacing: 0.01em;
   line-height: 1.15;
 }
@@ -121,9 +122,12 @@
 }
 
 .c-page-hero__icon {
-  font-size: clamp(12rem, 27vw, 18rem);
+  font-size: clamp(6rem, 15vw, 10rem);
   line-height: 1;
   max-width: 100%;
+  width: min(130%, 66rem);
+  aspect-ratio: 1 / 1;
+  place-self: center;
 }
 
 .c-page-hero__icon,
@@ -172,8 +176,9 @@
 }
 
 .c-page-hero--home .c-page-hero__identity h1 {
-  font-size: clamp(var(--p-font-display-large), 8.5vw, 7.25rem);
+  font-size: clamp(var(--p-font-display-large), 8.5vw, 5.25rem);
   text-align: right;
+  font-weight: 900;
 }
 
 .c-page-hero--home .c-page-hero__art:not(.c-page-hero__art--image) {
@@ -251,10 +256,12 @@
 
   .c-page-hero__identity h1 {
     font-size: clamp(2.5rem, 10vw, 4.25rem);
+    font-weight: 900;
   }
 
   .c-page-hero--home .c-page-hero__identity h1 {
     font-size: clamp(3rem, 12vw, 5rem);
+    font-weight: 900;
   }
 
   .c-page-hero--home .c-page-hero__art:not(.c-page-hero__art--image) {
@@ -272,7 +279,7 @@
   }
 
   .c-page-hero__icon {
-    font-size: clamp(4rem, 18vw, 7rem);
+    font-size: clamp(6rem, 15vw, 10rem);
   }
 
   .c-page-hero__content {

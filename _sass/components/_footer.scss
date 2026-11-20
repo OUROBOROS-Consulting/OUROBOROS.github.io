@@ -34,9 +34,9 @@
 .c-footer__inner {
   flex: 1; // fills the footer height
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
-  grid-template-rows: 1fr; // row 1 absorbs free space; the rest are auto
-  align-items: end;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  align-items: start;
   gap: var(--md-sys-spacing-xl);
   width: min(100%, var(--site-footer-content-max-width));
   margin-inline: auto;
@@ -231,7 +231,7 @@
 
 @media (max-width: 62rem) {
   .c-footer__inner {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .c-footer__logo {
@@ -239,14 +239,13 @@
     grid-row: 1;
   }
 
-  .c-footer__brand,
-  .c-footer__availability {
+  .c-footer__brand {
     grid-row: 2;
   }
 
   .c-footer__availability {
-    grid-column: 1 / -1;
     grid-row: 3;
+    grid-column: 1 / -1;
     width: min(100%, 30rem);
   }
 }
@@ -257,7 +256,7 @@
   }
 
   .c-footer__inner {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
     gap: var(--md-sys-spacing-lg);
   }
 
@@ -268,6 +267,7 @@
 
   .c-footer__availability {
     grid-row: 3;
+    grid-column: 1 / -1;
   }
 
   .c-disclaimer-bar {

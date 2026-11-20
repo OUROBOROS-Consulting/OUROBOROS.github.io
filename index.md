@@ -5,8 +5,8 @@ title: null
 description: "Private AI engineer and AI privacy consultant. Local LLMs, AI governance, and data audits for organizations that cannot afford a leak."
 
 # Hero
-name_line1: ouroborOS
-# name_line2: Consulting
+name_line1: Do you know what your AI system is doing with your data right now?
+name_line2:
 eyebrow: Private AI ⎈ AI Privacy ⎈ Data Audits
 tagline_1: >
   Most teams don't know where their data goes once it hits AI. I build private AI that keeps it inside your walls, so you get AI's speed without the leak.
@@ -16,7 +16,7 @@ tagline_2: >
 cta_label: How I Keep AI Private
 cta_icon: ph ph-fill ph-arrow-fat-line-right
 cta_url: /services/technology/#automation
-cta2_label: Request a free 20-minute AI privacy call
+cta2_label: Book a call
 cta2_icon: ph ph-fill ph-envelope
 cta2_url: /intake/
 

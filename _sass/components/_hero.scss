@@ -1,124 +1,170 @@
-// ── Hero Organism (M3 Semantic) ─────────────────────────────────────────────
+// ── Hero Organism (M3 Semantic / Fibonacci) ─────────────────────────────────
 // Responsibility: Layout and arrangement of brand identity and primary copy.
+// Fibonacci ratio: 1.618 (golden ratio) - used for proportions
 
 .c-hero {
   position: relative;
   background-color: var(--p-color-black);
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(16rem, 0.9fr);
-  grid-template-areas:
-    "identity emblem"
-    "content emblem";
+  grid-template-columns: 1fr 1fr; // Fibonacci: content gets 1.618x the space
+  grid-template-areas: "content image" "content image" "content image";
   align-content: center;
   align-items: center;
-  column-gap: clamp(2.5rem, 7vw, 7rem);
+  column-gap: clamp(2rem, 5vw, 5rem);
   row-gap: var(--md-sys-spacing-xl);
-  width: min(100%, 76rem);
-  min-height: 70vh;
+  width: min(100%, 123rem);
+  min-height: 100vh;
   margin-inline: auto;
-  padding: clamp(4rem, 8vh, 7rem) clamp(1.5rem, 5vw, 4rem);
-  padding-bottom: clamp(6rem, 10vh, 8rem);
+  padding: clamp(4.5rem, 8vh, 6rem) clamp(2.5rem, 7vw, 5rem);
+  padding-bottom: clamp(4.5rem, 7vh, 6rem);
   text-align: left;
-}
-
-.c-hero__identity {
-  grid-area: identity;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-}
-
-.c-hero__identity h1 {
-  margin: 0;
-  font-size: clamp(3.25rem, 7.5vw, 6.5rem);
-  line-height: 0.92;
-  letter-spacing: -0.035em;
-  text-align: right;
-}
-
-.c-hero__title-detail {
-  display: block;
-  margin-top: 0.2em;
-  font-family: var(--font-utility, sans-serif);
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
-  font-weight: 500;
-  letter-spacing: 0.01em;
-  line-height: 1.15;
-}
-
-.c-hero__emblem {
-  grid-area: emblem;
-  place-self: center;
-  width: min(100%, 24rem);
-  aspect-ratio: 1;
-}
-
-.c-hero__emblem img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.c-hero__emblem .c-hero__image {
-  border-radius: var(--site-card-radius);
-  object-fit: cover;
+  gap: clamp(3rem, 6vw, 6rem);
 }
 
 .c-hero__content {
   grid-area: content;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   gap: var(--md-sys-spacing-md);
-  max-width: 62ch;
+  max-width: 65ch;
 }
 
-.c-hero__content>.label-large {
+.c-hero__subtitle {
   margin: 0;
+  font-size: clamp(1.1rem, 2.7vw, 1.5rem);
+  font-weight: 600;
+  color: var(--md-sys-color-primary);
 }
 
-.c-hero__tagline {
-  font-size: clamp(1.0625rem, 1.5vw, 1.25rem);
+.c-hero__title {
+  margin: 0;
+  font-size: clamp(2.6rem, 6.2vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-align: left;
+  font-weight: 900;
+}
+
+.c-hero__copy {
+  font-size: clamp(1.05rem, 2.1vw, 1.15rem);
   line-height: 1.65;
+  color: var(--md-sys-color-text-secondary);
+  font-weight: 400;
 }
 
-.c-hero__tagline p {
-  margin: 0;
-}
-
-.c-hero__scroll-hint {
-  position: absolute;
-  bottom: var(--md-sys-spacing-lg);
-  left: 50%;
-  transform: translateX(-50%);
+.c-hero__buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--md-sys-spacing-xs);
+  gap: var(--md-sys-spacing-md);
+  flex-wrap: wrap;
 }
 
-.c-hero__scroll-line {
-  width: 2px;
-  height: 48px;
-  background-color: var(--md-sys-color-outline);
-  border-radius: var(--site-radius-full);
-  opacity: 0.5;
+.c-hero__image {
+  grid-area: image;
+  place-self: center;
+  width: min(130%, 66rem);
+  aspect-ratio: 1 / 1;
 }
 
-.c-page-hero {
+.c-hero__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--site-card-radius);
+}
+
+// ── Hero Icon (phosphor icons) ──────────────────────────────────────────────
+// Used on inner pages when no hero_image is provided
+
+.c-hero__icon {
+  font-size: clamp(6rem, 15vw, 10rem);
+  color: #fff;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  place-self: center;
+  line-height: 1;
+}
+
+@media (max-width: 48rem) {
+  .c-hero {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "content";
+    column-gap: 0;
+    row-gap: var(--md-sys-spacing-md);
+    min-height: auto;
+    padding: 3.5rem 1.25rem 6rem;
+  }
+
+  .c-hero__content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .c-hero__image {
+    width: min(100%, 20rem);
+    aspect-ratio: 16 / 9;
+  }
+
+  .c-hero__icon {
+    font-size: clamp(4rem, 12vw, 6rem);
+  }
+  
+  .c-hero__title {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
+  }
+  
+  .c-hero__copy {
+    font-size: var(--md-sys-typescale-body-medium-size);
+    text-align: center;
+  }
+  
+  .c-hero__buttons {
+    justify-content: center;
+  }
+
+// ── Image Filter Effects ───────────────────────────────────────────────────
+// Displacement filter applied to hero images for subtle visual interest
+
+.c-hero__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+.c-hero__image img {
+  filter: contrast(1.05) saturate(1.1);
+}
+
+.c-hero__image.c-page-hero__logo::before {
+  opacity: 0.3;
+}
+
+// ── Mobile ──────────────────────────────────────────────────────────────────
+}
+
+// ── Page Hero Variant (full-width) ──────────────────────────────────────────
+// Used on non-home pages with full-width layout
+
+.c-hero--page {
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  min-height: calc(100svh - 6rem);
-  padding: clamp(3rem, 7vh, 6rem) clamp(1.5rem, 5vw, 4rem);
-  margin-left: calc(50% - 50vw);
-  width: 100vw;
-  overflow: hidden;
-  overflow-x: hidden;
-  display: flex;
+  min-height: 100vh;
+  padding: clamp(4.5rem, 8vh, 6rem) clamp(2.5rem, 7vw, 5rem);
+  padding-bottom: clamp(4.5rem, 7vh, 6rem);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "content image" "content image" "content image";
   align-items: center;
+  gap: clamp(3rem, 6vw, 6rem);
   background-color: black;
   border: 0;
   border-bottom: var(--site-border-width) solid color-mix(in srgb, var(--md-sys-color-primary) 35%, transparent);
@@ -128,68 +174,179 @@
   background-repeat: no-repeat;
 }
 
-.c-page-hero__identity {
+.c-hero--page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.6) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.c-hero--page > * {
+  position: relative;
+  z-index: 2;
+}
+
+// ── Page Hero Content ───────────────────────────────────────────────────────
+
+.c-hero--page .c-hero__content {
+  grid-area: content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--md-sys-spacing-md);
+  max-width: 65ch;
+}
+
+.c-hero--page .c-hero__subtitle {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.7vw, 1.5rem);
+  font-weight: 600;
+  color: var(--md-sys-color-primary);
+}
+
+.c-hero--page .c-hero__title {
+  margin: 0;
+  font-size: clamp(2.6rem, 6.2vw, 5rem);
+  line-height: 0.92;
+  letter-spacing: -0.035em;
+  text-align: left;
+  font-weight: 900;
+}
+
+.c-hero--page .c-hero__copy {
+  font-size: clamp(1.05rem, 2.1vw, 1.15rem);
+  line-height: 1.65;
+  color: var(--md-sys-color-text-secondary);
+  font-weight: 400;
+}
+
+.c-hero--page .c-hero__buttons {
+  display: flex;
+  gap: var(--md-sys-spacing-md);
+  flex-wrap: wrap;
+}
+
+.c-hero--page .c-hero__image {
+  grid-area: image;
+  place-self: center;
+  width: min(130%, 66rem);
+  aspect-ratio: 1 / 1;
+}
+
+.c-hero--page .c-hero__image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--site-card-radius);
+}
+
+// Page hero identity variant (right-aligned header)
+
+.c-hero--page .c-hero__identity {
   text-align: right;
 }
 
-.c-page-hero__identity h1 {
+.c-hero--page .c-hero__identity h1 {
   font-size: clamp(2rem, 5vw, 4.75rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  font-weight: 900;
   text-align: right;
+  color: #fff;
 }
 
-.c-page-hero--home .c-page-hero__identity {
-  align-items: flex-start;
+.c-hero--page .c-hero__identity p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
 }
 
-.c-page-hero--home .c-page-hero__identity h1 {
-  font-size: clamp(3.25rem, 6.5vw, 5.75rem);
-  text-align: right;
+// Art area fallback (phosphor icons)
+
+.c-hero--page .c-hero__art {
+  width: min(100%, 66rem);
+  aspect-ratio: 1 / 1;
+  place-self: center;
 }
 
-.c-page-hero--home .c-page-hero__art:not(.c-page-hero__art--image) {
-  width: min(100%, 18rem);
+.c-hero--page .c-hero__art--image {
+  width: min(100%, 38.5rem);
+  aspect-ratio: 4 / 3;
 }
+
+.c-hero--page .c-hero__art img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--site-card-radius);
+}
+
+// Page hero icon (phosphor icons)
+
+.c-hero--page .c-hero__icon {
+  font-size: clamp(6rem, 15vw, 10rem);
+  color: #fff;
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  place-self: center;
+}
+
+// Mobile breakpoints for page hero
 
 @media (max-width: 48rem) {
-  .c-hero {
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas:
-      "identity emblem"
-      "content content";
-    align-content: start;
-    align-items: start;
-    column-gap: clamp(1rem, 5vw, 2rem);
-    row-gap: var(--md-sys-spacing-lg);
-    min-height: 0;
+  .c-hero--page {
+    grid-template-columns: 1fr;
+    grid-template-areas: "image" "content";
+    column-gap: 0;
+    row-gap: var(--md-sys-spacing-md);
+    min-height: auto;
     padding: 3.5rem 1.25rem 6rem;
   }
-
-  .c-hero__identity h1 {
-    font-size: clamp(2.75rem, 11vw, 4.5rem);
+  
+  .c-hero--page .c-hero__content {
+    align-items: center;
+    text-align: center;
   }
-
-  .c-hero__title-detail {
-    font-size: clamp(1.25rem, 5vw, 1.75rem);
+  
+  .c-hero--page .c-hero__image {
+    width: min(100%, 20rem);
+    aspect-ratio: 16 / 9;
   }
-
-  .c-hero__emblem {
-    width: clamp(4.5rem, 20vw, 8rem);
+  
+  .c-hero--page .c-hero__title {
+    font-size: clamp(2.25rem, 10vw, 3.5rem);
   }
-
-  .c-hero__content {
-    max-width: 65ch;
+  
+  .c-hero--page .c-hero__copy {
+    font-size: var(--md-sys-typescale-body-medium-size);
+    text-align: center;
   }
-
-  .c-hero__scroll-hint {
-    bottom: var(--md-sys-spacing-md);
+  
+  .c-hero--page .c-hero__buttons {
+    justify-content: center;
   }
+}
 
-  .c-page-hero--home .c-page-hero__identity h1 {
-    font-size: clamp(2.25rem, 10vw, 3.25rem);
-    overflow-wrap: normal;
-  }
+// Image filter effects for page hero
 
-  .c-page-hero--home .c-page-hero__art:not(.c-page-hero__art--image) {
-    width: clamp(4.5rem, 20vw, 8rem);
-  }
+.c-hero--page .c-hero__image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.8;
+  pointer-events: none;
+  z-index: 1;
+  mix-blend-mode: overlay;
+}
+
+.c-hero--page .c-hero__image img {
+  filter: contrast(1.05) saturate(1.1);
+}
+
+.c-hero--page .c-hero__image.c-page-hero__logo::before {
+  opacity: 0.3;
 }

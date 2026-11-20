@@ -5,7 +5,7 @@
 .c-card {
   display: flex;
   flex-direction: column;
-  padding: var(--site-card-padding-compact);
+  padding: var(--site-card-padding-comfortable);
   border-radius: var(--site-card-radius);
   background-color: var(--site-card-surface);
   color: var(--p-color-ink-palantir-light);
@@ -23,7 +23,7 @@
   }
 
   &__header {
-    margin-bottom: var(--md-sys-spacing-md);
+    margin-bottom: var(--md-sys-spacing-lg);
   }
 
   &__body {
@@ -32,15 +32,16 @@
 
   &__footer {
     margin-top: auto;
-    padding-top: var(--md-sys-spacing-md);
+    padding-top: var(--md-sys-spacing-lg);
   }
 }
 
 /* Card title and value */
 .c-card-title {
   margin: 0;
-  font-size: var(--site-card-title-size);
+  font-size: var(--site-card-title-size) !important;
   line-height: var(--site-card-title-line-height);
+  font-weight: 900;
 }
 
 .c-card-value {
@@ -96,7 +97,7 @@
   background-color: var(--site-card-surface);
   display: flex;
   flex-direction: column;
-  gap: var(--md-sys-spacing-sm);
+  gap: var(--md-sys-spacing-lg);
 }
 
 /* Team card */
@@ -106,11 +107,11 @@
   background-color: var(--site-card-surface);
   display: flex;
   flex-direction: column;
-  gap: var(--md-sys-spacing-md);
+  gap: var(--md-sys-spacing-lg);
 }
 
 .c-card--team__header {
-  margin-bottom: var(--md-sys-spacing-md);
+  margin-bottom: var(--md-sys-spacing-lg);
 }
 
 .c-card--team__bio {
@@ -119,7 +120,7 @@
 
 .c-card--team__footer {
   margin-top: auto;
-  padding-top: var(--md-sys-spacing-md);
+  padding-top: var(--md-sys-spacing-lg);
 }
 
 .c-card--team__links {
@@ -127,7 +128,7 @@
   flex-wrap: wrap;
   gap: var(--md-sys-spacing-sm);
   margin-top: auto;
-  padding-top: var(--md-sys-spacing-md);
+  padding-top: var(--md-sys-spacing-lg);
 }
 
 /* Formula card */
@@ -139,18 +140,24 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: var(--md-sys-spacing-md);
+  gap: var(--md-sys-spacing-lg);
 
   &__interior {
     display: flex;
     flex-direction: column;
-    gap: var(--md-sys-spacing-md);
+    gap: var(--md-sys-spacing-lg);
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 900;
+    color: var(--md-sys-color-on-surface);
   }
 
   &__item {
     display: flex;
     align-items: baseline;
-    gap: var(--md-sys-spacing-sm);
+    gap: var(--md-sys-spacing-md);
   }
 
   &__marker {
@@ -163,16 +170,11 @@
     flex-direction: column;
   }
 
-  &__title {
-    margin: 0;
-    font-weight: var(--md-ref-typeface-weight-semibold);
-    color: var(--md-sys-color-on-surface);
-  }
-
   &__desc {
     margin: 0;
     color: var(--md-sys-color-on-surface-variant);
     font-size: var(--md-sys-typescale-body-small-size);
+    line-height: 1.6;
   }
 }
 
@@ -188,7 +190,7 @@
   padding: var(--site-card-padding-comfortable);
   display: flex;
   flex-direction: column;
-  gap: var(--md-sys-spacing-md);
+  gap: var(--md-sys-spacing-lg);
 }
 
 .c-card--framed__tag {
@@ -206,10 +208,12 @@
   font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   line-height: var(--site-card-title-line-height);
+  font-weight: 900;
 }
 
 .c-card--framed__desc {
   color: var(--md-sys-color-on-surface-variant);
+  line-height: 1.6;
 }
 
 .c-card--framed__link {
@@ -217,11 +221,11 @@
   align-items: center;
   gap: var(--md-sys-spacing-xs);
   margin-top: auto;
-  padding-top: var(--md-sys-spacing-md);
+  padding-top: var(--md-sys-spacing-lg);
   color: var(--md-sys-color-primary);
   font-family: var(--font-mono);
   font-size: var(--md-sys-typescale-label-small-size);
-  font-weight: var(--md-ref-typeface-weight-semibold);
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -238,7 +242,7 @@
 
   &__tag {
     color: var(--md-sys-color-primary);
-    font-weight: var(--md-ref-typeface-weight-semibold);
+    font-weight: 600;
   }
 
   &__interior {
@@ -262,6 +266,7 @@
     margin: var(--md-sys-spacing-sm) 0;
     color: var(--md-sys-color-on-surface);
     font-family: var(--font-serif);
+    font-weight: 900;
   }
 
   &__body,
@@ -278,7 +283,7 @@
     color: var(--md-sys-color-primary);
     font-family: var(--font-mono);
     font-size: var(--md-sys-typescale-label-small-size);
-    font-weight: var(--md-ref-typeface-weight-semibold);
+    font-weight: 600;
     letter-spacing: 0.04em;
     text-transform: uppercase;
   }
@@ -310,6 +315,7 @@
   font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   line-height: var(--site-card-title-line-height);
+  font-weight: 900;
 }
 
 .c-card--related__desc {
@@ -325,7 +331,7 @@
   color: var(--md-sys-color-primary);
   font-family: var(--font-mono);
   font-size: var(--md-sys-typescale-label-small-size);
-  font-weight: var(--md-ref-typeface-weight-semibold);
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -347,7 +353,7 @@
   color: var(--md-sys-color-primary);
   font-family: var(--font-mono);
   font-size: var(--md-sys-typescale-label-small-size);
-  font-weight: var(--md-ref-typeface-weight-semibold);
+  font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 }
@@ -359,7 +365,7 @@
   border-radius: var(--site-card-radius);
   background-color: var(--site-card-surface);
   color: var(--p-color-ink-palantir-light);
-  padding: var(--site-card-padding-compact);
+  padding: var(--site-card-padding-comfortable);
   transition:
     background-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard),
     border-color var(--site-motion-interaction-duration) var(--site-motion-easing-standard);
@@ -373,7 +379,7 @@
 .bib-title {
   color: var(--md-sys-color-on-surface);
   font-size: var(--md-sys-typescale-title-medium-size);
-  font-weight: var(--md-ref-typeface-weight-semibold);
+  font-weight: 900;
 }
 
 .bib-byline,
@@ -402,6 +408,7 @@
   font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   line-height: var(--site-card-title-line-height);
+  font-weight: 900;
 }
 
 .team-creds {
@@ -481,6 +488,7 @@
   font-family: var(--font-serif);
   font-size: var(--site-card-title-size);
   text-align: center;
+  font-weight: 900;
 }
 
 .audience-card__desc {
@@ -504,7 +512,7 @@
   border-radius: var(--site-card-radius);
   background-color: var(--site-card-surface);
   color: var(--p-color-ink-palantir-light);
-  padding: var(--site-card-padding-compact);
+  padding: var(--site-card-padding-comfortable);
   display: flex;
   flex-direction: column;
   transition:
@@ -532,7 +540,7 @@
 .feed-title {
   margin: 0;
   font-size: var(--md-sys-typescale-title-medium-size);
-  font-weight: var(--md-ref-typeface-weight-semibold);
+  font-weight: 900;
   color: var(--md-sys-color-on-surface);
   line-height: var(--site-card-title-line-height);
 }

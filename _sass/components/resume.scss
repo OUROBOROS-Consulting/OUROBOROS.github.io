@@ -6,6 +6,7 @@
   /* // Use the secondary token color and a slightly bolder style */
   color: var(--md-sys-color-secondary);
   font-size: var(--p-font-headline-medium);
+  font-weight: 900;
   margin-bottom: var(--md-sys-spacing-sm);
 }
 
@@ -56,6 +57,7 @@ header {
 
 h2 {
   font-size: var(--p-font-display-medium);
+  font-weight: 900;
   margin-top: calc(var(--md-sys-spacing-xl));
   margin-bottom: var(--md-sys-spacing-sm);
 

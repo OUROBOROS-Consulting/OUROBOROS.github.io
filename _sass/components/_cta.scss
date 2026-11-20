@@ -29,14 +29,14 @@
   background-position: center;
   background-size: cover;
   content: "";
-  opacity: 1;
+  opacity: 0.6;
   mix-blend-mode: screen;
   pointer-events: none;
 }
 
 .c-cta__inner {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-columns: 1fr;
   align-items: center;
   padding: var(--md-sys-spacing-xl) var(--md-sys-spacing-xl);
   gap: var(--md-sys-spacing-xl);
@@ -62,16 +62,14 @@
 
   >h2 {
     margin: 0 0 var(--md-sys-spacing-sm);
+    font-weight: 900;
   }
 }
 
+
 @media (max-width: 42rem) {
   .c-cta__inner {
-    grid-template-columns: minmax(0, 1fr);
-    gap: var(--md-sys-spacing-md);
-  }
-
-  .c-cta__inner>.c-btn {
-    justify-self: start;
+    padding: var(--md-sys-spacing-lg);
+    gap: var(--md-sys-spacing-lg);
   }
 }

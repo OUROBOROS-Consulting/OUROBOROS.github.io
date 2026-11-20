@@ -157,10 +157,6 @@ a:not(:where(.c-btn, .btn, .btn-sovereign, .c-banner, .skip-link, .c-nav__link, 
   }
 }
 
-.c-page-hero + .page-body > :first-child:not(.page-section):not(.collection-section) {
-  margin-top: var(--md-sys-spacing-xl);
-}
-
 .c-nav__dropdown-menu,
 .c-nav__search-input,
 .c-hours,
