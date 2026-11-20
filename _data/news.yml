@@ -2,37 +2,32 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-19
+generated: 2026-11-20
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "When tech workers have to quit their jobs to raise the alarm, it’s time to worry | Isabelle Ferreras"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/19/tech-workers-quit-jobs-raise-alarm-worry-ai-humanity-autocracies"
+      - title: "AI is imposing a hidden ‘cognitive tax’ on the lowest-paid workers"
+        url: "https://www.theguardian.com/technology/2026/nov/20/ai-low-paid-workers-cognitive-tax"
         source: "The Guardian"
+        date: 2026-11-20
+        summary: "It’s time to rethink welfare as AI reshapes the economy and wears down the brains of some of the most vulnerable workers AI is adding to the cognitive load of workers already stretched thin by unpredictable pay..."
+      - title: "Big tech is already building datacentres in Australia. Why is Labor so desperate to give them loopholes?"
+        url: "https://www.theguardian.com/technology/commentisfree/2026/nov/20/big-tech-is-already-building-datacentres-in-australia-why-is-labor-desperate-to-give-them-loopholes"
+        source: "The Guardian"
+        date: 2026-11-20
+        summary: "If the government bends to AI companies, artists, creatives and journalists will be the sacrificial lamb – and Australia will become a global pariah Get our breaking news email , free app or daily news podcast Right..."
+      - title: "Traumatized teens sue school, cops after Doritos bag triggers AI gun alert"
+        url: "https://arstechnica.com/tech-policy/2026/11/traumatized-teens-sue-school-cops-after-doritos-bag-triggers-ai-gun-alert/"
+        source: "Ars Technica"
         date: 2026-11-19
-        summary: "We can’t make AI safe for humanity if tech bosses are allowed to run their companies like autocracies Over the past two years, a troubling pattern has emerged across the world’s leading AI laboratories. Time and again..."
-      - title: "Ram through datacentres no one wants and hope the AI bubble never bursts: that’s the UK’s growth plan | George Monbiot"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/19/uk-growth-plan-datacentres-ai-bubble-big-tech"
-        source: "The Guardian"
-        date: 2026-11-19
-        summary: "The government doesn’t know what they are going to be used for, but that’s beside the point. Their real purpose is to sustain the share price of big tech It should have the status of an economic law: the sectors a..."
-      - title: "Four Maryland high school students sue after AI mistakes Doritos bag for gun"
-        url: "https://www.theguardian.com/us-news/2026/nov/18/maryland-baltimore-county-doritos-gun-ai-lawsuit"
-        source: "The Guardian"
-        date: 2026-11-18
-        summary: "Football players say they are ‘traumatized’ after being handcuffed and detained by police while waiting for rides Four current and former students at a Maryland high school have filed a lawsuit a year after armed police..."
+        summary: "Lawsuit: Over 99% of school system’s AI gun alerts were false positives."
       - title: "Muse privacy invasions are freaking out Meta staffers, internal chats show"
         url: "https://arstechnica.com/tech-policy/2026/11/muse-privacy-invasions-are-freaking-out-meta-staffers-internal-chats-show/"
         source: "Ars Technica"
         date: 2026-11-18
         summary: "Erratic Muse outputs sharing random bank, bitcoin balances aren’t real, Meta says."
-      - title: "‘Zero’ evidence that recent cascade of tech outages are linked, says Rubio"
-        url: "https://www.theguardian.com/us-news/2026/nov/18/zero-evidence-recent-tech-outages-linked-marco-rubio"
-        source: "The Guardian"
-        date: 2026-11-18
-        summary: "US secretary of state’s comments come as vulnerability in programming language Java highlighted There is “zero evidence” that a wave of IT outages – which have grounded flights, cut off work access, limited bank access..."
       - title: "Building trustworthy AI by fencing it in, not predicting it"
         url: "https://www.technologyreview.com/2026/11/16/1148565/building-trustworthy-ai-by-fencing-it-in-not-predicting-it/"
         source: "MIT Technology Review"
@@ -57,6 +52,21 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Joanne Young’s faith in justice system is sign of real change, but courts are still catching up"
+        url: "https://www.theguardian.com/society/2026/nov/20/joanne-young-faith-in-the-justice-system-changes-but-courts-still-catching-up"
+        source: "The Guardian"
+        date: 2026-11-20
+        summary: "Young’s abusers were convicted through suspect-centric prosecution, though much more needs to be done for victims Hope can be found in the darkest of places. Joanne Young stood outside Winchester crown court on Thursday..."
+      - title: "Joanne Young praised for bravery in exposing rape by husband and strangers"
+        url: "https://www.theguardian.com/society/2026/nov/20/joanne-young-drugged-raped-by-husband-praised-bravery-anonymity"
+        source: "The Guardian"
+        date: 2026-11-20
+        summary: "Woman who waived anonymity says she hopes her case will mean other victims of abuse are more likely to come forward A woman who was drugged and raped by her husband and strangers he had invited to their family home has..."
+      - title: "Experience: I discovered my dad was a killer on the run – and turned him in"
+        url: "https://www.theguardian.com/lifeandstyle/2026/nov/20/experience-discovered-dad-killer-on-the-run-turned-him-in"
+        source: "The Guardian"
+        date: 2026-11-20
+        summary: "After a childhood marked by horrifying cruelty, the day finally came when I held my father’s life in the balance Growing up, I lived in fear of my father’s moods. If there was too much ice in his drink or the sofa..."
       - title: "‘I came close to killing Sally about six times’: how my abusive father was enabled by his fame"
         url: "https://www.theguardian.com/society/2026/nov/19/my-abusive-father-was-enabled-by-his-fame"
         source: "The Guardian"
@@ -72,21 +82,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-16
         summary: "Ex-marine John Perkins, who also killed himself, had been violent to Kathryn Perkins over 42-year marriage, Exeter inquests hear A “controlling and violent” former Royal Marine who shot his wife dead after she told him..."
-      - title: "Darker pornography, deepfakes and chemical coercion: Farah Nazeer on the new frontlines of the sexual violence crisis"
-        url: "https://www.theguardian.com/society/2026/nov/16/darker-pornography-deepfakes-and-chemical-coercion-farah-nazeer-on-the-new-frontlines-of-the-sexual-violence-crisis"
-        source: "The Guardian"
-        date: 2026-11-16
-        summary: "The head of Women’s Aid has a unique insight into the ways technology provides mechanisms for abuse. She discusses online predators, the UK’s early release scheme – and why the fastest growing cohort of domestic abusers..."
-      - title: "Digital finance products used to abuse almost 20% of young women and girls, UK report finds"
-        url: "https://www.theguardian.com/society/2026/nov/15/digital-finance-products-abuse-against-young-women-and-girls-report"
-        source: "The Guardian"
-        date: 2026-11-16
-        summary: "Survey respondents describe current or former partners controlling bank accounts and taking out credit online without full consent Almost one in five young women and girls in the UK have experienced digital financial..."
-      - title: "‘I’m still trying to find out who I am’: the little-understood plight of Forgotten Australians"
-        url: "https://www.theguardian.com/society/ng-interactive/2026/nov/15/forgotten-australians-trauma-childrens-homes-orphanages-ntwnfb"
-        source: "The Guardian"
-        date: 2026-11-14
-        summary: "They number more than half a million yet the ongoing trauma from their time in orphanages and institutions remains poorly known When Judy Leonard entered the orphanage, she was given a bed with a number. That was how..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -121,6 +116,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "A Texas Police Department Got $100K After a Single Immigration Arrest. It Stands to Earn Much More."
+        url: "https://www.propublica.org/article/texas-287g-immigration-police-department-money"
+        source: "ProPublica"
+        date: 2026-11-20
+        summary: "The post A Texas Police Department Got $100K After a Single Immigration Arrest. It Stands to Earn Much More. appeared first on ProPublica ."
+      - title: "Publisher retracts editorial by education journal’s editors for fake references"
+        url: "https://retractionwatch.com/2026/11/19/journal-further-higher-education-taylor-francis-retraction-editors-fake-references/"
+        source: "Retraction Watch"
+        date: 2026-11-19
+        summary: "Taylor & Francis has retracted an article in one of its journals after its editors were unable to explain how multiple fake references and citation errors ended up in an editorial. In May, the Journal of Further and..."
       - title: "Former NIH neuroscientist passes 30 retractions"
         url: "https://retractionwatch.com/2026/11/17/eliezer-masliah-nih-aging-institute-image-manipulation-retractions/"
         source: "Retraction Watch"
@@ -151,11 +156,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-10
         summary: "Misconduct inquiries in South Korea meant to be completed within months are taking years instead, according to data from the country’s primary agency for academic research. Of the 83 misconduct cases the National..."
-      - title: "A year after plagiarism allegations and author’s retraction request, Elsevier is still investigating"
-        url: "https://retractionwatch.com/2026/11/09/forest-policy-economics-land-use-policy-plagiarism-allegations-retraction-request-elsevier/"
-        source: "Retraction Watch"
-        date: 2026-11-09
-        summary: "At a glance, the papers look completely different: One, published in 2023, describes forest co-management in Bangladesh. The other, published last year, is about soil conservation in China. But an author on the older..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -175,36 +175,36 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-16
         summary: "Amazon Ring has finally announced their long-dreaded indoor drone , a small flying surveillance device connected to their security suite of products that can fly around your house filming and recording things. The..."
+      - title: "Now is Not the Time to Limit Cyber Liability and State Enforcement"
+        url: "https://epic.org/now-is-not-the-time-to-limit-cyber-liability-and-state-enforcement/"
+        source: "EPIC"
+        date: 2026-11-13
+        summary: "It is a scary time for those of us concerned about data security and threats posed by the rapid rollout of AI systems. So why are some Senators proposing a law that would limit liability for (and state enforcement..."
+      - title: "EPIC Joins Group Urging New Jersey Court to Reject Data Center Developer’s First Amendment Claim"
+        url: "https://epic.org/epic-joins-group-urging-new-jersey-court-to-reject-data-center-developers-first-amendment-claim/"
+        source: "EPIC"
+        date: 2026-11-13
+        summary: "EPIC joined Tech Justice Law, along with nine other public interest groups and law professors in an amicus brief to the New Jersey district court asserting that Monroe Township's Ordinance banning data centers is..."
+      - title: "The New York Times: New York City Will Ban Companies From Setting Variable Prices"
+        url: "https://epic.org/the-new-york-times-new-york-city-will-ban-companies-from-setting-variable-prices/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "“Tom McBrien, a lawyer with the Electronic Privacy Information Center, an internet privacy nonprofit in Washington, said that dozens of other states were planning to introduce similar measures in upcoming legislative..."
+      - title: "SSBCrack News: New York City Council Approves Ban on Surveillance Pricing"
+        url: "https://epic.org/ssbcrack-news-new-york-city-council-approves-ban-on-surveillance-pricing/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "“The rules being considered across the country vary, which could mean shoppers face different protections depending on where they live and shop, said Tom McBrien, a lawyer with the Electronic Privacy Information Center..."
       - title: "New York City Becomes the Latest City to Ban Surveillance Pricing"
         url: "https://epic.org/new-york-city-becomes-the-latest-city-to-ban-surveillance-pricing/"
         source: "EPIC"
         date: 2026-11-12
         summary: "EPIC testified in support of Introduction 0891-2026, a bill that prohibits businesses from engaging in surveillance pricing, in the NYC Council hearing in June and now urges the Mayor to sign this bill into law."
-      - title: "EPIC Testifies in New York State and the City of Boston Urging for ALPR Guardrails and Greater Transparency"
-        url: "https://epic.org/epic-testifies-in-new-york-state-and-the-city-of-boston-urging-for-alpr-guardrails-and-greater-transparency/"
+      - title: "VitalLaw: Congress Should Wait Until 2027 to Renew Surveillance Law, Privacy Groups Say"
+        url: "https://epic.org/vitallaw-congress-should-wait-until-2027-to-renew-surveillance-law-privacy-groups-say/"
         source: "EPIC"
         date: 2026-11-12
-        summary: "New York’s proposed AB10808 and its companion, Senate Bill S.9890, and Boston's proposed amended ordinance addresses residents' privacy rights as ALPR technology becomes more widespread."
-      - title: "EPIC and Student Defense Submit Comment on Treasury Department’s Takeover of Federal Student Aid Records"
-        url: "https://epic.org/epic-and-student-defense-submit-comment-on-treasury-departments-takeover-of-federal-student-aid-records/"
-        source: "EPIC"
-        date: 2026-11-09
-        summary: "Under this proposed system, records regarding federal student aid applicants, grant recipients and borrowers would be provided to the Treasury from three ED systems: The National Student Loan Data System (NSLDS), the..."
-      - title: "WIRED: AI Companies Really, Really Want to Buy Your Work Files and Emails"
-        url: "https://epic.org/wired-ai-companies-really-really-want-to-buy-your-work-files-and-emails/"
-        source: "EPIC"
-        date: 2026-11-06
-        summary: "“The union’s objections cast a light on the dark side of this gold rush. Despite the claims of virtually all the data companies that no PII goes into AI models, critics feel that there is still danger of personal data..."
-      - title: "Tech Insider: 56% Cite AI in Vote, Yet Big Tech May Win [2026]"
-        url: "https://epic.org/tech-insider-56-cite-ai-in-vote-yet-big-tech-may-win-2026/"
-        source: "EPIC"
-        date: 2026-11-06
-        summary: "“CNET noted that Elon Musk and other tech leaders poured hundreds of millions of dollars into Republican campaigns, yet voters still delivered Democratic sweeps in battleground states. Tech critics read that as proof of..."
-      - title: "CNET: Will Democrats Rein in Big Tech? It Starts With Privacy and Data Centers"
-        url: "https://epic.org/cnet-will-democrats-rein-in-big-tech-it-starts-with-privacy-and-data-centers/"
-        source: "EPIC"
-        date: 2026-11-06
-        summary: "“Artificial intelligence was central to the national conversation during the midterms, alongside concerns about affordability and the Iran war. From data centers needed to power AI to how it’s used in surveillance tech..."
+        summary: "“Noting that the NDAA was ‘among the most important bills Congress considers each year,’ the groups warned that the defense bill ‘should not be used as a vehicle to circumvent or to cut short this long-running..."
       - title: "Presenting 'Desire Lines: Encoding Queer Digital Futures'"
         url: "https://www.eff.org/deeplinks/2026/11/presenting-desire-lines-encoding-queer-digital-futures"
         source: "EFF Deeplinks"
