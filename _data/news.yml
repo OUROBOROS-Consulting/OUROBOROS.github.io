@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-22
+generated: 2026-11-23
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Sweden’s datacentre politics are more complicated than they appear | Letter"
+        url: "https://www.theguardian.com/world/2026/nov/23/swedens-datacentre-politics-are-more-complicated-than-they-appear"
+        source: "The Guardian"
+        date: 2026-11-23
+        summary: "There are distinct tensions over who controls, benefits from and gains access to natural and public resources, write James White and Nora Söderberg Steve Rose’s account of Sweden’s datacentre sector ( ‘Datacentres are..."
+      - title: "Child safety groups urge Amazon and eBay to stop selling AI toys until proved safe"
+        url: "https://www.theguardian.com/technology/2026/nov/23/child-safety-groups-urge-amazon-ebay-stop-selling-ai-toys-until-proved-safe"
+        source: "The Guardian"
+        date: 2026-11-23
+        summary: "Advocates from across the world voice concern over privacy issues and inappropriate communication to children More than 150 child safety groups and experts across six continents have urged Amazon and eBay to stop..."
       - title: "It will soon be too late to regulate use of autonomous weapons, warns Red Cross"
         url: "https://www.theguardian.com/science/2026/nov/22/red-cross-warns-too-late-regulate-autonomous-weapons-united-nations"
         source: "The Guardian"
@@ -38,20 +48,20 @@ sections:
         source: "Ars Technica"
         date: 2026-11-12
         summary: "Families confront Google after teen’s lawsuit labels Gemini a “suicide coach.”"
-      - title: "Google pushes privacy angle as Gemini-powered smartglasses debut starting at $395"
-        url: "https://arstechnica.com/google/2026/11/google-pushes-privacy-angle-as-gemini-powered-smartglasses-debut-starting-at-395/"
-        source: "Ars Technica"
-        date: 2026-11-12
-        summary: "The first Gemini smartglasses are a collab between Google, Samsung, Gentle Monster, and Warby Parker."
-      - title: "Nancy Pelosi’s replacement is ready to regulate AI"
-        url: "https://www.technologyreview.com/2026/11/09/1148182/nancy-pelosis-replacement-is-ready-to-regulate-ai/"
-        source: "MIT Technology Review"
-        date: 2026-11-09
-        summary: "As a California state senator, Scott Wiener authored legislation aimed at curbing the risks of advanced AI. Now, after winning a tight congressional race for former Speaker of the House Nancy Pelosi’s open San Francisco..."
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Only six beds for trans victims of domestic abuse in UK, report finds"
+        url: "https://www.theguardian.com/society/2026/nov/23/only-six-beds-for-trans-victims-of-domestic-abuse-in-uk-report-finds"
+        source: "The Guardian"
+        date: 2026-11-23
+        summary: "Exclusive: Services say supreme court ruling on single-sex spaces has made it ‘almost impossible’ to find refuges for trans people There are only six beds specifically for trans victims of domestic abuse in the UK, a..."
+      - title: "Domestic violence perpetrators are using smart car features to abuse, researchers warn"
+        url: "https://www.theguardian.com/society/2026/nov/23/smart-car-tracking-control-features-domestic-violence-warning-ntwnfb"
+        source: "The Guardian"
+        date: 2026-11-23
+        summary: "Exclusive: Alarming report reveals how tracking and monitoring functions and digital key access have been used to facilitate abuse Get our breaking news email , free app or daily news podcast Earlier this year a man in..."
       - title: "An age gap isn’t always a problem, partner abuse is | Letters"
         url: "https://www.theguardian.com/lifeandstyle/2026/nov/22/an-age-gap-isnt-always-a-problem-partner-abuse-is"
         source: "The Guardian"
@@ -72,16 +82,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-20
         summary: "After a childhood marked by horrifying cruelty, the day finally came when I held my father’s life in the balance Growing up, I lived in fear of my father’s moods. If there was too much ice in his drink or the sofa..."
-      - title: "‘I came close to killing Sally about six times’: how my abusive father was enabled by his fame"
-        url: "https://www.theguardian.com/society/2026/nov/19/my-abusive-father-was-enabled-by-his-fame"
-        source: "The Guardian"
-        date: 2026-11-19
-        summary: "Like Russell Brand, my father was put on a pedestal by the media, despite a history of troubling, misogynistic comments. Meanwhile, my mother suffered through years of appalling treatment Even though decades have..."
-      - title: "‘He’s a master manipulator’: one woman’s fight against her abuser’s early release –podcast"
-        url: "https://www.theguardian.com/news/audio/2026/nov/17/hes-a-master-manipulator-one-womans-fight-against-her-abusers-early-release-podcast"
-        source: "The Guardian"
-        date: 2026-11-17
-        summary: "The government is releasing criminals early to stop prisons being overcrowded. But where does that leave their victims? Helen Pidd speaks to a domestic abuse survivor about the release of her perpetrator – former..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -116,6 +116,16 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Two publishers investigating studies claiming to predict blood type from fingerprints"
+        url: "https://retractionwatch.com/2026/11/23/two-publishers-investigating-studies-claiming-to-predict-blood-type-from-fingerprints/"
+        source: "Retraction Watch"
+        date: 2026-11-23
+        summary: "The shape of your fingerprint can predict your blood type — at least, it can according to more than a dozen conference papers and journal articles published since 2023. But those papers seem to rely on fingerprint..."
+      - title: "If They Call 911 About Domestic Abuse, Will They Be Deported?"
+        url: "https://www.propublica.org/article/immigration-domestic-violence"
+        source: "ProPublica"
+        date: 2026-11-23
+        summary: "The post If They Call 911 About Domestic Abuse, Will They Be Deported? appeared first on ProPublica ."
       - title: "Lancet retracts report by former SickKids pediatrician on infant’s death from opioid poisoning"
         url: "https://retractionwatch.com/2026/11/20/lancet-gideon-koren-sickkids-toronto-infant-death-opioid-poisoning-breast-milk-retraction/"
         source: "Retraction Watch"
@@ -151,11 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-16
         summary: "A Polish sports journal will correct papers published by its editor-in-chief that include nonexistent references following a Retraction Watch inquiry. The editor denied using AI and said he will correct the fake..."
-      - title: "Do PubPeer comments make a difference? A small study tried to find out"
-        url: "https://retractionwatch.com/2026/11/11/do-pubpeer-comments-make-a-difference-a-small-study-tried-to-find-out/"
-        source: "Retraction Watch"
-        date: 2026-11-11
-        summary: "PubPeer launched a new look on Nov. 9, including a dashboard showing the post-publication peer review platform has surpassed a half million comments in its 14 years of operation. Also among the newly public statistics..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -165,31 +170,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-20
         summary: "In June 2026, the surveillance authority Section 702 of FISA expired absent a consensus among lawmakers over the terms of its reauthorization . Now, with the program set to truly turn off within the next few months..."
-      - title: "Politico: US knew of ‘perilous’ telco vulnerabilities years before Salt Typhoon hacks"
-        url: "https://epic.org/politico-us-knew-of-perilous-telco-vulnerabilities-years-before-salt-typhoon-hacks/"
-        source: "EPIC"
-        date: 2026-11-19
-        summary: "“’Unlawfully acquired data, coupled with the malicious access to U.S. networks, combine to create the largest threat vector to those tasked with protecting U.S. subscribers’ communications and their security,’ said the..."
-      - title: "Nextgov/FCW: Wyden, Tillis plan holds on Trump’s CISA nominee after Jan. 6 remarks"
-        url: "https://epic.org/nextgov-fcw-wyden-tillis-plan-holds-on-trumps-cisa-nominee-after-jan-6-remarks/"
-        source: "EPIC"
-        date: 2026-11-19
-        summary: "“Wyden previously announced a hold for Plankey, on grounds that CISA had not disclosed the contents of an unclassified 2022 report that outlined security vulnerabilities in the U.S. telecom sector. That report was made..."
-      - title: "PRESS RELEASE: EPIC acquires Signaling System Seven (SS7) security assessment report after two-year FOIA battle"
-        url: "https://epic.org/press-release-epic-acquires-signaling-system-seven-ss7-security-assessment-report-after-two-year-foia-battle-2/"
-        source: "EPIC"
-        date: 2026-11-19
-        summary: "The redacted report explores SS7 vulnerabilities, a telecommunication protocol known to have significant security weaknesses."
-      - title: "CISA Report Obtained by EPIC Confirms Critical Vulnerabilities in U.S. Telecommunication Networks"
-        url: "https://epic.org/cisa-report-obtained-by-epic-confirms-critical-vulnerabilities-in-u-s-telecommunication-networks/"
-        source: "EPIC"
-        date: 2026-11-19
-        summary: "Today, EPIC released a report obtained through a Freedom of Information Act (FOIA) lawsuit that the Cybersecurity and Infrastructure Security Agency (CISA) tried to keep from the American public."
-      - title: "DAME Magazine: How Data Brokers Are Putting Stalking Victims in Danger"
-        url: "https://epic.org/dame-magazine-how-data-brokers-are-putting-stalking-victims-in-danger/"
-        source: "EPIC"
-        date: 2026-11-18
-        summary: "“Data brokers frequently claim that they’re doing nothing wrong since the data they aggregate and sell is public information. Many privacy experts disagree.” “’Data brokers shouldn’t be able to use the excuse that they..."
       - title: "Surveillance Isn't Safety: A Comic About Organizing Against Flock and Other Foes"
         url: "https://www.eff.org/deeplinks/2026/11/surveillance-isnt-safety-comic-about-organizing-against-surveillance"
         source: "EFF Deeplinks"
@@ -205,6 +185,36 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-16
         summary: "Amazon Ring has finally announced their long-dreaded indoor drone , a small flying surveillance device connected to their security suite of products that can fly around your house filming and recording things. The..."
+      - title: "Now is Not the Time to Limit Cyber Liability and State Enforcement"
+        url: "https://epic.org/now-is-not-the-time-to-limit-cyber-liability-and-state-enforcement/"
+        source: "EPIC"
+        date: 2026-11-13
+        summary: "It is a scary time for those of us concerned about data security and threats posed by the rapid rollout of AI systems. So why are some Senators proposing a law that would limit liability for (and state enforcement..."
+      - title: "EPIC Joins Group Urging New Jersey Court to Reject Data Center Developer’s First Amendment Claim"
+        url: "https://epic.org/epic-joins-group-urging-new-jersey-court-to-reject-data-center-developers-first-amendment-claim/"
+        source: "EPIC"
+        date: 2026-11-13
+        summary: "EPIC joined Tech Justice Law, along with nine other public interest groups and law professors in an amicus brief to the New Jersey district court asserting that Monroe Township's Ordinance banning data centers is..."
+      - title: "The New York Times: New York City Will Ban Companies From Setting Variable Prices"
+        url: "https://epic.org/the-new-york-times-new-york-city-will-ban-companies-from-setting-variable-prices/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "“Tom McBrien, a lawyer with the Electronic Privacy Information Center, an internet privacy nonprofit in Washington, said that dozens of other states were planning to introduce similar measures in upcoming legislative..."
+      - title: "SSBCrack News: New York City Council Approves Ban on Surveillance Pricing"
+        url: "https://epic.org/ssbcrack-news-new-york-city-council-approves-ban-on-surveillance-pricing/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "“The rules being considered across the country vary, which could mean shoppers face different protections depending on where they live and shop, said Tom McBrien, a lawyer with the Electronic Privacy Information Center..."
+      - title: "New York City Becomes the Latest City to Ban Surveillance Pricing"
+        url: "https://epic.org/new-york-city-becomes-the-latest-city-to-ban-surveillance-pricing/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "EPIC testified in support of Introduction 0891-2026, a bill that prohibits businesses from engaging in surveillance pricing, in the NYC Council hearing in June and now urges the Mayor to sign this bill into law."
+      - title: "VitalLaw: Congress Should Wait Until 2027 to Renew Surveillance Law, Privacy Groups Say"
+        url: "https://epic.org/vitallaw-congress-should-wait-until-2027-to-renew-surveillance-law-privacy-groups-say/"
+        source: "EPIC"
+        date: 2026-11-12
+        summary: "“Noting that the NDAA was ‘among the most important bills Congress considers each year,’ the groups warned that the defense bill ‘should not be used as a vehicle to circumvent or to cut short this long-running..."
       - title: "Presenting 'Desire Lines: Encoding Queer Digital Futures'"
         url: "https://www.eff.org/deeplinks/2026/11/presenting-desire-lines-encoding-queer-digital-futures"
         source: "EFF Deeplinks"
@@ -215,8 +225,3 @@ sections:
         source: "Krebs on Security"
         date: 2026-11-05
         summary: "Several staffers at the White House are using computers or mobile devices equipped with residential proxy services that render their internet address available for others to rent, security experts warned today. One of..."
-      - title: "We’re Asking the Ninth Circuit to Hold Reverse Location Warrants Categorically Unconstitutional"
-        url: "https://www.eff.org/deeplinks/2026/11/were-asking-ninth-circuit-hold-reverse-location-warrants-categorically"
-        source: "EFF Deeplinks"
-        date: 2026-11-04
-        summary: "Yesterday, along with the ACLU, EFF filed an amicus brief in the Ninth Circuit court of appeals in United States v. Spurlock , a case involving a “tower dump” warrant. These overbroad warrants require cellular providers..."
