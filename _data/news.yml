@@ -2,12 +2,17 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-23
+generated: 2026-11-24
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Kate Bush and Grace Jones urge Australian government not to legalise AI ‘theft’"
+        url: "https://www.theguardian.com/technology/2026/nov/24/kate-bush-grace-jones-australian-artists-copyright-law-ai"
+        source: "The Guardian"
+        date: 2026-11-24
+        summary: "Singers among 7,000 artists and creatives urging Labor to protect copyright law in face of lobbying from AI companies Get our breaking news email , free app or daily news podcast Kate Bush, Grace Jones and Sir Ian..."
       - title: "Sweden’s datacentre politics are more complicated than they appear | Letter"
         url: "https://www.theguardian.com/world/2026/nov/23/swedens-datacentre-politics-are-more-complicated-than-they-appear"
         source: "The Guardian"
@@ -18,11 +23,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-23
         summary: "Advocates from across the world voice concern over privacy issues and inappropriate communication to children More than 150 child safety groups and experts across six continents have urged Amazon and eBay to stop..."
-      - title: "It will soon be too late to regulate use of autonomous weapons, warns Red Cross"
-        url: "https://www.theguardian.com/science/2026/nov/22/red-cross-warns-too-late-regulate-autonomous-weapons-united-nations"
-        source: "The Guardian"
-        date: 2026-11-22
-        summary: "Warning about putting ‘genie back in the bottle’ comes as UN conference fails to agree on regulation instrument The International Committee of the Red Cross and rights groups have warned that it will soon be too late to..."
       - title: "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced."
         url: "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/"
         source: "Ars Technica"
@@ -43,11 +43,6 @@ sections:
         source: "MIT Technology Review"
         date: 2026-11-16
         summary: "In October this year, OpenAI disclosed that two of its AI agents had switched off the systems built to monitor them. One muted its own safety alerts after misreading an instruction not to send messages; the other..."
-      - title: "Google faces calls for AI moratoriums in schools after Gemini pilot backlash"
-        url: "https://arstechnica.com/tech-policy/2026/11/families-fight-to-keep-googles-disturbing-ai-off-school-issued-chromebooks/"
-        source: "Ars Technica"
-        date: 2026-11-12
-        summary: "Families confront Google after teen’s lawsuit labels Gemini a “suicide coach.”"
   - id: coercive-control
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
@@ -116,6 +111,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Guest post: 20 years later, reflections on the retracted Lancet case report about codeine use and breastfeeding"
+        url: "https://retractionwatch.com/2026/11/24/guest-post-parvaz-madadi-reflections-lancet-case-report-codeine-breastfeeding/"
+        source: "Retraction Watch"
+        date: 2026-11-24
+        summary: "In 2005, Parvaz Madadi was a graduate student in pharmacology and toxicology at Western University in London, Ontario, studying under Gideon Koren, a once-renowned pediatrician and pharmacologist who would later resign..."
       - title: "Two publishers investigating studies claiming to predict blood type from fingerprints"
         url: "https://retractionwatch.com/2026/11/23/two-publishers-investigating-studies-claiming-to-predict-blood-type-from-fingerprints/"
         source: "Retraction Watch"
@@ -156,11 +156,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-16
         summary: "A Cell Press journal has retracted a paper on Parkinson’s disease following the discovery that the first author manipulated data in the work. The retraction notice in Cell Reports states one of the coauthors found the..."
-      - title: "Publisher to issue corrections to papers with fake references by EIC of sports journal"
-        url: "https://retractionwatch.com/2026/11/16/publisher-investigating-papers-with-fake-references-by-eic-of-sports-journal/"
-        source: "Retraction Watch"
-        date: 2026-11-16
-        summary: "A Polish sports journal will correct papers published by its editor-in-chief that include nonexistent references following a Retraction Watch inquiry. The editor denied using AI and said he will correct the fake..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
@@ -170,6 +165,31 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-20
         summary: "In June 2026, the surveillance authority Section 702 of FISA expired absent a consensus among lawmakers over the terms of its reauthorization . Now, with the program set to truly turn off within the next few months..."
+      - title: "Politico: US knew of ‘perilous’ telco vulnerabilities years before Salt Typhoon hacks"
+        url: "https://epic.org/politico-us-knew-of-perilous-telco-vulnerabilities-years-before-salt-typhoon-hacks/"
+        source: "EPIC"
+        date: 2026-11-19
+        summary: "“’Unlawfully acquired data, coupled with the malicious access to U.S. networks, combine to create the largest threat vector to those tasked with protecting U.S. subscribers’ communications and their security,’ said the..."
+      - title: "Nextgov/FCW: Wyden, Tillis plan holds on Trump’s CISA nominee after Jan. 6 remarks"
+        url: "https://epic.org/nextgov-fcw-wyden-tillis-plan-holds-on-trumps-cisa-nominee-after-jan-6-remarks/"
+        source: "EPIC"
+        date: 2026-11-19
+        summary: "“Wyden previously announced a hold for Plankey, on grounds that CISA had not disclosed the contents of an unclassified 2022 report that outlined security vulnerabilities in the U.S. telecom sector. That report was made..."
+      - title: "PRESS RELEASE: EPIC acquires Signaling System Seven (SS7) security assessment report after two-year FOIA battle"
+        url: "https://epic.org/press-release-epic-acquires-signaling-system-seven-ss7-security-assessment-report-after-two-year-foia-battle-2/"
+        source: "EPIC"
+        date: 2026-11-19
+        summary: "The redacted report explores SS7 vulnerabilities, a telecommunication protocol known to have significant security weaknesses."
+      - title: "CISA Report Obtained by EPIC Confirms Critical Vulnerabilities in U.S. Telecommunication Networks"
+        url: "https://epic.org/cisa-report-obtained-by-epic-confirms-critical-vulnerabilities-in-u-s-telecommunication-networks/"
+        source: "EPIC"
+        date: 2026-11-19
+        summary: "Today, EPIC released a report obtained through a Freedom of Information Act (FOIA) lawsuit that the Cybersecurity and Infrastructure Security Agency (CISA) tried to keep from the American public."
+      - title: "DAME Magazine: How Data Brokers Are Putting Stalking Victims in Danger"
+        url: "https://epic.org/dame-magazine-how-data-brokers-are-putting-stalking-victims-in-danger/"
+        source: "EPIC"
+        date: 2026-11-18
+        summary: "“Data brokers frequently claim that they’re doing nothing wrong since the data they aggregate and sell is public information. Many privacy experts disagree.” “’Data brokers shouldn’t be able to use the excuse that they..."
       - title: "Surveillance Isn't Safety: A Comic About Organizing Against Flock and Other Foes"
         url: "https://www.eff.org/deeplinks/2026/11/surveillance-isnt-safety-comic-about-organizing-against-surveillance"
         source: "EFF Deeplinks"
@@ -185,36 +205,6 @@ sections:
         source: "EFF Deeplinks"
         date: 2026-11-16
         summary: "Amazon Ring has finally announced their long-dreaded indoor drone , a small flying surveillance device connected to their security suite of products that can fly around your house filming and recording things. The..."
-      - title: "Now is Not the Time to Limit Cyber Liability and State Enforcement"
-        url: "https://epic.org/now-is-not-the-time-to-limit-cyber-liability-and-state-enforcement/"
-        source: "EPIC"
-        date: 2026-11-13
-        summary: "It is a scary time for those of us concerned about data security and threats posed by the rapid rollout of AI systems. So why are some Senators proposing a law that would limit liability for (and state enforcement..."
-      - title: "EPIC Joins Group Urging New Jersey Court to Reject Data Center Developer’s First Amendment Claim"
-        url: "https://epic.org/epic-joins-group-urging-new-jersey-court-to-reject-data-center-developers-first-amendment-claim/"
-        source: "EPIC"
-        date: 2026-11-13
-        summary: "EPIC joined Tech Justice Law, along with nine other public interest groups and law professors in an amicus brief to the New Jersey district court asserting that Monroe Township's Ordinance banning data centers is..."
-      - title: "The New York Times: New York City Will Ban Companies From Setting Variable Prices"
-        url: "https://epic.org/the-new-york-times-new-york-city-will-ban-companies-from-setting-variable-prices/"
-        source: "EPIC"
-        date: 2026-11-12
-        summary: "“Tom McBrien, a lawyer with the Electronic Privacy Information Center, an internet privacy nonprofit in Washington, said that dozens of other states were planning to introduce similar measures in upcoming legislative..."
-      - title: "SSBCrack News: New York City Council Approves Ban on Surveillance Pricing"
-        url: "https://epic.org/ssbcrack-news-new-york-city-council-approves-ban-on-surveillance-pricing/"
-        source: "EPIC"
-        date: 2026-11-12
-        summary: "“The rules being considered across the country vary, which could mean shoppers face different protections depending on where they live and shop, said Tom McBrien, a lawyer with the Electronic Privacy Information Center..."
-      - title: "New York City Becomes the Latest City to Ban Surveillance Pricing"
-        url: "https://epic.org/new-york-city-becomes-the-latest-city-to-ban-surveillance-pricing/"
-        source: "EPIC"
-        date: 2026-11-12
-        summary: "EPIC testified in support of Introduction 0891-2026, a bill that prohibits businesses from engaging in surveillance pricing, in the NYC Council hearing in June and now urges the Mayor to sign this bill into law."
-      - title: "VitalLaw: Congress Should Wait Until 2027 to Renew Surveillance Law, Privacy Groups Say"
-        url: "https://epic.org/vitallaw-congress-should-wait-until-2027-to-renew-surveillance-law-privacy-groups-say/"
-        source: "EPIC"
-        date: 2026-11-12
-        summary: "“Noting that the NDAA was ‘among the most important bills Congress considers each year,’ the groups warned that the defense bill ‘should not be used as a vehicle to circumvent or to cut short this long-running..."
       - title: "Presenting 'Desire Lines: Encoding Queer Digital Futures'"
         url: "https://www.eff.org/deeplinks/2026/11/presenting-desire-lines-encoding-queer-digital-futures"
         source: "EFF Deeplinks"
@@ -225,3 +215,8 @@ sections:
         source: "Krebs on Security"
         date: 2026-11-05
         summary: "Several staffers at the White House are using computers or mobile devices equipped with residential proxy services that render their internet address available for others to rent, security experts warned today. One of..."
+      - title: "We’re Asking the Ninth Circuit to Hold Reverse Location Warrants Categorically Unconstitutional"
+        url: "https://www.eff.org/deeplinks/2026/11/were-asking-ninth-circuit-hold-reverse-location-warrants-categorically"
+        source: "EFF Deeplinks"
+        date: 2026-11-04
+        summary: "Yesterday, along with the ACLU, EFF filed an amicus brief in the Ninth Circuit court of appeals in United States v. Spurlock , a case involving a “tower dump” warrant. These overbroad warrants require cellular providers..."
