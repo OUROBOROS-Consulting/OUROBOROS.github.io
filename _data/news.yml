@@ -2,27 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-24
+generated: 2026-11-25
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
-      - title: "Kate Bush and Grace Jones urge Australian government not to legalise AI ‘theft’"
-        url: "https://www.theguardian.com/technology/2026/nov/24/kate-bush-grace-jones-australian-artists-copyright-law-ai"
+      - title: "New York bans AI toys, including those using internet to talk to children"
+        url: "https://www.theguardian.com/us-news/2026/nov/25/new-york-bans-ai-toys"
         source: "The Guardian"
-        date: 2026-11-24
-        summary: "Singers among 7,000 artists and creatives urging Labor to protect copyright law in face of lobbying from AI companies Get our breaking news email , free app or daily news podcast Kate Bush, Grace Jones and Sir Ian..."
-      - title: "Sweden’s datacentre politics are more complicated than they appear | Letter"
-        url: "https://www.theguardian.com/world/2026/nov/23/swedens-datacentre-politics-are-more-complicated-than-they-appear"
+        date: 2026-11-25
+        summary: "The state attorney general says she would ‘not hesitate to enforce’ the five-year ban signed by Governor Kathy Hochul The New York governor, Kathy Hochul , signed legislation on Wednesday that places a five-year ban on..."
+      - title: "Democrats must unite on AI regulation. Here’s our three-point plan | Nathan E Sanders and Bruce Schneier"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/25/democrats-ai-regulation-plan"
         source: "The Guardian"
-        date: 2026-11-23
-        summary: "There are distinct tensions over who controls, benefits from and gains access to natural and public resources, write James White and Nora Söderberg Steve Rose’s account of Sweden’s datacentre sector ( ‘Datacentres are..."
-      - title: "Child safety groups urge Amazon and eBay to stop selling AI toys until proved safe"
-        url: "https://www.theguardian.com/technology/2026/nov/23/child-safety-groups-urge-amazon-ebay-stop-selling-ai-toys-until-proved-safe"
-        source: "The Guardian"
-        date: 2026-11-23
-        summary: "Advocates from across the world voice concern over privacy issues and inappropriate communication to children More than 150 child safety groups and experts across six continents have urged Amazon and eBay to stop..."
+        date: 2026-11-25
+        summary: "Voters are demanding action on the issue. We need to make AI work for the American public, not the tech oligarchs This month’s elections demonstrated the American public’s urgent demand for change. But they also..."
       - title: "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced."
         url: "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/"
         source: "Ars Technica"
@@ -47,6 +42,11 @@ sections:
     title: "Coercive control and technology-facilitated abuse"
     blurb: "Surveillance inside relationships, stalkerware, and the safety practice built around both."
     items:
+      - title: "Number of women killed by men in Ireland almost doubles in a year"
+        url: "https://www.theguardian.com/society/2026/nov/25/number-of-women-killed-by-men-in-ireland-almost-doubles-in-a-year"
+        source: "The Guardian"
+        date: 2026-11-25
+        summary: "Figures from past 30 years show more than half of victims killed by current or ex-partner The number of women in Ireland killed by men has surged in the past five years and risen especially sharply in the past 12..."
       - title: "Only six beds for trans victims of domestic abuse in UK, report finds"
         url: "https://www.theguardian.com/society/2026/nov/23/only-six-beds-for-trans-victims-of-domestic-abuse-in-uk-report-finds"
         source: "The Guardian"
@@ -72,11 +72,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-20
         summary: "Woman who waived anonymity says she hopes her case will mean other victims of abuse are more likely to come forward A woman who was drugged and raped by her husband and strangers he had invited to their family home has..."
-      - title: "Experience: I discovered my dad was a killer on the run – and turned him in"
-        url: "https://www.theguardian.com/lifeandstyle/2026/nov/20/experience-discovered-dad-killer-on-the-run-turned-him-in"
-        source: "The Guardian"
-        date: 2026-11-20
-        summary: "After a childhood marked by horrifying cruelty, the day finally came when I held my father’s life in the balance Growing up, I lived in fear of my father’s moods. If there was too much ice in his drink or the sofa..."
       - title: "Tech Summit 2026"
         url: "https://www.techsafety.org/blog/tech-summit-2026"
         source: "NNEDV Safety Net"
@@ -146,11 +141,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-17
         summary: "Investigations into the work of a former top neuroscientist at the National Institutes of Health have left the researcher, Eliezer Masliah, with 32 retractions to date. Fifteen of them came this year, as journals..."
-      - title: "A Federal Women’s Prison Became a “Rape Club.” After Officials Shut It Down, Rampant Abuse Continued Elsewhere."
-        url: "https://www.propublica.org/article/federal-womens-prison-sexual-abuse-reform-dublin-bop"
-        source: "ProPublica"
-        date: 2026-11-17
-        summary: "The post A Federal Women’s Prison Became a “Rape Club.” After Officials Shut It Down, Rampant Abuse Continued Elsewhere. appeared first on ProPublica ."
       - title: "‘Too good to be true’: Biotech company’s paper on Parkinson’s retracted for data manipulation"
         url: "https://retractionwatch.com/2026/11/16/cell-reports-denali-therapeutics-neurodegeneration/"
         source: "Retraction Watch"
