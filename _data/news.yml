@@ -2,12 +2,27 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-25
+generated: 2026-11-26
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "Can Elon Musk really put AI datacentres in space? - The Latest"
+        url: "https://www.theguardian.com/news/video/2026/nov/26/can-elon-musk-really-put-ai-datacentres-in-space-the-latest"
+        source: "The Guardian"
+        date: 2026-11-26
+        summary: "The Trump administration has approved Elon Musk’s plan to create datacentres in space. US federal regulators have authorised the launch of one million Starmind orbital satellites, which are built by Musk’s SpaceX, to..."
+      - title: "I’m an AI leader at a tech giant. Our industry has stopped taking safety seriously | Anonymous"
+        url: "https://www.theguardian.com/commentisfree/2026/nov/26/ai-leader-tech-giant-trust-safeguarding-privacy-profit"
+        source: "The Guardian"
+        date: 2026-11-26
+        summary: "We’re developing the most powerful tech in history – but trust, safeguarding and privacy are being sidelined in favour of huge profit I’m a senior AI leader at one of the world’s biggest tech companies, and the products..."
+      - title: "Dozens of court cases in England and Wales affected by undisclosed AI use in 2026"
+        url: "https://www.theguardian.com/technology/2026/nov/26/dozens-of-court-cases-in-england-and-wales-affected-by-undisclosed-ai-use-in-2026"
+        source: "The Guardian"
+        date: 2026-11-26
+        summary: "Exclusive: Investigation finds at least 25 cases affected by AI-generated witness statements, fictitious case law and nonexistent statutes Undisclosed AI use has affected more than two dozen court cases this year..."
       - title: "New York bans AI toys, including those using internet to talk to children"
         url: "https://www.theguardian.com/us-news/2026/nov/25/new-york-bans-ai-toys"
         source: "The Guardian"
@@ -106,6 +121,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "Third retraction for former marine ecologist could ‘reopen wounds’ in decade-long scientific dispute"
+        url: "https://retractionwatch.com/2026/11/25/third-retraction-former-marine-ecologist-ocean-acidification-fish-behavior/"
+        source: "Retraction Watch"
+        date: 2026-11-25
+        summary: "Sandra Binning feels like she’s “being dragged back 10 years to a time in our careers that was honestly very, very difficult.” A fish ecologist at the University of Montreal, Binning was part of a group of scientists..."
       - title: "Guest post: 20 years later, reflections on the retracted Lancet case report about codeine use and breastfeeding"
         url: "https://retractionwatch.com/2026/11/24/guest-post-parvaz-madadi-reflections-lancet-case-report-codeine-breastfeeding/"
         source: "Retraction Watch"
@@ -141,11 +161,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-17
         summary: "Investigations into the work of a former top neuroscientist at the National Institutes of Health have left the researcher, Eliezer Masliah, with 32 retractions to date. Fifteen of them came this year, as journals..."
-      - title: "‘Too good to be true’: Biotech company’s paper on Parkinson’s retracted for data manipulation"
-        url: "https://retractionwatch.com/2026/11/16/cell-reports-denali-therapeutics-neurodegeneration/"
-        source: "Retraction Watch"
-        date: 2026-11-16
-        summary: "A Cell Press journal has retracted a paper on Parkinson’s disease following the discovery that the first author manipulated data in the work. The retraction notice in Cell Reports states one of the coauthors found the..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
