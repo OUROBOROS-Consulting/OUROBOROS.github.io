@@ -2,12 +2,22 @@
 # the news workflow overwrites this file on every run.
 #
 # Edit _data/news_sources.yml to change what appears here.
-generated: 2026-11-26
+generated: 2026-11-27
 sections:
   - id: ai
     title: "Artificial intelligence"
     blurb: "What the systems can actually do, who is deploying them, and what that costs the people on the receiving end."
     items:
+      - title: "‘It’s not helping’: calls for guardrails and regulations as AI use rises at US retailers"
+        url: "https://www.theguardian.com/us-news/2026/nov/27/ai-retailer-consumer-guardrails"
+        source: "The Guardian"
+        date: 2026-11-27
+        summary: "Labor leaders and advocates urge protections for workers and consumers as AI use becomes more commonplace As millions of Americans begin holiday shopping this Black Friday, consumers and workers alike are already seeing..."
+      - title: "Natural England objected to a datacentre. Weeks later ministers threatened to abolish the agency"
+        url: "https://www.theguardian.com/environment/2026/nov/27/natural-england-objected-datacentre-ministers-abolish-bristol"
+        source: "The Guardian"
+        date: 2026-11-27
+        summary: "Body urged Bristol city council to reject plan because of risk to nearby protected wildlife and habitats Natural England objected to the building of a large AI datacentre near Bristol weeks before the government..."
       - title: "Can Elon Musk really put AI datacentres in space? - The Latest"
         url: "https://www.theguardian.com/news/video/2026/nov/26/can-elon-musk-really-put-ai-datacentres-in-space-the-latest"
         source: "The Guardian"
@@ -28,11 +38,6 @@ sections:
         source: "The Guardian"
         date: 2026-11-25
         summary: "The state attorney general says she would ‘not hesitate to enforce’ the five-year ban signed by Governor Kathy Hochul The New York governor, Kathy Hochul , signed legislation on Wednesday that places a five-year ban on..."
-      - title: "Democrats must unite on AI regulation. Here’s our three-point plan | Nathan E Sanders and Bruce Schneier"
-        url: "https://www.theguardian.com/commentisfree/2026/nov/25/democrats-ai-regulation-plan"
-        source: "The Guardian"
-        date: 2026-11-25
-        summary: "Voters are demanding action on the issue. We need to make AI work for the American public, not the tech oligarchs This month’s elections demonstrated the American public’s urgent demand for change. But they also..."
       - title: "Researcher plants 2m canaries into the AI supply chain. A privacy disaster surfaced."
         url: "https://arstechnica.com/security/2026/11/a-leaky-ai-supply-chain-is-exposing-secret-user-data-at-an-alarming-rate/"
         source: "Ars Technica"
@@ -121,6 +126,11 @@ sections:
     title: "Institutional accountability"
     blurb: "Reporting on what institutions do to the people who depend on them, and on the records that prove it."
     items:
+      - title: "‘Shameless cheating’: Near-identical version of handwriting essay published years later"
+        url: "https://retractionwatch.com/2026/11/27/shameless-cheating-near-identical-version-of-handwriting-essay-published-years-later/"
+        source: "Retraction Watch"
+        date: 2026-11-27
+        summary: "Jane Medwell received a message from a student one day in June of this year: Did Medwell know her 2007 paper on handwriting had been republished? That was news to her. Medwell read the paper and found it was nearly..."
       - title: "Third retraction for former marine ecologist could ‘reopen wounds’ in decade-long scientific dispute"
         url: "https://retractionwatch.com/2026/11/25/third-retraction-former-marine-ecologist-ocean-acidification-fish-behavior/"
         source: "Retraction Watch"
@@ -156,11 +166,6 @@ sections:
         source: "Retraction Watch"
         date: 2026-11-19
         summary: "Taylor & Francis has retracted an article in one of its journals after its editors were unable to explain how multiple fake references and citation errors ended up in an editorial. In May, the Journal of Further and..."
-      - title: "Former NIH neuroscientist passes 30 retractions"
-        url: "https://retractionwatch.com/2026/11/17/eliezer-masliah-nih-aging-institute-image-manipulation-retractions/"
-        source: "Retraction Watch"
-        date: 2026-11-17
-        summary: "Investigations into the work of a former top neuroscientist at the National Institutes of Health have left the researcher, Eliezer Masliah, with 32 retractions to date. Fifteen of them came this year, as journals..."
   - id: privacy
     title: "Privacy and surveillance"
     blurb: "Data brokers, monitoring, and the law that does or does not restrain them."
